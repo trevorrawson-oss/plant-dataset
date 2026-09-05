@@ -15,6 +15,23 @@ LIVENESS DEFENSE: a POSITIVE CONTROL (unmutated scratch must PASS) and a SENTINE
 guts the ladder must redden). If either misbehaves the run exits HARNESS DEAD rather than reporting
 percentages about a harness that is not grading anything.
 
+FOUND DEAD 2026-09-05, and repaired here. This harness had been exiting `HARNESS DEAD` on every run
+since 2026-08-24 -- which is the liveness defense working exactly as designed, and nobody re-ran it
+to see. Two things had gone stale under it:
+
+  1. Its SENTINEL stripped every ladder to `[]` and asserted A56 stays SILENT, because on
+     2026-08-22 an empty ladder was indistinguishable from an absent one. On 2026-08-24
+     `ladder_violations` gained the "`[]` is laddered-and-left-blank, a defect in every case"
+     check (sweet-corn's raccoons), so the sentinel's own injection became a legitimate A56 hit
+     and the harness read its correct catch as a mis-armed coverage floor.
+  2. Its premise, "confirms the coverage floor is NOT armed," went false on 2026-09-05 when the
+     floor was armed as A57 at the PLA-8 arc close.
+
+The repair is not to delete the check but to point it at what is now true: `[]` MUST redden A56
+(the sentinel the convention asks for), and a `None` ladder must redden A57 and NOT A56 -- the
+separation that stops one defect being reported twice under two guards. Coverage itself is
+`tools/mutate_a57_coverage_floor.py`'s job.
+
 Usage: python3 tools/mutate_a56_reachability.py
 """
 import copy
@@ -25,6 +42,8 @@ import sys
 import tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from control_ladder_gate import TYPE_TARGETS, UNIVERSAL_TARGET   # the gate's tables, not retyped
 REPO = os.path.dirname(HERE)
 CANON = os.path.join(REPO, "crops_data_final.json")
 CROP = "apple"          # a fully-laddered crop, so every family is reachable on it
@@ -50,18 +69,34 @@ def m_unknown_method(d, crop):
     _lad(crop, "apple-scab")["control_ladder"][0]["method"] = "moon_phase_planting"
 
 
-def m_applies_to_incoherent(d, crop):
-    """An insect-only method on a fungal disease.
+CHOSEN = []          # what the derived coherence mutation actually picked, printed each run
 
-    The first version of this mutation used `raise_soil_ph` (fungal_soilborne) on apple scab and
-    SURVIVED -- correctly. `problem.type` is coarse: TYPE_TARGETS['fungal'] covers fungal_foliar,
-    fungal_soilborne AND disease_general, so any fungal-ish method fits any fungal problem. The
-    mutation was wrong, not the gate. Worth knowing while authoring: for a `fungal` problem this
-    check only catches a method from a DIFFERENT kingdom, not a foliar/soilborne mismatch.
-    `balance_nitrogen` is insect_soft_bodied only, which shares nothing with the fungal set, and it
-    is cultural like the rung it replaces so tier monotonicity stays intact and only coherence trips.
+
+def m_applies_to_incoherent(d, crop):
+    """A method from a different kingdom on a fungal disease -- DERIVED from the live catalog.
+
+    THIS MUTATION HAS NOW GONE STALE TWICE, which is why it no longer names a method. The first
+    version used `raise_soil_ph` (fungal_soilborne) and survived correctly: `problem.type` is
+    coarse, TYPE_TARGETS['fungal'] covers fungal_foliar, fungal_soilborne AND disease_general, so
+    any fungal-ish method fits any fungal problem, and this check only catches a DIFFERENT kingdom.
+    The replacement, `balance_nitrogen`, was insect_soft_bodied only when it was picked on
+    2026-08-22 -- and by 2026-09-05 the catalog had widened it to
+    ['insect_soft_bodied', 'fungal_foliar', 'fungal_soilborne'], making the injection legal and the
+    mutation a false survivor. A hard-coded method name is a record of what the catalog looked like
+    once, and the catalog is the thing under test's own input.
+
+    So: pick, at run time, any CULTURAL method whose applies_to shares nothing with the fungal
+    target set. Cultural because it replaces a cultural rung, so tier monotonicity stays intact and
+    coherence is the only family that can trip. HARNESS DEAD if the catalog no longer offers one.
     """
-    _lad(crop, "apple-scab")["control_ladder"][0]["method"] = "balance_nitrogen"
+    fungal = set(TYPE_TARGETS["fungal"]) | {UNIVERSAL_TARGET}
+    picks = sorted(mid for mid, m in d["control_methods"].items()
+                   if m.get("tier") == "cultural" and not (set(m.get("applies_to") or []) & fungal))
+    if not picks:
+        raise SystemExit("HARNESS DEAD: no cultural catalog method is disjoint from the fungal "
+                         "targets -- the coherence mutation cannot be built")
+    CHOSEN.append((picks[0], sorted(d["control_methods"][picks[0]].get("applies_to") or [])))
+    _lad(crop, "apple-scab")["control_ladder"][0]["method"] = picks[0]
 
 
 def m_duplicate_id(d, crop):
@@ -94,31 +129,54 @@ def m_catalog_bad_tier(d, crop):
     d["control_methods"]["sulfur"]["tier"] = "mild"
 
 
+# Each row carries the SUBSTRING the targeted guard emits. Grading on "A56 fired at all" lets a
+# mutation be scored as caught by a DIFFERENT family than the one it aims at -- the
+# green-because-an-earlier-check-fires shape. The expected string is the guard's own wording, so a
+# reworded message fails loudly here instead of quietly downgrading this harness to a smoke test.
 MUTATIONS = [
-    ("tier inversion (spray hoisted above cultural)", "monotonicity", m_tier_inversion),
-    ("rung names a method not in the catalog", "referential", m_unknown_method),
-    ("method's applies_to does not fit the problem type", "coherence", m_applies_to_incoherent),
-    ("two problems share an id", "identity", m_duplicate_id),
-    ("a laddered problem loses its id", "identity", m_missing_id),
-    ("a problem id is not kebab-case", "identity", m_non_kebab_id),
-    ("problem type is not a recognized value", "coherence", m_unrecognized_type),
-    ("catalog entry loses a required key", "catalog", m_catalog_missing_key),
-    ("catalog entry cites a non-T1 source", "catalog", m_catalog_non_t1_source),
-    ("catalog entry carries an invalid tier", "catalog", m_catalog_bad_tier),
+    ("tier inversion (spray hoisted above cultural)", "monotonicity", m_tier_inversion,
+     "is not softest-first"),
+    ("rung names a method not in the catalog", "referential", m_unknown_method,
+     "references unknown method"),
+    ("method's applies_to does not fit the problem type", "coherence", m_applies_to_incoherent,
+     "does not fit problem type"),
+    ("two problems share an id", "identity", m_duplicate_id, "duplicate id"),
+    ("a laddered problem loses its id", "identity", m_missing_id, "missing 'id'"),
+    ("a problem id is not kebab-case", "identity", m_non_kebab_id, "id is not kebab-case"),
+    ("problem type is not a recognized value", "coherence", m_unrecognized_type,
+     "is not a recognized type"),
+    ("catalog entry loses a required key", "catalog", m_catalog_missing_key,
+     "missing/empty required key"),
+    ("catalog entry cites a non-T1 source", "catalog", m_catalog_non_t1_source, "is not T1"),
+    ("catalog entry carries an invalid tier", "catalog", m_catalog_bad_tier, "invalid tier"),
 ]
 
-SENTINEL = ("SENTINEL: every rung stripped from every ladder",
+# The sentinel MUST redden. Emptying every ladder is `ladder_violations`' laddered-and-left-blank
+# defect, so A56 owns it and a silent A56 here means the harness is not grading.
+SENTINEL = ("SENTINEL: every rung stripped from every ladder (empty, not absent)",
             lambda d, crop: [p.__setitem__("control_ladder", [])
                              for fam in ("pests", "diseases") for p in crop.get(fam) or []
                              if isinstance(p, dict) and "control_ladder" in p])
 
+# The scope check. A56 is INTEGRITY; absence is A57's. Nulling every ladder must redden A57 and
+# leave A56 SILENT -- if A56 fired here, one defect would be reported twice under two guards, and
+# A56's whole design (no-op on an unladdered problem, which is what makes it free to arm early)
+# would be false.
+SCOPE = ("SCOPE: every ladder nulled -- A57's defect, not A56's",
+         lambda d, crop: [p.__setitem__("control_ladder", None)
+                          for fam in ("pests", "diseases") for p in crop.get(fam) or []
+                          if isinstance(p, dict)])
+
 
 def run(path):
-    """True == whole_crop_gate PASSES. Returns (passed, a56_fired)."""
+    """True == whole_crop_gate PASSES. Returns (passed, a56_fired, a57_fired).
+
+    A56 fails as `control-ladder: ...` and A57 as `control-ladder-coverage: ...`, so the two
+    prefixes do not alias -- "control-ladder-coverage:" does not contain "control-ladder:"."""
     r = subprocess.run([sys.executable, os.path.join(HERE, "whole_crop_gate.py"), CROP, path],
                        capture_output=True, text=True, cwd=REPO)
     out = r.stdout + r.stderr
-    return "GATE: PASS" in out, "control-ladder:" in out
+    return "GATE: PASS" in out, "control-ladder:" in out, "control-ladder-coverage:" in out, out
 
 
 def stage(fn):
@@ -140,39 +198,51 @@ def main():
     print("=" * 78)
 
     # POSITIVE CONTROL
-    ok, _ = run(CANON)
+    ok, _, _, _ = run(CANON)
     if not ok:
         print("HARNESS DEAD: the unmutated canonical does not PASS whole_crop_gate.")
         return 1
-    print("positive control : GREEN (unmutated canonical passes)\n")
+    print("positive control : GREEN (unmutated canonical passes)")
 
-    # SENTINEL -- note this one must NOT fire A56 (an empty ladder is legitimately absent),
-    # so it is checked for the OPPOSITE property: it must NOT be caught. That is the point --
-    # A56 owns integrity, not coverage, and proving it stays silent here is proving the
-    # coverage floor was NOT armed by accident.
+    # SENTINEL -- must redden, or the run is not grading anything.
     label, fn = SENTINEL
     p = stage(fn)
-    ok, fired = run(p)
+    ok, fired, _, _ = run(p)
     os.unlink(p)
-    if fired:
-        print(f"HARNESS DEAD: {label} fired A56 -- a COVERAGE floor was armed by mistake.")
+    if ok or not fired:
+        print(f"HARNESS DEAD: {label} did NOT redden A56 (fired={fired}, gate passed={ok}).")
         return 1
-    print(f"scope check      : A56 correctly SILENT on a stripped ladder ({label})")
-    print("                   -> confirms the coverage floor is NOT armed\n")
+    print(f"sentinel         : REDDENS ({label})")
+
+    # SCOPE -- absence belongs to A57. A56 must stay silent on it.
+    label, fn = SCOPE
+    p = stage(fn)
+    ok, a56, a57, _ = run(p)
+    os.unlink(p)
+    if a56 or not a57:
+        print(f"HARNESS DEAD: {label} -- A56 fired={a56}, A57 fired={a57}. The integrity and "
+              f"coverage guards are not cleanly separated.")
+        return 1
+    print(f"scope check      : A57 owns absence, A56 SILENT ({label})\n")
 
     caught = survived = 0
     fam = {}
-    for label, family, fn in MUTATIONS:
+    for label, family, fn, expect in MUTATIONS:
         p = stage(fn)
-        ok, fired = run(p)
+        ok, fired, _, out = run(p)
         os.unlink(p)
         fam.setdefault(family, [0, 0])
-        if ok or not fired:
+        on_target = any(expect in l for l in out.splitlines() if "control-ladder:" in l)
+        if ok or not fired or not on_target:
             survived += 1; fam[family][1] += 1
-            print(f"  SURVIVED  [{family}] {label}")
+            why = "" if fired else " (A56 silent)"
+            if fired and not on_target:
+                why = f" (A56 fired, but not on {expect!r} -- a DIFFERENT guard caught it)"
+            print(f"  SURVIVED  [{family}] {label}{why}")
         else:
             caught += 1; fam[family][0] += 1
-            print(f"  caught    [{family}] {label}")
+            extra = f"  -> picked {CHOSEN[-1][0]} {CHOSEN[-1][1]}" if CHOSEN and fn is m_applies_to_incoherent else ""
+            print(f"  caught    [{family}] {label}{extra}")
 
     print("\n" + "-" * 78)
     for f in sorted(fam):
