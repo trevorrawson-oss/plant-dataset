@@ -1,0 +1,510 @@
+{
+  "crop": "pear-asian",
+  "pests": [
+    {
+      "name": "Codling moth",
+      "id": "codling-moth",
+      "type": "insect",
+      "severity": "high",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Check the young pears every week or so and pull off any with a small hole ringed by brown crumbs, then pick up every pear that drops as soon as you see it, because the caterpillar is usually still inside and will crawl out to start the next batch. Thin to one pear per cluster and look closely where two fruits touch, a favorite spot for the hole. Destroy what you collect rather than leaving it under the tree.",
+          "note_seasoned": "Cydia pomonella overwinters as a mature larva in a silken cocoon under loose bark scales and in soil or litter at the base of the tree, and every larva that leaves a pear to spin one is a moth next flight, so an infested fruit taken off the tree or a drop picked up promptly is a moth that never flies. UC IPM is blunt that it is far easier to hold numbers low from the first flight than to pull down a population that has built for a season or two. Thin to one fruit per cluster, inspect the contact point of touching fruit, and take out any abandoned apple, pear or walnut nearby, which UC IPM's pear guideline treats as a reservoir to remove."
+        },
+        {
+          "method": "codling_moth_pheromone_trap",
+          "note_beginner": "Hang a scent trap in the tree in spring. It catches male moths, and its real job is to tell you the moths have started flying, which sets the clock for bagging the fruit and for any spray. On its own it will not keep the pears clean.",
+          "note_seasoned": "A pheromone-baited trap marks first sustained male flight, and UC IPM's home guidance keys the first spray to egg hatch, which follows the first regular catches by a run of warm days that its guide gives as a heat-unit count rather than a calendar date; counts through summer flag the second and any third generation. Hanging traps in every tree may thin an isolated tree's moths slightly, but UC IPM does not rate that as a reliable way to reduce damage, so read the trap as a calendar rather than a control."
+        },
+        {
+          "method": "fruit_bagging",
+          "note_beginner": "Once the flowers have dropped and the young pears are half an inch to an inch across, roughly four to six weeks after bloom, enclose each one in a paper bag fastened around the stem. A bagged pear is out of the moth's reach, so no egg is laid on it and no caterpillar gets in. It takes time per fruit, so it fits a tree with a crop you can count.",
+          "note_seasoned": "This is the one nonchemical measure UC IPM rates effective enough to stand alone even under heavy pressure, and it earns that by taking the fruit out of the egg-laying site altogether rather than trimming the population. The window is four to six weeks after bloom at 1/2 to 1 inch fruit, and NC State's handbook gives the same span; thin to a single fruit per cluster first, and bag early on late-developing varieties, which UC IPM warns can be attacked before the fruit reaches 1/2 inch."
+        },
+        {
+          "method": "spinosad",
+          "note_beginner": "If the tree carries more fruit than you can bag, spinosad is the organic spray UC IPM lists for home trees, and timing is everything: the first spray goes on as the first caterpillars hatch, before they bore in, with two more at ten-day spacing, and never more than six in a season. It is hard on bees while wet, so spray at dusk and keep it off anything in flower, and stop at least a week before you pick.",
+          "note_seasoned": "Spinosad, a fermentation product of Saccharopolyspora spinosa, kills young larvae by ingestion and contact, so it has to be on the fruit surface as eggs hatch; UC IPM's home schedule is three sprays at 10-day intervals from first-generation hatch, a season cap of six, and a 7-day preharvest interval. Place the first spray with the trap and degree-day count, since a spray before hatch is wasted and one after the larva has entered the pear is useless. UC IPM also names a granulosis virus (CYD-X) sold to California home gardeners that affects only codling moth larvae and, applied weekly through hatch, matched carbaryl in its trials."
+        },
+        {
+          "method": "carbaryl",
+          "note_beginner": "Carbaryl is the old-style chemical UC IPM measures the softer options against, and it works, but at a real cost: it kills bees and the helpful insects along with the moths, so it must never go on a tree in bloom or when bees are working it, and on a pear it can set off an outbreak of pear psylla by wiping out the insects that keep psylla down. Keep it for a tree where bagging and spinosad have not held the damage, and read the label's waiting time before harvest.",
+          "note_seasoned": "UC IPM's home note gives carbaryl a 14-to-21-day residual against codling moth and calls it very disruptive to natural enemies and honey bees, with an absolute bar on spraying during bloom or when bees are present. On pear the secondary cost is specific: UC IPM's pear guideline attributes psylla outbreaks to nonselective codling moth insecticides destroying the predators and parasites that hold psylla in check, so a carbaryl program for the moth can buy a sticky, sooty tree by late summer. It also carries a carcinogen listing, which on a food crop is the reason to exhaust the other measures first."
+        }
+      ],
+      "sources": [
+        "uc_ipm",
+        "ncsu_ext_handbook_tree_fruit",
+        "ucanr_ext"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/codling-moth/",
+          "verified": "2026-09-04"
+        },
+        "ncsu_ext_handbook_tree_fruit": {
+          "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+          "verified": "2026-09-04"
+        },
+        "ucanr_ext": {
+          "url": "https://ucanr.edu/sites/sfp/pubs/brochures/Asianpears/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Larvae tunnel to the core and feed in the seed cavity, leaving one or more holes plugged with frass on the fruit surface; a shallow sting where a larva bored a short way and died is the other mark. Check where two fruits touch, a common entry point. Infested pears drop early or are inedible.",
+          "why": "'often at the calyx end' has no anchor (the UC IPM pear guideline says calyx entries are hard to detect, and only as extractor paraphrase); the sting versus deep-entry distinction and the touching-fruit entry point are on the anchored pages and were missing.",
+          "anchor": "uc_ipm (Pest Management Guidelines: Pear, codling moth, https://ipm.ucanr.edu/agriculture/pear/codling-moth/): 'Stings are entries where larvae bore into the flesh a short distance before dying. Deep entries occur when larvae penetrate the fruit skin, bore to the core, and feed in the seed cavity.' and 'one or more holes plugged with frass on the fruit's surface'; uc_ipm PN 7412: 'Be sure to examine the fruit where it touches another fruit, as this is a common place to find an entry hole.' and 'It also is important to clean up dropped fruit as soon as possible after they fall, because dropped fruit can have larvae in them.'"
+        },
+        "cause_seasoned": {
+          "new": "Cydia pomonella; females lay eggs singly on leaves and on fruit, and the hatching larvae bore into the pear. It overwinters as a full-grown larva in a silken cocoon under loose bark scales or in soil and debris at the base of the tree, and depending on climate has two, three or sometimes four generations a year. The same pest attacks apple and English walnut.",
+          "why": "'near bloom' as the egg-laying time is quoted on no page read; the overwintering site and the generation count are on PN 7412 and were missing.",
+          "anchor": "uc_ipm PN 7412: 'Codling moth overwinters as full-grown larvae within thick, silken cocoons under loose scales of bark and in soil or debris around the base of the tree.' and 'Depending on the climate, codling moth can have two, three, and sometimes four generations per year.' and 'Codling moth, Cydia (Laspeyresia) pomonella, is a serious insect pest of apples, pears, and English walnuts.'; uc_ipm pear guideline: 'Females lay eggs singly on leaves and on fruit.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Monitor with pheromone traps and a degree-day count to time control to egg hatch; remove infested fruit from the tree and dropped fruit promptly; bag fruit four to six weeks after bloom, the one nonchemical measure UC IPM rates as effective alone; spinosad at egg hatch, three sprays at 10-day intervals for the first generation and no more than six per season; a codling moth granulosis virus (CYD-X) applied weekly through hatch where available. Mating disruption is an orchard-scale tool.",
+          "why": "'kaolin clay on a degree-day/petal-fall schedule' has no anchor: kaolin appears only as a listed material on the commercial guideline, with no schedule, and PN 7412 omits it on two reads; the bagging window, the spinosad schedule and CYD-X were missing.",
+          "anchor": "uc_ipm PN 7412: 'Bagging is the only nonchemical control method that is effective enough to be used alone and in higher population situations.' and 'The first spring generation requires three sprays applied at 10-day intervals beginning at egg hatch... No more than six sprays should be applied per season, and they shouldn't be applied within seven days of harvest.' and 'University of California trials have shown that this product, when applied weekly during egg hatch throughout the season, is as effective as carbaryl sprays at controlling codling moth.' (CYD-X) and 'The most effective way to time insecticide sprays is with a pheromone trap and a degree-day calculation.'"
+        },
+        "prevention_seasoned": {
+          "new": "Sanitation from the first flight on: pick infested fruit off the tree before the larvae mature, clear drops as they fall, thin to one fruit per cluster and inspect touching fruit. Remove, rather than prune, any abandoned apple, pear or walnut nearby, which UC IPM treats as a reservoir. Cardboard trunk bands are no longer recommended for home gardens: they catch only a small share of the larvae, and a band not removed in time breeds moths.",
+          "why": "Prescribed trunk banding, which PN 7412 retires for home gardens; 'pruned' is not what the document says of abandoned host trees (it says remove).",
+          "anchor": "uc_ipm PN 7412: 'However, even in the best situations, banding will control only a very small percentage of the codling moth, because many pupate elsewhere on the tree or in the ground.' and 'Additionally, if bands aren't removed and destroyed in a timely fashion, they could increase the population, so banding no longer is recommended for control in home gardens.'; uc_ipm pear guideline: 'Remove host trees in nearby abandoned orchards (apple, pear, and walnut) to destroy reservoirs of codling moth.'"
+        },
+        "prevention_beginner": {
+          "new": "Keep the ground under the tree clear of fallen pears, and pull off any pear with a hole in it before the caterpillar inside can leave. Thin to one pear per cluster. A cardboard band around the trunk is an old trick UC IPM no longer recommends for home trees, because it catches very few of the caterpillars and can make things worse if you forget to take it down. An abandoned pear or apple tree nearby keeps the moths coming, so take it out if it is yours.",
+          "why": "Prescribed the cardboard trunk band that PN 7412 retires for home gardens.",
+          "anchor": "uc_ipm PN 7412: 'banding no longer is recommended for control in home gardens.' and 'Removing infested fruit before the larvae are old enough to crawl out and begin the next generation can be a very effective method for reducing the population.' and 'Thin the fruit to one per cluster.'"
+        }
+      }
+    },
+    {
+      "name": "Pear psylla",
+      "id": "pear-psylla",
+      "type": "insect",
+      "severity": "medium",
+      "control_ladder": [
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Feed the tree modestly and do not chase big flushes of soft new growth, because that sappy growth is what pear psylla settle on and breed in. WSU's home fact sheet puts it simply: prune lightly, give moderate nitrogen, and cut out the water sprouts and suckers that psylla favor.",
+          "note_seasoned": "Psylla nymphs feed on succulent shoot tissue, so vigor management is a population lever: WSU's Hortsense guidance is to prune lightly, supply moderate amounts of nitrogen, and remove water sprouts and suckers, which strips out the flush growth that carries the heaviest nymph loads and honeydew. The light-pruning instruction is the other half of the same idea, since hard cuts provoke exactly the regrowth psylla wants."
+        },
+        {
+          "method": "kaolin_clay",
+          "note_beginner": "A coat of kaolin clay, the white mineral spray, makes the tree an unattractive place for psylla to land and lay eggs. WSU's home fact sheet lists it among the growing-season options, and it does most good put on before bloom, when the overwintered adults are starting to lay. Rain washes it off, so it needs renewing, and the white film has to be rinsed off the fruit at harvest.",
+          "note_seasoned": "Kaolin is a particle film that reduces adult colonization and egg laying rather than killing nymphs already feeding, which is why UC IPM's pear guideline places it prebloom and WSU's orchard program reports 80 to 100 percent less colonization and egg lay, cutting first-generation pressure. UC IPM warns that later-season use may cause mite outbreaks, and heavy use can set back beneficials, so on a home tree it is a spring measure rather than a summer one."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Lacewings, lady beetles and small predatory bugs eat pear psylla for free, and they are a large part of why a lightly managed tree rarely has a serious problem. The way to keep them is to not spray anything broad-spectrum on the tree, including the sprays aimed at codling moth, because UC IPM traces psylla outbreaks straight to those sprays killing off the helpers.",
+          "note_seasoned": "Cacopsylla pyricola is held in check by a resident complex WSU names as the parasitic wasp Trechnites insidiosus, the predatory bugs Deraeocoris brevis, Campylomma verbasci and Anthocoris spp., green and brown lacewings, and the European earwig; UC IPM's pear guideline states that nonselective codling moth insecticides destroy many of these beneficials and produce outbreaks. On a home tree the decision is therefore made on the codling moth side: bag the fruit or use a selective material there, and the psylla largely looks after itself, which matters doubly on an Asian pear, where UC IPM rates psylla a lesser problem than on European varieties."
+        },
+        {
+          "method": "horticultural_oil",
+          "note_beginner": "The backbone spray is horticultural oil while the tree is bare, put on before the buds swell, because the adults that lived through winter in bark cracks and litter around the tree are on the wood then and the oil smothers them. UC IPM says to apply it at least once in the dormant season, and to repeat just before bloom if psylla were bad the year before. Oil kills the adults; it does not kill eggs already laid, which is why the timing is early.",
+          "note_seasoned": "Adults overwinter in bark crevices, under bark scales and in litter at the base of the tree and begin ovipositing at bud swell, so a dormant oil hits the population at its narrowest point; UC IPM's pear guideline is explicit that oil kills adult psylla but does not control eggs, though it discourages egg laying for about a month, which is why the home timing is at least one application in the dormant season with a second just before bloom in a bad year. Coverage of the wood is the whole job, and oil is not applied in heat or to a water-stressed tree."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "During the growing season, insecticidal soap sprayed onto the shoots where the small nymphs and their sticky honeydew are will kill what it wets and nothing else. It has no lasting effect, so repeat as new nymphs appear, spray early morning or late evening, and WSU says a homeowner should not be spraying a tree taller than 10 feet at all.",
+          "note_seasoned": "Potassium salts of fatty acids work only on contact with soft-bodied nymphs, and psylla nymphs sit in honeydew on leaf undersides and in shoot tips, so coverage of the new growth decides the result; WSU's home fact sheet and Oregon State's home orchard calendar both list soap from prepink through summer. It spares the predator complex once dry, which is what makes it the in-season material over anything broad-spectrum, and WSU's rules apply: morning or evening timing, and no foliar sprays on trees over 10 feet."
+        }
+      ],
+      "sources": [
+        "uc_ipm",
+        "wsu_ext",
+        "osu_ext"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/pear-psylla/",
+          "verified": "2026-09-04"
+        },
+        "wsu_ext": {
+          "url": "https://hortsense.cahnrs.wsu.edu/fact-sheet/pear-pear-psylla/",
+          "verified": "2026-09-04"
+        },
+        "osu_ext": {
+          "url": "https://extension.oregonstate.edu/catalog/pub/ec631",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Nymphs feed in clusters on shoots and leaves and exude sticky honeydew that blackens with sooty mold; heavy feeding blackens and scorches leaves, drops them early, russets the fruit, and in large numbers stunts the tree and drops fruit, the reaction WSU calls psylla shock. It is a greater problem on European pears than on Asian pears.",
+          "why": "'The signature pear pest' is editorial and, on this crop, contradicted by UC IPM (home and commercial pages); the entry was pear-european's byte-identical template copy and its weight was never adjudicated for Asian pear.",
+          "anchor": "uc_ipm (home): 'Pear psylla is a greater problem on European varieties than on Asian varieties of pear.' and 'This causes portions of the leaf blade to blacken and affected leaves become yellow and sometimes drop prematurely.'; wsu_ext (Tree Fruit psylla IPM page, https://treefruit.wsu.edu/crop-protection/opm/pear-psylla/): 'In large numbers, pear psylla can stunt and defoliate trees and cause fruit drop...These symptoms, called psylla shock, are caused by toxic saliva from feeding nymphs.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Horticultural oil at least once in the dormant season, before buds swell, and again just before bloom if last year was bad: oil kills overwintered adults and discourages egg laying but does not control eggs. In season, insecticidal soap, kaolin or neem on the new growth; conserve natural enemies (Anthocoris and other predatory bugs, lacewings, the parasitic wasp Trechnites) by keeping broad-spectrum insecticides, including those aimed at codling moth, off the tree; kaolin before bloom to deter colonization and egg laying.",
+          "why": "'smother overwintering adults and eggs' contradicts UC IPM's pear guideline, which says oil kills adults but does not control eggs; 'summer oil' is on no home document read, and UC IPM puts oil at dormant and prebloom only.",
+          "anchor": "uc_ipm (Pest Management Guidelines: Pear, pear psylla, https://ipm.ucanr.edu/agriculture/pear/pear-psylla/, read first-party this session): 'Oil kills adult psylla but does not control eggs.' and 'It does discourage egg laying for about 1 month, however.'; uc_ipm (home): 'Apply horticultural oil at least once during the dormant season and by the beginning of January. If the psyllid and its damage have been abundant, make a second dormant treatment of oil just before bloom.'; wsu_ext (Hortsense): 'Apply kaolin clay, insecticidal soap, or neem during the growing season.' and 'Avoid use of broad-spectrum insecticides which kill beneficial insects.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "Spray horticultural oil while the tree is bare and before the buds swell, to smother the adults that lived through winter on the bark; it will not kill eggs already laid, so do not wait. In the growing season use insecticidal soap, kaolin or neem on the new shoots. Avoid harsh sprays, including strong sprays aimed at codling moth, because they kill the helpful bugs that eat psylla.",
+          "why": "'in late winter' postdates egg laying in mild climates (UC IPM: by the beginning of January; WSU: laying begins at bud swell), and 'smother the overwintering insects' implied eggs, which oil does not control.",
+          "anchor": "wsu_ext (Tree Fruit psylla IPM page): 'They begin laying eggs when pear buds begin to swell.'; uc_ipm (home): 'Apply horticultural oil at least once during the dormant season and by the beginning of January.'; uc_ipm (pear guideline): 'Oil kills adult psylla but does not control eggs.'"
+        },
+        "prevention_beginner": {
+          "new": "A dormant oil spray while the tree is bare and before the buds swell, and going easy on harsh sprays and fertilizer, keep this pear pest in check.",
+          "why": "'in late winter' postdates the start of egg laying in mild climates (UC IPM: at least once in the dormant season and by the beginning of January; WSU: laying begins at bud swell), the same phrase already retired from organic_treatment_beginner; a claim lives in every field that carries it (review F4).",
+          "anchor": "uc_ipm (home): 'Apply horticultural oil at least once during the dormant season and by the beginning of January.'; wsu_ext (Tree Fruit psylla IPM page, https://treefruit.wsu.edu/crop-protection/opm/pear-psylla/): 'They begin laying eggs when pear buds begin to swell.'"
+        }
+      }
+    },
+    {
+      "name": "Stink bug",
+      "id": "stink-bugs",
+      "type": "insect",
+      "severity": "medium",
+      "control_ladder": [
+        {
+          "method": "weed_host_control",
+          "note_beginner": "Stink bugs build up on weeds and rough grass around the tree and then move onto the pears, so clear that growth in early spring, before they get numerous in it, and keep the ground under and around the tree clean through summer. Timing is the point: UC IPM says to take the weeds out before the bugs are abundant in them, not after.",
+          "note_seasoned": "NC State's handbook calls weeds the primary food source for the catfacing bugs, and UC IPM's instruction is to eliminate groundcovers and herbaceous weeds in early spring before stink bugs become abundant in them and move to alternative hosts. The brown marmorated stink bug is an edge invader that WSU and Rutgers both record moving in from wooded borders and neighboring crops, so on a home tree the reach of this measure is the ground you control; it lowers what arrives rather than what is already on the fruit."
+        },
+        {
+          "method": "handpick",
+          "note_beginner": "On branches you can reach, look under the leaves for the clusters of 20 to 30 pale barrel-shaped eggs and the groups of small nymphs that hatch from them, and crush them or drop them into soapy water. WSU's pear fact sheet recommends exactly this, and it works because the young bugs stay bunched together after hatching.",
+          "note_seasoned": "Halyomorpha halys lays eggs in groups of about 20 to 30 on leaf undersides and the early nymphs feed in a cluster, which is the stage that hand removal, net-sweeping or shaking a branch over a tray actually reaches; WSU lists all three. Adults are strong fliers that arrive from outside and leave again, and UC IPM notes the feeding damage often shows only after the bugs have gone, so hand removal is aimed at the egg masses and nymph groups, not at chasing adults."
+        },
+        {
+          "method": "floating_row_cover",
+          "note_beginner": "On a small or dwarf tree, WSU says a floating row cover or similar fine barrier over the canopy can keep stink bugs off the fruit where that is practical. Put it on after the flowers are finished and the fruit has set, because a cover shuts out the bees the tree needs, and take it off to pick.",
+          "note_seasoned": "WSU's pear guidance allows screening plants with a floating row cover or similar barrier when practical, and on a tree that means a dwarf on a small frame rather than a standard; the barrier has to be sealed at the ground and go on after pollination, since pears need cross-pollination and the same mesh excludes the bees. It is the exclusion measure WSU names for this pest on pear; bagging individual fruit is not on any page read for stink bug."
+        },
+        {
+          "method": "kaolin_clay",
+          "note_beginner": "A kaolin clay coating on the fruit and leaves makes the pears an unpleasant surface for stink bugs to feed on and less attractive to land on. Oregon State's home orchard guide lists it for brown marmorated stink bug, but only as suppression, so expect fewer dimpled pears rather than none, and renew it after rain.",
+          "note_seasoned": "Kaolin is a repellent film rather than a toxicant, and Oregon State's EC 631 lists it against brown marmorated stink bug on pear with the explicit qualifier suppression, which is the right expectation for a bug that flies in from the edge as an adult and probes rather than chews. Coverage of the fruit surface is what counts, so reapply as the fruit sizes and after rain, and wash the residue off at harvest."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Big-eyed bugs, assassin bugs, damsel bugs, crab spiders and several tiny wasps that attack stink bug eggs are already in most gardens, and NC State says the way to keep them working is to cut back on broad-spectrum sprays. They will not give complete control on their own, WSU is clear about that, but they are part of why a lightly sprayed tree has fewer.",
+          "note_seasoned": "NC State names parasitic wasps, big-eyed bugs, assassin bugs, damsel bugs and crab spiders as the resident enemies of the catfacing bugs, and its instruction is to reduce broad-spectrum insecticide use so they keep pest populations in check; WSU adds that natural enemies may not be sufficient for complete control of the brown marmorated stink bug but that broad-spectrum sprays should still be avoided for their sake. It is also why a spray is a poor answer here: UC IPM says insecticides are generally not recommended for stink bugs in gardens because the damage appears after the bugs have left, and WSU rates its listed home products as toxic to bees and not recommended against adults."
+        }
+      ],
+      "sources": [
+        "wsu_ext",
+        "uc_ipm",
+        "ncsu_ext_handbook_tree_fruit",
+        "osu_ext",
+        "psu_ext",
+        "rutgers_njaes"
+      ],
+      "anchoring_urls": {
+        "wsu_ext": {
+          "url": "https://hortsense.cahnrs.wsu.edu/fact-sheet/pear-brown-marmorated-stink-bug/",
+          "verified": "2026-09-04"
+        },
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/stink-bugs/",
+          "verified": "2026-09-04"
+        },
+        "ncsu_ext_handbook_tree_fruit": {
+          "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+          "verified": "2026-09-04"
+        },
+        "osu_ext": {
+          "url": "https://extension.oregonstate.edu/catalog/pub/ec631",
+          "verified": "2026-09-04"
+        },
+        "psu_ext": {
+          "url": "https://extension.psu.edu/tree-fruit-insect-pest-brown-marmorated-stink-bug",
+          "verified": "2026-09-04"
+        },
+        "rutgers_njaes": {
+          "url": "https://pemaruccicenter.rutgers.edu/programs/entomology/pest-management-information/brown-marmorated-stink-bug/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "cause_seasoned": {
+          "new": "Several native stink bugs (the consperse stink bug, Euschistus conspersus, and relatives) plus the invasive brown marmorated stink bug (Halyomorpha halys). Brown marmorated adults overwinter in sheltered places, including houses and sheds, emerge in spring and move straight onto available hosts; the natives overwinter in ground litter. Adults and nymphs both feed on the fruit into harvest, moving in from weeds, neighboring crops and woodland edges, and late feeding may not show until the fruit has been stored.",
+          "why": "'from petal fall through harvest' is a feeding window no document states (PSU puts orchard monitoring from mid-July); the overwintering sites, the spring emergence and the storage-delayed damage are anchored and were missing; the native species is pinned by name per the record pass, which keeps the entry an umbrella.",
+          "anchor": "wsu_ext (Hortsense pear BMSB): 'Adults overwinter in sheltered locations (including houses, where they can become a significant nuisance pest).' and 'BMSB damage that occurs close to harvest time may not be apparent, but the damaged fruit will come out of storage with brown spots.'; psu_ext: 'Overwintering BMSB adults emerge from their winter hideouts in early spring to mid-June and immediately move to feed on available hosts.'; uc_ipm (home Stink Bugs): 'Overwintering is on the ground in liter.' (sic) and the species list naming Euschistus conspersus and Halyomorpha halys."
+        },
+        "organic_treatment_seasoned": {
+          "new": "Kaolin clay suppresses feeding; eliminate weeds and groundcover in early spring before the bugs build up in them; pick and destroy egg masses and groups of young nymphs, by hand, net or shaking; screen a small tree with a floating row cover or similar barrier after fruit set where practical; conserve natural enemies by avoiding broad-spectrum sprays. Insecticides are generally not recommended for stink bugs in gardens, since the damage shows after the bugs have gone; the home products WSU lists work best on very young nymphs, are not recommended against adults, and are toxic to bees.",
+          "why": "'trap adults' and 'bagging individual fruit excludes them' are on no page read (traps are commercial pheromone monitoring on the WSU and PSU pages; WSU names a floating row cover, not fruit bags); 'use a labeled product timed to nymph emergence' overstated what the home sources allow. (Review F8: 'act only on very young nymphs' narrowed Hortsense's 'most effective against very young nymphs'; loosened to the document's wording.)",
+          "anchor": "wsu_ext (Hortsense pear BMSB): 'Pick and destroy BMSB egg masses or groups of young nymphs' and 'When practical, plants may be screened with a floating row cover or similar barrier.' and 'Chemical management of BMSB is most effective against very young nymphs (immature insects). Chemical management is NOT RECOMMENDED FOR ADULT INSECTS.' and 'CAUTION: These pesticides are toxic to bees.'; uc_ipm (home): 'Eliminate groundcovers and other herbaceous vegetation such as weeds in early spring before stink bugs become abundant there and then move to alternative hosts.' and 'Insecticides are generally not recommended in gardens and landscapes for stink bugs.'; osu_ext EC 631 BMSB row: 'kaolin (suppression)'."
+        },
+        "organic_treatment_beginner": {
+          "new": "Coating the fruit with kaolin clay (a fine white clay spray) helps keep them off, and clearing weeds and rough grass around the tree in early spring removes the place they build up. Look under the leaves for the clusters of eggs and the bunches of small nymphs and squash them. A small tree can be covered with fine mesh once the fruit has set. Sprays are a poor answer for these bugs; by the time you see the damage they have usually moved on.",
+          "why": "'slip bags over young fruit to protect them' has no anchor for stink bug (WSU names a floating row cover or similar barrier).",
+          "anchor": "wsu_ext (Hortsense pear BMSB): 'When practical, plants may be screened with a floating row cover or similar barrier.' and 'Pick and destroy BMSB egg masses or groups of young nymphs'; uc_ipm (home): 'Commonly stink bug feeding damage does not become apparent until after plant tissues grow, by which time the stink bugs may no longer be present.'"
+        },
+        "prevention_seasoned": {
+          "new": "Eliminate weeds and herbaceous groundcover in early spring before stink bugs become abundant in them, and keep them down through the season; reduce broad-spectrum insecticide use so parasitic wasps, big-eyed bugs, assassin bugs, damsel bugs and crab spiders keep populations in check. Where damage recurs on a small tree, screen it after fruit set.",
+          "why": "'monitor with traps from bloom on' and 'bag fruit where damage recurs' are unanchored: traps are commercial pheromone monitoring on the WSU and PSU pages and no home document recommends trapping or fruit bags for stink bug.",
+          "anchor": "uc_ipm (home): 'Eliminate groundcovers and other herbaceous vegetation such as weeds in early spring before stink bugs become abundant there and then move to alternative hosts.'; ncsu_ext_handbook_tree_fruit: 'Several parasitic wasps and predatory insects, such as big-eyed bugs, assassin bug, damsel bugs, and crab spiders, attack these insects. Reducing the use of broad spectrum insecticides helps these biological predators keep pest populations in check.'; wsu_ext (Hortsense): 'When practical, plants may be screened with a floating row cover or similar barrier.'"
+        },
+        "prevention_beginner": {
+          "new": "Clear the weeds and rough growth around the tree in early spring, before the bugs move into it, and keep it down all season. Go easy on strong bug sprays so the spiders and predatory bugs that eat stink bug eggs stay around. If they ruin the fruit every year on a small tree, cover it with fine mesh once the fruit has set.",
+          "why": "'watch for them from bloom onward, and bag the fruit' has no anchor (no home document recommends trapping or fruit bags for stink bug; WSU names a row cover).",
+          "anchor": "uc_ipm (home): 'Eliminate groundcovers and other herbaceous vegetation such as weeds in early spring before stink bugs become abundant there'; ncsu_ext_handbook_tree_fruit: 'Weeds are the primary food source for these insects, so keeping weeds to a minimum around the orchard will help manage populations.'; wsu_ext (Hortsense): 'When practical, plants may be screened with a floating row cover or similar barrier.'"
+        }
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "name": "Fire blight",
+      "id": "fire-blight",
+      "type": "bacterial",
+      "severity": "high",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Clemson calls fire blight the most significant problem limiting Asian pears, and the biggest decision is made when you buy the tree. Shinko is the most resistant by every guide, with Chojuro, Seuri, Olympic (also sold as Korean Giant) and Shin Li showing some resistance; Twentieth Century (Nijisseiki) is highly susceptible. Buy it on a fire-blight-resistant root too: Clemson recommends the birchleaf pear (Pyrus betulifolia) for Asian pears, and the Old Home x Farmingdale rootstocks resist it as well.",
+          "note_seasoned": "Resistance is partial, not immunity, and the ratings disagree at the margins: Shinko heads every list (Clemson's best, Purdue resistant, UC IPM's lone Asian exception); Purdue also rates Chojuro, Kosui, Olympic, Seuri, Shinsui, Singo and Tse Li resistant and Hosui, Kikusui, Okusankichi, Seigyoku, Twentieth Century and Shinseiki susceptible, while Clemson's two fact sheets split on Hosui, which gets planted anyway as Shinko's pollinizer. Rootstock is a separate layer: Purdue lists Old Home x Farmingdale (except OHxF 51) and Pyrus betulifolia seedlings as resistant and Bartlett seedling as susceptible, and Clemson notes betulifolia is vigorous and throws thorny root sprouts. Clemson puts cultivar choice in the same sentence as sanitation and avoiding excess nitrogen, because succulent growth is what gets infected."
+        },
+        {
+          "method": "prune_out_infection",
+          "note_beginner": "No spray cures fire blight, so cutting it out is the treatment. Take each blackened shoot or branch back at least 12 inches below the last sign of damage into clean wood, and Clemson's Asian pear guide goes to 18 inches. Do the main cleanup in winter while the tree is dormant and the bacteria are inactive, but a strike racing down a branch in spring should come off as soon as you see it, and only cut in dry weather. Wipe the blades with a 1-to-9 bleach mix or rubbing alcohol between cuts, burn or bury what you remove, and if more than half the tree is blighted, Purdue says to take the tree out.",
+          "note_seasoned": "Where you cut matters more than anything else: UC IPM's method is to find the lower edge of visible infection, trace the branch to its point of attachment and cut at the next branch juncture below, and both UC IPM and WSU report that cut placement matters more than tool sterilization, though dipping shears in 10 percent bleach between cuts is reasonable. The published distances run from Clemson's minimum of 8 to 12 inches through Purdue's at least 12 to WSU's 12 to 18 in wood two years old or older and Clemson's 18 inches for Asian pear, so 12 is a floor. Timing is dormant for the main removal, because growing-season pruning can spread the disease, with UC IPM's exception for rapidly advancing spring strikes on Asian pear, which come out at once; a trunk or scaffold canker can sometimes be saved by scraping bark to the cambium and taking 6 to 8 inches beyond any discolored streak, in winter. Do not shape the tree in the same pass, hold summer pruning until terminal buds have set, and keep nitrogen modest: UC IPM ties excess nitrogen and heavy pruning together as the two drivers of the succulent growth this bacterium needs."
+        },
+        {
+          "method": "copper_fungicide",
+          "note_beginner": "Copper is a partial shield for the flowers, not a cure, and in UC IPM's California guidance it is the only fire blight material sold to home growers; Purdue and Clemson also describe streptomycin, an antibiotic sprayed during bloom, for home use where it can be found, and Purdue allows no more than three or four of those sprays a season. UC IPM's copper advice is a weak copper spray repeated every four to five days while the blossoms are open and the weather is warm and humid, starting once the day's average temperature tops 60°F; Clemson's simpler version is one copper spray right before bloom. It will not clear an infection already in the wood, and repeated copper can russet the fruit.",
+          "note_seasoned": "Erwinia amylovora enters through open blossoms, so copper's job is to sit on the flower surface through the infection window UC IPM defines as rainy or humid weather with days of 75 to 85°F and nights above 55°F. UC IPM's program is a very weak (about 0.5 percent) Bordeaux or other copper as blossoms open once the 24-hour average temperature exceeds 60°F, at four-to-five-day intervals through late bloom, which on pear can mean five to twelve applications, and it says plainly this might reduce new infections but will not eliminate them or touch those already in wood. Copper accumulates in soil and can russet fruit, which is the case for Clemson's single pre-bloom spray on a tree not under heavy pressure. Streptomycin, the bloom antibiotic in the extension literature, is written for apple and capped by Purdue at three to four bloom sprays where it can be obtained at all. Do not irrigate during bloom."
+        }
+      ],
+      "sources": [
+        "clemson_hgic",
+        "uc_ipm",
+        "purdue_ext",
+        "wsu_ext"
+      ],
+      "anchoring_urls": {
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/asian-pear/",
+          "verified": "2026-09-04"
+        },
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/fire-blight/",
+          "verified": "2026-09-04"
+        },
+        "purdue_ext": {
+          "url": "https://www.extension.purdue.edu/extmedia/BP/BP-30-W.pdf",
+          "verified": "2026-09-04"
+        },
+        "wsu_ext": {
+          "url": "https://treefruit.wsu.edu/crop-protection/disease-management/fire-blight/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Blossoms and shoot tips suddenly wilt, blacken, and die, bending into a characteristic shepherd's-crook; affected branches look scorched, and sunken, oozing cankers form on wood. Most Asian pears are very susceptible, Shinko excepted, with Twentieth Century (Nijisseiki) rated highly susceptible; warm, wet weather at bloom drives the worst outbreaks, and the younger the tree, the more likely it dies.",
+          "why": "'Niitaka among the worst' appears on no page read (Purdue and Clemson do not rate it, NC State recommends it as a pollen source, and the non-admissible PNW table scores it equal to Chojuro, which the record calls tolerant); '20th Century' renamed to the sources' cultivar name; 'kill whole limbs' was implied rather than stated, and Purdue's young-tree sentence is stated.",
+          "anchor": "uc_ipm PN 7414: 'Most pear tree varieties, including Asian pears (with the exception of Shinko) and red pear varieties, are very susceptible to fire blight.'; clemson_hgic HGIC 1352: 'Twentieth Century and Hosui are highly susceptible; however, Hosui is often used as a pollinator for Shinko.'; purdue_ext BP-30-W: 'The younger the tree, the more likely it will die following infection.'"
+        },
+        "cause_seasoned": {
+          "new": "Erwinia amylovora; bacteria infect through open blossoms and tender shoot tips when the weather is rainy or humid with days of 75 to 85°F and nights above 55°F, and spread fastest on lush, nitrogen-pushed growth. Once infected, a tree harbors the bacterium indefinitely, and Clemson calls fire blight the most significant problem limiting the production of Asian pears.",
+          "why": "'It is the single biggest reason European pears fail in the humid South and East' is a regional-failure claim no page read publishes, and it is about European pears on an Asian pear record; the temperature window and Clemson's Asian-pear sentence are anchored.",
+          "anchor": "uc_ipm PN 7414: 'Ideal conditions for infection, disease development, and spread of the pathogen are rainy or humid weather with daytime temperatures from 75° to 85°F, especially when night temperatures stay above 55°F.' and 'Once infected, the plant will harbor the pathogen indefinitely.'; clemson_hgic HGIC 1352: 'Fire blight, caused by a bacterium, is the most significant problem limiting the production of Asian pears.'"
+        },
+        "cause_beginner": {
+          "new": "Bacteria that infect through the flowers and soft new shoots in warm, wet spring weather. Fast, soft growth from too much fertilizer makes it much worse. Once a tree has it, it keeps it, and Clemson calls it the biggest problem there is in growing Asian pears.",
+          "why": "'It is the main reason pears struggle in warm, damp climates' is the same unpublished regional framing as the seasoned field.",
+          "anchor": "clemson_hgic HGIC 1352: 'Fire blight, caused by a bacterium, is the most significant problem limiting the production of Asian pears.'; uc_ipm PN 7414: 'Once infected, the plant will harbor the pathogen indefinitely.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "Cut off the blackened branches well below the damage, at least 12 inches back into clean wood (Clemson's Asian pear guide says 18 inches), wiping your pruners with a 1-to-9 bleach mix or rubbing alcohol between cuts, and only in dry weather. Do the main cutting in winter while the tree is dormant, but a strike that is racing down a branch in spring should come off as soon as you see it. Burn or bury what you cut. There is no spray that cures it.",
+          "why": "'about a hand's length past it' (roughly 7 to 8 inches) is below every published figure: Clemson HGIC 2208 minimum 8 to 12 in, OSU EC 631 12, Purdue at least 12, WSU 12 to 18, Clemson HGIC 1352 for Asian pear 18; and the field said nothing about season, while its own anchor prescribes dormant-season pruning.",
+          "anchor": "purdue_ext BP-30-W: 'Prune only in dry weather, and make cuts at least 12 inches away from the site of infection and into healthy plant tissue.'; clemson_hgic HGIC 1352: 'Prune infected branches 18 inches below the affected area and burn or bury all diseased material. Clean pruning tools between cuts with a dilute solution of household bleach (one part bleach to nine parts water).' and 'Remove blighted limbs during the dormant season when bacteria are less active.'; uc_ipm PN 7414: 'Rapidly advancing infections on very susceptible trees (pear, Asian pear, and some apple varieties) should be removed as soon as they appear in spring.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Prune out infected wood at least 8 to 12 inches below visible symptoms (Purdue and OSU say 12, WSU 12 to 18 in older wood, Clemson's Asian pear guide 18), cutting at the next branch juncture below the infection, in dry weather, with tools dipped in 10 percent bleach or 70 percent alcohol between cuts; cut placement matters more than tool sterilization. Do the main removal in the dormant season, when pruning cannot spread the bacteria, but cut rapidly advancing spring strikes at once. Remove a tree with more than half its canopy blighted. There is no cure once established; management is prevention plus cutting it out.",
+          "why": "The field carried no season while its anchor (Clemson HGIC 2208) prescribes dormant-season pruning and warns that growing-season pruning may spread the disease; the cross-source distance range, the cut-placement point and Purdue's removal threshold were missing.",
+          "anchor": "clemson_hgic HGIC 1352: 'Remove blighted limbs during the dormant season when bacteria are less active.'; clemson_hgic HGIC 2208 (https://hgic.clemson.edu/factsheet/fire-blight-of-fruit-trees/): 'Prune out blackened twigs and branches with cankers during the dormant season. Pruning during the growing season may spread the disease.' and 'Pruning cuts of twigs and branches are made a minimum of 8 to 12 inches below any sign of infected tissue.' and 'Disinfect, all pruning tools between cuts using a 10% bleach solution (1 part household bleach to 9 parts water) or 70% alcohol.'; uc_ipm PN 7414: 'trace that infected branch back to its point of attachment, and cut at the next branch juncture down without harming the branch collar' and 'the location of the cut is far more important than the cleansing of tools.'; purdue_ext BP-30-W: 'Plants that have more than 50 percent of their canopy infected should be removed.'"
+        },
+        "prevention_seasoned": {
+          "new": "The decisive moves are cultivar and rootstock choice: plant the more resistant Asian pears (Shinko first, then Chojuro, Seuri, Olympic, Shin Li) on a fire-blight-resistant rootstock (Old Home x Farmingdale, or the birchleaf pear Pyrus betulifolia that Clemson recommends for Asian pears). Then avoid excess nitrogen and heavy pruning, which push the succulent growth that gets infected, do not irrigate during bloom, and cut out blight in the dormant season. Copper at bloom is a partial protectant, the only material UC IPM lists for California home growers; Purdue and Clemson also describe streptomycin during bloom for home use, where it can be obtained, capped by Purdue at three to four sprays a season.",
+          "why": "'or Pyrus calleryana' is a rootstock Clemson HGIC 1352 says has become an invasive species (a content/values call flagged to the orchestrator; dropped here in favor of Clemson's Asian-pear rootstock recommendation, which Purdue also rates resistant); 'follow a bloom-time forecast model where available' is anchored only on WSU's commercial page (CougarBlight, Maryblyt) and is not home advice; the anchored home practices were missing. (Review F3: the first draft's 'the only protective spray available to home growers' universalized UC IPM's California sentence; Purdue and Clemson HGIC 2208, both on this entry, describe homeowner streptomycin. F3b: PN 7414's 60°F trigger sentence is added to the anchor to warrant the figure in the copper note.)",
+          "anchor": "clemson_hgic HGIC 1352: 'Those that show some fire blight resistance are Shinko (best), Shin Li, Olympic, and Seuri.' and 'One species of pear that works well as a rootstock for Asian pears is the birchleaf pear (Pyrus betulifolia). It is reported to be more cold hardy than Pyrus calleryana, another pear species used as a rootstock but has become an invasive species.' and 'P. betulifolia is resistant to fire blight.'; purdue_ext BP-30-W Table 1, Pear Rootstocks, Resistant: 'Old Home (OH) Old Home x Farmingdale (except OHxF 51), P. calleryana, P. betulifolaefolia seedlings'; uc_ipm PN 7414: 'excess nitrogen fertilization and heavy pruning, which promote such growth, should be avoided. Trees shouldn't be irrigated during bloom.' and 'Copper products are the only materials available to homeowners for fire blight control' and 'Copper products are the only materials available to homeowners for fire blight control, and they often don't provide adequate control even with multiple applications.' and 'Once blossoms begin to open, make the first application when the average temperature (average of the maximum and minimum temperatures for a 24-hour period) exceeds 60°F.'; purdue_ext BP-30-W: 'Agri-Strep (streptomycin), is acceptable for home use, but may be difficult to obtain.' and 'Make no more than three to four applications per season'; clemson_hgic HGIC 2208 (https://hgic.clemson.edu/factsheet/fire-blight-of-fruit-trees/): 'Pear trees are also treated with a pre-bloom, copper fungicide spray, and then sprays of streptomycin during bloom.'"
+        }
+      }
+    },
+    {
+      "name": "Pear scab",
+      "id": "pear-scab",
+      "type": "fungal",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Asian pears get scab less than European pears, UC IPM says so directly, and for a single backyard tree the whole program can be raking. The fungus spends the winter in last year's fallen leaves, so gather them up in autumn or winter and compost them thoroughly or get rid of them; UC IPM says that alone can hold scab to a level you can live with.",
+          "note_seasoned": "Venturia pirina overwinters primarily in infected leaves on the ground, and UC IPM PN 7413 states that for a single backyard tree removing and composting or destroying the dropped leaves in autumn or winter can limit the disease to tolerable levels. In high-rainfall areas the fungus also carries over in lesions on pear twigs, which raking does not reach, and for several trees in a cool coastal climate PN 7413 adds urea on the foliage in autumn to hasten leaf fall (urea alone on pear, since zinc is phytotoxic to it), lime on the leaf piles, and running any sprinkler that wets foliage only between sunrise and noon so the leaves dry."
+        },
+        {
+          "method": "sulfur",
+          "note_beginner": "A spray is only worth it in a wet spring: UC IPM says fungicide is needed only when rain keeps the leaves wet for 9 hours or more. If that is your weather, sulfur goes on as the buds break, again 10 to 14 days later if it is still raining, and not past a month after petal fall. Never put sulfur on when it is near 90°F or hotter. And never mix it with oil or spray it close to an oil spray, because the pair burns leaves.",
+          "note_seasoned": "Infection needs a minimum of 9 hours of continuous leaf wetness and runs fastest between 55 and 75°F, which is why PN 7413 makes fungicide conditional on rainy weather and puts the whole protective window between bud break and a month after petal fall, with a second application 10 to 14 days after the first if rain continues, once blossom clusters show but before they open. A protectant has no curative reach, so a spray after lesions appear is a season already lost; PN 7413 lists it for home use alongside fixed copper, Bordeaux, copper soap and neem or mineral oils. Sulfur and oil are never combined or applied close together. Sulfur is not applied near or above 90°F. On Asian pear, which PN 7413 rates less susceptible than European pear, most years will not meet the wet-weather trigger at all."
+        }
+      ],
+      "sources": [
+        "uc_ipm"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/apple-and-pear-scab/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Olive-green to black velvety spots on leaves, shoots, and fruit; fruit lesions crack, letting rot organisms in, and early-infected fruit ends up scabby and misshapen; severe infection yellows leaves and causes early defoliation. The pear analog of apple scab, and Asian pears are less susceptible to it than European pears.",
+          "why": "Carries the retired pests[] copy's better-anchored sentence (leaves, shoots and fruit; the apple-scab analogy) plus the diseases[] copy's 'misshapen', drops the unanchored 'corky' (PN 7413 says velvety, sooty, cracked), and adds the anchor's one Asian-pear sentence, which the record omitted.",
+          "anchor": "uc_ipm PN 7413: 'dark, olive-colored spots form on leaves' and 'These begin as velvety or sooty, gray-black (and sometimes greasy looking) lesions' and 'Fruit also can crack, which allows entry of secondary organisms.' and 'Severely affected leaves often turn yellow and drop.' and 'Pear scab also can overwinter in lesions on pear twigs in high rainfall areas.' and 'Pear scab, which the fungus V. pirina causes, results in similar blemishes on pear fruit.' and 'Because Asian pears (Pyrus pyrifolia) are a different species, they are less susceptible to scab than European pears (P. communis).'; uc_ipm pear scab guideline (https://ipm.ucanr.edu/agriculture/pear/pear-scab/): early fruit infection 'scablike and misshapen'."
+        },
+        "symptoms_beginner": {
+          "new": "Dark, fuzzy olive-to-black spots on the leaves, and rough, scabby, cracked patches on the pears. In a bad year the tree drops its leaves early. Asian pears get it less than European pears.",
+          "why": "Retired pests[] copy's wording, whose 'rough, scabby, cracked patches' maps to 'Fruit also can crack', plus the Asian-pear sentence the record omitted.",
+          "anchor": "uc_ipm PN 7413: 'Fruit also can crack, which allows entry of secondary organisms.' and 'Severely affected leaves often turn yellow and drop.' and 'Because Asian pears (Pyrus pyrifolia) are a different species, they are less susceptible to scab than European pears (P. communis).'"
+        },
+        "cause_seasoned": {
+          "new": "Venturia pirina; the fungus overwinters primarily in fallen leaves, and in high-rainfall areas also in lesions on pear twigs, and infects during wet spring weather, most rapidly between 55 and 75°F with a minimum of 9 hours of continuous leaf wetness. Distinct from the apple-scab fungus but managed the same way.",
+          "why": "Carries the retired copy's 'Distinct from the apple-scab fungus but managed the same way' (anchored: one page names two species under one program); spells the fungus as the anchor does (V. pirina, not pyrina); adds the twig-lesion overwintering and the infection conditions the record lacked.",
+          "anchor": "uc_ipm PN 7413: 'Pear scab, which the fungus V. pirina causes, results in similar blemishes on pear fruit.' and 'Both apple and pear scab pathogens overwinter primarily in infected leaves on the ground.' and 'Pear scab also can overwinter in lesions on pear twigs in high rainfall areas.' and 'Infection occurs most rapidly between 55° and 75°F, and leaves or fruit must remain wet continuously for a minimum of 9 hours for initial infection.'"
+        },
+        "prevention_seasoned": {
+          "new": "Rake and remove fallen leaves each autumn or winter, which destroys the main overwintering source and on a single backyard tree can hold scab to tolerable levels; in high-rainfall areas the fungus also overwinters in twig lesions. Fungicide is needed only when rain keeps leaves wet 9 hours or more. Asian pears as a species are less susceptible than European pears, and a spray is only needed in a wet spring.",
+          "why": "'prune for airflow' is on neither copy's anchor (PN 7413's cultural section has no pruning sentence on two reads); 'choose less-susceptible varieties' is anchored only for European cultivars, and no admissible document names a scab-resistant Asian cultivar.",
+          "anchor": "uc_ipm PN 7413: 'For a single, backyard tree, removing—then composting or destroying—its dropped leaves in autumn or winter can limit the disease to tolerable levels.' and 'Fungicide sprays are necessary only if the weather is rainy and leaves are likely to remain wet for 9 or more hours.' and 'Because Asian pears (Pyrus pyrifolia) are a different species, they are less susceptible to scab than European pears (P. communis).'"
+        },
+        "prevention_beginner": {
+          "new": "The single best move is to rake up and remove fallen leaves every autumn, because that is where the fungus hides over winter; on one backyard tree that alone usually keeps scab at a level you can live with. Asian pears get it less than European pears, so most years need nothing more.",
+          "why": "The retired pests[] copy's leaf-raking rationale is anchored; both copies' 'prune for airflow' is not, and the diseases[] copy's 'Resistant varieties rarely need spraying' is not (PN 7413 names only European cultivars and says nothing about spraying them).",
+          "anchor": "uc_ipm PN 7413: 'Both apple and pear scab pathogens overwinter primarily in infected leaves on the ground.' and 'For a single, backyard tree, removing—then composting or destroying—its dropped leaves in autumn or winter can limit the disease to tolerable levels.'"
+        }
+      }
+    },
+    {
+      "name": "Pear decline",
+      "id": "pear-decline",
+      "type": "bacterial",
+      "severity": "medium",
+      "control_ladder": [
+        {
+          "method": "resistant_rootstock",
+          "note_beginner": "Pear decline is a disease of the graft union, so the roots your tree was grafted onto decide almost everything, and you choose them once, at the nursery. Ask for a tree on an Old Home x Farmingdale rootstock (OHxF 87, 97, 333 or 40), which WSU lists as resistant or tolerant to decline and to fire blight as well, or on birchleaf pear (Pyrus betulifolia), which UC IPM lists as decline-tolerant and which this crop's fire blight entry also recommends. Bartlett seedling is on UC IPM's tolerant list for decline, but it is rated fire-blight susceptible (see fire blight), and fire blight is the most serious disease of Asian pears, so it is not the root to ask for here. Avoid a tree on Asian pear seedling roots, because UC IPM says decline can rapidly kill a pear on Pyrus pyrifolia or Pyrus ussuriensis roots, and an Asian pear grown on its own kind of seedling is exactly that case. The other half of protection is keeping pear psylla down, since feeding psylla are the main way the disease moves from tree to tree; graft wood or buds taken from an infected pear can carry it too.",
+          "note_seasoned": "Candidatus Phytoplasma pyri is injected by feeding pear psylla and kills phloem at the graft union of sensitive root-scion combinations, so sugar piles up above the union as starch while the roots starve; the brown line of dead phloem at the union is the field diagnostic, and quick decline is the tree collapsing within days once the union fails. Tolerance sits in the root: UC IPM lists Bartlett seedling, Old Home x Farmingdale, Pyrus betulaefolia and Winter Nelis seedling as tolerant and P. pyrifolia (P. serotina) and P. ussuriensis as the roots on which decline rapidly kills, and WSU's rootstock notes name OHxF 87 as tolerant to blight and decline and OHxF 97, 333 and 40 as resistant to it. One Asian-specific rule from Utah State: if you ever graft an Asian pear over to a European cultivar, graft below the union of the Asian pear and its rootstock, or you build a highly decline-susceptible tree. Reducing psylla abundance reduces transmission, which is why the psylla program on this crop is also the decline program."
+        },
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Pear psylla are not the only way this disease gets into a tree: a bud or a piece of graft wood cut from an infected pear carries the disease with it, so a branch of another variety grafted onto your tree, or a new tree started from an old one, can bring decline in even where psylla are scarce. Take graft wood only from a pear that has never shown signs of decline, and where you have the choice, start with a nursery tree instead of wood from a pear whose history you do not know.",
+          "note_seasoned": "Utah State's note on this disease adds grafting and budding to psylla as routes of transmission, which puts the source of scionwood and budwood on the same footing as the rootstock. Its field check is done with a knife on the donor tree: expose the cambium just under the bark at the graft union and look for a brown line, the dead phloem that UC IPM also describes at the union of an infected tree; wood from a tree that shows it is not used for propagation or top-working. Since no material listed by UC IPM or Utah State acts on the phytoplasma once it is in the tree, the choice is made once, when the wood is cut or the tree is bought."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "A tree that collapses suddenly, wilting and dying within days, is not coming back and should be removed, both because UC IPM and Utah State list nothing that treats the disease inside it and because pear psylla can carry the infection from it to your other pears. A tree in slow decline is a different case: UC IPM says it may respond to more nitrogen and frequent light watering, so it can often be kept going for years.",
+          "note_seasoned": "Utah State's management for decline is rootstock, psylla control and removal of diseased trees, and UC IPM's is the same plus vigor, with no material that acts on the phytoplasma and, in UC IPM's words, no known biological control of it. Removal is warranted for quick decline, where UC IPM describes hypersensitive tissue death at the graft union and collapse within days, and because the phytoplasma persists only in a pear tree or in the psylla, a dying tree is the local reservoir. Slow decline on a tolerant root is managed rather than removed: UC IPM notes such trees may benefit from increased nitrogen and frequent, light irrigation, and its commercial guideline attributes very slow decline to trees short of water and nutrition."
+        }
+      ],
+      "sources": [
+        "wsu_ext",
+        "uc_ipm",
+        "usu_ext"
+      ],
+      "anchoring_urls": {
+        "wsu_ext": {
+          "url": "https://treefruit.wsu.edu/web-article/pear-rootstocks/",
+          "verified": "2026-09-04"
+        },
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/pear-decline/",
+          "verified": "2026-09-04"
+        },
+        "usu_ext": {
+          "url": "https://extension.usu.edu/planthealth/ipm/notes_ag/fruit-pear-decline",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Slow decline: the tree leafs out late in spring, leaves are small, thicken, curl downward and redden early, growth is weak and yield falls; or quick decline, where foliage wilts rapidly and the tree dies within days. A brown line of dead phloem at the graft union is the diagnostic mark. Driven by a phytoplasma transmitted by pear psylla and expressed through a sensitive rootstock.",
+          "why": "Adds UC IPM's field diagnostic (the brown line at the union) and the slow versus quick split; nothing the record said is removed.",
+          "anchor": "uc_ipm (home pear decline): 'In spring, infected trees leaf out more slowly than healthy trees' and 'leaves thicken, curl downward, and change color prematurely' and 'foliage wilts rapidly and affected trees die within a few days' and 'A brown line caused by death of phloem cells develops on the outside of the wood at the graft union'"
+        },
+        "cause_seasoned": {
+          "new": "Candidatus Phytoplasma pyri, a phytoplasma (a bacteria-like organism) carried mainly by pear psylla, which injects it while feeding, and also passed on by grafting or budding with wood from an infected tree. It kills phloem cells at the graft union of sensitive root-scion combinations, so the roots starve; severity therefore depends on the rootstock, and pear on Asian pear roots (Pyrus pyrifolia, P. ussuriensis) can be killed rapidly while Old Home x Farmingdale and other tolerant roots hold up.",
+          "why": "Names the organism and the mechanism and pins the sensitive roots, which for this crop are its own species' seedlings; the record said only 'certain rootstocks' and 'a phytoplasma'. (Review F2: the first draft gave psylla as the only route; USU, an anchor on this entry, adds grafting and budding.)",
+          "anchor": "wsu_ext (Tree Fruit psylla IPM page, https://treefruit.wsu.edu/crop-protection/opm/pear-psylla/): 'Pear psylla also transmit a mycoplasma disease organism (Candidatus Phytoplasma pyri: Pear decline phytoplasma) through its saliva. The disease damages sieve tubes in the phloem.'; usu_ext: 'It kills phloem cells at the graft union of specific root-scion combinations, preventing the tree from transporting sugar from its top to its roots.'; uc_ipm (home): 'Pear decline is caused by a phytoplasma, a microscopic bacterialike organism.' and 'Pear decline can rapidly kill pear planted on Asian rootstocks: Pyrus pyrifolia (=P. serotina) and P. ussuriensis.'; usu_ext: 'Grafting and budding can also transmit this phytoplasma.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "No spray or treatment for the tree itself is listed by UC IPM or Utah State, and UC IPM reports no known biological control of the phytoplasma; management is a tolerant rootstock chosen at planting (Old Home x Farmingdale, Bartlett seedling, Pyrus betulifolia, Winter Nelis), keeping pear psylla down to cut transmission, and vigor. Remove a tree in quick decline; a tree in slow decline may benefit from more nitrogen and frequent, light irrigation.",
+          "why": "'No cure' is stated on no page read; what is stated is that there is no known biological control and that slow-decline trees can be nursed, so the field now says what the sources say rather than a stronger sentence they do not.",
+          "anchor": "uc_ipm (pear decline guideline, https://ipm.ucanr.edu/agriculture/pear/pear-decline/): 'There is no known biological control of the pear decline phytoplasma organism'; uc_ipm (home): 'Reducing the abundance of pear psylla will reduce transmission of the phytoplasma' and 'Trees infected with pear decline may benefit from increased nitrogen applications and frequent, light irrigations.' and 'Tolerant rootstocks include Bartlett seedling, Old Home X Farmingdale rooted cutting, Pyrus betulaefolia, and Winter Nelis seedling.'; usu_ext: 'Control pear psylla.' and 'Remove diseased trees'"
+        },
+        "organic_treatment_beginner": {
+          "new": "There is no spray for it. Keep pear psylla under control, since that is the main way it spreads (grafting or budding wood from a sick tree can pass it on too), and, most importantly, start with a tolerant rootstock when you plant. A tree that collapses suddenly should be removed; one that is fading slowly can often be kept going with a little more fertilizer and frequent light watering.",
+          "why": "'There is no cure once a tree has it' is stated on no page read, and it hides the nursing option UC IPM gives for slow decline. Review fix: the same field had narrowed transmission to psylla alone; USU also names grafting and budding.",
+          "anchor": "uc_ipm (home): 'Trees infected with pear decline may benefit from increased nitrogen applications and frequent, light irrigations.' and 'Reducing the abundance of pear psylla will reduce transmission of the phytoplasma'; usu_ext: 'Remove diseased trees' usu_ext: 'Grafting and budding can also transmit this phytoplasma.'"
+        },
+        "prevention_seasoned": {
+          "new": "Plant on a rootstock that tolerates decline and resists fire blight: OHxF 87, 97, 333 or 40, which WSU rates against both diseases, or Pyrus betulifolia. Bartlett seedling and Winter Nelis are also on UC IPM's decline-tolerant list, but Bartlett seedling is rated fire-blight susceptible on this crop's fire blight entry, so it is not the root to specify for an Asian pear. Keep psylla populations low. The sensitive roots are Asian pear seedlings themselves, Pyrus pyrifolia and P. ussuriensis, so an Asian pear on its own species' seedling is the worst case; and if top-working an Asian pear to a European cultivar, graft below the Asian pear's own union.",
+          "why": "'avoid highly sensitive rootstocks' named none; the sensitive roots are this crop's own species, which is the fact a buyer needs, and Utah State's grafting rule is the one Asian-specific management sentence in the literature read. (Review F7: the first draft's 'Bartlett seedling or Pyrus betulifolia also rate tolerant' put a fire-blight-susceptible root beside the buy instruction on a crop whose fire blight entry tells the same buyer to plant on a resistant root; Bartlett seedling stays in the tolerant list with its fire blight rating stated.)",
+          "anchor": "uc_ipm (home): 'Pear decline can rapidly kill pear planted on Asian rootstocks: Pyrus pyrifolia (=P. serotina) and P. ussuriensis.' and 'Tolerant rootstocks include Bartlett seedling, Old Home X Farmingdale rooted cutting, Pyrus betulaefolia, and Winter Nelis seedling.'; usu_ext: 'When grafting Asian pear trees over to European (P. communis) cultivars, graft below the union of the Asian pear with its rootstock to avoid creating a highly decline-susceptible tree'; wsu_ext: OHxF 87 'known for their tolerance to blight and decline', OHxF 97 'resistant to pear decline and fireblight', OHxF 333 'resistance to fireblight, collar rot, woolly pear aphids, and pear decline'; wsu_ext: OHxF 40 'Resistant to fire blight, crown rot, woolly pear aphids, and pear decline.'; purdue_ext BP-30-W Table 1 (anchored on this crop's fire blight entry), Pear Rootstocks, Susceptible: 'Bartlett Seedling, Quince seedling'; clemson_hgic HGIC 1352 (anchored on this crop's fire blight entry): 'P. betulifolia is resistant to fire blight.'"
+        },
+        "prevention_beginner": {
+          "new": "Buy a tree grown on a rootstock that stands up to both decline and fire blight (the OHxF series, or birchleaf pear), never on Asian pear seedling roots, and keep pear psylla in check.",
+          "why": "'That is the whole prevention' overstated (vigor is the third leg on every page), and the sensitive roots were unnamed. (Review F7: 'or Bartlett seedling' was dropped from the buy instruction because Purdue rates that root fire-blight susceptible and this crop's fire blight entry tells the buyer to plant on a resistant root.)",
+          "anchor": "uc_ipm (home): 'Pear decline can rapidly kill pear planted on Asian rootstocks: Pyrus pyrifolia (=P. serotina) and P. ussuriensis.' and 'Tolerant rootstocks include Bartlett seedling, Old Home X Farmingdale rooted cutting, Pyrus betulaefolia, and Winter Nelis seedling.'; wsu_ext: OHxF 87 'The OHxF selections are compatible with most pear varieties and are known for their tolerance to blight and decline.' and OHxF 97 'this rootstock is resistant to pear decline and fireblight.'; purdue_ext BP-30-W Table 1 (anchored on this crop's fire blight entry), Pear Rootstocks, Susceptible: 'Bartlett Seedling, Quince seedling'"
+        }
+      }
+    }
+  ],
+  "unreachable_claims": [
+    "Codling moth: CYD-X, the codling moth granulosis virus PN 7412 says is sold to California home gardeners and is as effective as carbaryl when applied weekly through egg hatch. No method carries a granulosis virus (bt is Bt kurstaki). Carried as prose inside the spinosad seasoned note.",
+    "Codling moth: mating disruption (UC IPM pear guideline). No method, and it is orchard-scale rather than home-scale; mentioned only in the corrected organic_treatment_seasoned.",
+    "Pear psylla: 'remove water sprouts and suckers' (WSU Hortsense). No method; carried inside the balance_nitrogen note because Hortsense gives it in the same sentence as moderate nitrogen and light pruning.",
+    "Fire blight: 'avoid excess nitrogen fertilization' (Clemson HGIC 1352 and 2208, PN 7414, Purdue, WSU). balance_nitrogen does not reach bacterial; carried inside prune_out_infection (PN 7414 ties nitrogen and heavy pruning together as the drivers of succulent growth) and inside resistant_varieties (Clemson 1352 puts cultivar choice, sanitation and nitrogen in one sentence).",
+    "Fire blight: 'Trees shouldn't be irrigated during bloom' (PN 7414). No method carries bloom-time irrigation avoidance (water_at_the_base is about foliage wetting); carried as a closing sentence in the copper seasoned note and in the corrected prevention_seasoned.",
+    "Fire blight: streptomycin (Purdue: acceptable for home use but hard to obtain, three to four bloom sprays max; Clemson HGIC 2208: written for apple). No antibiotic method; described in the copper seasoned note as what it is.",
+    "Fire blight: rootstock resistance (Purdue Table 1: OH, OHxF except 51, P. calleryana, P. betulifolia seedlings resistant; Clemson 1352: P. betulifolia resistant). resistant_rootstock is gate-legal on bacterial via disease_general, but its own method text describes soilborne vascular pathogens entering through roots, which is not the fire blight mechanism, so rootstock is carried inside resistant_varieties instead.",
+    "Pear scab: urea (alone, on pear) sprayed on foliage in autumn to hasten leaf fall, and lime on leaf piles (PN 7413, for plantings of several trees in cool moist coastal areas). No method; carried inside the garden_sanitation seasoned note.",
+    "Pear scab: irrigate wetting sprinklers only between sunrise and noon (PN 7413). water_at_the_base is reachable, but on a low-severity problem it was folded into the garden_sanitation seasoned note (PN 7413 gives it in the same cultural paragraph) rather than given its own rung; the orchestrator may prefer a rung.",
+    "Pear decline: 'Control pear psylla' (UC IPM home and guideline, USU, Hortsense). No insect method reaches a bacterial-typed problem; cross-referenced in prose in both rungs and in the corrected fields.",
+    "Pear decline: nursing a slow-decline tree with increased nitrogen and frequent, light irrigation (UC IPM home; the guideline's 'maintain trees in good vigor'). even_watering is gate-legal on bacterial but its method text is calcium disorders, common scab and spider mites, and balance_nitrogen does not reach bacterial; carried inside the garden_sanitation note as the removal-versus-nursing decision.",
+    "Pear decline: USU's grafting rule (graft below the Asian pear's own union when top-working to a European cultivar). No method; carried inside the resistant_rootstock seasoned note."
+  ],
+  "refusals": [
+    "Codling moth kaolin_clay rung: REFUSED. The brief lists kaolin among PN 7412's home controls, but the record report finds kaolin absent from PN 7412 on two independent reads; its only anchor is a treatment-table listing ('Kaolin clay (Surround)', organically acceptable) on the commercial pear guideline, with no sentence on efficacy or timing. A rung on this crop would rest on a material listing, not a read sentence, and apple's kaolin rung is not this crop's anchor. Recorded as a correction instead (the record's 'kaolin clay on a degree-day/petal-fall schedule' is removed).",
+    "Codling moth trunk banding: not authored, and corrected out of prevention_seasoned and prevention_beginner (PN 7412: 'banding no longer is recommended for control in home gardens').",
+    "Pear psylla conventional rungs (pyrethrin per Hortsense's Bug Buster-O and Azera; pyrethroid per EC 631's esfenvalerate; abamectin plus oil and imidacloprid per UC IPM home, which have no method): REFUSED. Every document read ties psylla outbreaks to broad-spectrum sprays killing its natural enemies (UC IPM guideline: 'Nonselective codling moth insecticides destroy many of these beneficials, resulting in outbreaks of this pest'; Hortsense: 'Avoid use of broad-spectrum insecticides'), and UC IPM rates psylla a lesser problem on Asian pear. A broad-spectrum rung on this entry would be method-incorrect on the sources' own reasoning.",
+    "Pear psylla degree-day (PDD) timings, per-acre particle-film rates and the 0.3-nymphs-per-leaf russet threshold (WSU Tree Fruit): not written; commercial monitoring program, a fit defect for a home tree.",
+    "Pear psylla neem_oil rung: not written although anchored (Hortsense and EC 631 list neem in season). Declined as a second in-season contact material duplicating insecticidal_soap on a crop where psylla is the lesser problem; listed here so the orchestrator can add it if a longer ladder is wanted.",
+    "Stink bug fruit_bagging rung: REFUSED. The brief says 'bagging ... as anchored'; the record report finds fruit bagging for stink bug on no page read (Hortsense names a floating row cover or similar barrier), so the row cover is written instead and the record's two bagging sentences are corrected out.",
+    "Stink bug traps ('monitor with traps from bloom on', 'trap adults'): not authored; the only traps in the documents are commercial pheromone monitoring on the WSU and PSU pages. Corrected out of three fields.",
+    "Stink bug pyrethroid rung: REFUSED. UC IPM home: 'Insecticides are generally not recommended in gardens and landscapes for stink bugs'; Hortsense: chemical management is 'NOT RECOMMENDED FOR ADULT INSECTS' and both listed products carry 'CAUTION: These pesticides are toxic to bees.' Clemson HGIC 2001 (apple) does name cyhalothrin and zeta-cypermethrin for homeowners, so the orchestrator may overrule; the no-spray position is carried in the beneficial_predators note.",
+    "Fire blight 'Niitaka among the worst': removed from symptoms_seasoned; no page read says it.",
+    "Fire blight 'Pyrus calleryana' as a recommended rootstock: dropped from prevention_seasoned and not written into any rung, because Clemson HGIC 1352 says it has become an invasive species. Purdue rates it fire-blight resistant, so this is a content/values call for the orchestrator; the replacement (P. betulifolia, OHxF) is anchored on both documents.",
+    "Fire blight bloom-time forecast model: removed from prevention_seasoned; anchored only on WSU's commercial page (CougarBlight, Maryblyt).",
+    "Fire blight garden_sanitation rung (apple's ladder has one): not written; disposal of cut material (Clemson 1352 'burn or bury') and removal of a tree over half blighted (Purdue) are carried inside prune_out_infection, and no document gives fire blight a sanitation step separate from the cut.",
+    "Pear scab 'prune for airflow' (both retired and surviving copies): removed; absent from PN 7413's cultural section on two reads. airflow_spacing is reachable but was not written.",
+    "Pear scab resistant_varieties rung: REFUSED; PN 7413 names only European cultivars with negligible scab risk, and no admissible document names a scab-resistant Asian cultivar (the PNW table that does is NEEDS-CATALOG-ADMISSION). 'Resistant varieties rarely need spraying' corrected out of prevention_beginner.",
+    "Pear scab copper_fungicide rung: not written although PN 7413 lists fixed copper, Bordeaux and copper soap for home use; one protectant rung is enough on a low-severity problem on the less-susceptible species.",
+    "Pear decline 'No cure' / 'There is no cure once a tree has it': the brief calls decline 'no cure' but the report finds that sentence on no page read; replaced in two fields with what the pages say (no known biological control; nothing listed that treats the tree; slow decline can be nursed).",
+    "Pear decline even_watering rung: not written despite being gate-legal on bacterial; its method text (calcium disorders, common scab, spider mites) does not describe nursing a phytoplasma-infected tree, so the UC IPM sentence is carried in prose instead."
+  ],
+  "notes_to_orchestrator": [
+    "PLA-457 (sulfur/oil interval HELD; no interval written anywhere). Figures the report found, for the ruling: UC IPM PN 7413 (home apple and pear scab): 'When using sulfur-containing compounds such as wettable sulfur, never apply them within 3 weeks of an oil application or when temperatures are near or higher than 90°F.'; UC IPM pear scab guideline (commercial): 'Do not apply within 3 weeks of an oil application' (sulfur); OSU EC 631 (home): 'Soaps and oils are not compatible with sulfurs. Mixing them together or using one right after the other can cause plant damage.' (no number); WSU Tree Fruit psylla page and UC IPM pear psylla guideline describe a COMBINED lime sulfur plus oil spray with no spacing, and UC IPM's guideline restricts that combined spray to after November 1 (a calendar rule, not an interval). The scab sulfur rungs say only that sulfur and oil are never combined or applied close together. NOTE for the guard: the psylla horticultural_oil seasoned note and the psylla organic_treatment_seasoned correction contain an oil sentence with a duration ('discourages egg laying for about a month' / 'for about 1 month'); neither sentence names sulfur.",
+    "Template-twin divergence, pear psylla: ladder is balance_nitrogen -> kaolin_clay -> beneficial_predators -> horticultural_oil -> insecticidal_soap (5 rungs, no neem, no conventional). Shaped shorter and spray-light because UC IPM (home and guideline) says 'Pear psylla is a greater problem on European varieties than on Asian varieties of pear' and Clemson's Asian pear sheet does not mention psylla at all; the beneficial_predators note carries the cross-problem point that the codling moth spray choice is what decides psylla on a pear.",
+    "Template-twin divergence, pear scab: 2 rungs (garden_sanitation -> sulfur) at pinned severity low, because PN 7413's only Asian-pear sentence says the species is less susceptible and its single-backyard-tree sentence makes leaf removal sufficient; water_at_the_base and copper_fungicide were left out deliberately (see unreachable_claims and refusals).",
+    "Template-twin divergence, pear decline: 3 rungs (resistant_rootstock -> certified_clean_stock -> garden_sanitation), the same method sequence as pear-european, with the notes written from this crop's own documents. The first draft had 2 rungs and refused certified_clean_stock for want of any sentence; the review found the sentence on USU (see the review-fix note). The Asian-specific content is that the decline-sensitive roots ARE this crop's own species (P. pyrifolia, P. ussuriensis; UC IPM 'can rapidly kill'), so an Asian pear on its own seedling roots is the worst case; USU's graft-below-the-union rule; and, per review F7, Bartlett seedling is kept in the tolerant list but dropped from every buy instruction because this crop's fire blight entry (Purdue Table 1) rates it fire-blight susceptible.",
+    "First-party reads this session beyond the report: UC IPM pear psylla guideline (https://ipm.ucanr.edu/agriculture/pear/pear-psylla/) via WebFetch, verbatim: 'Oil kills adult psylla but does not control eggs.' and 'It does discourage egg laying for about 1 month, however.' The record report did not carry either sentence (the brief quotes the first); the UC IPM home pear-psylla page was re-read and carries no oil-versus-eggs sentence. These anchor the two psylla oil corrections.",
+    "Proxied reads (per the record report): OSU EC 631 was read through r.jina.ai after a 301 plus 403 first-party. It is anchored live under osu_ext (Oregon State; catalog confirms the key is OSU not Oklahoma) on pear psylla (soap/kaolin/neem rows) and stink bug ('kaolin (suppression)').",
+    "Secondary pages under one key (anchoring_urls carries the HOME page; the correction anchors name the secondary page and URL where a sentence comes from it): uc_ipm on codling moth also draws on https://ipm.ucanr.edu/agriculture/pear/codling-moth/ (stings/deep entries, 'Remove host trees in nearby abandoned orchards'); uc_ipm on pear psylla also draws on https://ipm.ucanr.edu/agriculture/pear/pear-psylla/ (oil/eggs, kaolin prebloom and mite caution, 'Nonselective codling moth insecticides destroy many of these beneficials'); wsu_ext on pear psylla and pear decline also draws on https://treefruit.wsu.edu/crop-protection/opm/pear-psylla/ (eggs at bud swell, natural-enemy names, 80-100 percent particle-film figure, psylla shock, Candidatus Phytoplasma pyri); clemson_hgic on fire blight is repointed from HGIC 2208 to HGIC 1352 (the Asian pear sheet), and 2208's sentences (8-12 inch minimum, 10 percent bleach or 70 percent alcohol, 'Pruning during the growing season may spread the disease', copper immediately prior to bloom) are cited by name in organic_treatment_seasoned; uc_ipm on pear scab also draws on https://ipm.ucanr.edu/agriculture/pear/pear-scab/ ('scablike and misshapen'); uc_ipm on pear decline also draws on https://ipm.ucanr.edu/agriculture/pear/pear-decline/ ('no known biological control').",
+    "Anchor repoints: pear psylla wsu_ext moves off the rootstock catalogue (zero psylla content) to Hortsense pear psylla, plus uc_ipm home pear psylla and osu_ext EC 631 added; stink bug drops the Clemson fire-blight page and the dead NCSU URL for Hortsense pear BMSB, UC IPM home Stink Bugs, the NCSU handbook chapter, EC 631 and PSU (commercial, cited for biology only: emergence timing); codling moth moves from the commercial guideline to PN 7412 and adds the NCSU handbook and ucanr_ext (Beutel 1989, 'severe on Asian pears', the same key the cert log already uses for this brochure); fire blight adds PN 7414 and Purdue BP-30-W; pear decline keeps the WSU rootstock page (it does carry OHxF by name) and adds UC IPM home pear decline and USU.",
+    "Codling moth ladder is 5 rungs (garden_sanitation -> codling_moth_pheromone_trap -> fruit_bagging -> spinosad -> carbaryl). The carbaryl rung is the one conventional rung on this crop: PN 7412 presents carbaryl as the home comparison standard and the report asked that any conventional rung quote its bee sentence, which it does; severity is pinned high and Beutel calls codling moth 'severe on Asian pears'. It also carries the psylla-flare warning from UC IPM's pear guideline, which is the pear-specific reason to reach it last.",
+    "Pin table: nothing found wrong. Observations: (1) typing pear decline `bacterial` makes copper_fungicide, prune_out_infection, soil_solarization, lower_soil_ph, even_watering, airflow_spacing, wet_foliage_discipline and water_at_the_base gate-legal on a phytoplasma; none is authored, and even_watering was declined on its method text. A `phytoplasma` type would be more honest but is outside the set. (2) resistant_rootstock is gate-legal on fire blight via disease_general; declined there on its soilborne method text, rootstock carried in resistant_varieties. (3) Hosui is contradicted inside Clemson (HGIC 2208 'somewhat resistant', HGIC 1352 'highly susceptible'; Purdue Susceptible); the notes report the split rather than pick. (4) 'Stink bug' singular display name against the plural id is unchanged per the pin table's note.",
+    "Corrections declared: codling moth 5 (symptoms_seasoned, cause_seasoned, organic_treatment_seasoned, prevention_seasoned, prevention_beginner); pear psylla 4 (symptoms_seasoned, organic_treatment_seasoned, organic_treatment_beginner, prevention_beginner); stink bug 5 (cause_seasoned, organic_treatment_seasoned, organic_treatment_beginner, prevention_seasoned, prevention_beginner); fire blight 6 (symptoms_seasoned, cause_seasoned, cause_beginner, organic_treatment_beginner, organic_treatment_seasoned, prevention_seasoned); pear scab 5 (symptoms_seasoned, symptoms_beginner, cause_seasoned, prevention_seasoned, prevention_beginner; the retired pests[] copy's better-anchored sentences carried per the report's 5-of-7 verdict); pear decline 6 (symptoms_seasoned, cause_seasoned, organic_treatment_seasoned, organic_treatment_beginner, prevention_seasoned, prevention_beginner). All other prose fields untouched.",
+    "NC State handbook spells the cultivar 'Nititaka' (sic); not reproduced. No em dashes in any consumer string; the two em dashes in this file are inside verbatim PN 7413 quotes in `anchor` fields, not consumer copy.",
+    "Review fixes applied 2026-09-04 (review_pear-asian.md F1-F8 plus the orchestrator's F3b). F1: the first draft's certified_clean_stock refusal on pear decline asserted that no document says anything about clean budwood or scion source. That was true of the record report and false of the document: the review found, on this entry's own USU anchor (https://extension.usu.edu/planthealth/ipm/notes_ag/fruit-pear-decline), 'Grafting and budding can also transmit this phytoplasma.' and 'On suspect trees, use a knife to expose the cambium (just under the bark) at the graft union to look for a brown line.' Both sentences were re-read first-party this session; the rung is authored on usu_ext at the cultural tier between resistant_rootstock and garden_sanitation, in this author's own words. F2: the same psylla-only narrowing corrected out of cause_seasoned and the resistant_rootstock beginner note. F3: the copper note and prevention_seasoned now scope 'the only material for homeowners' to UC IPM's California guidance and carry Purdue's and Clemson HGIC 2208's homeowner streptomycin (HGIC 2208 re-read first-party: 'Pear trees are also treated with a pre-bloom, copper fungicide spray, and then sprays of streptomycin during bloom.'). F3b: the copper note's 60°F is warranted by PN 7414's sentence, re-read first-party and quoted verbatim in the fire blight prevention_seasoned anchor. F4: pear psylla prevention_beginner corrected ('in late winter' retired). F5: rutgers_njaes added to the stink bug entry (catalog-admitted portal key; the record pass verified the Pemarucci Center BMSB page on 2026-09-04, commercial, cited for the border-invader observation only). F6: wsu_ext added to the fire blight entry on the WSU Tree Fruit fire blight page (commercial; cited for the 12-to-18-inch distance and the cut-placement-over-sterilization finding, both verified by the record pass). F7: Bartlett seedling out of the three buy instructions. F8: stink bug organic_treatment_seasoned loosened to Hortsense's 'most effective against'. Note for the orchestrator: pear decline organic_treatment_beginner still reads 'Keep pear psylla under control, since that is how it spreads', which carries the F2 narrowing in a fourth field; it was outside the eight items and is left for a decision.",
+    "ORCHESTRATOR 2026-09-04: whole_crop_gate's spelled-temperature scan (temp_scan: '\\d+ degrees?') matches 'N degree-days'; the numeric degree-day figures were removed from consumer copy, keeping the home-scale hatch signal. Degree-day arithmetic is a commercial program in any case."
+  ]
+}

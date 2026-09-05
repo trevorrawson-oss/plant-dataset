@@ -1,0 +1,667 @@
+{
+ "crop": "persimmon",
+ "pests": [
+  {
+   "name": "Scale insects",
+   "id": "scale-insects",
+   "type": "insect",
+   "severity": "medium",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Look the trunk and branches over while the tree is bare in winter. White peach scale shows up as snow-white patches on the bark that scrape off easily, and on a small tree, if only a few twigs or branches carry a heavy crust, cut those off and get them away from the tree. That takes the colonies out along with the wood they are fixed to, and nothing you spray afterward has to cover them.",
+     "note_seasoned": "Dormant pruning is the natural inspection pass, since white peach scale sits on the trunk and limbs where the bare tree makes it obvious. UC IPM's condition is specific: prune off heavily infested twigs and branches only when they are limited to a few parts of a small plant, which makes this a pruning-out-colonies move rather than a treatment for a tree encrusted end to end. Florida's guide adds a warm-weather cue, since the white patches are most visible when the males emerge."
+    },
+    {
+     "method": "ant_exclusion",
+     "note_beginner": "First see whether ants are climbing the tree. White peach scale gives off no honeydew, so ants have no reason to visit it; a trail of ants on a persimmon means something that makes honeydew is there: one of the soft scales (Georgia expects tuliptree scale), mealybugs, or the persimmon psyllid, any of which drips the sugary honeydew ants collect. Ants defend the insects they tend against the ladybugs and small wasps that eat them, so keep the ants off: put a band of heavy paper or tree wrap around the trunk, spread a sticky barrier on the band and not on the bark itself, and remove any branch or weed that lets ants walk in from the ground or a wall.",
+     "note_seasoned": "Scoped to the soft-scale part of the picture: armored scales such as white peach scale produce no honeydew, so there is nothing for ants to tend and a barrier buys nothing against them. Where the scale is a soft species and ants are working it, UC IPM's instruction is to control the ants because they attack the parasites and predators of scale, and to deny them the canopy by pruning bridging branches or weeds and applying a sticky material to the trunk over a wrap. It restores the biological control the next step relies on rather than acting on the scale itself."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "On an unsprayed persimmon, scale is usually held down for you. Georgia's guide says that where nothing is sprayed, scale is generally kept under control by natural parasites, predators and diseases, and that spraying for other pests often lets scale loose from that control. So the main thing is what you do not do: keep strong, broad insect sprays off the tree, and the ladybugs, lacewings and small parasitic wasps that attack scale will keep working.",
+     "note_seasoned": "Conservation is the operative control here, and the persimmon documents say so directly: UGA has scale generally kept under control by parasites, predators and diseases in unsprayed situations, with sprays made for other pests the usual reason it escapes; UF names ladybird beetles and lacewings for biological control; UC IPM advises against foliar broad-spectrum insecticides whose residues persist for weeks. A scale flare on a persimmon is worth reading as a question about what was sprayed last season before it is read as a call for a spray this one."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "When scale is spreading in spite of all that, horticultural oil is the spray both Georgia and Florida point to, and the time for it is late winter, shortly before the buds swell, while the tree is still bare. Oil kills by coating and smothering, so it only works on scale it actually wets: soak the bark of the trunk, the limbs and the ends of the branches. Skip it on a drought-stressed tree and on days above 90°F, when it can scorch the tree.",
+     "note_seasoned": "Dormant oil is the documented direct control: UGA has an application shortly before bud swell giving good control, and UF's cell is a 3% dormant oil before bud break, with summer oil as the in-season alternative. UC IPM supplies the reasoning behind the timing: overwintering scale on a deciduous tree is reached by thoroughly spraying the bark of terminal shoots in winter, and an in-season oil works only when applied soon after most crawlers have emerged and the scales are still young nymphs, which a band of double-sided sticky tape around an infested twig in spring will show you. Coverage governs the result, and oil stays off a water-stressed tree and out of heat above 90°F."
+    }
+   ],
+   "sources": [
+    "uf_ifas_edis",
+    "uga_ext",
+    "uc_ipm"
+   ],
+   "anchoring_urls": {
+    "uf_ifas_edis": {
+     "url": "https://ask.ifas.ufl.edu/publication/HS1389",
+     "verified": "2026-09-04"
+    },
+    "uga_ext": {
+     "url": "https://fieldreport.caes.uga.edu/publications/C784/",
+     "verified": "2026-09-04"
+    },
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7408.html",
+     "verified": "2026-09-04"
+    }
+   },
+   "field_corrections": {
+    "symptoms_seasoned": {
+     "new": "Small, immobile bumps fixed to bark and twigs. White peach scale, the species Florida names, shows as snow-white patches on the trunk and limbs that scrape off easily and are most visible when the males emerge in warm weather. Where the scale is a soft species, such as the tuliptree scale Georgia expects, the colony also drips sticky honeydew that grows black sooty mold and draws ants; white peach scale and the other armored scales produce no honeydew at all.",
+     "why": "The honeydew, sooty mold and ants sentence was stated for the whole entry, whose headline species is white peach scale, an armored scale that produces no honeydew; it is now scoped to the soft scales. 'Vigor and fruit quality decline where scale builds up unchecked' has no persimmon anchor and is dropped. Added the two cues HS1389 gives (scrapes off easily; most visible when males emerge).",
+     "anchor": "uf_ifas_edis (HS1389, Table 3) 'Snow-white patches on trunk and limbs, easily scraped off. Most visible when males emerge during warm weather.'; uc_ipm (pn7408) 'Armored scales do not produce honeydew.' / 'Soft scales and certain other types feed on phloem sap and excrete abundant, sticky honeydew, which drips on plants and surfaces underneath and promotes the growth of blackish sooty mold.'; uga_ext (C784) 'Persimmon scale and tuliptree scale are to be expected.'"
+    },
+    "symptoms_beginner": {
+     "new": "Little bumps stuck to the bark and twigs that never move. White peach scale looks like patches of snow-white crust on the trunk and branches; it scrapes off easily, and it stands out most in warm weather when the tiny winged males come out. If the bumps are one of the soft scales instead, you will also find a sticky coating (honeydew) on the leaves and branches below them that turns black with mold and brings ants. White peach scale makes no honeydew, so a crusty trunk with no stickiness is the usual persimmon picture.",
+     "why": "Same scoping as symptoms_seasoned: the honeydew sentence is true only of the soft scales, and 'Bad cases slowly weaken the tree' has no persimmon anchor. 'leaf undersides' dropped: HS1389 places white peach scale on the trunk and limbs.",
+     "anchor": "uf_ifas_edis (HS1389) 'Snow-white patches on trunk and limbs, easily scraped off. Most visible when males emerge during warm weather.'; uc_ipm (pn7408) 'Armored scales do not produce honeydew.' / 'Soft scales and certain other types feed on phloem sap and excrete abundant, sticky honeydew'; uga_ext (C784) 'Persimmon scale and tuliptree scale are to be expected.'"
+    },
+    "cause_seasoned": {
+     "new": "Several scale species feeding on sap under a protective covering: white peach scale (Pseudaulacaspis pentagona), the armored species Florida names for persimmon, and the soft scales, with tuliptree scale the one Georgia expects. Only the soft scales excrete honeydew, which is what the sooty mold grows on. Populations flare where natural enemies have been removed, most often by sprays made for some other pest.",
+     "why": "'soft scales (Parthenolecanium spp.)' rests only on the retired UF ENY-803 (there as 'Parthenoleucanium corni'); no live document names it on persimmon, and UGA names tuliptree scale. Honeydew is scoped to the soft scales (armored scales produce none), and the flare mechanism is stated as UGA states it.",
+     "anchor": "uf_ifas_edis (HS1389, Table 3) 'Scale (Figures 9, 10) primarily white peach scale (Pseudaulacaspis pentagona)'; uga_ext (C784) 'Persimmon scale and tuliptree scale are to be expected. In unsprayed situations, scale are generally kept under control by natural parasites, predators and diseases. Spraying for other pests often releases scale from natural control.'; uc_ipm (pn7408) 'Armored scales do not produce honeydew.'"
+    },
+    "cause_beginner": {
+     "new": "Tiny sap-sucking insects that live under a hard or waxy covering. On persimmon the main one is white peach scale, and soft scales such as tuliptree scale turn up too. Only the soft kinds drip the sticky honeydew that grows black mold. Scale gets out of hand when a spray aimed at some other pest kills off the helpful insects that normally eat it.",
+     "why": "Same as cause_seasoned: the honeydew claim is scoped to the soft scales and the named soft scale is the one a live document gives.",
+     "anchor": "uga_ext (C784) 'Persimmon scale and tuliptree scale are to be expected.' / 'Spraying for other pests often releases scale from natural control.'; uc_ipm (pn7408) 'Armored scales do not produce honeydew.'"
+    },
+    "prevention_seasoned": {
+     "new": "The standing protection is not spraying for other pests, since UGA's observation is that scale on an unsprayed persimmon is generally held by parasites, predators and diseases and that sprays for something else are what release it. Look the trunk and limbs over for white patches, which are easiest to see when the males emerge in warm weather; if a dormant oil is going on, its slot is shortly before bud swell, and an in-season oil is timed by wrapping an infested twig with double-sided sticky tape in spring to catch the crawler emergence.",
+     "why": "'monitor ... so a dormant oil can be timed before populations explode' names a timing signal no document gives; replaced with the cues the documents do give (UGA's bud-swell slot, HS1389's warm-weather visibility, UC IPM's sticky-tape crawler check). 'Keep the tree vigorous' has no persimmon anchor and is dropped.",
+     "anchor": "uga_ext (C784) 'In unsprayed situations, scale are generally kept under control by natural parasites, predators and diseases. Spraying for other pests often releases scale from natural control. Dormant oil application shortly before bud swell should provide good control of scale.'; uf_ifas_edis (HS1389) 'Most visible when males emerge during warm weather.'; uc_ipm (pn7408) 'During the spring before crawlers begin to emerge, tightly encircle each of several scale-infested twigs or branches with transparent tape that is sticky on both sides.'"
+    },
+    "prevention_beginner": {
+     "new": "The best prevention is to leave the tree unsprayed unless you have a real reason, because the helpful insects already on it keep scale in check, and a spray aimed at some other pest is the usual way scale gets loose. Glance over the trunk and branches for white patches, easiest to spot in warm weather. If you decide on an oil spray, the time for it is late winter, just before the buds start to swell.",
+     "why": "Same as prevention_seasoned: 'before it spreads' was an unanchored timing signal, and 'keep the tree healthy' has no persimmon anchor.",
+     "anchor": "uga_ext (C784) 'Spraying for other pests often releases scale from natural control. Dormant oil application shortly before bud swell should provide good control of scale.'; uf_ifas_edis (HS1389) 'Most visible when males emerge during warm weather.'"
+    }
+   }
+  },
+  {
+   "name": "Mealybugs",
+   "id": "mealybugs",
+   "type": "insect",
+   "severity": "low",
+   "control_ladder": [
+    {
+     "method": "ant_exclusion",
+     "note_beginner": "If mealybugs have built up on a persimmon, look for ants on the trunk first. Ants feed on the honeydew mealybugs give off and, in return, keep the beetles and small wasps that eat mealybugs away from them, so a colony with ants tending it grows where one left alone would fade out. Put a band of heavy paper or tree wrap around the trunk, coat the band with a sticky barrier (never the bare bark), and trim any low branch that touches the ground, a fence or another plant so the ants have no way around it.",
+     "note_seasoned": "UC IPM's mealybug guidance is to keep ants out of infested plants because ants protect mealybugs from their natural enemies, and on a persimmon the ant trail up the trunk is the thing to break. Florida's persimmon table makes the same point from the psylla side, where mealybugs turn up in the same curled leaves and the ants feeding on the honeydew may also need controlling. A sticky band over a trunk wrap and the removal of bridging branches restore the predation this pest is normally held by."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Where the cottony clumps sit out in the open on shoots or branches, turn the hose on them at full pressure; a persimmon is sturdy enough to take it, and a good many mealybugs are dislodged that way. Choose a morning so the foliage has the day to dry off, and count on going back over the tree, since some always cling on.",
+     "note_seasoned": "UC IPM allows that on sturdy plants a high-pressure or forcible water spray can reduce mealybugs that are somewhat exposed; it does nothing for colonies tucked into crotches and crevices, so it is a knock-back on visible clusters, with no residue and no cost to the natural enemies."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Outdoors, most mealybugs are eaten before they matter. Ladybugs, lacewings and small parasitic wasps keep them below damaging levels on garden trees, and persimmon is a crop with few serious insect problems to begin with. Keep strong, broad-spectrum insect sprays off the tree so those helpers stay.",
+     "note_seasoned": "Natural enemies are the standing control: UC IPM's statement is that most species have natural enemies that keep populations below damaging levels in landscapes and gardens, with the mealybug destroyer lady beetle the predator it singles out, and its fruit-tree note is that citrus has the most problems while on stone and pome fruits mealybugs are rarely at damaging levels, a scope that stops short of persimmon. Georgia calls oriental persimmon relatively free of serious insect problems, which is the reading behind this pest's low grade. Preserving the enemies means avoiding broad-spectrum insecticides for any pest in the area, not just this one."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "For clumps that keep coming back, spray insecticidal soap straight onto them. Soap works only where it lands and only on what it wets, and the waxy coating sheds a lot of it, so the young ones with less wax are the ones it reaches best. Plan on more than one go, and keep it off a dry, stressed tree or a day over 90°F.",
+     "note_seasoned": "UC IPM rates soaps, horticultural oils and neem as giving some suppression when applied directly on mealybugs, especially against younger nymphs with less wax accumulation. Suppression is the right word: the wax defeats a single wetting, colonies sit in crevices a spray runs past, and there is no residual. Spot application, repeated and confined to the clumps you can see, is the useful form; a blanket spray costs beneficials for little gain."
+    }
+   ],
+   "sources": [
+    "uc_ipm",
+    "ncsu_ext",
+    "uf_ifas_edis",
+    "tamu_agrilife"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn74174.html",
+     "verified": "2026-09-04"
+    },
+    "ncsu_ext": {
+     "url": "https://plants.ces.ncsu.edu/plants/diospyros-kaki/",
+     "verified": "2026-09-04"
+    },
+    "uf_ifas_edis": {
+     "url": "https://ask.ifas.ufl.edu/publication/HS1389",
+     "verified": "2026-09-04"
+    },
+    "tamu_agrilife": {
+     "url": "https://aggie-horticulture.tamu.edu/fruit-nut/wp-content/uploads/sites/6/2015/04/persimmons_2015.pdf",
+     "verified": "2026-09-04"
+    }
+   },
+   "field_corrections": {
+    "symptoms_seasoned": {
+     "new": "Soft, oval insects covered in white wax, gathered in the protected places on a tree: branch crotches, the base of a stem, between a stem and a leaf lying against it, and, on persimmon, inside the leaves curled by persimmon psylla. Their sticky honeydew, the black sooty mold that grows on it, and ants feeding on it are often the first signs. Persimmon carries few serious insect problems, and mealybugs are reported on it as an occasional case.",
+     "why": "'under the calyx of the fruit' and 'feeding under the calyx can contaminate and blemish fruit' rest on a UC ANR FNRIC page that returned 403 on every route and was never read; removed as located-unread. Replaced with the sheltering sites UC IPM states, the psylla association HS1389 states, and the occasional-case framing TAMU and UGA give.",
+     "anchor": "uc_ipm (pn74174) 'Most adult mealybugs are wingless females with oval, segmented bodies covered with wax.' / congregate 'in the crown of a plant, in branch crotches, on stems near soil, or between the stem and touching leaves' / 'Signs of an infestation might include white, cottony egg masses on plants, wax-covered plants, sticky honeydew, black sooty mold growing on top of honeydew or ants feeding on honeydew.'; uf_ifas_edis (HS1389, Persimmon psylla row) 'White-colored nymphs found within distorted leaves and black-bodied adults on leaf surface. Mealy bugs may also be present.'; tamu_agrilife (persimmons_2015.pdf) 'Few insect pests attack persimmons. In some summers, caterpillars may defoliate persimmon trees, and cases of mealy bugs, thrips, mites, ants, and fruit flies have been reported.'"
+    },
+    "symptoms_beginner": {
+     "new": "Small soft insects covered in white, cottony fluff, tucked into sheltered spots: where branches fork, at the base of a stem, where a leaf lies against a stem, and inside the leaves that persimmon psylla has curled up in spring. You often notice the sticky honeydew, the black mold growing on it, or the ants feeding on it before you notice the bugs. On persimmon they are an occasional visitor rather than a regular pest.",
+     "why": "Same as symptoms_seasoned: the 'leafy cap of the fruit' harborage claim was never read at source and is removed.",
+     "anchor": "uc_ipm (pn74174) 'Signs of an infestation might include white, cottony egg masses on plants, wax-covered plants, sticky honeydew, black sooty mold growing on top of honeydew or ants feeding on honeydew.'; uf_ifas_edis (HS1389) 'Mealy bugs may also be present.' (in the psylla symptom cell); tamu_agrilife 'cases of mealy bugs, thrips, mites, ants, and fruit flies have been reported.'"
+    },
+    "cause_seasoned": {
+     "new": "Mealybugs, sap-sucking insects that shelter in protected crevices on the tree. The guides read name only the longtailed mealybug (Pseudococcus longispinus), which UF lists with persimmon among its hosts. Ant-tended colonies persist because ants protect them from their natural enemies in exchange for honeydew.",
+     "why": "'including beneath the fruit calyx' was the located-unread calyx claim; removed. The species is stated at the scope of the guides read (UF's IN1149 host list names the longtailed mealybug); an unread UC ANR FNRIC page is reported to name Ferrisia gilli on persimmon, so no claim of absence across the literature is made.",
+     "anchor": "uf_ifas_edis (EENY-666 / IN1149, https://ask.ifas.ufl.edu/publication/IN1149) 'The longtailed mealybug has a relatively wide host range that includes many economically important crops, such as avocado, citrus, grapes, pear, persimmon, and pineapple'; uc_ipm (pn74174) 'keep ants out of mealybug-infested areas and plants because ants protect mealybugs from their natural enemies.'"
+    },
+    "cause_beginner": {
+     "new": "Sap-sucking insects called mealybugs that tuck themselves into sheltered spots on the tree, such as the forks of branches and the curled leaves left by persimmon psylla. Ants often protect them for their sweet honeydew, which lets the mealybugs build up.",
+     "why": "'including under the leafy cap on the fruit' was the located-unread calyx claim; removed.",
+     "anchor": "uc_ipm (pn74174) congregate 'in branch crotches, on stems near soil, or between the stem and touching leaves' / 'ants protect mealybugs from their natural enemies'; uf_ifas_edis (HS1389) 'Mealy bugs may also be present.'"
+    },
+    "prevention_seasoned": {
+     "new": "Maintain biological control by avoiding broad-spectrum insecticides for any pest in the area, and keep ants out of the canopy so the predators can reach the colonies. Persimmon psylla and mealybugs share the same curled spring leaves and the same honeydew-feeding ants, so a spring with psylla damage is the time to look for them.",
+     "why": "'inspect the calyx end of developing fruit where mealybugs hide, removing infested fruit early' has no anchor (the calyx page was unreadable; no document mentions removing fruit). Replaced with the psylla association HS1389 gives.",
+     "anchor": "uc_ipm (pn74174) 'Preserve naturally occurring biological control agents by avoiding use of broad-spectrum insecticides for any pests in the area. Also keep ants out of mealybug-infested areas and plants because ants protect mealybugs from their natural enemies.'; uf_ifas_edis (HS1389) 'Mealy bugs may also be present.' / 'May also need to control the ants that feed on the honeydew.'"
+    },
+    "prevention_beginner": {
+     "new": "Keep the helpful insects around by not spraying broadly, and keep ants off the trunk. If persimmon psylla has curled the new leaves in spring, look inside those leaves, because mealybugs often turn up in the same place.",
+     "why": "Same as prevention_seasoned: the check-under-the-fruit-cap advice was never read at source and is removed.",
+     "anchor": "uc_ipm (pn74174) 'keep ants out of mealybug-infested areas and plants because ants protect mealybugs from their natural enemies'; uf_ifas_edis (HS1389) 'Mealy bugs may also be present.'"
+    }
+   }
+  },
+  {
+   "name": "Persimmon psyllid",
+   "id": "persimmon-psyllid",
+   "type": "insect",
+   "severity": "low",
+   "control_ladder": [
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Most years this one takes care of itself. Georgia's advice is that the psyllid is often held down by natural parasites and that you should not spray until you have actually seen damage; North Carolina's note, written for native persimmon, is that its numbers soon fall on their own as parasitic wasps and other enemies go to work. So leave the curled leaves alone, keep harsh insect sprays off the tree, and let the helpers finish. If the tree is being stunted and you decide to act, the material North Carolina names is horticultural oil, which smothers the psyllids without leaving a residue that hurts the helpful insects, and it has to go on at the first spring flush, because once the leaves have curled a spray reaches much less.",
+     "note_seasoned": "Usually no treatment: UGA has the psyllid often limited by natural parasites and holds any insecticide until damage has been observed, and NC State describes, on native persimmon, populations that are temporarily abundant and then decline as parasitic wasps and other natural enemies catch up, with egg-to-adult development taking only a few weeks in spring. Conservation is therefore the working control, and pyrethroids, which NC State calls harsh on beneficials, are the wrong tool for it; NC State also advises minimizing the shearing or clipping of terminals during the growing season. Florida's table reads differently, calling for very early control because sprays are less effective once leaves curl, a stance written for an orchard; the home documents govern here. Where a grower does treat a stunted tree, horticultural oil is NC State's choice for sparing beneficials, timed to the first spring flush."
+    }
+   ],
+   "sources": [
+    "uga_ext",
+    "ncsu_ext",
+    "uf_ifas_edis",
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "uga_ext": {
+     "url": "https://fieldreport.caes.uga.edu/publications/C784/",
+     "verified": "2026-09-04"
+    },
+    "ncsu_ext": {
+     "url": "https://content.ces.ncsu.edu/persimmon-psyllid",
+     "verified": "2026-09-04"
+    },
+    "uf_ifas_edis": {
+     "url": "https://ask.ifas.ufl.edu/publication/HS1389",
+     "verified": "2026-09-04"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/persimmon/",
+     "verified": "2026-09-04"
+    }
+   },
+   "field_corrections": {
+    "symptoms_seasoned": {
+     "new": "New leaves crinkle, curl and roll around the feeding of the nymphs in spring, and shoot tips can twist and become galled. Inside the distorted leaves are the flattened, white-fluff-covered nymphs, with the small black-bodied adults on the leaf surface; the nymphs also drip honeydew on which sooty mold can grow. Florida lists stunted growth among the symptoms.",
+     "why": "'Small crawlers' is the wrong term: psyllid nymphs are not called crawlers in any document (NC State has them flattened and less active than adults). Added the galled terminals, the adult description and the honeydew that NC State and HS1389 give. The old 'largely cosmetic on an established tree but can stunt a young one' age split rested only on the retired UF ENY-803 ('Psylla infestations stunt the growth of shoots on young trees'), which does not anchor; restated as HS1389 has it, stunted growth with no age split.",
+     "anchor": "ncsu_ext (Persimmon Psyllid) 'Infested leaves are often misshapen.' / 'Nymphs secrete white fluff and also cause terminals to twist and become galled.' / 'Nymphs are flattened and less active than adults and they secrete a white fluff.' / 'Psyllids also excrete sticky honeydew on which dark sooty molds may grow.'; uf_ifas_edis (HS1389) 'Crinkled and deformed young leaves, stunted growth. White-colored nymphs found within distorted leaves and black-bodied adults on leaf surface.'; uga_ext (C784) 'Infested leaves roll and curl up on themselves.'"
+    },
+    "symptoms_beginner": {
+     "new": "In spring the new leaves crinkle and roll up around tiny insects feeding inside, and some shoot tips twist into lumpy growth. Open a rolled leaf and you find flat young ones covered in white fluff, with small black adults on the leaf surface, and often a sticky film that can turn black with mold. It can stunt the tree's growth.",
+     "why": "Same as symptoms_seasoned: 'small crawlers' replaced with what the documents describe, and the older-tree/young-tree split (retired ENY-803 only) restated as HS1389's stunted growth.",
+     "anchor": "ncsu_ext (Persimmon Psyllid) 'Nymphs are flattened and less active than adults and they secrete a white fluff.' / 'cause terminals to twist and become galled'; uf_ifas_edis (HS1389) 'White-colored nymphs found within distorted leaves and black-bodied adults on leaf surface.'; uf_ifas_edis (HS1389) 'Crinkled and deformed young leaves, stunted growth.'"
+    },
+    "organic_treatment_seasoned": {
+     "new": "Usually no treatment is warranted: natural parasites limit it, and insecticides are held until damage has actually been observed. Do not clip out the rolled tips; NC State advises minimizing shearing or clipping of terminals during the growing season. Preserve the parasitic wasps and other natural enemies by keeping broad-spectrum sprays, pyrethroids in particular, off the tree. If treatment is chosen, horticultural oil suppresses adults and nymphs without a residue that harms beneficials, and it must go on early, because sprays are less effective once the leaves have curled.",
+     "why": "'prune off and destroy the worst rolled tips in spring' has no anchor and runs against NC State's residential recommendation to minimize clipping of terminals; replaced with the documented options and their timing.",
+     "anchor": "uga_ext (C784) 'Psyllid are often limited by natural parasites. Don't apply insecticides until after you have observed damage.'; ncsu_ext (Persimmon Psyllid) 'Minimize shearing or clipping of terminals during the growing season.' / 'Horticultural oils suppress adult and immature persimmon psyllids without leaving a toxic residue that might harm beneficial insects and mites.' / 'the pyrethroids are harsh on beneficials'; uf_ifas_edis (HS1389) 'Best to control very early; sprays less effective when leaves curl.'"
+    },
+    "organic_treatment_beginner": {
+     "new": "Usually nothing needs doing: tiny wasps and other helpers knock it back on their own, and the advice is not to spray until you have actually seen damage. Do not clip off the curled tips; snipping shoot ends during the growing season is something to keep to a minimum. Skip the broad insect sprays so the helpers stay. If a young tree is really being set back, horticultural oil is the gentle option, put on at the first spring growth, before the leaves curl.",
+     "why": "Same as organic_treatment_seasoned: the clip-the-tips advice is unanchored and contradicted by NC State.",
+     "anchor": "uga_ext (C784) 'Don't apply insecticides until after you have observed damage.'; ncsu_ext (Persimmon Psyllid) 'Minimize shearing or clipping of terminals during the growing season.' / 'Horticultural oils suppress adult and immature persimmon psyllids without leaving a toxic residue that might harm beneficial insects and mites.'; uf_ifas_edis (HS1389) 'sprays less effective when leaves curl'"
+    }
+   }
+  },
+  {
+   "name": "Persimmon borer",
+   "id": "persimmon-borer",
+   "type": "insect",
+   "severity": "medium",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Extension gives a persimmon grower one job on this borer: watch for it. Clemson's advice is that it is important to monitor the persimmon borer, and that if borer damage is noted on the trunk or exposed roots, treatment may be required. What to look for, in the signs Florida gives for its tree borers as a group, is gummy sap, droppings or sawdust coming from small holes in the bark, from pruning cuts, or on the trunk near the soil line; Georgia puts this borer's larvae in the lower trunk and tap roots, so the bottom of the trunk and any roots showing above ground are where to look. Raking up under the tree does nothing here, because the larvae are in the wood and the roots, not in anything lying on the ground, and no persimmon guide describes a cleanup step against them. The treatment the guides describe is a preventive insecticide program like the one used for peachtree borer, which Florida times from March through June to stop the larvae getting into the tree, adding that little else is known about controlling it directly.",
+     "note_seasoned": "No home control beyond monitoring and a preventive insecticide program is documented for Sannina uroceriformis. UGA calls it a serious pest of native and oriental persimmons whose larvae attack the lower trunk and tap roots, and says that where infestations occur, preventive insecticide treatments similar to those made for peachtree borer will be required; UF gives the window as March through June applications to keep larvae out of the tree and notes limited direct control information. Clemson's instruction is to monitor, and to treat if damage is noted on the trunk or exposed roots. The signs UF lists for its tree borers as a group, this species among them, are gummy sap, frass or sawdust at small holes, in pruning cuts, or on the trunk near the soil line; for this borer the soil line is the place to read them, since UGA puts its larvae in the lower trunk and tap roots. There is no sanitation target on record for this borer: no persimmon document describes litter, debris or a ground stage for the insect. Wire probing of tunnels is described only for flatheaded borers, a different insect that works the scaffold limbs, and no persimmon document describes it for the persimmon borer."
+    }
+   ],
+   "sources": [
+    "uga_ext",
+    "uf_ifas_edis",
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "uga_ext": {
+     "url": "https://fieldreport.caes.uga.edu/publications/C784/",
+     "verified": "2026-09-04"
+    },
+    "uf_ifas_edis": {
+     "url": "https://ask.ifas.ufl.edu/publication/HS1389",
+     "verified": "2026-09-04"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/persimmon/",
+     "verified": "2026-09-04"
+    }
+   },
+   "field_corrections": {
+    "symptoms_seasoned": {
+     "new": "The signs Florida lists for its tree borers as a group, this one among them, are gummy sap, frass or sawdust coming from small holes in the bark, from pruning cuts, or on the trunk near the soil line; for the persimmon borer itself, Georgia places the larvae in the lower trunk and tap roots, so the trunk base is where its damage shows. Georgia calls it a serious pest of both native and oriental persimmons, seen attacking oriental persimmons in Georgia, and Clemson's advice is to monitor for it and to treat if damage is found on the trunk or exposed roots.",
+     "why": "'Wilting or dying shoots' on an established tree has no anchor (the wilting UF describes is of seedlings and saplings, and scaffold-limb dieback is the flatheaded borer's symptom). 'Young trees can be girdled and killed' rests only on the retired UF ENY-835, which does not anchor, and is dropped. Replaced with HS1389's symptom cell, UGA's attack site and Clemson's monitoring instruction. HS1389's row is a group row ('Tree borers (Figures 13, 14) (multiple species, including Sannina uroceriformis)'), so its sign list, pruning cuts included, is attributed to the group rather than to this organism alone.",
+     "anchor": "uf_ifas_edis (HS1389, Table 3) 'Tree borers (Figures 13, 14) (multiple species, including Sannina uroceriformis)' / 'Gummy sap, frass, or sawdust coming from small holes in bark, pruning cuts, or trunk near soil line.'; uga_ext (C784) 'Persimmon borer is a serious pest of native and oriental persimmons. It has been seen attacking oriental persimmons in Georgia, although it is known to infest both species in other states. Its larvae attack the lower trunk and tap roots.'; clemson_hgic 'It is important to monitor the persimmon borer. If borer damage is noted on the trunk or exposed roots, treatment may be required.'"
+    },
+    "symptoms_beginner": {
+     "new": "Sticky gum, droppings or what looks like sawdust coming out of small holes in the bark, out of old pruning cuts, or from the trunk right at the soil line: that is the list Florida gives for tree borers in general. This one feeds in the lower trunk and the big roots, so the bottom of the trunk is where to look for it. This is the one persimmon pest extension calls serious, so the base of the trunk is worth a look now and then.",
+     "why": "Same as symptoms_seasoned: 'shoots that wilt or die' and 'ringed and killed' are unanchored for this borer on a live document. The sign list is attributed to Florida's tree borers as a group, since HS1389's row covers multiple species.",
+     "anchor": "uf_ifas_edis (HS1389, Table 3) 'Tree borers (Figures 13, 14) (multiple species, including Sannina uroceriformis)' / 'Gummy sap, frass, or sawdust coming from small holes in bark, pruning cuts, or trunk near soil line.'; uga_ext (C784) 'Persimmon borer is a serious pest of native and oriental persimmons.' / 'Its larvae attack the lower trunk and tap roots.'"
+    },
+    "cause_seasoned": {
+     "new": "Larvae of the persimmon borer, Sannina uroceriformis, a clearwing moth whose larvae attack the lower trunk and tap roots; it is known from both native and oriental persimmon and has been seen attacking oriental persimmons in Georgia. UF's window for preventive applications is March through June, to stop the larvae before they enter the tree.",
+     "why": "The flatheaded-borer clause is corrected out: flatheaded borers (Chrysobothris spp.) are a separate UC IPM problem, and this entry is one organism by name. 'stressed by wounds or drought are attacked first' and 'healthy bark can also be entered' have no anchor for the persimmon borer (the drought sentence is UC IPM's flatheaded page; nothing says healthy bark is entered). Organism named per HS1389.",
+     "anchor": "uf_ifas_edis (HS1389) 'Tree borers (Figures 13, 14) (multiple species, including Sannina uroceriformis)' / 'March through June applications best to prevent larvae from entering tree.'; uga_ext (C784) 'Persimmon borer is a serious pest of native and oriental persimmons. It has been seen attacking oriental persimmons in Georgia, although it is known to infest both species in other states. Its larvae attack the lower trunk and tap roots.' (the family identity 'clearwing moth' is EVIDENCE-ONLY, no live anchor: retired UF ENY-835 'The persimmon borer, Sannina uroceriformis Walker, (Lepidoptera: Sesiidae)')"
+    },
+    "cause_beginner": {
+     "new": "The larvae of the persimmon borer, a clearwing moth. They feed in the lower trunk and the large roots of both native and Asian persimmon. The preventive window extension gives is March through June, before the larvae get into the wood.",
+     "why": "'borer beetles and moths' was true only because the entry bundled flatheaded (beetle) borers with the persimmon borer (a moth); 'a healthy tree can be attacked too' has no anchor.",
+     "anchor": "uf_ifas_edis (HS1389) 'Tree borers (Figures 13, 14) (multiple species, including Sannina uroceriformis)' / 'March through June applications best to prevent larvae from entering tree.'; uga_ext (C784) 'Its larvae attack the lower trunk and tap roots.' (the family identity 'clearwing moth' is EVIDENCE-ONLY, no live anchor: retired UF ENY-835 'The persimmon borer, Sannina uroceriformis Walker, (Lepidoptera: Sesiidae)')"
+    },
+    "organic_treatment_seasoned": {
+     "new": "There is no documented organic control for the persimmon borer once it is in the tree. UF notes limited direct control information and says controls for peachtree borer may be effective; Georgia says preventive insecticide treatments similar to those for peachtree borer will be required where infestations occur, and UF's window is March through June, to keep the larvae from entering. Wire probing of tunnels is described only for flatheaded borers, a different insect, and not for this one. The organic contribution is monitoring: check the trunk base and exposed roots for gum, frass and sawdust so that damage is found while a preventive program is still worth running.",
+     "why": "'kill larvae by hand with a wire' exists only on UC IPM's flatheaded-borers page, for flatheaded borers on small trees; no document describes it for the persimmon borer, and UF's own (retired) persimmon-borer note says no direct controls have been developed. 'Keep the trunk base free of mechanical wounds' and 'remove badly infested young wood' have no persimmon-borer anchor.",
+     "anchor": "uf_ifas_edis (HS1389) 'March through June applications best to prevent larvae from entering tree. Limited direct control information; controls for peachtree borer may be effective (imidacloprid).'; uga_ext (C784) 'Where infestations occur, preventive insecticide treatments similar to those made for peachtree borer will be required.'; clemson_hgic 'It is important to monitor the persimmon borer. If borer damage is noted on the trunk or exposed roots, treatment may be required.'; the wire sentence lives on uc_ipm https://ipm.ucanr.edu/home-and-landscape/flatheaded-borers/ 'Larvae can sometimes be killed by probing tunnels with a sharp, stiff wire. This method is practical only in a small infestation on small trees.' (cited to locate the sentence, not as a persimmon-borer anchor)"
+    },
+    "organic_treatment_beginner": {
+     "new": "There is no organic fix on record for this borer once it is in the tree, and extension does not describe digging the larvae out with a wire for it (that advice is for a different borer). What the guides ask of you is to watch the base of the trunk and any exposed roots for gum, droppings and sawdust. Where the borer is found, what the guides describe is a preventive insecticide program like the one used for peachtree borer, timed March through June before the larvae get in; that is not an organic step, and the guides give no organic one to put in its place.",
+     "why": "Same as organic_treatment_seasoned: the wire-and-scrape prescription belongs to flatheaded borers, and the mower-wound advice has no persimmon-borer anchor. The preventive insecticide program is reported as what the guides say, not prescribed inside the organic field, matching the seasoned framing.",
+     "anchor": "uf_ifas_edis (HS1389) 'March through June applications best to prevent larvae from entering tree. Limited direct control information; controls for peachtree borer may be effective'; uga_ext (C784) 'Where infestations occur, preventive insecticide treatments similar to those made for peachtree borer will be required.'; clemson_hgic 'If borer damage is noted on the trunk or exposed roots, treatment may be required.'"
+    },
+    "prevention_seasoned": {
+     "new": "Monitor: Clemson's instruction is to watch for the persimmon borer and to treat if damage is noted on the trunk or exposed roots, and the signs are gummy sap, frass or sawdust at small holes, pruning cuts or the trunk near the soil line. Where infestations occur, Georgia expects preventive insecticide treatments similar to those made for peachtree borer, and UF's window for them is March through June, ahead of the larvae entering the tree.",
+     "why": "'inspect the trunk base each late summer' has no anchor (no document gives an inspection month; the only timing given is the March through June application window). 'Protect the lower trunk from injury' and 'keep well watered' are anchored only to UC IPM's flatheaded page and UGA's ambrosia-beetle sentence, neither about this borer.",
+     "anchor": "clemson_hgic 'It is important to monitor the persimmon borer. If borer damage is noted on the trunk or exposed roots, treatment may be required.'; uf_ifas_edis (HS1389) 'Gummy sap, frass, or sawdust coming from small holes in bark, pruning cuts, or trunk near soil line.' / 'March through June applications best to prevent larvae from entering tree.'; uga_ext (C784) 'Where infestations occur, preventive insecticide treatments similar to those made for peachtree borer will be required.'"
+    },
+    "prevention_beginner": {
+     "new": "Check the bottom of the trunk and any roots showing above the soil for fresh gum, droppings or sawdust, since finding damage is what tells you treatment is needed. Where this borer is known to be active, the protection extension describes is a preventive insecticide treatment like the one for peachtree borer, put on from March through June, before the larvae get into the tree.",
+     "why": "Same as prevention_seasoned: the late-summer inspection month and the mower-wound advice are unanchored for this borer.",
+     "anchor": "clemson_hgic 'If borer damage is noted on the trunk or exposed roots, treatment may be required.'; uf_ifas_edis (HS1389) 'March through June applications best to prevent larvae from entering tree.'; uga_ext (C784) 'preventive insecticide treatments similar to those made for peachtree borer will be required.'"
+    }
+   }
+  }
+ ],
+ "diseases": [
+  {
+   "name": "Anthracnose",
+   "id": "anthracnose",
+   "type": "fungal",
+   "severity": "medium",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick rotting fruit off the tree and clear it from underneath as you find it, and look hardest as the fruit ripens, since Florida's guide has one of the two fungi behind this rot hitting ripening fruit and the other affecting fruit and shoots. That is ordinary hygiene for any fruit tree rather than a step a persimmon guide prescribes for this disease, and it is the one no-cost step open to you, because the persimmon guides give no other home step. Florida's answer is a fungicide program that starts early in the season and continues with summer cover sprays, and it names no product; Texas calls anthracnose an occasional problem on a tree that is largely free of serious disease.",
+     "note_seasoned": "Removal of rotting fruit is the general fruit-tree practice this step carries; no persimmon document read prescribes it for anthracnose, none describes where the fungus overwinters on this host, and none names a resistant cultivar, so it is stated as hygiene rather than as a documented control. The one management sentence in the persimmon documents read is UF's, for the whole leaf-and-fruit-spot complex in which it lists Gloeosporium (bitter rot of fruit and shoots) and Colletotrichum (ripening fruit): proactive fungicide sprays in early season and cover sprays in summer in rotation, written for Florida and naming no material. Texas A&M's home guide has anthracnose as having occasionally caused problems on a crop largely free of serious diseases, and where pressure is real the Florida program is the documented response."
+    }
+   ],
+   "sources": [
+    "uf_ifas_edis",
+    "tamu_agrilife"
+   ],
+   "anchoring_urls": {
+    "uf_ifas_edis": {
+     "url": "https://ask.ifas.ufl.edu/publication/HS1389",
+     "verified": "2026-09-04"
+    },
+    "tamu_agrilife": {
+     "url": "https://aggie-horticulture.tamu.edu/fruit-nut/wp-content/uploads/sites/6/2015/04/persimmons_2015.pdf",
+     "verified": "2026-09-04"
+    }
+   },
+   "field_corrections": {
+    "symptoms_seasoned": {
+     "new": "A rot of the fruit and shoots: Florida's guide lists Gloeosporium as the anthracnose ('bitter rot') that affects fruit and shoots, and Colletotrichum as affecting ripening fruit. A bacterial disease Florida also names on persimmon, Pseudomonas 'bacterial blast', can look similar: it spots leaves and blackens stems and leaf stalks. Texas reports anthracnose as an occasional problem.",
+     "why": "'Dark, sunken lesions', 'dieback on leaves and young shoots', 'most damaging in warm, wet weather and humid regions', 'before or after harvest' and 'thins the canopy' have no persimmon anchor; the two documents that name the disease on persimmon give fruit-and-shoot rot and ripening fruit, and HS1389's bacterial look-alike is added because a home diagnosis will confuse the two.",
+     "anchor": "uf_ifas_edis (HS1389, Table 4) 'Gloeosporium: anthracnose \"bitter rot\" that affects fruit and shoots. Colletotrichum: affects ripening fruit.' / 'Pseudomonas: \"bacterial blast\" leaf spots and blackened stem and leaf petioles.'; tamu_agrilife (persimmons_2015.pdf) 'Persimmons are largely free of serious diseases; however, crown gall and anthracnose have occasionally caused problems.'"
+    },
+    "symptoms_beginner": {
+     "new": "A rot that hits the fruit, especially as it ripens, and the shoots. On persimmon it is an occasional problem rather than a regular one. A bacterial disease can look similar, spotting the leaves and blackening the stems and leaf stalks, so a spotted leaf on its own is not proof of anthracnose.",
+     "why": "Same as symptoms_seasoned: the sunken-lesion, warm-wet-weather and thinned-canopy sentences are unanchored.",
+     "anchor": "uf_ifas_edis (HS1389) 'Gloeosporium: anthracnose \"bitter rot\" that affects fruit and shoots. Colletotrichum: affects ripening fruit.'; tamu_agrilife 'crown gall and anthracnose have occasionally caused problems.'"
+    },
+    "cause_seasoned": {
+     "new": "Anthracnose fungi, named for persimmon as Gloeosporium spp. and Colletotrichum sp. The persimmon guides read do not describe where they overwinter on this host or how they spread, and Texas A&M reports the disease as an occasional problem.",
+     "why": "'overwinter in dead wood and mummified fruit', 'spread by rain-splash in warm, humid conditions' and the Southeast-versus-dry-climate gradient have no persimmon anchor (UC IPM's anthracnose note covers shade trees, not persimmon or fruit rot). 'Colletotrichum and related genera' is kept in the form HS1389 gives.",
+     "anchor": "uf_ifas_edis (HS1389) 'Leaf and fruit spots (Cercospora spp., Alternaria spp., Gloeosporium spp., Phyllosticta spp., Botrytis cinerea, Pseudomonas syringae, Colletotrichum sp., Ramularia sp.)' / 'Gloeosporium: anthracnose \"bitter rot\" that affects fruit and shoots. Colletotrichum: affects ripening fruit.'; tamu_agrilife 'crown gall and anthracnose have occasionally caused problems.'"
+    },
+    "cause_beginner": {
+     "new": "Fungi called anthracnose (Gloeosporium and Colletotrichum) that rot the fruit and shoots. On persimmon it shows up now and then rather than every year, and the guides do not describe how it carries over from one season to the next.",
+     "why": "Same as cause_seasoned: the overwintering, rain-splash and humid-region sentences are unanchored for persimmon.",
+     "anchor": "uf_ifas_edis (HS1389) 'Gloeosporium: anthracnose \"bitter rot\" that affects fruit and shoots. Colletotrichum: affects ripening fruit.'; tamu_agrilife 'anthracnose have occasionally caused problems.'"
+    },
+    "organic_treatment_seasoned": {
+     "new": "No persimmon document prescribes an organic control. The one management statement, UF's for the leaf-and-fruit-spot complex, is a fungicide program: proactive sprays in early season and cover sprays in summer in rotation, with no material named. Removing rotting fruit from the tree and the ground is ordinary fruit-tree hygiene rather than a documented control for this disease.",
+     "why": "The sanitation regime (dead and cankered wood, mummified fruit, open canopy) has no persimmon anchor, and 'Fungicides are rarely needed on a backyard tree if sanitation is kept up' contradicts the only document that manages persimmon anthracnose, whose control cell is a proactive fungicide program.",
+     "anchor": "uf_ifas_edis (HS1389, Leaf and fruit spots row) 'Proactive fungicide sprays in early season, and cover sprays in summer in rotation.'"
+    },
+    "organic_treatment_beginner": {
+     "new": "The persimmon guides do not give a spray-free fix for this. Florida's answer is a fungicide program that starts early in the season and continues with summer cover sprays, and it does not name a product. Picking off rotting fruit and clearing it from under the tree is plain good hygiene for any fruit tree, not a proven cure for this one.",
+     "why": "Same as organic_treatment_seasoned: 'A home tree rarely needs spraying if you keep it clean' contradicts HS1389, and the cleanup regime is unanchored.",
+     "anchor": "uf_ifas_edis (HS1389) 'Proactive fungicide sprays in early season, and cover sprays in summer in rotation.'"
+    },
+    "prevention_seasoned": {
+     "new": "No persimmon cultivar is named as tolerant of anthracnose in any extension document read, and no cultural prevention is prescribed for it. UF's protectant program begins early in the season, before the fruit rot shows, which is the only preventive timing on record; Texas A&M's experience is that the disease is occasional on a crop largely free of serious disease.",
+     "why": "'favor cultivars with better tolerance' is a shape-fill sentence with no document behind it; 'open canopy', 'good air movement' and 'clear fallen and mummified fruit' have no persimmon anchor for anthracnose.",
+     "anchor": "uf_ifas_edis (HS1389) 'Proactive fungicide sprays in early season, and cover sprays in summer in rotation.'; tamu_agrilife 'Persimmons are largely free of serious diseases; however, crown gall and anthracnose have occasionally caused problems.'"
+    },
+    "prevention_beginner": {
+     "new": "None of the persimmon guides names a variety that resists this rot, and they give no pruning or cleanup step that prevents it. Where it is a real problem, the only prevention on record is Florida's fungicide program, started early in the season before the rot appears. Texas reports it as only an occasional problem.",
+     "why": "Same as prevention_seasoned: 'pick a variety known to hold up better' has nothing behind it.",
+     "anchor": "uf_ifas_edis (HS1389) 'Proactive fungicide sprays in early season, and cover sprays in summer in rotation.'; tamu_agrilife 'anthracnose have occasionally caused problems.'"
+    }
+   }
+  },
+  {
+   "name": "Phytophthora root and crown rot",
+   "id": "phytophthora-root-rot",
+   "type": "fungal",
+   "severity": "medium",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "This disease is settled by the ground the tree goes into, not by anything sprayed later. UC IPM's persimmon page says the tree tolerates many soils but requires good drainage; its Phytophthora note says to improve drainage before planting, to set a tree on a mound up to 2 feet high with a gradual slope where the soil is heavy, and never to let water stand or the soil stay saturated around the base of the trunk. Let the top few inches of soil dry between waterings, keep soil and mulch off the crown and graft union, and keep any drip emitter well out from the trunk. If a tree is already sick, UC IPM gives one rescue, and only for a tree whose dead patch of bark at the base is small: pull the soil away from the trunk down to the top of the main roots and leave the crown open to the air so it dries out. A tree whose dead patch runs more than about a quarter of the way around the trunk does not usually recover, even with the best care.",
+     "note_seasoned": "The water molds behind this need free water in the soil to move and infect, so drainage is the control and UC IPM says not to rely on fungicides alone. Its persimmon-specific line is the drainage requirement; the generic prescription is drainage improvement before planting, mounds up to 2 feet high for trees, avoidance of prolonged saturation or standing water at the base, drying the top few inches between irrigations, drip emitters set as far from the trunk as the roots allow, and no soil or mulch over the root crown or graft union. Texas A&M frames the same condition from the rootstock side: the native persimmon thrives from sands to bottomland as long as the soils do not stand in water. On a tree already infected, the page's verdict is that a substantial infection rarely recovers and that lesions larger than about one-quarter of the trunk's circumference do not typically recover even with ideal care; smaller lesions can sometimes be saved by removing soil from the base of the tree down to the top of the main roots and allowing the crown tissue to dry out, which is drying rather than cutting, and so sits with drainage."
+    },
+    {
+     "method": "resistant_rootstock",
+     "note_beginner": "The roots decide how exposed the tree is. Asian persimmon on its own roots is highly susceptible to root rot; the native American persimmon it is normally grafted onto is only moderately susceptible and tolerates wet soil, and Texas A&M says it is critical that every Asian persimmon be grafted onto it because root rot is prevalent wherever the tree can grow. When you buy, ask what the tree is grafted on. If a nursery offers a tree on Diospyros lotus roots, that one does not tolerate poorly drained soil and is the wrong choice for a damp site.",
+     "note_seasoned": "Rootstock is the only resistance lever, and it is named by species rather than cultivar. Texas A&M's ranking is Texas persimmon resistant, American persimmon moderately susceptible, Oriental persimmon highly susceptible, with grafting onto American persimmon called critical; UF describes D. virginiana as providing a tolerance of wet soils, and UC Davis as having a fibrous root system tolerant of both drought and excess moisture, at the cost of non-uniform trees and suckering. UC Davis rules out D. lotus for wet ground, since it does not tolerate poorly drained soils. Tolerance is relative: the native rootstock is less susceptible than kaki on its own roots, not immune, so it stacks on drainage rather than replacing it."
+    }
+   ],
+   "sources": [
+    "uc_ipm",
+    "tamu_agrilife",
+    "uf_ifas_edis",
+    "ucd_fruitnut"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/home-and-landscape/persimmon/",
+     "verified": "2026-09-04"
+    },
+    "tamu_agrilife": {
+     "url": "https://aggie-horticulture.tamu.edu/fruit-nut/wp-content/uploads/sites/6/2015/04/persimmons_2015.pdf",
+     "verified": "2026-09-04"
+    },
+    "uf_ifas_edis": {
+     "url": "https://ask.ifas.ufl.edu/publication/HS1389",
+     "verified": "2026-09-04"
+    },
+    "ucd_fruitnut": {
+     "url": "https://fruitsandnuts.ucdavis.edu/persimmon-scion-rooststock-selection",
+     "verified": "2026-09-04"
+    }
+   },
+   "field_corrections": {
+    "name": {
+     "new": "Phytophthora root and crown rot",
+     "why": "UC IPM's persimmon page lists 'Phytophthora Root and Crown Rot' and, separately, 'Armillaria Root Rot'; the genus is resolved, the entry joins the roster's phytophthora-root-rot id, and the display name says what the id says. Armillaria stays out (UC IPM treats it as a distinct disease and UC Davis rates D. kaki resistant to it).",
+     "anchor": "uc_ipm (https://ipm.ucanr.edu/home-and-landscape/persimmon/) list items 'Phytophthora Root and Crown Rot (Diseases)' and 'Armillaria Root Rot'; ucd_fruitnut 'D. kaki is resistant to Agrobacterium and Armillaria but susceptible to Verticilium.'"
+    },
+    "symptoms_seasoned": {
+     "new": "A tree in heavy or poorly drained ground whose leaves turn dull green, yellow or reddish and which may wilt and die quickly with the first warm weather of the season. At the base, darkened areas develop in the bark around the crown and upper roots, sometimes with gum oozing from the edges of the dead area; under the bark, the inner tissue shows reddish brown zones often separated from healthy tissue by a dark line. Asian persimmon on its own roots is highly susceptible.",
+     "why": "'sparse yellowing foliage' was unverified and 'the tree may collapse over a season or two once the crown is girdled' has no timescale in any document; replaced with UC IPM's foliage, bark and inner-bark symptoms and TAMU's susceptibility ranking.",
+     "anchor": "uc_ipm (pn74133, https://ipm.ucanr.edu/PMG/PESTNOTES/pn74133.html) 'Leaves may turn dull green, yellow, or in some cases red or purplish.' / 'wilt and die rapidly with the first warm weather of the season' / 'darkened areas in the bark around the crown and upper roots' / 'gum or dark sap may ooze from the margins of the diseased trunk area' / 'reddish brown zones, often separated from healthy tissue by a dark line, in the inner bark and outer layer of wood'; tamu_agrilife 'the Oriental persimmon is highly susceptible.'"
+    },
+    "symptoms_beginner": {
+     "new": "A tree in wet or heavy ground whose leaves go dull, yellow or reddish, and which may wilt and die fast once the first warm weather arrives. Down at the base, the bark around the crown and the top of the roots turns dark, sometimes with gum oozing at the edge of the dark patch, and if you cut into it the wood underneath is reddish brown with a dark line where it meets healthy tissue. Asian persimmon growing on its own roots is the most easily hit.",
+     "why": "Same as symptoms_seasoned: 'die within a year or two' has no anchor, and 'thin yellow leaves' was unverified.",
+     "anchor": "uc_ipm (pn74133) 'Leaves may turn dull green, yellow, or in some cases red or purplish.' / 'wilt and die rapidly with the first warm weather of the season' / 'darkened areas in the bark around the crown and upper roots' / 'reddish brown zones, often separated from healthy tissue by a dark line'; tamu_agrilife 'the Oriental persimmon is highly susceptible.'"
+    },
+    "cause_seasoned": {
+     "new": "Soilborne Phytophthora water molds (technically not true fungi, being closer to brown algae) that attack roots and the crown in waterlogged soil. Oriental persimmon is highly susceptible to root rot, which is a chief reason it is grafted onto the native D. virginiana rootstock: a species Texas A&M rates only moderately susceptible, and which UF and UC Davis describe as tolerating wet soils and excess moisture. Less susceptible than kaki on its own roots, not immune.",
+     "why": "'(and related) fungi' dropped: UC IPM names Phytophthora specifically for persimmon and lists Armillaria as a separate disease, and Phytophthora is 'technically not true fungi'. 'the more tolerant native rootstock' rephrased as relative, since TAMU rates the native rootstock moderately susceptible.",
+     "anchor": "uc_ipm (pn74133) 'Although technically not true fungi (Phytophthora is more closely related to brown algae)'; uc_ipm (persimmon page) 'Phytophthora Root and Crown Rot (Diseases)' / 'Armillaria Root Rot'; tamu_agrilife 'The Texas persimmon resists root rot; the common American persimmon is moderately susceptible, and the Oriental persimmon is highly susceptible. It is critical that all Oriental trees be grafted or budded onto the common persimmon because root rot is prevalent where the tree can grow.'; uf_ifas_edis (HS1389) 'It provides a tolerance of wet soils'; ucd_fruitnut 'D. virginiana has a fibrous root system tolerant of both drought and excess moisture'"
+    },
+    "cause_beginner": {
+     "new": "Water molds in the soil (Phytophthora, a relative of algae rather than a true fungus) that rot the roots and the crown when the ground stays wet. Asian persimmon is easily hit, which is why it is grafted onto the roots of the native American persimmon, which stands wet soil better, though it is not immune either.",
+     "why": "'Water-mold fungi' corrected to water molds (UC IPM: technically not true fungi); 'tougher native persimmon roots' made relative per TAMU's ranking.",
+     "anchor": "uc_ipm (pn74133) 'Although technically not true fungi (Phytophthora is more closely related to brown algae)'; tamu_agrilife 'the common American persimmon is moderately susceptible, and the Oriental persimmon is highly susceptible'; uf_ifas_edis (HS1389) 'It provides a tolerance of wet soils'"
+    },
+    "organic_treatment_seasoned": {
+     "new": "A tree with a substantial Phytophthora infection rarely recovers: UC IPM's verdict is that lesions larger than about one-quarter of the tree's circumference do not typically recover even with ideal care, while a tree with smaller lesions can sometimes be saved by removing soil from the base of the tree down to the top of the main roots and allowing the crown tissue to dry out. Beyond that one salvage step, UC IPM's instruction is not to rely on pesticide applications alone; management is the site and the roots. Never plant where water stands, improve drainage before planting, set the tree on a mound up to 2 feet high in heavy soil, and buy a tree grafted on native D. virginiana rootstock where drainage is marginal. On an established tree, avoid prolonged saturation or standing water around the base, let the top few inches of soil dry between waterings, keep drip emitters well out from the trunk, and never bury the crown or graft union under soil or mulch.",
+     "why": "'There is no cure once the crown is rotting' was near pn74133's verdict but not in its terms, and the old field omitted the one salvage step the page documents; restated in pn74133's own words (a substantial infection rarely recovers; lesions over about a quarter of the circumference do not typically recover even with ideal care; smaller lesions can sometimes be saved by exposing and drying the crown) and followed by UC IPM's prescriptions and the rootstock choice. An earlier draft of this correction dropped the verdict as 'in no document read'; that was an incomplete read of the page and is withdrawn.",
+     "anchor": "uc_ipm (pn74133, https://ipm.ucanr.edu/PMG/PESTNOTES/pn74133.html) 'A plant with a substantial Phytophthora infection rarely recovers. Trees with lesions larger than about one-quarter of the tree's circumference do not typically recover, even with ideal care. Trees with smaller lesions can sometimes be saved by removing soil from the base of the tree down to the top of the main roots and allowing the crown tissue to dry out.' / 'However, do not rely on pesticide applications alone to control Phytophthora root and crown rot diseases.' / 'Improve soil drainage before planting.' / mounds 'up to 2 feet high with a gradual slope for trees' / 'Avoid prolonged saturation of the soil or standing water around the base of trees' / 'the top few inches of soil to dry thoroughly between watering' / 'Never cover the root crown or graft union with soil or mulch.'; tamu_agrilife 'It is critical that all Oriental trees be grafted or budded onto the common persimmon because root rot is prevalent where the tree can grow.'"
+    },
+    "organic_treatment_beginner": {
+     "new": "A badly infected tree rarely gets better. UC IPM's rule of thumb is that a tree with a dead patch of bark running more than about a quarter of the way around the trunk does not usually recover, even with the best care, while a tree with a smaller patch can sometimes be saved by pulling the soil away from the base of the trunk down to the top of the main roots and letting the crown dry out in the open air. Past that, no spray is the answer on its own; where the tree stands and what roots it is on do the work. Never plant where water stands, fix the drainage before planting, build a mound up to 2 feet high in heavy soil, and pick a tree grafted onto native American persimmon roots if your drainage is doubtful. On a tree already in the ground, never let water pool around the trunk, let the top few inches of soil dry out between waterings, keep drip emitters well away from the trunk, and keep soil and mulch off the crown and graft union.",
+     "why": "'there is no fixing it' was near the page's verdict but not in its terms, and it omitted the salvage step; restated per pn74133 (the quarter-circumference rule and crown exposure) and followed by what UC IPM prescribes. An earlier draft called the verdict unanchored; withdrawn on a full read of the page.",
+     "anchor": "uc_ipm (pn74133) 'A plant with a substantial Phytophthora infection rarely recovers. Trees with lesions larger than about one-quarter of the tree's circumference do not typically recover, even with ideal care. Trees with smaller lesions can sometimes be saved by removing soil from the base of the tree down to the top of the main roots and allowing the crown tissue to dry out.' / 'Do not rely on pesticide applications alone' / 'Improve soil drainage before planting.' / 'up to 2 feet high with a gradual slope for trees' / 'Never cover the root crown or graft union with soil or mulch.'; tamu_agrilife 'It is critical that all Oriental trees be grafted or budded onto the common persimmon'"
+    }
+   }
+  },
+  {
+   "name": "Leaf spot",
+   "id": "persimmon-leaf-spot",
+   "type": "fungal",
+   "severity": "low",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Gather up the spotted leaves as they fall, along with any dead twigs, and get them away from the tree rather than leaving them on the ground under it. Arkansas's plant clinic puts it plainly: clean up diseased leaves and stems. Do it through the season as they drop and again after leaf fall.",
+     "note_seasoned": "Sanitation is the prescription both documents agree on: UAEX's clean up diseased leaves and stems, and UC IPM's remove fallen leaves and debris promptly. Neither persimmon document states where Pseudocercospora overwinters on this host, so the cleanup is written as removal of diseased tissue rather than as a claim about the source of spring infection, which UAEX places at shoot expansion, leaf formation and flowering."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "If you irrigate the tree, keep the water on the ground and off the leaves, and water early in the day so anything that does get wet dries fast. Leaf spot fungi need the leaves to stay wet for a while to take hold.",
+     "note_seasoned": "UC IPM's leaf-spot guidance is to avoid overhead sprinklers and to irrigate early in the day so the foliage dries more quickly; the target is leaf-wetness duration through the spring infection window. It buys nothing against rain, which is what a wet spring supplies, and it is a delivery and scheduling choice rather than a treatment."
+    },
+    {
+     "method": "chlorothalonil",
+     "note_beginner": "Most persimmons never need a spray for leaf spot: UC IPM says fungicide treatment is generally not warranted for leaf spots, and Texas A&M says only severe cases warrant treatment. A severe case is a tree that dropped its leaves in late August in past years, right as the fruit was ripening, because that is when the disease costs you: fruit that does not sweeten or ripen properly, a crop only every other year, and a tree more easily hurt by freezes. For that tree, chlorothalonil is the protectant Arkansas names as labeled for this leaf spot on persimmon, timed as a cover spray at full bloom and again 3 to 4 weeks later. Chlorothalonil carries a bee precaution against spraying anything in flower, so a bloom-time application has to fit the evening window the label allows, if it allows one. Check that the label lists persimmon, wear gloves, long sleeves and goggles, and keep it out of ponds and drains.",
+     "note_seasoned": "A rescue reserved for the severe case. UAEX's timing is a fungicide cover spray during full bloom and again 3 to 4 weeks later, and it names two labeled products, a chlorothalonil formulation and a strobilurin with no counterpart in the home materials here; UC IPM's general position is that fungicide treatment is not warranted for leaf spots, and Texas A&M's that only severe cases warrant it. The infection window UAEX gives, shoot expansion, leaf formation and flowering, is why the first spray sits at bloom, and that slot collides with chlorothalonil's honey-bee precaution, which confines any application over open flowers to the sunset-to-midnight window a label may allow. The severity threshold UAEX supplies is defoliation in late August as the fruit ripens, with the sugar, ripening, biennial-bearing and freeze consequences that follow."
+    }
+   ],
+   "sources": [
+    "uada_ext",
+    "uf_ifas_edis",
+    "tamu_agrilife",
+    "uc_ipm",
+    "ncsu_ext"
+   ],
+   "anchoring_urls": {
+    "uada_ext": {
+     "url": "https://www.uaex.uada.edu/yard-garden/plant-health-clinic/disease-notes/posts/persimmon-leaf-spot.aspx",
+     "verified": "2026-09-04"
+    },
+    "uf_ifas_edis": {
+     "url": "https://ask.ifas.ufl.edu/publication/HS1389",
+     "verified": "2026-09-04"
+    },
+    "tamu_agrilife": {
+     "url": "https://aggie-horticulture.tamu.edu/fruit-nut/wp-content/uploads/sites/6/2015/04/persimmons_2015.pdf",
+     "verified": "2026-09-04"
+    },
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/home-and-landscape/leaf-spot-diseases/",
+     "verified": "2026-09-04"
+    },
+    "ncsu_ext": {
+     "url": "https://plants.ces.ncsu.edu/plants/diospyros-kaki/",
+     "verified": "2026-09-04"
+    }
+   },
+   "field_corrections": {
+    "symptoms_seasoned": {
+     "new": "Small dead spots on the leaves that grow into angular lesions and can merge into larger blotches; affected leaves yellow and fall early. The infection takes place in spring, at shoot expansion, leaf formation and flowering, and shows later in the season. In a severe year the tree can defoliate in late August as the fruit begins to ripen, and that is where the harm lies: fruit sugar fails to accumulate, fruit ripens poorly, the tree tends toward bearing every other year, and it is more vulnerable to freeze damage. It is not deadly to a mature tree, and most years it is minor on a crop extension calls largely free of serious disease.",
+     "why": "SPLIT limb: the bundle's symptoms described leaf spot and twig dieback together and graded both cosmetic; this limb is written from the leaf-spot documents alone, and adds the infection timing and the severe-case consequences UAEX gives.",
+     "anchor": "uada_ext (Plant Health Clinic, Persimmon Leaf Spot) 'Symptoms begin as small necrotic spots that develop into angular lesions. Lesions may coalesce to form larger blotches on the leaf. Leaves turn yellow and fall from the tree prematurely.' / 'Infection occurs at shoot expansion, leaf formation, and flowering in the spring.' / 'Severe infections can cause trees to defoliate in late August as the fruit begins to ripen.' (consequences: 'failure for fruit sugar to properly accumulate, and poor fruit ripening, biennial bearing tendencies with low overall yields, and increased vulnerability to freeze damage'); tamu_agrilife (persimmons_2015.pdf) 'Although not deadly to adult trees, several fungi cause leaf spot and sometimes affect the fruit as well. Leaf spot can lead to early defoliation, but only severe cases warrant treatment.'; ncsu_ext (toolbox) 'Scale, mealybug and leaf spot can occur.'"
+    },
+    "symptoms_beginner": {
+     "new": "Small dead spots on the leaves that spread into angular patches and can run together into bigger blotches. Spotted leaves turn yellow and drop early. The tree picks the disease up in spring as the shoots, leaves and flowers are coming out, but you notice it later. In a bad year it can drop most of its leaves in late August just as the fruit is ripening, and that is when it hurts: the fruit does not sweeten or ripen well, the tree may skip a year of fruit, and a freeze can damage it more easily. It is not deadly to a grown tree.",
+     "why": "SPLIT limb: written for leaf spot alone, with the timing and the severe-case consequences UAEX gives.",
+     "anchor": "uada_ext (Plant Health Clinic, Persimmon Leaf Spot) 'Symptoms begin as small necrotic spots that develop into angular lesions. Lesions may coalesce to form larger blotches on the leaf. Leaves turn yellow and fall from the tree prematurely.' / 'Infection occurs at shoot expansion, leaf formation, and flowering in the spring.' / 'Severe infections can cause trees to defoliate in late August as the fruit begins to ripen.' (consequences: 'failure for fruit sugar to properly accumulate, and poor fruit ripening, biennial bearing tendencies with low overall yields, and increased vulnerability to freeze damage'); tamu_agrilife (persimmons_2015.pdf) 'Although not deadly to adult trees, several fungi cause leaf spot and sometimes affect the fruit as well. Leaf spot can lead to early defoliation, but only severe cases warrant treatment.'"
+    },
+    "cause_seasoned": {
+     "new": "A leaf-spot complex. The fungus Arkansas's plant clinic names is Pseudocercospora diospyricola (its note calls the disease Cercospora leaf spot of persimmon); Florida's table lists Cercospora alongside Alternaria, Phyllosticta, Ramularia and Botrytis, and a bacterial look-alike, Pseudomonas syringae 'bacterial blast', in the same row; Texas A&M says several fungi. Infection occurs in spring at shoot expansion, leaf formation and flowering.",
+     "why": "SPLIT limb: the bundle named no organism ('Several leaf-spot fungi'); the T1 organisms are named, and the bundle's 'no serious insect or disease problems' sentence, which was wrong for the dieback half, is not carried onto a cause field.",
+     "anchor": "uada_ext (Persimmon Leaf Spot) 'A significant fungal pathogen that may affect yield is leaf spot caused by Pseudocercospora diospyricola.' / 'Cercospora leaf spot in persimmon' / 'Infection occurs at shoot expansion, leaf formation, and flowering in the spring.'; uf_ifas_edis (HS1389) 'Leaf and fruit spots (Cercospora spp., Alternaria spp., Gloeosporium spp., Phyllosticta spp., Botrytis cinerea, Pseudomonas syringae, Colletotrichum sp., Ramularia sp.)' / 'Cercospora: leaf spots and early defoliation.' / 'Pseudomonas: \"bacterial blast\" leaf spots and blackened stem and leaf petioles.'; tamu_agrilife 'several fungi cause leaf spot'"
+    },
+    "cause_beginner": {
+     "new": "Several fungi can spot persimmon leaves; the one Arkansas's plant clinic names is a Cercospora-type fungus (Pseudocercospora). They get into the tree in spring as the new shoots, leaves and flowers come out. A bacterial disease can spot the leaves too, and it also blackens stems and leaf stalks, which the fungal leaf spot does not do.",
+     "why": "SPLIT limb: written for leaf spot alone, naming the principal organism in plain words.",
+     "anchor": "uada_ext 'A significant fungal pathogen that may affect yield is leaf spot caused by Pseudocercospora diospyricola.' / 'Infection occurs at shoot expansion, leaf formation, and flowering in the spring.'; uf_ifas_edis (HS1389) 'Pseudomonas: \"bacterial blast\" leaf spots and blackened stem and leaf petioles.'; tamu_agrilife 'several fungi cause leaf spot'"
+    },
+    "organic_treatment_seasoned": {
+     "new": "Clean up diseased leaves and stems, and remove fallen leaves and debris promptly; keep irrigation off the foliage and water early in the day so it dries. UC IPM's position on leaf spots is that fungicide treatment is generally not warranted, and Texas A&M's that only severe cases warrant treatment; UAEX's fungicide timing, for the severe case, is a cover spray at full bloom and again 3 to 4 weeks later.",
+     "why": "SPLIT limb: the bundle's 'keep the canopy open' has no anchor for leaf spot and is not carried; the sanitation, irrigation and severe-case sentences are the ones the leaf-spot documents give.",
+     "anchor": "uada_ext 'Clean up diseased leaves and stems.' / 'Control can be obtained by applying a fungicide cover spray during full bloom and again 3 to 4 weeks later.'; uc_ipm (leaf-spot-diseases) 'Remove fallen leaves and debris promptly.' / 'avoid overhead sprinklers and irrigate early in the day so that the foliage dries more quickly' / 'Generally, fungicide treatment is not warranted.'; tamu_agrilife (persimmons_2015.pdf) 'Although not deadly to adult trees, several fungi cause leaf spot and sometimes affect the fruit as well. Leaf spot can lead to early defoliation, but only severe cases warrant treatment.'"
+    },
+    "organic_treatment_beginner": {
+     "new": "Pick up and remove spotted leaves and dead twigs as they fall and after leaf drop, keep sprinkler water off the leaves, and water in the morning. That is usually all a persimmon needs; the guides say spraying is only for a severe case, meaning a tree that has been losing its leaves in late August while the fruit ripens.",
+     "why": "SPLIT limb: written for leaf spot alone; 'keep the tree open' dropped as unanchored for leaf spot.",
+     "anchor": "uada_ext 'Clean up diseased leaves and stems.' / 'Severe infections can cause trees to defoliate in late August as the fruit begins to ripen.'; uc_ipm (leaf-spot-diseases) 'Remove fallen leaves and debris promptly.' / 'avoid overhead sprinklers and irrigate early in the day' / 'Generally, fungicide treatment is not warranted.'; tamu_agrilife 'only severe cases warrant treatment'"
+    },
+    "prevention_seasoned": {
+     "new": "Prompt removal of fallen leaves and debris, and irrigation that keeps the foliage dry (no overhead sprinklers; water early in the day), are the preventive measures on record. No persimmon cultivar is named as resistant in the documents read. Where a tree defoliated in late August in a past season, the preventive fungicide timing UAEX gives begins at full bloom.",
+     "why": "SPLIT limb: the bundle's 'good air movement, an open canopy' has no anchor for leaf spot; replaced with the leaf-spot documents' measures.",
+     "anchor": "uc_ipm (leaf-spot-diseases) 'Remove fallen leaves and debris promptly.' / 'avoid overhead sprinklers and irrigate early in the day so that the foliage dries more quickly'; uada_ext 'Control can be obtained by applying a fungicide cover spray during full bloom and again 3 to 4 weeks later.' / 'Severe infections can cause trees to defoliate in late August as the fruit begins to ripen.'"
+    },
+    "prevention_beginner": {
+     "new": "Keep fallen leaves cleaned up, keep water off the leaves, and water in the morning so the tree dries fast. None of the guides names a variety that resists leaf spot. If your tree dropped its leaves early in a past year, the protective spray timing starts at full bloom.",
+     "why": "SPLIT limb: 'light pruning to keep the tree open' has no anchor for leaf spot and is dropped. 'No persimmon variety is sold as resistant' was a market claim no document makes; scoped to the guides as the seasoned field is.",
+     "anchor": "uc_ipm (leaf-spot-diseases) 'Remove fallen leaves and debris promptly.' / 'avoid overhead sprinklers and irrigate early in the day'; uada_ext 'a fungicide cover spray during full bloom and again 3 to 4 weeks later'"
+    }
+   }
+  },
+  {
+   "name": "Botryosphaeria twig dieback",
+   "id": "botryosphaeria-twig-dieback",
+   "type": "fungal",
+   "severity": "high",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Keep the canopy open enough that air moves through it. Florida's guide lists maintaining good airflow in the canopy among the practices that reduce this disease, and it also says heavy pruning of persimmon is often not required or beneficial, so the aim is an open, uncrowded tree rather than a hard cutback. Give a young tree room from its neighbors and from walls, and thin crowded growth lightly instead of shearing it.",
+     "note_seasoned": "One of the incidence-reducers in UF's Botryosphaeria cell is maintaining good airflow in the canopy, alongside pruning practice and stress reduction. UF adds that heavy pruning of persimmon is often not required or beneficial, which sets the scale: openness by site and light thinning, since the same document's other lever is keeping stress off the tree. UF states the practice without a mechanism, and no persimmon document supplies one."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "There is no good chemical control for this disease, so the pruning saw is the tool, and how you prune matters as much as what you cut. Take out dead and dying twigs and any dead, diseased or broken branch, which the persimmon guides call for as ordinary pruning, and get the prunings away from the tree. Prune only on dry days, and wipe or dip your tools between cuts so you are not carrying the fungus to the next branch. When shaping a young tree, keep the branches at wide angles to the trunk: Florida ties this disease to bark cracking at the limb joints and asks for wide crotch angles, and Texas takes out narrow-crotched limbs because they create dead areas on the limbs.",
+     "note_seasoned": "UF's control cell for Botryosphaeria canker begins with no good chemical control and then names the practices: pruning to wide crotch angles, pruning during dry days, disinfecting tools, maintaining airflow, reducing water or nutrient stress, and a fungicide program, all recommended to reduce incidence rather than to cure. The pruning practices are what this carries: dry-day pruning, tool disinfection between cuts and wide crotch angles at training. Removal of dead and diseased wood rests on the general persimmon pruning guidance rather than on the Botryosphaeria cell (UC IPM's prune out suckers or dead wood in established trees; Texas A&M's remove crossover, shaded, diseased and broken branches; Clemson's remove dead or injured branches), and no persimmon document sets a margin for cutting back below a canker, so none is given. The symptom cell describes discoloration of the wood and deep, elongated bark scars, and the second UF row naming B. dothidea adds leafless terminal twigs, shoot decline and bark cracking at limb joints. Clemson notes that chemical control on large trees is usually not feasible for want of coverage. Expect management, not eradication: UF has the fungus limiting Japanese persimmons in the Deep South to about 8 to 12 years."
+    }
+   ],
+   "sources": [
+    "uf_ifas_edis",
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "uf_ifas_edis": {
+     "url": "https://ask.ifas.ufl.edu/publication/HS1389",
+     "verified": "2026-09-04"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/persimmon/",
+     "verified": "2026-09-04"
+    }
+   },
+   "field_corrections": {
+    "symptoms_seasoned": {
+     "new": "Discolored wood and deep, elongated scars in the bark of limbs and trunk. In the symptoms Florida attributes to Botryosphaeria together with Phomopsis and Verticillium, twigs at the branch ends die back and stand leafless, leaves and fruit may be small, shoots wilt and decline, and bark cracks at the limb joints. Florida's guide calls this disease the limiting factor for growing persimmons in Florida and the Deep South, and says it often limits the lifetime of a Japanese persimmon to about 8 to 12 years or less. Clemson lists twig dieback among South Carolina's persimmon diseases.",
+     "why": "SPLIT limb: the bundle described the dieback as 'a little dieback of small twigs', 'usually minor and just cosmetic', under two anchors that never mention dieback; this limb is written from HS1389 and Clemson.",
+     "anchor": "uf_ifas_edis (HS1389, Table 4, Botryosphaeria canker) 'Discoloration of wood and deep, elongated bark scars may be present. This disease is the limiting factor for growing persimmons in Florida and the Deep South. Often this fungus limits the lifetime of Japanese persimmons to about 8 to 12 years (or less).'; (Phomopsis spp., Verticillium albo-atrum, Botryosphaeria dothidea row) 'May cause small leaves and fruit, and terminal twigs that are leafless. May also cause wilting, shoot decline, and bark cracking at limb joints.'; clemson_hgic 'Persimmon diseases include:' 'Twig dieback' (list item) / 'Chemical control of diseases and insects on large trees is usually not feasible since adequate coverage of the foliage with a pesticide cannot be achieved.'"
+    },
+    "symptoms_beginner": {
+     "new": "Deep, long scars in the bark and dark, discolored wood under it; branch tips that die back and stay bare; small leaves and fruit; shoots that wilt and go downhill; bark that splits where limbs join the trunk. In Florida and across the Deep South this is the disease that decides how long a persimmon lives: often only 8 to 12 years, sometimes less.",
+     "why": "SPLIT limb: the bundle graded this cosmetic; HS1389 grades it the limiting disease of the region.",
+     "anchor": "uf_ifas_edis (HS1389, Table 4, Botryosphaeria canker) 'Discoloration of wood and deep, elongated bark scars may be present. This disease is the limiting factor for growing persimmons in Florida and the Deep South. Often this fungus limits the lifetime of Japanese persimmons to about 8 to 12 years (or less).'; (Phomopsis spp., Verticillium albo-atrum, Botryosphaeria dothidea row) 'May cause small leaves and fruit, and terminal twigs that are leafless. May also cause wilting, shoot decline, and bark cracking at limb joints.'"
+    },
+    "cause_seasoned": {
+     "new": "Botryosphaeria canker fungi: Florida names Botryosphaeria dothidea, B. rhodinina, B. obtusa and B. ribis, and lists B. dothidea again with Phomopsis spp. and Verticillium albo-atrum as causes of leafless terminal twigs, shoot decline and bark cracking at limb joints. It is the limiting factor for persimmons in Florida and the Deep South. It is distinct from persimmon wilt (Cephalosporium diospyri), which wilts and kills the top of a tree through the native rootstock while D. kaki and D. lotus are immune, and from the leaf-spot fungi.",
+     "why": "SPLIT limb: the bundle's cause ('Several leaf-spot fungi favored by prolonged leaf wetness' and 'no serious insect or disease problems') was wrong for the dieback half; the organism and the regional verdict are HS1389's.",
+     "anchor": "uf_ifas_edis (HS1389) 'Botryosphaeria canker (Figure 23) (Botryosphaeria dothidea, B. rhodinina, B. obtusa, and B. ribis)' / 'This disease is the limiting factor for growing persimmons in Florida and the Deep South.' / 'Phomopsis spp., Verticillium albo-atrum, Botryosphaeria dothidea' / 'May cause small leaves and fruit, and terminal twigs that are leafless. May also cause wilting, shoot decline, and bark cracking at limb joints.' / (Persimmon wilt) 'D. virginiana rootstock is susceptible to this disease; D. kaki and D. lotus are immune. If the D. kaki scion is carrying the pathogen, it can move into the native rootstock and kill the tree. Symptoms include wilting and tree top death.'"
+    },
+    "cause_beginner": {
+     "new": "A group of canker fungi called Botryosphaeria that get into the wood of the limbs and trunk, scarring the bark and killing twigs. In the Deep South it is the disease that shortens a persimmon's life; Florida's guide says trees there often last only 8 to 12 years because of it. It is a separate problem from leaf spot and from the wilt disease that kills native persimmon through its roots.",
+     "why": "SPLIT limb: written for the dieback alone.",
+     "anchor": "uf_ifas_edis (HS1389) 'Botryosphaeria canker (Figure 23) (Botryosphaeria dothidea, B. rhodinina, B. obtusa, and B. ribis)' / 'Discoloration of wood and deep, elongated bark scars may be present.' / 'Often this fungus limits the lifetime of Japanese persimmons to about 8 to 12 years (or less).'"
+    },
+    "organic_treatment_seasoned": {
+     "new": "There is no good chemical control, so the treatment is pruning practice and tree care, all of it aimed at reducing incidence rather than curing: prune on dry days, disinfect tools, train to wide crotch angles, maintain good airflow in the canopy, and reduce water and nutrient stress on the tree. Dead and diseased wood comes out as part of ordinary persimmon pruning (UC IPM's persimmon page has established trees pruned of suckers and dead wood; Texas A&M removes diseased and broken branches; Clemson removes dead or injured ones), and no persimmon document sets a cut-back margin below a canker. Florida's guide also lists a good fungicide program among the incidence-reducers while stating there is no good chemical control, and it names no material; Clemson adds that chemical control on large trees is usually not feasible because the foliage cannot be covered.",
+     "why": "SPLIT limb: the bundle's treatment ('rake and remove fallen infected leaves ... fungicides are seldom justified') was leaf-spot advice; this limb carries HS1389's Botryosphaeria practices. 'Cankered limbs and dead twigs come out with the cut placed back in sound wood' had no persimmon anchor (the cut-back margin is the catalog's fire-blight text); dead and diseased wood removal is now attributed to the general pruning sentences and no margin is stated.",
+     "anchor": "uf_ifas_edis (HS1389, Botryosphaeria canker control cell) 'There is no good chemical control. Pruning to wide crotch angles, pruning during dry days, disinfecting tools, maintaining good airflow in the canopy, reducing water or nutrient stress to trees, and a good fungicide program are recommended to help reduce the incidence of this fungus.'; clemson_hgic 'Persimmon diseases include:' 'Twig dieback' (list item) / 'Chemical control of diseases and insects on large trees is usually not feasible since adequate coverage of the foliage with a pesticide cannot be achieved.'; clemson_hgic 'Remove dead or injured branches and any branches growing in a crossing pattern.'; general persimmon pruning sentences cited to locate them, not as dieback anchors: uc_ipm persimmon page (https://ipm.ucanr.edu/home-and-landscape/persimmon/) 'In established trees, prune out suckers or dead wood.'; tamu_agrilife (persimmons_2015.pdf) 'Prune mature plants during the winter. Remove crossover, shaded, diseased, and broken branches.' / 'Remove limbs with narrow crotches because they create dead areas on the limbs; preserve limbs that grow off the leader at wide angles.'"
+    },
+    "organic_treatment_beginner": {
+     "new": "No spray cures this, so it comes down to how you prune and how you care for the tree. Cut out dead twigs and any dead, diseased or broken branch, which is ordinary pruning for a persimmon, prune only on dry days, and clean your tools between cuts. Keep the tree open to the air, shape young trees so branches meet the trunk at wide angles, and do not let the tree go short of water or nutrients. Florida's guide says even its fungicide program only helps reduce the disease, not stop it.",
+     "why": "SPLIT limb: written for the dieback alone from HS1389's practices. 'back into healthy wood' had no persimmon anchor and is dropped; dead and diseased wood removal is attributed to the general pruning sentences.",
+     "anchor": "uf_ifas_edis (HS1389, Botryosphaeria canker control cell) 'There is no good chemical control. Pruning to wide crotch angles, pruning during dry days, disinfecting tools, maintaining good airflow in the canopy, reducing water or nutrient stress to trees, and a good fungicide program are recommended to help reduce the incidence of this fungus.'; clemson_hgic 'Remove dead or injured branches and any branches growing in a crossing pattern.'; general persimmon pruning sentences cited to locate them, not as dieback anchors: uc_ipm persimmon page (https://ipm.ucanr.edu/home-and-landscape/persimmon/) 'In established trees, prune out suckers or dead wood.'; tamu_agrilife (persimmons_2015.pdf) 'Prune mature plants during the winter. Remove crossover, shaded, diseased, and broken branches.' / 'Remove limbs with narrow crotches because they create dead areas on the limbs; preserve limbs that grow off the leader at wide angles.'"
+    },
+    "prevention_seasoned": {
+     "new": "Prevention is the same set of practices, begun before the disease is visible: train the young tree to wide crotch angles, keep good airflow in the canopy, prune during dry weather with disinfected tools, and avoid water or nutrient stress. Persimmon seldom needs or benefits from heavy pruning, so the structural work is light and early. In the Deep South, plan on a tree whose productive life this disease may cap at 8 to 12 years; Florida's guide names no resistant cultivar or rootstock.",
+     "why": "SPLIT limb: the bundle's prevention ('good air movement, an open canopy, and fall leaf cleanup keep leaf spot to a cosmetic level') did not describe this disease; this limb carries HS1389's practices and its lifetime verdict.",
+     "anchor": "uf_ifas_edis (HS1389, Botryosphaeria canker control cell) 'There is no good chemical control. Pruning to wide crotch angles, pruning during dry days, disinfecting tools, maintaining good airflow in the canopy, reducing water or nutrient stress to trees, and a good fungicide program are recommended to help reduce the incidence of this fungus.'; uf_ifas_edis (HS1389, body) 'Heavy pruning of persimmon is often not required or beneficial.'; uf_ifas_edis (HS1389) 'Often this fungus limits the lifetime of Japanese persimmons to about 8 to 12 years (or less).'"
+    },
+    "prevention_beginner": {
+     "new": "Start early: shape a young tree so its branches meet the trunk at wide angles, keep it open to moving air, prune only when it is dry and with clean tools, and do not let it go thirsty or hungry. Persimmon does not need hard pruning, so keep the cuts light. Florida's guide names no variety or rootstock that resists this disease, and in the Deep South it warns that the tree may last only 8 to 12 years because of it.",
+     "why": "SPLIT limb: written for the dieback alone.",
+     "anchor": "uf_ifas_edis (HS1389, Botryosphaeria canker control cell) 'There is no good chemical control. Pruning to wide crotch angles, pruning during dry days, disinfecting tools, maintaining good airflow in the canopy, reducing water or nutrient stress to trees, and a good fungicide program are recommended to help reduce the incidence of this fungus.'; uf_ifas_edis (HS1389, body) 'Heavy pruning of persimmon is often not required or beneficial.'"
+    }
+   }
+  }
+ ],
+ "unreachable_claims": [
+  "botryosphaeria-twig-dieback: 'reducing water or nutrient stress to trees' (uf_ifas_edis HS1389 Botryosphaeria control cell). even_watering does not reach fungal (the known two-class gap) and balance_nitrogen's text is about EXCESS nitrogen, not nutrient stress; carried in the corrected organic_treatment and prevention prose only.",
+  "botryosphaeria-twig-dieback: 'Pruning to wide crotch angles' (HS1389) is structural training, not the removal of infected wood; no training method exists, so it is carried inside the prune_out_infection note and the prose.",
+  "persimmon-borer: monitoring the trunk and exposed roots (clemson_hgic 'It is important to monitor the persimmon borer. If borer damage is noted on the trunk or exposed roots, treatment may be required.'). No monitoring method exists; carried inside the garden_sanitation note and the corrected prose.",
+  "persimmon-borer: the documented control is a preventive insecticide program 'similar to those made for peachtree borer' (uga_ext C784), 'March through June applications best to prevent larvae from entering tree' (HS1389, naming imidacloprid). No method carries imidacloprid or a neonicotinoid; pyrethroid was NOT written because no persimmon document names a pyrethroid and HS1389's named material is a different class. The program is described in prose without a material.",
+  "anthracnose: HS1389's 'Proactive fungicide sprays in early season, and cover sprays in summer in rotation' names no material; no method carries an unnamed protectant program. Described in prose; see refusals for the fungicide rungs considered.",
+  "persimmon-leaf-spot: UAEX's second labeled product, Abound (azoxystrobin, a strobilurin), has no method; only the chlorothalonil half of 'Abound and Daconil Weather Stik are both labeled for control of Cercospora leaf spot in persimmon' is laddered.",
+  "scale-insects: HS1389's control cell also lists 'summer oil' and 'two pesticide applications 1 to 2 weeks apart (imidacloprid ...; potassium salt such as Safer soap; or Scalecide)'. Imidacloprid has no method; insecticidal_soap is reachable but was not laddered (the two home documents, UGA and HS1389, center on dormant oil, and the cell is commercial-leaning). Summer oil is carried inside the horticultural_oil note.",
+  "mealybugs: pn74174 also names horticultural oil and neem oil for direct spot treatment; both are reachable methods and were left off to avoid padding a low-severity ladder. The soap note says UC IPM rates all three the same.",
+  "persimmon-psyllid: horticultural_oil (ncsu_ext 'Horticultural oils suppress adult and immature persimmon psyllids without leaving a toxic residue that might harm beneficial insects and mites.') is reachable and documented; under the brief's one-rung no-control policy it is carried inside the beneficial_predators note rather than as its own rung. NCSU's 'Minimize shearing or clipping of terminals during the growing season' has no method; carried in prose.",
+  "phytophthora-root-rot: 'Never cover the root crown or graft union with soil or mulch' and the drip-emitter placement (pn74133) have no method of their own; carried inside improve_drainage.",
+  "persimmon-borer: UGA's 'ambrosia beetles that attack where bark is injured or sun-scalded. White latex paint minimizes the latter cause.' is a different insect (ambrosia beetle) and an uncovered problem; not carried on this entry. There is no trunk-whitewash method in any case."
+ ],
+ "refusals": [
+  "persimmon-borer: borer_stem_surgery REFUSED. No live document describes wire probing for Sannina uroceriformis; the wire sentence is UC IPM's flatheaded-borers page ('Larvae can sometimes be killed by probing tunnels with a sharp, stiff wire. This method is practical only in a small infestation on small trees.'), which is about Chrysobothris spp. on scaffold limbs, and the retired ENY-835 says 'No direct controls have been developed'. The record's 'kill larvae by hand with a wire' prose is corrected out. The catalog method's own text is a squash-vine slit-and-mound technique besides.",
+  "persimmon-borer: pyrethroid and carbaryl REFUSED. No persimmon document names either; UGA names no material and HS1389 names imidacloprid (no method). Writing a pyrethroid trunk spray would be my knowledge of peachtree-borer practice, not a document.",
+  "persimmon-borer: 'Young trees can be girdled and killed' REFUSED as prose. It rests only on the retired UF ENY-835 (410 Gone), which does not anchor under the brief's retired-document ruling; the live documents give 'serious pest' (UGA) and 'monitor ... treatment may be required' (Clemson).",
+  "persimmon-borer: whitewash / paper trunk wrap, drought-stress avoidance and mower-wound protection REFUSED for this entry: they are UC IPM's flatheaded-borer prevention set and UGA's ambrosia-beetle sentence, both different insects. LADDER SHAPE: one garden_sanitation rung, monitoring-led, in the honest no-control shape (the pawpaw peduncle-borer device): it says sanitation has no documented target for this borer, every sentence is anchored (Clemson monitor; HS1389 group sign list and March through June window; UGA larval site and peachtree-borer program), and the unanchored 'keep grass, weeds and mulch pulled back' clause is removed. Flagged for Trevor with the other no-control ladders.",
+  "anthracnose: copper_fungicide, chlorothalonil, sulfur, biofungicide and mancozeb REFUSED. HS1389's program names no material, and UAEX's chlorothalonil labeling is for Cercospora leaf spot in persimmon, not anthracnose; joining the two would be an inference across documents. resistant_varieties REFUSED: no document names a tolerant cultivar. water_at_the_base, airflow_spacing, splash_barrier_mulch and prompt_harvest REFUSED: the rain-splash, humidity and open-canopy sentences have no persimmon anchor. LADDER SHAPE: one honest garden_sanitation rung, rewritten instruction-first (remove rotting fruit, the method's own catalog practice, stated as hygiene rather than a documented control; HS1389's unnamed program and TAMU's 'occasionally caused problems' carried verbatim). Every sentence anchored to HS1389, TAMU or the method's catalog text. Flagged for Trevor with the other no-control ladders.",
+  "phytophthora-root-rot: prune_out_infection (crown excision, as on the citrus ladders) REFUSED as a METHOD: pn74133 prescribes exposing the crown and letting it dry ('removing soil from the base of the tree down to the top of the main roots and allowing the crown tissue to dry out'), not cutting, so the salvage step is carried inside improve_drainage. garden_sanitation (remove a dead tree) REFUSED: no document. The earlier refusal of the 'no cure once the crown is girdled' verdict is WITHDRAWN: pn74133 states it in its own terms ('A plant with a substantial Phytophthora infection rarely recovers. Trees with lesions larger than about one-quarter of the tree's circumference do not typically recover, even with ideal care.'), and it is now carried in both organic_treatment fields and the improve_drainage notes.",
+  "mealybugs: the calyx-harborage claims ('under the calyx of the fruit', 'feeding under the calyx can contaminate and blemish fruit', 'inspect the calyx end of developing fruit ... removing infested fruit early') REFUSED and corrected out of six fields: located on a UC ANR FNRIC page that 403s on every route and was never read.",
+  "persimmon-psyllid: pyrethroid and every spray rung beyond the single conservation rung REFUSED (UGA 'Don't apply insecticides until after you have observed damage.'; NCSU 'the pyrethroids are harsh on beneficials'). The record's 'prune off and destroy the worst rolled tips in spring' REFUSED and corrected out: no anchor, and NCSU's residential recommendation is to minimize clipping of terminals. HS1389's 'Best to control very early ... Many pesticide options' is an orchard-leaning stance and is named as such in the seasoned note rather than followed.",
+  "scale-insects: 'soft scales (Parthenolecanium spp.)' REFUSED and corrected: only the retired ENY-803 carries it. The honeydew/sooty-mold/ants sentence REFUSED for the entry as a whole and scoped to the soft scales (pn7408 'Armored scales do not produce honeydew.').",
+  "botryosphaeria-twig-dieback: any fungicide rung REFUSED per the brief and HS1389's 'There is no good chemical control'; HS1389's 'a good fungicide program' clause is filed under notes as a tension. The ENY-803-only flatheaded-borer coupling ('place their eggs along the scars') REFUSED as prose: retired document.",
+  "persimmon-leaf-spot: airflow_spacing REFUSED (the bundle's 'keep the canopy open' has no anchor for leaf spot; HS1389 prescribes airflow for Botryosphaeria, not leaf spot). copper_fungicide and sulfur REFUSED: no persimmon document names them for leaf spot."
+ ],
+ "notes_to_orchestrator": [
+  "REVIEW FIX PASS 2026-09-04 (F1-F16 applied). HEADLINE (F1): the Phytophthora organic_treatment corrections and two refusals had been authored from the record report's excerpt of UC IPM pn74133, which did not carry the recovery paragraph. The page was re-read first-party today and carries it: 'A plant with a substantial Phytophthora infection rarely recovers. Trees with lesions larger than about one-quarter of the tree's circumference do not typically recover, even with ideal care. Trees with smaller lesions can sometimes be saved by removing soil from the base of the tree down to the top of the main roots and allowing the crown tissue to dry out.' (also its summary bullet 'Remove soil from around the base of the tree down to the top of the main roots and allow the crown tissue to dry out.'). The verdict is restored in both organic_treatment fields; the crown-exposure salvage is carried inside improve_drainage (drying, not cutting; prune_out_infection stays refused as a method); the 'no cure' refusal is withdrawn in `refusals`. This is the batch-25 failure shape (authored from the excerpt, not the page) and is recorded here so the verification log can name it.",
+  "REVIEW FIX PASS reads 2026-09-04, all first-party (WebFetch): pn74133, HS1389 (Tables 3 and 4 row headers and cells, pruning body), UAEX 'Persimmon Leaf Spot', UC IPM home-and-landscape persimmon page, Clemson HGIC 1357, NC State 'Persimmon Psyllid', pn74174; TAMU persimmons_2015.pdf downloaded by urllib and read by pypdf. No proxied reads in this pass. Three anchor quotes made verbatim (F14): UAEX 'A significant fungal pathogen that may affect yield is leaf spot caused by Pseudocercospora diospyricola.'; HS1389 'Tree borers (Figures 13, 14) (multiple species, including Sannina uroceriformis)'; HS1389 'Scale (Figures 9, 10) primarily white peach scale (Pseudaulacaspis pentagona)'. A fourth, found on the same read and fixed: HS1389's Botryosphaeria pest cell is 'Botryosphaeria canker (Figure 23) (Botryosphaeria dothidea, B. rhodinina, B. obtusa, and B. ribis)'. Clemson's pruning sentence is 'Remove dead or injured branches and any branches growing in a crossing pattern.' (the review paraphrased it as 'Remove dead, injured, or crossing branches.'); the live wording is what is quoted.",
+  "F2 (dieback prune_out_infection): both notes and both organic_treatment fields rewritten. HS1389's items are pruning practice (wide crotch angles, dry days, disinfected tools); dead and diseased wood removal is attributed to the general persimmon pruning sentences (UC IPM persimmon page 'In established trees, prune out suckers or dead wood.'; TAMU 'Remove crossover, shaded, diseased, and broken branches.'; Clemson 'Remove dead or injured branches and any branches growing in a crossing pattern.'). No persimmon document prescribes cutting back into healthy wood below a canker, so no margin is stated anywhere on the entry. FLAG: the catalog's prune_out_infection text says removal without a cut-back margin 'is garden sanitation and not this'; the rung keeps the slug per the orchestrator's ruling, carrying HS1389's pruning-practice set, and the orchestrator may want to judge the slug. The TAMU and UC IPM pruning sentences are quoted inline with their URLs inside the correction anchors (as the borer entry does for the flatheaded page) and NOT added to the entry's sources/anchoring_urls, since the record report did not verify them as dieback anchors.",
+  "F7/F9/F16 (no-control ladders): the borer and anthracnose entries each keep ONE garden_sanitation rung in the honest no-control shape used for pawpaw's peduncle borer. Borer: the unanchored 'keep grass, weeds and mulch pulled back' clause is gone; the beginner note now leads with Clemson's monitor instruction, attributes the sign list to HS1389's tree-borer group row (F8), says sanitation has no documented target (larvae in the lower trunk and tap roots per UGA), and reports the peachtree-borer program as what the guides say; organic_treatment_beginner no longer prescribes the synthetic program (F9). Anthracnose: the rung is instruction-first (remove rotting fruit) with that sentence anchored to the garden_sanitation method's own catalog text ('pulling the first affected leaves or fruit during the season'), stated as hygiene rather than a documented control, then HS1389's program and TAMU's 'occasionally caused problems' verbatim. Both flagged for Trevor with the other no-control ladders.",
+  "F15 (retired-document consistency): the borer cause_* 'a clearwing moth' is KEPT as an identity and marked EVIDENCE-ONLY inside the anchor text (retired UF ENY-835 'The persimmon borer, Sannina uroceriformis Walker, (Lepidoptera: Sesiidae)'); no live document names the family. The psyllid's retired-only age split (F10) was restated per HS1389 ('stunted growth', no age split), and the two 'young tree' clauses in the psyllid beneficial_predators notes were made age-neutral to match. F3 (scale ant trail now names all three honeydew producers on this crop), F4 (NC State's decline sentence carried at its 'On native persimmon' scope), F5 (pn74174's fruit-tree scope kept to stone and pome fruits), F6 (swab clause dropped), F11 (three anthracnose STYLE items scoped or de-tabled), F12 (leaf-spot prevention_beginner scoped to the guides), F13 (mealybug species scoped to the guides read) applied as the review states.",
+  "READS 2026-09-04, first-party WebFetch by this agent: HS1389 (Tables 3 and 4 plus rootstock and pruning body text), UGA C784, Clemson HGIC persimmon, NC State Persimmon Psyllid, UC IPM pn7408, pn74174, pn74133, and the UAEX Plant Health Clinic 'Persimmon Leaf Spot' note. Every quote used from those eight came back from today's read and matches the record report. NOT re-read here, taken from the record report or the orchestrator's V2/V6: TAMU persimmons_2015.pdf (report's pypdf read), UC IPM persimmon page (V6), UC IPM leaf-spot-diseases and flatheaded-borers pages (report), NCSU toolbox Diospyros kaki (report), UC Davis FNRIC scion/rootstock page (report's PROXY read; anchored at the live URL with today's date per the brief). PROXIED: ucd_fruitnut only.",
+  "FLATHEADED BORERS are an UNCOVERED PROBLEM on persimmon: UC IPM's persimmon page lists 'Flatheaded Borers' (Chrysobothris spp.), and the retired ENY-803 describes buprestids laying eggs along Botryosphaeria bark scars and girdling scaffold limbs. The record's borer entry had folded their biology (drought stress, wounds, wire probing, whitewash) into the Sannina entry; all of it is corrected out here. Candidate later entry: `flatheaded-borers`, anchored uc_ipm persimmon page + flatheaded page, with whitewash/paper wrap, stress avoidance and wire probing as its documented set. Two more uncovered problems from the reads: AMBROSIA BEETLES (UGA C784: attack injured or sun-scalded bark; white latex paint minimizes sun scald) and ARMILLARIA ROOT ROT (UC IPM persimmon page lists it separately; UC Davis rates D. kaki resistant, D. lotus tolerant). PERSIMMON WILT (Cephalosporium diospyri, HS1389; native rootstock only) is named in the dieback cause prose as a distinct disease and is a fourth candidate.",
+  "HS1389 TENSION on the dieback limb: the same control cell says 'There is no good chemical control' AND lists 'a good fungicide program' among the incidence-reducers, naming no material. Per the brief no fungicide rung is written; both statements are carried in the corrected organic_treatment prose so the record does not hide either. Severity high is right (limiting factor; 8 to 12 year lifetime).",
+  "PLA-457: seen and NOT written: uc_ipm pn7408 'Do not apply oil within 3 weeks of an application of sulfur-containing compounds, such as wettable sulfur.' No rung note or correction on this crop names sulfur and oil with a duration. HS1389's 'two pesticide applications 1 to 2 weeks apart' is a re-treatment interval for imidacloprid/soap/Scalecide, not an oil/sulfur spacing, and is not carried as a figure either.",
+  "PSYLLID SINGLE-RUNG CHOICE: beneficial_predators was chosen as the least-invasive method a document leaves open (UGA 'Psyllid are often limited by natural parasites. Don't apply insecticides until after you have observed damage.'); the documented ACTION rung is horticultural_oil (NCSU), which the note carries as the material to use if a stunted young tree is treated, timed to the first spring flush (HS1389 'sprays less effective when leaves curl'). If the orchestrator prefers the parsleyworm shape read strictly (the rung is the action), substitute horticultural_oil with the same tolerance lead; the evidence is identical.",
+  "BORER LADDER is one monitoring-led garden_sanitation rung and is the weakest ladder on the crop by construction: the live documents give monitor (Clemson) and a preventive insecticide program with no catalog material (UGA, HS1389). It is honest rather than padded. If Trevor wants a conventional rung, the missing piece is a persimmon document that names a pyrethroid; none read does. Severity: UGA's 'serious pest' could argue high; pinned medium kept, the prose carries the weight.",
+  "ANTHRACNOSE LADDER is one minimal honest garden_sanitation rung, flagged for the orchestrator's decision (same device the pawpaw agent used for the peduncle borer). The documented response is HS1389's unnamed fungicide program. A chlorothalonil rung was considered and refused because the only persimmon labeling sentence (UAEX) is for Cercospora leaf spot; if the orchestrator rules that HS1389's shared control cell plus UAEX's labeling suffice, the rung belongs on this entry too, led by TAMU's 'occasionally caused problems'.",
+  "CHLOROTHALONIL IDENTIFICATION on the leaf-spot limb: UAEX names 'Daconil Weather Stik'; chlorothalonil is the Daconil active ingredient per the catalog's own find_it text ('GardenTech Daconil Fungicide'). Consumer prose names the active ingredient only, never the products. The UAEX timing ('during full bloom') collides with the catalog's honey-bee precaution for chlorothalonil; the rung states the collision and defers to the label's sunset-to-midnight window rather than dropping the documented timing.",
+  "LEAF SPOT SEVERITY: pinned low. UAEX's severe-case consequences (late-August defoliation as fruit ripens; sugar, ripening, biennial bearing, freeze vulnerability) argue low-to-medium, as the record report said; TAMU ('only severe cases warrant treatment') and UC IPM ('Generally, fungicide treatment is not warranted') support low. Kept as pinned; the prose carries the severe case.",
+  "ONE-URL-PER-KEY choices: uc_ipm anchors pn7408 on scale, pn74174 on mealybugs, the leaf-spot-diseases page on leaf spot, and the persimmon page on Phytophthora (it alone carries the genus attribution that drives the rename; pn74133's sentences are quoted with their URL inside the correction anchors). uf_ifas_edis anchors HS1389 on every entry; IN1149 (longtailed mealybug host list) is quoted with its URL inside the mealybug cause anchor. The old anchor URL https://ipm.ucanr.edu/PMG/GARDEN/PLANTS/persimmon.html is replaced by the home-and-landscape URL the report and V6 read.",
+  "SOURCES DROPPED: clemson_hgic from anthracnose (carries nothing; cert log and report agree); uc_ipm from persimmon-borer (its persimmon page lists only flatheaded borers). SOURCES KEPT AS LIST-ITEM PRESENCE ANCHORS: clemson_hgic on the psyllid ('Persimmon psyllid' bulleted) and on the dieback limb ('Twig dieback' bulleted, plus the large-tree caveat); ncsu_ext toolbox sentence on mealybugs and leaf spot. The old bundle's two anchors (NCSU toolbox sentence, UC IPM list) sit on the LEAF-SPOT limb only; the dieback limb anchors HS1389 and Clemson, which are the documents that mention it.",
+  "RENAME: a `name` correction is declared on phytophthora-root-rot with `new` equal to the pinned name. Prose reads correctly under the new name; Armillaria is kept out of every field.",
+  "PIN TABLE: agree with all eight ids, types and severities. One observation: `fungal` on phytophthora-root-rot is the nearest gate type for an oomycete and is what the id already carries; the prose says water molds, not fungi.",
+  "REGISTER: every correction on the KEEP entries changes only fields the report flagged (plus two prevention fields on scale where the flagged timing signal lived). Unflagged fields (scale organic_treatment_*, psyllid cause_* and prevention_*, borer none, Phytophthora prevention_*) are untouched.",
+  "validate_out.py was NOT changed."
+ ]
+}

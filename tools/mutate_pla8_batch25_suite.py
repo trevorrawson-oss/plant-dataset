@@ -238,6 +238,12 @@ def build_scratch():
     # the promote and suite read canonical and the staging dir out of REPO
     os.symlink(os.path.join(REPO, "crops_data_final.json"),
                os.path.join(tmp, "crops_data_final.json"))
+    # ADDED 2026-09-04 (batch 26): the suite now rebuilds its pre-state via promote_fixture, whose
+    # `git show` runs with cwd=REPO derived from its own file path. A scratch tree without .git
+    # made the positive control fail and this harness exit HARNESS DEAD; the 34/34 result recorded
+    # at batch 25's close was measured BEFORE 818bd6b moved the suite onto the fixture. Linking the
+    # real .git in makes the scratch a worktree of the same object store.
+    os.symlink(os.path.join(REPO, ".git"), os.path.join(tmp, ".git"))
     shutil.copytree(os.path.join(HERE, "staging", "pla8_batch25_herbs"),
                     os.path.join(tools, "staging", "pla8_batch25_herbs"))
     return tmp, tools

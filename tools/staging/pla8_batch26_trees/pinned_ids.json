@@ -1,0 +1,453 @@
+{
+  "_why": "PLA-8 batch 26 (trees and shrubs). TARGET STATE, pinned before fan-out, decided against the live roster from the six record/source reports (2026-09-04). `pre_type` pins the canonical type per row so the promote can assert the MIXED type situation (four coarse crops, two fine, one `other`) rather than assume one. `from` records provenance. Retirements are pests[] duplicates of surviving diseases[] entries and say so in `duplicate_of`.",
+  "_base_sha": "ce98b0a6f83cc04b380a6c3be3009709a7c6c3626b2611c88fafec1164997144",
+  "_counts": "39 canonical problems -> 38 target (3 retired array duplicates, 2 bundles split into 4 limbs, 1 renamed; 4 severities re-pinned on document evidence: pear-asian psylla high->medium, pear-asian scab medium->low, pawpaw Phyllosticta low->medium, pomegranate black heart high->medium; persimmon's split limbs pinned low and high).",
+  "mulberry": {
+    "pests": [
+      {
+        "name": "Birds",
+        "id": "birds",
+        "type": "vertebrate",
+        "severity": "high",
+        "pre_type": "pest",
+        "from": "KEEP",
+        "decision": "JOIN existing (5 crops)",
+        "evidence": "Umbrella of fruit-eating birds; NCSU Morus rubra toolbox prose + UAEX name catbirds, mockingbirds, cedar waxwings. Same problem class as blueberry/cherry."
+      },
+      {
+        "name": "Whiteflies",
+        "id": "whiteflies",
+        "type": "insect",
+        "severity": "low",
+        "pre_type": "pest",
+        "from": "KEEP",
+        "decision": "JOIN existing (7 crops)",
+        "evidence": "Tetraleurodes mori, the mulberry whitefly (NCSU factsheet names Morus as host); giant whitefly Aleurodicus dugesii on M. alba in CA. Umbrella display name kept; joins the roster's whitefly id."
+      },
+      {
+        "name": "Borers",
+        "id": "mulberry-borers",
+        "type": "insect",
+        "severity": "low",
+        "pre_type": "pest",
+        "from": "KEEP",
+        "decision": "MINT crop-scoped umbrella",
+        "evidence": "PLA-448 s4f bare generic: GENUINE UMBRELLA in the admissible literature. NCSU toolbox has two prose sentences naming no organism; UC IPM's mulberry page lists no borer; the only US extension naming one (K-State MF2735, Dorcaschema wildii) is not catalog-admitted and does not carry the record's 'secondary on stressed trees' claim. No existing bare `borers` id; `cherry-borers` is two named clearwing/beetle species on Prunus. Expect NAME_SHARED with cherry-borers on the normalized key 'borer'; registered on scope."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Popcorn disease",
+        "id": "popcorn-disease",
+        "type": "fungal",
+        "severity": "medium",
+        "pre_type": "disease",
+        "from": "KEEP",
+        "decision": "MINT (new family)",
+        "evidence": "Ciboria carunculoides, one organism, TAMU + OSU (proxy) + UAEX. No sibling anywhere on the roster."
+      },
+      {
+        "name": "Bacterial blight",
+        "id": "mulberry-bacterial-blight",
+        "type": "bacterial",
+        "severity": "low",
+        "pre_type": "disease",
+        "from": "KEEP",
+        "decision": "MINT crop-scoped; registers against bacterial-blight AND bacterial-blights",
+        "evidence": "Pseudomonas syringae pv. mori (TAMU, first-party). Edamame's `bacterial-blight` is P. savastanoi pv. glycinea and the beans' `bacterial-blights` are Xanthomonas + P. syringae pv. phaseolicola: three host-specific pathovars sharing a generic display name, the `bacterial-spot`/`bacterial-spot-pruni` shape. Registered as TWO pairs so the open edamame/bean duplicate (s4a) is NOT suppressed."
+      },
+      {
+        "name": "Leaf spots and minor foliar diseases",
+        "id": "mulberry-leaf-spots",
+        "type": "fungal",
+        "severity": "low",
+        "pre_type": "disease",
+        "from": "KEEP",
+        "decision": "MINT crop-scoped umbrella",
+        "evidence": "PLA-448 s4f: GENUINE UMBRELLA. TAMU lists seven fungi under three headings with shared management (Cercospora moricola, C. missouriensis, Cercosporella spp., Mycosphaerella mori false mildew, Phyllactinia corylea, Uncinula geniculata). The roster's `leaf-spots` id (2 crops) includes a marigold bundle with powdery mildew (s4d) and is not joined; lavender's batch-25 precedent is a crop-scoped umbrella id."
+      }
+    ]
+  },
+  "pawpaw": {
+    "pests": [
+      {
+        "name": "Pawpaw peduncle borer",
+        "id": "pawpaw-peduncle-borer",
+        "type": "insect",
+        "severity": "medium",
+        "pre_type": "pest",
+        "from": "KEEP",
+        "decision": "MINT (new family)",
+        "evidence": "Talponia plummeriana (KSU planting guide, PBI-004, ACES). Severity stays medium: sources range from 'the worst pest' (KSU) to 'not considered a serious problem' (Cornell SF); the text carries the swing."
+      },
+      {
+        "name": "Zebra swallowtail caterpillars",
+        "id": "zebra-swallowtail",
+        "type": "insect",
+        "severity": "low",
+        "pre_type": "pest",
+        "from": "KEEP",
+        "decision": "MINT (new family); ONE-RUNG LADDER OR REFUSAL",
+        "evidence": "Protographium (= Eurytides) marcellus, sole larval host is pawpaw (UIUC, UMD, Clemson, KSU). Every source says do not treat; the catalog has no tolerate-and-monitor method. Pinned KEEP because the record's rendered prose is the correct consumer answer to 'what is eating my pawpaw leaves'. The author writes at most one `handpick` rung framed by the sources' do-not-treat advice, or refuses; flagged for Trevor in the handoff."
+      },
+      {
+        "name": "Fruit-raiding wildlife (raccoons, opossums, squirrels)",
+        "id": "fruit-raiding-wildlife",
+        "type": "vertebrate",
+        "severity": "medium",
+        "pre_type": "pest",
+        "from": "KEEP",
+        "decision": "MINT pest-complex umbrella",
+        "evidence": "ONE vertebrate umbrella, not a bundle: raccoons, opossums, squirrels, foxes (and deer on dropped fruit) are named across UMD, KSU, Clemson, NCSU, MU, and no document distinguishes home management by animal. A variety cannot be resistant to one and not another; the ladder is the same for all. Display name kept (foxes and deer ride in prose); a rename is a candidate for Trevor."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Phyllosticta leaf and fruit spot",
+        "id": "phyllosticta-leaf-and-fruit-spot",
+        "type": "fungal",
+        "severity": "medium",
+        "pre_type": "disease",
+        "from": "KEEP",
+        "decision": "MINT (new family); severity RAISED low -> medium",
+        "evidence": "Phyllosticta asiminae complex (KSU PBI-004, Clemson HGIC 1360, ACES, MU). The record's 'cosmetic, fruit inside stays sound' is refuted (Clemson 'severe... premature cracking'; MU cracked flesh 'quickly becomes infected'); the cosmetic description belongs to flyspeck. Severity follows the documents."
+      }
+    ]
+  },
+  "pear-asian": {
+    "pests": [
+      {
+        "name": "Codling moth",
+        "id": "codling-moth",
+        "type": "insect",
+        "severity": "high",
+        "pre_type": "insect",
+        "from": "KEEP",
+        "decision": "JOIN existing (apple)",
+        "evidence": "Cydia pomonella; UC IPM PN 7412 names pear. Same organism, same ladder shape as apple; prose is this crop's own."
+      },
+      {
+        "name": "Pear psylla",
+        "id": "pear-psylla",
+        "type": "insect",
+        "severity": "medium",
+        "pre_type": "insect",
+        "from": "KEEP",
+        "decision": "MINT (new family, shared with pear-european); severity LOWERED high -> medium",
+        "evidence": "Cacopsylla pyricola (WSU). No psylla/psyllid id collides: `asian-citrus-psyllid` and `persimmon-psyllid` are distinct organisms and distinct keys. UC IPM (home and commercial): 'Pear psylla is a greater problem on European varieties than on Asian varieties of pear'; the record's high was pear-european's template copy."
+      },
+      {
+        "name": "Stink bug",
+        "id": "stink-bugs",
+        "type": "insect",
+        "severity": "medium",
+        "pre_type": "insect",
+        "from": "KEEP",
+        "decision": "JOIN existing (3 crops)",
+        "evidence": "Stink bug complex incl. Halyomorpha halys; display name singular kept (PLA-448 s2 plural ruling is a post-arc copy pass). Anchor repointed off the fire-blight factsheet by the record pass."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Fire blight",
+        "id": "fire-blight",
+        "type": "bacterial",
+        "severity": "high",
+        "pre_type": "bacterial",
+        "from": "KEEP",
+        "decision": "JOIN existing (apple)",
+        "evidence": "Erwinia amylovora; one organism, one id across pome fruit."
+      },
+      {
+        "name": "Pear scab",
+        "id": "pear-scab",
+        "type": "fungal",
+        "severity": "low",
+        "pre_type": "fungal",
+        "from": "KEEP",
+        "decision": "MINT (new family, shared with pear-european); the pests[] duplicate retires; severity LOWERED medium -> low",
+        "evidence": "Venturia pyrina (UC IPM). Distinct from `apple-scab` (V. inaequalis). The pests[] copy of this entry is retired as an array duplicate; the record pass graded both copies so the better-anchored sentences survive as corrections. UC IPM PN 7413: Asian pears 'are less susceptible to scab than European pears'; V. nashicola is not in the US West. The record was pear-european's template copy."
+      },
+      {
+        "name": "Pear decline",
+        "id": "pear-decline",
+        "type": "bacterial",
+        "severity": "medium",
+        "pre_type": "other",
+        "from": "KEEP",
+        "decision": "MINT (new family); TYPE other -> bacterial",
+        "evidence": "'Candidatus Phytoplasma pyri', vectored by pear psylla (WSU rootstocks). `other` is unrecognized by every gate; phytoplasmas are wall-less bacteria and the roster already types aster yellows `bacterial` on 6 crops. `bacterial` reaches `resistant_rootstock` (via disease_general), which is where the documents put the control."
+      }
+    ]
+  },
+  "pear-european": {
+    "pests": [
+      {
+        "name": "Codling moth",
+        "id": "codling-moth",
+        "type": "insect",
+        "severity": "high",
+        "pre_type": "insect",
+        "from": "KEEP",
+        "decision": "JOIN existing (apple)",
+        "evidence": "Cydia pomonella; UC IPM PN 7412 names pear."
+      },
+      {
+        "name": "Pear psylla",
+        "id": "pear-psylla",
+        "type": "insect",
+        "severity": "high",
+        "pre_type": "insect",
+        "from": "KEEP",
+        "decision": "MINT (shared with pear-asian)",
+        "evidence": "Cacopsylla pyricola (WSU)."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Fire blight",
+        "id": "fire-blight",
+        "type": "bacterial",
+        "severity": "high",
+        "pre_type": "bacterial",
+        "from": "KEEP",
+        "decision": "JOIN existing (apple)",
+        "evidence": "Erwinia amylovora."
+      },
+      {
+        "name": "Pear scab",
+        "id": "pear-scab",
+        "type": "fungal",
+        "severity": "medium",
+        "pre_type": "fungal",
+        "from": "KEEP",
+        "decision": "MINT (shared with pear-asian); the pests[] duplicate retires",
+        "evidence": "Venturia pyrina (UC IPM)."
+      },
+      {
+        "name": "Fabraea leaf spot",
+        "id": "fabraea-leaf-spot",
+        "type": "fungal",
+        "severity": "medium",
+        "pre_type": "fungal",
+        "from": "KEEP",
+        "decision": "MINT (new family); the pests[] duplicate retires",
+        "evidence": "Fabraea maculata / Entomosporium mespili (Clemson, NC State). No `*-leaf-spot` id within edit distance 2; different organism from every named leaf-spot sibling."
+      },
+      {
+        "name": "Pear decline",
+        "id": "pear-decline",
+        "type": "bacterial",
+        "severity": "medium",
+        "pre_type": "other",
+        "from": "KEEP",
+        "decision": "MINT (shared with pear-asian); TYPE other -> bacterial",
+        "evidence": "Phytoplasma, psylla-vectored; see pear-asian."
+      }
+    ]
+  },
+  "persimmon": {
+    "pests": [
+      {
+        "name": "Scale insects",
+        "id": "scale-insects",
+        "type": "insect",
+        "severity": "medium",
+        "pre_type": "pest",
+        "from": "KEEP",
+        "decision": "JOIN existing (6 crops)",
+        "evidence": "White peach scale Pseudaulacaspis pentagona (HS1389) plus soft scales (UGA); the roster id is a species umbrella on citrus and blueberry already."
+      },
+      {
+        "name": "Mealybugs",
+        "id": "mealybugs",
+        "type": "insect",
+        "severity": "low",
+        "pre_type": "pest",
+        "from": "KEEP",
+        "decision": "JOIN existing (3 crops)",
+        "evidence": "Pseudococcidae; Pseudococcus longispinus tied to persimmon (UF EENY-666)."
+      },
+      {
+        "name": "Persimmon psyllid",
+        "id": "persimmon-psyllid",
+        "type": "insect",
+        "severity": "low",
+        "pre_type": "pest",
+        "from": "KEEP",
+        "decision": "MINT (new family)",
+        "evidence": "Trioza diospyri (HS1389, NC State). Distinct organism and key from `asian-citrus-psyllid` (Diaphorina citri) and `pear-psylla`."
+      },
+      {
+        "name": "Persimmon borer",
+        "id": "persimmon-borer",
+        "type": "insect",
+        "severity": "medium",
+        "pre_type": "pest",
+        "from": "KEEP",
+        "decision": "MINT (new family); prose bundle corrected, not split",
+        "evidence": "Sannina uroceriformis (HS1389, ENY-835). The cause prose folds in flatheaded borers (Chrysobothris spp.), a second organism; the entry is ONE organism by name, so the flatheaded clause is corrected out and filed as an uncovered problem, not minted as a limb of a bundle the name never declared."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Anthracnose",
+        "id": "anthracnose",
+        "type": "fungal",
+        "severity": "medium",
+        "pre_type": "disease",
+        "from": "KEEP",
+        "decision": "JOIN existing (15 crops); clemson_hgic dropped from sources",
+        "evidence": "Gloeosporium / Colletotrichum sp. (HS1389). The crop's own cert log already ruled clemson_hgic carries nothing for this entry; the record pass confirmed it."
+      },
+      {
+        "name": "Phytophthora root and crown rot",
+        "id": "phytophthora-root-rot",
+        "type": "fungal",
+        "severity": "medium",
+        "pre_type": "disease",
+        "from": "RENAME from 'Root and crown rot'",
+        "decision": "JOIN existing (3 crops) + RENAME",
+        "evidence": "GENUS RESOLVED: UC IPM's persimmon page lists 'Phytophthora Root and Crown Rot' and, separately, 'Armillaria Root Rot'; the rootstock-tolerance claim is HS1389 + UCD FNRIC. Batch 25's rule: reuse the umbrella UNLESS the taxon is resolved and narrower, and it is, so the entry joins the genus id and the display name says what the id says (the oregano 'Rust' -> 'Mint rust' shape). Expect NAME_SHARED with lavender's `lavender-root-crown-rot` ('Phytophthora root and crown rot', P. nicotianae-specific); registered on scope. `fungal` is the nearest gate type for an oomycete and is what the id already carries."
+      },
+      {
+        "name": "Leaf spot",
+        "id": "persimmon-leaf-spot",
+        "type": "fungal",
+        "severity": "low",
+        "pre_type": "disease",
+        "from": "SPLIT 1/2 from 'Leaf spot and twig dieback'",
+        "decision": "MINT crop-scoped umbrella",
+        "evidence": "GENUINE UMBRELLA with a named principal: Pseudocercospora diospyricola (UAEX Plant Health Clinic), Cercospora spp. (HS1389). Kept bare like lavender's; expect NAME_SHARED with `lavender-leaf-spot` on 'leaf spot', registered on host/organism."
+      },
+      {
+        "name": "Botryosphaeria twig dieback",
+        "id": "botryosphaeria-twig-dieback",
+        "type": "fungal",
+        "severity": "high",
+        "pre_type": "disease",
+        "from": "SPLIT 2/2 from 'Leaf spot and twig dieback'",
+        "decision": "MINT (new family); severity RAISED low -> high",
+        "evidence": "PINNED ORGANISM: Botryosphaeria dothidea et al. (HS1389): 'the limiting factor for growing persimmons in Florida and the Deep South', 'limits the lifetime of Japanese persimmons to about 8 to 12 years (or less)', 'no good chemical control'. The bundle graded it low and cosmetic under anchors that never contain the word dieback. Distinct key from blueberry's `stem-blight` (its own bundled Botryosphaeria + Phomopsis name); same regional-limiting shape as pomegranate's black heart, which the roster grades high."
+      }
+    ]
+  },
+  "pomegranate": {
+    "pests": [
+      {
+        "name": "Leaf-footed bug",
+        "id": "leaf-footed-bugs",
+        "type": "insect",
+        "severity": "high",
+        "pre_type": "pest",
+        "from": "KEEP",
+        "decision": "MINT (new family)",
+        "evidence": "Leptoglossus zonatus (UC IPM ag + PN 74168). No leaf-footed id exists; okra's `stink-bugs` entry is named 'Stink bugs and leaf-footed bugs' (a s4d no-sibling bundle), and this mint gives that bundle a sibling to split toward later. FAMILY_MEMBER cannot fire on it because `stink-bugs` is not itself implicated."
+      },
+      {
+        "name": "Aphids",
+        "id": "aphids",
+        "type": "insect",
+        "severity": "medium",
+        "pre_type": "pest",
+        "from": "KEEP",
+        "decision": "JOIN existing (63 crops)",
+        "evidence": "Aphis gossypii (UC IPM ag Cotton Aphid); anchor repointed off the UC IPM index page, which names no aphid."
+      },
+      {
+        "name": "Whitefly",
+        "id": "whiteflies",
+        "type": "insect",
+        "severity": "medium",
+        "pre_type": "pest",
+        "from": "KEEP",
+        "decision": "JOIN existing (7 crops)",
+        "evidence": "Siphoninus phillyreae primary (UC IPM ag + PN 7401). Display name singular kept."
+      },
+      {
+        "name": "Mealybugs",
+        "id": "mealybugs",
+        "type": "insect",
+        "severity": "low",
+        "pre_type": "pest",
+        "from": "SPLIT 1/2 from 'Mealybugs and scale'",
+        "decision": "JOIN existing (3 crops)",
+        "evidence": "Pseudococcus maritimus; calyx harborage, interior rot, ant tending and natural enemies all STATED for the mealybug half (UC IPM ag Grape Mealybug + Pest Note). One organism class per id."
+      },
+      {
+        "name": "Scale insects",
+        "id": "scale-insects",
+        "type": "insect",
+        "severity": "low",
+        "pre_type": "pest",
+        "from": "SPLIT 2/2 from 'Mealybugs and scale'",
+        "decision": "JOIN existing (6 crops)",
+        "evidence": "Four soft scales (Saissetia oleae, Coccus hesperidum, C. pseudomagnoliarum, Parthenolecanium corni; UC IPM ag Soft Scales). Calyx harborage NOT stated and honeydew/sooty mold REFUTED on this crop, which is why the halves cannot share prose."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Alternaria heart rot (black heart)",
+        "id": "alternaria-heart-rot",
+        "type": "fungal",
+        "severity": "medium",
+        "pre_type": "disease",
+        "from": "KEEP",
+        "decision": "MINT (new family); severity LOWERED high -> medium",
+        "evidence": "Alternaria alternata, A. arborescens (UC IPM ag). Distinct key from `alternaria-brown-spot` (citrus) and the physiological `blackheart` (celery calcium). Climate framing corrected: a California rain-at-bloom disease, absent in Georgia (UGA C997). SEVERITY: the record's high rested on the backwards humid-climate framing; UC IPM ag: 'Estimated losses are usually less than 1% but can be up to 6%', absent in UGA's Georgia survey and unlisted in UF/IFAS PP349's Florida survey. Medium matches persimmon's regional diseases and the corrected prose."
+      },
+      {
+        "name": "Botrytis gray mold / fruit rot",
+        "id": "gray-mold",
+        "type": "fungal",
+        "severity": "medium",
+        "pre_type": "disease",
+        "from": "KEEP",
+        "decision": "JOIN existing (6 crops)",
+        "evidence": "Botrytis cinerea (UC IPM ag Gray Mold, FNRIC). Inherits the open gray-mold/botrytis-gray-mold s4a pair."
+      },
+      {
+        "name": "Cercospora fruit and leaf spot",
+        "id": "cercospora-fruit-and-leaf-spot",
+        "type": "fungal",
+        "severity": "medium",
+        "pre_type": "disease",
+        "from": "KEEP",
+        "decision": "MINT (new family); hidden prose bundle corrected, not split",
+        "evidence": "Pseudocercospora punicae (UF/IFAS PP349; UGA C997 as Cercospora punicae). ONE problem by name; the cause prose's 'related fungi such as Colletotrichum and Botryosphaeria' is corrected out (C997 lists them as separate examples). PLA-448 s2 already ruled this name distinct from `cercospora-leaf-spot` (C. beticola on beet/chard); edit distance 10, no NAME_SHARED."
+      }
+    ]
+  },
+  "_retired": [
+    {
+      "crop": "pear-asian",
+      "field": "pests",
+      "name": "Pear scab",
+      "duplicate_of": {
+        "field": "diseases",
+        "name": "Pear scab"
+      },
+      "why": "A fungal disease sitting in pests[] as a second, separately authored copy of the diseases[] entry. The pests[] copy is the 2026-06-11 original; the diseases[] copy was added at the 2026-07-02 cert (73a1f64) without removing it. One id per crop is a gate rule; the diseases[] copy survives and the record pass graded both so the better-anchored sentences are carried as corrections."
+    },
+    {
+      "crop": "pear-european",
+      "field": "pests",
+      "name": "Pear scab",
+      "duplicate_of": {
+        "field": "diseases",
+        "name": "Pear scab"
+      },
+      "why": "Same shape as pear-asian: the 2026-06-11 pests[] original duplicated by the 2026-07-02 diseases[] cert copy."
+    },
+    {
+      "crop": "pear-european",
+      "field": "pests",
+      "name": "Fabraea leaf spot",
+      "duplicate_of": {
+        "field": "diseases",
+        "name": "Fabraea leaf spot"
+      },
+      "why": "Same shape: a fungal disease duplicated across both arrays at the 2026-07-02 cert; the diseases[] copy survives."
+    }
+  ]
+}

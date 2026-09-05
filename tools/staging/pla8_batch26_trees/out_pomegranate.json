@@ -1,0 +1,661 @@
+{
+  "crop": "pomegranate",
+  "pests": [
+    {
+      "name": "Leaf-footed bug",
+      "id": "leaf-footed-bugs",
+      "type": "insect",
+      "severity": "high",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Strip every fruit off the tree before winter, and pick up the split and dropped ones under it. Leaf-footed bugs spend the winter as adults, and a pomegranate with cracked old fruit left hanging is one of their favorite places to do it, so fruit left on the tree in November is next spring's bugs. Clear the other places they hide too, where they are yours to clear: woodpiles, sheds and outbuildings, and loose bark on nearby eucalyptus, juniper or cypress.",
+          "note_seasoned": "UC IPM's instruction for pomegranate is to remove all fruit before winter, because orchards with cracked and split fruit left on the trees are a favored overwintering site and large numbers can pass the winter in fruit culls. Adults leave the tree by late November for sheltered aggregations in citrus, juniper, cypress and palms, woodpiles and outbuildings, so a mild winter or a heavy population the previous fall is the signal for a bad year. Cold near 21°F kills some exposed bugs and spares the sheltered ones, which is why harborage matters more than the thermometer."
+        },
+        {
+          "method": "weed_host_control",
+          "note_beginner": "Keep the weedy patches near the tree mowed or cleared. Through winter and spring, when there is no fruit to feed on, the bugs live on weeds, so a weedy corner next to a pomegranate feeds them until the fruit comes.",
+          "note_seasoned": "Weedy areas are the bugs' food source from winter into spring, before fruit is available, and UC IPM's advice is to eliminate such areas near the garden or keep them closely mowed; the Pest Note names thistles and other weeds. This lowers the population that arrives on the young fruit rather than touching anything already on the tree."
+        },
+        {
+          "method": "handpick",
+          "note_beginner": "Head out early, while the morning is still cool and the bugs are sluggish, and brush them off into soapy water or crush them; wear gloves, because they smell when handled. The best time is early in the season, when the newly hatched young sit in tight clusters and you can get a whole batch at once. Scrape off the egg strands on the undersides of leaves as well. On a taller tree, knock the young bugs down with a stick or a hard jet from the hose onto a white sheet spread underneath, then step on them.",
+          "note_seasoned": "Hand removal is the primary home control. UC IPM's sequence: morning, to limit movement and flight; as early in the season as possible, while nymphs are still tightly clustered; destroy the egg masses on leaf undersides; a dedicated handheld vacuum works if used regularly. For late-season infestations on pomegranate trees, prune so there is space between the limbs and the ground, then dislodge the nymphs with a stick, by shaking the limbs, or with a pressure nozzle, repeating every 1 to 2 weeks until most are gone. That knock-down does not dislodge eggs and is less effective on adults, which fly; a white ground cover under the tree makes the fallen insects easy to see."
+        },
+        {
+          "method": "floating_row_cover",
+          "note_beginner": "On a plant small enough to wrap completely, a light fabric cover keeps the bugs off the fruit. It must be in place before the bugs show up in late spring, or you seal them in with the fruit, and it shuts out the bees and helpful insects along with the pests, so it is a poor fit for a big shrub in full bloom.",
+          "note_seasoned": "UC IPM lists row cover as a way to prevent feeding, with two conditions: apply it early, before the bugs arrive and lay eggs, or they are enclosed with the plant, and accept that it also excludes pollinators and beneficial insects. On pomegranate the adults move onto newly developing fruit in late spring to early summer, which overlaps a long, protracted bloom, so this suits a young or container plant far more than a mature tree."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Tiny native wasps lay their eggs inside the bug's eggs and kill them before they hatch, and assassin bugs, spiders and birds take some of the rest. Give these helpers pollen and nectar flowers to feed on, and skip the broad-acting sprays, which take the helpers down with the bugs.",
+          "note_seasoned": "The egg parasite Gryon pennsylvanicum, if not disrupted, can reduce populations by killing eggs before they hatch. Tachinid flies such as Trichopoda pennipes parasitize adults, and assassin bugs, spiders and birds are the named predators. UC IPM's two conditions for keeping them: avoid persistent broad-spectrum insecticides, and provide pollen and nectar sources for the adult beneficials."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "Soap spray only works on the very young bugs, and only where it wets them, so its place is a cluster of newly hatched nymphs you can soak directly. It does nothing to the adults, and UC IPM says sprays are rarely needed for this pest, since a few blemishes on home fruit are tolerable.",
+          "note_seasoned": "UC IPM's ranking for the home grower: insecticidal soap, neem oil and pyrethrin may provide some control of young nymphs only, and most insecticides available to homeowners have only temporary effects on this bug. Since feeding damage on pomegranate is internal and light feeding usually goes unnoticed, a soap spray is a supplement to hand removal at the clustered-nymph stage, not a substitute for it."
+        },
+        {
+          "method": "pyrethroid",
+          "note_beginner": "Permethrin and its relatives are the one kind of spray that really knocks this bug down, and UC IPM still says it is rarely worth it: these products are quite toxic to bees and to the helpful insects that were keeping the bugs in check, so the problem can come back worse. If you use one, keep it off anything in flower, and follow the label's waiting time before picking.",
+          "note_seasoned": "Broad-spectrum pyrethroids such as permethrin are the most effective insecticides against leaffooted bug, and the same document notes they are quite toxic to bees and beneficial insects and that insecticides are rarely needed because small blemishes are tolerable in a garden. There is no treatment threshold for this pest on pomegranate, so the decision rests on the previous year's numbers and what you find at fruit set, and the window that matters is ripening from late summer to harvest. Observe the pre-harvest interval on the label."
+        }
+      ],
+      "sources": [
+        "uc_ipm"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/leaffooted-bug/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Often there is no external mark on the fruit at all; the damage is inside. Cut a fed-on fruit and you find brown spots on the inner rind where the insect's needlelike mouthpart pierced, and arils that have darkened and withered. Late-season feeding as the fruit ripens is the worst, and the feeding wounds let opportunistic fungi in to rot the interior.",
+          "why": "'turned corky' has no anchor: both UC IPM documents say the arils darken and wither, neither says corky.",
+          "anchor": "uc_ipm PN 74168 'On pomegranates, late-season feeding as the fruit ripens generally causes no external damage but can cause aryls (seed-like structures) to darken and wither, especially if fungal spores gain entry into the fruit through the feeding wound.'; uc_ipm ag https://ipm.ucanr.edu/agriculture/pomegranate/leaffooted-bug/ 'If the fruit are cut open, brown spots can be seen on the inside of the skin where the insect's proboscis penetrated. Feeding on the aryl can cause them to wither.'"
+        },
+        "symptoms_beginner": {
+          "new": "Usually you see nothing wrong on the outside of the fruit, because the damage is inside. If you cut a fruit open, you find brown spots on the inner skin and seeds (arils) that have gone dark and shriveled. It is worst late in the season as the fruit ripens, and the holes the bugs make can let rot start inside.",
+          "why": "'corky' has no anchor (the documents say darken and wither).",
+          "anchor": "uc_ipm PN 74168 'can cause aryls (seed-like structures) to darken and wither, especially if fungal spores gain entry into the fruit through the feeding wound.'"
+        },
+        "cause_seasoned": {
+          "new": "The leaf-footed bug Leptoglossus zonatus, a large brown true bug with flattened, leaf-like flares on its hind legs; gardeners report it most on tomatoes and pomegranates. Adults and nymphs pierce fruit to feed, and their mouthparts carry a yeast, Eremothecium coryli, that discolors the arils; fungal spores follow through the same wound. They overwinter as adults in sheltered aggregations, in woodpiles, outbuildings, under bark and in citrus and juniper, and in cracked pomegranate fruit left on the tree, then disperse when the weather warms and move onto the newly developing fruit in late spring to early summer.",
+          "why": "'Leptoglossus species' is imprecise where both documents pin the pomegranate pest to L. zonatus; the yeast the documents name and the overwintering sites the sanitation step depends on, including the tree's own leftover fruit, were missing.",
+          "anchor": "uc_ipm PN 74168 'L. zonatus is the most destructive of the leaffooted bug species ... most commonly reported by gardeners as a pest of tomatoes and pomegranates' / 'Leaffooted bug mouthparts are also known to carry a fungal yeast, Eremothecium coryli' / 'Adult bugs overwinter in woodpiles, under the bark of eucalyptus, juniper, or cypress, and in outbuildings. Large numbers may pass the winter in culls of fruit such as pomegranates.' / 'When weather gets warm ... adults disperse to find food sources.'; uc_ipm ag 'In late spring to early summer, leaffooted bug enter pomegranate orchards to feed on newly developing fruit and reproduce.' uc_ipm (ag, https://ipm.ucanr.edu/agriculture/pomegranate/leaffooted-bug/): 'Cold temperatures near 21°F (-6°C) will kill some exposed bugs' and 'it requires a low of approximately 21ºF for at least six hours to kill about 50% of the exposed population' [orchestrator re-read 2026-09-04, V7; warrant for the 21°F figure in the garden_sanitation note]."
+        },
+        "organic_treatment_seasoned": {
+          "new": "There is no reliable rescue spray for a backyard tree; the controls are physical. Brush or knock adults and nymphs off into soapy water while the morning is still cool, going after the tightly clustered young nymphs early in the season and crushing the egg strands under the leaves. On a taller tree, prune the limbs clear of the ground, then dislodge the nymphs with a stick, by shaking, or with a pressure nozzle every 1 to 2 weeks, with a white sheet beneath to see them. Clear the weedy areas that feed them through winter and spring, strip all fruit before winter, and protect the egg parasites and predators with nectar plants and no broad-spectrum sprays.",
+          "why": "'bag developing fruit clusters in mesh where feasible' has no anchor: the Pest Note's exclusion method is row cover applied before the bugs arrive, not fruit bags, and the only bagging sentence in any source (TAMU) is about birds, borers and rodents in other countries. The tree knock-down sequence the document gives for pomegranate was missing.",
+          "anchor": "uc_ipm PN 74168 'Handpick and crush the bugs or brush them off plants into soapy water.' / 'It is especially important to remove the bugs as early in the season as possible, when the very young nymphs are tightly clustered together, and morning is best' / 'For late-season infestations in pomegranate trees, prune trees so that there is a space between tree limbs and the ground. Leaffooted bug nymphs can easily be knocked out of the tree using a stick, by physically shaking the tree limbs, or using water from a pressure nozzle on a garden hose.' / 'this method should be repeated once every 1 to 2 weeks as necessary' / 'Covering plants with a row cover material can prevent feeding by leaffooted bugs.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "On a backyard tree the fixes are hands-on. Early in the morning, while it is cool, brush the bugs into soapy water or crush them, starting early in the season when the young are bunched together, and scrape off the egg strands under the leaves. On a tall tree, trim the low limbs off the ground and knock the young bugs down with a stick or a jet of water onto a white sheet, every week or two. Clear weedy patches nearby, take every fruit off before winter, and keep flowers around for the tiny wasps that kill the eggs.",
+          "why": "'cover fruit clusters with fine mesh bags' has no anchor (the document's exclusion method is row cover applied before arrival); the tree knock-down the document gives was missing.",
+          "anchor": "uc_ipm PN 74168 'Leaffooted bug nymphs can easily be knocked out of the tree using a stick, by physically shaking the tree limbs, or using water from a pressure nozzle on a garden hose.' / 'Laying a white ground cover beneath the plant can aid in seeing the insects' / 'Weedy areas serve as a food source for leaffooted bugs during winter and spring'"
+        },
+        "prevention_seasoned": {
+          "new": "Monitor from fruit set onward, since the internal damage is invisible until you cut the fruit. Adults disperse from their winter shelters when the weather warms, in March or April in California's valleys, and enter pomegranate plantings from late spring to feed on the newly developing fruit and reproduce; the aggregations of nymphs and adults form on fruit and foliage from late summer and again in winter shelters. Remove all fruit before winter and clear weeds and nearby harborage, because a mild winter or a heavy fall population is the signal for a bad year, and there is no treatment threshold for this pest.",
+          "why": "'watch for the adults congregating in spring' is backwards: both documents put aggregation in fall and winter and dispersal in spring. The winter fruit-removal step and the mild-winter signal were missing.",
+          "anchor": "uc_ipm PN 74168 'When weather gets warm, typically in March in the San Joaquin Valley and April in the Sacramento Valley, adults disperse to find food sources.' / 'Cold winters kill many adults, and major outbreaks often occur after mild winters.'; uc_ipm ag 'By late November, newly developed adults leave pomegranate and form overwintering aggregations' / 'In late spring to early summer, leaffooted bug enter pomegranate orchards to feed on newly developing fruit and reproduce.' / 'Remove all fruit before winter to decrease the number of overwintering bugs.' / 'There are no treatment thresholds for leaffooted bugs in pomegranates.'"
+        },
+        "prevention_beginner": {
+          "new": "Keep an eye out from the time fruit forms, because you cannot see the damage from outside until you cut a fruit open. The adults spread out from their winter hiding spots as the weather warms and turn up on the young fruit from late spring; the big clusters come later in the summer. Take every fruit off the tree before winter, keep weeds down, and expect more bugs after a mild winter. Catching and removing them early, before there are many, works best.",
+          "why": "'look for the adults gathering in spring' is backwards (spring is dispersal; aggregations form in fall and winter); the winter fruit removal was missing.",
+          "anchor": "uc_ipm PN 74168 'adults disperse to find food sources' / 'major outbreaks often occur after mild winters'; uc_ipm ag 'Remove all fruit before winter to decrease the number of overwintering bugs.' / 'In late spring to early summer, leaffooted bug enter pomegranate orchards to feed on newly developing fruit and reproduce.'"
+        }
+      }
+    },
+    {
+      "name": "Aphids",
+      "id": "aphids",
+      "type": "insect",
+      "severity": "medium",
+      "control_ladder": [
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Go easy on nitrogen. Soft, sappy new shoots are what these aphids build up on, and a tree that is healthy but not overfed, with steady water and ordinary nutrition, shrugs off numbers that a stressed or lush one cannot.",
+          "note_seasoned": "Two anchored halves. UC IPM's general aphid guidance: high nitrogen favors aphid reproduction, so never use more than necessary. Its pomegranate page adds the other side: maximize tree health with proper nutrients and irrigation, because aphid numbers increase easily on stressed trees. The target is steady, unstressed growth rather than either starvation or a flush of tips."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Blast the colonies on the growing tips with the hose. On a pomegranate the aphids crowd the ends of the new shoots in spring, and once knocked to the ground most never make it back up; nothing is sprayed, so the ladybugs keep working.",
+          "note_seasoned": "UC IPM's first physical step for sturdy plants. On pomegranate the colonies sit on the shoot tips from March through June and again in fall, so the targets are the tips and any young fruit they have settled on; a morning blast leaves the leaves time to dry."
+        },
+        {
+          "method": "ant_exclusion",
+          "note_beginner": "Ants farm these aphids for their sugar and chase off the ladybugs and lacewings that would eat them. A band of sticky material on a wrap around the trunk, plus trimming off any branch that touches the ground or a fence, keeps the ants out and hands the tree back to its helpers.",
+          "note_seasoned": "UC IPM's pomegranate guidance is that ants hinder natural enemies, so reducing ant numbers improves the success of biological control; the home Pest Note gives the sticky trunk band as the barrier. The band goes on a collar, not bare bark, and only holds while bridges to the ground are pruned away."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "This aphid usually gets handled for free. Ladybugs, lacewing and hover fly larvae, and a tiny wasp that lays its eggs inside the aphids keep it down on most trees, and summer heat knocks the aphids back on its own. Skip broad-acting sprays so the helpers survive.",
+          "note_seasoned": "UC IPM rates cotton aphid among the most serious pests of pomegranate orchards and in the same sentence says natural enemies may sufficiently control it. The named agents are the parasite Lysiphlebus testaceipes, several lady beetles (ashy gray, nine-spotted, multicolored Asian, convergent), syrphid and cecidomyiid larvae and lacewings. Natural enemy activity slows in summer heat, but heat also suppresses the aphids, and in fall biological control rises with the aphid numbers; ant control is what lets all of it work."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "When a colony outruns the helpers, a soap spray soaked directly onto the aphids brings it down without lingering on the tree to harm the good insects. Aim at the packed shoot tips and any young fruit they are clustered on, and go again if they rebuild.",
+          "note_seasoned": "UC IPM's guidance is to choose products least toxic to natural enemies, insecticidal soaps and oils, which when properly used solve most aphid problems; UGA reports that aphids on pomegranate are routinely controlled with soap in other production regions. Contact only, no residue, so coverage of the tips is what decides it."
+        },
+        {
+          "method": "neem_oil",
+          "note_beginner": "Neem oil is on the short list UC IPM accepts for organic pomegranate. It smothers what it wets, so cover the shoots well; the best-timed use is on the black eggs on the twigs in winter, before they hatch at the end of March.",
+          "note_seasoned": "UC IPM's organic list for pomegranate is pyrethrins, azadirachtin, neem oil and a peppermint plus rosemary oil product, with the note that coverage is very important and that treatment of the overwintering eggs gives the best control. Cotton aphid overwinters as black eggs on pomegranate stems that hatch around the end of March, so winter is when to look for them and, if last year was bad, to spray. Keep it off open flowers and out of heat above 90°F."
+        }
+      ],
+      "sources": [
+        "uc_ipm",
+        "uga_ext"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/agriculture/pomegranate/cotton-aphid/",
+          "verified": "2026-09-04"
+        },
+        "uga_ext": {
+          "url": "https://fieldreport.caes.uga.edu/publications/C997/pomegranate-production/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Dense colonies of small, soft aphids on the shoot tips in spring and again in late summer or fall, often on young fruit as well, with attending ants. Leaf curl and stunted shoots are not typical on pomegranate even when spring numbers are high. The damage that matters comes as fruit ripens in August: honeydew collecting between touching fruit leaves rotten spots on the skin, and sooty mold grows on the honeydew on the fruit surface and is hard to remove. In winter, look for the black eggs on the twigs.",
+          "why": "'curled or distorted new growth' is contradicted by the crop page: reduced shoot growth and leaf damage are not typical with cotton aphid on pomegranate. The pomegranate-specific damage (honeydew between touching fruit, sooty mold on the rind near ripening) and the winter egg sign were missing.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/cotton-aphid/ 'Reduced shoot growth and leaf damage of pomegranate is not typical with cotton aphid, even if spring numbers are high. Dense colonies can occur on young fruit without causing any visible damage.' / 'Later in the season, as fruit approaches ripening in August, aphid honeydew that collects between touching fruit may result in rotten spots on the skin. In addition, sooty mold grows on the honeydew on the outside of the fruit, which can be difficult to remove.' / 'In the winter and early spring, monitor for cotton aphid by searching for black eggs deposited on twigs.'"
+        },
+        "symptoms_beginner": {
+          "new": "Groups of tiny soft insects packed on the tips of new shoots in spring and again in late summer, sometimes on young fruit, with ants trailing to and from them. On pomegranate they do not usually curl the leaves. The real trouble comes as the fruit ripens in August, when sticky honeydew trapped between fruit that touch causes rotten spots and a black mold coats the skin. In winter you can spot their tiny black eggs on the twigs.",
+          "why": "'curled new leaves' is contradicted by the crop page; the fruit damage that the source describes was missing.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/cotton-aphid/ 'Reduced shoot growth and leaf damage of pomegranate is not typical with cotton aphid' / 'aphid honeydew that collects between touching fruit may result in rotten spots on the skin'"
+        },
+        "cause_seasoned": {
+          "new": "The cotton aphid, Aphis gossypii, also called the melon aphid, the one aphid the sources name on this crop. It overwinters as eggs on pomegranate stems, hatches around the end of March onto the shoot tips, peaks in spring, is suppressed by summer heat, and builds again in late summer and fall as aphids move in from weeds, cotton, melons and citrus. Its honeydew supports sooty mold and draws ants, which protect the aphids from natural enemies.",
+          "why": "'Several aphid species' has no anchor: every document names exactly one, the cotton (melon) aphid. The life cycle on this crop, egg overwintering and the two peaks, was missing.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/cotton-aphid/ 'Cotton Aphid / Aphis gossypii' / 'Cotton aphid numbers build up rapidly on growing shoots in the spring and again in the late summer or fall. During the fall months, cotton aphids move into pomegranate orchards from weeds, cotton, melons, and citrus, depositing eggs on pomegranate stems. These eggs overwinter on pomegranate and in the early spring (end of March) the eggs hatch' / 'Ants hinder natural enemies'; uga_ext C997 'melon aphid'"
+        },
+        "prevention_seasoned": {
+          "new": "Keep the tree healthy but not overfed: proper nutrients and irrigation, since aphid numbers increase easily on stressed trees, and no more nitrogen than necessary, since high nitrogen favors aphid reproduction. Check twigs in winter and early spring for the black overwintering eggs, watch the shoot tips from March into June, and keep ants off the tree so the resident parasites and predators can work.",
+          "why": "The crop page's cultural lever, tree vigor with proper nutrients and irrigation, and its monitoring signal, black eggs on twigs in winter, were missing; the nitrogen rule was carried without its counterpart.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/cotton-aphid/ 'Maximize tree health (proper nutrients and irrigation) to help trees withstand pests. Aphid numbers increase easily on stressed trees.' / 'In the winter and early spring, monitor for cotton aphid by searching for black eggs deposited on twigs. ... From March through June aphids are most numerous on the tips of branches'; uc_ipm PN 7404 https://ipm.ucanr.edu/home-and-landscape/aphids/ 'High levels of nitrogen fertilizer favor aphid reproduction, so never use more nitrogen than necessary.'"
+        }
+      }
+    },
+    {
+      "name": "Whitefly",
+      "id": "whiteflies",
+      "type": "insect",
+      "severity": "medium",
+      "control_ladder": [
+        {
+          "method": "water_spray",
+          "note_beginner": "A hard jet from the hose clears the winged adults out of the canopy. On pomegranate the hose earns its keep twice, because keeping the tree watered and the dust down takes away the hot, dry, dusty conditions that suit whiteflies and work against the wasps that kill them.",
+          "note_seasoned": "UC IPM's first physical step is a strong water stream at the adults. The same document notes that watering reduces hot, dry, dusty conditions, which suit whiteflies and hamper their natural enemies, so the hose does two jobs; dust control has no other step of its own here."
+        },
+        {
+          "method": "yellow_sticky_traps",
+          "note_beginner": "Yellow sticky cards hung in the branches show you when the winged adults are on the rise, and they may bring the numbers down somewhat, though they will not clear a bad infestation on their own. Get them up before July, when numbers climb on this crop.",
+          "note_seasoned": "Yellow sticky traps monitor adults and at high levels reduce their numbers. On pomegranate the peak is July and August, so hang them by early summer; they say nothing about the nymphs on the leaf undersides, which are what the parasites work on."
+        },
+        {
+          "method": "handpick",
+          "note_beginner": "Pick off and throw away the leaves that are crusted underneath with the flat, unmoving young. Taking those leaves out can drop the numbers to a level the helpful insects can handle.",
+          "note_seasoned": "Taking off the leaves that carry the immobile nymphs and pupae can, per UC IPM, bring numbers down to a level the natural enemies then hold. Before stripping leaves, check them with a hand lens for dark parasitized pupae and empty pupae with round exit holes; those leaves are the parasite's nursery and stay on the tree."
+        },
+        {
+          "method": "ant_exclusion",
+          "note_beginner": "Keep ants out of the tree; they guard the whiteflies from the insects that would eat them. A sticky band on a wrap around the trunk, and no branches touching the ground, does it.",
+          "note_seasoned": "UC IPM's instruction is to keep ants out of plants since they protect whiteflies from natural enemies; the ash whitefly's parasite is the control that ant exclusion protects."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Outdoors, tiny parasitic wasps, lacewings and ladybugs usually keep whiteflies under control on their own, and the ash whitefly that is common on pomegranate is already well controlled by a wasp across California. Do not spray if you can see the helpers at work: look for dark or empty pupae under the leaves.",
+          "note_seasoned": "The parasite Encarsia inaron is the most effective biological control agent of ash whitefly, which is now under good biological control in California and rarely seen in high numbers; lacewings and lady beetles help but are less reliable. The decision check is a hand lens on the leaf undersides: dark parasitized pupae, empty pupae with round exit holes, and adult parasites mean control is coming in a few weeks. Carbaryl, pyrethroids and foliar imidacloprid are named as particularly disruptive to this."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "If the leaves are yellowing and sticky and you cannot find any of the helpers, soap spray wetted onto the undersides of the leaves is the least harmful option. It only kills what it touches, so cover the undersides and repeat.",
+          "note_seasoned": "UC IPM's guidance is products least harmful to natural enemies, insecticidal soaps and oils, combined with the practices above; on pomegranate the commercial page treats only in late summer or early fall when honeydew and sooty mold threaten and parasites are not adequate. Silverleaf whitefly moving in from neighboring cotton or melon fields in July and August is the case where numbers can outrun the parasites."
+        }
+      ],
+      "sources": [
+        "uc_ipm"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/whiteflies/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "cause_seasoned": {
+          "new": "Mostly the ash whitefly, Siphoninus phillyreae, with the silverleaf whitefly a problem where pomegranates border cotton or melon fields. Small sap-feeding insects that colonize leaf undersides and develop rapidly in warm weather, peaking in July and August. Like aphids they leave honeydew, sooty mold grows on it on leaves and fruit, and ants tend them for it.",
+          "why": "The record named no species; UC IPM names ash whitefly as the common one on pomegranate, and the ant relationship the controls depend on was missing.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/whiteflies/ 'Both the ash whitefly and silverleaf whitefly occur on pomegranates in California, but ash whitefly is more common' / 'Whiteflies are present at any time of year, but they tend to reach high numbers in July and August.'; uc_ipm PN 7401 https://ipm.ucanr.edu/home-and-landscape/whiteflies/ 'Whiteflies develop rapidly in warm weather' / 'Keep ants out of plants since they protect whiteflies from natural enemies.'"
+        },
+        "prevention_seasoned": {
+          "new": "Keep the tree healthy and well watered so it does not sit in hot, dry, dusty conditions, which suit whiteflies and hamper the parasites that control them, and keep the ants out of the canopy. Spare the natural enemies: carbaryl, pyrethroids and foliar imidacloprid are the insecticides UC IPM names as particularly disruptive to them.",
+          "why": "'avoid excess nitrogen' has no anchor for whitefly: the word nitrogen is absent from Pest Notes 7401. Ants and watering against dust were missing.",
+          "anchor": "uc_ipm PN 7401 https://ipm.ucanr.edu/home-and-landscape/whiteflies/ 'Watering can also reduce the hot, dry dusty conditions that favor whiteflies and inhibit their natural enemies.' / 'Keep ants out of plants since they protect whiteflies from natural enemies.' / 'Products containing carbaryl*, pyrethroids, or imidacloprid (especially as a foliar application) can be particularly disruptive.'"
+        },
+        "prevention_beginner": {
+          "new": "Keep the plant healthy and watered so it does not get hot, dusty and stressed, which whiteflies like, and keep ants out of it. Avoid harsh sprays so the helpful insects survive.",
+          "why": "'avoid overfeeding with nitrogen' has no anchor for whitefly (nitrogen is absent from Pest Notes 7401); ants were missing.",
+          "anchor": "uc_ipm PN 7401 https://ipm.ucanr.edu/home-and-landscape/whiteflies/ 'Watering can also reduce the hot, dry dusty conditions that favor whiteflies' / 'Keep ants out of plants since they protect whiteflies from natural enemies.'"
+        }
+      }
+    },
+    {
+      "name": "Mealybugs",
+      "id": "mealybugs",
+      "type": "insect",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "ant_exclusion",
+          "note_beginner": "Start with the ants. They collect the mealybugs' honeydew and drive off the tiny wasps and beetles that would clean the colony up, so a tree with an ant trail up the trunk builds up mealybugs that a tree without one never sees. Put a band of sticky material on a paper or fabric wrap around the trunk and cut off any branch that touches the ground or a wall, so the trunk is the only way up.",
+          "note_seasoned": "UC IPM's mealybug guidance for fruit trees leads with managing ants, which are attracted to honeydew and inhibit the activities of natural enemies. The parasites that hold grape mealybug in check on pomegranate are small encyrtid wasps that produce several generations per mealybug generation; they are exactly the enemies ants displace. A trunk band on a collar, with skirt pruning to close the bypasses, is the barrier; it does nothing about the colony already present, which the natural enemies then reduce over the following weeks."
+        },
+        {
+          "method": "handpick",
+          "note_beginner": "Pick off or prune out the cottony clumps you can reach, and cut the suckers off the base of the trunk, since the young ones crowd into that growth in early summer. In winter, strip loose bark from the trunk, which is where the egg masses sit.",
+          "note_seasoned": "UC IPM's Pest Note: if you find an infestation, physically remove the insects by handpicking or prune them out. On pomegranate the second-generation crawlers migrate to leaves and fruit from early June into early July and many can be found in the sucker growth at the base of trees, so removing suckers removes a harborage; the eggs overwinter in cottony masses on the trunk under bark, so loose bark comes off in the dormant season. A forceful spray of water reduces exposed colonies on sturdy plants; it does not reach mealybugs inside the calyx."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Most of the time this pest is handled by tiny wasps that lay their eggs in the mealybugs, turning them into yellow mummies, along with a small brown lady beetle, a gall midge and lacewings. Keep those helpers by keeping ants off and by not using broad-acting sprays, and let a hot summer do its share.",
+          "note_seasoned": "Natural enemies usually keep grape mealybug below damaging levels in pomegranate. The parasites are all encyrtid wasps, Acerophagus notativentris and A. angelicus with multiple generations per mealybug generation and the larger Chrysoplatycerus splendens attacking adults before they lay; parasitized mealybugs are yellow mummies. Predators are the gall midge Dicrodiplosis californica, the lady beetle Nephus sordidus and green lacewings. Conservation is the whole program: no broad-spectrum sprays, ants excluded, and the mealybug destroyer counted on only where winters are mild."
+        }
+      ],
+      "sources": [
+        "uc_ipm"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/agriculture/pomegranate/grape-mealybug/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_beginner": {
+          "new": "Tufts of white cotton tucked into the crown end of the fruit, in the cracks where branches meet, and on the suckers at the base of the trunk, with sticky honeydew and ants. Where two fruit touch, or where the insects sit inside the crown, the skin under them rots or discolors, and sometimes the rot runs from the crown right into the middle of the fruit, so a fruit can look fine and be spoiled inside.",
+          "why": "SPLIT limb: the bundle's shared prose described two organisms; this limb carries the mealybug's own harborage and damage.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/grape-mealybug/ 'Damage occurs when the mealybugs settle where two fruit touch, or inside the calyx of the fruit. Rot or discoloration can occur where the mealybugs deposit honeydew. Sometimes rot can start inside the calyx and spread to the interior of the fruit.' / 'Many can be found in the sucker growth at the base of trees.'; uc_ipm PN Mealybugs https://ipm.ucanr.edu/home-and-landscape/mealybugs/ 'in somewhat protected areas such as between two touching fruits, in the crown of a plant, in branch crotches'"
+        },
+        "symptoms_seasoned": {
+          "new": "White, cottony egg masses on the trunk under loose bark; crawlers on the young shoots after budbreak in March and on leaves, fruit and basal sucker growth from June into July. Damage is where the mealybugs settle: between two touching fruit or inside the calyx, where honeydew causes rot or discoloration, and rot that starts inside the calyx can spread to the interior of the fruit. Mature mealybugs or egg masses hidden in the calyx can be missed and reach the table.",
+          "why": "SPLIT limb: full prose from the mealybug's own anchors.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/grape-mealybug/ 'Grape mealybug females lay several hundred yellow to orange eggs in white, cottony egg masses that are typically located on the trunk under bark.' / 'Just before or after budbreak in March, the eggs hatch and most of the crawlers move out to young shoots' / 'The second generation hatches in early June through early July and the crawlers begin migrating to leaves and fruit.' / 'Mature mealybugs or egg masses hidden in the calyx may also cause culling or could be missed and reach the consumer.'"
+        },
+        "cause_beginner": {
+          "new": "The grape mealybug, a soft, waxy sap-sucker that lives on grapes, pears and pomegranates. It is common on pomegranates but only now and then a real problem, because the tiny wasps and beetles that hunt it usually keep it down. Ants protect it for its sugary honeydew, and that is when it gets out of hand.",
+          "why": "SPLIT limb: names the one organism this limb is pinned to.",
+          "anchor": "uc_ipm PN Mealybugs https://ipm.ucanr.edu/home-and-landscape/mealybugs/ Table 1 'Grape mealybug Pseudococcus maritimus ... Grapes, pears, pomegranate, and other fruit trees'; uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/grape-mealybug/ 'Grape mealybug is found in many pomegranate orchards, but it only occasionally becomes a serious pest. Natural enemies usually keep grape mealybug numbers below economically significant levels.'"
+        },
+        "cause_seasoned": {
+          "new": "Pseudococcus maritimus, the grape mealybug, found in many pomegranate orchards but only occasionally a serious pest because natural enemies usually hold it below damaging levels. Two generations a year; it overwinters mostly as eggs in cottony masses under trunk bark, the first hatch moves to young shoots at March budbreak, the second hatches from early June into early July and migrates to leaves and fruit. Populations often drop in summer heat. Ants tending the honeydew disrupt the parasites and predators that would otherwise control it.",
+          "why": "SPLIT limb: full prose from the mealybug's own anchors.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/grape-mealybug/ 'The grape mealybug has two generations a year and usually overwinters in the egg stage.'; uc_ipm home fruit-tree page https://ipm.ucanr.edu/home-and-landscape/mealybugs-invertebrates/ 'Manage ants, which are attracted to honeydew and inhibit the activities of natural enemies.' / 'Populations often drop in summer.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "UC IPM's advice for a home fruit tree is that spraying is usually not worth it and does not work well, because the waxy coat sheds the spray and the mealybugs hide where it cannot reach. Instead, keep ants off the tree with a sticky band on a trunk wrap, pick or prune off the clumps you can see, cut away the suckers at the base where the young ones gather, and let the tiny wasps and lady beetles do the rest.",
+          "why": "SPLIT limb: the bundle's alcohol-swab and spot-spray advice is scoped by the Pest Note to houseplants and interiorscapes; for home fruit trees the same program says treatment is usually not justified.",
+          "anchor": "uc_ipm home fruit-tree page https://ipm.ucanr.edu/home-and-landscape/mealybugs-invertebrates/ 'Mealybugs are sensitive to heat and their waxy coat protects them from insecticides. Treatments are usually not justified or effective on home fruit trees.' (read first-party 2026-09-04); uc_ipm PN Mealybugs 'If you find an infestation, physically remove the insects by handpicking or prune them out.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Treatments are usually not justified or effective on home fruit trees, in UC IPM's words; mealybugs are heat-sensitive, their wax shields them, and home insecticides are not very effective on larger plants. The working controls are ant management so the encyrtid parasites (Acerophagus notativentris, A. angelicus, Chrysoplatycerus splendens) and the predators (the gall midge Dicrodiplosis californica, the lady beetle Nephus sordidus, green lacewings) can operate, physical removal by handpicking or pruning out infested growth including basal suckers, and a forceful water spray on exposed colonies. Soap, oil or neem give some suppression of young nymphs only, and azadirachtin is noted as effective on immature grape mealybug in orchards.",
+          "why": "SPLIT limb: full prose from the mealybug's own anchors; the bundle's spray-first advice is replaced by the program's own do-not-treat statement.",
+          "anchor": "uc_ipm home fruit-tree page https://ipm.ucanr.edu/home-and-landscape/mealybugs-invertebrates/ 'Treatments are usually not justified or effective on home fruit trees.'; uc_ipm PN Mealybugs 'Home and garden insecticides are not very effective for mealybugs, especially on larger plants.' / 'Insecticidal soaps, horticultural oil, or neem oil insecticides applied directly on mealybugs can provide some suppression, especially against younger nymphs'; uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/grape-mealybug/ 'The parasites of grape mealybugs are all wasps in the family Encyrtidae.' / 'The neem tree extract, azadirachtin, is effective on immature grape mealybugs.'"
+        },
+        "prevention_beginner": {
+          "new": "Thin the fruit so that no two touch, since that is where these insects settle and do their damage. Peel off loose bark on the trunk in winter, where the eggs spend the cold months, and keep ants off the tree. Do not overfeed with nitrogen, which pushes the soft growth they like. Check the crown end of the fruit and the branch crotches, where they hide.",
+          "why": "SPLIT limb: the bundle's 'airflow and light' claim has no mealybug anchor; the stated cultural control, thinning so fruit do not touch, was missing.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/grape-mealybug/ 'Cultural Control: Thinning fruit so none are touching can reduce mealybug damage.'; uc_ipm home fruit-tree page 'Removal of overwintering sites, such as loose bark, can reduce mealybug numbers.'; uc_ipm PN Mealybugs 'Avoid unnecessary applications of nitrogen fertilizer on plants with mealybugs.'"
+        },
+        "prevention_seasoned": {
+          "new": "Thinning fruit so none are touching is the one cultural control UC IPM states for this pest on pomegranate. Removal of overwintering sites such as loose bark reduces numbers, and avoiding unnecessary nitrogen matters because high rates with regular irrigation stimulate tender growth and mealybug egg production. Keep ants out of the canopy, avoid the broad-spectrum sprays that remove the parasites, and expect summer heat to do part of the work. The mealybug destroyer, Cryptolaemus montrouzieri, does not tolerate cold winters.",
+          "why": "SPLIT limb: full prose from the mealybug's own anchors.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/grape-mealybug/ 'Thinning fruit so none are touching can reduce mealybug damage.'; uc_ipm PN Mealybugs 'High rates of nitrogen coupled with regular irrigation may stimulate tender new plant growth as well as mealybug egg production.' / 'The mealybug destroyer lady beetle, Cryptolaemus montrouzieri, is the most important of these predators in many areas. It does not tolerate cold winters'"
+        }
+      }
+    },
+    {
+      "name": "Scale insects",
+      "id": "scale-insects",
+      "type": "insect",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "handpick",
+          "note_beginner": "On a young or small pomegranate, cut off the few twigs that are crusted with scale and put them in the trash. It only makes sense when the scale is confined to a few spots; on a big tree the wasps and the weather do this job better than pruning could.",
+          "note_seasoned": "UC IPM's Pest Note allows pruning off heavily infested twigs and branches if they are limited to a few parts of small plants; the scale come off with the wood. On pomegranate black scale typically settles on the stem just above a fruit, so the twig cut can cost the fruit. This is the only hand removal that fits an insect glued to the bark; picking individual scales is not practical."
+        },
+        {
+          "method": "ant_exclusion",
+          "note_beginner": "If there is an ant trail on the trunk leading to the scale, fit a sticky band on a wrap around the trunk and prune any branch that bridges to the ground, a fence or a neighboring plant. The ants chase off the tiny wasps that kill scale; without the ants, the wasps usually win. You do not need to get rid of every ant, just the trail up the tree.",
+          "note_seasoned": "Controlling ants that interfere with parasites and predators improves natural enemy activity, but UC IPM adds that an ant-free orchard is not necessary for adequate biological control of soft scales on pomegranate. The Pest Note's mechanics: prune the branches or weeds that bridge from buildings or the ground, wrap the trunk with fabric, heavy paper or tape, and the sticky material goes on that wrap, never on bare bark."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Tiny wasps kill most scale on pomegranate, so well that by September nearly every brown soft scale on the fruit can be dead already, and if you do not spray, next year's scale is usually scarce. Protect them by skipping insect sprays and keeping ants off; small dark lady beetles help too.",
+          "note_seasoned": "The primary parasites are Metaphycus and Coccophagus; parasitism close to 100 percent has been observed in September for brown soft scale on pomegranate fruit, and if pesticide applications are avoided, scale numbers the following year are very low. Specialized scale-feeding lady beetles are Chilocorus, Hyperaspis and Rhyzobius. UC IPM's judgment on citricola scale is not to apply insecticides, and that nymphs on 20 to 30 percent of leaves may be tolerable; ants, dust and persistent broad-spectrum insecticides are the three things that disrupt this."
+        },
+        {
+          "method": "horticultural_oil",
+          "note_beginner": "If scale is building year after year, the spray three extension services agree on is horticultural oil on the bare tree in winter, which smothers the scale wintering on the bark; the two Southeast guides give it at 3 percent. The other time it works is early summer, when the tiny crawlers are out on the twigs and leaves, and then it only kills what it wets. Never mix oil with sulfur, and keep an oil spray well away from any sulfur dusting. Skip it on a drought-stressed tree, in heat above 90°F, or when anything is in flower.",
+          "note_seasoned": "UGA and UF/IFAS both give a 3 percent dormant oil in winter, when the leaves are off, as effective against scale on pomegranate; UC IPM's Pest Note calls for a well-timed and thorough oil spray either in the dormant season or when crawlers are active, and for deciduous plants specifies thoroughly spraying the bark of terminal shoots in winter. Crawlers of all four species emerge from June into July; double-sided sticky tape around small branches catches them moving and times a growing-season spray. Both Southeast guides also prescribe a June sulfur dusting for mites on this crop, and oil is never mixed with sulfur nor applied close to it in time. Bee precaution: not on anything in flower."
+        }
+      ],
+      "sources": [
+        "uc_ipm",
+        "uga_ext",
+        "uf_ifas_edis"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/agriculture/pomegranate/soft-scales/",
+          "verified": "2026-09-04"
+        },
+        "uga_ext": {
+          "url": "https://fieldreport.caes.uga.edu/publications/C997/pomegranate-production/",
+          "verified": "2026-09-04"
+        },
+        "uf_ifas_edis": {
+          "url": "https://edis.ifas.ufl.edu/publication/MG056",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_beginner": {
+          "new": "Small brown or dark bumps that do not move, stuck to twigs, the undersides of leaves and the skin of the fruit, often on the stem just above a fruit. The tell-tale damage on pomegranate is a pale spot on the rind where a scale sat and blocked the sun, so the skin under it never colored. These scales leave a little pile of dry sugar rather than the sticky mess aphids make, and it brushes off; black sooty mold on a pomegranate points to aphids or whiteflies, not scale.",
+          "why": "SPLIT limb: the bundle's honeydew and sooty mold sentence is refuted for scale on this crop, and the calyx harborage is stated for mealybugs only.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/soft-scales/ 'The most important economic damage from all four soft scales is the light-colored spot left when a scale is removed from a fruit, where the scale has blocked sunlight and prevented fruit coloring.' / 'The harmful honeydew and sooty mold associated with these soft scales in citrus and olives has not been observed on pomegranates.' / 'Heavy honeydew and sooty mold in pomegranates is typically caused by aphids, whiteflies, or cherry leafhoppers.' / 'Black scale has an affinity for twigs, and typically settles on the stem just above a fruit.'"
+        },
+        "symptoms_seasoned": {
+          "new": "Immobile, dome-shaped soft scales on twigs, leaf undersides and fruit; black scale favors twigs and typically settles on the stem just above a fruit. The most important damage is the light-colored spot left when a scale is removed from a fruit, where it blocked sunlight and prevented coloring. UC IPM notes the honeydew and sooty mold these species cause on citrus and olive have not been observed on pomegranate: late second instars leave a discrete pile of sugar that does not grow sooty mold and brushes off at harvest. Crawlers appear on twigs and leaves from June into July.",
+          "why": "SPLIT limb: honeydew and sooty mold refuted on this crop (orchestrator V1); the pale rind spot that is the actual damage was missing.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/soft-scales/ 'On pomegranates, late second instars of all four species on twigs and fruit typically produce a discrete pile of sugar, rather than a diffuse scattering of honeydew. The sugar does not grow sooty mold and is easily brushed off during harvest and packing.' / 'All four species produce many crawlers in June through July'"
+        },
+        "cause_beginner": {
+          "new": "Four kinds of soft scale, small sap-sucking insects that settle down under a waxy shell and stay put: black scale, brown soft scale, citricola scale and European fruit lecanium. Georgia adds California red scale. Hot spring weather kills many of the crawlers, so scale is only an occasional problem on pomegranate, and tiny wasps usually finish off the rest.",
+          "why": "SPLIT limb: names the organisms this limb is pinned to.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/soft-scales/ 'Hot temperatures during crawler development in the spring typically limit population growth. Therefore, scales are rarely found in orchards and are only occasional pests. Citricola scale, black scale, brown soft scale, and European fruit lecanium are all soft scales found on pomegranate.'; uga_ext C997 'scale (citricola, black and California red)'"
+        },
+        "cause_seasoned": {
+          "new": "Four soft scales, Saissetia oleae (black scale), Coccus hesperidum (brown soft scale), Coccus pseudomagnoliarum (citricola scale) and Parthenolecanium corni (European fruit lecanium), per UC IPM; UGA lists citricola, black and California red scale. Hot temperatures during crawler development in spring typically limit population growth, so scales are rarely found and are only occasional pests. Black scale overwinters as immatures under trunk bark, lecanium as nymphs on twigs; all four produce crawlers in June and July. Ants tending them interfere with the parasites, though UC IPM notes an ant-free tree is not necessary for adequate control.",
+          "why": "SPLIT limb: full prose from the scale's own anchors; 'ants spread them' had no anchor.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/soft-scales/ 'Black scale: Saissetia oleae / Brown soft scale: Coccus hesperidum / Citricola Scale: Coccus pseudomagnoliarum / European fruit lecanium: Parthenolecanium corni' / 'Controlling ants that interfere with parasites and predators will improve natural enemy activity, but an ant-free orchard is not necessary for adequate biological control.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "Most years nothing is needed: heat and tiny wasps keep scale down, and if you avoid spraying, next year's numbers are usually very low. Keep ants off the trunk with a sticky band on a wrap so the wasps can work. If a twig is crusted with scale on a small plant, cut it off. If scale keeps building, the stated spray is horticultural oil on the leafless tree in winter, which smothers the scale on the bark; an early-summer spray works only while the crawlers are out, in June and July, and only where it wets them.",
+          "why": "SPLIT limb: the bundle's alcohol swab and 'remove fruit with infested crowns' belong to the mealybug half or to no source; the dormant oil three institutions state was missing.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/soft-scales/ 'If pesticide applications are avoided, scale numbers the following year are very low.'; uga_ext C997 'The use of dormant oil sprays (3 percent) in winter has been effective against scale.'; uf_ifas_edis MG056 'Scale insects can be controlled by an application of 3% oil spray during the winter when the leaves are not present.'; uc_ipm PN 7408 https://ipm.ucanr.edu/home-and-landscape/scales/ 'make a well-timed and thorough spray using horticultural oil during the dormant season or when scale crawlers are active in the growing season.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Hot weather and natural enemies keep soft scales below damaging levels in most years; parasitism of brown soft scale on fruit has been observed near 100 percent in September, and where pesticide applications are avoided scale numbers the following year are very low. UC IPM says not to apply insecticides for citricola scale at all. Beyond that: control ants that interfere with Metaphycus and Coccophagus parasites and the scale-feeding lady beetles (Chilocorus, Hyperaspis, Rhyzobius); prune off heavily infested twigs on a small plant; and where treatment is warranted, a thorough oil spray on the bark in the dormant season, which UGA and UF/IFAS both give as a 3 percent oil in winter when the leaves are off, or an oil timed to the June to July crawlers using double-sided sticky tape on branches to catch them moving.",
+          "why": "SPLIT limb: full prose from the scale's own anchors.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/soft-scales/ 'On pomegranates, parasitism close to 100% has been observed in September for brown soft scale on fruit' / 'Do not apply insecticides for citricola scale.' / 'Specialized scale-feeding lady beetles include Chilocorus, Hyperaspis, and Rhyzobius species' / 'Sticky tape traps can also be applied by wrapping double-sided sticky tape around small branches to catch moving crawlers.'; uc_ipm PN 7408 'You can prune off heavily infested twigs and branches, if they are limited to a few parts of small plants.'"
+        },
+        "prevention_beginner": {
+          "new": "Do not spray for scale unless you have to, because the sprays kill the wasps that were doing the job for free. Keep ants out of the tree. Where summers are hot, pruning to open up the canopy keeps black scale and citricola scale down. Look on the twigs and leaf undersides in early summer for the tiny crawlers, which is the other time a spray can reach them, besides the winter oil on the bare bark.",
+          "why": "SPLIT limb: the bundle's 'inspect the fruit crown' is a mealybug harborage; the open-canopy pruning is stated for scale.",
+          "anchor": "uc_ipm PN 7408 https://ipm.ucanr.edu/home-and-landscape/scales/ 'In areas with hot summers, pruning to open up canopies can reduce populations of black scale, citricola scale, cottony cushion scale, and possibly other scales'; uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/soft-scales/ 'In olives, pruning to keep trees open usually keeps black scale numbers low. This is probably true in pomegranates also, and for the other scale species.'; uc_ipm PN 7408 'To control most scales overwintering on deciduous woody plants, thoroughly spray the bark of terminal shoots with oil during winter.'"
+        },
+        "prevention_seasoned": {
+          "new": "Conservation is the program: avoiding insecticides keeps Metaphycus and Coccophagus parasitism high, and hot summers do the rest. In areas with hot summers, pruning to open canopies reduces black scale and citricola scale, and UC IPM judges that probably true on pomegranate for the other species too. Control ants if they are tending scales, without expecting an ant-free tree. Wrap double-sided sticky tape around small branches in late spring to catch crawlers and time any oil spray to their June to July emergence; a dormant oil on the bark in winter is the alternative timing.",
+          "why": "SPLIT limb: full prose from the scale's own anchors.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/soft-scales/ 'Hot weather and natural enemies keep soft scales below economically significant levels in most years in most orchards.' / 'The primary parasites include Metaphycus and Coccophagus.'; uc_ipm PN 7408 'Transparent double-sided sticky tape can be used to effectively time a foliar insecticide application.' / 'To control most scales overwintering on deciduous woody plants, thoroughly spray the bark of terminal shoots with oil during winter.'"
+        }
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "name": "Alternaria heart rot (black heart)",
+      "id": "alternaria-heart-rot",
+      "type": "fungal",
+      "severity": "medium",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Clean-up is the control here, because no spray reaches this fungus once the flower closes over it. Pick up and throw away old fruit on and under the tree, especially the dried, shriveled ones, and cut out dead branches; the fungus lives through the winter in that debris and in the dust that blows onto the flowers. At harvest, shake the tree gently so the infected fruit, which look sound but are lighter, drop to the ground, and cut any doubtful fruit open before you store it.",
+          "note_seasoned": "The pathogens overwinter on plant debris in or on the soil and in mummified fruit, with airborne spores carried to flowers or wounded fruit in soil dust, so UC IPM's cultural program is dust control and sanitation, removal of old fruit and dead branches. Because the fruit crown covers the blossom tissue, preharvest sprays are generally ineffective, and Georgia's guide says plainly there is no known method of control; petal fall is the most susceptible stage and the bloom is long and protracted, so even commercial bloom sprays rate least effective. Two harvest-time steps belong with sanitation: gently shaking the tree to drop infected but healthy-appearing fruit, and thorough sorting so diseased fruit is not stored. Expected loss is usually under 1 percent and up to 6 percent in a bad year."
+        }
+      ],
+      "sources": [
+        "uc_ipm",
+        "uga_ext"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/agriculture/pomegranate/alternaria-fruit-rot-black-heart/",
+          "verified": "2026-09-04"
+        },
+        "uga_ext": {
+          "url": "https://fieldreport.caes.uga.edu/publications/C997/pomegranate-production/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "cause_seasoned": {
+          "new": "The fungi Alternaria alternata and A. arborescens infect through the open flower, most readily at petal fall, when rain falls during bloom and early fruit development, then grow silently inside the fruit with no external decay. They overwinter on plant debris and in mummified fruit, and their spores travel on wind and soil dust; punctures from fruit-piercing insects and birds give a second way in, and UC IPM ties internal black rot on pomegranate to the leaf-footed bug's feeding wounds. This is a disease of California's hot, dry pomegranate country in years with wet bloom weather: a Georgia survey did not find it, and Florida's disease survey does not list it. The driver is moisture during bloom, not a humid climate as such.",
+          "why": "'bigger problem in humid climates' is backwards: UGA C997 found Alternaria absent in its Georgia orchard and calls it a major problem in California, and UF/IFAS PP349's Florida survey does not list it. 'related molds' was vague where UC IPM names two species; the overwintering sites and the dust route the sanitation step targets were missing. The leaf-footed bug is tied to internal black rot in the bug's own UC IPM page, not to Alternaria by name (the Alternaria page says 'insect and bird punctures').",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/alternaria-fruit-rot-black-heart/ 'Alternaria Fruit Rot (Black Heart): Alternaria alternata, Alternaria arborescens' / 'Alternaria fruit rot infections commonly begin in the orchard following rain during flowering and early fruit development. The fungus can grow inside the fruit without external decay symptoms.' / 'The pathogens overwinter on plant debris in or on the soil and in mummified fruit. The spores are airborne and can be carried to the flowers or wounded fruit with soil dust. Infections may also start from insect and bird punctures on fruit. While San Joaquin Valley research suggests that the petal fall stage is the most susceptible to infection, infection can occur throughout the bloom and fruit development periods.'; uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/leaffooted-bug/ 'opportunistic pathogens enter the fruit through feeding wounds and cause soft rot on the fruit surface or black rotten areas within the fruit.'; uga_ext C997 'One of the most interesting findings was that Alternaria spp. was not present. This is a major problem in some other production areas (California).' / 'There is some evidence suggesting that occurrence is greater when moisture is present during bloom.'"
+        },
+        "cause_beginner": {
+          "new": "A fungus called Alternaria gets into the fruit through the open flower when it rains during bloom, and then grows quietly inside while the outside looks fine. It carries over on old fruit and plant litter and rides in on wind and dust. Holes made by fruit-piercing bugs and birds let it in too. Its home is California's pomegranate country, in years with a wet bloom; a Georgia orchard survey did not find it, and Florida's disease guide does not list it. What matters is rain while the flowers are open, not how humid the summer is.",
+          "why": "'so it is worse in humid areas' is backwards (see cause_seasoned); the overwintering and dust route were missing.",
+          "anchor": "uga_ext C997 'One of the most interesting findings was that Alternaria spp. was not present. This is a major problem in some other production areas (California).' / 'Even though Alternaria spp. was not present at the Ponder Farm orchard that does not mean that it is not present in other production regions in the state.'; uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/alternaria-fruit-rot-black-heart/ 'infections commonly begin in the orchard following rain during flowering and early fruit development' / 'The pathogens overwinter on plant debris in or on the soil and in mummified fruit.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "There is no cure once the interior is rotting, and no preventive spray either: the fruit crown covers the blossom tissue, so preharvest sprays are generally ineffective, and Georgia's guide states there is no known method of control. What is available is cultural: dust control, sanitation (old fruit and dead branches removed), steady irrigation that avoids both water stress and overwatering because cracked fruit is an entry point, control of the fruit-piercing insects and birds whose wounds open a second door, and at harvest a gentle shake of the tree to drop the infected, healthy-looking fruit, followed by careful sorting before storage.",
+          "why": "'far less of a problem in hot, dry climates' is the reverse of the sources (California is where it is documented); 'keeping the canopy open and airy' has no anchor in any Alternaria document. The stated cultural controls (dust, irrigation against cracking, shake at harvest, sorting) were missing.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/alternaria-fruit-rot-black-heart/ 'Because the fruit crown covers the blossom tissues, preharvest sprays are generally ineffective. Cultural controls can help manage alternaria fruit rot: Use good orchard management practices, such as dust control and sanitation (removal of old fruit and dead branches), to reduce the incidence of the disease. Consider gently shaking the tree at the time of harvest to drop infected, healthy-appearing fruit to the ground. Avoid water stress and overwatering that may result in fruit cracking. Avoid packing diseased fruit by thoroughly sorting and grading'; uga_ext C997 'there is no known method of control'"
+        },
+        "organic_treatment_beginner": {
+          "new": "Once a fruit is rotting inside it cannot be saved, and no spray prevents it, because the crown of the fruit closes over the spot where the fungus gets in. What you can do: keep dust down, pick up old and dried fruit and cut out dead wood, water evenly so the fruit does not crack, keep fruit-piercing bugs and birds off the fruit, and at picking time give the tree a gentle shake so the infected fruit, which are lighter, fall out. Cut open any fruit that feels light before you store it.",
+          "why": "'much less of a problem in hot, dry weather' is backwards; 'keep the plant open and airy' has no anchor; the stated cultural steps were missing.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/alternaria-fruit-rot-black-heart/ 'Consider gently shaking the tree at the time of harvest to drop infected, healthy-appearing fruit to the ground. Avoid water stress and overwatering that may result in fruit cracking.' / 'Infected fruit generally are lighter in weight'"
+        },
+        "prevention_seasoned": {
+          "new": "Sanitation and dust control through the year, irrigation that avoids water stress and overwatering so fruit does not crack, and management of the insects and birds that puncture fruit. Wet weather during the long bloom, especially at petal fall, is the infection window, and nothing applied afterward reaches the blossom tissue under the crown. Losses are usually under 1 percent and up to 6 percent; no resistant cultivar is named in any source.",
+          "why": "'Favor dry-climate siting, open canopies, and drip (not overhead) watering' and 'in humid regions, expect this to be a limiting disease' are unanchored or backwards: no Alternaria document mentions irrigation method or canopy, and the humid-Southeast surveys did not find the disease. The record pointed humid-region growers at the wrong disease.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/alternaria-fruit-rot-black-heart/ 'Estimated losses are usually less than 1% but can be up to 6%.' / 'Avoid water stress and overwatering that may result in fruit cracking.'; uc_ipm treatment-timings page 'Pomegranates have a long, protracted bloom, thus apply when conditions are favorable for disease (i.e., wet conditions).'; uga_ext C997 'Alternaria spp. was not present'"
+        },
+        "prevention_beginner": {
+          "new": "Keep the ground and the tree clean of old fruit and dead branches, keep dust down, and water steadily so the fruit does not split. Keep fruit-piercing bugs and birds off the fruit. The fungus gets in when rain falls on the open flowers, and nothing you spray afterward can reach it, so a wet bloom season means cutting fruit open before you trust it. Most years it spoils only a few fruit.",
+          "why": "'Grow it where summers are hot and dry if you can ... in humid, rainy areas this disease may limit your crop' is backwards; 'water at the ground rather than over the top' has no anchor for this disease.",
+          "anchor": "uga_ext C997 'This is a major problem in some other production areas (California).'; uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/alternaria-fruit-rot-black-heart/ 'Estimated losses are usually less than 1% but can be up to 6%.'"
+        }
+      }
+    },
+    {
+      "name": "Botrytis gray mold / fruit rot",
+      "id": "gray-mold",
+      "type": "fungal",
+      "severity": "medium",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Clear away the old fruit still hanging and the ones lying underneath, along with dead branches and the weeds around the base. The mold's spores wait on that material and blow onto the open flowers, and a fruit infected at bloom carries the mold silently until it is picked and washed or stored. Keeping dust down helps for the same reason.",
+          "note_seasoned": "Botrytis spores reside in or on the soil and on previously infected tissue, weeds and old fruit left on the tree or the orchard floor as mummies, and are spread by wind to senescent flower parts. Good orchard management, dust control and sanitation with removal of old fruit and dead branches, reduces the postharvest incidence of the disease; the extended bloom makes bloom sprays uneconomical and the fruit crown blocks preharvest sprays, so this is the field control. Store sound fruit unwashed and cold, since washing or condensation on the blossom end is what wakes the fungus."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Keep the shrub in sun with space around it so the blossoms dry off fast after rain, fog or dew. This mold gets its start on the fading flower parts, and only when they stay wet for hours, so a plant whose flowers dry by mid-morning gives it far fewer chances over a long bloom.",
+          "note_seasoned": "A generic step from UC IPM's home gray mold guidance rather than its pomegranate page: improve air circulation, because spores germinate only after plants have been continuously wet for 6 or more hours or humidity has stayed above about 90 percent that long, with 70°F to 77°F the favored range. On pomegranate the tissue that matters is the senescent flower parts during a long bloom, so the benefit is a shorter wet period on the blossoms."
+        },
+        {
+          "method": "water_at_the_base",
+          "note_beginner": "Water the ground, not the plant. Irrigation water landing on the open flowers is one of the ways the mold gets its start, along with rain, fog and dew, and you control only the first.",
+          "note_seasoned": "Spores on senescent flower tissue such as stamens germinate and infect when there is free water on the surface from rain, dew, fog or irrigation; keeping irrigation off the canopy through bloom removes the one wetting source in your hands. UC IPM's home guidance is drip or microsprinklers rather than wetting foliage. It changes nothing for a fruit already carrying a quiescent infection."
+        }
+      ],
+      "sources": [
+        "uc_ipm",
+        "ucanr_ext"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/agriculture/pomegranate/gray-mold-botrytis-fruit-rot/",
+          "verified": "2026-09-04"
+        },
+        "ucanr_ext": {
+          "url": "https://ucanr.edu/site/fruit-nut-research-information-center/pomegranate-diseases-disorders",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "A fuzzy gray coat of spores at the crown (blossom) end, on the old flower parts, appearing after the fruit is washed or held in humid storage rather than on the tree; the crown tissue is colonized and the rot grows into the fruit. Stored fruit at high humidity often decays completely, sometimes with grayish-white mycelium and small black sclerotia on the surface. Decay can also start from the stem-end wound, especially where the stem was torn off entirely.",
+          "why": "'spreads in cool, wet, or humid conditions' is wrong on temperature (decay develops quickly at 65 to 75°F) and 'can move between touching fruit' has no anchor on this crop. The record missed that the symptoms appear after harvest, at the blossom end, and from the stem-end wound.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/gray-mold-botrytis-fruit-rot/ 'Typically, once the fruit is washed or stored at high humidity, water or condensation on the blossom end activates the fungal mycelium to begin growing. The pathogen sporulates on the flower parts and the typical grayish coating of spores develops. Eventually the crown tissue will be colonized, and the fungus will grow into the fruit tissue.' / 'Infected fruit held in storage at high humidity often completely decays and shows the typical gray coating of spores; it may also have grayish-white mycelium and black sclerotia on the surface. Decay can also start from the stem end wound, especially if the stem is entirely removed.'"
+        },
+        "symptoms_beginner": {
+          "new": "A fuzzy gray mold that shows up in the crown end of the fruit, on the dried flower bits, usually after the fruit has been washed or kept somewhere damp, and then spreads into the fruit. In storage a fruit can rot right through, sometimes with grayish-white fuzz and tiny black specks on the skin. Rot can also start where the stem was torn off.",
+          "why": "'cool, damp weather' is wrong on temperature and 'spread from one fruit to another where they touch' has no anchor on this crop.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/gray-mold-botrytis-fruit-rot/ 'water or condensation on the blossom end activates the fungal mycelium to begin growing' / 'Decay can also start from the stem end wound, especially if the stem is entirely removed.'"
+        },
+        "cause_seasoned": {
+          "new": "The fungus Botrytis cinerea infects the flower parts at bloom, when free water from rain, dew, fog or irrigation sits on the senescent stamens, and then stays quiescent inside the crown until the fruit ripens. Washing or condensation on the blossom end activates it, and decay develops quickly at about 65 to 75°F. Spores come from soil, infected debris, weeds and mummified fruit and spread on the wind. It is one of the most important causes of postharvest decay in pomegranates.",
+          "why": "'cool, wet, humid conditions' and 'overripe fruit' are unanchored: UC IPM gives moderate decay temperatures (65 to 75°F) and a bloom-time infection that stays latent, not an infection of ripe fruit. The latent-infection mechanism, which is why no later spray works, was missing.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/gray-mold-botrytis-fruit-rot/ 'Gray mold infects flower parts at bloom time and remains quiescent (inactive) until fruit ripening.' / 'Spores landing on senescent flower tissues such as stamens ... germinate and produce an infection when there is free water on the plant surface from rain, dew, fog, or irrigation. Decay develops quickly when shelf temperature is about 65° to 75°F' / 'Gray mold is one of the most important causes of postharvest decay in pomegranates.'; ucanr_ext FNRIC 'Gray mold (Botrytis cinerea) causes problems after harvest. While the tree is flowering, airborne spores are spread to the open flowers and enter the fruit.'"
+        },
+        "cause_beginner": {
+          "new": "A fungus called Botrytis, or gray mold, that gets into the flowers during bloom when they are wet from rain, dew, fog or sprinklers, then sits quietly inside the crown of the fruit until picking. Washing the fruit or storing it somewhere damp wakes it up, and it rots fastest at mild room temperatures, around 65 to 75°F. Its spores come from old fruit, weeds and plant litter under the tree. It is a leading cause of rot in stored pomegranates.",
+          "why": "'in cool, damp weather' and 'damaged or overripe fruit' are unanchored; the bloom-time latent infection was missing.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/gray-mold-botrytis-fruit-rot/ 'Gray mold infects flower parts at bloom time and remains quiescent (inactive) until fruit ripening.' / 'Decay develops quickly when shelf temperature is about 65° to 75°F'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "No home spray reaches it: the extended bloom makes bloom sprays impractical and the fruit crown covers the blossom tissue, which is why commercial control is postharvest. At home the controls are sanitation (old fruit, dead branches, weeds) and dust control in the field, then handling: clip the stem rather than pull it, do not wash fruit before storage, and refrigerate promptly at about 41°F with high humidity, since free water and mild temperatures are what activate the fungus. Discard any fruit showing gray fuzz at the crown; it cannot be saved.",
+          "why": "'harvest before rains' and 'remove moldy flowers' have no anchor on this crop; the one storage rule the source gives, that washing and condensation activate the fungus, was missing, and the storage temperature was unstated.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/gray-mold-botrytis-fruit-rot/ 'The extended flowering period of pomegranates makes bloom sprays for gray mold uneconomical and the fruit crown that covers the blossom prevents the use of preharvest sprays. However, postharvest sprays can be very effective.' / 'Good orchard management practices, such as dust control and sanitation (removal of old fruit and dead branches), will reduce the postharvest incidence of disease.' / 'The optimal postharvest storage temperature for pomegranates is 41°F (5°C) for up to two months and 45°F (7°C) for longer than two months. Store at 90 to 95% relative humidity.' / 'Decay can also start from the stem end wound, especially if the stem is entirely removed.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "There is no spray that fixes this at home, because the fungus is already sealed under the crown of the fruit before you could reach it. What works: keep old fruit, dead wood and weeds cleared from around the tree, cut the fruit off with a bit of stem instead of pulling it, do not wash fruit you plan to keep, and get it into the refrigerator soon, at about 41°F, since dampness and warmth are what set the mold off. Throw out any fruit with gray fuzz in the crown.",
+          "why": "'pick before the rains' and 'pick off moldy flowers' have no anchor on this crop; the no-wash storage rule and temperature were missing.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/gray-mold-botrytis-fruit-rot/ 'once the fruit is washed or stored at high humidity, water or condensation on the blossom end activates the fungal mycelium' / 'The optimal postharvest storage temperature for pomegranates is 41°F (5°C)'"
+        },
+        "prevention_seasoned": {
+          "new": "Sanitation and dust control in the field, irrigation kept off the flowers through the long bloom, and post-harvest handling: an intact clipped stem, no washing before storage, and quick cooling to about 41°F at high humidity. Air movement around the plant shortens the wet periods on flower tissue that infection needs. Split or wounded fruit is an entry point for other fruit rots; for gray mold the stated wound is the stem end.",
+          "why": "'Cull split and wounded fruit, which are entry points' is not anchored for this disease (the source names the stem-end wound); the bloom-time irrigation route and the no-wash storage rule were missing.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/gray-mold-botrytis-fruit-rot/ 'free water on the plant surface from rain, dew, fog, or irrigation' / 'Decay can also start from the stem end wound' / 'Store at 90 to 95% relative humidity.'; uc_ipm home https://ipm.ucanr.edu/home-and-landscape/botrytis-blight-or-gray-mold/ 'Avoid wetting foliage, such as by using drip or microsprinkler irrigation. Improve air circulation around plants.' / 'Gray mold is particularly troublesome under high humidity and moderate temperatures (70° to 77°F)'"
+        },
+        "prevention_beginner": {
+          "new": "Keep old fruit and litter cleared away beneath the tree, keep dust down, and keep sprinkler water off the flowers. At picking, clip the stem instead of tearing it, do not wash fruit you are storing, and chill it soon. Give the plant sun and air so the flowers dry fast after rain or dew.",
+          "why": "'Remove split or damaged fruit, which is where the mold gets in' is not anchored for this disease; the stem clipping, no-wash and cooling steps were missing.",
+          "anchor": "uc_ipm https://ipm.ucanr.edu/agriculture/pomegranate/gray-mold-botrytis-fruit-rot/ 'Decay can also start from the stem end wound, especially if the stem is entirely removed.' / 'once the fruit is washed or stored at high humidity, water or condensation on the blossom end activates the fungal mycelium'"
+        }
+      }
+    },
+    {
+      "name": "Cercospora fruit and leaf spot",
+      "id": "cercospora-fruit-and-leaf-spot",
+      "type": "fungal",
+      "severity": "medium",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Clean-up is the control. Gather up and dispose of fallen leaves, dropped fruit and dead or spotted stems, and do it thoroughly in winter after the leaves fall, because the fungus waits in that litter for the next season. Prune in winter, when the plant is bare and the fungus is not making spores, and burn or bin what you cut. In South Carolina the spots are common in humid weather and the extension service says they do not need treating; in Florida a neglected planting can lose most of its crop to its fungal diseases together, so the cleanup matters more the wetter your climate.",
+          "note_seasoned": "UF/IFAS puts field sanitation at the center of pomegranate disease management: clear leaf litter, fruit and diseased stems, especially in winter when the trees drop leaves that may be harboring pathogens from the previous season, and remove infected material to a safe distance and burn it as permitted. Prune in winter when spore production is low, or late fall when wounds heal fastest, in dry weather and with angled cuts. Fungicides currently labelled for pomegranate are ineffective against this pathogen per the same document, so there is no spray step; Clemson's home verdict is that the leaf and fruit spots common in humid South Carolina do not require treatment, while UF/IFAS attributes losses of up to 90 percent, from Florida's pomegranate diseases together rather than this fungus alone, to a poorly managed orchard. Resistant varieties are under evaluation at UF, but none is named."
+        }
+      ],
+      "sources": [
+        "uf_ifas_edis",
+        "uga_ext",
+        "clemson_hgic"
+      ],
+      "anchoring_urls": {
+        "uf_ifas_edis": {
+          "url": "https://edis.ifas.ufl.edu/publication/PP349",
+          "verified": "2026-09-04"
+        },
+        "uga_ext": {
+          "url": "https://fieldreport.caes.uga.edu/publications/C997/pomegranate-production/",
+          "verified": "2026-09-04"
+        },
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/pomegranate/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "On leaves, small irregular dark brown spots that enlarge, develop a dark brown margin around a gray center, sometimes with concentric rings, and take on a greenish halo as the leaf yellows; severe defoliation follows and can cut yield. On fruit, small irregular black spots that merge into larger blotches, confined to the skin surface; the rind and arils beneath are unaffected, which separates it from anthracnose. Symptoms vary among cultivars. Most common in warm, humid, rainy regions.",
+          "why": "'heavily spotted fruit is russeted' has no anchor: UF/IFAS describes superficial black lesions that coalesce into blotches. The leaf lesion description that distinguishes this disease was missing.",
+          "anchor": "uf_ifas_edis PP349 https://edis.ifas.ufl.edu/publication/PP349 'On the leaves, the symptoms start as small (0.1–0.3 cm), irregularly shaped dark brown lesions. These lesions can expand (0.5–1.2 cm) and develop a distinct, dark brown margin with gray coloration. Sometimes the lesions are large enough to observe concentric rings of alternating dark and light gray in the lesion center. A greenish halo often forms around the lesions and becomes very pronounced as the leaves yellow from chlorosis. Eventually leaves senesce, leading to severe defoliation, which can reduce yields. Symptoms on the fruit are small irregular black lesions that can later coalesce into bigger blotches. Lesions caused by P. punicae on the fruits are superficial only, contrary to Colletotrichum and other fungal pathogens, which affect the rind and arils. The symptoms on leaves and fruits can vary among the different pomegranate varieties.' (read first-party 2026-09-04)"
+        },
+        "symptoms_beginner": {
+          "new": "Small dark brown spots on the leaves that grow, turn gray in the middle with a dark rim, and get a greenish ring around them as the leaf yellows; a badly hit plant drops most of its leaves. On the fruit, small black spots that run together into blotches on the skin only, without rotting the inside. It is worst in warm, humid, rainy areas.",
+          "why": "'looks rough and russeted' has no anchor; the lesions are superficial per UF/IFAS.",
+          "anchor": "uf_ifas_edis PP349 'Lesions caused by P. punicae on the fruits are superficial only' / 'Eventually leaves senesce, leading to severe defoliation'"
+        },
+        "cause_seasoned": {
+          "new": "The fungus Pseudocercospora punicae (Cercospora punicae in older references), a very common disease of pomegranate in Florida and found on harvested fruit in Georgia. It is one organism; anthracnose (Colletotrichum) and Botryosphaeria stem canker are separate diseases that often occur alongside it in the same humid climates. The fungus carries over in leaf litter, dropped fruit and diseased stems from the previous season, and humid subtropical weather favors it.",
+          "why": "'with related fungi such as Colletotrichum and Botryosphaeria' folded two separate diseases into this one: UGA lists Colletotrichum among organisms present without symptoms and shows Botryosphaeria as a separate example, and UF/IFAS gives each its own section. 'thrives on prolonged leaf and fruit wetness' is stated for anthracnose, not this fungus, and 'a leading reason pomegranate fruits poorly in the Southeast' is no source's claim.",
+          "anchor": "uf_ifas_edis PP349 'Pseudocercospora punicae causes another very common disease on pomegranate in Florida' / 'mixed infections of leaves and fruit by several fungal pathogens are fairly common' / 'Florida's humid subtropical to tropical climate is favorable for not only pomegranate tree establishment, but also several diseases.' / 'clear leaf debris from around trees that may be harboring pathogens from the previous season'; uga_ext C997 'fruit harvested from the Ponder Farm Pomegranate Orchard displayed symptoms caused by the infection of Cercospora punicae and Botryosphaeria spp.' / 'Other organisms that were also present on the fruit (but did not cause any symptoms) included: Aspergillus, Cladosporium, Colletotrichum'"
+        },
+        "cause_beginner": {
+          "new": "A fungus with the tongue-twisting name Pseudocercospora punicae, common on pomegranates in Florida and found in Georgia too. It is one disease; the anthracnose and stem canker fungi that show up in the same humid places are different problems. It survives from one year to the next in fallen leaves, old fruit and diseased stems, and damp, warm weather favors it.",
+          "why": "'along with related fungi in the same wet climates', 'when leaves and fruit stay wet for a long time' and 'a big reason pomegranate does poorly in the humid Southeast' are unanchored or wrong (see cause_seasoned).",
+          "anchor": "uf_ifas_edis PP349 'Pseudocercospora punicae causes another very common disease on pomegranate in Florida'; uga_ext C997 'Cercospora punicae'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Sanitation is the control: clear leaf litter, dropped fruit and diseased stems, above all in winter after leaf fall, and remove or burn infected material. Prune in winter when spore production is low, in dry weather, with angled cuts. UF/IFAS states that fungicides currently labelled for pomegranate are ineffective against this pathogen, and Clemson's home verdict is that the leaf and fruit spots common in humid South Carolina do not require treatment. Losses of up to 90 percent, to Florida's fungal diseases together rather than this one alone, are reported only for a poorly managed orchard, so the cleanup is what separates a nuisance from a loss.",
+          "why": "'open, sunny, breezy site ... prune for airflow, water at the ground' has no anchor in any document on this fungus (PP349 read first-party 2026-09-04: its site guidance is a general list), and 'expect this disease to cap fruit quality regardless of care' contradicts both sources: Clemson says no treatment is required and UF/IFAS ties heavy loss to poor management.",
+          "anchor": "uf_ifas_edis PP349 'Sanitation is best achieved by clearing leaf litter, fruit, and diseased stems from orchards. Especially during the winter when many trees go dormant and lose their leaves, it is very important to clear leaf debris from around trees that may be harboring pathogens from the previous season.' / 'It is best to prune trees in the winter when spore production is low and the plants are dormant, or late in fall when wounds are less susceptible to infection and heal more rapidly.' / 'Fungicides currently labelled for pomegranate are ineffective against the fungal pathogens reviewed in this publication.' / 'Florida's humid subtropical to tropical climate is favorable for not only pomegranate tree establishment, but also several diseases. As a consequence, a poorly managed orchard compromised by high disease levels can lead to yield losses of up to 90%'; clemson_hgic HGIC 1359 'Leaf and fruit spots are common in SC due to our high humidity, but don't require treatment.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "The fix is cleanup rather than spray. Gather up fallen leaves, dropped fruit and spotted or dead stems, especially in winter after the leaves come down, and prune in winter when the plant is bare. Florida's specialists say the fungicides sold for pomegranate do not work on this fungus, and South Carolina's say the spots do not need treating. A plant that is kept clean gets a few spots; a neglected one in a wet climate can lose most of its fruit to this and the other fungal diseases together.",
+          "why": "'plant in an open, sunny, breezy spot ... water at the ground' has no anchor for this fungus; 'this disease will likely limit your fruit quality no matter what' contradicts Clemson and UF/IFAS.",
+          "anchor": "uf_ifas_edis PP349 'Fungicides currently labelled for pomegranate are ineffective against the fungal pathogens reviewed in this publication.' / 'Florida's humid subtropical to tropical climate is favorable for not only pomegranate tree establishment, but also several diseases. As a consequence, a poorly managed orchard compromised by high disease levels can lead to yield losses of up to 90%'; clemson_hgic HGIC 1359 'Leaf and fruit spots are common in SC due to our high humidity, but don't require treatment.'"
+        },
+        "prevention_seasoned": {
+          "new": "Winter cleanup of leaf litter, fruit and diseased stems, winter or late-fall pruning in dry weather, and inspection for diseased branches. UF/IFAS lists orchard design, site selection, planting density and variety selection as the establishment decisions that matter and keeps weed management, irrigation and fertility in the service of plant vigor, without prescribing a layout for this fungus. Resistant varieties are the most economical control in principle, and over 100 cultivars are under evaluation at UF, but no resistant cultivar is named.",
+          "why": "'Site selection is the main defense: open, sloped, breezy ground with strong air movement, especially at bloom' and 'In hot, dry climates it is a minor issue' have no anchor; UF/IFAS's site guidance is a general list, and no source rates the disease in dry climates.",
+          "anchor": "uf_ifas_edis PP349 'Thorough knowledge of orchard design and site selection, planting density, variety selection, and past disease problems is important in establishing a new orchard.' / 'Weed management, irrigation, and fertility management are important in maintaining plant vigor.' / 'It is also important to inspect trees for diseased branches.' / 'The use of resistant varieties is one of the most economical and sustainable practices for disease management. Currently, over 100 pomegranate cultivars are under evaluation for various traits at UF.'"
+        },
+        "prevention_beginner": {
+          "new": "Clean up under the plant every winter, prune when it is bare and the weather is dry, and check for diseased branches. Choose the planting spot and spacing with care when you plant, and keep the plant vigorous with sensible watering and feeding. Varieties that resist it are being tested in Florida, but none has been named yet.",
+          "why": "'an open, breezy, sloped spot with good air movement, wide spacing, an open plant, watering at the ground' and 'In hot, dry climates it is barely a problem' have no anchor.",
+          "anchor": "uf_ifas_edis PP349 'Thorough knowledge of orchard design and site selection, planting density, variety selection, and past disease problems is important in establishing a new orchard.' / 'Prune trees during dry weather'"
+        }
+      }
+    }
+  ],
+  "unreachable_claims": [
+    "leaf-footed-bugs: a cold winter as a control and a mild winter as the outbreak signal (uc_ipm ag 'Cold temperatures near 21°F (-6°C) will kill some exposed bugs'; PN 74168 'Cold winters kill many adults, and major outbreaks often occur after mild winters'). Not a method; carried in the sanitation note and corrected prevention prose.",
+    "leaf-footed-bugs: the dedicated handheld vacuum and the white ground cover (PN 74168). No method; carried inside the handpick note as part of hand removal.",
+    "aphids: tree vigor through proper nutrients and irrigation (uc_ipm ag Cotton Aphid 'Maximize tree health (proper nutrients and irrigation) ... Aphid numbers increase easily on stressed trees'). No method reaches tree vigor for an insect (even_watering does not reach `insect`); carried inside the balance_nitrogen note and corrected prevention prose.",
+    "aphids: winter monitoring for black overwintering eggs on twigs (uc_ipm ag). No monitoring method; carried in the neem_oil note and corrected prose.",
+    "whiteflies: dust control and watering to reduce dusty conditions (PN 7401 'Prevent dusty conditions since dust can kill or disrupt the activity of beneficials' / 'Watering can also reduce the hot, dry dusty conditions'). No method reaches dust for an insect; carried inside the water_spray note and corrected prevention prose.",
+    "whiteflies: the parasitism check with a hand lens (uc_ipm ag 'dark parasitized pupae, empty pupae with round exit holes') as the decision signal before any spray. No monitoring method; carried inside the beneficial_predators and handpick notes.",
+    "mealybugs: thinning fruit so none are touching (uc_ipm ag Grape Mealybug 'Thinning fruit so none are touching can reduce mealybug damage'), the one stated cultural control on this crop. No fruit-thinning method; carried in the corrected prevention prose.",
+    "mealybugs: removal of loose bark as an overwintering site and removal of basal suckers where second-generation crawlers concentrate (uc_ipm home fruit-tree page; ag). garden_sanitation is about debris and culls, not the standing tree's bark; carried inside the handpick note and corrected prevention prose.",
+    "scale-insects: pruning to open the canopy in hot-summer areas (PN 7408 for black and citricola scale; uc_ipm ag 'This is probably true in pomegranates also'). airflow_spacing does not reach `insect`; carried in the corrected prevention prose.",
+    "scale-insects: double-sided sticky tape around small branches to catch and time crawlers (uc_ipm ag; PN 7408). Not yellow_sticky_traps (a different device and purpose); carried inside the horticultural_oil note.",
+    "alternaria-heart-rot: irrigation that avoids water stress and overwatering because cracked fruit is an entry point (uc_ipm ag 'Avoid water stress and overwatering that may result in fruit cracking'). even_watering does not reach `fungal` (the brief's known two-class gap); carried in corrected prose.",
+    "alternaria-heart-rot: dust control (uc_ipm ag 'dust control and sanitation'; spores 'carried to the flowers or wounded fruit with soil dust'). No method; carried inside the garden_sanitation note and corrected prose.",
+    "alternaria-heart-rot: management of fruit-piercing insects and birds as entry-route control (uc_ipm ag Alternaria 'Infections may also start from insect and bird punctures on fruit'; Aspergillus page names leaffooted bugs for THAT rot; leaffooted-bug pages tie 'black rotten areas within the fruit' to feeding wounds without naming the fungus). No cross-problem method; carried in corrected prose. The leaf-footed bug to Alternaria link is the record's two-document INFERENCE, not stated; my prose ties the bug to 'internal black rot' in the bug page's words and does not name Alternaria as its consequence.",
+    "alternaria-heart-rot: shaking the tree at harvest to drop infected, healthy-appearing fruit, and sorting before storage (uc_ipm ag). Carried inside the garden_sanitation note as cull removal.",
+    "gray-mold: post-harvest handling (do not wash before storage; clip rather than tear the stem; store at 41°F, 90 to 95% RH) (uc_ipm ag Gray Mold). cure_and_store is scoped by its own text to bulb, root and tuber crops with a curing step this fruit has none of, so it was not bent to carry this; carried in corrected organic_treatment and prevention prose.",
+    "gray-mold: dust control (uc_ipm ag). No method; carried inside the garden_sanitation note.",
+    "cercospora-fruit-and-leaf-spot: winter or late-fall pruning in dry weather with angled cuts, and inspection for diseased branches (uf_ifas_edis PP349 general management). prune_out_infection is a cut-back-into-clean-wood method for cankers, not a pruning-timing rule for a leaf spot; carried inside the garden_sanitation note and corrected prose.",
+    "cercospora-fruit-and-leaf-spot: orchard design, site selection, planting density and variety selection as establishment decisions (PP349, a general list with no prescription for this fungus). No method; carried in corrected prevention prose without inventing a layout."
+  ],
+  "refusals": [
+    "leaf-footed-bugs: fruit_bagging rung REFUSED. The record's 'bag developing fruit clusters in mesh' has no anchor: PN 74168 prescribes row cover applied before the bugs arrive, and the only bagging sentence in any source (TAMU: 'In some countries, the fruit are covered with paper or plastic bags to protect them from birds, borers, and rodents') is not about this insect. Corrected out of both organic_treatment fields.",
+    "leaf-footed-bugs: neem_oil and pyrethrin NOT written as separate rungs; PN 74168 ranks them with soap as 'some control of young nymphs only', and one soft-chemical rung carries that band. A brief-given commercial monitoring program (scout mid-August through October; per-acre clothianidin/methomyl table) is not carried.",
+    "aphids: weed_host_control rung REFUSED. The crop page states weeds as a fall SOURCE ('cotton aphids move into pomegranate orchards from weeds, cotton, melons, and citrus') but gives no weed-removal instruction; the method's own text wants the host relationship stated. Not bent.",
+    "whiteflies: balance_nitrogen rung REFUSED and the nitrogen sentence corrected out of both prevention fields: the word nitrogen is absent from PN 7401 (record pass, confirmed by the report).",
+    "mealybugs: insecticidal_soap, horticultural_oil and neem_oil rungs REFUSED on this limb. The same UC IPM fruit-tree page that anchors the limb says 'Treatments are usually not justified or effective on home fruit trees' (read first-party 2026-09-04), the Pest Note says home insecticides 'are not very effective for mealybugs, especially on larger plants', and the harborage on this crop is inside the calyx where a contact spray does not reach. The soap/oil/neem 'some suppression of young nymphs' statement is carried in the corrected organic_treatment_seasoned prose, not as a step.",
+    "mealybugs: the bundle's alcohol-swab spot treatment REFUSED and corrected out: PN Mealybugs scopes it to 'houseplants, greenhouses, and interiorscapes where it is not physically possible to remove mealybugs'.",
+    "mealybugs: water_spray NOT written as a rung: the Pest Note allows it only 'If mealybugs are somewhat exposed' and the crop's damage site is the calyx; the forcible-water sentence is carried inside the handpick note.",
+    "scale-insects: yellow_sticky_traps REFUSED: the stated device is transparent double-sided tape wrapped on branches to catch crawlers for timing, not yellow cards for adults.",
+    "scale-insects: the bundle's 'both produce honeydew and sooty mold' REFUSED for this limb (uc_ipm ag: 'has not been observed on pomegranates'; orchestrator V1) and the bundle's 'inside the fruit calyx (crown)' REFUSED for scale (stated for mealybugs only).",
+    "alternaria-heart-rot: airflow_spacing and water_at_the_base rungs REFUSED: no Alternaria document mentions canopy, airflow or irrigation method (the ag page's water sentence is about cracking). copper_fungicide and every spray REFUSED: 'preharvest sprays are generally ineffective' (uc_ipm ag), 'no known method of control' (uga C997). The ladder is one sanitation step.",
+    "alternaria-heart-rot: the record's humid-climate framing REFUSED in all six affected fields (orchestrator V3): the disease is documented in California and absent from the Georgia and Florida surveys.",
+    "gray-mold: cure_and_store rung REFUSED on method fit (bulb/root/tuber scope, curing step); copper_fungicide and biofungicide REFUSED (no source states a home spray; bloom sprays uneconomical, preharvest sprays blocked by the crown). The commercial postharvest fungicides FNRIC names (fludioxonil, fenhexamid) are not carried as home advice.",
+    "gray-mold: the record's 'harvest before rains', 'can move between touching fruit', 'infects overripe fruit' and 'cool' conditions REFUSED and corrected out (no anchor on this crop; decay temperature is 65 to 75°F).",
+    "cercospora-fruit-and-leaf-spot: copper_fungicide rung REFUSED. The only copper statement tied to this organism (uga C997) is hedged on identity ('The described disease may be Cercospora punicae, or may be some other unknown disease'); MG056's copper is for anthracnose, TAMU's for an unnamed fungus; PP349 states 'Fungicides currently labelled for pomegranate are ineffective against the fungal pathogens reviewed in this publication' and Clemson's home verdict is 'don't require treatment'. The conflict is filed under notes_to_orchestrator for a ruling.",
+    "cercospora-fruit-and-leaf-spot: airflow_spacing and water_at_the_base rungs REFUSED: PP349 read first-party 2026-09-04 carries no airflow, spacing or irrigation-method statement for this fungus (its site guidance is 'orchard design and site selection, planting density, variety selection'); the record's open-site/airflow/water-at-the-ground prose is corrected out of four fields.",
+    "cercospora-fruit-and-leaf-spot: resistant_varieties rung NOT written: PP349 says resistant varieties are the most economical practice and that over 100 cultivars are under evaluation, but names none; a step that names no variety is not actionable. Carried in prevention prose."
+  ],
+  "notes_to_orchestrator": [
+    "READS 2026-09-04 (this agent, first-party via WebFetch): UF/IFAS PP349 (edis URL 301s to ask.ifas.ufl.edu; anchored at the edis URL the catalog uses), UC IPM home Mealybugs (Invertebrates) fruit-tree page, UC IPM Pest Notes 74168 Leaffooted Bug. Every other anchor rests on the record report's 2026-09-04 reads, whose verbatim quotes are carried in each correction's `anchor`.",
+    "PROXIED READS: ucanr_ext FNRIC (403 first-party on three paths; Wayback 2026-01-13 capture) and clemson_hgic HGIC 1359 (403 curl and jina; WebFetch live summary agrees verbatim with the Wayback 2025-09-16 capture). Both are anchored at the LIVE URL with today's date. No claim rests only on either capture: every FNRIC gray-mold sentence used is also on the UC IPM ag Gray Mold page, and Clemson's 'don't require treatment' verdict was returned by the live WebFetch summary per the report.",
+    "anchoring_urls holds ONE URL per catalog key (canonical shape, 0 multi-URL entries). Second uc_ipm documents behind each entry, all verified 2026-09-04 by the report: leaf-footed-bugs -> ag https://ipm.ucanr.edu/agriculture/pomegranate/leaffooted-bug/ (biology); aphids -> PN 7404 https://ipm.ucanr.edu/home-and-landscape/aphids/ (water jet, soap/oil, nitrogen, sticky band); whiteflies -> ag https://ipm.ucanr.edu/agriculture/pomegranate/whiteflies/ (Encarsia inaron, parasitism check, July-August peak); mealybugs -> home fruit-tree page https://ipm.ucanr.edu/home-and-landscape/mealybugs-invertebrates/ and PN https://ipm.ucanr.edu/home-and-landscape/mealybugs/; scale-insects -> PN 7408 https://ipm.ucanr.edu/home-and-landscape/scales/; alternaria-heart-rot -> Aspergillus page https://ipm.ucanr.edu/agriculture/pomegranate/aspergillus-fruit-rot/ and treatment-timings page; gray-mold -> generic home page https://ipm.ucanr.edu/home-and-landscape/botrytis-blight-or-gray-mold/ (airflow and drip rungs only; it never names pomegranate, said so in the rung note).",
+    "PLA-457: uc_ipm PN 7408 (home Scales) states verbatim: 'Do not mix oil with chlorothalonil, sulfur, and certain other fungicides; and do not apply oil within 3 weeks of an application of sulfur-containing compounds, such as wettable sulfur.' Also uga_ext C997 and uf_ifas_edis MG056 each prescribe BOTH a June sulfur dusting for mites AND a 3 percent winter oil for scale on this crop with NO interval stated. Declined to write: the '3 weeks' figure, and the method catalog's own '2 weeks' caution. The scale horticultural_oil note says only that oil is never mixed with sulfur nor applied close to it in time.",
+    "UNCOVERED DISEASES on this crop: (1) Anthracnose, Colletotrichum spp. (C. acutatum and C. gloeosporioides species complexes): uf_ifas_edis PP349 'anthracnose is one of the most important diseases of pomegranate in Florida' (spots, blotches, defoliation, shoot blight, twig cankers, dieback; calyx lesions from late May); uf_ifas_edis MG056 'The most destructive disease observed in Florida is anthracnose caused by Colletotrichum sp. ... At least three sprays per year of neutral copper fungicide can reduce the disease impact.' Corrected OUT of the Cercospora cause prose per C997 (symptomless there) and PP349 (its own section). (2) Botryosphaeria stem canker and shoot blight, Neofusicoccum parvum and Lasiodiplodia theobromae (PP349; C997 Figure 5 right). (3) Aspergillus fruit rot, Aspergillus niger (UC IPM separate page; FNRIC names it with Alternaria and Botrytis as the three main fruit diseases). TAMU attributes 'soft rot or heart rot' to Rhizopus arrhizus; noted as a Texas divergence, not folded into the Alternaria entry.",
+    "COPPER CONFLICT for a ruling: three Southeast documents state copper on a leaf-and-fruit fungus (C997 'reasonable success', hedged on identity; MG056 for anthracnose; TAMU for an unnamed fungus) while PP349 says labelled fungicides are ineffective against Pseudocercospora and Clemson says no treatment. I refused the rung on the Cercospora entry; if anthracnose is minted, MG056's copper statement belongs there.",
+    "PIN TABLE: pinned_ids.json changed during authoring: alternaria-heart-rot severity was `high` when first read (and the first validation passed on `high`), and is `medium` on the current file; the output carries `medium`. That matches the report's evidence (uc_ipm ag 'Estimated losses are usually less than 1% but can be up to 6%'; absent in the Georgia survey; not listed in Florida's). Everything else in the pin table matched the report (ids, fine types, split order, display names; 'Whitefly' singular kept).",
+    "LADDER SHAPE, mealybugs: no cultural rung, so ant_exclusion leads per the brief; the PN Mealybugs nitrogen statement is carried in prevention prose rather than as a balance_nitrogen rung. LADDER SHAPE, leaf-footed bug: 7 rungs, every one stated in PN 74168; floating_row_cover is honestly scoped to a plant small enough to wrap, since arrival (late spring) overlaps the crop's protracted bloom and the document states the pollinator exclusion; pyrethroid is written because PN 74168 names it as the most effective material with the bee caveat, and the orchestrator may drop it under the conventional-disclosure policy.",
+    "SOURCES: aphids adds uga_ext (C997 names 'melon aphid' and soap); scale-insects adds uga_ext and uf_ifas_edis (3 percent winter oil); cercospora adds uf_ifas_edis and clemson_hgic and keeps uga_ext; gray-mold keeps ucanr_ext and repoints uc_ipm to the ag Gray Mold page. Three entries (aphids, whiteflies, mealybugs/scale) repoint uc_ipm OFF the home pomegranate index page, which carries no pest sentence and does not list aphids. ncsu_ext_toolbox_punica_granatum NOT cited (citable_for is scoped to suitability). tamu_agrilife NOT cited: the catalog's landing page is a stub and the PDF names no organism for the leaf/fruit fungus; nothing here rests on it.",
+    "UNTOUCHED FIELDS (deliberately, they hold per the report): leaf-footed bug cause_beginner; aphids cause_beginner, organic_treatment_beginner, organic_treatment_seasoned, prevention_beginner; whitefly symptoms_beginner, symptoms_seasoned, cause_beginner, organic_treatment_beginner, organic_treatment_seasoned; alternaria symptoms_beginner, symptoms_seasoned. `audience` untouched on every entry.",
+    "validate_out.py: unchanged. All fragment scripts and a consumer-copy self-check (dash, machinery-word, °C, sulfur+oil+duration, register-identity scans over every corrected field and rung note) ran green before this file was written.",
+    "REVIEW FIXES APPLIED 2026-09-04 (review_pomegranate.md FIX 1-9 plus the orchestrator's T1): FIX 1 thistles re-attributed to PN 74168; FIX 2 'exit holes' clause dropped; FIX 3 scale prevention_beginner no longer calls the crawler window the only spray window, PN 7408 winter-bark sentence added to its anchor; FIX 4 the PP349 90 percent figure is attributed to Florida's diseases together in all four places, with the PP349 Introduction sentence carried in the anchors; FIX 5 alternaria cause_beginner narrowed to the seasoned field's width, C997's Ponder Farm caveat added to the anchor; FIX 6 'singly' / 'one at a time' replaced by the ag page's late-spring entry sentence, added to both anchors; FIX 7 the 3 percent is credited to the two Southeast guides only; FIX 8 sticky-trap beginner softened to PN 7401's 'somewhat'; FIX 9 the armored-scale gloss trimmed from both cause fields. T1: the airflow_spacing note's 70°F to 77°F is on the generic UC IPM home Botrytis page (record and review both quote it: 'Gray mold is particularly troublesome under high humidity and moderate temperatures (70° to 77°F)'), NOT on the ag Gray Mold page (which gives 65° to 75°F for postharvest decay); that sentence is now carried verbatim in gray-mold prevention_seasoned's anchor, the correction that already cites the generic page."
+  ]
+}

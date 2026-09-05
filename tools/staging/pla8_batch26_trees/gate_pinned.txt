@@ -1,0 +1,53 @@
+reconcile OK: 39 canonical problems -> 38 target (3 retired, 4 split rows, 1 renamed)
+scratch written: scratch_postapply.json  (30 distinct ids)
+
+==============================================================================
+INTRODUCED-vs-INHERITED
+==============================================================================
+pairs on canonical: 37   pairs post-apply: 42
+INTRODUCED by this batch: 5
+    REGISTERED  bacterial-blight <-> mulberry-bacterial-blight
+    REGISTERED  bacterial-blights <-> mulberry-bacterial-blight
+    REGISTERED  cherry-borers <-> mulberry-borers
+    REGISTERED  lavender-leaf-spot <-> persimmon-leaf-spot
+    REGISTERED  lavender-root-crown-rot <-> phytophthora-root-rot
+INHERITED (pre-existing, this batch only joins them): 37
+    anthracnose <-> blueberry-ripe-rot
+    anthracnose <-> cane-anthracnose
+    anthracnose <-> viola-leaf-spots
+    aphids <-> apricot-aphids
+    aphids <-> citrus-aphids
+    aphids <-> plum-aphids
+    apricot-aphids <-> citrus-aphids
+    apricot-aphids <-> plum-aphids
+    bacterial-blight <-> bacterial-blights
+    bacterial-leaf-spot <-> bacterial-spot
+    bacterial-spot <-> bacterial-spot-pruni
+    bacterial-wilt <-> southern-bacterial-wilt
+    bee-balm-rust <-> chives-rust
+    bee-balm-rust <-> sunflower-rust
+    beet-spinach-leafminer <-> parsnip-leafminer
+    birds <-> birds-and-squirrels
+    black-knot <-> black-rot
+    black-rot <-> sweet-potato-black-rot
+    blueberry-ripe-rot <-> cane-anthracnose
+    botrytis-gray-mold <-> gray-mold
+    botrytis-leaf-blight-neck-rot <-> gray-mold
+    cane-blight <-> late-blight
+    carrot-leaf-blight <-> lemongrass-leaf-blight
+    chives-rust <-> sunflower-rust
+    citrus-aphids <-> plum-aphids
+    cutworm <-> cutworms
+    flea-beetle <-> flea-beetles
+    japanese-beetle <-> japanese-beetles
+    leafhoppers <-> sage-leafhoppers
+    mint-rust <-> oregano-rust
+    phytophthora-foot-rot <-> phytophthora-root-rot
+    pink-root <-> pink-rot
+    slugs <-> slugs-and-snails
+    slugs <-> snails-and-slugs
+    slugs-and-snails <-> snails-and-slugs
+    two-spotted-spider-mite <-> twospotted-spider-mite
+    white-rot <-> white-rust
+
+PASS: this batch introduces 5 collision pair(s), all adjudicated and registered; it creates no new unadjudicated duplicate.

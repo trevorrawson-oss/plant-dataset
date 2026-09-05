@@ -1,0 +1,57 @@
+scratch: /var/folders/wh/mbsrdjjs4lj2g2v2k5zmw4jw0000gn/T/mut_b26_2g99if6r/tools
+
+positive control: unmutated scratch is GREEN
+
+sentinel: reddened as required
+
+  caught   reconcile/unaccounted_canonical_problem_ignored
+  caught   reconcile/phantom_source_ignored
+  caught   reconcile/retire_and_use_contradiction_ignored
+  caught   spec/pinned_type_and_severity_unchecked
+  caught   spec/entry_count_unchecked
+  caught   ladder/empty_ladder_allowed
+  caught   ladder/tier_inversion_allowed
+  caught   ladder/applies_to_incoherence_allowed
+  caught   ladder/em_dash_allowed
+  caught   ladder/machinery_vocabulary_allowed
+  caught   ladder/identical_registers_allowed
+  caught   ladder/repeated_method_allowed
+  caught   corrections/split_limb_may_inherit_bundle_prose
+  caught   corrections/correction_anchor_not_required
+  caught   corrections/name_correction_may_disagree_with_pin
+  caught   corrections/machinery_vocabulary_allowed_in_corrections
+  caught   sources/unadmitted_source_key_allowed
+  caught   sources/anchor_without_source_allowed
+  caught   copy/threshold_raised_out_of_reach
+  caught   copy/metric_made_one_directional
+  caught   copy/autojunk_re_enabled
+  caught   echo/house_exemption_swallows_everything
+  caught   echo/whole_note_echo_allowed
+  caught   echo/intra_batch_twins_allowed
+  caught   echo/recombination_run_threshold_raised
+  caught   echo/recombination_overlap_brake_removed
+  caught   temperature/unwarranted_figure_allowed
+  caught   retire/undeclared_duplicate_shape_allowed
+  caught   retire/missing_diseases_twin_allowed
+  caught   retire/uncarried_twin_allowed
+  caught   retire/real_pest_retirement_allowed
+  caught   types/pre_type_unchecked
+  caught   types/coarse_not_upgraded_allowed
+  caught   types/silent_retype_allowed
+  caught   types/mixed_premise_removed
+  caught   hold/interval_predicate_disabled
+  caught   hold/sulfur_misspelled_in_regex
+  caught   twins/id_mismatch_allowed
+  caught   twins/unpinned_divergence_allowed
+  caught   twins/mispinned_divergence_allowed
+  caught   twins/vacuity_brake_removed
+  caught   verify/undeclared_prose_change_allowed
+  caught   verify/correction_value_not_compared
+  caught   verify/untouched_crops_unchecked
+  caught   verify/top_level_keys_unchecked
+  caught   verify/removed_keys_unchecked
+  caught   mechanics/canonical_written_indented
+  caught   mechanics/base_sha_unchecked
+
+48 injected: 48 caught, 0 survived, 0 broken
+exit 0

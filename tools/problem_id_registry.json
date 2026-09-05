@@ -107,6 +107,46 @@
       ],
       "reason": "allium Sclerotium cepivorum vs brassica Albugo candida",
       "ruled": "PLA-449 known-good"
+    },
+    {
+      "ids": [
+        "mulberry-bacterial-blight",
+        "bacterial-blight"
+      ],
+      "reason": "mulberry's is Pseudomonas syringae pv. mori (TAMU Plant Disease Handbook, mulberry), a mulberry-specific pathovar on a woody tree; edamame's `bacterial-blight` is P. savastanoi pv. glycinea on soybean. Same generic display name, different pathovars and hosts, the bacterial-spot / bacterial-spot-pruni shape. Registered as a PAIR, not a three-id set, so the open edamame/bean duplicate (PLA-448 s4a) stays unsuppressed.",
+      "ruled": "PLA-8 batch 26 (2026-09-04)"
+    },
+    {
+      "ids": [
+        "mulberry-bacterial-blight",
+        "bacterial-blights"
+      ],
+      "reason": "mulberry's P. syringae pv. mori vs the beans' Xanthomonas campestris pv. phaseoli + P. syringae pv. phaseolicola. The shared normalized key 'bacterial blight' is an artifact of total parenthetical deletion on the beans' 'Bacterial blights (common and halo)'. Registered as a PAIR for the same reason as above.",
+      "ruled": "PLA-8 batch 26 (2026-09-04)"
+    },
+    {
+      "ids": [
+        "mulberry-borers",
+        "cherry-borers"
+      ],
+      "reason": "cherry's entry is two named Prunus borers (peachtree borer Synanthedon exitiosa, a clearwing moth at the crown, and American plum borer). mulberry's is an UNRESOLVED umbrella: the admissible literature (NCSU toolbox prose, TAMU) names no organism, UC IPM's mulberry page lists no borer, and the one US extension naming one (K-State MF2735, Dorcaschema wildii, a longhorn beetle; not catalog-admitted) is a different insect from either of cherry's. The shared key 'borer' is the parenthetical-deletion artifact on cherry's display name.",
+      "ruled": "PLA-8 batch 26 (2026-09-04)"
+    },
+    {
+      "ids": [
+        "persimmon-leaf-spot",
+        "lavender-leaf-spot"
+      ],
+      "reason": "two crop-scoped umbrellas on unrelated hosts: persimmon's principal is Pseudocercospora diospyricola (UAEX Plant Health Clinic; Cercospora spp. per UF/IFAS HS1389) on Diospyros; lavender's one named organism is Septoria lavandulae on Lavandula. Same bare display name 'Leaf spot' by the same batch-25 rule (a genuine umbrella keeps the bare name); nothing about either ladder transfers.",
+      "ruled": "PLA-8 batch 26 (2026-09-04)"
+    },
+    {
+      "ids": [
+        "phytophthora-root-rot",
+        "lavender-root-crown-rot"
+      ],
+      "reason": "lavender's id exists BECAUSE its organism is resolved narrower than the genus (P. nicotianae, dedicated WSU source; batch 25 s4). persimmon's is Phytophthora spp. (UC IPM persimmon page lists 'Phytophthora Root and Crown Rot' separately from Armillaria) and joins the roster's genus-level id alongside blueberry, raspberry and blackberry. The display names coincide ('Phytophthora root and crown rot', UC IPM's own title) because both name the genus; the ids differ because one pins a species.",
+      "ruled": "PLA-8 batch 26 (2026-09-04)"
     }
   ]
 }

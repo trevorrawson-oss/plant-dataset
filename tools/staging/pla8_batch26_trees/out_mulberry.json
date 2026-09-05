@@ -1,0 +1,414 @@
+{
+  "crop": "mulberry",
+  "pests": [
+    {
+      "name": "Birds",
+      "id": "birds",
+      "type": "vertebrate",
+      "severity": "high",
+      "control_ladder": [
+        {
+          "method": "bird_scare_deterrents",
+          "note_beginner": "Shiny ribbon and scare balloons are the cheap first try. Hang them in the tree as the fruit starts to color and keep moving them to new spots and swapping them around, because birds are smart and stop reacting to anything that stays put. Expect this to save some fruit for a while, not to protect the crop by itself.",
+          "note_seasoned": "Michigan State's fruit guidance lists reflective ribbon and scare balloons among the harassment tools and adds the catch in the same breath: birds are intelligent and become habituated if the devices are not varied or moved frequently. On a tree NC State says gray catbirds and northern mockingbirds are especially fond of, treat this as a short reprieve that covers the fruit you can reach, not a season-long control."
+        },
+        {
+          "method": "bird_netting",
+          "note_beginner": "Netting is what actually keeps the fruit, on a tree you can cover. Put the net over a frame rather than straight onto the branches, since birds peck fruit right through net that lies on the leaves, and pin the bottom edge to the ground or they walk in underneath. Have it up before the berries start to color in late spring. If your mulberry has outgrown what you can net, the extension answer is honest: a good sized tree carries enough fruit for you and the birds both.",
+          "note_seasoned": "Michigan State rates netting the most effective means of preventing bird damage to fruit and lists the failure modes beside it: a net merely draped over the plant lets birds feed through it and pulls fruit off when it is removed, and an unanchored skirt lets them in underneath, so carry it on a frame, anchor it to the ground and keep it maintained. Mulberry fruit displays from May to June, so the net goes on ahead of color, not after the first raid. Where the tree is past netting, UF/IFAS puts the trade plainly: visiting creatures reduce the harvest for your own use, but a good sized tree leaves enough for all."
+        }
+      ],
+      "sources": [
+        "ncsu_ext",
+        "uf_ifas",
+        "uada_ext",
+        "msu_ext"
+      ],
+      "anchoring_urls": {
+        "ncsu_ext": {
+          "url": "https://plants.ces.ncsu.edu/plants/morus-rubra/",
+          "verified": "2026-09-04"
+        },
+        "uf_ifas": {
+          "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/fruits/mulberry/",
+          "verified": "2026-09-04"
+        },
+        "uada_ext": {
+          "url": "https://www.uaex.uada.edu/yard-garden/in-the-garden/reference-desk/trees/mulberry.aspx",
+          "verified": "2026-09-04"
+        },
+        "msu_ext": {
+          "url": "https://www.canr.msu.edu/news/managing-bird-damage-on-fruit-farms",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "cause_seasoned": {
+          "new": "Many birds are drawn to the sweet, soft fruit and feed on it as it ripens; NC State singles out gray catbirds and northern mockingbirds, and Arkansas extension records cedar waxwings feasting on the berries. Visiting wildlife will reduce the harvest for your own use, and that is a feature as much as a pest: a mulberry is a tree NC State lists for attracting songbirds, with foxes, opossums, squirrels and raccoons on the same guest list.",
+          "why": "The old text named robins, which no document read pairs with mulberry, and ranked birds 'the number-one reason home growers lose fruit', which no document ranks. Replaced with the species extension actually names and UF/IFAS's harvest-reduction sentence.",
+          "anchor": "ncsu_ext -- 'Its fruits are eaten by many birds, especially gray catbirds and northern mockingbirds, foxes, opossums, squirrels, and raccoons.' (Morus rubra); 'It is resistant to drought and pollution, while also attracting songbirds.' (Morus alba); uada_ext -- 'Over the weekend, the Cedar Waxwing birds were having a feast on the berries, which resembled a small raspberry or blackberry.'; uf_ifas -- 'Visiting creatures will reduce the harvest for your personal use, but on a good sized tree there should be enough fruits for all to enjoy.'"
+        },
+        "cause_beginner": {
+          "new": "Lots of birds love sweet, soft mulberries and eat them as they ripen; catbirds, mockingbirds and cedar waxwings are the ones extension names. Expect the wildlife to take a share of the crop. That is also what makes a mulberry such a good tree for attracting birds.",
+          "why": "The old text called birds 'the main reason people lose fruit to the tree', a ranking no document makes. Replaced with the named species and the sharing framing UF/IFAS gives.",
+          "anchor": "ncsu_ext -- 'Its fruits are eaten by many birds, especially gray catbirds and northern mockingbirds, foxes, opossums, squirrels, and raccoons.'; uada_ext -- 'Over the weekend, the Cedar Waxwing birds were having a feast on the berries, which resembled a small raspberry or blackberry.'; uf_ifas -- 'Mulberry fruits are quite popular with wildlife. Visiting creatures will reduce the harvest for your personal use, but on a good sized tree there should be enough fruits for all to enjoy.'"
+        }
+      }
+    },
+    {
+      "name": "Whiteflies",
+      "id": "whiteflies",
+      "type": "insect",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Most of the time you do not need to do anything: on mulberry these whiteflies are more of a curiosity than a pest. If you spot the first few leaves carrying the young stages, tiny shiny black specks with a white fringe stuck to the underside, cut those few leaves out and drop them in the garbage before the colony gets going.",
+          "note_seasoned": "NC State's bar is that treatment is probably unnecessary unless the whiteflies become tremendously abundant, so the opening move is removal, not spraying. UC IPM's instruction is to prune out isolated infested leaves when you first detect them; the nymphs stay in the spot where they settled until the new adults emerge a month or more later, so a leaf carrying the black, white-fringed nymphs takes that whole cohort with it. Check the undersides, which is where they sit."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Turn the hose up under the leaves with enough force to blast the winged adults loose. Morning is the time for it, so the wet foliage has the day to dry.",
+          "note_seasoned": "UC IPM's physical step is a strong stream of water that hoses the adults off. It thins the flying stage rather than clearing the leaf: the settled nymphs stay put once they have fixed themselves to the underside, and the eggs the adults have already laid hatch about two weeks later, so aim at the undersides and repeat as new adults show."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Lacewings, ladybugs and tiny wasps eat whiteflies and usually keep them in check outdoors without any help from you. The main job is not to spray anything harsh that kills those helpers, and to keep ants and dust off the tree, since both get in the helpers' way.",
+          "note_seasoned": "UC IPM names lacewings and lady beetles among the natural enemies that help control whiteflies and says to look for the circular holes in nymphs that mark parasitization by mini-wasps. Conserving them is the whole of this step: avoid broad spectrum pesticides, pyrethroids, organophosphates and neonicotinoids by name, and control the dust and ants that protect whiteflies from their enemies, a point UC IPM makes for citrus and other trees in particular."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "If the whiteflies ever get really thick, insecticidal soap sprayed onto the undersides of the leaves works well on the adults. Spray only when the tree is not short of water and the temperature is under 90°F, or the leaves can scorch, and wear gloves and eye protection when you mix it.",
+          "note_seasoned": "NC State's read is that the mulberry whitefly is not particularly resistant to pesticides and that insecticidal soaps work well on the adults; the nymphs are the stage soap reaches less well, and horticultural oil is the material NC State names for them. Soap is contact only with no residual, so underside coverage and a repeat as new adults emerge are what make it work. UC IPM's limits: apply only when plants are not drought-stressed and temperatures are under 90°F. Hold it for a tree that is tremendously infested, which is NC State's own threshold."
+        },
+        {
+          "method": "horticultural_oil",
+          "note_beginner": "Horticultural oil is the spray for the young stages, the little black specks stuck to the undersides. Coat the undersides well, save it for days under 90°F when the tree is not drought-stressed, and never let it land on open flowers, where bees would take the hit.",
+          "note_seasoned": "NC State's pairing is soap for the adults and horticultural oil for the nymphs, which it expects to give some control. Oil smothers what it coats and nothing else, so the undersides are the target and thoroughness is the dose. The weather rule is the same as for soap, under 90°F and never on a water-stressed tree, and UC IPM's bee precaution applies: keep it clear of anything in flower."
+        }
+      ],
+      "sources": [
+        "ncsu_ext",
+        "uc_ipm"
+      ],
+      "anchoring_urls": {
+        "ncsu_ext": {
+          "url": "https://content.ces.ncsu.edu/mulberry-whitefly",
+          "verified": "2026-09-04"
+        },
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7401.html",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "prevention_seasoned": {
+          "new": "Natural enemies usually hold whiteflies in check outdoors: UC IPM names lacewings and lady beetles, and parasitic mini-wasps leave circular exit holes in the nymphs they kill. Protecting them is the prevention, so avoid broad spectrum pesticides such as pyrethroids, organophosphates or neonicotinoids, and keep dust and ants down, since both protect whiteflies from their enemies. The mulberry whitefly also lives on American holly, boxelder, flowering dogwood, maples, citrus and wax myrtle, so neighboring landscape plants can be where a colony comes from.",
+          "why": "The old text told the grower to avoid heavy nitrogen feeding because it 'encourages the soft growth whiteflies favor'. No document read (NC State mulberry whitefly, UC IPM PN 7401, UC IPM PN 7400) mentions nitrogen or fertilizer for whiteflies; the claim was carried in from the tomato entries. Replaced with the prevention the documents do give: conserve natural enemies, control dust and ants, and know the alternate hosts.",
+          "anchor": "uc_ipm -- 'Many beneficials or \"natural enemies\" such as lacewings and lady beetles help control whiteflies.'; 'Avoid using broad spectrum pesticides such as pyrethroids, organophosphates, or neonicotinoids.'; 'Control of dust and ants, which protect whiteflies from their natural enemies, can also be important, especially in citrus or other trees.'; ncsu_ext -- 'Mulberry whiteflies have been reported from American holly, avocado, boxelder, citrus, flowering dogwood, mountain laurel, mulberry, Norway maple, red maple, Virginia sweet spire, and wax myrtle.'"
+        },
+        "prevention_beginner": {
+          "new": "Outdoors, the ladybugs, lacewings and tiny wasps that eat whiteflies usually keep them under control on their own. The best prevention is to leave those helpers alone: no harsh sprays, and keep ants and dust off the tree. The same whitefly lives on hollies, dogwoods, maples and other yard trees, so it can arrive from next door.",
+          "why": "Same defect as prevention_seasoned: 'go easy on nitrogen feeding, which draws whiteflies' has no anchor in any document read. Replaced with the natural-enemy conservation the documents give.",
+          "anchor": "uc_ipm -- 'Many beneficials or \"natural enemies\" such as lacewings and lady beetles help control whiteflies.'; 'Avoid using broad spectrum pesticides such as pyrethroids, organophosphates, or neonicotinoids.'; ncsu_ext -- 'Mulberry whiteflies have been reported from American holly, avocado, boxelder, citrus, flowering dogwood, mountain laurel, mulberry, Norway maple, red maple, Virginia sweet spire, and wax myrtle.'"
+        }
+      }
+    },
+    {
+      "name": "Borers",
+      "id": "mulberry-borers",
+      "type": "insect",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "None of the sources this entry can cite gives a way to control borers on a mulberry. NC State says borers can be a problem on this tree, particularly in the South, and says nothing about what to do. Clearing dead wood off and around the tree is ordinary tree care, and nothing published for mulberry says it stops borers, so treat it as housekeeping, not a cure.",
+          "note_seasoned": "The admissible literature on mulberry borers is two NC State toolbox sentences, that borers may be a problem, particularly in the South, and that borers and whiteflies can be problems; neither names a species and neither gives a control, and no other cited document covers borers on this tree at all. Sanitation has no documented target on a mulberry borer. Removing dead and dying wood is general tree care with no published effect on this problem for this crop, and a grower who wants a program has nothing cited to build one from."
+        }
+      ],
+      "sources": [
+        "ncsu_ext"
+      ],
+      "anchoring_urls": {
+        "ncsu_ext": {
+          "url": "https://plants.ces.ncsu.edu/plants/morus-rubra/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "cause_seasoned": {
+          "new": "Borers, wood-boring insect larvae, can be a problem on mulberry, particularly in the South. That is as far as the extension sources for this tree go: none names the species involved, and none says whether they favor stressed trees, so this entry covers the group rather than one named insect.",
+          "why": "The old text said 'several wood-boring beetle and moth larvae' attack mulberry 'almost always as a secondary problem on trees weakened by drought stress, mechanical wounds, or age'. No document read names a moth borer on mulberry, and the stressed-tree claim has no mulberry-level anchor: the only organism-level source (K-State MF2735, Dorcaschema wildii, not catalog-admitted) describes crown dieback 'during initial attacks' and carries no secondary-pest qualifier for that beetle. Replaced with what NC State states and no more.",
+          "anchor": "ncsu_ext -- 'Borers may be a problem with this plant, particularly in the South.' (Morus rubra); 'No serious insect or disease problems. Borers and whiteflies can be problems.' (Morus alba)"
+        },
+        "cause_beginner": {
+          "new": "Borers are insect grubs that tunnel inside wood. They can be a problem on mulberry, especially in the South. The sources for this tree do not say which kinds, or whether a healthy tree is any safer, so this entry covers them as a group.",
+          "why": "Same defect as cause_seasoned: 'beetle and moth larvae' and 'usually only when the tree is already weak' have no mulberry-level anchor.",
+          "anchor": "ncsu_ext -- 'Borers may be a problem with this plant, particularly in the South.' (Morus rubra); 'Borers and whiteflies can be problems.' (Morus alba)"
+        }
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "name": "Popcorn disease",
+      "id": "popcorn-disease",
+      "type": "fungal",
+      "severity": "medium",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "If you are still choosing a tree and popcorn disease shows up in your area, know that white mulberries and their hybrids catch it more than red or black mulberries do. No source names a resistant variety, so this tilts the odds rather than settling them.",
+          "note_seasoned": "The susceptibility gradient is published; a resistant cultivar is not. Oklahoma State and the Arkansas extension plant clinic both put white mulberry varieties and hybrids in the more susceptible class, and Arkansas names red or black mulberries as the less susceptible side. Hybrids sit with white mulberry on the susceptible side, so a cultivar's parentage is what to check, and the choice is made at planting."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "There is no spray that fixes popcorn disease; cleanup is the control. Through the season, as the puffy, hard berries show up, pick them off the tree and gather what falls, then bury them or bag them up for the garbage. Do not leave them lying under the tree.",
+          "note_seasoned": "Every source that manages this disease manages it the same way. Oklahoma State: remove and bury the infected fruit on the trees and any ground debris as it appears during the growing season. Arkansas: remove all the spent fruit from the tree and from under it and destroy it, and clean up any diseased fruit still hanging. The symptoms are fruit-only, so scouting runs from fruit set through ripening, and the job repeats as new fruit turns rather than being done once."
+        }
+      ],
+      "sources": [
+        "tamu_agrilife",
+        "ok_state_ext",
+        "uada_ext"
+      ],
+      "anchoring_urls": {
+        "tamu_agrilife": {
+          "url": "https://plantdiseasehandbook.tamu.edu/landscaping/trees/mulberry/",
+          "verified": "2026-09-04"
+        },
+        "ok_state_ext": {
+          "url": "https://extension.okstate.edu/programs/digital-diagnostics/plant-diseases/popcorn-disease-of-mulberry.html",
+          "verified": "2026-09-04"
+        },
+        "uada_ext": {
+          "url": "https://www.uaex.uada.edu/yard-garden/plant-health-clinic/docs/2016_Plant_Health_Clinic_Newsletters/Plant%20Health%20Clinic%20Newsletter-Issue%2015.pdf",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "prevention_seasoned": {
+          "new": "Sanitation through the growing season is the prevention: remove infected fruit from the tree, and fallen fruit and debris from the ground, as it appears, and bury or destroy it. Where popcorn disease is a known local problem, red or black mulberries are less susceptible than white mulberry varieties and their hybrids.",
+          "why": "The old text told the grower to 'favor red mulberry or a more resistant hybrid over the most susceptible white types'. REFUTED: every source that grades susceptibility puts HYBRIDS in the susceptible class with white mulberry; there is no resistant-hybrid class. 'Year-round sanitation' and 'nowhere to overwinter' were also unanchored (OSU says 'as it appears during the growing season' and no document states the overwintering site).",
+          "anchor": "uada_ext -- 'White mulberry varieties and hybrids are more susceptible than red or black mulberries.'; ok_state_ext -- 'White mulberry varieties and hybrids are more susceptible to popcorn disease.'; 'Remove and bury the infected fruit on the trees and any ground debris as it appears during the growing season.'"
+        },
+        "prevention_beginner": {
+          "new": "Keep picking off the puffy diseased berries and cleaning up what falls under the tree all season, and bury or bin it. If popcorn disease is common where you live, a red or black mulberry is less likely to get it than a white mulberry or a hybrid.",
+          "why": "Same refuted claim as prevention_seasoned: 'choose a red mulberry or a tougher hybrid' steers the grower toward the susceptible class. Hybrids are more susceptible, not tougher.",
+          "anchor": "uada_ext -- 'White mulberry varieties and hybrids are more susceptible than red or black mulberries.'; ok_state_ext -- 'White mulberry varieties and hybrids are more susceptible to popcorn disease.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "There is no home spray that cures it. Control is sanitation: as the disease appears, remove and bury or destroy the affected fruit on the tree, and gather and bury or discard the fallen fruit and debris beneath it, repeating through the growing season.",
+          "why": "The old text ended 'since that is where the fungus overwinters to reinfect next year'. No document read states where the fungus overwinters; OSU prescribes removing ground debris and says nothing about the overwintering site. The unanchored mechanism is removed; the sourced instruction is kept.",
+          "anchor": "ok_state_ext -- 'Control is achieved by taking sanitary measures. Remove and bury the infected fruit on the trees and any ground debris as it appears during the growing season.'; uada_ext -- 'Sanitation is the best control option for homeowners.'; 'Clean up all fallen fruit and any diseased fruit still on the tree and remove them from the planting.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "No home spray fixes it. The control is cleanup: pick off and bury or throw away the affected berries, and rake up and bury or bin the fallen fruit under the tree, and keep doing it through the season.",
+          "why": "Same defect as organic_treatment_seasoned: 'because that is where the fungus waits out the winter to come back next year' is an overwintering-site claim no document read makes.",
+          "anchor": "ok_state_ext -- 'Remove and bury the infected fruit on the trees and any ground debris as it appears during the growing season.'; uada_ext -- 'Clean up all fallen fruit and any diseased fruit still on the tree and remove them from the planting.'"
+        }
+      }
+    },
+    {
+      "name": "Bacterial blight",
+      "id": "mulberry-bacterial-blight",
+      "type": "bacterial",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "water_at_the_base",
+          "note_beginner": "If the tree gets irrigated, keep the water on the ground and out of the lower branches. Oklahoma State's advice for leaf diseases like this one is not to use a sprinkler that soaks the low leaves, because the disease starts on leaves that stay wet, and a sprinkler keeps them wet longer than the weather would. Rain is out of your hands; the sprinkler is not.",
+          "note_seasoned": "Oklahoma State's shade-tree leaf-disease sheet, which carries the mulberry blight description, says in its control guidance to avoid irrigation methods that wet the lower canopy of the tree. The bacterium's first sign is a water-soaked spot, and the lower canopy is the part a lawn sprinkler reaches, so irrigation placement is the one leaf-wetting input a grower controls. It prevents rather than treats, and in a wet spell the weather supplies the wetness anyway; the measure counts most where a sprinkler would otherwise be the only thing keeping the low leaves wet."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Thin out a crowded tree so wind can pass through it and the leaves dry sooner after rain. This blight takes hold on wet leaves, and Oklahoma State's suggestion for leaf diseases on yard trees is exactly this: open the canopy so the leaves spend less time wet. It will not clear shoots that are already black; it makes the tree a poorer place for the next round to start.",
+          "note_seasoned": "The same Oklahoma State control guidance says to consider thinning the canopy to allow greater air circulation, which reduces periods of leaf wetness. That is a general instruction for the leaf diseases the sheet covers, mulberry's blight among them, not a mulberry-specific program, and it acts on the condition the bacterium needs rather than on the bacterium: the spots begin water-soaked, so shortening how long foliage stays wet is the point. Thinning is preventive; it lowers the chance of new infection and does nothing for the striped shoots and dead twig tips already present, which autumn pruning handles."
+        },
+        {
+          "method": "prune_out_infection",
+          "note_beginner": "In the fall, cut out the dead, blackened shoots, going back into healthy wood so nothing blighted is left on the branch, and get the prunings away from the tree. That is the step Texas A&M gives, and it says it gives some control on young trees.",
+          "note_seasoned": "The Texas A&M plant disease handbook's control sentence for this disease is specific: some control is obtainable on young trees by pruning dead shoots in autumn. Take each blighted shoot back into sound wood below the black striping and destroy the prunings. The benefit is scoped to young trees, and the timing given is autumn, not dry weather; the same sentence adds spraying with approved fungicides but names no product."
+        }
+      ],
+      "sources": [
+        "tamu_agrilife",
+        "ok_state_ext",
+        "ncsu_ext"
+      ],
+      "anchoring_urls": {
+        "tamu_agrilife": {
+          "url": "https://plantdiseasehandbook.tamu.edu/landscaping/trees/mulberry/",
+          "verified": "2026-09-04"
+        },
+        "ok_state_ext": {
+          "url": "https://extension.okstate.edu/fact-sheets/anthracnose-and-other-common-leaf-diseases-of-deciduous-shade-trees",
+          "verified": "2026-09-04"
+        },
+        "ncsu_ext": {
+          "url": "https://plants.ces.ncsu.edu/plants/morus-rubra/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Water-soaked spots appear on the leaves and later become sunken and black, leaves distort, young shoots show black stripes, and the leaves at the twig tips wilt and dry up. It can kill foliage and branches.",
+          "why": "The old text ended 'Damage is usually cosmetic on an established tree and worst in wet springs.' No document says cosmetic: NC State says the blight may kill foliage and branches, and Texas A&M scopes its control to young trees. The wet-spring clause has no mulberry-level anchor either. Replaced with the symptoms the anchors state.",
+          "anchor": "tamu_agrilife -- 'Watersoaked spots appear on leaves and shoots have black stripes.'; 'The leaves at the twig tips wilt and dry up.'; ok_state_ext -- 'The spots later become sunken and black.'; 'The leaves become distorted, and infected leaves on the twig tips wilt and die.'; ncsu_ext -- 'Bacterial blight may kill foliage/branches.'"
+        },
+        "symptoms_beginner": {
+          "new": "Leaves get spots that look wet, then sink in and turn black, and the leaves can twist out of shape. Young shoots get black streaks, and the leaves at the branch tips wilt and dry up. It can kill leaves and whole branches.",
+          "why": "Same defect as symptoms_seasoned: 'It usually just looks bad rather than harming an established tree' is the record's gloss, contradicted by NC State's 'may kill foliage/branches'.",
+          "anchor": "tamu_agrilife -- 'Watersoaked spots appear on leaves and shoots have black stripes.'; 'The leaves at the twig tips wilt and dry up.'; ok_state_ext -- 'The spots later become sunken and black.'; ncsu_ext -- 'Bacterial blight may kill foliage/branches.'"
+        },
+        "cause_seasoned": {
+          "new": "Bacterial blight is caused by the bacterium Pseudomonas syringae pv. mori, which attacks the leaves and shoots. NC State's verdict is that it may kill foliage and branches, and Texas A&M's plant disease handbook scopes its control advice to young trees.",
+          "why": "The old text called it 'a minor mulberry disease that flares in wet seasons and rarely threatens a healthy tree' and said it 'spreads in cool, wet spring weather'. No admissible document says minor or rarely threatens; the cool-wet-spring driver is stated for mulberry only by the PNW handbook (not catalog-admitted) and generically by UC IPM's P. syringae page, which does not name mulberry. Replaced with the identity and the severity the anchors give.",
+          "anchor": "tamu_agrilife -- 'bacterium: Pseudomonas syringae pv. mori'; 'Some control is obtainable on young trees by pruning dead shoots in autumn and spraying with approved fungicides.'; ok_state_ext -- 'A blight of mulberry leaves is caused by a bacterium, Pseudomonas syringae pv. mori, which at first appears as water-soaked spots.'; ncsu_ext -- 'Bacterial blight may kill foliage/branches.'"
+        },
+        "cause_beginner": {
+          "new": "Bacterial blight is caused by a bacterium (Pseudomonas syringae pv. mori) that attacks the leaves and young shoots. It can kill leaves and branches, and the Texas advice for controlling it is aimed at young trees.",
+          "why": "Same defect as cause_seasoned: 'a minor disease that shows up in wet years and rarely hurts a healthy tree' is unanchored and contradicted by NC State.",
+          "anchor": "ok_state_ext -- 'A blight of mulberry leaves is caused by a bacterium, Pseudomonas syringae pv. mori, which at first appears as water-soaked spots.'; ncsu_ext -- 'Bacterial blight may kill foliage/branches.'; tamu_agrilife -- 'Some control is obtainable on young trees by pruning dead shoots in autumn and spraying with approved fungicides.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Prune out the dead, blighted shoots in autumn, cutting back into sound wood, and destroy the prunings; Texas A&M's plant disease handbook says this gives some control on young trees, and it also mentions spraying with approved fungicides but names no product. Oklahoma State's guidance for the leaf diseases it covers, this blight among them, adds two cultural measures: avoid irrigation methods that wet the lower canopy, and consider thinning the canopy for greater air circulation, which reduces periods of leaf wetness.",
+          "why": "The old text gave 'dry weather' as the pruning timing (Texas A&M says autumn; 'dry season' is UC IPM's generic P. syringae page, which does not name mulberry) and asserted 'No spray is warranted on a home tree', which the record's own anchor contradicts in letter. Its 'avoid overhead watering that keeps foliage wet' is anchored by the entry's own ok_state_ext sheet and is kept, restated as OSU words it, with OSU's canopy-thinning sentence beside it.",
+          "anchor": "tamu_agrilife -- 'Some control is obtainable on young trees by pruning dead shoots in autumn and spraying with approved fungicides.'; ok_state_ext -- 'Avoid irrigation methods that wet the lower canopy of the tree.'; 'Consider thinning the canopy to allow for greater air circulation which reduces periods of leaf wetness.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "In the fall, cut out the dead, blackened shoots, going back into healthy wood, and get rid of the prunings; Texas A&M says this gives some control on young trees. Keep sprinklers from wetting the lower branches, and thin out a crowded tree so the leaves dry faster after rain, which is what Oklahoma State advises for leaf diseases on yard trees.",
+          "why": "'in dry weather' has no mulberry-level anchor (Texas A&M says autumn), and 'that cleanup is all that is needed' is contradicted by the anchor's own fungicide clause. 'avoid watering over the top of the tree so the leaves stay drier' is anchored by the entry's own ok_state_ext sheet and is kept, with OSU's canopy-thinning advice beside it.",
+          "anchor": "tamu_agrilife -- 'Some control is obtainable on young trees by pruning dead shoots in autumn and spraying with approved fungicides.'; ok_state_ext -- 'Avoid irrigation methods that wet the lower canopy of the tree.'; 'Consider thinning the canopy to allow for greater air circulation which reduces periods of leaf wetness.'"
+        },
+        "prevention_seasoned": {
+          "new": "Texas A&M's plant disease handbook gives autumn pruning of dead, blighted shoots, and scopes the benefit to young trees. Oklahoma State's control guidance for the leaf diseases it describes, this blight included, adds keeping irrigation off the lower canopy and thinning the canopy for air circulation, both aimed at shortening the periods of leaf wetness. NC State's warning that the disease may kill foliage and branches is the reason not to skip any of it on a young tree.",
+          "why": "The old text prescribed 'prune only in dry weather' (no mulberry-level anchor; Texas A&M says autumn) and ended 'A vigorous, well-spaced tree shrugs off the disease in most years', a gloss no source makes and NC State's 'may kill foliage/branches' contradicts. Its 'Keep the canopy open and the foliage dry' is anchored by the entry's own ok_state_ext sheet and is kept, restated as OSU words it.",
+          "anchor": "tamu_agrilife -- 'Some control is obtainable on young trees by pruning dead shoots in autumn and spraying with approved fungicides.'; ok_state_ext -- 'Avoid irrigation methods that wet the lower canopy of the tree.'; 'Consider thinning the canopy to allow for greater air circulation which reduces periods of leaf wetness.'; ncsu_ext -- 'Bacterial blight may kill foliage/branches.'"
+        },
+        "prevention_beginner": {
+          "new": "Cut out dead, blighted shoots each fall, especially on a young tree, where Texas A&M says it helps. Keep sprinklers off the lower branches and thin out a crowded canopy so the leaves dry quickly after rain, which is Oklahoma State's advice for leaf diseases on yard trees. The disease can kill leaves and branches, so do not wait it out.",
+          "why": "'prune only when it is dry' has no mulberry-level anchor (Texas A&M says autumn), and 'A healthy, well-spaced tree easily shrugs this off most years' contradicts NC State's 'may kill foliage/branches'. 'Keep the tree open so air moves through it' is anchored by the entry's own ok_state_ext sheet and is kept, with OSU's irrigation sentence beside it.",
+          "anchor": "tamu_agrilife -- 'Some control is obtainable on young trees by pruning dead shoots in autumn and spraying with approved fungicides.'; ok_state_ext -- 'Avoid irrigation methods that wet the lower canopy of the tree.'; 'Consider thinning the canopy to allow for greater air circulation which reduces periods of leaf wetness.'; ncsu_ext -- 'Bacterial blight may kill foliage/branches.'"
+        }
+      }
+    },
+    {
+      "name": "Leaf spots and minor foliar diseases",
+      "id": "mulberry-leaf-spots",
+      "type": "fungal",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Rake up all the fallen leaves in the fall and get rid of them, by burning where that is allowed or by bagging them for the trash, not by leaving them under the tree. The fungus behind the white cobwebby patches lives through the winter on those fallen leaves and comes back from them in spring, so the cleanup is what breaks the cycle.",
+          "note_seasoned": "Texas A&M's instruction for false mildew is to gather and burn all fallen leaves in autumn, and the reason is in the same entry: the infected leaves fall, and the overwintering (ascocarpic) stage matures on them in spring. Oklahoma State generalizes it: most leaf diseases of yard trees are controlled by gathering and destroying fallen, infected leaves, and the Cercospora and Cercosporella spots and the two powdery mildews share that cleanup. On a tree hit every season, OSU adds keeping it well fertilized and watered to maintain vigor, fertilizing only once it is dormant rather than in early fall."
+        },
+        {
+          "method": "water_at_the_base",
+          "note_beginner": "Aim the water at the soil, not up into the leaves. These spots and mildews come on in wet weather because they need damp leaves, and a sprinkler that reaches the low branches keeps those leaves damp on days the weather would have left them dry. It will not clean up a tree that is already spotted; it takes away one wet spell you can control.",
+          "note_seasoned": "Oklahoma State's control guidance for yard-tree leaf diseases, which covers its mulberry Cercospora and Cercosporella paragraph, is to avoid irrigation methods that wet the lower canopy of the tree. Both Texas A&M and Oklahoma State tie these spots to rainy weather, so irrigation is the only leaf-wetting a grower can subtract; a sprinkler that reaches the lower limbs adds leaf-wetness hours on top of what the season brings. Preventive only, and worth least in a wet season when the rain is doing the same job."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Cut out some of the crowded or crossing branches so the tree is less dense and its leaves dry off faster after rain and dew. Oklahoma State suggests this for leaf diseases on yard trees, mulberry's included, because these fungi need the leaves to stay wet for a while before they can get going. Do it as prevention; it will not clear spots already on the leaves.",
+          "note_seasoned": "Oklahoma State's control guidance, in the same section as its rake-up and vigor sentences, is to consider thinning the canopy to allow greater air circulation, which reduces periods of leaf wetness. It is a general instruction for the leaf diseases the sheet covers rather than anything mulberry-specific, and it addresses the rainy-season condition both sheets name for these spots: false mildew sporulates from the leaf undersides from July on, and a canopy that ventilates keeps that surface wet for less of each day. Thinning lowers pressure ahead of infection; it does not stop an outbreak already on the leaves, and when leaf spots are serious, Texas A&M's answer is fungicide on valuable specimens."
+        }
+      ],
+      "sources": [
+        "tamu_agrilife",
+        "ok_state_ext",
+        "ncsu_ext"
+      ],
+      "anchoring_urls": {
+        "tamu_agrilife": {
+          "url": "https://plantdiseasehandbook.tamu.edu/landscaping/trees/mulberry/",
+          "verified": "2026-09-04"
+        },
+        "ok_state_ext": {
+          "url": "https://extension.okstate.edu/fact-sheets/anthracnose-and-other-common-leaf-diseases-of-deciduous-shade-trees",
+          "verified": "2026-09-04"
+        },
+        "ncsu_ext": {
+          "url": "https://plants.ces.ncsu.edu/plants/morus-rubra/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "cause_seasoned": {
+          "new": "A group of leaf fungi can spot or coat mulberry foliage: Cercospora and Cercosporella leaf spots, false mildew (Mycosphaerella mori) and two powdery mildews. The spots come in very rainy seasons and the false mildew appears in July. They are not all trivial: Texas A&M notes the Cercosporella fungus can defoliate older trees, and that foliage in the southern states may suffer severely from false mildew.",
+          "why": "The old text ended 'On mulberry these are cosmetic and seldom worth treating.' The anchor grades two members of the umbrella as capable of severe foliage loss: false mildew ('may suffer severely') and Cercosporella ('can cause defoliation of older trees'). 'Cosmetic' was the record's gloss, not the source's.",
+          "anchor": "tamu_agrilife -- 'The leaves of mulberry are spotted by these fungi in very rainy seasons.'; 'The Cercosporella fungus can cause defoliation of older trees.'; 'The foliage of mulberries growing in the southern states may suffer severely from attacks of this fungus.'; 'It appears in July as whitish, indefinite patches on the undersides of the leaves.'"
+        },
+        "cause_beginner": {
+          "new": "A few leaf fungi, leaf spots and mildews, can mark mulberry leaves, mostly in wet weather and from midsummer on. In a bad year they can do more than mark the leaves: one of the leaf spots can strip an older tree of its leaves, and in the South the white cobwebby mildew can hit the foliage hard.",
+          "why": "Same defect as cause_seasoned: 'they are just cosmetic and rarely worth doing anything about' is contradicted by the anchor's severity sentences for two of the fungi.",
+          "anchor": "tamu_agrilife -- 'The Cercosporella fungus can cause defoliation of older trees.'; 'The foliage of mulberries growing in the southern states may suffer severely from attacks of this fungus.'"
+        },
+        "symptoms_seasoned": {
+          "new": "Reddish-brown fungal leaf spots in very rainy seasons, or whitish, indefinite patches on the leaf undersides from July (false mildew), or a white powdery coating on the lower leaf surface (powdery mildew). Leaf drop can be heavy: the Cercosporella spot can defoliate older trees, and false mildew can hit southern foliage severely.",
+          "why": "The old text ended 'Vigor and cropping are rarely affected', which no source says and which the anchor's defoliation and 'suffer severely' sentences cut against. Replaced with the symptom descriptions the anchors give, including OSU's spot color.",
+          "anchor": "ok_state_ext -- 'Leaves of mulberry trees are spotted by two fungi, Cercospora moricola and Cercosporella mori, which cause reddish-brown spots.'; tamu_agrilife -- 'It appears in July as whitish, indefinite patches on the undersides of the leaves.'; 'The lower leaf surface is covered by a white, powdery coating of these fungi.'; 'The Cercosporella fungus can cause defoliation of older trees.'"
+        },
+        "symptoms_beginner": {
+          "new": "Reddish-brown spots on the leaves in a rainy year, or whitish cobwebby or powdery patches on the undersides from midsummer. In a bad year the tree can drop a lot of leaves, especially an older tree or one in the South.",
+          "why": "Same defect as symptoms_seasoned: 'It rarely affects how the tree grows or fruits' is unanchored and cuts against the anchor's severity sentences.",
+          "anchor": "ok_state_ext -- 'Leaves of mulberry trees are spotted by two fungi, Cercospora moricola and Cercosporella mori, which cause reddish-brown spots.'; tamu_agrilife -- 'The Cercosporella fungus can cause defoliation of older trees.'; 'The foliage of mulberries growing in the southern states may suffer severely from attacks of this fungus.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Treatment is seldom needed. Rake and remove fallen leaves in autumn, since the false mildew overwinters on them and its spring stage matures there. Oklahoma State's guidance for yard-tree leaf diseases adds three things: avoid irrigation methods that wet the lower canopy, consider thinning the canopy for greater air circulation to reduce periods of leaf wetness, and keep a tree that is hit every season fertilized and watered to maintain vigor. Fungicides are for valuable specimens when leaf spots are serious, which is where Texas A&M puts them.",
+          "why": "The old text's 'No treatment is needed on a healthy tree' is an absolute no source makes: Texas A&M grades two members of the umbrella as capable of severe foliage loss and prescribes fungicide on valuable specimens when spots are serious. Its 'keep the canopy open for airflow' is anchored by the entry's own ok_state_ext sheet and is kept, restated as OSU words it, with OSU's irrigation and vigor sentences and the overwintering mechanism added; the fungicide framing is kept.",
+          "anchor": "tamu_agrilife -- 'Gather and burn all fallen leaves in autumn.'; 'The infected leaves fall to the ground, and the overwintering or ascocarpic stage matures in spring on these leaves.'; 'Valuable specimens should be sprayed with approved fungicide if leaf spots are serious.'; ok_state_ext -- 'Consider thinning the canopy to allow for greater air circulation which reduces periods of leaf wetness.'; 'Avoid irrigation methods that wet the lower canopy of the tree.'; 'Trees that have been affected by leaf diseases every season should also be well fertilized and watered to maintain vigor.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "A healthy tree rarely needs treatment. Rake up and remove the fallen leaves in fall, because the mildew fungus lives through the winter on them. Keep sprinklers off the low branches and thin a crowded tree so the leaves dry off faster, and feed and water a tree that gets hit every year so it stays vigorous. Sprays are only for special trees with a bad, repeated problem.",
+          "why": "Same defect as organic_treatment_seasoned: 'A healthy tree needs no treatment' is an absolute the anchor's severity and fungicide sentences cut against. 'keep the tree open so air flows through' is anchored by the entry's own ok_state_ext sheet and is kept, with OSU's irrigation and vigor advice beside it.",
+          "anchor": "tamu_agrilife -- 'Gather and burn all fallen leaves in autumn.'; 'The infected leaves fall to the ground, and the overwintering or ascocarpic stage matures in spring on these leaves.'; ok_state_ext -- 'Consider thinning the canopy to allow for greater air circulation which reduces periods of leaf wetness.'; 'Avoid irrigation methods that wet the lower canopy of the tree.'; 'Trees that have been affected by leaf diseases every season should also be well fertilized and watered to maintain vigor.'"
+        },
+        "prevention_seasoned": {
+          "new": "Autumn leaf cleanup is the prevention the sources put first: the false mildew's overwintering stage matures on fallen leaves in spring, and Oklahoma State's general rule for yard-tree leaf diseases is to gather and destroy fallen, infected leaves. The same OSU guidance adds thinning the canopy for greater air circulation, which reduces periods of leaf wetness, and keeping irrigation off the lower canopy. On a tree affected every season, keep it well fertilized and watered to maintain vigor, fertilizing only once the tree is dormant, not in early fall.",
+          "why": "The old text made 'Open-canopy pruning, autumn leaf cleanup, and good air movement' 'the whole prevention program', a superlative its own OSU anchor exceeds (OSU also gives irrigation placement and vigor), and ended 'Well-grown mulberries carry these diseases without meaningful harm', the cosmetic gloss the anchor contradicts. The open-canopy and air-movement clauses are anchored by OSU's canopy-thinning sentence and are kept, restated as OSU words it.",
+          "anchor": "tamu_agrilife -- 'The infected leaves fall to the ground, and the overwintering or ascocarpic stage matures in spring on these leaves.'; ok_state_ext -- 'Most leaf diseases of yard trees are controlled by gathering and destroying fallen, infected leaves.'; 'Consider thinning the canopy to allow for greater air circulation which reduces periods of leaf wetness.'; 'Avoid irrigation methods that wet the lower canopy of the tree.'; 'Trees that have been affected by leaf diseases every season should also be well fertilized and watered to maintain vigor.'; 'Do not fertilize during early fall.'"
+        },
+        "prevention_beginner": {
+          "new": "Cleaning up the fallen leaves every fall is the main prevention, because the fungus waits out the winter on them. Thin a crowded tree so the leaves dry faster and keep sprinklers off the low branches, which is what Oklahoma State advises for leaf diseases on yard trees. If the tree gets it every year, keep it fed and watered so it stays strong, and feed it when it is dormant in late winter rather than in early fall.",
+          "why": "Same defect as prevention_seasoned: 'are all you need' is a superlative OSU's own guidance exceeds, and 'carries these without real harm' is the gloss the anchor contradicts. 'Keeping the tree open' and 'letting air move through' are anchored by OSU's canopy-thinning sentence and are kept.",
+          "anchor": "tamu_agrilife -- 'Gather and burn all fallen leaves in autumn.'; ok_state_ext -- 'Most leaf diseases of yard trees are controlled by gathering and destroying fallen, infected leaves.'; 'Consider thinning the canopy to allow for greater air circulation which reduces periods of leaf wetness.'; 'Avoid irrigation methods that wet the lower canopy of the tree.'; 'Fertilize only after the trees are dormant in late winter to early spring.'"
+        }
+      }
+    }
+  ],
+  "unreachable_claims": [
+    "BORERS, K-State MF2735 (NEEDS-CATALOG-ADMISSION; the only US extension document naming a mulberry borer, Dorcaschema wildii, hosts mulberry and Osage orange): 'When adequate moisture is available small borer larvae do not survive water surging through tree vascular elements' and 'Beetles deposit eggs in bark cracks and crevices and are especially attracted to wound areas.' Even if admitted, no method carries either: there is no trunk-protection method (known gap), and `even_watering` does not reach `insect`. Also its timing, larvae overwinter in the wood and adults emerge mid-May to mid-June with egg-laying into early July, which is the inspection window; no monitoring method carries it.",
+    "BIRDS, msu_ext E2747 (https://www.canr.msu.edu/resources/unusual_fruit_plants_for_gardens_in_the_north_central_region_e2747, proxy read): 'Mulberry fruit is very attractive to birds, and the trees may be planted strategically to lure birds away from a high-value fruit crop.' Decoy planting has no method. It survives in the entry's existing organic_treatment prose (HOLDS per the record) and is not on any note; the msu_ext key is anchored to the bird-damage page that carries the two authored steps, so this sentence's URL is recorded here.",
+    "BIRDS, uf_ifas: 'Visiting creatures will reduce the harvest for your personal use, but on a good sized tree there should be enough fruits for all to enjoy.' Tolerate-and-share is the sources' primary answer on a large tree and no method carries it; it is written inside the bird_netting notes as the fallback rather than as a step.",
+    "LEAF SPOTS, ok_state_ext: 'Trees that have been affected by leaf diseases every season should also be well fertilized and watered to maintain vigor.' plus 'Do not fertilize during early fall.' `balance_nitrogen` is a restraint method and `even_watering` does not reach `fungal`, so vigor has no method; carried inside the garden_sanitation seasoned note (OSU ties it to the same control section with 'also') and into the corrected organic_treatment/prevention prose.",
+    "LEAF SPOTS, tamu_agrilife and ok_state_ext fungicide guidance without a product: 'Valuable specimens should be sprayed with approved fungicide if leaf spots are serious', 'Spray with approved fungicide mixture as soon as the mold appears in July', and OSU's three-application schedule for severe rainy springs (bud unfurl, half-grown, fully developed). No document names a product for mulberry, so no fungicide method can be chosen without inventing the material; the timing is recorded here for whoever sources one.",
+    "BACTERIAL BLIGHT, tamu_agrilife: '... and spraying with approved fungicides.' Names no product. The only product-naming document (PNW handbook, not catalog-admitted) restricts copper to ornamental weeping mulberry. See refusals.",
+    "WHITEFLIES, uc_ipm: 'Control of dust and ants, which protect whiteflies from their natural enemies, can also be important, especially in citrus or other trees.' `ant_exclusion` exists and reaches insect, but NC State's threshold is that treating is probably unnecessary, so it was not authored as its own step; carried inside the beneficial_predators notes and the corrected prevention prose. Available as a separate step if the orchestrator wants parity with the lavender whitefly program."
+  ],
+  "refusals": [
+    "BORERS, garden_sanitation rung REWRITTEN ON REVIEW (2026-09-04) into the no-control shape the batch uses for pawpaw's peduncle borer: the admissible literature (NC State toolbox, two prose sentences) says only that borers may be a problem, particularly in the South, and gives NO control; the note now says so and credits NC State with nothing more. The first draft's sanitation prescription rested on the method's own catalog text ('beetles, borers and slugs sheltering in what is still standing') and on K-State MF2735's general sentence 'Prune or remove and dispose of sick, dead, or fallen branches and limbs to deal with established borers', which is NOT catalog-admitted; both warrants are withdrawn from the note. If MF2735 is admitted, the rung can be re-authored as a real sanitation step on that sentence and `sources` gains the key.",
+    "BORERS, `borer_stem_surgery` REFUSED: no document read supports cutting larvae out of a mulberry, and the method's own text is a squash-vine salvage (cut lengthwise from the frass hole, mound soil so the vine re-roots), which cannot be performed on a tree trunk.",
+    "BORERS, the 'beetle and moth larvae, almost always secondary on stressed trees' narrative REFUSED and corrected out of cause_*: no document read names a moth borer on mulberry, and the only organism-level source's D. wildii entry carries no stressed-host qualifier. Rungs for 'water through droughts' and 'keep mowers and trimmers off the trunk' REFUSED: K-State-only (inadmissible) and no method reaches them. symptoms_*, organic_treatment_* and prevention_* still carry the stressed-tree framing ('Healthy, vigorous mulberries are seldom attacked', 'Keep the tree vigorous and unwounded'); the brief asked for the cause prose only, so those are left for the orchestrator with the K-State admission decision.",
+    "BACTERIAL BLIGHT, copper REFUSED: no admissible document names a product. The PNW Plant Disease Management Handbook (https://pnwhandbooks.org/plantdisease/host-disease/mulberry-morus-spp-bacterial-blight, proxy read, NOT catalog-admitted; only the scoped `pnw_handbook_epn` exists) lists Badge X2, CuPRO 5000, Junction, Monterey Liqui-Cop and Nu-Cop 50 DF with the sentence 'The following are registered on weeping mulberry; do not use on edible types.' That sentence keeps copper off a fruiting tree even if the handbook were admitted. TAMU's 'spraying with approved fungicides' is reported, not repaired.",
+    "BACTERIAL BLIGHT, the brief's 'keeping foliage dry, exactly as TAMU states' REFUSED as attributed: TAMU does not say it. TAMU's whole control sentence is 'Some control is obtainable on young trees by pruning dead shoots in autumn and spraying with approved fungicides.' UC IPM's generic bacterial blast/blight/canker page ('Do not wet foliage with overhead irrigation') is organism-level for P. syringae and does not name mulberry. On review the same instruction was found on the entry's own ok_state_ext sheet ('Avoid irrigation methods that wet the lower canopy of the tree.'), whose Control section governs its mulberry blight paragraph, so a `water_at_the_base` rung IS now authored, attributed to Oklahoma State and not to TAMU. 'in dry weather' remains REFUSED as the pruning timing: TAMU says autumn.",
+    "LEAF SPOTS and BACTERIAL BLIGHT, `airflow_spacing` (and `water_at_the_base`) RESTORED ON REVIEW (2026-09-04). The first draft refused airflow_spacing on 'my own reads of TAMU and OSU found no air-movement sentence'; that was a misread. TAMU has none, but the OSU shade-tree sheet anchored as ok_state_ext on BOTH entries says, in the Control section that governs its mulberry blight and Cercospora/Cercosporella paragraphs, 'Consider thinning the canopy to allow for greater air circulation which reduces periods of leaf wetness.' and 'Avoid irrigation methods that wet the lower canopy of the tree.' Both rungs are authored on those two sentences, attributed to Oklahoma State and worded as OSU words them, and the canopy/irrigation clauses are back in the corrected organic_treatment_*/prevention_* prose of both entries.",
+    "POPCORN DISEASE, a copper/Bordeaux rung REFUSED: UAEX says 'While fungicides are not normally recommended there has been some success with a preventative spray of Bordeaux mix (a copper/lime fungicide) as the tree is leafing out', and the Galveston MG sheet (admission UNDECIDED) gives 4-4-50. The orchestrator's instruction was sanitation and stop; the exception is recorded here, not laddered. UAEX's 'It wouldn't hurt to spray the tree this winter with dormant oil' REFUSED: one source, no rationale, for a fungal fruit disease.",
+    "BIRDS, `prompt_harvest` REFUSED: 'pick promptly' has no anchor in any document read. The `bird_scare_deterrents` step is authored on sentences I read on the MSU bird-damage page that the record report did not quote ('Birds can be harassed with various methods such as pyrotechnics (screamers, bangers), propane cannons, hawk kites, reflective ribbon and scare balloons.' and 'Birds are intelligent and become habituated if these methods are not varied or moved frequently.'); the page is a commercial fruit-farm document that does not name mulberry, the same standing as the netting anchor the record accepted. Drop the step if that standing is judged insufficient.",
+    "WHITEFLIES, `balance_nitrogen` REFUSED and the nitrogen claim corrected out of prevention_*: no document read mentions nitrogen for whiteflies. `yellow_sticky_traps` and `neem_oil` not authored: no document read names either for this crop."
+  ],
+  "notes_to_orchestrator": [
+    "PROXY READS anchored at the live URL with today's date, per the brief: ok_state_ext popcorn page (403 first-party on both URL forms; r.jina.ai body confirmed by the orchestrator, V4); ok_state_ext shade-tree leaf-disease fact sheet (403 first-party; I re-read it through r.jina.ai today and confirmed the Cercospora, blight and Control sentences); uada_ext Plant Health Clinic newsletter Issue 15 PDF (first-party returns no text; r.jina.ai today returned 'White mulberry varieties and hybrids are more susceptible than red or black mulberries.'); msu_ext bird-damage page (empty body first-party; r.jina.ai today). Everything else was read first-party today: TAMU (two passes), NCSU mulberry whitefly, NCSU Morus rubra, UC IPM PN 7401, UAEX Reference Desk. Every sentence quoted in a correction anchor was seen in one of those reads, not taken from the report alone.",
+    "ONE URL PER KEY forced choices; alternates recorded so nothing is lost. ncsu_ext: Morus rubra on Birds, Borers, Bacterial blight and Leaf spots (Morus alba carries the same three claims: 'Birds love the fruit', 'Borers and whiteflies can be problems', 'Bacterial blight may kill foliage/branches') and the Mulberry Whitefly factsheet on Whiteflies. uc_ipm: PN 7401 on Whiteflies; PN 7400 (Giant Whitefly, host list includes Morus alba, 'strong stream of water ... very effective') is the alternate. uada_ext: the PHC newsletter on Popcorn disease because it is the only document naming 'red or black' as the less susceptible class, which the correction depends on; the first-party Reference Desk page carries sanitation, the Bordeaux exception and the waxwing sentence and is anchored on Birds. msu_ext: the bird-damage page on Birds (both authored steps); E2747 (decoy sentence) is in unreachable_claims with its URL.",
+    "PLA-457: no document read states a sulfur/oil interval and no note names sulfur. Oil mentions without an interval: NCSU 'Horticultural oils should give some control of the nymphs', UC IPM PN 7401 'Use soaps or oils when plants are not drought-stressed and when temperatures are under 90°F', UAEX 'It wouldn't hurt to spray the tree this winter with dormant oil'. The 90°F figure on the soap and oil notes is warranted by both methods' catalog cautions.",
+    "CORRECTIONS BEYOND THE BRIEF'S ASK, listed so they can be dropped without hunting: Birds cause_seasoned/cause_beginner (robins unpaired with mulberry by any document; 'number-one reason' unranked); Popcorn organic_treatment_seasoned/beginner (overwintering-site clause unanchored); Bacterial blight organic_treatment_*/prevention_* (the 'dry weather' timing contradicts my autumn step and TAMU, 'no spray warranted' contradicts the anchor in letter); Leaf spots symptoms_*/organic_treatment_*/prevention_* (the 'rarely affected / without meaningful harm' gloss; the first draft also called the airflow clause unanchored, which was wrong, and the clause was restored on review). The brief-requested corrections are Borers cause_*, Popcorn prevention_*, Whiteflies prevention_*, Bacterial blight and Leaf spots cause_*/symptoms_* ('cosmetic').",
+    "PIN TABLE: nothing found wrong. Two observations. Leaf spots at severity `low` is defensible only with the corrected prose, since TAMU grades false mildew 'may suffer severely' in the southern states and Cercosporella 'can cause defoliation of older trees'; if the batch ever splits the umbrella, false mildew (Mycosphaerella mori) is the one member with its own onset (July), overwintering statement and severity grade. Popcorn `medium` matches the record's closing of `mulberry_popcorn_severity` for a fruiting audience on OSU's 'can cause high yield losses' (proxy).",
+    "WHITEFLIES ladder provenance: three of five steps (garden_sanitation, water_spray, beneficial_predators) are UC IPM's general whitefly program, mulberry not named; the two spray steps and the tolerance threshold are NC State's mulberry whitefly factsheet, which is on-host. The corrected prevention prose carries NC State's alternate-host list. UC IPM's Encarsia/greenhouse-release line was not seen on my read and is not used.",
+    "BIRDS: the netting note says the net goes on 'ahead of color' and 'in late spring' on NC State's 'Fruit displays from May to June' (Morus rubra) and 'mature in June' (Morus alba, NC). The existing organic_treatment/prevention prose still carries 'pick promptly' and 'Net only small or dwarf trees', both unanchored per the record; left in place because no source contradicts them and the brief scopes corrections to what the record found wrong.",
+    "VALIDATOR: `python3 tools/staging/pla8_batch26_trees/validate_out.py mulberry` passes; no change to the validator was needed. I also ran the promote's own single-crop-applicable guards (LADDER_VOCAB, PLA-457 sentence rule, temperature warrant, difflib ratio in both orders and shared six-word runs against every shipped ladder note) on this file from the scratchpad; results in the return message.",
+    "REVIEW FIXES APPLIED 2026-09-04 (the six FIX items in review_mulberry.md, applied by a second agent; the original author was unavailable): (1) `airflow_spacing` and `water_at_the_base` added to BOTH disease ladders on the ok_state_ext shade-tree sheet's Control sentences ('Consider thinning the canopy to allow for greater air circulation which reduces periods of leaf wetness.'; 'Avoid irrigation methods that wet the lower canopy of the tree.'), which govern its mulberry blight and Cercospora/Cercosporella paragraphs; the canopy and irrigation clauses are restored into all eight bacterial-blight and leaf-spot organic_treatment_*/prevention_* corrections and no `why` calls them unanchored any more; (2) bacterial blight prevention_beginner no longer says the sources give only fall cleanup; (3) prevention_seasoned no longer calls the TAMU step 'the one preventive step'; (4) birds cause_seasoned drops 'one of the best wildlife trees you can plant' for NC State's 'attracting songbirds' (Morus alba sentence added to the anchor); (5) popcorn resistant_varieties note_beginner drops the market claim 'No variety is sold as immune' for 'No source names a resistant variety'; (6) borers rung rewritten to the no-control shape (see refusals). Ladders now: bacterial blight 3 rungs (water_at_the_base, airflow_spacing, prune_out_infection); leaf spots 3 rungs (garden_sanitation, water_at_the_base, airflow_spacing); birds 2, whiteflies 5, borers 1, popcorn 2 unchanged. Within the cultural tier the irrigation rung precedes the canopy-thinning rung on both entries because changing where the water lands is less invasive than cutting branches. Bacterial blight's ok_state_ext key, previously listed but load-bearing on no rung, now carries two rungs (record-level finding 5).",
+    "BORERS, K-State MF2735 still NEEDS-CATALOG-ADMISSION: it is the only US extension document naming a mulberry borer (Dorcaschema wildii, hosts mulberry and Osage orange) and the only one carrying a control sentence ('Prune or remove and dispose of sick, dead, or fallen branches and limbs to deal with established borers.'). The garden_sanitation rung was rewritten on review so it credits no control to NC State and rests on no inadmissible document; admitting MF2735 would let the rung be re-authored as a real sanitation step and would anchor the stressed-tree sentences still standing in the entry's symptoms_*/organic_treatment_*/prevention_* prose (review record-level finding 1).",
+    "The review-pass edits were checked with validate_out.py only. The promote-guard checks the original author ran from the scratchpad (copy-similarity against the shipped corpus, PLA-457 sentence rule, temperature warrant) were NOT rerun on the six new rung notes or the rewritten borer rung; they should be rerun at promote time."
+  ]
+}
