@@ -24,8 +24,10 @@ WHY EACH GUARD EXISTS.
     on the post-state must be empty, and display_readiness / numeric_sanity on the flipped crops too.
  5. THE MIGRATION IS PINNED: exactly EXPECTED_FLAGS_MECHANICAL exact-name matches, and the set of
     gravel and applicable rows equals the set the pre-state says needs them (none missed, none extra).
+    The flag migration is also re-derived independently from the raw container_suitable_varieties list, not solely from mechanical_flags.
  6. BLAST RADIUS AT THE LEAF: set comparisons before value comparisons; only container_notes and
     varieties.recommended may differ; within them only the declared keys; the leaf count is pinned.
+    Sub-dict key sets under drainage and overwintering are compared before their values, never assumed equal to the pre-state's keys.
 
 Usage:
     promote_pla7_container_path.py --check
@@ -326,16 +328,21 @@ def verify_post(pre, post, spec):
             if k in FLIP_KEYS and slug in flips and gcn[k] == flips[slug][k]:
                 leaves += 1
             elif k == "drainage" and slug in gravel:
+                if set(gcn[k]) != set(scn[k]):
+                    raise SystemExit(f"REFUSED: {slug} drainage key set changed")
                 if {kk for kk in scn[k] if _j(scn[k][kk]) != _j(gcn[k].get(kk))} != {"gravel_layer"} or gcn[k]["gravel_layer"] is not False:
                     raise SystemExit(f"REFUSED: {slug} drainage changed other than gravel_layer -> false")
                 leaves += 1
             elif k == "overwintering" and slug in applic:
+                if set(gcn[k]) != set(scn[k]):
+                    raise SystemExit(f"REFUSED: {slug} overwintering key set changed")
                 if {kk for kk in scn[k] if _j(scn[k][kk]) != _j(gcn[k].get(kk))} != {"applicable"} or gcn[k]["applicable"] is not True:
                     raise SystemExit(f"REFUSED: {slug} overwintering changed other than applicable -> true")
                 leaves += 1
             else:
                 raise SystemExit(f"REFUSED: {slug} container_notes.{k} changed without a spec row")
         sv, gv = _varieties(s), _varieties(g)
+        csv_pre = {n.strip().lower() for n in (scn.get("container_suitable_varieties") or []) if isinstance(n, str)}
         if _j(s.get("varieties")) != _j(g.get("varieties")):
             if len(sv) != len(gv):
                 raise SystemExit(f"REFUSED: {slug} variety entry count changed")
@@ -354,7 +361,14 @@ def verify_post(pre, post, spec):
                 want = {"container_suitable"} | ({"container_min_gallons"} if key in explicit else set())
                 if added != want or b["container_suitable"] is not True:
                     raise SystemExit(f"REFUSED: {slug}/{b.get('name')} gained {sorted(added)}, expected {sorted(want)}")
+                if key in explicit and b["container_min_gallons"] != explicit[key]["container_min_gallons"]:
+                    raise SystemExit(f"REFUSED: {slug}/{b.get('name')} container_min_gallons {b['container_min_gallons']!r} is not the spec's {explicit[key]['container_min_gallons']!r}")
+                if key not in explicit and (b.get("name") or "").strip().lower() not in csv_pre:
+                    raise SystemExit(f"REFUSED: {slug}/{b.get('name')} flagged but its name is not in the pre-state container_suitable_varieties list")
                 leaves += len(added)
+        for b in gv:
+            if (b.get("name") or "").strip().lower() in csv_pre and b.get("container_suitable") is not True:
+                raise SystemExit(f"REFUSED: {slug}/{b.get('name')} matches a container_suitable_varieties name but was not flagged")
     if leaves != EXPECTED_LEAVES:
         raise SystemExit(f"REFUSED: {leaves} leaves changed, pinned {EXPECTED_LEAVES}")
     return leaves
