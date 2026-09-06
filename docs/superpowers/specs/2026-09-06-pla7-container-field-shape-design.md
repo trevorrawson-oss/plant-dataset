@@ -54,7 +54,9 @@ follow, never the horticultural mechanism, so it does not depend on PLA-463's ax
    PLA-463 rules the rest crop by crop.
 3. `cultivar` requires at least one `varieties.recommended[]` entry with `container_suitable: true`.
 4. `tray` requires `depth_inches_min` non-null and matches the `microgreen` archetype.
-5. `container_ok` stays a boolean. **No new value is ever added to it**: plant-astro's CareGuideCard
+5. The key is present-or-null on every CERTIFIED crop; the 7 uncertified shells carry no key (A39
+   exempts them), so a roster promote leaves a shell byte-identical as its reference crop.
+6. `container_ok` stays a boolean. **No new value is ever added to it**: plant-astro's CareGuideCard
    and the app's planner both test strict equality and blank on anything else.
 
 **The four defect crops resolve three ways, not one.**
@@ -63,8 +65,10 @@ follow, never the horticultural mechanism, so it does not depend on PLA-463's ax
   `min_pot_gallons` becomes the rootstock figure (25) so the crop-level stat has a number.
 - mulberry: `container_ok: true`, `container_path: cultivar`. Its "Genetic dwarf (Dwarf Everbearing)"
   is a cultivar mis-homed as a rootstock entry (PLA-463's own point; the same name already exists in
-  `varieties.recommended[]`). The rootstock entry is retired, the variety entry takes
-  `container_suitable: true` and `container_min_gallons: 15`, and `min_pot_gallons` becomes 15.
+  `varieties.recommended[]`). The variety entry takes `container_suitable: true` and
+  `container_min_gallons: 15`, and `min_pot_gallons` becomes 15. The mis-homed rootstock entry is
+  NOT removed by this arc: `rootstock_options[]` is PLA-463's shape to rule, so its retirement rides
+  that ticket's follow-on (amended 2026-09-06 after the plan's feasibility pass).
 - plum: **held**. PLA-463 records that plum's size-control claims are T2-heavy. It flips only after
   PLA-463's T1 read on Marianna 2624 / St. Julien A; until then it stays `false` with its prose,
   and the consumer disagreement on plum is accepted as known and logged on PLA-463.
