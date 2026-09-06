@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Guard suite for tools/problem_id_collision_gate.py (PLA-449).
 
-Pinned to canonical 95e66f6d (PLA-8 batch 27, the microgreens; the arc's end state). The
+Pinned to canonical 36d6df6b (PLA-450/451: six duplicate-id merges and the celery blight split). The
 audit-mode fixture is an EXACT
 pin, not a floor: PLA-449 rules that materially fewer findings means the check is too narrow and
 materially more means it floods, so both directions have to fail loudly. A new batch that mints a
@@ -32,22 +32,36 @@ sys.path.insert(0, os.path.join(REPO, "tools"))
 import problem_id_collision_gate as G  # noqa: E402
 
 CANON = os.path.join(REPO, "crops_data_final.json")
-PINNED_SHA = "95e66f6d1a8ea8550b2df3825d3bcbb00d39056e106d037290737923f74d0879"
+PINNED_SHA = "36d6df6bf3bdd2cac37dc568742c37655d1a739b20c9991285bd9608463925fd"
 
 # ---------------------------------------------------------------------------------------------
 # The PLA-449 fixture, transcribed from the ticket. NEVER computed from a scan.
 # ---------------------------------------------------------------------------------------------
-# The eight duplicate-id decisions. Written as the ID SETS the ticket names, so the slug family's
-# three ids stay one decision rather than becoming three unrelated rows.
-THE_EIGHT = [
-    ("cutworm", "cutworms"),
-    ("flea-beetle", "flea-beetles"),
-    ("japanese-beetle", "japanese-beetles"),
+# The eight duplicate-id decisions PLA-449 was built to surface, as they stand after PLA-450/451
+# (2026-09-05). SIX were merged: the minority id no longer exists anywhere, so the pair is gone
+# from the scan for the right reason, and the test proves the ABSENCE of the minority id rather
+# than the absence of the pair. TWO are HELD, not merged, because the entries' own cause prose
+# names different pathogens (cilantro Pseudomonas syringae pv. coriandricola vs pepper
+# Xanthomonas; edamame P. savastanoi pv. glycinea vs bean X. campestris pv. phaseoli + P. syringae
+# pv. phaseolicola). Those two stay OPEN and UNREGISTERED: the gate is the decision surface until
+# Trevor rules. Written as (minority ids..., majority id).
+THE_SIX_MERGED = [
+    (("cutworm",), "cutworms"),
+    (("flea-beetle",), "flea-beetles"),
+    (("japanese-beetle",), "japanese-beetles"),
+    (("botrytis-gray-mold",), "gray-mold"),
+    (("twospotted-spider-mite",), "two-spotted-spider-mite"),
+    (("slugs", "snails-and-slugs"), "slugs-and-snails"),
+]
+THE_TWO_HELD = [
     ("bacterial-leaf-spot", "bacterial-spot"),
-    ("gray-mold", "botrytis-gray-mold"),
-    ("two-spotted-spider-mite", "twospotted-spider-mite"),
     ("bacterial-blight", "bacterial-blights"),
-    ("slugs", "slugs-and-snails", "snails-and-slugs"),
+]
+# The celery split (PLA-451): two minted ids that collide on NAME_SHARED with the generic id they
+# left, adjudicated in the registry. Flagged RAW then suppressed, exactly like the nine known-good.
+THE_CELERY_SPLIT = [
+    ("celery-early-blight", "early-blight"),
+    ("celery-late-blight", "late-blight"),
 ]
 
 # The nine deliberate host/pathogen scopings the guard must not leave in the actionable set.
@@ -75,6 +89,28 @@ def _pairs_of(group):
 def canon():
     with open(CANON) as f:
         return json.load(f)
+
+
+def live_ids(data):
+    return {p.get("id") for c in data["crops"] for f in ("pests", "diseases")
+            for p in (c.get(f) or []) if p.get("id")}
+
+
+def with_slug_family_restored(data):
+    """The pre-PLA-450 slug family, rebuilt by two id writes on a scratch copy: strawberry back on
+    `slugs`, artichoke back on `snails-and-slugs`. Check 3 (FAMILY_MEMBER) has no live exercise
+    left on canonical since the merge retired both minority ids, and a branch nothing reaches is a
+    latent defense, so the family is reconstructed here rather than trusted."""
+    for c in data["crops"]:
+        if c["slug"] == "strawberry":
+            for e in c["pests"]:
+                if e.get("name") == "Slugs":
+                    e["id"] = "slugs"
+        if c["slug"] == "artichoke":
+            for e in c["pests"]:
+                if e.get("id") == "slugs-and-snails":
+                    e["id"] = "snails-and-slugs"
+    return data
 
 
 class Preflight(unittest.TestCase):
@@ -141,7 +177,8 @@ class Branches(unittest.TestCase):
         by = {}
         for x in G.scan(canon(), registry=None):
             by[x.pair] = x.kinds
-        self.assertEqual(by[("cutworm", "cutworms")], {G.ID_NEAR_DUP, G.NAME_SHARED})
+        # a HELD pair: still live after PLA-450, found by both checks
+        self.assertEqual(by[("bacterial-blight", "bacterial-blights")], {G.ID_NEAR_DUP, G.NAME_SHARED})
 
 
 class AuditFixture(unittest.TestCase):
@@ -155,21 +192,35 @@ class AuditFixture(unittest.TestCase):
         cls.flagged = {f.pair for f in cls.findings}
         cls.actionable = {f.pair for f in cls.findings if not f.registered}
 
-    def test_the_eight_pla449_pairs_are_all_flagged(self):
-        missing = []
-        for group in THE_EIGHT:
-            want = _pairs_of(group)
-            if not (want & self.actionable):
-                missing.append(group)
-        self.assertEqual(missing, [], "PLA-449 duplicate-id decisions the guard did not surface")
+    def test_the_six_merged_decisions_are_resolved_for_the_right_reason(self):
+        """A pair can vanish from the scan because the duplicate was merged OR because the guard
+        went blind. Only the first is a pass, so this asserts the MINORITY ID IS GONE from the
+        dataset and the majority id is still there -- never merely that the pair is absent."""
+        live = live_ids(self.data)
+        for minority, majority in THE_SIX_MERGED:
+            for m in minority:
+                self.assertNotIn(m, live, "retired id %r is still carried somewhere" % m)
+                self.assertFalse(any(m in p for p in self.actionable),
+                                 "retired id %r still appears in an OPEN pair" % m)
+            self.assertIn(majority, live)
 
-    def test_every_id_in_each_of_the_eight_is_reachable(self):
-        """The slug decision names THREE ids. Surfacing two of them hands the reviewer a
-        decision with a member missing."""
-        for group in THE_EIGHT:
-            reached = {i for p in self.actionable for i in p if i in group}
-            self.assertEqual(reached, set(group),
-                             "decision %r surfaced only %r" % (group, sorted(reached)))
+    def test_the_two_held_pairs_are_still_flagged_with_every_id_reachable(self):
+        """HELD is not resolved. Both ids must still exist, and the pair must still be OPEN, so
+        the next session inherits the decision rather than a silence."""
+        live = live_ids(self.data)
+        for pair in THE_TWO_HELD:
+            self.assertIn(tuple(sorted(pair)), self.actionable, "held pair %r went quiet" % (pair,))
+            for i in pair:
+                self.assertIn(i, live)
+
+    def test_the_celery_split_is_flagged_RAW_then_suppressed(self):
+        raw = {f.pair: f for f in G.scan(self.data, registry=None)}
+        for pair in THE_CELERY_SPLIT:
+            key = tuple(sorted(pair))
+            self.assertIn(key, raw, "celery pair %r is invisible to the raw checks" % (pair,))
+            self.assertIn(G.NAME_SHARED, raw[key].kinds)
+            self.assertNotIn(key, self.actionable, "celery pair %r survived registration" % (pair,))
+            self.assertTrue(self.reg.registered(*pair))
 
     def test_the_nine_known_good_are_flagged_RAW_then_suppressed(self):
         raw = {f.pair for f in G.scan(self.data, registry=None)}
@@ -181,11 +232,12 @@ class AuditFixture(unittest.TestCase):
             self.assertFalse(want & self.actionable,
                              "known-good %r survived registration" % (group,))
 
-    def test_registry_does_not_suppress_a_target_pair(self):
-        for group in THE_EIGHT:
-            for p in _pairs_of(group):
-                self.assertFalse(self.reg.registered(*p),
-                                 "registry suppresses the real duplicate %r" % (p,))
+    def test_registry_does_not_suppress_a_held_pair(self):
+        """Holding is not registering. A held pair quietly registered would be a decision made by
+        omission."""
+        for p in THE_TWO_HELD:
+            self.assertFalse(self.reg.registered(*p),
+                             "registry suppresses the held pair %r" % (p,))
 
     def test_audit_output_is_exactly_pinned(self):
         """Both directions of PLA-449's bar. Re-measure on a canonical move; never retune.
@@ -203,13 +255,23 @@ class AuditFixture(unittest.TestCase):
         The suite reddened at batch 26 and stayed red through batch 27 because those batches
         registered their pairs without re-measuring here. That is the pin working -- it refuses to
         certify a count it did not measure -- but it is also two revisions of the guard not running.
-        RE-MEASURE THIS WHENEVER CANONICAL MOVES; never retune a count to make it green."""
-        self.assertEqual(len(self.findings), 42, "raw finding count moved")
-        self.assertEqual(len(self.actionable), 22, "actionable count moved")
+        RE-MEASURE THIS WHENEVER CANONICAL MOVES; never retune a count to make it green.
+
+        RE-MEASURED 2026-09-05, 95e66f6d -> 36d6df6b, 42 -> 36 raw. THE FIRST MOVE OF `actionable`,
+        and the first one PREDICTED BEFORE THE RUN (PLA-450's addendum): the promote pinned
+        36 / 22 / 14 from the 42-pair list before it was first executed and refuses any other
+        figure. Eight OPEN pairs retired because their minority id ceased to exist (five two-id
+        merges plus the three-pair slug family); the two celery mints each added one NAME_SHARED
+        pair, both registered. Net raw -8 +2, registered +2, actionable -8. The two HELD pairs
+        (cilantro/pepper, edamame/bean) are still in the 14 on purpose."""
+        self.assertEqual(len(self.findings), 36, "raw finding count moved")
+        self.assertEqual(len(self.actionable), 14, "actionable count moved")
         registered = [f for f in self.findings if f.registered]
-        self.assertEqual(len(registered), 20, "registered count moved")
-        # batch 25's three, then batch 26's five: each must be FLAGGED, REGISTERED, and not open.
-        for pair in (("carrot-leaf-blight", "lemongrass-leaf-blight"),
+        self.assertEqual(len(registered), 22, "registered count moved")
+        # batch 25's three, batch 26's five, then PLA-451's two: FLAGGED, REGISTERED, not open.
+        for pair in (("celery-early-blight", "early-blight"),
+                     ("celery-late-blight", "late-blight"),
+                     ("carrot-leaf-blight", "lemongrass-leaf-blight"),
                      ("leafhoppers", "sage-leafhoppers"),
                      ("mint-rust", "oregano-rust"),
                      ("bacterial-blight", "mulberry-bacterial-blight"),
@@ -237,6 +299,8 @@ class BatchMode(unittest.TestCase):
         self.data = canon()
 
     def test_minted_mode_reports_only_pairs_touching_a_minted_id(self):
+        # `cutworm` was RETIRED by PLA-450, so this is now a re-mint probe: an id absent from the
+        # data, reached by check 1 alone -- exactly the batch-apply case.
         f = G.scan(self.data, minted={"cutworm"}, registry=None)
         self.assertTrue(f)
         for x in f:
@@ -245,7 +309,7 @@ class BatchMode(unittest.TestCase):
     def test_minted_mode_is_a_filter_not_a_different_check(self):
         """A pair reported in minted mode must be reported in audit mode too."""
         audit = {x.pair for x in G.scan(self.data, registry=None)}
-        for mid in ("cutworm", "flea-beetle", "pink-root"):
+        for mid in ("pink-root", "chives-rust", "plum-aphids"):   # all still live after PLA-450
             for x in G.scan(self.data, minted={mid}, registry=None):
                 self.assertIn(x.pair, audit)
 
@@ -289,16 +353,31 @@ class Kinds(unittest.TestCase):
         self.assertNotIn(G.NAME_SHARED, self.by[("black-knot", "black-rot")])
 
     def test_name_shared_fires_across_a_wide_id_distance(self):
-        self.assertIn(G.NAME_SHARED, self.by[("botrytis-gray-mold", "gray-mold")])
-        self.assertNotIn(G.ID_NEAR_DUP, self.by[("botrytis-gray-mold", "gray-mold")])
+        """The celery split is the live example: edit distance 7, one normalized name."""
+        self.assertIn(G.NAME_SHARED, self.by[("celery-early-blight", "early-blight")])
+        self.assertNotIn(G.ID_NEAR_DUP, self.by[("celery-early-blight", "early-blight")])
 
     def test_family_member_completes_the_slug_decision(self):
-        self.assertIn(G.FAMILY_MEMBER, self.by[("slugs", "slugs-and-snails")])
+        """Reconstructed: PLA-450 retired both slug minority ids, so check 3 has no live exercise
+        on canonical. The pre-merge family is rebuilt on a scratch copy and must still surface all
+        three members."""
+        by = {}
+        for x in G.scan(with_slug_family_restored(canon()), registry=None):
+            by.setdefault(x.pair, set()).update(x.kinds)
+        self.assertIn(G.FAMILY_MEMBER, by[("slugs", "slugs-and-snails")])
+        self.assertIn(G.FAMILY_MEMBER, by[("slugs", "snails-and-slugs")])
+        self.assertIn(G.NAME_SHARED, by[("slugs-and-snails", "snails-and-slugs")])
 
     def test_family_member_never_opens_a_family_on_its_own(self):
         """Scoped by construction to ids already implicated by check 1 or check 2, so it cannot
-        flood. Measured: it contributes exactly the two slug pairs on this canonical."""
+        flood. Measured on 36d6df6b: it contributes NOTHING on its own (the slug family is merged);
+        with the family restored it contributes exactly the two slug pairs, and nothing else."""
         only = [p for p, k in self.by.items() if k == {G.FAMILY_MEMBER}]
+        self.assertEqual(only, [])
+        by = {}
+        for x in G.scan(with_slug_family_restored(canon()), registry=None):
+            by.setdefault(x.pair, set()).update(x.kinds)
+        only = [p for p, k in by.items() if k == {G.FAMILY_MEMBER}]
         self.assertEqual(sorted(only), [("slugs", "slugs-and-snails"), ("slugs", "snails-and-slugs")])
 
 
@@ -329,10 +408,11 @@ class MicrogreenSchema(unittest.TestCase):
 
 class Evidence(unittest.TestCase):
     def test_a_finding_carries_the_crops_that_hold_each_id(self):
-        f = [x for x in G.scan(canon(), registry=None) if x.pair == ("cutworm", "cutworms")][0]
-        self.assertEqual(f.crops["cutworm"], ["asparagus"])
-        self.assertIn("sweet-corn", f.crops["cutworms"])
-        self.assertIn("Cutworms", f.names["cutworm"])
+        f = [x for x in G.scan(canon(), registry=None)
+             if x.pair == ("celery-early-blight", "early-blight")][0]
+        self.assertEqual(f.crops["celery-early-blight"], ["celery"])
+        self.assertIn("potato", f.crops["early-blight"])
+        self.assertIn("Early blight (Cercospora leaf spot)", f.names["celery-early-blight"])
 
 
 if __name__ == "__main__":

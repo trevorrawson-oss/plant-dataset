@@ -227,6 +227,26 @@ Current-SHA pointer -- and `test_gen_current_state.py` will catch you if you onl
 `npm run build:guides` in plant-app to clear the E1 pre-commit check, commit, and register the new
 SHA in `promote_fixture.COMMIT_FOR`.
 
+### 5a. REQUIRED CLOSE STEP: re-measure the collision gate suite
+
+`tools/test_problem_id_collision_gate.py` reads LIVE canonical and pins the canonical SHA plus the
+gate's `raw` / `registered` / `actionable` counts and the pair list. **It reddens on every promote
+by design.** It sat red through batches 26 and 27 because nothing in this playbook named the
+re-measure as a step (PLA-461). So, at every close that moves canonical:
+
+1. Run `python3 tools/problem_id_collision_gate.py` on the new canonical and record the three
+   figures. Run `--show-registered` and diff the pair list against the previous state.
+2. Re-measure the suite: `PINNED_SHA`, the three counts, and any pair the promote added, retired or
+   registered. **Re-measure, never retune** -- a count edited to match a surprise is a guard turned
+   off. The docstring on `test_audit_output_is_exactly_pinned` carries the running ledger; append
+   the move there (what changed, why, which ticket).
+3. Report the three figures in the Linear close-out as a named deliverable, not a note.
+
+The standing assertion is that **a batch may add registered pairs and never open ones**, so
+`actionable` holding is the pass condition for a ladder batch. When a promote is SUPPOSED to move
+`actionable` (a merge or a split, PLA-450/451), **pin the predicted figures before the run** and
+refuse on any other result; a number read off afterward is not evidence.
+
 ---
 
 ## 6. When the catalog is the problem, not the crop

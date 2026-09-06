@@ -1,0 +1,16 @@
+{
+  "_what": "PLA-450 + PLA-451, one promote. Every row rewrites exactly ONE leaf: the `id` of one problem entry, found by (crop, field, name). `merge` rows retire a minority duplicate id onto the roster majority id for the same problem. `mint` rows give celery's two blights their own ids because their pathogens differ from the seven tomato/potato crops sharing the generic id. Nothing else moves: no name, no prose, no ladder, no type.",
+  "_held": "Two of PLA-450's eight pairs are NOT merged. bacterial-leaf-spot (cilantro, Pseudomonas syringae pv. coriandricola) vs bacterial-spot (peppers, Xanthomonas) and bacterial-blight (edamame, Pseudomonas savastanoi pv. glycinea) vs bacterial-blights (beans, Xanthomonas campestris pv. phaseoli + Pseudomonas syringae pv. phaseolicola) are different pathogens on different hosts; merging either would create the exact defect PLA-451 fixes. The promote REFUSES a row on either pair. They stay OPEN in the collision gate as the decision surface they are.",
+  "_prediction": "Pinned in promote_pla450_451_problem_ids.py BEFORE the first run: post-promote collision figures raw 36 / registered 22 / actionable 14, from a baseline of 42 / 20 / 22 at 95e66f6d.",
+  "rows": [
+    {"kind": "merge", "crop": "asparagus",   "field": "pests",    "name": "Cutworms",                                                  "from": "cutworm",                "to": "cutworms"},
+    {"kind": "merge", "crop": "swiss-chard", "field": "pests",    "name": "Flea beetle",                                               "from": "flea-beetle",            "to": "flea-beetles"},
+    {"kind": "merge", "crop": "basil",       "field": "pests",    "name": "Japanese beetle",                                           "from": "japanese-beetle",        "to": "japanese-beetles"},
+    {"kind": "merge", "crop": "artichoke",   "field": "diseases", "name": "Gray mold (Botrytis cinerea)",                              "from": "botrytis-gray-mold",     "to": "gray-mold"},
+    {"kind": "merge", "crop": "artichoke",   "field": "pests",    "name": "Twospotted spider mite (Tetranychus urticae)",              "from": "twospotted-spider-mite", "to": "two-spotted-spider-mite"},
+    {"kind": "merge", "crop": "artichoke",   "field": "pests",    "name": "Snails and slugs (Cornu aspersum, Deroceras reticulatum)",  "from": "snails-and-slugs",       "to": "slugs-and-snails"},
+    {"kind": "merge", "crop": "strawberry",  "field": "pests",    "name": "Slugs",                                                     "from": "slugs",                  "to": "slugs-and-snails"},
+    {"kind": "mint",  "crop": "celery",      "field": "diseases", "name": "Early blight (Cercospora leaf spot)",                       "from": "early-blight",           "to": "celery-early-blight"},
+    {"kind": "mint",  "crop": "celery",      "field": "diseases", "name": "Late blight (Septoria leaf spot)",                          "from": "late-blight",            "to": "celery-late-blight"}
+  ]
+}
