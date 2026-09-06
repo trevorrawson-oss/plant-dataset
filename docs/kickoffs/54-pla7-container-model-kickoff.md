@@ -5,6 +5,11 @@
 **Required reading, done:** PLA-429, PLA-409. **Sibling specs read:** PLA-426 (row spacing shape),
 PLA-10 (layout), PLA-142 (critical_warnings), PLA-13 (the closing schema decisions), PLA-305.
 
+> **Amended 2026-09-06 (later the same day):** Trevor ruled D4 and D5, delegated D1 and D2, and asked
+> about D3; PLA-463 (rootstock selection axis) was filed against D1's `dwarf_rootstock` assumption. The
+> rulings and the reconciled shapes live in
+> `docs/superpowers/specs/2026-09-06-pla7-container-field-shape-design.md`; read that before §6 here.
+
 > Every number below was MEASURED on `72371c02` with a key walk over `crops_data_final.json` and a
 > grep over `~/plant-astro/src` and `~/plant-app/src` + `scripts`. Re-measure before believing any of
 > them in a later session. Nothing in this document changes canonical.
