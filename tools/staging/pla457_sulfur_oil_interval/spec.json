@@ -1,0 +1,233 @@
+{
+ "_what": "PLA-457, Trevor's ruling 2026-09-06: 30 days, scoped to growing-season use with green tissue present (elemental or wettable sulfur), deferring to the oil product's label. Every row rewrites exactly ONE sentence inside ONE rung note, found by exact match. The two control_methods cautions are rewritten and re-anchored, and one T1 source (Purdue BP-69-W) is admitted to the catalog. T1 reads, all by direct extraction on 2026-09-06: UC IPM PN 7405 'Don't apply sulfur within 30 days of an oil spray'; Purdue BP-69-W 'Do not use sulfur if you have applied an oil spray within the last month'; EPA label 61842-30 'DO NOT use this product within 30 days of an oil spray at any stage other than dormant (deciduous only)' and 'Allow 30 days between oil and Lime-Sulfur Solution Agricultural Fungicide sprays in the growing season'; UC IPM lime-sulfur page 'Lime sulfur is a product no longer available to home and garden users'. PN 7406 (2 weeks) read too: the sulfur entry's anchor was faithful to it, and the ruling moves to the conservative scoped figure.",
+ "catalog_new": {
+  "purdue_ext_bp69w": {
+   "id": "purdue_ext_bp69w",
+   "name": "Purdue Extension BP-69-W -- Using Organic Fungicides",
+   "title": "Using Organic Fungicides (BP-69-W)",
+   "publisher": "Purdue University Cooperative Extension",
+   "url": "https://www.extension.purdue.edu/extmedia/BP/BP-69-W.pdf",
+   "source_class": "university_extension",
+   "trust_tier": "high",
+   "accessed": "2026-09",
+   "tier": "T1",
+   "citable_for": "Purdue Extension BP-69-W (Beckerman, Botany and Plant Pathology), Using Organic Fungicides: the sulfur-and-oil phytotoxicity interval ('Do not use sulfur if you have applied an oil spray within the last month'), the always-check-product-labels rule, and the summer-oil versus dormant-oil distinction. Read by direct extraction of the PDF 2026-09-06 (PLA-457). Parent portal entry: purdue_ext.",
+   "_admission_provenance": "Minted 2026-09-06 (PLA-457). Verified 2026-09-06."
+  }
+ },
+ "control_methods": {
+  "horticultural_oil": {
+   "caution_old": "Do not apply sulfur within 2 weeks of an oil spray, since the combination can injure foliage",
+   "caution_new": "Keep sulfur and horticultural oil at least 30 days apart while the plant is in leaf, since the combination injures foliage, and check the oil product's label, since some specify longer",
+   "add_sources": [
+    "purdue_ext_bp69w"
+   ],
+   "add_anchors": {
+    "purdue_ext_bp69w": {
+     "url": "https://www.extension.purdue.edu/extmedia/BP/BP-69-W.pdf",
+     "verified": "2026-09-06"
+    }
+   }
+  },
+  "sulfur": {
+   "caution_old": "Do not apply sulfur within 2 weeks of an oil spray",
+   "caution_new": "Keep sulfur at least 30 days from any oil spray while the plant is in leaf, and check the oil product's label, since some specify longer",
+   "add_sources": [
+    "purdue_ext_bp69w",
+    "ucanr_ext_spider_mites"
+   ],
+   "add_anchors": {
+    "purdue_ext_bp69w": {
+     "url": "https://www.extension.purdue.edu/extmedia/BP/BP-69-W.pdf",
+     "verified": "2026-09-06"
+    },
+    "ucanr_ext_spider_mites": {
+     "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html",
+     "verified": "2026-09-06"
+    }
+   }
+  }
+ },
+ "notes": [
+  {
+   "crop": "apple",
+   "field": "pests",
+   "id": "woolly-apple-aphid",
+   "method": "horticultural_oil",
+   "register": "note_seasoned",
+   "old": "Avoid oil on stressed trees, above 90°F, or within 2 weeks of sulfur.",
+   "new": "Avoid oil on stressed trees or above 90°F, and keep it at least 30 days from any sulfur spray while the tree is in leaf; check the oil label, since some specify longer."
+  },
+  {
+   "crop": "apple",
+   "field": "diseases",
+   "id": "powdery-mildew",
+   "method": "sulfur",
+   "register": "note_seasoned",
+   "old": "Sulfur is a reliable protectant fungicide and miticide for powdery mildew; apply preventively where it recurs, avoid above 90°F and within 2 weeks of oil, and note it can set back predatory mites.",
+   "new": "Sulfur is a reliable protectant fungicide and miticide for powdery mildew; apply preventively where it recurs, avoid above 90°F and within 30 days of an oil spray while the tree is in leaf, check the oil label since some specify longer, and note it can set back predatory mites."
+  },
+  {
+   "crop": "apple",
+   "field": "diseases",
+   "id": "apple-scab",
+   "method": "sulfur",
+   "register": "note_seasoned",
+   "old": "Avoid it above 90°F and within 2 weeks of an oil spray, and note it can harm predatory mites.",
+   "new": "Avoid it above 90°F and within 30 days of an oil spray while the tree is in leaf, check the oil label since some specify longer, and note it can harm predatory mites."
+  },
+  {
+   "crop": "grape-tomato",
+   "field": "pests",
+   "id": "whiteflies",
+   "method": "horticultural_oil",
+   "register": "note_seasoned",
+   "old": "Horticultural oil is the alternative contact material for the underside nymphs, on the same repeat schedule and with the same coverage demand, applied in mild weather; keep it off anything in flower and separate it from any sulfur spray by two weeks.",
+   "new": "Horticultural oil is the alternative contact material for the underside nymphs, on the same repeat schedule and with the same coverage demand, applied in mild weather; keep it off anything in flower and separate it from any sulfur spray by at least 30 days in the growing season, checking the oil label since some specify longer."
+  },
+  {
+   "crop": "oregano",
+   "field": "pests",
+   "id": "spider-mites",
+   "method": "horticultural_oil",
+   "register": "note_seasoned",
+   "old": "Keep oil and sulfur 30 days apart, which is the published interval, since the combination injures foliage.",
+   "new": "Keep oil and sulfur at least 30 days apart in the growing season, since the combination injures foliage, and check the oil label, since some specify longer."
+  },
+  {
+   "crop": "oregano",
+   "field": "diseases",
+   "id": "powdery-mildew",
+   "method": "sulfur",
+   "register": "note_seasoned",
+   "old": "Keep it off the plant near or above 90°F and at least two weeks away from any oil spray, and observe the label's interval before harvest.",
+   "new": "Keep it off the plant near or above 90°F and at least 30 days away from any oil spray in the growing season, check the oil label since some specify longer, and observe the label's interval before harvest."
+  },
+  {
+   "crop": "sage",
+   "field": "pests",
+   "id": "spider-mites",
+   "method": "horticultural_oil",
+   "register": "note_seasoned",
+   "old": "Keep it off drought-stressed plants and away from temperatures above 90°F, and do not apply sulfur within 30 days of an oil spray.",
+   "new": "Keep it off drought-stressed plants and away from temperatures above 90°F, and do not apply sulfur within 30 days of an oil spray in the growing season; check the oil label, since some specify longer."
+  },
+  {
+   "crop": "sage",
+   "field": "diseases",
+   "id": "powdery-mildew",
+   "method": "sulfur",
+   "register": "note_seasoned",
+   "old": "Keep it off the plant near or above 90°F and off drought-stressed foliage, and leave two weeks either side of any oil spray.",
+   "new": "Keep it off the plant near or above 90°F and off drought-stressed foliage, and leave at least 30 days either side of any oil spray in the growing season; check the oil label, since some specify longer."
+  },
+  {
+   "crop": "strawberry",
+   "field": "diseases",
+   "id": "powdery-mildew",
+   "method": "sulfur",
+   "register": "note_seasoned",
+   "old": "Sulfur is a protectant for powdery mildew, but some strawberry cultivars are sulfur-sensitive, so spot-test first; avoid above 90°F and within 2 weeks of oil, and note it harms predatory mites.",
+   "new": "Sulfur is a protectant for powdery mildew, but some strawberry cultivars are sulfur-sensitive, so spot-test first; avoid above 90°F and within 30 days of an oil spray in the growing season, check the oil label since some specify longer, and note it harms predatory mites."
+  },
+  {
+   "crop": "strawberry",
+   "field": "pests",
+   "id": "two-spotted-spider-mite",
+   "method": "horticultural_oil",
+   "register": "note_seasoned",
+   "old": "Avoid above 90°F, on stressed plants, or within 2 weeks of sulfur.",
+   "new": "Avoid above 90°F or on stressed plants, and keep it at least 30 days from any sulfur spray in the growing season; check the oil label, since some specify longer."
+  },
+  {
+   "crop": "plum",
+   "field": "pests",
+   "id": "plum-aphids",
+   "method": "horticultural_oil",
+   "register": "note_beginner",
+   "old": "Do not use oil above 90°F or on a drought-stressed tree, and keep it two weeks clear of any sulfur spray.",
+   "new": "Do not use oil above 90°F or on a drought-stressed tree, and once the tree has leaves keep it at least 30 days clear of any sulfur spray; check the oil label, because some say to wait longer."
+  },
+  {
+   "crop": "plum",
+   "field": "pests",
+   "id": "plum-aphids",
+   "method": "horticultural_oil",
+   "register": "note_seasoned",
+   "old": "Observe the oil constraints: not above 90°F, not on stressed trees, and not within two weeks of sulfur.",
+   "new": "Observe the oil constraints: not above 90°F, not on stressed trees, and not within 30 days of sulfur while the tree is in leaf, or longer if the oil label says so."
+  },
+  {
+   "crop": "plum",
+   "field": "pests",
+   "id": "san-jose-scale",
+   "method": "horticultural_oil",
+   "register": "note_beginner",
+   "old": "Do not spray oil on a drought-stressed tree, above 90°F, or within two weeks of a sulfur spray.",
+   "new": "Do not spray oil on a drought-stressed tree or above 90°F, and once the tree has leaves keep it at least 30 days from any sulfur spray; check the oil label, because some say to wait longer."
+  },
+  {
+   "crop": "plum",
+   "field": "pests",
+   "id": "san-jose-scale",
+   "method": "horticultural_oil",
+   "register": "note_seasoned",
+   "old": "Keep the oil constraints in view: not above 90°F, not on stressed trees, not within two weeks of sulfur.",
+   "new": "Keep the oil constraints in view: not above 90°F, not on stressed trees, not within 30 days of sulfur while the tree is in leaf, or longer if the oil label says so."
+  },
+  {
+   "crop": "apricot",
+   "field": "pests",
+   "id": "apricot-aphids",
+   "method": "horticultural_oil",
+   "register": "note_beginner",
+   "old": "Keep oil off a drought-stressed tree, off the tree in bloom so bees are not hit, and do not spray above 90°F or within two weeks of sulfur.",
+   "new": "Keep oil off a drought-stressed tree, off the tree in bloom so bees are not hit, and do not spray above 90°F; once the tree has leaves, keep it at least 30 days from any sulfur spray, and check the oil label because some say to wait longer."
+  },
+  {
+   "crop": "apricot",
+   "field": "pests",
+   "id": "apricot-aphids",
+   "method": "horticultural_oil",
+   "register": "note_seasoned",
+   "old": "Observe the oil constraints: not above 90°F, not on water-stressed wood, not within two weeks of sulfur, and not onto anything in flower.",
+   "new": "Observe the oil constraints: not above 90°F, not on water-stressed wood, not within 30 days of sulfur while the tree is in leaf, or longer if the oil label says so, and not onto anything in flower."
+  },
+  {
+   "crop": "apricot",
+   "field": "pests",
+   "id": "san-jose-scale",
+   "method": "horticultural_oil",
+   "register": "note_seasoned",
+   "old": "Time any in-season oil to crawler emergence, the only exposed stage, and keep the usual limits: not above 90°F, not on stressed wood, not within two weeks of sulfur.",
+   "new": "Time any in-season oil to crawler emergence, the only exposed stage, and keep the usual limits: not above 90°F, not on stressed wood, not within 30 days of sulfur while the tree is in leaf, or longer if the oil label says so."
+  },
+  {
+   "crop": "cherry-sour",
+   "field": "pests",
+   "id": "black-cherry-aphid",
+   "method": "horticultural_oil",
+   "register": "note_seasoned",
+   "old": "Observe the heat and water-stress limits, and leave 2 weeks between oil and sulfur.",
+   "new": "Observe the heat and water-stress limits, and leave at least 30 days between oil and sulfur while the tree is in leaf; check the oil label, since some specify longer."
+  },
+  {
+   "crop": "cherry-sweet",
+   "field": "pests",
+   "id": "black-cherry-aphid",
+   "method": "horticultural_oil",
+   "register": "note_seasoned",
+   "old": "Observe the bloom precaution, hold off on water-stressed trees and above 90°F, and do not pair it with sulfur inside two weeks.",
+   "new": "Observe the bloom precaution, hold off on water-stressed trees and above 90°F, and do not pair it with sulfur inside 30 days while the tree is in leaf; check the oil label, since some specify longer."
+  },
+  {
+   "crop": "lemongrass",
+   "field": "pests",
+   "id": "spider-mites",
+   "method": "horticultural_oil",
+   "register": "note_seasoned",
+   "old": "The same restrictions apply, nothing above 90°F or on stressed foliage, and leave 30 days between an oil spray and any sulfur, which is the interval this entry's own UC IPM note gives.",
+   "new": "The same restrictions apply, nothing above 90°F or on stressed foliage, and leave at least 30 days between an oil spray and any sulfur while the plant is in leaf, the interval this entry's own UC IPM note gives; check the oil label, since some specify longer."
+  }
+ ]
+}
