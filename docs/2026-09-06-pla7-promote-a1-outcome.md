@@ -288,6 +288,22 @@ EMPTY, so the Dwarf Everbearing flag comes ENTIRELY from the spec's one explicit
 (`EXPECTED_FLAGS_EXPLICIT` = 1), not from the mechanical migration; and the variety entry named
 "Dwarf Everbearing" already exists in `varieties.recommended[]`, so no variety was added.
 
+**The cost of HOLDING mulberry, so the decision row carries a price and not just a question.**
+Computed on the base, not estimated. The pins move: flips **3 -> 2**, cultivar rows **8 -> 7**,
+non-null **110 -> 109** and null **11 -> 12** (mulberry keeps a row, valued null, because it stays
+certified), explicit variety flags **1 -> 0**, applicable rows **12 -> 11** (mulberry is one of the
+twelve), and leaves **294 -> 288** (three flip keys, `container_suitable`, `container_min_gallons`,
+one `applicable`). `spec.json` loses the flip row, the `variety_flags` row and the mulberry
+`overwinter_applicable_true` entry, and its `paths` row goes to null with its evidence sentence
+deleted. Three suite tests name mulberry, of which two retire outright
+(`test_mulberry_dwarf_everbearing_is_flagged_with_gallons`, and the mulberry half of
+`test_the_flips_are_true_with_their_pot`) and one is worse than retired:
+`test_refuses_a_variety_min_gallons_other_than_declared` is the ONLY driver for the
+`container_min_gallons` comparison, and with `EXPECTED_FLAGS_EXPLICIT` at 0 that guard, its driver
+and its mutation `blast/variety_min_gallons_not_compared` all go unreachable, so the explicit-flag
+branch would ship unmeasured. Then the suite, the harness and the whole gauntlet re-run, and the
+post-state SHA changes, which retires `d7b33682` and every line in this document that quotes it.
+
 **Also honoured:** PLA-463 says do not give mulberry a path FROM THE ROOTSTOCK ARRAY (its
 container_notes contain zero leaves mentioning "rootstock"). The path is `cultivar`, joined to the
 VARIETY entry, and the mis-homed rootstock entry is left byte-untouched for PLA-463's follow-on.
@@ -324,12 +340,24 @@ One pin moved. `EXPECTED_CULTIVAR` / `N_CULTIVAR` / `spec.json`'s `expected.cult
 ## 8. The suite, and the one driver that had to be fixed
 
 ```
-$ python3 -m pytest tools/test_promote_pla7_container_path.py -q
+$ python3 -m pytest tools/test_promote_pla7_container_path.py -q      # the prepared run
 .........................................................                [100%]
 57 passed in 13.45s
+
+$ python3 -m pytest tools/test_promote_pla7_container_path.py -q      # after the final fix wave
+................................................................         [100%]
+64 passed in 15.99s
 ```
 
 57 passed, **0 skipped** (47 of them were skipping on the skeleton, gated behind `need_evidence()`).
+The final fix wave that closed the whole-branch review took the suite to **64 passed, 0 skipped**:
+five new `BlastRadius` drivers (`test_refuses_a_path_value_other_than_the_spec_row`,
+`test_refuses_a_varieties_prose_change`, `test_refuses_a_string_variety_entry_change`,
+`test_refuses_a_top_level_key_addition`, `test_refuses_a_crop_level_key_addition`) and a new
+`WriteGuards` class of two, which drive `main()`'s write guards through the CLI against a temporary
+COPY of the base bytes and assert the copy is byte-unchanged afterwards. `Preflight` also gained one
+assertion rather than a method: `spec.json`'s `expected` block was enforced by nothing, and now must
+equal the promote's own pins.
 
 **One driver was wrong and had to be fixed** (the suite, never the guard, never a count).
 `BlastRadius::test_refuses_a_change_outside_the_two_blocks` set
@@ -357,15 +385,15 @@ has not been run.
 ## 9. The mutation harness
 
 ```
-anchor preflight: 39/39 anchors match exactly once
+anchor preflight: 44/44 anchors match exactly once
 positive control: unmutated scratch is GREEN
 sentinel: reddened as required
 
-39 injected: 39 caught, 0 survived, 0 broken
+44 injected: 44 caught, 0 survived, 0 broken
 ```
 
 Zero survivors, zero broken, so no mutation needed a driver fix beyond section 8's (which was found by
-the suite run, not by the harness).
+the suite run, not by the harness). The prepared run was 39/39; the final fix wave took it to 44/44.
 
 **Why 39 and not the plan's 34.** Computed, not asserted: the plan's `MUTATIONS` list carries 34
 entries and the shipped harness carries 39; the five extra, by name, are
@@ -379,6 +407,25 @@ a mutation or it does not ship (PLA-215). Separately, commit `6efc94d` fixed the
 DRIVER: the plan's version asserted the `BASE_SHA` constant and never called `load_canonical`, so the
 one mutation in that family could not have been caught by it. That was a driver repair, not a new
 mutation, and the family is 1/1 now.
+
+**Why 44 and not 39.** The whole-branch review found four guard branches with no mutation and two
+guards that were not written yet. The five added, all in the `blast` family, are
+`path_value_not_compared_to_spec` (the added `container_path` was COUNTED but its VALUE was never
+compared to its own spec row, so a `direct` written where the spec says `cultivar` passed at 294
+leaves), `varieties_prose_change_invisible` and `string_entry_change_invisible` (the `varieties`
+subtree was walked only through its dict entries under `recommended`, so a changed
+`varieties.note_beginner` or a changed STRING entry passed), and
+`top_level_key_set_not_compared` / `crop_level_key_set_not_compared` (the two set-first comparisons
+that the whole blast-radius design rests on had never had a driver at all).
+
+**One harness grading rule changed with them.** pytest exits **5** when a selector collects NOTHING,
+and the loop read every non-zero return code as a red driver, so a mistyped selector would have
+scored as `caught` and the mutation would have gone unmeasured while reading as coverage. `rc == 5`
+is now graded BROKEN (a harness failure) in both places a return code is interpreted, the sentinel
+and the mutation loop. Proved live rather than asserted: a selector deliberately misspelled in a
+scratch copy of the harness reports
+`BROKEN serialize/indent_reintroduced: driver ... collected no tests (pytest rc 5)` where it used to
+print `caught`.
 
 ## 10. The gauntlet, on the scratch post-state
 
@@ -535,6 +582,29 @@ the canonical write (gates arm off the data), and carries the state trio (`LATES
 `STATE_HISTORY.md`, `CURRENT_STATE.md`) plus the `promote_fixture.COMMIT_FOR` pin. It runs only on
 Trevor's approval.
 
+**Two more files move in that same commit, or the tree goes red on the write.** Both were found by
+the whole-branch review, and both are re-measures against a moved canonical, not retunes of a check
+that failed.
+
+1. `tools/test_gate_container_path_a58.py` asserts `A58_PRESENCE_ARMED is False` (it pins the
+   DISARMED state on purpose, so nobody arms the floor while the data is still empty). Flip that
+   assertion to `A58_PRESENCE_ARMED = True` in the same commit as the gate flip and the canonical
+   write. Flipping the gate without it leaves a red test.
+2. `tools/test_problem_id_collision_gate.py` pins `PINNED_SHA` to LIVE canonical, so it WILL fail its
+   SHA assertion the moment canonical moves, while its other 28 tests pass and its own numbers
+   (36 / 24 / 12) hold. Update `PINNED_SHA` to the new canonical SHA in the same commit. That gate's
+   suite re-measures at every promote by design (`collision-gate-suite-re-measures-every-promote`):
+   re-measure it, never retune it, and if 36 / 24 / 12 do NOT hold on the new state, stop, because
+   that is a real finding and not a pin refresh.
+
+**The Task 8 rehearsal, run by the reviewer, so the write is not the first time this is tried.** On a
+scratch repo whose canonical IS the post-state and whose `whole_crop_gate` carries
+`A58_PRESENCE_ARMED = True`: `gate_all` **121/121 PASS**; `container_path_gate --presence` **0
+violations across 121 of 128 crops** (the 7 shells are exempt); `whole_crop_gate avocado` **0
+container-path violations**, which is the shell case the presence floor could plausibly have caught
+by mistake; and `test_gate_container_path_a58.py` **PASSES once its assertion is flipped**. Nothing
+in that rehearsal touched this repo's canonical.
+
 ## 14. The full tree
 
 ```
@@ -550,7 +620,13 @@ The two failures are EXACTLY the two the brief names as pre-existing
 touched by this task and neither reading `container_path`. Nothing new failed, nothing was disabled.
 For scale: the PLA-457 prepared-state run on this same canonical recorded 2 failed / 5,347 passed /
 1 skipped in 44 minutes; the +86 passed here are this arc's suites (`container_path_gate`'s 29 plus
-this promote's 57).
+this promote's 57). The final fix wave adds seven more drivers to this promote's suite (section 8),
+so a tree run after it collects 5,440, not 5,433. That number is arithmetic on a 45-minute run, not a
+re-measure: the tree was NOT re-run after the fix wave. What was re-run after it, in full:
+`test_promote_pla7_container_path.py` (64 passed), the harness (44/44), the two neighbour suites
+`test_container_path_gate.py` + `test_gate_container_path_a58.py` (29 passed), `gate_all.py`
+(121/121 PASS on live canonical, A58 still disarmed), and `--check`, whose SHA is unchanged at
+`d7b33682`.
 
 ## 15. Follow-ons (from the plan's follow-on list, with what this task adds to each)
 
@@ -567,6 +643,17 @@ this promote's 57).
   a different reason: blueberry (5 names) and pomegranate (3 names) have `container_suitable_varieties`
   names that match NO variety entry, while echinacea and sweet-potato have an EMPTY list, so all four
   would fail rule 3 today even though they carry dict variety entries.
+  **And the scope figure is wrong.** The spec's migration list (section 3) says 162 names match and
+  60 do not. That does not reproduce. Measured on the base by walking every
+  `container_suitable_varieties` name against its own crop's dict variety entries, case-insensitive
+  and trimmed: **63 crops, 222 names, 134 exact matches, 88 unmatched**, with zero duplicate
+  (crop, name) pairs, so the 134 is a count of distinct joins and not an inflated one. The 134 is the
+  same number the promote pins as `EXPECTED_FLAGS_MECHANICAL`, computed independently here, which is
+  what makes it worth trusting. **Plan B's T1 read is 88 names, not 60**, and 26 of the 88 sit on the
+  seven string-variety crops (cherry-tomato 6, roma-tomato 5, basil 4, beefsteak-tomato 3,
+  heirloom-tomato 3, grape-tomato 3, tomatillo 2), so they are blocked behind the record conversion
+  and cannot be read first. A dated correction line is appended to the spec; the original sentence is
+  left byte-for-byte.
 - **C, `plants_per_pot`:** unchanged by this task.
 - **D, `critical_warnings` safety class:** unchanged by this task.
 - **E, PLA-463 follow-on:** `container_path` for plum, apricot, nectarine, peach, persimmon, pawpaw,
@@ -575,6 +662,69 @@ this promote's 57).
   owns the rule-2 repoint in section 12.
 - **Open for Trevor:** okra (section 3, the closest declined call) and the mulberry decision row
   (section 5).
+
+## 16. The other held promote on this base
+
+`tools/promote_pla457_sulfur_oil_interval.py` (PLA-457, commit `c7d1200`) is ALSO **prepared and
+held** against the same canonical `72371c02`, and this one is not. **Two promotes cannot both be
+pinned to one base and both land.** Measured, not assumed: run against `d7b33682` the PLA-457 promote
+refuses with `base SHA mismatch`, and its own suite still passes, because that suite is replay-pinned
+to the committed base and does not read live canonical. Re-measured in the final fix wave rather than
+taken from the review: `promote_pla457_sulfur_oil_interval.py --check --canonical <A1 post-state>`
+prints `REFUSED: base SHA mismatch. expected 72371c02... got d7b33682...`, and
+`test_promote_pla457_sulfur_oil_interval.py` is 69 passed.
+
+So whichever promote lands first, the other needs a re-pin to the new canonical, a re-verify, a
+re-gauntlet and a NEW post SHA. Nothing is lost either way; the cost is a session, and it falls on
+whichever one goes second. The two options, with what each costs:
+
+| order | cost |
+|---|---|
+| **A1 first** | PLA-457 re-pins `BASE_SHA` to `d7b33682`, re-runs its gauntlet, gets a new post SHA. Its change is note prose on 20 notes across 10 crops and does not touch `container_notes`, so a clean re-pin is very likely. |
+| **PLA-457 first** | A1 re-pins to PLA-457's post SHA and re-runs. A1's fixture, its 44 mutations and its 294-leaf pin all replay off `promote_fixture.pre_state`, so the re-pin is mechanical, but the gauntlet is the long pole (the full tree is 45 minutes) and this document's SHA quotes all retire. |
+
+**The order is Trevor's call**, not a technical one: both work, and the only asymmetry is that A1 is
+the larger, more-quoted artifact and therefore the more expensive one to re-pin.
+
+## 17. What was not verified (PLA-215 close)
+
+The convention allows a written list of what was not verified as a legitimate close. This is that
+list. Nothing here is believed to be wrong; each item is a guard or a path the harness does not
+measure, named so that nobody later reads the 44/44 as covering it.
+
+**Two latent correct-input refusal paths** (`a-guard-can-reject-correct-input`: no mutation ever finds
+these, because a mutation only proves a guard fires on bad input).
+
+1. `check_pre_state` requires an evidence sentence to appear EXACTLY ONCE across a crop's own
+   `container_notes` prose. A dual-register crop that states its container condition VERBATIM in both
+   the beginner and the seasoned register therefore cannot supply evidence at all: every sentence it
+   owns is found twice, and a correct row would be refused. Measured on the base: four crops carry an
+   identical prose leaf of 40 characters or more twice (sweet-corn, field-corn, popcorn, flint-corn,
+   all of them the sentence "Not applicable. <Crop> is not a container crop."), and all four are
+   `container_path: null` rows carrying no evidence, so the path is REACHABLE in the data and UNREACHED
+   by this spec. A future `cultivar` read on a crop whose two registers agree word for word will hit
+   it, and the answer is to quote a longer span, not to loosen the guard.
+2. `verify_post` walks the variety entries of pre and post in parallel with `zip`, so a crop with TWO
+   entries of the same name would flag both and over-count leaves against the 294 pin. Measured: zero
+   crops on the base carry a duplicate variety name.
+
+**Guards that are one line, correct, and have no driver and no mutation.** Each is reachable only
+through an input the spec cannot produce, or is a forward assertion an earlier check answers first:
+`check_spec_shape`'s `base_sha` pin and its flip KEY SET check; the explicit-flag count pin
+(`EXPECTED_FLAGS_EXPLICIT`); the applicable count pin (`EXPECTED_APPLICABLE`); `check_pre_state`'s
+spec-crops-equals-certified-roster comparison, and its refusal of an explicit flag that DUPLICATES a
+mechanical match; `check_post`'s `numeric_sanity` call on the flips (only `display_readiness` has a
+driver); the VALUE branches inside the drainage and overwintering arms of `verify_post` (their key-set
+halves are both mutated, their "changed other than X" halves are not); and, in the variety loop, the
+entry-count check, the lost-variety-key check and the `added != want` branch.
+
+**Two harness properties inherited from the PLA-457 runner and not re-derived here.** `build_scratch`
+symlinks the live `crops_data_final.json` and `.git` into the scratch tree so `promote_fixture` can
+shell out to `git show`; the promote is never run against that symlink by any driver, but the symlink
+means a driver that DID call `main()` without arguments would reach live canonical. As of the final
+fix wave two drivers do reach `main()`, both through the CLI in `WriteGuards`, and both pass an
+explicit path to a temporary COPY of the base bytes and assert that copy is byte-unchanged
+afterwards. No driver runs `main()` against the repo canonical.
 
 
 ---

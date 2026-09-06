@@ -108,6 +108,12 @@ standard apple scion sold on seedling stock). PLA-12 authors a value on every en
 3. `container_suitable_varieties[]` is retired AFTER the astro beds tool and the app's
    `build-education-data.mjs` read the flag instead. Both are one-function changes.
 
+> Correction 2026-09-06 (promote A1 whole-branch review): items 1 and 2's counts are not reproducible
+> on 72371c02. The 63 crops / 222 names hold; the split does not. Measured: 134 exact matches / 88
+> unmatched, zero duplicate (crop, name) pairs. Plan B's scope is 88, not 60, and 26 of the 88 sit on
+> the seven string-variety crops and are blocked behind the record conversion. See
+> `docs/2026-09-06-pla7-promote-a1-outcome.md` section 15.
+
 ---
 
 ## 4. D3 answered: what the advanced reader gets, and what does not become a field
