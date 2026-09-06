@@ -1,0 +1,571 @@
+{
+  "_what": "PLA-7 promote A1 (spec 2026-09-06 sections 2, 3, 8 step 2). ONE row per crop sets container_notes.container_path; three flips on the crops whose own notes and rootstock entries say a pot works (plum HELD for PLA-463); the mechanical migration of every container_suitable_varieties name that exactly matches a varieties.recommended[] entry into container_suitable: true; gravel_layer 'not_required' -> false; overwintering.applicable null -> true where the crop is container_ok and carries overwintering prose. Evidence on every rootstock/cultivar row is a sentence found EXACTLY ONCE in that crop's own container_notes prose.",
+  "base_sha": "72371c02fa306d8e1849053416baf34e232b80bbdf1af5169d546c12c8f45222",
+  "paths": [
+    {
+      "crop": "cherry-tomato",
+      "container_path": "direct"
+    },
+    {
+      "crop": "beefsteak-tomato",
+      "container_path": "direct"
+    },
+    {
+      "crop": "roma-tomato",
+      "container_path": "direct"
+    },
+    {
+      "crop": "bell-pepper",
+      "container_path": "direct"
+    },
+    {
+      "crop": "jalapeno",
+      "container_path": "direct"
+    },
+    {
+      "crop": "slicing-cucumber",
+      "container_path": "direct"
+    },
+    {
+      "crop": "kale",
+      "container_path": "direct"
+    },
+    {
+      "crop": "spinach",
+      "container_path": "direct"
+    },
+    {
+      "crop": "carrot",
+      "container_path": "direct"
+    },
+    {
+      "crop": "basil",
+      "container_path": "direct"
+    },
+    {
+      "crop": "zucchini-courgette",
+      "container_path": "direct"
+    },
+    {
+      "crop": "green-beans-bush",
+      "container_path": "direct"
+    },
+    {
+      "crop": "sugar-snap-peas",
+      "container_path": "direct"
+    },
+    {
+      "crop": "broccoli",
+      "container_path": "direct"
+    },
+    {
+      "crop": "garlic",
+      "container_path": "direct"
+    },
+    {
+      "crop": "peach",
+      "container_path": null
+    },
+    {
+      "crop": "apple",
+      "container_path": "rootstock",
+      "evidence": ""
+    },
+    {
+      "crop": "lemon",
+      "container_path": "direct"
+    },
+    {
+      "crop": "blueberry",
+      "container_path": "direct"
+    },
+    {
+      "crop": "heirloom-tomato",
+      "container_path": "direct"
+    },
+    {
+      "crop": "grape-tomato",
+      "container_path": "direct"
+    },
+    {
+      "crop": "banana-pepper",
+      "container_path": "direct"
+    },
+    {
+      "crop": "cayenne-pepper",
+      "container_path": "direct"
+    },
+    {
+      "crop": "habanero",
+      "container_path": "direct"
+    },
+    {
+      "crop": "pickling-cucumber",
+      "container_path": "direct"
+    },
+    {
+      "crop": "english-cucumber",
+      "container_path": "direct"
+    },
+    {
+      "crop": "yellow-summer-squash",
+      "container_path": "direct"
+    },
+    {
+      "crop": "butternut-squash",
+      "container_path": "direct"
+    },
+    {
+      "crop": "acorn-squash",
+      "container_path": "direct"
+    },
+    {
+      "crop": "spaghetti-squash",
+      "container_path": "direct"
+    },
+    {
+      "crop": "pole-beans",
+      "container_path": "direct"
+    },
+    {
+      "crop": "snow-peas",
+      "container_path": "direct"
+    },
+    {
+      "crop": "broad-beans-fava",
+      "container_path": "direct"
+    },
+    {
+      "crop": "lettuce-leaf",
+      "container_path": "direct"
+    },
+    {
+      "crop": "swiss-chard",
+      "container_path": "direct"
+    },
+    {
+      "crop": "arugula",
+      "container_path": "direct"
+    },
+    {
+      "crop": "bok-choy",
+      "container_path": "direct"
+    },
+    {
+      "crop": "radish",
+      "container_path": "direct"
+    },
+    {
+      "crop": "potato",
+      "container_path": "direct"
+    },
+    {
+      "crop": "sweet-potato",
+      "container_path": "direct"
+    },
+    {
+      "crop": "cauliflower",
+      "container_path": "direct"
+    },
+    {
+      "crop": "cabbage",
+      "container_path": "direct"
+    },
+    {
+      "crop": "onion",
+      "container_path": "direct"
+    },
+    {
+      "crop": "spring-onion",
+      "container_path": "direct"
+    },
+    {
+      "crop": "sweet-corn",
+      "container_path": null
+    },
+    {
+      "crop": "edamame",
+      "container_path": "direct"
+    },
+    {
+      "crop": "parsley",
+      "container_path": "direct"
+    },
+    {
+      "crop": "cilantro-coriander",
+      "container_path": "direct"
+    },
+    {
+      "crop": "chives",
+      "container_path": "direct"
+    },
+    {
+      "crop": "mint",
+      "container_path": "direct"
+    },
+    {
+      "crop": "thyme",
+      "container_path": "direct"
+    },
+    {
+      "crop": "dill",
+      "container_path": "direct"
+    },
+    {
+      "crop": "rosemary",
+      "container_path": "direct"
+    },
+    {
+      "crop": "oregano",
+      "container_path": "direct"
+    },
+    {
+      "crop": "sage",
+      "container_path": "direct"
+    },
+    {
+      "crop": "eggplant",
+      "container_path": "direct"
+    },
+    {
+      "crop": "tomatillo",
+      "container_path": "direct"
+    },
+    {
+      "crop": "watermelon",
+      "container_path": "direct"
+    },
+    {
+      "crop": "cantaloupe",
+      "container_path": "direct"
+    },
+    {
+      "crop": "strawberry",
+      "container_path": "direct"
+    },
+    {
+      "crop": "pumpkin",
+      "container_path": "direct"
+    },
+    {
+      "crop": "plum",
+      "container_path": null
+    },
+    {
+      "crop": "apricot",
+      "container_path": null
+    },
+    {
+      "crop": "pear-european",
+      "container_path": "rootstock",
+      "evidence": ""
+    },
+    {
+      "crop": "pear-asian",
+      "container_path": "rootstock",
+      "evidence": ""
+    },
+    {
+      "crop": "lime",
+      "container_path": "direct"
+    },
+    {
+      "crop": "orange-navel",
+      "container_path": "rootstock",
+      "evidence": ""
+    },
+    {
+      "crop": "mandarin-clementine",
+      "container_path": "rootstock",
+      "evidence": ""
+    },
+    {
+      "crop": "fig",
+      "container_path": "direct"
+    },
+    {
+      "crop": "pomegranate",
+      "container_path": "direct"
+    },
+    {
+      "crop": "raspberry",
+      "container_path": "direct"
+    },
+    {
+      "crop": "blackberry",
+      "container_path": "direct"
+    },
+    {
+      "crop": "elderberry",
+      "container_path": "direct"
+    },
+    {
+      "crop": "persimmon",
+      "container_path": null
+    },
+    {
+      "crop": "mulberry",
+      "container_path": "cultivar",
+      "evidence": ""
+    },
+    {
+      "crop": "pawpaw",
+      "container_path": null
+    },
+    {
+      "crop": "parsnip",
+      "container_path": "direct"
+    },
+    {
+      "crop": "kohlrabi",
+      "container_path": "direct"
+    },
+    {
+      "crop": "honeydew-melon",
+      "container_path": "direct"
+    },
+    {
+      "crop": "grapefruit",
+      "container_path": "rootstock",
+      "evidence": ""
+    },
+    {
+      "crop": "cherry-sweet",
+      "container_path": "rootstock",
+      "evidence": ""
+    },
+    {
+      "crop": "artichoke",
+      "container_path": "direct"
+    },
+    {
+      "crop": "turnip",
+      "container_path": "direct"
+    },
+    {
+      "crop": "leek",
+      "container_path": "direct"
+    },
+    {
+      "crop": "brussels-sprouts",
+      "container_path": "direct"
+    },
+    {
+      "crop": "okra",
+      "container_path": "direct"
+    },
+    {
+      "crop": "nectarine",
+      "container_path": null
+    },
+    {
+      "crop": "cherry-sour",
+      "container_path": "rootstock",
+      "evidence": ""
+    },
+    {
+      "crop": "microgreens-mix",
+      "container_path": "tray"
+    },
+    {
+      "crop": "sunflower-sprouts",
+      "container_path": "tray"
+    },
+    {
+      "crop": "pea-shoots",
+      "container_path": "tray"
+    },
+    {
+      "crop": "celery",
+      "container_path": "direct"
+    },
+    {
+      "crop": "asparagus",
+      "container_path": null
+    },
+    {
+      "crop": "shallot",
+      "container_path": "direct"
+    },
+    {
+      "crop": "lemongrass",
+      "container_path": "direct"
+    },
+    {
+      "crop": "marigold",
+      "container_path": "direct"
+    },
+    {
+      "crop": "nasturtium",
+      "container_path": "direct"
+    },
+    {
+      "crop": "lavender",
+      "container_path": "direct"
+    },
+    {
+      "crop": "sunflower",
+      "container_path": "direct"
+    },
+    {
+      "crop": "borage",
+      "container_path": "direct"
+    },
+    {
+      "crop": "calendula",
+      "container_path": "direct"
+    },
+    {
+      "crop": "zinnia",
+      "container_path": "direct"
+    },
+    {
+      "crop": "cosmos",
+      "container_path": "direct"
+    },
+    {
+      "crop": "chamomile",
+      "container_path": "direct"
+    },
+    {
+      "crop": "sweet-alyssum",
+      "container_path": "direct"
+    },
+    {
+      "crop": "echinacea",
+      "container_path": "direct"
+    },
+    {
+      "crop": "bee-balm",
+      "container_path": "direct"
+    },
+    {
+      "crop": "viola",
+      "container_path": "direct"
+    },
+    {
+      "crop": "sweet-pea",
+      "container_path": "direct"
+    },
+    {
+      "crop": "radish-microgreens",
+      "container_path": "tray"
+    },
+    {
+      "crop": "broccoli-microgreens",
+      "container_path": "tray"
+    },
+    {
+      "crop": "arugula-microgreens",
+      "container_path": "tray"
+    },
+    {
+      "crop": "wheatgrass",
+      "container_path": "tray"
+    },
+    {
+      "crop": "cilantro-microgreens",
+      "container_path": "tray"
+    },
+    {
+      "crop": "beet",
+      "container_path": "direct"
+    },
+    {
+      "crop": "cucumber",
+      "container_path": "direct"
+    },
+    {
+      "crop": "collards",
+      "container_path": "direct"
+    },
+    {
+      "crop": "dry-bean",
+      "container_path": "direct"
+    },
+    {
+      "crop": "field-corn",
+      "container_path": null
+    },
+    {
+      "crop": "popcorn",
+      "container_path": null
+    },
+    {
+      "crop": "flint-corn",
+      "container_path": null
+    }
+  ],
+  "flips": [
+    {
+      "crop": "cherry-sweet",
+      "container_ok": true,
+      "min_pot_gallons": 25,
+      "container_recommended": false
+    },
+    {
+      "crop": "cherry-sour",
+      "container_ok": true,
+      "min_pot_gallons": 25,
+      "container_recommended": false
+    },
+    {
+      "crop": "mulberry",
+      "container_ok": true,
+      "min_pot_gallons": 15,
+      "container_recommended": false
+    }
+  ],
+  "variety_flags": [
+    {
+      "crop": "mulberry",
+      "name": "Dwarf Everbearing",
+      "container_min_gallons": 15
+    }
+  ],
+  "gravel_normalize": [
+    "cherry-tomato",
+    "beefsteak-tomato",
+    "roma-tomato",
+    "carrot",
+    "heirloom-tomato",
+    "grape-tomato",
+    "swiss-chard",
+    "radish",
+    "potato",
+    "sweet-potato",
+    "tomatillo",
+    "parsnip",
+    "kohlrabi",
+    "turnip",
+    "celery",
+    "beet"
+  ],
+  "overwinter_applicable_true": [
+    "apple",
+    "lemon",
+    "pear-european",
+    "pear-asian",
+    "lime",
+    "orange-navel",
+    "mandarin-clementine",
+    "pomegranate",
+    "mulberry",
+    "grapefruit",
+    "cherry-sweet",
+    "cherry-sour"
+  ],
+  "expected": {
+    "rows": 121,
+    "non_null": 110,
+    "null": 11,
+    "tray": 8,
+    "rootstock": 8,
+    "cultivar": 1,
+    "flips": 3,
+    "variety_flags_mechanical": 134,
+    "variety_flags_explicit": 1,
+    "gravel": 16,
+    "applicable": 12
+  }
+}
