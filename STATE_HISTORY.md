@@ -4,6 +4,16 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-09-06 -- PLA-7 CONTAINER ARC: KICKOFF MEASURED AND WRITTEN, RULINGS PENDING (canonical UNCHANGED at `72371c02`) [Claude Code]
+
+**DOCS ONLY. No crop record touched, `LATEST.txt` not bumped.** PLA-7 moved Todo -> In Progress on the kickoff alone. Preflight clean (SHA == LATEST.txt, HEAD `9a79e35` in sync). Required reading done (PLA-429, PLA-409) plus PLA-426, PLA-10, PLA-142, PLA-13, PLA-305. Kickoff: `docs/kickoffs/54-pla7-container-model-kickoff.md`, mirrored as a dated section on PLA-7.
+
+**The finding: the container model is AUTHORED and UNRENDERED.** `container_notes` on 128/128 (~35 leaf keys); on the 121 certified, 3,068 non-null leaves of which consumers read 644; 2,183 prose strings of which 222 are read, and those are the bare variety-name chips. Every dual-register pair in the block renders nowhere on either consumer; plant-app's export ships the whole object. PLA-409's root-volume model consumes `min_pot_gallons` PER PLANT, a semantics written nowhere. PLA-429 does not bind pots.
+
+**Defects found, none fixed:** plum / mulberry / cherry-sweet / cherry-sour are `container_ok: false` with a `container_suitable: true` rootstock carrying gallons, so plant-astro says "No" while plant-app places them at 25 gal (opposite answers on the same crop); `container_specific_pests` ruled retire 2026-08-22 and still present on 127; five woody herbs with beginner-only watering/fertilizer adjustments; 12 empty `container_notes.sources` (4 on `container_ok: true`); `gravel_layer` in two encodings; 22 woody crops with two overwintering prose homes and `applicable: null` on the 17 woody perennials; 3 citrus rootstocks suitable with no gallons; 60 of 222 `container_suitable_varieties` names joined to no variety entry.
+
+**Six decisions written decision-ready for Trevor (D1-D6):** `container_path` enum sibling vs flipping the four booleans; the PLA-12 variety flag shape; which advanced items are fields (recommend none new); balcony weight to PLA-142; the render contract (ContainerCard + app chapter, frontend first); the D6 riders. **Standing rule honoured:** the render path was checked BEFORE any field was proposed; every proposed field names its consumer or is declared an app rule. **Next:** rulings, then session 2 (spec + promote, held) and session 3 (source-truth sample on the pot-size numerics).
+
 ## 2026-09-06 -- OVERNIGHT CLEANUP: PLA-462 SCOPED, PLA-14 RECONCILED, PLA-448 CLOSED OUT BUT LEFT OPEN, PLA-457 PREPARED AND HELD (canonical UNCHANGED at `72371c02`)
 
 **TOOLING AND DOCS ONLY. No crop record touched, `LATEST.txt` not bumped.** Four items, ordered so a stop on one would not strand the others; none stopped. Commit policy for the session: anything not touching canonical commits and pushes when green; the one thing that touches canonical is prepared, gauntleted and HELD.
