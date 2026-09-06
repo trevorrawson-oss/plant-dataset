@@ -68,6 +68,16 @@ class Preflight(Base):
         self.assertEqual(P.BASE_SHA, BASE_SHA)
         self.assertEqual(P.sha256_bytes(promote_fixture.pre_state(P.BASE_SHA)), BASE_SHA)
 
+    def test_refuses_a_canonical_that_is_not_the_base(self):
+        """load_canonical is the ENTRY POINT: bytes that do not hash to BASE_SHA are refused before any check runs."""
+        import tempfile
+        with tempfile.NamedTemporaryFile("wb", suffix=".json", delete=False) as f:
+            f.write(b'{"crops":[]}')
+        try:
+            self.assertRefuses("this promote is pinned to", P.load_canonical, f.name)
+        finally:
+            os.remove(f.name)
+
     def test_fixture_is_the_full_roster(self):
         self.assertEqual(len(self.data["crops"]), ROSTER)
 

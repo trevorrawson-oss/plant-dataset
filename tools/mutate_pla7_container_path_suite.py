@@ -41,7 +41,7 @@ MARKER = "# MUTATION-APPLIED"
 # (family, name, old, new, pytest -k selector)
 MUTATIONS = [
     ("entry", "base_sha_check_removed", "    if got != BASE_SHA:", "    if False:  " + MARKER,
-     "test_base_sha_is_the_pinned_one"),
+     "test_refuses_a_canonical_that_is_not_the_base"),
 
     ("spec", "row_count_not_pinned", "    if len(rows) != EXPECTED_ROWS:", "    if False:  " + MARKER,
      "test_refuses_a_missing_crop"),
