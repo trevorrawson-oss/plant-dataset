@@ -48,6 +48,10 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # PLA-450 + PLA-451: six duplicate problem-id merges, two held on taxon, the celery blight
+    # split. NINE `id` leaves, nothing else. NOTHING rebuilds a pre-state from c189d65 yet -- it is
+    # live canonical, so it is the NEXT promote's base.
+    '36d6df6bf3bdd2cac37dc568742c37655d1a739b20c9991285bd9608463925fd': 'c189d65',
     # PLA-8 BATCH 27, the microgreens: roster 114 -> 121, the arc's end state. NEVER AMEND 890fdf7:
     # tools/test_promote_pla450_451_problem_ids.py rebuilds its entire pre-state from this pin
     # (PLA-450/451, 2026-09-05, -> 36d6df6b). The 36d6df6b commit gets registered here once it exists.
