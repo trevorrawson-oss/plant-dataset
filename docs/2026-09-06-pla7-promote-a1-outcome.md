@@ -86,6 +86,63 @@ on the base: lemon has two container-suitable trifoliate entries and lime one, a
 not become load-bearing in this promote: no consumer is sent to those entries by a path this promote
 writes. It stays owed to Plan A2 / Plan E.
 
+### Decision row for Trevor: lemon and lime against navel and mandarin
+
+**The tension, stated plainly.** Six of the eight `rootstock` rows carry a genuine exclusivity in
+their prose ("Containers suit apple ONLY on a true dwarfing rootstock", "a semi-vigorous or standard
+tree WILL OUTGROW any practical pot", grapefruit's "you MUST use a dwarf type"). Two do not.
+orange-navel and mandarin-clementine ship `rootstock` on prose of the SAME non-exclusive construction
+that section 2 just used to decline lemon. Side by side:
+
+> **orange-navel (`rootstock`)**: Citrus are among the best fruit trees for containers, and a navel on
+> Flying Dragon (a naturally dwarfing trifoliate rootstock) is well suited to a large pot.
+
+> **lemon (`direct`)**: Lemons are among the best citrus for containers, and a dwarf-rootstock tree in
+> a large pot is the standard approach for cold-climate growers.
+
+Both are "this crop is among the best for containers, AND here is the rootstock that suits a pot".
+Neither says a standard tree fails. Read on prose exclusivity alone, the two would land on the same
+value, and they have not.
+
+**Why they legitimately differ anyway.** The citrus trio's rows do not rest on prose exclusivity at
+all. They rest on the spec's **rule 2**: a T1-cited, container-suitable rootstock entry, so the
+consumer has a JOIN to follow AND A NUMBER at the end of it. Measured on the base:
+
+| crop | container-suitable entry | `container_size_gallons` | entry sources |
+|---|---|---|---|
+| `orange-navel` | Flying Dragon trifoliate | **25** | `ucr_citrus` |
+| `mandarin-clementine` | Flying Dragon trifoliate | **15** | `uf_ifas_edis`, `tamu_agrilife` |
+| `grapefruit` | Flying Dragon trifoliate | **25** | `ucr_citrus` |
+| `lemon` | trifoliate orange (Citrus trifoliata) | **null** | `tamu_agrilife`, `uf_ifas_hs1153` |
+| `lemon` | Carrizo / Swingle citrumelo (trifoliate hybrids) | **null** | `uf_ifas_hs132`, `uf_ifas_hs1153` |
+| `lime` | Swingle citrumelo (trifoliate hybrid) | **null** | `ufifas_ext`, `uf_ifas_hs132` |
+
+That null is PLA-7 defect 7, and it is exactly why the spec carved lemon and lime out of rule 2 in
+the first place and sent them to an authoring read instead ("their `container_path` (`direct` or
+`rootstock`) is an authoring read of their own notes in session 2, after the D6 gallons fill"). The
+read ran and found no exclusivity. So the two values come from two different mechanisms, not from two
+different readings of the same construction: **the citrus trio is decided by rule 2 plus a sourced
+number; lemon and lime were sent to prose because their number is missing, and the prose said
+`direct`.**
+
+**The two options and what each costs.**
+
+- **(a) Relax lemon and lime to `rootstock` now.** Consistent with navel and mandarin on the face of
+  the prose. Cost: it points consumers at entries with `container_size_gallons: null`, so plant-app
+  falls back to the crop's `min_pot_gallons` of 15, which is a SUBSTITUTION presented as a rootstock
+  figure. Mechanically it also means `EXPECTED_ROOTSTOCK` / `N_ROOTSTOCK` / `spec.expected.rootstock`
+  8 -> 10 and two spec rows gaining evidence sentences, all before Task 8, plus a re-run of the
+  suite, the harness and the whole gauntlet for a new scratch SHA.
+- **(b) Leave as prepared.** Plan A2 fills the three citrus rootstock gallons at T1 (it already owes
+  them), and Plan E then re-reads lemon and lime with rule 2 available to them. Cost: until then the
+  dataset says `direct` for lemon and lime while saying `rootstock` for their citrus siblings, and a
+  reader comparing the two prose blocks will see the inconsistency this row describes.
+
+**Recommendation: (b).** Do not point a consumer at a null number. The inconsistency is visible only
+by comparing two prose blocks; option (a)'s cost is a wrong gallons figure shown to a user as if it
+came from the rootstock. **This is Trevor's call**, and it is cheap either way before Task 8: option
+(a) is two spec rows, one pin in three files, and a re-run.
+
 
 ---
 
@@ -105,9 +162,29 @@ and it requires the verb before the size word. It missed watermelon entirely, an
 acorn-squash beginner sentence that is that crop's clearest statement of the condition. The read was
 redone as an exhaustive dump of every sentence containing a size word
 (`compact|bush|patio|dwarf|determinate|miniature|semi-bush|short-vined|small-fruited|genetic-dwarf|weeping`)
-in `notes_seasoned` or `notes_beginner` of every `container_ok` crop with dict variety entries: 47
-crops printed and read by hand. The seven accepted below and the declines are that read, not the
+in `notes_seasoned` or `notes_beginner` of every `container_ok` crop with dict variety entries: **47
+crops** printed and read by hand. The seven accepted below and the declines are that read, not the
 regex's.
+
+**The 47, named, because a population count is worth nothing without its list.** acorn-squash, apple,
+banana-pepper, bell-pepper, blackberry, blueberry, bok-choy, broad-beans-fava, butternut-squash,
+cabbage, cantaloupe, cayenne-pepper, cucumber, dill, dry-bean, echinacea, eggplant, elderberry,
+english-cucumber, grapefruit, green-beans-bush, habanero, honeydew-melon, jalapeno, kale, kohlrabi,
+lemon, mandarin-clementine, okra, orange-navel, pear-asian, pear-european, pickling-cucumber,
+pomegranate, pumpkin, radish, raspberry, slicing-cucumber, snow-peas, spaghetti-squash, spinach,
+sugar-snap-peas, sweet-potato, swiss-chard, watermelon, yellow-summer-squash, zucchini-courgette.
+
+47 is stable: recomputed three ways (sentence-split vs whole-field matching, and the wide size-word
+list vs the narrow `compact|bush|patio|dwarf|determinate|miniature`), all three return the same 47
+slugs with a zero-element symmetric difference. **A review recount of the same population returned
+48, and the crop the two counts differ on is `mulberry`.** mulberry carries "genetic-dwarf" and
+"weeping" in both registers and has dict varieties, but its `container_ok` is **false ON THE BASE**,
+which is the state this scan reads, so the filter drops it; the promote's own flip is what makes it
+container-ok, and it is already decided as `cultivar` on its own evidence row (section 1). Counted on
+the POST-state the strict number is not 48 but **50**, because cherry-sweet and cherry-sour are the
+other two flips and both carry a size word. So: 47 is the base-state population this read swept, 48
+is that population plus the already-decided mulberry, and neither number changes a single decision in
+this section.
 
 ### Accepted: seven crops move `direct` -> `cultivar`
 
@@ -145,7 +222,7 @@ do NOT assert the negative are below, declined.
 | `dill` | Standard dill reaches 3 to 5 feet and gets top-heavy, so choose a dwarf, slow-bolting variety such as Fernleaf for pots. | The block opens "Dill grows well in a container at least 10 inches deep to fit its taproot", and the beginner reason is "so it does not get too tall and tippy". Top-heavy is a manageability problem, not an assertion that standard dill fails. |
 | `raspberry` | Use a 10-to-15-gallon pot of free-draining, compost-rich mix, choose a compact or fall-bearing cultivar so you can cut canes to the ground each winter, and stake the canes. | The stated purpose of the cultivar choice is PRUNING convenience ("so you can cut canes to the ground"), and the block opens by calling containers a practical way to grow the crop. |
 | `blackberry` | Use a 10-to-15-gallon pot of free-draining, compost-rich mix, choose a compact or primocane-fruiting cultivar so you can cut canes back hard each winter, and stake or trellis the canes. | Same as raspberry. |
-| `cabbage` | Cabbage is a workable container crop, especially the compact early varieties. | "especially" is preference. |
+| `cabbage` | Cabbage is a workable container crop, especially the compact early varieties. | "especially" is preference. **Its strongest counter-sentence, from the same seasoned block:** "Choose small, fast types (Golden Acre, Early Jersey Wakefield, Stonehead) over the big late storage kinds." That is a COMPARATIVE preference ("over"), and it asserts nothing negative about a big late storage cabbage in a pot: no clause says such a head will not form, unlike the accepted cucurbits' "since full-size vining kinds are too big for a pot". The beginner register agrees and is weaker still ("Compact early varieties like Golden Acre are the best fit"), and its opening line is "Cabbage grows fine in a large pot", unqualified. Conservative default: `direct`. |
 | `broad-beans-fava` | Dwarf fava varieties such as Robin Hood suit containers best; the common tall types (2 to 4 feet, sometimes taller) are workable in a large, deep, stable pot but tend to lean and need staking. | The note explicitly says the tall types ARE workable in a pot. |
 | `bell-pepper` | Compact varieties such as Redskin, Mohawk, and the small-fruited snacking bells perform best, while full-size blocky bells want the larger pot and a small stake. | The note explicitly accommodates full-size bells in a pot. |
 | `eggplant` | Compact, container-bred varieties such as Patio Baby and Fairy Tale, and slender Asian types such as Ichiban, perform best; full-size globe types need the larger pot and a stake. | Same shape as bell-pepper: full-size works, in a bigger pot. |
@@ -498,3 +575,99 @@ this promote's 57).
   owns the rule-2 repoint in section 12.
 - **Open for Trevor:** okra (section 3, the closest declined call) and the mulberry decision row
   (section 5).
+
+
+---
+
+## Appendix: release_verify, both runs in full
+
+Section 10 summarizes these and elides the repeated lines. This appendix is the durable record: both
+runs, unedited, scratch first. The declared `--expect-changed` list is the 120 certified crops other
+than `cherry-sweet` (the `--slug`), computed from the live canonical.
+
+### The scratch post-state as candidate (exit status 1, 11 concerns)
+
+```
+$ python3 tools/release_verify.py <scratch>/pla7_a1_post.json --base crops_data_final.json \
+    --slug cherry-sweet --ref avocado --expect-changed "<the 120>"
+A. collateral (vs base)
+  ok: only the 121 declared crops changed: ['acorn-squash', 'apple', 'apricot', 'artichoke', 'arugula', 'arugula-microgreens', 'asparagus', 'banana-pepper', 'basil', 'bee-balm', 'beefsteak-tomato', 'beet', 'bell-pepper', 'blackberry', 'blueberry', 'bok-choy', 'borage', 'broad-beans-fava', 'broccoli', 'broccoli-microgreens', 'brussels-sprouts', 'butternut-squash', 'cabbage', 'calendula', 'cantaloupe', 'carrot', 'cauliflower', 'cayenne-pepper', 'celery', 'chamomile', 'cherry-sour', 'cherry-sweet', 'cherry-tomato', 'chives', 'cilantro-coriander', 'cilantro-microgreens', 'collards', 'cosmos', 'cucumber', 'dill', 'dry-bean', 'echinacea', 'edamame', 'eggplant', 'elderberry', 'english-cucumber', 'field-corn', 'fig', 'flint-corn', 'garlic', 'grape-tomato', 'grapefruit', 'green-beans-bush', 'habanero', 'heirloom-tomato', 'honeydew-melon', 'jalapeno', 'kale', 'kohlrabi', 'lavender', 'leek', 'lemon', 'lemongrass', 'lettuce-leaf', 'lime', 'mandarin-clementine', 'marigold', 'microgreens-mix', 'mint', 'mulberry', 'nasturtium', 'nectarine', 'okra', 'onion', 'orange-navel', 'oregano', 'parsley', 'parsnip', 'pawpaw', 'pea-shoots', 'peach', 'pear-asian', 'pear-european', 'persimmon', 'pickling-cucumber', 'plum', 'pole-beans', 'pomegranate', 'popcorn', 'potato', 'pumpkin', 'radish', 'radish-microgreens', 'raspberry', 'roma-tomato', 'rosemary', 'sage', 'shallot', 'slicing-cucumber', 'snow-peas', 'spaghetti-squash', 'spinach', 'spring-onion', 'strawberry', 'sugar-snap-peas', 'sunflower', 'sunflower-sprouts', 'sweet-alyssum', 'sweet-corn', 'sweet-pea', 'sweet-potato', 'swiss-chard', 'thyme', 'tomatillo', 'turnip', 'viola', 'watermelon', 'wheatgrass', 'yellow-summer-squash', 'zinnia', 'zucchini-courgette']
+  top-level(non-crops) changed: [] | catalog +none -none
+  ok: reference crop avocado byte-identical
+  cherry-sweet regions changed: []
+B. violation-diff (vs base)
+  ok: no new violations introduced
+  cleared: none
+Gate (candidate)
+  cherry-sweet: GATE: PASS (remember: full per-crop §3 + verbatim scan + roster gate are separate)
+  CONCERN: reference avocado not PASS: GATE: 153 VIOLATION(S)
+C. calendar coherence (filled cells)
+  ok: all filled calendars coherent (no waits; heat_pause aligned)
+D. user-facing dash / spelled-degrees scan
+  ok: no `--`/em-dash/spelled-degrees in any user-facing string
+E. exemplar key-diff (filled cells vs reference)
+  CONCERN: northern_tier: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned']
+  CONCERN: se_gulf: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: ca_interior: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: ca_north_coast: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: ca_south_coast: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: ca_desert: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: warm_arid: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: low_desert_az: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: fl_peninsula: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: hawaii_tropical: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+F. region_notes presence
+  ok: every cell with seasoned notes has beginner notes
+G. exemplar value-divergence (calendar/heat_pause identity vs avocado)
+  review (Step 5.5): value-IDENTICAL to avocado -- attest each as independently-derived, NOT pasted: ['northern_tier.z3.calendar']
+H. shared chill-delivered table (region_chill_delivered shape)
+  ok: region_chill_delivered is a well-formed region -> zone -> [lo,hi] table
+
+  (1 review note(s) above -- Step 5/5.5 items, NON-blocking)
+RELEASE-VERIFY: 11 CONCERN(S) -- block + review before promoting
+```
+
+### The live canonical as candidate, proving every concern pre-exists (exit status 1, 12 concerns)
+
+The extra twelfth is section A alone: a file compared against itself changes nothing while 120 crops
+are declared changed. Every other concern is character-for-character the same as the run above.
+
+```
+$ python3 tools/release_verify.py crops_data_final.json --base crops_data_final.json \
+    --slug cherry-sweet --ref avocado --expect-changed "<the 120>"
+A. collateral (vs base)
+  CONCERN: crops changed = [] (expected ['acorn-squash', 'apple', 'apricot', 'artichoke', 'arugula', 'arugula-microgreens', 'asparagus', 'banana-pepper', 'basil', 'bee-balm', 'beefsteak-tomato', 'beet', 'bell-pepper', 'blackberry', 'blueberry', 'bok-choy', 'borage', 'broad-beans-fava', 'broccoli', 'broccoli-microgreens', 'brussels-sprouts', 'butternut-squash', 'cabbage', 'calendula', 'cantaloupe', 'carrot', 'cauliflower', 'cayenne-pepper', 'celery', 'chamomile', 'cherry-sour', 'cherry-sweet', 'cherry-tomato', 'chives', 'cilantro-coriander', 'cilantro-microgreens', 'collards', 'cosmos', 'cucumber', 'dill', 'dry-bean', 'echinacea', 'edamame', 'eggplant', 'elderberry', 'english-cucumber', 'field-corn', 'fig', 'flint-corn', 'garlic', 'grape-tomato', 'grapefruit', 'green-beans-bush', 'habanero', 'heirloom-tomato', 'honeydew-melon', 'jalapeno', 'kale', 'kohlrabi', 'lavender', 'leek', 'lemon', 'lemongrass', 'lettuce-leaf', 'lime', 'mandarin-clementine', 'marigold', 'microgreens-mix', 'mint', 'mulberry', 'nasturtium', 'nectarine', 'okra', 'onion', 'orange-navel', 'oregano', 'parsley', 'parsnip', 'pawpaw', 'pea-shoots', 'peach', 'pear-asian', 'pear-european', 'persimmon', 'pickling-cucumber', 'plum', 'pole-beans', 'pomegranate', 'popcorn', 'potato', 'pumpkin', 'radish', 'radish-microgreens', 'raspberry', 'roma-tomato', 'rosemary', 'sage', 'shallot', 'slicing-cucumber', 'snow-peas', 'spaghetti-squash', 'spinach', 'spring-onion', 'strawberry', 'sugar-snap-peas', 'sunflower', 'sunflower-sprouts', 'sweet-alyssum', 'sweet-corn', 'sweet-pea', 'sweet-potato', 'swiss-chard', 'thyme', 'tomatillo', 'turnip', 'viola', 'watermelon', 'wheatgrass', 'yellow-summer-squash', 'zinnia', 'zucchini-courgette'])
+  top-level(non-crops) changed: [] | catalog +none -none
+  ok: reference crop avocado byte-identical
+  cherry-sweet regions changed: []
+B. violation-diff (vs base)
+  ok: no new violations introduced
+  cleared: none
+Gate (candidate)
+  cherry-sweet: GATE: PASS (remember: full per-crop §3 + verbatim scan + roster gate are separate)
+  CONCERN: reference avocado not PASS: GATE: 153 VIOLATION(S)
+C. calendar coherence (filled cells)
+  ok: all filled calendars coherent (no waits; heat_pause aligned)
+D. user-facing dash / spelled-degrees scan
+  ok: no `--`/em-dash/spelled-degrees in any user-facing string
+E. exemplar key-diff (filled cells vs reference)
+  CONCERN: northern_tier: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned']
+  CONCERN: se_gulf: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: ca_interior: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: ca_north_coast: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: ca_south_coast: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: ca_desert: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: warm_arid: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: low_desert_az: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: fl_peninsula: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+  CONCERN: hawaii_tropical: novel region keys vs avocado: ['chill_basis_beginner', 'chill_basis_seasoned', 'plantings_provenance']
+F. region_notes presence
+  ok: every cell with seasoned notes has beginner notes
+G. exemplar value-divergence (calendar/heat_pause identity vs avocado)
+  review (Step 5.5): value-IDENTICAL to avocado -- attest each as independently-derived, NOT pasted: ['northern_tier.z3.calendar']
+H. shared chill-delivered table (region_chill_delivered shape)
+  ok: region_chill_delivered is a well-formed region -> zone -> [lo,hi] table
+
+  (1 review note(s) above -- Step 5/5.5 items, NON-blocking)
+RELEASE-VERIFY: 12 CONCERN(S) -- block + review before promoting
+```
