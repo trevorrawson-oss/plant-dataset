@@ -1,7 +1,7 @@
 # PLA-450 Option B close-out -- the two held pairs scoped, both generic ids vacated
 
 **Date:** 2026-09-05. **Lane:** Claude Code. **Canonical:** `36d6df6b` -> `72371c02`, ONE promote,
-TWO `id` leaves, nothing else. **Commit held for Trevor's approval.** Parent write-up:
+TWO `id` leaves, nothing else. **Committed `4b826e4` (pin registered in `d2e6b72`), pushed to origin/main 2026-09-06.** Parent write-up:
 `docs/2026-09-05-pla450-451-problem-id-merge-outcome.md`.
 
 ---
