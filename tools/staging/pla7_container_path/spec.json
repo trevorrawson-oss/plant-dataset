@@ -69,7 +69,7 @@
     {
       "crop": "apple",
       "container_path": "rootstock",
-      "evidence": ""
+      "evidence": "Containers suit apple only on a true dwarfing rootstock (M9, or M27 for the smallest pots); a semi-dwarf or standard tree will outgrow any practical pot."
     },
     {
       "crop": "lemon",
@@ -113,15 +113,18 @@
     },
     {
       "crop": "butternut-squash",
-      "container_path": "direct"
+      "container_path": "cultivar",
+      "evidence": "You can grow butternut in a container, but choose a compact or bush type like Butterbush, since full-size vining butternut is too big for a pot."
     },
     {
       "crop": "acorn-squash",
-      "container_path": "direct"
+      "container_path": "cultivar",
+      "evidence": "Acorn squash grows well in a container if you choose a bush type like Table King or Honey Bear, since full-size vining kinds are too big for a pot."
     },
     {
       "crop": "spaghetti-squash",
-      "container_path": "direct"
+      "container_path": "cultivar",
+      "evidence": "You can grow spaghetti squash in a container, but choose a compact or bush type like Tivoli or Small Wonder, since full-size vining spaghetti squash is too big for a pot."
     },
     {
       "crop": "pole-beans",
@@ -233,11 +236,13 @@
     },
     {
       "crop": "watermelon",
-      "container_path": "direct"
+      "container_path": "cultivar",
+      "evidence": "You can grow a watermelon in a container, but only the small icebox or bush kinds like Sugar Baby or Bush Sugar Baby, since full-size vining watermelons are far too big."
     },
     {
       "crop": "cantaloupe",
-      "container_path": "direct"
+      "container_path": "cultivar",
+      "evidence": "You can grow a cantaloupe in a container, but choose a small, short-vined kind like Minnesota Midget, since full-size vining types are too big."
     },
     {
       "crop": "strawberry",
@@ -245,7 +250,8 @@
     },
     {
       "crop": "pumpkin",
-      "container_path": "direct"
+      "container_path": "cultivar",
+      "evidence": "Only miniature, pie, or bush varieties such as Jack Be Little, Baby Bear, or Small Sugar are realistic in a pot, and they still want a big one: at least 10 gallons and 12 inches deep, larger is better."
     },
     {
       "crop": "plum",
@@ -258,12 +264,12 @@
     {
       "crop": "pear-european",
       "container_path": "rootstock",
-      "evidence": ""
+      "evidence": "Containers suit pear only on a genuinely size-controlling rootstock (a quince stock, or OHxF 333); a semi-vigorous or standard tree will outgrow any practical pot."
     },
     {
       "crop": "pear-asian",
       "container_path": "rootstock",
-      "evidence": ""
+      "evidence": "Containers suit Asian pear only on a genuinely size-controlling rootstock such as OHxF 333; a betulifolia or calleryana standard tree will outgrow any practical pot."
     },
     {
       "crop": "lime",
@@ -272,12 +278,12 @@
     {
       "crop": "orange-navel",
       "container_path": "rootstock",
-      "evidence": ""
+      "evidence": "Citrus are among the best fruit trees for containers, and a navel on Flying Dragon (a naturally dwarfing trifoliate rootstock) is well suited to a large pot."
     },
     {
       "crop": "mandarin-clementine",
       "container_path": "rootstock",
-      "evidence": ""
+      "evidence": "Mandarins are excellent container citrus: the trees are naturally small, and a satsuma on Flying Dragon (a dwarfing trifoliate rootstock) is well suited to a large pot."
     },
     {
       "crop": "fig",
@@ -306,7 +312,7 @@
     {
       "crop": "mulberry",
       "container_path": "cultivar",
-      "evidence": ""
+      "evidence": "A standard mulberry is far too large and vigorous for containers, so container culture means starting with a genetic-dwarf or weeping cultivar (Dwarf Everbearing and similar), which are bred for pots and bear young."
     },
     {
       "crop": "pawpaw",
@@ -322,17 +328,18 @@
     },
     {
       "crop": "honeydew-melon",
-      "container_path": "direct"
+      "container_path": "cultivar",
+      "evidence": "It is workable only with the earliest, most compact variety you can find."
     },
     {
       "crop": "grapefruit",
       "container_path": "rootstock",
-      "evidence": ""
+      "evidence": "Grapefruit is the largest common citrus, so container growing means a dwarfing rootstock (Flying Dragon) and a genuinely large pot; it is more demanding in a container than a compact lemon."
     },
     {
       "crop": "cherry-sweet",
       "container_path": "rootstock",
-      "evidence": ""
+      "evidence": "It can be done on a dwarfing rootstock like Gisela 5, but expect more hands-on care, a smaller crop, and more cracking from the wet-dry swings a pot brings."
     },
     {
       "crop": "artichoke",
@@ -361,7 +368,7 @@
     {
       "crop": "cherry-sour",
       "container_path": "rootstock",
-      "evidence": ""
+      "evidence": "It can be done on a dwarfing rootstock like Gisela 5, but expect more hands-on care, a smaller crop, and more cracking from the wet-dry swings a pot brings."
     },
     {
       "crop": "microgreens-mix",
@@ -561,7 +568,7 @@
     "null": 11,
     "tray": 8,
     "rootstock": 8,
-    "cultivar": 1,
+    "cultivar": 8,
     "flips": 3,
     "variety_flags_mechanical": 134,
     "variety_flags_explicit": 1,

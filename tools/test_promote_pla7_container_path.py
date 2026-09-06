@@ -22,7 +22,7 @@ N_NON_NULL = 110
 N_NULL = 11
 N_TRAY = 8
 N_ROOTSTOCK = 8
-N_CULTIVAR = 1
+N_CULTIVAR = 8
 N_FLIPS = 3
 N_FLAGS = 134
 N_GRAVEL = 16
@@ -306,8 +306,13 @@ class BlastRadius(Base):
         self.assertRefuses("shell avocado changed", P.verify_post, self.data, post, self.spec)
 
     def test_refuses_a_change_outside_the_two_blocks(self):
+        """The mutated field must ALREADY EXIST on the crop: adding a key trips the crop-level key-set
+        check one line earlier and the value guard is never reached (the driver read 'description',
+        which basil does not carry, so the earlier check answered for it)."""
         self.need_evidence()
-        post = self.post(); P.by_slug(post)["basil"]["description"] = "changed"
+        post = self.post()
+        self.assertIn("description_beginner", P.by_slug(post)["basil"])
+        P.by_slug(post)["basil"]["description_beginner"] = "changed"
         self.assertRefuses("changed outside container_notes/varieties", P.verify_post, self.data, post, self.spec)
 
     def test_refuses_an_extra_container_notes_key(self):
