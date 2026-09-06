@@ -94,7 +94,7 @@ clause (the sentence was fixed, not the guard).
 | `register_completeness_gate` | PASS |
 | `variety_resistance_gate` | 0 |
 | `release_verify --base <72371c02> --slug oregano --expect-changed <9> --ref lettuce-leaf` | section A clean: exactly the 10 declared crops, `source_catalog` +1 and `control_methods` as declared, lettuce-leaf byte-identical. One section-E concern (`rgv: novel region keys vs lettuce-leaf: ['plantings_provenance']`) is PRE-EXISTING: the same command on the live canonical with no base reports it, and oregano's region cells are byte-identical across the two states. With `--slug apple` the only concerns are the known false novel-key report from comparing a tree's `chill_basis_*` against an annual reference. |
-| full `tools/` tree | run on the CURRENT canonical with the new suite present; see the Linear close-out |
+| full `tools/` tree (44 min, current canonical, new suite present) | 2 failed / 5,347 passed / 1 skipped; the two are the pre-existing bare-host-scan and cited-claim-scan failures, unrelated; +69 passed is this suite |
 
 ## 7. What is held
 
