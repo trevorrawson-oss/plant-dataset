@@ -1,7 +1,7 @@
 # PLA-450 + PLA-451 close-out -- six duplicate-id merges, two held, the celery blight split
 
 **Date:** 2026-09-05. **Lane:** Claude Code. **Canonical:** `95e66f6d` -> `36d6df6b`, ONE promote,
-NINE `id` leaves on six crops, nothing else. **Commit held for Trevor's approval.**
+NINE `id` leaves on six crops, nothing else. **Committed `c189d65` (pin registered in `b3f3a25`), pushed to origin/main 2026-09-05.** Full `tools/` tree after the commit: 2 failed / 5,214 passed / 1 skipped, the two being the pre-existing pair the A57 close-out named as unrelated.
 
 ---
 
@@ -101,7 +101,7 @@ any id this promote touches.** Both states resolve; the retired-id arm is a refu
 | `register_completeness_gate` | PASS |
 | `release_verify --base <95e66f6d> --slug celery --expect-changed artichoke,asparagus,basil,strawberry,swiss-chard --ref lettuce-leaf` | clean; exactly the six declared crops changed; lettuce-leaf byte-identical; no top-level or catalog delta |
 | collision suite re-measure | 27/27 at `36d6df6b`; harness 28/28 |
-| full `tools/` tree | see the Linear close-out (43-minute run) |
+| full `tools/` tree (43 min) | 2 failed / 5,214 passed / 1 skipped; the 2 are the pre-existing bare-host-scan and cited-claim-scan failures, unrelated |
 
 **A57 stayed green.** `verify_post` checks ladder presence BEFORE the generic field loop. The first
 draft had it after, where the field-equality check fired first and the driver failed on the wrong
