@@ -83,6 +83,14 @@ spec = {
     "expected": expected,
 }
 out = os.path.join(HERE, "spec.json")
+# A REGENERATION IS NOT A DEFAULT. Once the read (Task 7) has filled the evidence slots, the file
+# on disk carries hand-authored sentences that this script cannot reproduce; overwriting it would
+# throw the read away silently. Deleting spec.json first is the deliberate act that unlocks it.
+if os.path.exists(out):
+    with open(out, encoding="utf-8") as f:
+        prior = json.load(f)
+    if any((r.get("evidence") or "").strip() for r in prior.get("paths") or []):
+        sys.exit("REFUSED: spec.json carries authored evidence; delete it deliberately before regenerating")
 with open(out, "w", encoding="utf-8") as f:
     json.dump(spec, f, indent=2, ensure_ascii=False)
     f.write("\n")

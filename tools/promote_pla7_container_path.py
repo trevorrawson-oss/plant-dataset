@@ -28,6 +28,7 @@ WHY EACH GUARD EXISTS.
  6. BLAST RADIUS AT THE LEAF: set comparisons before value comparisons; only container_notes and
     varieties.recommended may differ; within them only the declared keys; the leaf count is pinned.
     Sub-dict key sets under drainage and overwintering are compared before their values, never assumed equal to the pre-state's keys.
+    The written container_path value is compared to its OWN spec row, not merely counted, and the varieties subtree is compared set-first (key set, then every non-recommended value, then the recommended list's length and its string entries).
 
 Usage:
     promote_pla7_container_path.py --check
@@ -304,6 +305,7 @@ def verify_post(pre, post, spec):
     allowed_flags = mechanical_flags(pre) | {(vf["crop"], vf["name"]) for vf in spec["variety_flags"]}
     explicit = {(vf["crop"], vf["name"]): vf for vf in spec["variety_flags"]}
     row_crops = {r["crop"] for r in spec["paths"]}
+    row_by_crop = {r["crop"]: r for r in spec["paths"]}
     leaves = 0
     for slug in pre_i:
         s, g = pre_i[slug], post_i[slug]
@@ -321,6 +323,8 @@ def verify_post(pre, post, spec):
         scn, gcn = s["container_notes"], g["container_notes"]
         if set(gcn) - set(scn) != {"container_path"} or set(scn) - set(gcn):
             raise SystemExit(f"REFUSED: {slug} container_notes key set changed other than by adding container_path")
+        if gcn["container_path"] != row_by_crop[slug]["container_path"]:
+            raise SystemExit(f"REFUSED: {slug} container_path {gcn['container_path']!r} is not the spec's {row_by_crop[slug]['container_path']!r}")
         leaves += 1
         for k in scn:
             if _j(scn[k]) == _j(gcn[k]):
@@ -343,6 +347,22 @@ def verify_post(pre, post, spec):
                 raise SystemExit(f"REFUSED: {slug} container_notes.{k} changed without a spec row")
         sv, gv = _varieties(s), _varieties(g)
         csv_pre = {n.strip().lower() for n in (scn.get("container_suitable_varieties") or []) if isinstance(n, str)}
+        sva, gva = s.get("varieties"), g.get("varieties")
+        if (sva is None) != (gva is None) or (isinstance(sva, dict) != isinstance(gva, dict)):
+            raise SystemExit(f"REFUSED: {slug} varieties shape changed")
+        if isinstance(sva, dict):
+            if set(sva) != set(gva):
+                raise SystemExit(f"REFUSED: {slug} varieties key set changed")
+            for k in sva:
+                if k != "recommended" and _j(sva[k]) != _j(gva[k]):
+                    raise SystemExit(f"REFUSED: {slug} varieties.{k} changed")
+            sr, gr = sva.get("recommended"), gva.get("recommended")
+            if isinstance(sr, list) != isinstance(gr, list) or (isinstance(sr, list) and len(sr) != len(gr)):
+                raise SystemExit(f"REFUSED: {slug} varieties.recommended length changed")
+            if isinstance(sr, list):
+                for a, b in zip(sr, gr):
+                    if not isinstance(a, dict) and _j(a) != _j(b):
+                        raise SystemExit(f"REFUSED: {slug} varieties.recommended string entry changed")
         if _j(s.get("varieties")) != _j(g.get("varieties")):
             if len(sv) != len(gv):
                 raise SystemExit(f"REFUSED: {slug} variety entry count changed")
@@ -383,6 +403,8 @@ def main():
     ap.add_argument("--out", default=None, help="write the post-state HERE instead of over the canonical")
     args = ap.parse_args()
     path = args.canonical_flag or args.canonical
+    if args.out and os.path.abspath(args.out) == os.path.abspath(path or CANON):
+        sys.exit("REFUSED: --out may not target the canonical; use --expect-sha for the write")
 
     data = load_canonical(path)
     spec = staged()

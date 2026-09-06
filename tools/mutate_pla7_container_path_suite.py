@@ -37,6 +37,9 @@ PROMOTE = "promote_pla7_container_path.py"
 SUITE = "test_promote_pla7_container_path.py"
 STAGING = "pla7_container_path"
 MARKER = "# MUTATION-APPLIED"
+# pytest exits 5 when nothing was collected: a non-zero rc that is NOT a red driver. Grading it as
+# "caught" would score a mistyped selector as coverage, so it is BROKEN (a harness failure).
+NOTHING_COLLECTED = 5
 
 # (family, name, old, new, pytest -k selector)
 MUTATIONS = [
@@ -130,6 +133,20 @@ MUTATIONS = [
     ("blast", "unflagged_match_invisible",
      '            if (b.get("name") or "").strip().lower() in csv_pre and b.get("container_suitable") is not True:', "            if False:  " + MARKER,
      "test_refuses_a_matching_variety_left_unflagged"),
+
+    ("blast", "path_value_not_compared_to_spec",
+     '        if gcn["container_path"] != row_by_crop[slug]["container_path"]:', "        if False:  " + MARKER,
+     "test_refuses_a_path_value_other_than_the_spec_row"),
+    ("blast", "varieties_prose_change_invisible",
+     '                if k != "recommended" and _j(sva[k]) != _j(gva[k]):', "                if False:  " + MARKER,
+     "test_refuses_a_varieties_prose_change"),
+    ("blast", "string_entry_change_invisible",
+     "                    if not isinstance(a, dict) and _j(a) != _j(b):", "                    if False:  " + MARKER,
+     "test_refuses_a_string_variety_entry_change"),
+    ("blast", "top_level_key_set_not_compared", "    if set(pre) != set(post):", "    if False:  " + MARKER,
+     "test_refuses_a_top_level_key_addition"),
+    ("blast", "crop_level_key_set_not_compared", "        if set(s) != set(g):", "        if False:  " + MARKER,
+     "test_refuses_a_crop_level_key_addition"),
 
     ("serialize", "indent_reintroduced",
      '    return json.dumps(data, separators=(",", ":"), ensure_ascii=False).encode("utf-8")',
@@ -245,6 +262,10 @@ def main():
             sys.exit(f"HARNESS DEAD: sentinel could not be applied: {err}")
         rc, _ = run_suite(tools, sel)
         open(os.path.join(tools, tgt), "w", encoding="utf-8").write(clean)
+        if rc == NOTHING_COLLECTED:
+            sys.exit("HARNESS DEAD: the sentinel selected NO TESTS (pytest rc 5). A selector that "
+                     "collects nothing reddens for the wrong reason and grades every mutation below "
+                     "on an empty run.")
         if rc == 0:
             sys.exit("HARNESS DEAD: the sentinel mutation SURVIVED. The harness is not measuring "
                      "anything and no result below can be trusted.")
@@ -260,7 +281,10 @@ def main():
                 continue
             rc, out = run_suite(tools, sel)
             open(os.path.join(tools, PROMOTE), "w", encoding="utf-8").write(clean)
-            if rc == 0:
+            if rc == NOTHING_COLLECTED:
+                broken.append((fam, name, f"driver {sel!r} collected NO TESTS (pytest rc 5)"))
+                print(f"  BROKEN   {fam}/{name}: driver {sel!r} collected no tests (pytest rc 5)")
+            elif rc == 0:
                 survived.append((fam, name, sel))
                 print(f"  SURVIVED {fam}/{name}   (driver: {sel})")
             else:

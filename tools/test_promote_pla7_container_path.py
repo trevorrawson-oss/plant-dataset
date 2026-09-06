@@ -94,6 +94,14 @@ class Preflight(Base):
         self.assertEqual(tuple(sorted(r["crop"] for r in self.spec["paths"] if r["container_path"] == "tray")), TRAY_CROPS)
         self.assertEqual(len(self.spec["gravel_normalize"]), N_GRAVEL)
         self.assertEqual(len(self.spec["overwinter_applicable_true"]), N_APPLICABLE)
+        self.assertEqual(self.spec["expected"], {
+            "rows": P.EXPECTED_ROWS, "non_null": P.EXPECTED_NON_NULL, "null": P.EXPECTED_NULL,
+            "tray": P.EXPECTED_TRAY, "rootstock": P.EXPECTED_ROOTSTOCK,
+            "cultivar": P.EXPECTED_CULTIVAR, "flips": P.EXPECTED_FLIPS,
+            "variety_flags_mechanical": P.EXPECTED_FLAGS_MECHANICAL,
+            "variety_flags_explicit": P.EXPECTED_FLAGS_EXPLICIT,
+            "gravel": P.EXPECTED_GRAVEL, "applicable": P.EXPECTED_APPLICABLE},
+            "spec.json's expected block is enforced by nothing else; it must equal the promote's pins")
 
     def test_base_has_no_key_anywhere(self):
         self.assertEqual(sum(1 for c in self.data["crops"] if "container_path" in c["container_notes"]), 0)
@@ -393,6 +401,38 @@ class BlastRadius(Base):
         del v["container_suitable"]
         self.assertRefuses("was not flagged", P.verify_post, self.data, post, self.spec)
 
+    def test_refuses_a_path_value_other_than_the_spec_row(self):
+        self.need_evidence()
+        post = self.post()
+        P.by_slug(post)["pumpkin"]["container_notes"]["container_path"] = "direct"
+        self.assertRefuses("is not the spec's 'cultivar'", P.verify_post, self.data, post, self.spec)
+
+    def test_refuses_a_varieties_prose_change(self):
+        self.need_evidence()
+        post = self.post()
+        v = P.by_slug(post)["cherry-tomato"]["varieties"]
+        key = next(k for k in v if k != "recommended" and isinstance(v[k], str))
+        v[key] = "changed"
+        self.assertRefuses("varieties." + key + " changed", P.verify_post, self.data, post, self.spec)
+
+    def test_refuses_a_string_variety_entry_change(self):
+        self.need_evidence()
+        post = self.post()
+        rec = P.by_slug(post)["cherry-tomato"]["varieties"]["recommended"]
+        i = next(i for i, x in enumerate(rec) if isinstance(x, str))
+        rec[i] = "Renamed"
+        self.assertRefuses("string entry changed", P.verify_post, self.data, post, self.spec)
+
+    def test_refuses_a_top_level_key_addition(self):
+        self.need_evidence()
+        post = self.post(); post["injected_top_key"] = 1
+        self.assertRefuses("top-level key set changed", P.verify_post, self.data, post, self.spec)
+
+    def test_refuses_a_crop_level_key_addition(self):
+        self.need_evidence()
+        post = self.post(); P.by_slug(post)["basil"]["injected_key"] = 1
+        self.assertRefuses("crop-level key set changed", P.verify_post, self.data, post, self.spec)
+
 
 class Serializer(Base):
     def test_compact_no_trailing_newline(self):
@@ -404,6 +444,45 @@ class Serializer(Base):
         a = P.sha256_bytes(P.serialize(P.apply_to(self.data, self.spec)))
         b = P.sha256_bytes(P.serialize(P.apply_to(self.data, self.spec)))
         self.assertEqual(a, b)
+
+
+class WriteGuards(Base):
+    """main()'s write guards, exercised through the CLI against a COPY of canonical (never the live file)."""
+    def _copy(self):
+        import tempfile
+        d = tempfile.mkdtemp(prefix="pla7_wg_")
+        p = os.path.join(d, "crops_data_final.json")
+        with open(p, "wb") as f:
+            f.write(promote_fixture.pre_state(P.BASE_SHA))
+        return d, p
+
+    def _run(self, *args):
+        import subprocess
+        r = subprocess.run([sys.executable, os.path.join(HERE, "promote_pla7_container_path.py"), *args],
+                           capture_output=True, text=True)
+        return r.returncode, r.stdout + r.stderr
+
+    def test_refuses_to_write_without_expect_sha(self):
+        self.need_evidence()
+        d, p = self._copy()
+        try:
+            rc, out = self._run(p)
+            self.assertNotEqual(rc, 0)
+            self.assertIn("requires --expect-sha", out)
+            self.assertEqual(P.sha256_bytes(open(p, "rb").read()), BASE_SHA)
+        finally:
+            import shutil; shutil.rmtree(d)
+
+    def test_refuses_out_that_targets_the_canonical(self):
+        self.need_evidence()
+        d, p = self._copy()
+        try:
+            rc, out = self._run(p, "--out", p)
+            self.assertNotEqual(rc, 0)
+            self.assertIn("may not target the canonical", out)
+            self.assertEqual(P.sha256_bytes(open(p, "rb").read()), BASE_SHA)
+        finally:
+            import shutil; shutil.rmtree(d)
 
 
 if __name__ == "__main__":
