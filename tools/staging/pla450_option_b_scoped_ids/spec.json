@@ -1,0 +1,8 @@
+{
+  "_what": "PLA-450 Option B, Trevor's ruling 2026-09-05: the two pairs HELD by the PLA-450/451 promote are resolved by SCOPING the generic id to its single holder. Each row rewrites exactly ONE leaf, the `id` of one problem entry found by (crop, field, name). Unlike the celery split, the generic id VACATES: it was held by this one crop and nothing else, so nothing is left behind on it. That is the point: reuse of an existing generic id is invisible to the collision gate (only a mint is checked), so a generic id that names one crop's specific pathogen is a trap for the next author; vacating it closes the trap permanently.",
+  "_prediction": "Pinned in promote_pla450_option_b_scoped_ids.py BEFORE the first run: 36 / 22 / 14 -> 36 / 24 / 12 (raw / registered / actionable). Raw does not fall: each scoped id retires one OPEN pair and adds one registered NAME_SHARED pair against the generic it diverges from; the edamame id also retires the registered mulberry pair with the dead id and re-creates it under the new id, plus one more NAME_SHARED pair with mulberry because the 'bacterial blight' key now has three owners.",
+  "rows": [
+    {"kind": "scope", "crop": "cilantro-coriander", "field": "diseases", "name": "Bacterial leaf spot", "from": "bacterial-leaf-spot", "to": "cilantro-bacterial-leaf-spot", "diverges_from": "bacterial-spot"},
+    {"kind": "scope", "crop": "edamame",            "field": "diseases", "name": "Bacterial blight",   "from": "bacterial-blight",   "to": "edamame-bacterial-blight",     "diverges_from": "bacterial-blights"}
+  ]
+}

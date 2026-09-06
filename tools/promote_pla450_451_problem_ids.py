@@ -93,6 +93,14 @@ HELD = {
 # Rule 4. PINNED BEFORE THE FIRST RUN, from the 42-pair finding list at 95e66f6d. Never retune.
 PREDICTED_BASELINE = {"raw": 42, "registered": 20, "actionable": 22}
 PREDICTED = {"raw": 36, "registered": 22, "actionable": 14}
+# THE REGISTRY THESE FIGURES WERE MEASURED WITH, pinned to the commit this promote landed in.
+# ADDED 2026-09-06: the figures were first computed against the WORKING registry, which was correct
+# on the day and wrong the moment the registry moved -- PLA-450 Option B repointed one entry and
+# this suite went red in four places while replaying states that had not changed. A promote suite
+# that reads a live registry is a live dependency dressed as a fixture. Both states below are
+# historical, so both read the registry as committed at c189d65 (the registry is identical at
+# 074f9e2, where the Option B baseline was measured).
+REGISTRY_COMMIT = "c189d65"
 
 # What the registry must say about each mint, so the split's adjudication is written down where the
 # gate reads it. (mint id, generic id, two organism names the reason must carry)
@@ -316,9 +324,18 @@ def check_registry(spec):
     return len(MINT_ADJUDICATIONS)
 
 
-def collision_figures(data):
-    """The three figures PLA-450 asks for, from the REAL gate with the REAL registry."""
-    f = G.scan(data, registry=G.load_registry())
+def pinned_registry():
+    """The registry exactly as committed at REGISTRY_COMMIT, read from git so it cannot drift with
+    the working copy or with HEAD."""
+    import subprocess
+    raw = subprocess.run(["git", "-C", REPO, "show", f"{REGISTRY_COMMIT}:tools/problem_id_registry.json"],
+                         capture_output=True, text=True, check=True).stdout
+    return G.Registry(json.loads(raw)["deliberately_distinct"])
+
+
+def collision_figures(data, registry=None):
+    """The three figures PLA-450 asks for, from the REAL gate with the PINNED registry."""
+    f = G.scan(data, registry=registry or pinned_registry())
     reg = sum(1 for x in f if x.registered)
     return {"raw": len(f), "registered": reg, "actionable": len(f) - reg}
 

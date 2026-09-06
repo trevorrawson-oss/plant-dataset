@@ -259,6 +259,15 @@ class VarietyRefs(Base):
         self.assertRefuses("found zero variety references", P.check_variety_refs, d, self.retired)
 
 
+class PinnedRegistry(Base):
+    def test_figures_are_read_from_the_pinned_commit_not_the_working_copy(self):
+        """ADDED 2026-09-06 after PLA-450 Option B repointed a registry entry and this suite went red
+        in four places while replaying unchanged states. The pin must be a commit, never HEAD."""
+        self.assertEqual(P.REGISTRY_COMMIT, "c189d65")
+        self.assertNotEqual(P.REGISTRY_COMMIT.upper(), "HEAD")
+        self.assertEqual(P.collision_figures(self.data), PREDICTED_BASELINE)
+
+
 class Registry(Base):
     def _with_registry(self, mutate):
         reg = json.load(open(G.REGISTRY_PATH, encoding="utf-8"))
@@ -342,8 +351,8 @@ class CollisionPrediction(Base):
 
     def test_the_eight_open_pairs_retire_and_the_two_celery_pairs_arrive_registered(self):
         """The prediction's mechanism, asserted pair by pair rather than as a total."""
-        pre = {f.pair: f for f in G.scan(self.data, registry=G.load_registry())}
-        post = {f.pair: f for f in G.scan(self.post(), registry=G.load_registry())}
+        pre = {f.pair: f for f in G.scan(self.data, registry=P.pinned_registry())}
+        post = {f.pair: f for f in G.scan(self.post(), registry=P.pinned_registry())}
         gone = set(pre) - set(post)
         new = set(post) - set(pre)
         self.assertEqual(gone, {
@@ -359,7 +368,7 @@ class CollisionPrediction(Base):
         self.assertTrue(all(G.NAME_SHARED in post[p].kinds for p in new))
 
     def test_the_two_held_pairs_stay_open(self):
-        post = {f.pair: f for f in G.scan(self.post(), registry=G.load_registry())}
+        post = {f.pair: f for f in G.scan(self.post(), registry=P.pinned_registry())}
         for pair in (("bacterial-leaf-spot", "bacterial-spot"), ("bacterial-blight", "bacterial-blights")):
             self.assertIn(pair, post)
             self.assertFalse(post[pair].registered, f"{pair} was quietly registered")

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Guard suite for tools/problem_id_collision_gate.py (PLA-449).
 
-Pinned to canonical 36d6df6b (PLA-450/451: six duplicate-id merges and the celery blight split). The
+Pinned to canonical 72371c02 (PLA-450 Option B: the two held pairs scoped, both generic ids vacated). The
 audit-mode fixture is an EXACT
 pin, not a floor: PLA-449 rules that materially fewer findings means the check is too narrow and
 materially more means it floods, so both directions have to fail loudly. A new batch that mints a
@@ -32,7 +32,7 @@ sys.path.insert(0, os.path.join(REPO, "tools"))
 import problem_id_collision_gate as G  # noqa: E402
 
 CANON = os.path.join(REPO, "crops_data_final.json")
-PINNED_SHA = "36d6df6bf3bdd2cac37dc568742c37655d1a739b20c9991285bd9608463925fd"
+PINNED_SHA = "72371c02fa306d8e1849053416baf34e232b80bbdf1af5169d546c12c8f45222"
 
 # ---------------------------------------------------------------------------------------------
 # The PLA-449 fixture, transcribed from the ticket. NEVER computed from a scan.
@@ -40,11 +40,12 @@ PINNED_SHA = "36d6df6bf3bdd2cac37dc568742c37655d1a739b20c9991285bd9608463925fd"
 # The eight duplicate-id decisions PLA-449 was built to surface, as they stand after PLA-450/451
 # (2026-09-05). SIX were merged: the minority id no longer exists anywhere, so the pair is gone
 # from the scan for the right reason, and the test proves the ABSENCE of the minority id rather
-# than the absence of the pair. TWO are HELD, not merged, because the entries' own cause prose
+# than the absence of the pair. TWO were HELD, not merged, because the entries' own cause prose
 # names different pathogens (cilantro Pseudomonas syringae pv. coriandricola vs pepper
 # Xanthomonas; edamame P. savastanoi pv. glycinea vs bean X. campestris pv. phaseoli + P. syringae
-# pv. phaseolicola). Those two stay OPEN and UNREGISTERED: the gate is the decision surface until
-# Trevor rules. Written as (minority ids..., majority id).
+# pv. phaseolicola), and then RULED (Trevor, PLA-450 Option B, 2026-09-05): the generic id was
+# scoped to its single holder and VACATED, and the scoped id registered against the id it diverges
+# from. Written as (minority ids..., majority id) / (vacated generic, scoped id, diverges from).
 THE_SIX_MERGED = [
     (("cutworm",), "cutworms"),
     (("flea-beetle",), "flea-beetles"),
@@ -53,9 +54,9 @@ THE_SIX_MERGED = [
     (("twospotted-spider-mite",), "two-spotted-spider-mite"),
     (("slugs", "snails-and-slugs"), "slugs-and-snails"),
 ]
-THE_TWO_HELD = [
-    ("bacterial-leaf-spot", "bacterial-spot"),
-    ("bacterial-blight", "bacterial-blights"),
+THE_TWO_SCOPED = [
+    ("bacterial-leaf-spot", "cilantro-bacterial-leaf-spot", "cilantro-coriander", "bacterial-spot"),
+    ("bacterial-blight", "edamame-bacterial-blight", "edamame", "bacterial-blights"),
 ]
 # The celery split (PLA-451): two minted ids that collide on NAME_SHARED with the generic id they
 # left, adjudicated in the registry. Flagged RAW then suppressed, exactly like the nine known-good.
@@ -177,8 +178,9 @@ class Branches(unittest.TestCase):
         by = {}
         for x in G.scan(canon(), registry=None):
             by[x.pair] = x.kinds
-        # a HELD pair: still live after PLA-450, found by both checks
-        self.assertEqual(by[("bacterial-blight", "bacterial-blights")], {G.ID_NEAR_DUP, G.NAME_SHARED})
+        # the birds family: found by check 3 AND check 2, both kinds kept. (The earlier example,
+        # bacterial-blight / bacterial-blights, was resolved by PLA-450 Option B.)
+        self.assertEqual(by[("birds", "birds-and-squirrels")], {G.FAMILY_MEMBER, G.NAME_SHARED})
 
 
 class AuditFixture(unittest.TestCase):
@@ -204,14 +206,21 @@ class AuditFixture(unittest.TestCase):
                                  "retired id %r still appears in an OPEN pair" % m)
             self.assertIn(majority, live)
 
-    def test_the_two_held_pairs_are_still_flagged_with_every_id_reachable(self):
-        """HELD is not resolved. Both ids must still exist, and the pair must still be OPEN, so
-        the next session inherits the decision rather than a silence."""
+    def test_the_two_scoped_decisions_vacated_the_generic_and_registered_the_scoped(self):
+        """Option B, both halves. The generic id must be GONE from the dataset (not merely absent
+        from a pair), the scoped id must live on exactly its crop, and the scoped id's collision
+        with the id it diverges from must be flagged RAW and then suppressed by the registry."""
         live = live_ids(self.data)
-        for pair in THE_TWO_HELD:
-            self.assertIn(tuple(sorted(pair)), self.actionable, "held pair %r went quiet" % (pair,))
-            for i in pair:
-                self.assertIn(i, live)
+        raw = {f.pair: f for f in G.scan(self.data, registry=None)}
+        holders = G.index(self.data)[0]
+        for generic, scoped, crop, diverges in THE_TWO_SCOPED:
+            self.assertNotIn(generic, live, "vacated generic %r is still carried" % generic)
+            self.assertEqual(holders[scoped], {crop})
+            key = tuple(sorted((scoped, diverges)))
+            self.assertIn(key, raw, "scoped pair %r is invisible to the raw checks" % (key,))
+            self.assertEqual(raw[key].kinds, {G.NAME_SHARED})
+            self.assertNotIn(key, self.actionable, "scoped pair %r survived registration" % (key,))
+            self.assertTrue(self.reg.registered(scoped, diverges))
 
     def test_the_celery_split_is_flagged_RAW_then_suppressed(self):
         raw = {f.pair: f for f in G.scan(self.data, registry=None)}
@@ -232,12 +241,14 @@ class AuditFixture(unittest.TestCase):
             self.assertFalse(want & self.actionable,
                              "known-good %r survived registration" % (group,))
 
-    def test_registry_does_not_suppress_a_held_pair(self):
-        """Holding is not registering. A held pair quietly registered would be a decision made by
-        omission."""
-        for p in THE_TWO_HELD:
-            self.assertFalse(self.reg.registered(*p),
-                             "registry suppresses the held pair %r" % (p,))
+    def test_registry_names_no_vacated_id(self):
+        """A registry naming a dead id is a stale record. The batch-26 mulberry entry that named
+        edamame's old generic id was repointed to the scoped id, and that moved pair must still
+        be registered."""
+        for generic, scoped, _, _ in THE_TWO_SCOPED:
+            for e in self.reg.entries:
+                self.assertNotIn(generic, e["ids"], "registry entry %r names vacated %r" % (e["ids"], generic))
+        self.assertTrue(self.reg.registered("edamame-bacterial-blight", "mulberry-bacterial-blight"))
 
     def test_audit_output_is_exactly_pinned(self):
         """Both directions of PLA-449's bar. Re-measure on a canonical move; never retune.
@@ -263,18 +274,31 @@ class AuditFixture(unittest.TestCase):
         figure. Eight OPEN pairs retired because their minority id ceased to exist (five two-id
         merges plus the three-pair slug family); the two celery mints each added one NAME_SHARED
         pair, both registered. Net raw -8 +2, registered +2, actionable -8. The two HELD pairs
-        (cilantro/pepper, edamame/bean) are still in the 14 on purpose."""
+        (cilantro/pepper, edamame/bean) are still in the 14 on purpose.
+
+        RE-MEASURED 2026-09-05, 36d6df6b -> 72371c02, raw 36 -> 36, registered 22 -> 24,
+        actionable 14 -> 12. PLA-450 Option B (Trevor's ruling): the two held pairs resolved by
+        SCOPING the generic id to its single holder, so `bacterial-leaf-spot` and
+        `bacterial-blight` exist nowhere. Predicted before the run and matched: each scoped id
+        retires its OPEN pair and adds one registered NAME_SHARED pair against the id it diverges
+        from; the edamame id also retires the registered mulberry pair with the dead id, re-creates
+        it under the new id via the repointed registry entry, and adds a second NAME_SHARED pair
+        with mulberry because 'bacterial blight' now has three owners. Raw does not move at all.
+        The 12 that remain are the residue decisions of the PLA-449 handoff, section 4."""
         self.assertEqual(len(self.findings), 36, "raw finding count moved")
-        self.assertEqual(len(self.actionable), 14, "actionable count moved")
+        self.assertEqual(len(self.actionable), 12, "actionable count moved")
         registered = [f for f in self.findings if f.registered]
-        self.assertEqual(len(registered), 22, "registered count moved")
-        # batch 25's three, batch 26's five, then PLA-451's two: FLAGGED, REGISTERED, not open.
-        for pair in (("celery-early-blight", "early-blight"),
+        self.assertEqual(len(registered), 24, "registered count moved")
+        # batch 25's three, batch 26's five, PLA-451's two, then Option B's three: FLAGGED,
+        # REGISTERED, not open.
+        for pair in (("bacterial-spot", "cilantro-bacterial-leaf-spot"),
+                     ("bacterial-blights", "edamame-bacterial-blight"),
+                     ("edamame-bacterial-blight", "mulberry-bacterial-blight"),
+                     ("celery-early-blight", "early-blight"),
                      ("celery-late-blight", "late-blight"),
                      ("carrot-leaf-blight", "lemongrass-leaf-blight"),
                      ("leafhoppers", "sage-leafhoppers"),
                      ("mint-rust", "oregano-rust"),
-                     ("bacterial-blight", "mulberry-bacterial-blight"),
                      ("bacterial-blights", "mulberry-bacterial-blight"),
                      ("cherry-borers", "mulberry-borers"),
                      ("lavender-leaf-spot", "persimmon-leaf-spot"),

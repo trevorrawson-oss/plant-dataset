@@ -111,9 +111,9 @@
     {
       "ids": [
         "mulberry-bacterial-blight",
-        "bacterial-blight"
+        "edamame-bacterial-blight"
       ],
-      "reason": "mulberry's is Pseudomonas syringae pv. mori (TAMU Plant Disease Handbook, mulberry), a mulberry-specific pathovar on a woody tree; edamame's `bacterial-blight` is P. savastanoi pv. glycinea on soybean. Same generic display name, different pathovars and hosts, the bacterial-spot / bacterial-spot-pruni shape. Registered as a PAIR, not a three-id set, so the open edamame/bean duplicate (PLA-448 s4a) stays unsuppressed.",
+      "reason": "mulberry's is Pseudomonas syringae pv. mori (TAMU Plant Disease Handbook, mulberry), a mulberry-specific pathovar on a woody tree; edamame's `bacterial-blight` is P. savastanoi pv. glycinea on soybean. Same generic display name, different pathovars and hosts, the bacterial-spot / bacterial-spot-pruni shape. Registered as a PAIR, not a three-id set, so the open edamame/bean duplicate (PLA-448 s4a) stays unsuppressed. [ID MOVED 2026-09-05: edamame's generic `bacterial-blight` was scoped to `edamame-bacterial-blight` under PLA-450 Option B; the organisms and the ruling are unchanged, only the join key.]",
       "ruled": "PLA-8 batch 26 (2026-09-04)"
     },
     {
@@ -121,7 +121,7 @@
         "mulberry-bacterial-blight",
         "bacterial-blights"
       ],
-      "reason": "mulberry's P. syringae pv. mori vs the beans' Xanthomonas campestris pv. phaseoli + P. syringae pv. phaseolicola. The shared normalized key 'bacterial blight' is an artifact of total parenthetical deletion on the beans' 'Bacterial blights (common and halo)'. Registered as a PAIR for the same reason as above.",
+      "reason": "mulberry's P. syringae pv. mori vs the beans' Xanthomonas campestris pv. phaseoli + P. syringae pv. phaseolicola. The shared normalized key 'bacterial blight' is an artifact of total parenthetical deletion on the beans' 'Bacterial blights (common and halo)'. Registered as a PAIR for the same reason as above. [2026-09-05: the edamame/bean question this note left open was ruled under PLA-450 Option B, see the edamame-bacterial-blight entries.]",
       "ruled": "PLA-8 batch 26 (2026-09-04)"
     },
     {
@@ -163,6 +163,22 @@
       ],
       "reason": "celery late blight is Septoria apiicola; the six tomato and potato crops on `late-blight` carry Phytophthora infestans. UC IPM's celery late-blight page (read 2026-09-05): 'this disease is not the same as late blight of tomato and potato caused by Phytophthora infestans, which does not infect celery'. Same split, same reason as celery-early-blight (PLA-451).",
       "ruled": "PLA-451 (2026-09-05)"
+    },
+    {
+      "ids": [
+        "cilantro-bacterial-leaf-spot",
+        "bacterial-spot"
+      ],
+      "reason": "cilantro's bacterial leaf spot is Pseudomonas syringae pv. coriandricola (the entry's own cause prose; WSU Mt Vernon vegetable-problems gallery, coriander page, read 2026-09-05, which adds Xanthomonas campestris pv. coriandri and X. hortorum pv. carotae as less-common coriander-specific pathovars). The five peppers' bacterial-spot is Xanthomonas (NCSU vegetable pathology, Clemson HGIC pepper). Two pathogens under one generic id is the PLA-451 defect. cilantro was the ONLY holder of the generic `bacterial-leaf-spot`, so the id was scoped and the generic VACATED under Trevor's ruling (PLA-450 Option B): reuse of an existing id is invisible to this gate, only a mint is checked, so a generic id naming one crop's specific pathogen is a trap for the next author. Same shape as celery-early-blight, bacterial-spot-pruni, mulberry-bacterial-blight.",
+      "ruled": "PLA-450 Option B (2026-09-05)"
+    },
+    {
+      "ids": [
+        "edamame-bacterial-blight",
+        "bacterial-blights"
+      ],
+      "reason": "edamame's bacterial blight is Pseudomonas savastanoi pv. glycinea (the entry's own cause prose; ISU soybean diseases anchor; UMN bacterial-blight-soybean, read 2026-09-05, which also lists snap and lima bean as hosts of that pathovar). The three beans' `bacterial-blights` are Xanthomonas campestris pv. phaseoli (common blight) and P. syringae pv. phaseolicola (halo blight) (Clemson HGIC bean and southern pea diseases, read 2026-09-05; no soybean). Different pathogens. edamame was the ONLY holder of the generic `bacterial-blight`, so the id was scoped and the generic VACATED under Trevor's ruling (PLA-450 Option B), for the reuse reason given on cilantro-bacterial-leaf-spot. The beans keep the generic plural as the majority holder; their bundle (common + halo) is PLA-448 s4d and untouched.",
+      "ruled": "PLA-450 Option B (2026-09-05)"
     }
   ]
 }

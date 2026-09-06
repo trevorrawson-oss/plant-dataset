@@ -1,0 +1,184 @@
+{
+  "_what": "Deliberately-distinct problem ids. Each entry is ONE adjudicated decision naming a SET of ids that are correctly separate from one another; problem_id_collision_gate suppresses every pair drawn from that set. This is the registration path PLA-449 asks for: a near-duplicate id is very often correct host or pathogen scoping, and a decision written down here stops the gate re-asking it every batch.",
+  "_how_to_add": "Register only after ADJUDICATING the organisms, never to quiet the gate. State the reason in terms of the taxon or the scope the two entries actually cover -- not the id strings -- and cite where the ruling was made. An id pair that is genuinely one problem does NOT belong here; merge the ids instead.",
+  "_seeded": "2026-09-04, PLA-449. Nine entries transcribed from PLA-449's known-good list, one from PLA-448 s2 'Confirmed distinct -- do NOT merge'. Nothing else is registered: every other finding the gate reports is an OPEN decision.",
+  "deliberately_distinct": [
+    {
+      "ids": [
+        "anthracnose",
+        "cane-anthracnose"
+      ],
+      "reason": "general anthracnose vs the bramble cane form",
+      "ruled": "PLA-449 known-good"
+    },
+    {
+      "ids": [
+        "aphids",
+        "citrus-aphids",
+        "apricot-aphids"
+      ],
+      "reason": "host-scoped aphid entries; each crop's ladder differs",
+      "ruled": "PLA-449 known-good"
+    },
+    {
+      "ids": [
+        "bacterial-spot",
+        "bacterial-spot-pruni"
+      ],
+      "reason": "pepper Xanthomonas vs stone-fruit X. arboricola pv. pruni",
+      "ruled": "PLA-449 known-good"
+    },
+    {
+      "ids": [
+        "bacterial-wilt",
+        "southern-bacterial-wilt"
+      ],
+      "reason": "cucurbit Erwinia tracheiphila vs solanaceous Ralstonia solanacearum",
+      "ruled": "PLA-449 known-good"
+    },
+    {
+      "ids": [
+        "black-knot",
+        "black-rot"
+      ],
+      "reason": "Prunus gall (Apiosporina morbosa) vs the brassica bacterial disease",
+      "ruled": "PLA-449 known-good"
+    },
+    {
+      "ids": [
+        "black-rot",
+        "sweet-potato-black-rot"
+      ],
+      "reason": "brassica Xanthomonas campestris vs sweet potato Ceratocystis fimbriata",
+      "ruled": "PLA-449 known-good"
+    },
+    {
+      "ids": [
+        "cane-blight",
+        "late-blight"
+      ],
+      "reason": "bramble cane disease vs Phytophthora infestans",
+      "ruled": "PLA-449 known-good"
+    },
+    {
+      "ids": [
+        "carrot-leaf-blight",
+        "lemongrass-leaf-blight"
+      ],
+      "reason": "carrot Alternaria dauci and Cercospora carotae on an Apiaceae, both seedborne; lemongrass Curvularia spp. on a Poaceae grass. The shared normalized name is an artifact of total parenthetical deletion on carrot's 'Leaf blight (Alternaria and Cercospora)', not a shared organism.",
+      "ruled": "PLA-8 batch 25 (2026-09-04)"
+    },
+    {
+      "ids": [
+        "leafhoppers",
+        "sage-leafhoppers"
+      ],
+      "reason": "cilantro's entry is a DISEASE-VECTOR problem (beet leafhopper Circulifer tenellus vectoring aster yellows and beet curly top; its own record says the disease damage far outweighs the feeding). sage's are Eupteryx decemnotata and E. melissae, Lamiaceae-specialist direct feeders that vector nothing. Sharing one id would attach a vector ladder to a non-vector pest.",
+      "ruled": "PLA-8 batch 25 (2026-09-04)"
+    },
+    {
+      "ids": [
+        "mint-rust",
+        "oregano-rust"
+      ],
+      "reason": "one pathogen species, Puccinia menthae, in host-specialized races that do not cross-infect. wsu_ext documents the race structure within the species ('Two principal types of races of P. menthae have been recognized. One type infects Native spearmint but not peppermint'). The direct mint-to-oregano cross-inoculation evidence is JOURNAL-ONLY (APS, 403 under every fetch path available) and is deliberately NOT relied on. Both display names read 'Mint rust' because psu_ext and rhs both call the disease that on oregano.",
+      "ruled": "PLA-8 batch 25 (2026-09-04)"
+    },
+    {
+      "ids": [
+        "phytophthora-foot-rot",
+        "phytophthora-root-rot"
+      ],
+      "reason": "citrus trunk/crown infection vs the general root form",
+      "ruled": "PLA-449 known-good"
+    },
+    {
+      "ids": [
+        "pink-root",
+        "pink-rot"
+      ],
+      "reason": "allium pink root (Setophoma terrestris) vs celery pink rot (Sclerotinia). MINTED BY BATCH 24: pink-root did not exist at the audit base 80519a28, so this pair is the first collision the gate caught that the 2026-09-03 audits could not have listed.",
+      "ruled": "PLA-448 s2 confirmed distinct"
+    },
+    {
+      "ids": [
+        "white-rot",
+        "white-rust"
+      ],
+      "reason": "allium Sclerotium cepivorum vs brassica Albugo candida",
+      "ruled": "PLA-449 known-good"
+    },
+    {
+      "ids": [
+        "mulberry-bacterial-blight",
+        "edamame-bacterial-blight"
+      ],
+      "reason": "mulberry's is Pseudomonas syringae pv. mori (TAMU Plant Disease Handbook, mulberry), a mulberry-specific pathovar on a woody tree; edamame's `bacterial-blight` is P. savastanoi pv. glycinea on soybean. Same generic display name, different pathovars and hosts, the bacterial-spot / bacterial-spot-pruni shape. Registered as a PAIR, not a three-id set, so the open edamame/bean duplicate (PLA-448 s4a) stays unsuppressed. [ID MOVED 2026-09-05: edamame's generic `bacterial-blight` was scoped to `edamame-bacterial-blight` under PLA-450 Option B; the organisms and the ruling are unchanged, only the join key.]",
+      "ruled": "PLA-8 batch 26 (2026-09-04)"
+    },
+    {
+      "ids": [
+        "mulberry-bacterial-blight",
+        "bacterial-blights"
+      ],
+      "reason": "mulberry's P. syringae pv. mori vs the beans' Xanthomonas campestris pv. phaseoli + P. syringae pv. phaseolicola. The shared normalized key 'bacterial blight' is an artifact of total parenthetical deletion on the beans' 'Bacterial blights (common and halo)'. Registered as a PAIR for the same reason as above. [2026-09-05: the edamame/bean question this note left open was ruled under PLA-450 Option B, see the edamame-bacterial-blight entries.]",
+      "ruled": "PLA-8 batch 26 (2026-09-04)"
+    },
+    {
+      "ids": [
+        "mulberry-borers",
+        "cherry-borers"
+      ],
+      "reason": "cherry's entry is two named Prunus borers (peachtree borer Synanthedon exitiosa, a clearwing moth at the crown, and American plum borer). mulberry's is an UNRESOLVED umbrella: the admissible literature (NCSU toolbox prose, TAMU) names no organism, UC IPM's mulberry page lists no borer, and the one US extension naming one (K-State MF2735, Dorcaschema wildii, a longhorn beetle; not catalog-admitted) is a different insect from either of cherry's. The shared key 'borer' is the parenthetical-deletion artifact on cherry's display name.",
+      "ruled": "PLA-8 batch 26 (2026-09-04)"
+    },
+    {
+      "ids": [
+        "persimmon-leaf-spot",
+        "lavender-leaf-spot"
+      ],
+      "reason": "two crop-scoped umbrellas on unrelated hosts: persimmon's principal is Pseudocercospora diospyricola (UAEX Plant Health Clinic; Cercospora spp. per UF/IFAS HS1389) on Diospyros; lavender's one named organism is Septoria lavandulae on Lavandula. Same bare display name 'Leaf spot' by the same batch-25 rule (a genuine umbrella keeps the bare name); nothing about either ladder transfers.",
+      "ruled": "PLA-8 batch 26 (2026-09-04)"
+    },
+    {
+      "ids": [
+        "phytophthora-root-rot",
+        "lavender-root-crown-rot"
+      ],
+      "reason": "lavender's id exists BECAUSE its organism is resolved narrower than the genus (P. nicotianae, dedicated WSU source; batch 25 s4). persimmon's is Phytophthora spp. (UC IPM persimmon page lists 'Phytophthora Root and Crown Rot' separately from Armillaria) and joins the roster's genus-level id alongside blueberry, raspberry and blackberry. The display names coincide ('Phytophthora root and crown rot', UC IPM's own title) because both name the genus; the ids differ because one pins a species.",
+      "ruled": "PLA-8 batch 26 (2026-09-04)"
+    },
+    {
+      "ids": [
+        "celery-early-blight",
+        "early-blight"
+      ],
+      "reason": "celery early blight is Cercospora apii; the seven tomato, potato and tomatillo crops on `early-blight` carry Alternaria solani. UC IPM's celery early-blight page (read 2026-09-05) says it outright: 'do not confuse this disease with the early blight disease that occurs on tomato and potato, which is caused by an Alternaria species'. Celery's display name stays as authored because 'early blight' IS the celery-literature name (PLA-451); only the join key moved, on the bacterial-spot / bacterial-spot-pruni pattern.",
+      "ruled": "PLA-451 (2026-09-05)"
+    },
+    {
+      "ids": [
+        "celery-late-blight",
+        "late-blight"
+      ],
+      "reason": "celery late blight is Septoria apiicola; the six tomato and potato crops on `late-blight` carry Phytophthora infestans. UC IPM's celery late-blight page (read 2026-09-05): 'this disease is not the same as late blight of tomato and potato caused by Phytophthora infestans, which does not infect celery'. Same split, same reason as celery-early-blight (PLA-451).",
+      "ruled": "PLA-451 (2026-09-05)"
+    },
+    {
+      "ids": [
+        "cilantro-bacterial-leaf-spot",
+        "bacterial-spot"
+      ],
+      "reason": "cilantro's bacterial leaf spot is Pseudomonas syringae pv. coriandricola (the entry's own cause prose; WSU Mt Vernon vegetable-problems gallery, coriander page, read 2026-09-05, which adds Xanthomonas campestris pv. coriandri and X. hortorum pv. carotae as less-common coriander-specific pathovars). The five peppers' bacterial-spot is Xanthomonas (NCSU vegetable pathology, Clemson HGIC pepper). Two pathogens under one generic id is the PLA-451 defect. cilantro was the ONLY holder of the generic `bacterial-leaf-spot`, so the id was scoped and the generic VACATED under Trevor's ruling (PLA-450 Option B): reuse of an existing id is invisible to this gate, only a mint is checked, so a generic id naming one crop's specific pathogen is a trap for the next author. Same shape as celery-early-blight, bacterial-spot-pruni, mulberry-bacterial-blight.",
+      "ruled": "PLA-450 Option B (2026-09-05)"
+    },
+    {
+      "ids": [
+        "edamame-bacterial-blight",
+        "bacterial-blights"
+      ],
+      "reason": "edamame's bacterial blight is Pseudomonas savastanoi pv. glycinea (the entry's own cause prose; ISU soybean diseases anchor; UMN bacterial-blight-soybean, read 2026-09-05, which also lists snap and lima bean as hosts of that pathovar). The three beans' `bacterial-blights` are Xanthomonas campestris pv. phaseoli (common blight) and P. syringae pv. phaseolicola (halo blight) (Clemson HGIC bean and southern pea diseases, read 2026-09-05; no soybean). Different pathogens. edamame was the ONLY holder of the generic `bacterial-blight`, so the id was scoped and the generic VACATED under Trevor's ruling (PLA-450 Option B), for the reuse reason given on cilantro-bacterial-leaf-spot. The beans keep the generic plural as the majority holder; their bundle (common + halo) is PLA-448 s4d and untouched.",
+      "ruled": "PLA-450 Option B (2026-09-05)"
+    }
+  ]
+}
