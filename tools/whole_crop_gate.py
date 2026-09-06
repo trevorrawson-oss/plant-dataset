@@ -887,6 +887,23 @@ print(f"  problem entries scanned: {_cnt}; unladdered: {len(_ccv)}"
 for m in _ccv:
     fail(f"control-ladder-coverage: {m}")
 
+# ---------------- A58. container_path coherence (PLA-7 spec 2026-09-06, section 2) ----------------
+# SHAPE fires only when container_notes.container_path is PRESENT, so this arms GREEN on 72371c02
+# (0/128 crops carry the key) and stays green on every historical state. The PRESENCE floor (a
+# certified crop must carry the key, null being a value) is behind A58_PRESENCE_ARMED and flips to
+# True in the SAME commit that writes the canonical carrying the key -- never before: armed early it
+# would redden gate_all on live canonical and flood a parallel session (gates arm off the data).
+# No replay suite runs whole_crop_gate on a historical state (grepped 2026-09-06), so this is the
+# enforcement point for the shipping roster, and container_path_gate.all_violations keeps presence
+# OFF by default for the same reason.
+from container_path_gate import shape_violations as _cp_shape, presence_violations as _cp_presence
+A58_PRESENCE_ARMED = False
+print(f"A58. container_path coherence (rules 1-4 + variety flag shape; presence {'ARMED' if A58_PRESENCE_ARMED else 'off'})")
+_cpv = _cp_shape(crop) + (_cp_presence(crop) if A58_PRESENCE_ARMED else [])
+print(f"  container-path violations: {len(_cpv)}")
+for m in _cpv:
+    fail(f"container-path: {m}")
+
 # ---------------- A55. perennial year-pill coherence (PLA-6 Round 2) ----------------
 # HARD-FLIPPED 2026-08-22, the day its findings reached zero, which is the same soft-then-hard
 # discipline A49/A50 followed. It shipped standalone on 2026-08-22 with 4 live findings and was
