@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Guard suite for tools/problem_id_collision_gate.py (PLA-449).
 
-Pinned to canonical a9c84847 (PLA-8 batch 24, the alliums). The audit-mode fixture is an EXACT
+Pinned to canonical 95e66f6d (PLA-8 batch 27, the microgreens; the arc's end state). The
+audit-mode fixture is an EXACT
 pin, not a floor: PLA-449 rules that materially fewer findings means the check is too narrow and
 materially more means it floods, so both directions have to fail loudly. A new batch that mints a
 colliding id changes the count and reddens `test_audit_output_is_exactly_pinned`, which is the
@@ -31,7 +32,7 @@ sys.path.insert(0, os.path.join(REPO, "tools"))
 import problem_id_collision_gate as G  # noqa: E402
 
 CANON = os.path.join(REPO, "crops_data_final.json")
-PINNED_SHA = "ce98b0a6f83cc04b380a6c3be3009709a7c6c3626b2611c88fafec1164997144"
+PINNED_SHA = "95e66f6d1a8ea8550b2df3825d3bcbb00d39056e106d037290737923f74d0879"
 
 # ---------------------------------------------------------------------------------------------
 # The PLA-449 fixture, transcribed from the ticket. NEVER computed from a scan.
@@ -189,19 +190,34 @@ class AuditFixture(unittest.TestCase):
     def test_audit_output_is_exactly_pinned(self):
         """Both directions of PLA-449's bar. Re-measure on a canonical move; never retune.
 
-        RE-MEASURED 2026-09-04 for PLA-8 batch 25 (the herbs), 34 -> 37 raw. The delta is exactly
-        the three pairs that batch introduced, all three adjudicated and REGISTERED, so registered
-        went 12 -> 15 while ACTIONABLE DID NOT MOVE. That last part is the check that matters: a
-        batch is allowed to add registered pairs and is not allowed to add open ones, and holding
-        `actionable` at 22 across a 38-problem reshape is the assertion, not the raw total."""
-        self.assertEqual(len(self.findings), 37, "raw finding count moved")
+        RE-MEASURED 2026-09-05, ce98b0a6 -> 95e66f6d, 37 -> 42 raw. The delta is exactly the five
+        pairs PLA-8 batch 26 (the trees and shrubs) introduced, every one adjudicated in
+        problem_id_registry.json with a documented reason ruled "PLA-8 batch 26 (2026-09-04)", so
+        registered went 15 -> 20 while ACTIONABLE DID NOT MOVE. Batch 27 (the microgreens) minted
+        ZERO ids and contributed ZERO pairs: measured at ba61762a, raw was already 42.
+
+        That last part is the check that matters: a batch is allowed to add registered pairs and is
+        not allowed to add open ones, and holding `actionable` at 22 across batches 25, 26 and 27 is
+        the assertion, not the raw total.
+
+        The suite reddened at batch 26 and stayed red through batch 27 because those batches
+        registered their pairs without re-measuring here. That is the pin working -- it refuses to
+        certify a count it did not measure -- but it is also two revisions of the guard not running.
+        RE-MEASURE THIS WHENEVER CANONICAL MOVES; never retune a count to make it green."""
+        self.assertEqual(len(self.findings), 42, "raw finding count moved")
         self.assertEqual(len(self.actionable), 22, "actionable count moved")
         registered = [f for f in self.findings if f.registered]
-        self.assertEqual(len(registered), 15, "registered count moved")
+        self.assertEqual(len(registered), 20, "registered count moved")
+        # batch 25's three, then batch 26's five: each must be FLAGGED, REGISTERED, and not open.
         for pair in (("carrot-leaf-blight", "lemongrass-leaf-blight"),
                      ("leafhoppers", "sage-leafhoppers"),
-                     ("mint-rust", "oregano-rust")):
-            self.assertIn(pair, self.flagged, "batch-25 pair %r stopped being flagged" % (pair,))
+                     ("mint-rust", "oregano-rust"),
+                     ("bacterial-blight", "mulberry-bacterial-blight"),
+                     ("bacterial-blights", "mulberry-bacterial-blight"),
+                     ("cherry-borers", "mulberry-borers"),
+                     ("lavender-leaf-spot", "persimmon-leaf-spot"),
+                     ("lavender-root-crown-rot", "phytophthora-root-rot")):
+            self.assertIn(pair, self.flagged, "registered pair %r stopped being flagged" % (pair,))
             self.assertTrue(self.reg.registered(*pair))
             self.assertNotIn(pair, self.actionable)
 
