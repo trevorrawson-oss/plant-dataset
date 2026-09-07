@@ -35,7 +35,7 @@ assert "container-path:" in out and "not in" in out, out
 # A good value on a good crop is clean.
 out = gate("cherry-tomato", lambda c: c["container_notes"].__setitem__("container_path", "direct"))
 assert "container-path:" not in out, out
-# Presence is NOT armed yet: a certified crop without the key is not flagged.
+# Presence is ARMED: the canonical now carries the key on all 121 certified crops.
 src = open(os.path.join(HERE, "whole_crop_gate.py")).read()
-assert "A58_PRESENCE_ARMED = False" in src, "presence floor must stay unarmed until the canonical carries the key (Task 8)"
+assert "A58_PRESENCE_ARMED = True" in src, "presence floor arms with the canonical that carries the key"
 print("PASS gate A58 container_path")

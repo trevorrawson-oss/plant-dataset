@@ -896,8 +896,9 @@ for m in _ccv:
 # No replay suite runs whole_crop_gate on a historical state (grepped 2026-09-06), so this is the
 # enforcement point for the shipping roster, and container_path_gate.all_violations keeps presence
 # OFF by default for the same reason.
+# ARMED 2026-09-06 in the commit that wrote d7b33682 (121/121 certified crops carry the key; the 7 shells are exempt by status).
 from container_path_gate import shape_violations as _cp_shape, presence_violations as _cp_presence
-A58_PRESENCE_ARMED = False
+A58_PRESENCE_ARMED = True
 print(f"A58. container_path coherence (rules 1-4 + variety flag shape; presence {'ARMED' if A58_PRESENCE_ARMED else 'off'})")
 _cpv = _cp_shape(crop) + (_cp_presence(crop) if A58_PRESENCE_ARMED else [])
 print(f"  container-path violations: {len(_cpv)}")

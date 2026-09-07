@@ -1,5 +1,24 @@
 # PLA-7 promote A1: the read, the pins, the gauntlet -- PREPARED AND HELD
 
+**LANDED 2026-09-06** in commit `<commit-1>`, on Trevor's six decisions:
+
+- **mulberry** flips to `cultivar` as prepared. The 15 gallon figure is recorded as INHERITED from the mis-homed `rootstock_options[]` genetic-dwarf entry, not independently read; it is re-derived when PLA-464 retires that row.
+- **okra** stays `direct` as prepared: its own note stakes a full-size plant, so a cultivar-exclusive path would be false.
+- **lemon and lime** stay `direct` as prepared: neither note makes a size claim, both say the grower usually cannot choose, and the trifoliate entries carry null gallons.
+- **cherry-sweet and cherry-sour** stay `rootstock` as prepared. cherry-sour's mis-homed "Own-root / genetic dwarf (North Star, Meteor)" row is a KNOWN DISPLAY DEFECT, not a data defect; the decision rests on Gisela 5, and PLA-464 retires the row. It was left byte-untouched.
+- **PLA-457**: A1 lands FIRST; PLA-457 re-pins and re-gauntlets afterward, in its own session.
+- **Push**: the 12 tooling and docs commits `311c691..4281438` were already pushed (origin/main in sync at `4281438`); the two Task 8 commits are held local for Trevor's confirmation.
+
+**The rename question, answered:** `rootstock_selection_axis` is NOT renamed in this commit. Measured on
+the post-state, a bare rename to `rootstock_selection_basis` would make rule 2 refuse apple,
+pear-european, pear-asian, cherry-sweet and cherry-sour, because their basis values `size` and
+`vigor_precocity_and_soil` sit outside `{size_control, combined}`; `check_post` would refuse the write
+and A58 would redden `gate_all`. It waits for PLA-463's locked vocabulary.
+
+The title's "PREPARED AND HELD" and the "canonical is UNCHANGED" line below describe the **Task 7 run
+this document records**, and both are left as written. The promote has since been applied exactly once,
+by the `--expect-sha` command in section 13.
+
 **Date:** 2026-09-06. **Task 7** of `docs/superpowers/plans/2026-09-06-pla7-promote-a1-container-path.md`.
 **Canonical is UNCHANGED by this document and by the run it records.**
 
@@ -276,12 +295,14 @@ the condition the flip rests on:
 
 > A standard mulberry is far too large and vigorous for a pot, so container growing means choosing a naturally dwarf or weeping variety like Dwarf Everbearing, which is bred for it and even fruits young in a pot.
 
-**The number, stated plainly:** the 15 gallon figure is CARRIED from the existing certified
-`rootstock_options[]` entry "Genetic dwarf (e.g. Dwarf Everbearing)", which reads
-`container_suitable: true`, `container_size_gallons: 15`, `sources: ["ncsu_ext"]`, anchored at the
-NCSU toolbox Illinois Everbearing page (verified 2026-06-30). It was NOT re-read at T1 in this
-session. If Trevor wants the flip to rest on a fresh read, that read is a Plan A2 item and the
-mulberry rows come out of this promote.
+**The number, stated plainly:** the 15 gallon figure is INHERITED from the mis-homed
+`rootstock_options[]` genetic-dwarf entry, NOT independently read. The donor entry is the existing
+certified "Genetic dwarf (e.g. Dwarf Everbearing)" row, which reads `container_suitable: true`,
+`container_size_gallons: 15`, `sources: ["ncsu_ext"]`, anchored at the NCSU toolbox Illinois
+Everbearing page (verified 2026-06-30); it was NOT re-read at T1 in this session. **Trevor ruled
+2026-09-06: flip as prepared, and record the number as inherited rather than read.** It gets
+RE-DERIVED when PLA-464 retires that mis-homed row, so the figure is carried on the donor's authority
+until 464 gives it one of its own.
 
 Two mechanical details worth having on the record: mulberry's `container_suitable_varieties` list is
 EMPTY, so the Dwarf Everbearing flag comes ENTIRELY from the spec's one explicit `variety_flags` row
@@ -685,6 +706,8 @@ whichever one goes second. The two options, with what each costs:
 
 **The order is Trevor's call**, not a technical one: both work, and the only asymmetry is that A1 is
 the larger, more-quoted artifact and therefore the more expensive one to re-pin.
+
+**Trevor 2026-09-06: A1 lands first; PLA-457 re-pins and re-gauntlets afterward.**
 
 ## 17. What was not verified (PLA-215 close)
 
