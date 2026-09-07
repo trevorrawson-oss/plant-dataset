@@ -1,6 +1,6 @@
 # PLA-7 promote A1: the read, the pins, the gauntlet -- PREPARED AND HELD
 
-**LANDED 2026-09-06** in commit `<commit-1>`, on Trevor's six decisions:
+**LANDED 2026-09-06** in commit `4ade2d4`, on Trevor's six decisions:
 
 - **mulberry** flips to `cultivar` as prepared. The 15 gallon figure is recorded as INHERITED from the mis-homed `rootstock_options[]` genetic-dwarf entry, not independently read; it is re-derived when PLA-464 retires that row.
 - **okra** stays `direct` as prepared: its own note stakes a full-size plant, so a cultivar-exclusive path would be false.

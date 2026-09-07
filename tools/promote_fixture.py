@@ -48,8 +48,13 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # PLA-7 promote A1 (2026-09-06). NEVER AMEND 4ade2d4.
+    # container_path on all 121 certified crops, three flips, 135 variety flags, gravel +
+    # applicable riders; A58's presence floor is armed in the same commit as the write.
+    'd7b33682f9926e3aef176ef8a1bb1f3191143957ca40c94e36433abd883a2798': '4ade2d4',
     # PLA-450 Option B: the two held pairs scoped, both generic ids vacated. TWO `id` leaves.
-    # NOTHING rebuilds a pre-state from 4b826e4 yet -- it is live canonical, the NEXT promote's base.
+    # NEVER AMEND 4b826e4: tools/test_promote_pla457_sulfur_oil_interval.py and
+    # tools/test_promote_pla7_container_path.py both rebuild their entire pre-state from this pin.
     '72371c02fa306d8e1849053416baf34e232b80bbdf1af5169d546c12c8f45222': '4b826e4',
     # PLA-450 + PLA-451: six duplicate problem-id merges, two held on taxon, the celery blight
     # split. NINE `id` leaves, nothing else. NEVER AMEND c189d65:
