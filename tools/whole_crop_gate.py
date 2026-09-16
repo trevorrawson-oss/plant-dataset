@@ -905,6 +905,23 @@ print(f"  container-path violations: {len(_cpv)}")
 for m in _cpv:
     fail(f"container-path: {m}")
 
+# ---------------- A59. plant dimensions (PLA-465 spec 2026-09-16, section 4; register row 30) ----------------
+# mature_height_ft / mature_spread_ft ([lo, hi] ft, 0 < lo <= hi) and footprint_inches (positive, below
+# spacing_inches[0]) at crop level. SHAPE fires only when a field is non-null, so this arms GREEN on a98b6cfd
+# (0/128 carry the keys). An authored height or spread on a CERTIFIED crop must be backed by a
+# verification_status.field_additions[] entry with field == "plant_dimensions" (amend-not-recert provenance,
+# the A40 timing-spine pattern). The PRESENCE floor (a certified crop carries all three keys, null being a
+# value) is behind A59_PRESENCE_ARMED and flips to True in the SAME commit that writes the canonical carrying
+# the keys, never before: armed early it would redden gate_all on live canonical and flood a parallel
+# session (gates arm off the data). numeric_sanity (A33) owns the bounds.
+from plant_dimensions_gate import shape_violations as _pd_shape, presence_violations as _pd_presence
+A59_PRESENCE_ARMED = False
+print(f"A59. plant dimensions (height/spread pairs, footprint below spacing, provenance; presence {'ARMED' if A59_PRESENCE_ARMED else 'off'})")
+_pdv = _pd_shape(crop) + (_pd_presence(crop) if A59_PRESENCE_ARMED else [])
+print(f"  plant-dimension violations: {len(_pdv)}")
+for m in _pdv:
+    fail(f"plant-dimensions: {m}")
+
 # ---------------- A55. perennial year-pill coherence (PLA-6 Round 2) ----------------
 # HARD-FLIPPED 2026-08-22, the day its findings reached zero, which is the same soft-then-hard
 # discipline A49/A50 followed. It shipped standalone on 2026-08-22 with 4 live findings and was

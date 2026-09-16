@@ -95,3 +95,31 @@ if _cert:
     print(f"  real data: 0 FP across {len(_cert)} certified anchors: PASS")
 
 print("numeric_sanity_gate: all tests passed")
+
+
+# --- PLA-465 plant dimensions (register row 30): archetype-aware like spacing ---------------------
+def tree():
+    c = annual(); c["calendar_basis"] = "perennial_chill_gated"; c["spacing_inches"] = [120, 300]
+    return c
+
+
+# a tree at 30-60 ft (a standard mulberry) is fine; the same on an annual is absurd
+c = tree(); c["mature_height_ft"] = [30, 60]; c["mature_spread_ft"] = [30, 50]
+assert not any("mature_" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+c = annual(); c["mature_height_ft"] = [30, 60]
+assert any("mature_height_ft" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+# a 500 ft tree is absurd on any basis
+c = tree(); c["mature_height_ft"] = [1, 500]
+assert any("mature_height_ft" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+# a rosemary at 6 ft and a sunflower at 12 ft fit the non-tree ceiling
+c = annual(); c["mature_height_ft"] = [3, 6]; c["mature_spread_ft"] = [2, 4]
+assert not any("mature_" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+# footprint_inches: 4 in fine, 90 in absurd, 0 absurd
+c = annual(); c["footprint_inches"] = 4
+assert not any("footprint" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+c = annual(); c["footprint_inches"] = 90
+assert any("footprint_inches" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+# null is not a violation
+c = annual(); c["mature_height_ft"] = None; c["mature_spread_ft"] = None; c["footprint_inches"] = None
+assert not any("mature_" in v or "footprint" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+print("PASS numeric_sanity plant-dimension bounds (PLA-465)")

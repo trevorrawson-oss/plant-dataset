@@ -1,0 +1,310 @@
+{
+ "_what": "PLA-465 plant dimensions (spec 2026-09-16, register row 30). Three crop-level keys on every certified crop; the authored rows below carry T1 reads from raw bytes; every other certified crop takes null; footprint_inches null everywhere; shells untouched.",
+ "base_sha": "a98b6cfdfd7c5ffdcccdb222ceaa141fdca79e0ed674f991c0dcb396c2534412",
+ "authored": [
+  {
+   "crop": "apple",
+   "mature_height_ft": [
+    10,
+    14
+   ],
+   "mature_spread_ft": null,
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "wsu_ext"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [10, 14] ft, spread not stated on the page, basis: recommended_rootstock (M 26 (page spells it 'M 26'; same as M.26) named on the page); Washington State University Extension, Mount Vernon NWREC (Extension Bulletin EB0937, G.A. Moulton and J. King, copyright 2008), https://s3.wp.wsu.edu/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf (raw read 2026-09-16, 1120177 bytes, sha256 2ce35f98484a84bac1223a7e75b845167367c34cacbbcc884e83d7a9b15fe665); verbatim: \"M 26—Semi-dwarf habit, 10’–14’ tall, common in home orchards, free standing when mature, but early support on post is recommended, particularly for early fruiting varieties.\". amend-not-recert."
+   }
+  },
+  {
+   "crop": "blueberry",
+   "mature_height_ft": [
+    5,
+    8
+   ],
+   "mature_spread_ft": [
+    5,
+    8
+   ],
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "psu_ext"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [5, 8] ft, mature_spread_ft [5, 8] ft, basis: own_root; Penn State Extension (institution matches catalog id psu_ext, which is a primary_source on this crop; this specific URL is not yet cited on the crop), https://extension.psu.edu/blueberries-in-the-garden-and-the-kitchen (raw read 2026-09-16, 386765 bytes, sha256 a1495c9a5e94cd8da6787a107f2b7acca46052650d9decbe63fd514ab6cb87c0); verbatim: \"Highbush blueberries (Vaccinium corymbosum) are the type most likely to be grown in Pennsylvania. They are large, upright, deciduous shrubs that produce large berries on canes growing from a central crown. This shrub can be 5 to 8 feet tall and wide at maturity or even larger.\". amend-not-recert."
+   }
+  },
+  {
+   "crop": "elderberry",
+   "mature_height_ft": [
+    5,
+    12
+   ],
+   "mature_spread_ft": [
+    6,
+    12
+   ],
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "ncsu_ext"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [5, 12] ft, mature_spread_ft [6, 12] ft, basis: species; NC State Extension, North Carolina Extension Gardener Plant Toolbox, https://plants.ces.ncsu.edu/plants/sambucus-canadensis/ (raw read 2026-09-16, 97488 bytes, sha256 086a83652a9f58c2f95e7c2f93da53361961d882226c4d733b70aea5302b02e9); verbatim: \"Dimensions: Height: 5 ft. 0 in. - 12 ft. 0 in. Width: 6 ft. 0 in. - 12 ft. 0 in. | Quick ID Hints: deciduous shrub or small tree, multi-stemmed, measuring 5 to 12 feet tall and is usually wider than it is tall\". amend-not-recert."
+   }
+  },
+  {
+   "crop": "fig",
+   "mature_height_ft": [
+    15,
+    30
+   ],
+   "mature_spread_ft": [
+    15,
+    30
+   ],
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "clemson_hgic"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [15, 30] ft, mature_spread_ft [15, 30] ft, basis: own_root; Clemson University Cooperative Extension, Home & Garden Information Center (HGIC 1353), https://hgic.clemson.edu/factsheet/fig/ (raw read 2026-09-16, 159538 bytes, sha256 9e38cd246c74a2a34344386867937d0ecad08ae14fe6b6a97f9df40f514f75cc); verbatim: \"Quick Guide to Growing Figs (Ficus carica) ... Plant Type: Deciduous fruit tree or large shrub Height & Spread: 15 – 30 ft tall and wide (with pruning for size control) || body prose: \"They can grow into large trees or shrubs, reaching heights of 15 to 30 ft, but severe pruning can restrict them to a manageable height, as they tend to grow wider than taller.\"\". amend-not-recert."
+   }
+  },
+  {
+   "crop": "lavender",
+   "mature_height_ft": [
+    1,
+    2
+   ],
+   "mature_spread_ft": [
+    2,
+    3
+   ],
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "ncsu_ext_lavandula_angustifolia"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [1, 2] ft, mature_spread_ft [2, 3] ft, basis: species; NC State Extension (North Carolina Extension Gardener Plant Toolbox), https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/ (raw read 2026-09-16, 100825 bytes, sha256 74184337ef085db980b62b3f6f8050890899a42945fbf6047e9773e92dc05887); verbatim: \"\"A dwarf shrub that is broadly mounded, English lavender grows up to 2 feet tall and 3 feet wide..\" and, in the Attributes block: \"Dimensions: Height: 1 ft. 0 in. - 2 ft. 0 in. Width: 2 ft. 0 in. - 3 ft. 0 in.\"\". amend-not-recert."
+   }
+  },
+  {
+   "crop": "lemon",
+   "mature_height_ft": [
+    10,
+    20
+   ],
+   "mature_spread_ft": null,
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "uf_ifas_hs1153"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [10, 20] ft, spread not stated on the page, basis: species (sour orange (Citrus aurantium) is listed among 'Rootstocks used' with no size statement; size effects are given only for rough lemon ('extremely vigorous'), macrophylla ('very vigorous') and Cleopatra mandarin ('slower to come into bearing and fruit size appears smaller'); Swingle citrumelo and Changsha mandarin recommended for acid-to-neutral sandy soils named on the page); UF/IFAS Extension (EDIS), https://edis.ifas.ufl.edu/publication/HS402 (raw read 2026-09-16, 158367 bytes, sha256 50436e71fe8fb2bcaee7949f83f9fb192cdc3c0cbe875f7b6b74808f5f9459fb); verbatim: \"The lemon tree is vigorous, upright, and spreading, with an open growth habit (Tucker and Wardowski 1976). Trees may reach 10–20 ft (3.1–6.1 m) in height (Morton 1987).   ||   Rootstock selection for the soil type and conditions is critical. Rootstocks used include rough lemon (C. jambhiri), 'Cleopatra mandarin' (C. reticulata), Volkamer lemon (C. volkameriana), sour orange (C. aurantium) and macrophylla (C. macrophylla) (Tucker and Wardowski 1976). Trees on rough lemon rootstocks are extremely vigorous and susceptible to foot rot (phytophthora). [...] Trees on macrophylla are also very vigorous and susceptible to tristeza [...] Lemons on Cleopatra mandarin are slower to come into bearing and fruit size appears smaller.   ||   (pruning target, not mature size) Trees should be maintained at 7 to 10 ft (2.1–3.1 m) high and 10 to 15 ft (3.1–4.6 m) wide.\". Authored from a read the reader marked partial: the page states the species size on a standard, non-dwarfing rootstock, which is the required basis on this crop because its recommended rootstock is a standard stock. amend-not-recert."
+   }
+  },
+  {
+   "crop": "mulberry",
+   "mature_height_ft": [
+    30,
+    60
+   ],
+   "mature_spread_ft": [
+    30,
+    50
+   ],
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "ncsu_ext"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [30, 60] ft, mature_spread_ft [30, 50] ft, basis: species; NC State Extension, North Carolina Extension Gardener Plant Toolbox (Morus alba), https://plants.ces.ncsu.edu/plants/morus-alba/ (raw read 2026-09-16, 86026 bytes, sha256 61ebbc91c803cbd5b3897691da862ba841c6b5e79174420e4b5b198c4fbfa45d); verbatim: \"\"White Mulberry is a mid-size, flowering tree with a rounded form and a short, crooked trunk in the mulberry family. It is native to China and can reach a mature height of 50 or 60 feet with an equal spread.\" || \"Dimensions: Height: 30 ft. 0 in. - 60 ft. 0 in. Width: 30 ft. 0 in. - 50 ft. 0 in.\"\". amend-not-recert."
+   }
+  },
+  {
+   "crop": "nectarine",
+   "mature_height_ft": [
+    15,
+    25
+   ],
+   "mature_spread_ft": [
+    15,
+    25
+   ],
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "ncsu_ext"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [15, 25] ft, mature_spread_ft [15, 25] ft, basis: species; NC State Extension, North Carolina Extension Gardener Plant Toolbox, https://plants.ces.ncsu.edu/plants/prunus-persica/ (raw read 2026-09-16, 167836 bytes, sha256 6f67cc12c23229c85c82839f088a29cb868be4d64e235db815fba3947340f72d); verbatim: \"Description prose: \"The tree will grow quickly to 15-25 feet tall and wide with a rounded crown and upward-growing branches. It often wants to grow with multiple trunks but can be trained to a single trunk.\" Attributes block: \"Dimensions: Height: 15 ft. 0 in. - 25 ft. 0 in. Width: 15 ft. 0 in. - 25 ft. 0 in.\" Nectarine coverage on the same page: \"Common Name(s): Clingstone peach Common Peach Freestone peach Nectarine Peach White peach\"; \"Previously known as: Amygdalis persicus Persica vulgaris Prunus persica var. nucipersica\"; \"A recessive gene can cause the fruit to be smooth and hairless and they are called nectarines.\"\". amend-not-recert."
+   }
+  },
+  {
+   "crop": "oregano",
+   "mature_height_ft": [
+    1,
+    3
+   ],
+   "mature_spread_ft": [
+    1,
+    2
+   ],
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "ncsu_ext"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [1, 3] ft, mature_spread_ft [1, 2] ft, basis: species; NC State Extension (North Carolina Extension Gardener Plant Toolbox), https://plants.ces.ncsu.edu/plants/origanum-vulgare/ (raw read 2026-09-16, 70653 bytes, sha256 448e86b233778d110495be7f9527988d78300a7896f581adc210724d157c3248); verbatim: \"\"At maturity, it can reach a height of 3 feet with a 2 foot spread.\" and, in the Attributes block: \"Dimensions: Height: 1 ft. 0 in. - 3 ft. 0 in. Width: 1 ft. 0 in. - 2 ft. 0 in.\"\". amend-not-recert."
+   }
+  },
+  {
+   "crop": "pawpaw",
+   "mature_height_ft": [
+    15,
+    30
+   ],
+   "mature_spread_ft": [
+    15,
+    30
+   ],
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "ncsu_ext"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [15, 30] ft, mature_spread_ft [15, 30] ft, basis: species; NC State Extension, North Carolina Extension Gardener Plant Toolbox (Asimina triloba), https://plants.ces.ncsu.edu/plants/asimina-triloba/ (raw read 2026-09-16, 144108 bytes, sha256 3f8ac3202716cce916e728942013e9e3f66e2a9ff238e5e7b4b95f827732c24e); verbatim: \"\"Dimensions: Height: 15 ft. 0 in. - 30 ft. 0 in. Width: 15 ft. 0 in. - 30 ft. 0 in.\" (the Description paragraph on this page gives no number; it reads \"Pawpaw is a deciduous, native, understory tree in the pawpaw family (Annonaceae) ...\")\". amend-not-recert."
+   }
+  },
+  {
+   "crop": "peach",
+   "mature_height_ft": [
+    15,
+    25
+   ],
+   "mature_spread_ft": [
+    15,
+    25
+   ],
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "ncsu_ext"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [15, 25] ft, mature_spread_ft [15, 25] ft, basis: species; NC State Extension, North Carolina Extension Gardener Plant Toolbox, https://plants.ces.ncsu.edu/plants/prunus-persica/ (raw read 2026-09-16, 167836 bytes, sha256 6f67cc12c23229c85c82839f088a29cb868be4d64e235db815fba3947340f72d); verbatim: \"Description prose: \"The tree will grow quickly to 15-25 feet tall and wide with a rounded crown and upward-growing branches. It often wants to grow with multiple trunks but can be trained to a single trunk.\" Attributes block: \"Dimensions: Height: 15 ft. 0 in. - 25 ft. 0 in. Width: 15 ft. 0 in. - 25 ft. 0 in.\"\". amend-not-recert."
+   }
+  },
+  {
+   "crop": "persimmon",
+   "mature_height_ft": [
+    20,
+    30
+   ],
+   "mature_spread_ft": [
+    15,
+    25
+   ],
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "ncsu_ext"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [20, 30] ft, mature_spread_ft [15, 25] ft, basis: species; NC State Extension, North Carolina Extension Gardener Plant Toolbox, https://plants.ces.ncsu.edu/plants/diospyros-kaki/ (raw read 2026-09-16, 115855 bytes, sha256 3261eac3c6225b595bc7f4e1ebfeb9b4dff290687ed2b6a071065f795f896c49); verbatim: \"Attributes block: \"Dimensions: Height: 20 ft. 0 in. - 30 ft. 0 in. Width: 15 ft. 0 in. - 25 ft. 0 in.\" Cultural conditions: \"Available Space To Plant: 12-24 feet\". The page names Diospyros virginiana only as \"Native alternative(s) for Diospyros kaki : Diospyros virginiana\" and lists \"Recommended Propagation Strategy: Grafting Seed\" without naming a rootstock.\". amend-not-recert."
+   }
+  },
+  {
+   "crop": "pomegranate",
+   "mature_height_ft": [
+    10,
+    12
+   ],
+   "mature_spread_ft": [
+    8,
+    10
+   ],
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "ncsu_ext_toolbox_punica_granatum"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [10, 12] ft, mature_spread_ft [8, 10] ft, basis: own_root; NC State Extension, North Carolina Extension Gardener Plant Toolbox, https://plants.ces.ncsu.edu/plants/punica-granatum/ (raw read 2026-09-16, 104945 bytes, sha256 5f2125fcc9df82a1d6f76d06ece543d5a6429be67b25409a5826c38860d108a1); verbatim: \"\"The shrub is drought tolerant and will grow to be 10 to 12 feet tall and 8 to 10 feet wide.\" || \"Dimensions: Height: 10 ft. 0 in. - 12 ft. 0 in. Width: 8 ft. 0 in. - 10 ft. 0 in.\"\". amend-not-recert."
+   }
+  },
+  {
+   "crop": "rosemary",
+   "mature_height_ft": [
+    4,
+    5
+   ],
+   "mature_spread_ft": [
+    3,
+    4
+   ],
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "ncsu_ext"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [4, 5] ft, mature_spread_ft [3, 4] ft, basis: species; NC State Extension (North Carolina Extension Gardener Plant Toolbox), https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/ (raw read 2026-09-16, 126914 bytes, sha256 65617edab450f99bf9a7f5828446ec24b6874310e73b5fd9a13a282f6437c03f); verbatim: \"\"The shrub grows from 4 to 5 feet tall and is generally erect and rounded.\" and, in the Attributes block: \"Dimensions: Height: 4 ft. 0 in. - 5 ft. 0 in. Width: 3 ft. 0 in. - 4 ft. 0 in.\"\". amend-not-recert."
+   }
+  },
+  {
+   "crop": "sage",
+   "mature_height_ft": [
+    1,
+    2
+   ],
+   "mature_spread_ft": [
+    2,
+    3
+   ],
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "ncsu_ext"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [1, 2] ft, mature_spread_ft [2, 3] ft, basis: species; NC State Extension (North Carolina Extension Gardener Plant Toolbox), https://plants.ces.ncsu.edu/plants/salvia-officinalis/ (raw read 2026-09-16, 106080 bytes, sha256 b2c4f7f57782a0abc452d01626cf06e39481878e7919eeb66f8f8f260cdec601); verbatim: \"\"The species can grow up to 2 feet tall and 2 to 3 feet wide. Many cultivars may be shorter.\" and, in the Attributes block: \"Dimensions: Height: 1 ft. 0 in. - 2 ft. 0 in. Width: 2 ft. 0 in. - 3 ft. 0 in.\"\". amend-not-recert."
+   }
+  },
+  {
+   "crop": "thyme",
+   "mature_height_ft": [
+    0.5,
+    1
+   ],
+   "mature_spread_ft": [
+    0.5,
+    1.3333
+   ],
+   "field_addition": {
+    "field": "plant_dimensions",
+    "date": "2026-09-16",
+    "sources": [
+     "ncsu_ext"
+    ],
+    "note": "PLA-465 plant dimensions: mature_height_ft [0.5, 1] ft, mature_spread_ft [0.5, 1.3333] ft, basis: species; NC State Extension (North Carolina Extension Gardener Plant Toolbox), https://plants.ces.ncsu.edu/plants/thymus-vulgaris/ (raw read 2026-09-16, 94312 bytes, sha256 65b3c81565892031068679e4fb4f540451c0e965bb7e61017ceea573c4f52a90); verbatim: \"\"Grown primarily as an aromatic culinary herb, common thyme forms a mound about 6 to 12 inches high and 6 to 16 inches wide.\" and, in the Attributes block: \"Dimensions: Height: 0 ft. 6 in. - 1 ft. 0 in. Width: 0 ft. 6 in. - 1 ft. 4 in.\" (6 in = 0.5 ft, 12 in = 1 ft, 1 ft 4 in = 16 in = 1.3333 ft)\". amend-not-recert."
+   }
+  }
+ ],
+ "expected": {
+  "keys": 121,
+  "authored": 16,
+  "null": 105,
+  "shells": 7
+ }
+}

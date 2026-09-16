@@ -72,6 +72,15 @@ def numeric_sanity_violations(crop):
     sp_hi = 360 if basis in _TREE_BASES else 72
     check(crop.get("spacing_inches"), f"spacing_inches (basis={basis})", 1, sp_hi)
 
+    # plant dimensions (PLA-465, register row 30) are ARCHETYPE-AWARE the same way: a tree base may
+    # reach 120 ft tall / 80 ft wide (a standard mulberry is 30-60); anything else above 20 ft is absurd
+    # (a rosemary at 6, a sunflower at 12, pole beans on a trellis at 10 all fit). footprint_inches is
+    # the plant's own width at the ground, never a canopy.
+    h_hi, w_hi = (120, 80) if basis in _TREE_BASES else (20, 20)
+    check(crop.get("mature_height_ft"), f"mature_height_ft (basis={basis})", 0.1, h_hi)
+    check(crop.get("mature_spread_ft"), f"mature_spread_ft (basis={basis})", 0.1, w_hi)
+    check(crop.get("footprint_inches"), "footprint_inches", 0.5, 60)
+
     # per-variety numerics: chill (A21/A22 own the type lock) + a per-variety days_to_maturity, which
     # refines the crop's DTM per cultivar and must be bounded the SAME as the crop-level number -- A33
     # bounded the crop DTM but never the variety DTM, so a fabricated variety (3-day / 500-day) slipped.
