@@ -58,7 +58,9 @@ fig and pomegranate fall to their crop `min_pot_gallons` of 15 in both consumers
 
 ## Gauntlet on the scratch post-state `a98b6cfd`
 
-`whole_crop_gate` PASS on fig, pomegranate, mulberry, pawpaw, cherry-sour. `container_path_gate --presence` 0 violations, 121/128, presence ARMED. `register_completeness` PASS. `release_verify` (mulberry vs ref apple, base canonical, expect-changed the other four): section A only the declared crops changed, catalog unchanged, sections B through H clean, verdict clean. `gate_all` and the full `tools/` pytest tree: see the line appended below.
+`whole_crop_gate` PASS on fig, pomegranate, mulberry, pawpaw, cherry-sour. `container_path_gate --presence` 0 violations, 121/128, presence ARMED. `register_completeness` PASS. `release_verify` (mulberry vs ref apple, base canonical, expect-changed the other four): section A only the declared crops changed, catalog unchanged, sections B through H clean, verdict clean. `gate_all` **121/121 PASS** on the post-state and again on the landed canonical.
+
+**Full `tools/` tree on the landed canonical `a98b6cfd` (run after LATEST.txt was bumped, 63 minutes): 2 failed / 5,520 passed / 1 skipped.** The two are the same pre-existing failures as every run this arc, neither touched by this promote: `test_bare_host_scan::test_self_pathed_population_at_this_canonical` (its pinned population is stale) and `test_cited_claim_scan::test_MUTATION_the_anchoring_only_walk_reproduces_the_false_pass` (eight uncached allium URLs, reported UNDETERMINED not absent). The +80 passed are this promote's suite. An earlier attempt at the tree was interrupted at collection because `test_doc_roster_claim_gate` asserts LATEST.txt matches the canonical at import; the tree must run AFTER the trio is bumped.
 
 ## What was NOT verified
 
