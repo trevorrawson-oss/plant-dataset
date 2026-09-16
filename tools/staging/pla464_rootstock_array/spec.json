@@ -1,0 +1,186 @@
+{
+ "_what": "PLA-464 Option A, Trevor's rulings D1-D6 of 2026-09-16 (D5 amended after measurement, see mulberry's finding). Retire the six rootstock_options[] rows that are not rootstocks; fold one crop-specific sentence into recommended_rootstock_note on three crops with the row's sources carried in field_additions; null fig's recommended_rootstock and rewrite mulberry's; record the provenance gaps as open_findings routed to PLA-533 and PLA-7 Plan B; mulberry's 15 gal KEPT and asserted unchanged. Five crops, nothing else.",
+ "base_sha": "d7b33682f9926e3aef176ef8a1bb1f3191143957ca40c94e36433abd883a2798",
+ "retire": [
+  {
+   "crop": "fig",
+   "index": 0,
+   "name": "Own-root (from cuttings)",
+   "concept": "own_root"
+  },
+  {
+   "crop": "pomegranate",
+   "index": 0,
+   "name": "Own roots (cutting-grown)",
+   "concept": "own_root"
+  },
+  {
+   "crop": "mulberry",
+   "index": 0,
+   "name": "Own-root (from hardwood cutting)",
+   "concept": "own_root"
+  },
+  {
+   "crop": "mulberry",
+   "index": 2,
+   "name": "Genetic dwarf (e.g. Dwarf Everbearing)",
+   "concept": "genetic_dwarf"
+  },
+  {
+   "crop": "pawpaw",
+   "index": 1,
+   "name": "Own-root seedling (ungrafted)",
+   "concept": "own_root"
+  },
+  {
+   "crop": "cherry-sour",
+   "index": 4,
+   "name": "Own-root / genetic dwarf (North Star, Meteor)",
+   "concept": "genetic_dwarf"
+  }
+ ],
+ "note_foldins": [
+  {
+   "crop": "fig",
+   "sentence": "With no rootstock to resist root-knot nematode, a nematode-free, well-drained site is the real substitute for rootstock choice.",
+   "sources": [
+    "clemson_hgic",
+    "uf_ifas_edis"
+   ]
+  },
+  {
+   "crop": "mulberry",
+   "sentence": "On an own-root tree there is no graft union to keep above the soil, and any suckers are the same variety.",
+   "sources": [
+    "ncsu_ext"
+   ]
+  },
+  {
+   "crop": "pawpaw",
+   "sentence": "An ungrafted seedling is a cheaper way to a tree, but expect variable fruit and a wait of about 5 to 8 years instead of around 4 for a grafted variety.",
+   "sources": [
+    "ksu_pawpaw",
+    "wvu_ext"
+   ]
+  }
+ ],
+ "recommended_rootstock": [
+  {
+   "crop": "fig",
+   "from": "Own-root (from cuttings)",
+   "to": null
+  },
+  {
+   "crop": "mulberry",
+   "from": "own-root or Morus seedling",
+   "to": "Morus seedling (alba or rubra)"
+  }
+ ],
+ "mulberry_gallons": {
+  "crop": "mulberry",
+  "variety": "Dwarf Everbearing",
+  "min_pot_gallons": 15,
+  "container_min_gallons": 15,
+  "kept": true
+ },
+ "field_additions": [
+  {
+   "crop": "fig",
+   "entry": {
+    "field": "recommended_rootstock_note",
+    "date": "2026-09-16",
+    "sources": [
+     "clemson_hgic",
+     "uf_ifas_edis"
+    ],
+    "note": "PLA-464 Option A: one sentence folded in from the retired rootstock_options[] row 'Own-root (from cuttings)', carrying that row's sources; anchors as verified on the row: clemson_hgic https://hgic.clemson.edu/factsheet/fig/ (verified 2026-06-30); uf_ifas_edis https://edis.ifas.ufl.edu/publication/MG214 (verified 2026-06-30). The rest of the row's prose was dropped as already carried by this note, by the crop's container_notes, or by the PLA-463 not_applicable framing copy. amend-not-recert."
+   }
+  },
+  {
+   "crop": "mulberry",
+   "entry": {
+    "field": "recommended_rootstock_note",
+    "date": "2026-09-16",
+    "sources": [
+     "ncsu_ext"
+    ],
+    "note": "PLA-464 Option A: one sentence folded in from the retired rootstock_options[] row 'Own-root (from hardwood cutting)', carrying that row's sources; anchors as verified on the row: ncsu_ext https://plants.ces.ncsu.edu/plants/morus-alba-x-rubra-illinois-everbearing/ (verified 2026-06-30). The rest of the row's prose was dropped as already carried by this note, by the crop's container_notes, or by the PLA-463 not_applicable framing copy. amend-not-recert."
+   }
+  },
+  {
+   "crop": "pawpaw",
+   "entry": {
+    "field": "recommended_rootstock_note",
+    "date": "2026-09-16",
+    "sources": [
+     "ksu_pawpaw",
+     "wvu_ext"
+    ],
+    "note": "PLA-464 Option A: one sentence folded in from the retired rootstock_options[] row 'Own-root seedling (ungrafted)', carrying that row's sources; anchors as verified on the row: ksu_pawpaw https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/pawpaw-planting-guide.php (verified 2026-06-30); wvu_ext https://extension.wvu.edu/lawn-gardening-pests/news/2022/09/01/pawpaw-trees (verified 2026-06-30). The rest of the row's prose was dropped as already carried by this note, by the crop's container_notes, or by the PLA-463 not_applicable framing copy. amend-not-recert."
+   }
+  }
+ ],
+ "open_findings": [
+  {
+   "crop": "fig",
+   "entry": {
+    "id": "fig_min_pot_gallons_unanchored_pla464",
+    "severity": "medium",
+    "status": "deferred",
+    "blocks_launch": false,
+    "filed_in_session": "pla464_2026-09-16",
+    "summary": "The retired rootstock_options[] row 'Own-root (from cuttings)' carried container_size_gallons 20 (clemson_hgic, uf_ifas_edis), equal to the crop's recommended_pot_gallons: a recommendation was sitting in the minimum slot. With the row retired, both consumers fall back to container_notes.min_pot_gallons 15, which carries no anchor of its own.",
+    "resolution_note": "Trevor's ruling D2 (2026-09-16): let it go to 15 and do not hold the promote for the provenance question. The minimum is re-derived in PLA-533, where fig is first in the queue.",
+    "deferred_to": "PLA-533"
+   }
+  },
+  {
+   "crop": "pomegranate",
+   "entry": {
+    "id": "pomegranate_min_pot_gallons_unanchored_pla464",
+    "severity": "medium",
+    "status": "deferred",
+    "blocks_launch": false,
+    "filed_in_session": "pla464_2026-09-16",
+    "summary": "The retired rootstock_options[] row 'Own roots (cutting-grown)' carried container_size_gallons 20 (ucanr_ext, tamu_agrilife), equal to the crop's recommended_pot_gallons: a recommendation was sitting in the minimum slot. With the row retired, both consumers fall back to container_notes.min_pot_gallons 15, which carries no anchor of its own. No sentence was folded from the row: its content is already carried by recommended_rootstock_note and by the PLA-463 not_applicable framing copy.",
+    "resolution_note": "Trevor's ruling D2 (2026-09-16): let it go to 15 and do not hold the promote for the provenance question. The minimum is re-derived in PLA-533, where pomegranate is first in the queue.",
+    "deferred_to": "PLA-533"
+   }
+  },
+  {
+   "crop": "mulberry",
+   "entry": {
+    "id": "mulberry_min_pot_gallons_unanchored_pla464",
+    "severity": "medium",
+    "status": "deferred",
+    "blocks_launch": false,
+    "filed_in_session": "pla464_2026-09-16",
+    "summary": "container_notes.min_pot_gallons 15 and the Dwarf Everbearing variety's container_min_gallons 15 were inherited (PLA-7 promote A1, 2026-09-06) from the retired rootstock_options[] row 'Genetic dwarf (e.g. Dwarf Everbearing)'. That row's only anchor, the ncsu_ext Plant Toolbox page for Morus alba x rubra 'Illinois Everbearing' (https://plants.ces.ncsu.edu/plants/morus-alba-x-rubra-illinois-everbearing/), was read from raw bytes on 2026-09-16 (44647 bytes, sha256 4d700c7c35131f2e8f12915b1c9add8402c4ea404967520ee2b11949405e5024): it carries no container volume, no dwarf form and no mature height (it gives 3 to 5 ft of growth per year and 24 to 60 ft of planting space). The 15 gal figure is UNANCHORED. The absence is scoped to that document only.",
+    "resolution_note": "Trevor's ruling D5 (2026-09-16) was to null both figures if absent. Measured on a scratch copy, a null reddens display_readiness and whole_crop_gate section 3 on any container_ok true crop, and mulberry's container_ok true was ruled on the crop's own cultivar sentence, not on this figure. The 15 is therefore KEPT as an explicit placeholder pending PLA-533, where mulberry is first in the queue: re-derive from a container technique source admitted by PLA-532, and replace it, or null it together with the flip decision, there.",
+    "deferred_to": "PLA-533"
+   }
+  },
+  {
+   "crop": "cherry-sour",
+   "entry": {
+    "id": "cherry_sour_genetic_dwarf_cultivars_routed_pla464",
+    "severity": "low",
+    "status": "deferred",
+    "blocks_launch": false,
+    "filed_in_session": "pla464_2026-09-16",
+    "summary": "The retired rootstock_options[] row 'Own-root / genetic dwarf (North Star, Meteor)' named two cultivars, not a rootstock. Its figures are recorded here and NOT carried to the variety entries: North Star 8 to 10 ft, Meteor 10 to 14 ft, genetic dwarfs that stay small on their own roots without a dwarfing rootstock, container-suitable at 25 gal (wsu_ext, iastate_ext; wsu_ext https://treefruit.wsu.edu/web-article/cherry-rootstocks/ (verified 2026-06-30); iastate_ext https://yardandgarden.extension.iastate.edu/how-to/growing-cherries-home-garden (verified 2026-06-30)). The crop's recommended_rootstock_note already names both as genetic dwarfs; container_path stays rootstock on Gisela 5.",
+    "resolution_note": "Trevor's ruling D4 (2026-09-16): retire the row and leave both variety entries unflagged. Their container_suitable flags and any height are authored in PLA-7 Plan B's T1 pass on the unmatched cultivar names, against a direct read, never carried from this row.",
+    "deferred_to": "PLA-7 Plan B"
+   }
+  }
+ ],
+ "expected": {
+  "retire": 6,
+  "foldins": 3,
+  "recommended_rootstock": 2,
+  "field_additions": 3,
+  "open_findings": 4,
+  "crops": 5,
+  "mulberry_gallons": 15
+ }
+}
