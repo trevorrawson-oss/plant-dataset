@@ -51,6 +51,10 @@ COMMIT_FOR = {
     # PLA-7 promote A1 (2026-09-06). NEVER AMEND 4ade2d4.
     # container_path on all 121 certified crops, three flips, 135 variety flags, gravel +
     # applicable riders; A58's presence floor is armed in the same commit as the write.
+    # PLA-464 Option A (2026-09-16). NEVER AMEND a2796ae.
+    # Six non-rootstock rows retired on five crops, three note fold-ins, two sibling strings,
+    # three field_additions, four open_findings; mulberry's 15 gal kept and recorded unanchored.
+    'a98b6cfdfd7c5ffdcccdb222ceaa141fdca79e0ed674f991c0dcb396c2534412': 'a2796ae',
     'd7b33682f9926e3aef176ef8a1bb1f3191143957ca40c94e36433abd883a2798': '4ade2d4',
     # PLA-450 Option B: the two held pairs scoped, both generic ids vacated. TWO `id` leaves.
     # NEVER AMEND 4b826e4: tools/test_promote_pla457_sulfur_oil_interval.py and
