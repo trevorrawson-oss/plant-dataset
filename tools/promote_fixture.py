@@ -51,6 +51,10 @@ COMMIT_FOR = {
     # PLA-7 promote A1 (2026-09-06). NEVER AMEND 4ade2d4.
     # container_path on all 121 certified crops, three flips, 135 variety flags, gravel +
     # applicable riders; A58's presence floor is armed in the same commit as the write.
+    # PLA-465 plant dimensions promote 1 (2026-09-16). NEVER AMEND 6659f62.
+    # mature_height_ft / mature_spread_ft / footprint_inches on all 121 certified crops; 16 woody crops
+    # authored with field_additions provenance records; A59 presence armed in the same commit.
+    'a7f234ce449c6d74b4f1be2398bb808cfe29bebf9a1f7cc51efdcaea56246c93': '6659f62',
     # PLA-464 Option A (2026-09-16). NEVER AMEND a2796ae.
     # Six non-rootstock rows retired on five crops, three note fold-ins, two sibling strings,
     # three field_additions, four open_findings; mulberry's 15 gal kept and recorded unanchored.
