@@ -914,8 +914,9 @@ for m in _cpv:
 # value) is behind A59_PRESENCE_ARMED and flips to True in the SAME commit that writes the canonical carrying
 # the keys, never before: armed early it would redden gate_all on live canonical and flood a parallel
 # session (gates arm off the data). numeric_sanity (A33) owns the bounds.
+# ARMED 2026-09-16 in the commit that wrote a7f234ce (121/121 certified crops carry the keys; 16 authored; the 7 shells exempt by status).
 from plant_dimensions_gate import shape_violations as _pd_shape, presence_violations as _pd_presence
-A59_PRESENCE_ARMED = False
+A59_PRESENCE_ARMED = True
 print(f"A59. plant dimensions (height/spread pairs, footprint below spacing, provenance; presence {'ARMED' if A59_PRESENCE_ARMED else 'off'})")
 _pdv = _pd_shape(crop) + (_pd_presence(crop) if A59_PRESENCE_ARMED else [])
 print(f"  plant-dimension violations: {len(_pdv)}")
