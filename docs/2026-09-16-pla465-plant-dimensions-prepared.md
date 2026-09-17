@@ -71,7 +71,7 @@ Flags the reviewers raised that are NOT page-truth defects and are carried here 
 
 ## Not verified
 
-The full `tools/` tree runs after the write, on the landed canonical, after the trio is bumped (it asserts LATEST.txt at collection). Consumer rendering of the new keys is not built yet (spec section 8); the fields are inert until read. The 103 null crops are "not yet authored", not "not applicable".
+**Full `tools/` tree on the landed canonical `a7f234ce` (after the trio was bumped, 50 minutes): 2 failed / 5,596 passed / 1 skipped.** The two are the same pre-existing failures as every run this arc, neither touched by this promote: `test_bare_host_scan::test_self_pathed_population_at_this_canonical` (stale pinned population) and `test_cited_claim_scan::test_MUTATION_the_anchoring_only_walk_reproduces_the_false_pass` (eight uncached allium URLs, UNDETERMINED not absent). The +76 over the PLA-464 run are this promote's suite, the A59 unit tests and the a59 script test. Consumer rendering of the new keys is not built yet (spec section 8); the fields are inert until read. The 103 null crops are "not yet authored", not "not applicable".
 
 ## Task 8 owes, in one commit, on approval
 
