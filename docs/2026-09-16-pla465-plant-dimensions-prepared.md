@@ -76,3 +76,33 @@ Flags the reviewers raised that are NOT page-truth defects and are carried here 
 ## Task 8 owes, in one commit, on approval
 
 `--expect-sha a7f234ce...`; `A59_PRESENCE_ARMED = True` and the a59 script test flips with it; the state trio; `promote_fixture.COMMIT_FOR` pin of `a7f234ce` in a follow-up commit, never an amend; the collision gate `PINNED_SHA` re-measure (no ids move; 36 / 24 / 12 should hold); `export_staleness_gate` E1 and E3 until the consumers move.
+
+---
+
+# Promote 2: the twelve nulls, recorded -- PREPARED AND HELD (2026-09-17)
+
+**Base:** the landed `a7f234ce`. **Post-state:** `892c76fb9e89fd9a242f682a7040a71886cb128ec899092a4f6414d2e0708edb`, scratch only. **Apply on approval:** `python3 tools/promote_pla465_null_rulings.py --expect-sha 892c76fb9e89fd9a242f682a7040a71886cb128ec899092a4f6414d2e0708edb`.
+
+Trevor's rulings of 2026-09-17 on the twelve woody crops whose plant dimensions stay null, recorded on the crops so no later pass reads a null as unread. No dimension value changes. Twelve `open_findings` entries appended on eleven crops, two on pear-asian, and ONE dated addendum appended to plum's existing finding `plum_self_fertile_boolean_european_default` (original summary byte-identical as a prefix, every other field untouched, the suffix opening with `[ADDENDUM 2026-09-17, PLA-465:`). Texts live in `tools/staging/pla465_null_rulings/build_spec.py`.
+
+| crop | id | status | routed to | ruling |
+| -- | -- | -- | -- | -- |
+| mandarin-clementine | `..._unusable_anchor_pla465` | accepted | | unusable source: the cited UCR anchor is a satsuma page |
+| orange-navel | `..._sources_conflict_pla465` | accepted | | unusable: archived capture and retired bulletin disagree; HS1260's class is not a measurement |
+| grapefruit | `..._sources_conflict_pla465` | accepted | | unusable: HS982 15 to 20 against HS1260's Swingle 8 to 14 |
+| apricot | `..._page_self_contradicts_pla465` | accepted | | unusable: 20 to 40 block against 15 to 40 prose; rows cap at 25 |
+| cherry-sour | `..._source_not_admitted_pla465` | deferred | PLA-532 | Virginia Tech not admitted; URL, bytes and hash recorded; UMN's labelled estimate noted, not used |
+| cherry-sweet | `..._derivation_declined_pla465` | accepted | | percent-of-standard; derivation declined, recorded so no later pass multiplies |
+| pear-european | `..._derivation_declined_pla465` | accepted | | same |
+| raspberry | `..._not_applicable_cane_pla465` | accepted | | not a property of the plant; A59 N/A predicate on `cane_type` owed |
+| blackberry | `..._not_applicable_cane_pla465` | accepted | | same |
+| plum | addendum on `plum_self_fertile_boolean_european_default` | deferred (existing) | variety-delta pass | type-aware; attached, not filed separately |
+| lime | `lime_single_value_shape_two_species_pla465` | deferred | PLA-12 variety-delta pass | the plum shape: two species under one record |
+| pear-asian | `..._basis_unstable_pla465` | deferred | PLA-463 Plan E | null until the rootstock finding resolves |
+| pear-asian | `pear_asian_recommended_rootstock_questioned_pla465` | deferred | PLA-463 Plan E | filed on its own: WSU steers Asian pears to OHxF 97 or 333 |
+
+**Where the table contradicted a stated reason**, reported before the ruling and carried into the records: cherry-sour's reason said its only figure is on the Virginia Tech page, but UMN, an admitted source, gives 8 to 15 ft under the page's own "Mature height (estimate)" heading; the finding records both and leaves the estimate question unruled. Navel and grapefruit also have a live UF/IFAS rootstock class each (Carrizo large 14 to 20, Swingle intermediate 8 to 14), which is a percent-of-standard by another name; recorded as such under the unusable-source ruling. Plum's European default already exists on the record, so the European figure was readable; ruled null and attached anyway, recorded in the addendum.
+
+**Armor.** `tools/promote_pla465_null_rulings.py` (the ruling is about nulls: every target crop must be null on all three keys; records pinned by shape and vocabulary, `--` allowed in a backend record since two quote page text, the em dash not; the addendum targets one finding by id and exact original summary; set-before-value blast radius with the prefix byte-identical and plum's entry equal to original plus suffix). Suite **57 passed**, replay-pinned to `a7f234ce`; one driver was rewritten when it moved the only record on a crop and left the count unchanged, the same flaw the 464 suite caught. Harness **41 injected / 41 caught / 0 survived / 0 broken**, positive control the whole suite. Gauntlet on `892c76fb`: `whole_crop_gate` PASS on plum, pear-asian, cherry-sour, raspberry, apricot, lime; **`gate_all` 121/121**; presence 0 / 121 of 128 / 16 authored; register gates PASS; `release_verify` (plum vs ref apple, expect-changed the other eleven) clean in every section; leaf walk 96 added, 0 removed, 1 changed (plum's summary), all under `verification_status`.
+
+**Owed with it, not in it:** the A59 N/A predicate on `cane_type` so the cane nulls read as N/A at the presence floor; the mandarin satsuma-anchor repair; the Plan E note that cherry-sweet's and both pears' rootstock-row heights are not T1-stated in feet.
