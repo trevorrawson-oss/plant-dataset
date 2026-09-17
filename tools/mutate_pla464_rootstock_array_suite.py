@@ -285,12 +285,15 @@ def main():
     try:
         preflight(tools)
 
-        rc, out = run_suite(tools, "test_the_spec_is_the_shape_measured or test_apply_changes_exactly_the_declared_changes")
+        # THE POSITIVE CONTROL IS THE WHOLE SUITE (2026-09-16, after the PLA-465 harness let a pre-red driver
+        # grade its mutation "caught" for the wrong reason under a two-test control): every driver must be
+        # GREEN on the clean copy, or the run is dead.
+        rc, out = run_suite(tools, "test_")
         if rc != 0:
             print(out[-2500:])
-            sys.exit("HARNESS DEAD: the UNMUTATED scratch copy is already failing. Every 'caught' below "
-                     "would be meaningless because the suite fails regardless of mutation.")
-        print("positive control: unmutated scratch is GREEN")
+            sys.exit("HARNESS DEAD: the UNMUTATED scratch copy is already failing; a red driver would grade "
+                     "its mutation caught for the wrong reason.")
+        print("positive control: the WHOLE unmutated suite is GREEN (every driver green on the clean copy)")
 
         fam, name, old, new, sel, tgt = sentinel_for(tools)
         clean, err = apply_mutation(tools, old, new, tgt)
