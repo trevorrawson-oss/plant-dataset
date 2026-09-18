@@ -8,7 +8,7 @@ import unittest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from plant_dimensions_gate import shape_violations, presence_violations, all_violations, FIELDS  # noqa: E402
+from plant_dimensions_gate import shape_violations, presence_violations, coverage_violations, all_violations, FIELDS  # noqa: E402
 
 FA = {"field": "plant_dimensions", "date": "2026-09-16", "sources": ["ucanr_ext"], "note": "x"}
 
@@ -110,6 +110,63 @@ class AllViolations(unittest.TestCase):
         c = crop(height=[14, 10]); del c["footprint_inches"]
         v = all_violations({"crops": [c]}, presence=True)
         self.assertEqual(len(v), 2, v)
+
+
+if __name__ == "__main__":
+    unittest.main()
+if __name__ == "__main__":
+    unittest.main()
+
+
+# --- A59 coverage: a null on a woody crop is N/A by predicate or EXPLAINED by a record (PLA-465) ------
+class Coverage(unittest.TestCase):
+    """The promote-2 rulings recorded a reason on every woody crop left null. This rule makes those
+    records load-bearing: a woody crop may carry a null height only if it is cane fruit (the predicate
+    imported from berries_woody_gate, never re-encoded) or some open_findings summary NAMES the field.
+    Field-named rather than session-named, so a later null-ruling on any field generalizes."""
+
+    def woody(self, height=None, archetype="deciduous_fruit_tree", cane_type=None, summaries=(), certified=True):
+        return {"slug": "w", "archetype": archetype, "cane_type": cane_type,
+                "mature_height_ft": height, "mature_spread_ft": None, "footprint_inches": None,
+                "verification_status": {"status": "verified_gs_arc" if certified else None,
+                                        "field_additions": [FA],
+                                        "open_findings": [{"id": f"f{i}", "summary": s} for i, s in enumerate(summaries)]}}
+
+    def test_an_authored_woody_crop_is_clean(self):
+        self.assertEqual(coverage_violations(self.woody(height=[10, 14])), [])
+
+    def test_an_unexplained_null_on_a_woody_crop_bounces(self):
+        v = coverage_violations(self.woody())
+        self.assertTrue(any("mature_height_ft is null" in x and "no record names the field" in x for x in v), v)
+
+    def test_a_record_naming_the_field_explains_the_null(self):
+        self.assertEqual(coverage_violations(self.woody(summaries=["mature_height_ft left null: the page self-contradicts"])), [])
+
+    def test_a_record_that_does_not_name_the_field_does_not_explain_it(self):
+        v = coverage_violations(self.woody(summaries=["some unrelated finding about chill hours"]))
+        self.assertTrue(any("no record names the field" in x for x in v), v)
+
+    def test_cane_fruit_is_exempt_by_the_imported_predicate(self):
+        self.assertEqual(coverage_violations(self.woody(archetype="berries_woody", cane_type="both_summer_and_everbearing")), [])
+
+    def test_a_bush_and_a_shrub_are_NOT_cane_exempt(self):
+        """blueberry carries cane_type 'not_applicable' and elderberry 'multistem_perennial'; both are
+        non-null cane_type values that are NOT cane fruit, which is why the exemption keys on the
+        sub-form predicate and not on cane_type being set."""
+        for ct in ("not_applicable", "multistem_perennial"):
+            v = coverage_violations(self.woody(archetype="berries_woody", cane_type=ct))
+            self.assertTrue(any("no record names the field" in x for x in v), (ct, v))
+
+    def test_a_non_woody_crop_is_out_of_scope(self):
+        self.assertEqual(coverage_violations(self.woody(archetype="frost_anchored_annual")), [])
+
+    def test_an_uncertified_shell_is_exempt(self):
+        self.assertEqual(coverage_violations(self.woody(certified=False)), [])
+
+    def test_all_violations_carries_coverage_behind_its_own_flag(self):
+        c = self.woody()
+        self.assertEqual(all_violations({"crops": [c]}), [])
+        self.assertEqual(len(all_violations({"crops": [c]}, coverage=True)), 1)
 
 
 if __name__ == "__main__":

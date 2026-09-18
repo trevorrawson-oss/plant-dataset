@@ -915,10 +915,16 @@ for m in _cpv:
 # the keys, never before: armed early it would redden gate_all on live canonical and flood a parallel
 # session (gates arm off the data). numeric_sanity (A33) owns the bounds.
 # ARMED 2026-09-16 in the commit that wrote a7f234ce (121/121 certified crops carry the keys; 16 authored; the 7 shells exempt by status).
-from plant_dimensions_gate import shape_violations as _pd_shape, presence_violations as _pd_presence
+# COVERAGE (2026-09-18, PLA-465 promote 2): a certified WOODY crop may carry a null mature_height_ft only if
+# it is cane fruit (the sub-form predicate imported from berries_woody_gate) or a verification_status record
+# NAMES the field. This makes the twelve recorded null-rulings load-bearing: a thirteenth null cannot appear
+# silently. ARMED at birth because it is GREEN on the canonical that carries the rulings (16 authored,
+# 2 cane-exempt, 10 recorded, 0 unexplained) -- the rollout it floors is complete, so arming does not flood.
+from plant_dimensions_gate import shape_violations as _pd_shape, presence_violations as _pd_presence, coverage_violations as _pd_coverage
 A59_PRESENCE_ARMED = True
-print(f"A59. plant dimensions (height/spread pairs, footprint below spacing, provenance; presence {'ARMED' if A59_PRESENCE_ARMED else 'off'})")
-_pdv = _pd_shape(crop) + (_pd_presence(crop) if A59_PRESENCE_ARMED else [])
+A59_COVERAGE_ARMED = True
+print(f"A59. plant dimensions (height/spread pairs, footprint below spacing, provenance; presence {'ARMED' if A59_PRESENCE_ARMED else 'off'}, coverage {'ARMED' if A59_COVERAGE_ARMED else 'off'})")
+_pdv = _pd_shape(crop) + (_pd_presence(crop) if A59_PRESENCE_ARMED else []) + (_pd_coverage(crop) if A59_COVERAGE_ARMED else [])
 print(f"  plant-dimension violations: {len(_pdv)}")
 for m in _pdv:
     fail(f"plant-dimensions: {m}")

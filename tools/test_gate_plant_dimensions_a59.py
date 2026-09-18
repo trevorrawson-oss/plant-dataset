@@ -64,4 +64,18 @@ assert ("A59_PRESENCE_ARMED = True" in src) == any("mature_height_ft" in c for c
 if "A59_PRESENCE_ARMED = True" in src:
     out = gate(NULL_CROP, lambda c: c.pop("footprint_inches"))
     assert "plant-dimensions:" in out and "missing" in out, out
+# With coverage ARMED, a WOODY crop whose null loses its explaining record bounces, and the message names
+# the field. plum's ruling lives as an addendum on its pollination finding, so this drives the real shape.
+if "A59_COVERAGE_ARMED = True" in src:
+    def de_name(c):
+        for f in c["verification_status"]["open_findings"]:
+            f["summary"] = f["summary"].replace("mature_height_ft", "HEIGHT")
+    out = gate("plum", de_name)
+    assert "plant-dimensions:" in out and "no record names the field" in out, out
+    # and an authored woody crop is clean under coverage
+    out = gate("apple", lambda c: None)
+    assert "plant-dimensions:" not in out, out
+    # a cane fruit is exempt by the predicate even with its record de-named (the branch, in isolation)
+    out = gate("raspberry", de_name)
+    assert "plant-dimensions:" not in out, out
 print("PASS gate A59 plant dimensions")

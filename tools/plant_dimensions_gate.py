@@ -15,11 +15,18 @@ PRESENCE (a certified crop carries all three keys, null being a value) is behind
 behind A59_PRESENCE_ARMED in whole_crop_gate, flipped in the SAME commit that writes the canonical
 carrying the keys, never before (gates arm off the data).
 
+COVERAGE (a woody crop's null must be cane-fruit N/A or explained by a record naming the field) is behind
+--presence's sibling --coverage here and behind A59_COVERAGE_ARMED in whole_crop_gate.
+
 Usage:
-  plant_dimensions_gate.py [PATH] [--presence]
+  plant_dimensions_gate.py [PATH] [--presence] [--coverage]
 """
 import json
 import sys
+import os
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from berries_woody_gate import _is_cane_fruit  # the sub-form router, IMPORTED, never re-encoded
 
 FIELDS = ("mature_height_ft", "mature_spread_ft", "footprint_inches")
 RANGE_FIELDS = ("mature_height_ft", "mature_spread_ft")
@@ -77,12 +84,56 @@ def presence_violations(crop):
     return [f"{slug}: {f} missing (present-or-null on a certified crop)" for f in FIELDS if f not in crop]
 
 
-def all_violations(data, presence=False):
+# WOODY archetypes: the population PLA-465 R1 authors. A null height here is a decision, not a blank.
+WOODY_ARCHETYPES = ("deciduous_fruit_tree", "evergreen_fruit_tree", "berries_woody", "woody_ornamental")
+
+
+def _explained(crop, field):
+    """True if some open_findings summary NAMES the field. Field-named, never session- or date-named, so a
+    later null-ruling on any field generalizes without touching this gate."""
+    of = (crop.get("verification_status") or {}).get("open_findings") or []
+    return any(field in (x.get("summary") or "") for x in of if isinstance(x, dict))
+
+
+def coverage_violations(crop):
+    """A certified WOODY crop may carry a null mature_height_ft only if it is CANE FRUIT (biennial canes
+    whose every published height is a managed tipping or trellis height, so a mature height is not a
+    property of the plant) or if a verification_status record EXPLAINS the null by naming the field.
+
+    This makes the PLA-465 promote-2 rulings load-bearing: the twelve nulls each carry a recorded reason,
+    and a thirteenth null cannot appear silently. The cane predicate is IMPORTED from berries_woody_gate
+    (the sub-form router), never re-encoded: cane_type is non-null on FOUR crops with three different
+    meanings, so "cane_type is set" is NOT the predicate -- blueberry carries 'not_applicable' (bush) and
+    elderberry 'multistem_perennial' (shrub), and both legitimately carry a height.
+
+    MEASURED 2026-09-18: on today's canonical the cane branch is REDUNDANT, because PLA-465 promote 2 gave
+    raspberry and blackberry records that name the field too, so removing the branch leaves the gate green.
+    It is kept because it is REACHABLE and says something the records do not: a cane fruit is N/A
+    permanently, where a record is a deferral. A cane crop certified without a record (the next berry) is
+    exempt by the predicate alone, which the unit test drives in isolation. Do not read the branch as
+    load-bearing on the current data.
+    """
+    if not _certified(crop) or crop.get("archetype") not in WOODY_ARCHETYPES:
+        return []
+    if crop.get("mature_height_ft") is not None:
+        return []
+    if _is_cane_fruit(crop):
+        return []
+    if _explained(crop, "mature_height_ft"):
+        return []
+    slug = crop.get("slug") or "?"
+    return [f"{slug}: mature_height_ft is null on a woody crop and no record names the field "
+            f"(author it, or record why it stays null)"]
+
+
+def all_violations(data, presence=False, coverage=False):
     V = []
     for c in data.get("crops", []):
         V += shape_violations(c)
         if presence:
             V += presence_violations(c)
+        if coverage:
+            V += coverage_violations(c)
     return V
 
 
@@ -90,15 +141,16 @@ def main(argv):
     args = [a for a in argv[1:] if not a.startswith("--")]
     path = args[0] if args else "crops_data_final.json"
     presence = "--presence" in argv
+    coverage = "--coverage" in argv
     with open(path) as fh:
         data = json.load(fh)
-    V = all_violations(data, presence=presence)
+    V = all_violations(data, presence=presence, coverage=coverage)
     for v in V:
         print("VIOLATION:", v)
     carrying = sum(1 for c in data["crops"] if all(f in c for f in FIELDS))
     authored = sum(1 for c in data["crops"] if any(c.get(f) is not None for f in FIELDS))
     print(f"plant_dimensions_gate: {len(V)} violation(s); {carrying}/{len(data['crops'])} crops carry the keys, "
-          f"{authored} authored; presence {'ARMED' if presence else 'off'}")
+          f"{authored} authored; presence {'ARMED' if presence else 'off'}; coverage {'ARMED' if coverage else 'off'}")
     return 1 if V else 0
 
 
