@@ -51,6 +51,9 @@ COMMIT_FOR = {
     # PLA-7 promote A1 (2026-09-06). NEVER AMEND 4ade2d4.
     # container_path on all 121 certified crops, three flips, 135 variety flags, gravel +
     # applicable riders; A58's presence floor is armed in the same commit as the write.
+    # PLA-465 promote 2 (2026-09-18). NEVER AMEND 17e0154.
+    # The twelve null woody crops recorded: 12 open_findings on 11 crops + 1 dated addendum on plum.
+    '892c76fb9e89fd9a242f682a7040a71886cb128ec899092a4f6414d2e0708edb': '17e0154',
     # PLA-465 plant dimensions promote 1 (2026-09-16). NEVER AMEND 6659f62.
     # mature_height_ft / mature_spread_ft / footprint_inches on all 121 certified crops; 16 woody crops
     # authored with field_additions provenance records; A59 presence armed in the same commit.
