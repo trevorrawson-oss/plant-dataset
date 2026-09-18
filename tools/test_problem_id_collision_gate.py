@@ -32,7 +32,7 @@ sys.path.insert(0, os.path.join(REPO, "tools"))
 import problem_id_collision_gate as G  # noqa: E402
 
 CANON = os.path.join(REPO, "crops_data_final.json")
-PINNED_SHA = "a7f234ce449c6d74b4f1be2398bb808cfe29bebf9a1f7cc51efdcaea56246c93"
+PINNED_SHA = "892c76fb9e89fd9a242f682a7040a71886cb128ec899092a4f6414d2e0708edb"
 
 # ---------------------------------------------------------------------------------------------
 # The PLA-449 fixture, transcribed from the ticket. NEVER computed from a scan.
