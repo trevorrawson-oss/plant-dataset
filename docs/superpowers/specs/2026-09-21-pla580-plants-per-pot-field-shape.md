@@ -1,11 +1,15 @@
 # `container_notes.plants_per_pot`: field-shape spec (PLA-580, PLA-7 Plan C)
 
 **Date:** 2026-09-21. **Canonical:** `1721208e` (unchanged by this document; no promote, no data
-change). **Branch:** `worktree-pla580`, spec commit only.
+change). **Branch:** `worktree-pla580`, spec commits only.
 **Supersedes, in part:** the two-paragraph sketch in
 `docs/superpowers/specs/2026-09-06-pla7-container-field-shape-design.md` section 4 item 2. Where
 this document and that one disagree, the disagreement is named in section 2 and the measurement is
-given. **Read with:** PLA-580, PLA-7 (D3), PLA-409.
+given. **Read with:** PLA-580, PLA-7 (D3), PLA-409, PLA-533, PLA-586.
+
+**Amended 2026-09-21** after Trevor's read of the first draft: one correction he caught (section 4.1)
+and six rulings, applied throughout and listed in section 3.1. The new section 5 is the measured
+disagreement table he asked for.
 
 **The headline.** The 2026-09-06 sketch assumed a count could be bound to `min_pot_gallons`. It
 cannot. Measured against raw bytes, the dataset's `min_pot_gallons` disagrees with the pot size
@@ -14,23 +18,28 @@ row that agrees is leaf lettuce, which is the row the sketch worked its example 
 without its own pot size is not a datum, and the consumer that would read it is already built and
 would already render the error.
 
+**The second headline, added on amendment.** Switching the planner to the new field is **not**
+direction-neutral. Measured, **every one of the ten Illinois readings is more permissive than
+`min_pot_gallons`**, by 2x to 10x. That is the dangerous direction, and it is why ruling 3 holds the
+switch to `count > 1` rows.
+
 ---
 
 ## 1. What this adds, in one table
 
 | field | where | shape | who authors | who reads |
 |---|---|---|---|---|
-| `plants_per_pot` | `container_notes` | object `{count: [min, max], at_gallons: number, sources: [...], anchoring_urls: {...}}`, or `null` | PLA-580 promote, roster-wide, null where no T1 count exists | plant-app planner (`plantingGallons`) + container chapter row; plant-astro ContainerCard, once one exists |
+| `plants_per_pot` | `container_notes` | object `{readings: [{count, at_gallons, sources, anchoring_urls}, ...]}`, or `null` | PLA-580 promote, roster-wide, null where no T1 count exists | plant-app planner (`plantingGallons`) + the "In a pot" chapter row; plant-astro ContainerCard (PLA-586) |
 
 No other field is added. `min_pot_gallons` and `recommended_pot_gallons` are not touched, not
-re-read and not re-derived by this arc.
+re-read and not re-derived by this arc. PLA-533 owns the audit of the former.
 
 ---
 
 ## 2. The reads, from raw bytes (found / absent / undetermined)
 
 All four sources fetched 2026-09-21. Byte counts, sha256 digests and the exact fetch results are in
-section 12. Every quotation below is copied from those bytes.
+section 13. Every quotation below is copied from those bytes.
 
 ### 2.1 Illinois Extension: FOUND, and it is the only per-crop table
 
@@ -69,15 +78,17 @@ vegetables` (HTTP 200, 34,659 bytes) states a count against a stated size, verba
 > For Large Vegetables-one plant per container. Minimum 8-10 gallons of growing media, with a depth
 > of 12-16 inches Examples: tomatoes, pepper, eggplant, cucumber, Winter squash
 
-This is a **size-class** count, not a per-crop one: one count, one size, five named crop groups. The
-two other classes on the same page carry a volume and a depth but **no count** ("Medium Vegetables
-or Flowering Plants Minimum 4-6 gallons... Small Vegetables or Flowering Plant Minimum 1-3
-gallons..."). `maintaining-container-grown-vegetables` (HTTP 200, 36,871 bytes) carries no count.
+This is a **size-class** count, not a per-crop one: one count, one size band, five named crop
+groups. The two other classes on the same page carry a volume and a depth but **no count** ("Medium
+Vegetables or Flowering Plants Minimum 4-6 gallons... Small Vegetables or Flowering Plant Minimum
+1-3 gallons..."). `maintaining-container-grown-vegetables` (HTTP 200, 36,871 bytes) carries no count.
 
 **UMD contradicts Illinois on the crops they share.** Pepper: Illinois 2 plants at 2 gallons; UMD 1
 plant at 8-10 gallons. Cucumber: Illinois 2 at 1 gallon; UMD 1 at 8-10. Same crop, different count,
-different size. Neither is wrong; they are different pots. A field that carries a count without the
-size it was measured at cannot represent both, and cannot tell a later reader which one it holds.
+different size. Neither is wrong; they are different pots. Under ruling 1 the field holds both.
+
+**Note for the promote: UMD's size is a band, not a point.** "Minimum 8-10 gallons" is the only
+range-valued `at_gallons` in either source. Section 6 rules how it is encoded.
 
 ### 2.3 Wisconsin Horticulture: ABSENT
 
@@ -131,25 +142,28 @@ or it is null.
 
 ### 2.6 Mapping the counts to slugs
 
-Every Illinois count maps to at least one dataset slug. **No count matches no crop.** But three rows
-map ambiguously, and the promote must rule them rather than fan the number out:
+Every Illinois count maps to at least one dataset slug. **No count matches no crop.** But three
+Illinois rows map ambiguously, and **four of UMD's five named groups are category names, not crop
+names**, which is the same ambiguity:
 
-| Illinois row | maps to | note |
+| source row | maps to | ruling |
 |---|---|---|
-| parsley, cabbages, green beans, leaf lettuce, Swiss chard, eggplant | `parsley`, `cabbage`, `green-beans-bush`, `lettuce-leaf`, `swiss-chard`, `eggplant` | 1:1, unambiguous |
-| cherry and patio tomatoes | `cherry-tomato` | `grape-tomato` is a separate slug the row does not name |
-| cucumbers | `cucumber`, `english-cucumber`, `pickling-cucumber`, `slicing-cucumber` | **4 slugs.** The row's varieties (Salad Bush, Bush Champion, Spacemaster) are bush slicing types |
-| pepper | `bell-pepper` + 4 others | the row's varieties span sweet (Lady Bell, New Ace, Gypsy) and hot (Red Chilli) |
-| Standard tomatoes | `beefsteak-tomato`, `heirloom-tomato`, `roma-tomato`? | "Standard" names no slug; Jetstar/Celebrity/Super Bush are slicers, roma is paste |
+| IL parsley, cabbages, green beans, leaf lettuce, Swiss chard, eggplant | `parsley`, `cabbage`, `green-beans-bush`, `lettuce-leaf`, `swiss-chard`, `eggplant` | 1:1, authored |
+| IL cherry and patio tomatoes | `cherry-tomato` | authored; `grape-tomato` is a separate slug the row does not name |
+| IL cucumbers | `cucumber`, `english-cucumber`, `pickling-cucumber`, `slicing-cucumber` | **HELD** (ruling 5) |
+| IL pepper | `bell-pepper` + 4 others; varieties span sweet and hot | **HELD** (ruling 5) |
+| IL Standard tomatoes | names no slug | **UNAUTHORED** (ruling 5) |
+| UMD eggplant | `eggplant` | 1:1, authored |
+| UMD tomatoes, pepper, cucumber, Winter squash | 5 / 5 / 4 / 3-4 slugs each | **HELD**, same rule |
 
 **Certified crops with no count anywhere: 86** of the 110 that are `container_ok: true` (full list in
-section 12). Among them are `beet`, `carrot`, `radish` and `spinach`, which Illinois *does* have a
+section 13). Among them are `beet`, `carrot`, `radish` and `spinach`, which Illinois *does* have a
 row for but gives a thinning spacing rather than a count. They get null, and the reason is recorded:
 a thinning spacing is not a capacity.
 
 ---
 
-## 3. D1, unit binding: carry the source's own gallons. RECOMMENDED
+## 3. D1, unit binding: carry the source's own gallons. RULED
 
 **Measured.** Per-plant gallons under each candidate binding, for the counted rows:
 
@@ -180,20 +194,24 @@ one worked example in the 2026-09-06 sketch and the reason PLA-580 exists. A bin
 its own motivating case is not a binding. (The other six: orange-navel, mandarin-clementine,
 mulberry, grapefruit, cherry-sweet, cherry-sour.)
 
-**Carry the source's own gallons: RECOMMENDED.** The count and the size it was measured at are one
-datum and travel together:
+**Carry the source's own gallons: RULED (ruling 1).** The count and the size it was measured at are
+one datum and travel together, and a crop may hold more than one such datum:
 
 ```jsonc
 "plants_per_pot": {
-  "count": [4, 6],
-  "at_gallons": 1,
-  "sources": ["uiuc_ext"],
-  "anchoring_urls": {
-    "uiuc_ext": {
-      "url": "https://extension.illinois.edu/container-gardens/growing-vegetables-containers",
-      "verified": "2026-09-21"
+  "readings": [
+    {
+      "count": [4, 6],
+      "at_gallons": 1,
+      "sources": ["uiuc_ext"],
+      "anchoring_urls": {
+        "uiuc_ext": {
+          "url": "https://extension.illinois.edu/container-gardens/growing-vegetables-containers",
+          "verified": "2026-09-21"
+        }
+      }
     }
-  }
+  ]
 }
 ```
 
@@ -201,19 +219,24 @@ Four properties earn it:
 
 1. **It is the only shape that can hold the conflict.** Illinois' pepper (2 at 2 gal) and UMD's
    pepper (1 at 8-10 gal) are both true and are different pots. A bare `[min, max]` has to pick one
-   and cannot say which it picked.
+   and cannot say which it picked. The `readings` array holds both, which ruling 1 requires as a
+   shape the field must carry before PLA-12 starts adding sources.
 2. **It fails safe into today's behavior.** plant-app's parser
-   (`plantsPerPotOf`, `container-model.ts:98`) returns `null` for anything that is not a 2-element
-   integer array. Ship an object and the existing app reads `null`, which means one plant per pot:
-   **exactly the behavior it has now**. Ship a bare array, and the same already-deployed code
-   silently divides `min_pot_gallons` and starts printing the invented sentence the day the data
-   lands. The object shape makes the ordering error impossible; the array shape makes it the
-   default. This is the decisive argument.
+   (`plantsPerPotOf`, `container-model.ts:98`) opens with
+   `if (!Array.isArray(v) || v.length !== 2) return null;`. An object literal fails `Array.isArray`,
+   so the already-deployed app reads **null**, which means one plant per pot: **exactly the behavior
+   it has now**. Ship a bare array and the same code silently divides `min_pot_gallons` and starts
+   printing the invented sentence the day the data lands. The object shape makes the ordering error
+   impossible; the array shape makes it the default. This is the decisive argument.
+   *Confirmed by reading the guard, not by executing it.* The existing table test
+   (`container-model.test.ts:109-117`) covers a string and `undefined` but **not an object**; the
+   plant-app change owed in section 8 adds that case as a regression test.
 3. **It carries its own sources.** Measured: the Illinois table page is **not** an anchoring URL
    anywhere in `container_notes` today (the three `uiuc_ext` container anchors are the drainage
    page, asparagus and lemongrass). Adding it to the block-level `sources` would assert it sourced
    the whole block, which it did not. The sibling-field pattern that `critical_warnings` uses in the
-   2026-09-06 spec applies unchanged.
+   2026-09-06 spec applies unchanged, and per-reading sources are what let two readings cite
+   different institutions.
 4. **It keeps `min_pot_gallons` meaning what it already means.** No re-reading of 102 pot figures,
    no retroactive redefinition, and PLA-533's audit of that field stays independent of this one.
 
@@ -221,13 +244,20 @@ Four properties earn it:
 (strawberry's "up to four plants fit in a 12-inch pot") is **not authored in this field**; it stays
 in prose. One unit, no converter, no inferred volume from a diameter.
 
-**Bounds note.** `at_gallons` must admit **0.5** (Illinois' parsley row). The existing
-`numeric_sanity` bounds for `min_pot_gallons` / `recommended_pot_gallons` are `1..100`
-(`tools/numeric_sanity_gate.py:66-67`); this field's floor is lower on purpose, and section 6 says so.
+### 3.1 Trevor's rulings, 2026-09-21, and where each is applied
+
+| # | ruling | applied in |
+|---|---|---|
+| 1 | Shape is `{readings: [...]}`; author UMD alongside Illinois where both exist, not as a recorded second reading | 1, 3, 6, 8 |
+| 2 | On conflicting readings the planner uses the **most conservative** (largest gallons per plant) | 4.3, 5 |
+| 3 | The planner switches **only where `count > 1`**; count-1 rows keep `min_pot_gallons` until PLA-533 audits it | 4.2, 5 |
+| 4 | Display renders a reading's own `at_gallons` with its count, never `min_pot_gallons` | 7 |
+| 5 | The three ambiguous rows stay held; "Standard tomatoes" stays unauthored | 2.6, 8 |
+| 6 | plant-astro's card is PLA-586; state what it must read, matching the app card's contract | 7.2 |
 
 ---
 
-## 4. D2, meaning: a per-pot capacity at a stated size. RECOMMENDED
+## 4. D2, meaning: a per-pot capacity at a stated size. RULED
 
 **The meaning.** `count` is the number of plants of this crop that the cited source says a pot of
 `at_gallons` holds to maturity. It is a **capacity at a stated size**, not a density, not a minimum,
@@ -250,114 +280,198 @@ const per = perPot / share;
 return crop.isWoody ? per : per * planting.count;
 ```
 
-Its input is **one number: gallons drunk per plant.** It gets there today by dividing
-`min_pot_gallons` by the count's upper bound. Under this spec it should instead read
-`at_gallons / count[max]` directly and **not touch `min_pot_gallons` at all**. For leaf lettuce that
-is `1 / 6 = 0.17` gallons per plant, and a 5-gallon pot stops charging 5 gallons for one lettuce.
+Its input is **one number: gallons drunk per plant.**
 
 **Correcting the sketch's arithmetic, since PLA-580 quotes it.** The 2026-09-06 spec says the field
 "changes a 2-gallon-per-plant charge to roughly a third of a gallon". Measured: `lettuce-leaf`'s
-`min_pot_gallons` is **1**, not 2, so today's charge is 1 gallon; and the result is **0.17**, not
-0.33. Neither end of that sentence matches the dataset or the source. The likely origin of the "2"
-is Wisconsin's "at least two gallons" for small plants, which is not the figure the dataset carries.
-The app's own fixture repeats the error (`catalog.container.test.ts:52` builds lettuce with
-`containerMinGallons: 2`).
+`min_pot_gallons` is **1**, not 2, so today's charge is 1 gallon; and the conservative result is
+**0.25**, not 0.33. Neither end of that sentence matches the dataset or the source. The likely
+origin of the "2" is Wisconsin's "at least two gallons" for small plants, which is not the figure
+the dataset carries. The app's own fixture repeats the error
+(`catalog.container.test.ts:52` builds lettuce with `containerMinGallons: 2`).
 
-**How much this actually moves, stated plainly.** A count of 1 divides by 1 and changes nothing.
-**Six of the ten** Illinois counts are 1. Across every source read, the crops where this field
-changes a planner number at all are: cucumber (2), green beans (2-3), leaf lettuce (4-6), pepper (2)
-from Illinois, and kale (1-2) from prose if it is ever re-read at T1. That is **four to five crops
-of 121**. The field is still worth having -- it is published, it is true, it renders as a row, and
-leaf lettuce alone is a 6x error today -- but nobody should expect the planner to transform. If the
-arc wants a broader effect, the lever is not this field.
+### 4.1 CORRECTION: "dividing by 1 changes nothing" was wrong
+
+The first draft of this spec, and the session summary that went with it, said six of the ten
+Illinois counts are 1 and that "dividing by 1 changes nothing". **That is false under this spec's
+own D2.** It is true only under the rejected `min_pot_gallons` binding, where a count of 1 returns
+`min_pot_gallons` unchanged. Once the planner reads `at_gallons / count`, a count-1 row returns
+**`at_gallons`**, which is a different number from `min_pot_gallons` on 9 of 10 rows, by the same
+1.5x to 5x this spec was written to expose. A count of 1 changes the planner as much as any other
+count. Section 5 measures every row.
+
+### 4.2 The formula, and the switch predicate (ruling 3)
+
+Per-plant gallons for one reading, taken **conservatively**: `at_gallons_high / count_low`. The high
+end of a banded size and the low end of a banded count are each the cautious read, so a pot Illinois
+says holds "4-6" lettuce is priced as if it holds 4.
+
+The planner uses the field **only when a crop has at least one reading whose `count` is not
+`[1, 1]`**. Otherwise it keeps `min_pot_gallons`, exactly as today. A reading of `[1, 2]` is not a
+count-1 row and does switch.
+
+The reason is ruling 3's: on a count-1 row the field carries no capacity information the planner did
+not already have (one plant, one pot), so the only thing switching would do is **replace an
+unaudited number with a different unaudited number, in the more permissive direction**. PLA-533
+owns the audit of `min_pot_gallons`; until it reports, this arc does not quietly overwrite its
+output. Section 5 shows the switch would be more permissive on **all seven** unambiguous count-1
+readings, which is what makes the hold worth having.
+
+### 4.3 Conflicting readings (ruling 2)
+
+Where a crop carries more than one reading, the planner takes the **largest** conservative per-plant
+figure across all of them, count-1 readings included. Count-1 readings do not trigger the switch
+(4.2) but they do participate in the maximum once some other reading has triggered it. That ordering
+matters: it is what lets UMD's cautious 10 gallons per plant restrain Illinois' 1.00 on pepper,
+rather than being ignored because its count happens to be 1.
+
+**Honest note: ruling 2 is currently inert.** Measured, the only crop carrying two unambiguous
+readings after ruling 5's holds is **eggplant**, and both of its readings are count-1, so ruling 3
+keeps `min_pot_gallons` and the maximum is never taken. The rule is correct and it is what PLA-12
+will need; it changes no number in this pass. Recorded so a later reader does not assume it was
+exercised.
 
 **Extrapolation is the consumer's inference, not the dataset's.** The source says 4-6 lettuce in a
 1-gallon pot. It does not say 30 in a 5-gallon pot. The dataset records the datum at its stated
-size; any scaling beyond that is the planner's, and the planner should say so rather than the
-dataset implying it.
+size; any scaling beyond that is the planner's.
 
 ---
 
-## 5. D3, presence-or-null. CONFIRMED against A39 and the register
+## 5. Where `min_pot_gallons` and the new field disagree, measured
+
+Every counted row, with the conservative per-plant figure the new field would give
+(`at_gallons_high / count_low`) against the per-plant figure the planner uses today
+(`min_pot_gallons`). **"More permissive" means the new field charges a plant less, so more plants
+fit a pot.** Measured on canonical `1721208e`.
+
+| slug | source | count | `at_gallons` | new g/plant | `min_pot_gallons` | factor | direction | status |
+|---|---|---|---|---|---|---|---|---|
+| parsley | uiuc | 1 | 0.5 | 0.50 | 1 | 2.0x | **more permissive** | authored, count-1: no switch |
+| cabbage | uiuc | 1 | 1 | 1.00 | 5 | 5.0x | **more permissive** | authored, count-1: no switch |
+| swiss-chard | uiuc | 1 | 1 | 1.00 | 3 | 3.0x | **more permissive** | authored, count-1: no switch |
+| cherry-tomato | uiuc | 1 | 1 | 1.00 | 5 | 5.0x | **more permissive** | authored, count-1: no switch |
+| eggplant | uiuc | 1 | 2 | 2.00 | 5 | 2.5x | **more permissive** | authored, count-1: no switch |
+| eggplant | umd | 1 | 8-10 | 10.00 | 5 | 0.5x | less permissive | authored, count-1: no switch |
+| **green-beans-bush** | uiuc | 2-3 | 1 | **0.50** | 5 | **10.0x** | **more permissive** | **SWITCHES** |
+| **lettuce-leaf** | uiuc | 4-6 | 1 | **0.25** | 1 | **4.0x** | **more permissive** | **SWITCHES** |
+| cucumber | uiuc | 2 | 1 | 0.50 | 5 | 10.0x | more permissive | HELD (ruling 5) |
+| cucumber | umd | 1 | 8-10 | 10.00 | 5 | 0.5x | less permissive | HELD |
+| bell-pepper | uiuc | 2 | 2 | 1.00 | 3 | 3.0x | more permissive | HELD |
+| bell-pepper | umd | 1 | 8-10 | 10.00 | 3 | 0.3x | less permissive | HELD |
+| beefsteak-tomato | uiuc | 1 | 3 | 3.00 | 15 | 5.0x | more permissive | UNAUTHORED (ruling 5) |
+| beefsteak-tomato | umd | 1 | 8-10 | 10.00 | 15 | 1.5x | more permissive | HELD |
+| butternut-squash | umd | 1 | 8-10 | 10.00 | 10 | 1.0x | same | HELD |
+
+### 5.1 What the rulings leave standing
+
+**Every Illinois reading, without exception, is more permissive than `min_pot_gallons`** (2.0x to
+10.0x). UMD runs the other way on the crops it names, because its 8-10 gallon class is larger than
+most of our minimums. Trevor's read was right: the unguarded switch moves in the dangerous
+direction, and UMD is the only thing that pushes back.
+
+After rulings 3 and 5, **exactly two crops switch**:
+
+| crop | today | after | change |
+|---|---|---|---|
+| `green-beans-bush` | 5.00 gal/plant | 0.50 | 10x more permissive |
+| `lettuce-leaf` | 1.00 gal/plant | 0.25 | 4x more permissive |
+
+**Both are more permissive, and neither has a reading that restrains it.** Measured: green beans sit
+in UMD's "Medium Vegetables" class and lettuce in "Small Vegetables or Flowering Plant", and
+**neither class publishes a count**. Ruling 2's conservative maximum has nothing to choose from, and
+ruling 3's hold does not apply because both counts exceed 1.
+
+So the guards work where the field is inert and do not reach the two rows where it acts. That is not
+an argument against shipping: Illinois states plainly that a one-gallon pot holds 4-6 leaf lettuce,
+and charging a whole gallon per lettuce is the error the arc exists to fix. But it should be shipped
+knowing that the entire measured effect of PLA-580 is **two crops, both loosened, on one source's
+authority**, and that a five-gallon pot will read as holding roughly 10 bean plants or 20 lettuces.
+
+**Recommendation:** ship the two, and put them in front of Trevor by name at the promote rather than
+inside a roster count. If either reads wrong in the app, the honest lever is a second T1 reading that
+restrains it, not a fudge factor on the first.
+
+---
+
+## 6. D3, presence-or-null. CONFIRMED against A39 and the register
 
 **The rule:** `container_notes.plants_per_pot` is present on all **121 certified** crops, `null`
 where no T1 count exists. The **7 shells carry no key** and stay byte-identical.
 
 **Confirmed, not assumed.** Measured on `1721208e`: the 7 shells (avocado, olive, and the five
 mushrooms) carry a `container_notes` block of 22-24 keys but **`'container_path' in cn` is `False`**
-on all 7. A39 (`register_coverage_gate`, wired as whole_crop_gate A39) exempts uncertified
-`verified_gs_arc` misses by **key absence**, which is how the A1 promote left the shells
-byte-identical. `plants_per_pot` follows the identical pattern, and the register row for
-`container_path` (row **29**) is its precedent. Row **30** is PLA-465's plant dimensions; this field
-takes row **31**.
+on all 7. A39 (`register_coverage_gate`, wired as whole_crop_gate A39) exempts uncertified crops by
+**key absence**, which is how the A1 promote left the shells byte-identical. `plants_per_pot`
+follows the identical pattern, and the register row for `container_path` (row **29**) is its
+precedent. Row **30** is PLA-465's plant dimensions; this field takes row **31**.
 
-Population at land: 121 keys written, of which the authorable set is section 8's, and the rest null.
-
----
-
-## 6. D4, armor
-
-- **Shape gate, whole_crop_gate `A60`** (A58 is `container_path`, A59 is `plant_dimensions`; A60 is
-  the next free id, measured). New `tools/plants_per_pot_gate.py` + tests, TDD, wired the way A58
-  was: shape armed on the tooling commit, the **presence floor behind `A60_PRESENCE_ARMED = False`
-  until the commit that writes canonical**.
-  Rules: value is `null` or an object; object keys exactly
-  `{count, at_gallons, sources, anchoring_urls}`; `count` is `[min, max]` integers with
-  `1 <= min <= max`; `at_gallons` is a positive number; `sources` non-empty and every key present in
-  `anchoring_urls` with a `url` and a `verified` date; **`plants_per_pot` non-null requires
-  `container_ok: true`** (a crop that cannot go in a pot has no per-pot capacity); and the key is
-  **absent** on every uncertified shell.
-- **`numeric_sanity_gate`:** `count[max] <= 30`; `at_gallons` in `[0.5, 100]`. The 0.5 floor is
-  deliberate and differs from the `1..100` that `min_pot_gallons` and `recommended_pot_gallons` use
-  at `numeric_sanity_gate.py:66-67`, because Illinois publishes a half-gallon row. A comment says so
-  at the bound, or a later reader will "fix" it.
-- **Cross-field coherence, fails LOUD:** `at_gallons` is **not** required to equal or exceed
-  `min_pot_gallons`, and the gate must not assert it. Measured, that assertion would fail on 9 of 10
-  authored rows -- it is the very confusion this spec exists to prevent. What the gate *does* check
-  is that `at_gallons` is present whenever `count` is.
-- **`register_completeness`:** `plants_per_pot` is structured, not prose; no register pair.
-- **`field_additions` provenance:** one record per authored value, carrying the source's raw bytes
-  evidence -- URL, fetch date, sha256 and the **verbatim row or sentence** the count was copied
-  from. The EVIDENCE_HASHES guard from PLA-465 applies: no 64-hex token in the promote spec that is
-  not a measured digest.
-- **Suite + mutation harness, PLA-215:** one mutation per guard family, MUTATION-APPLIED marker +
-  sentinel, `set(pre) == set(post)` before value comparison, refusal-spec passes for good input,
-  suite replay-pinned via `promote_fixture.COMMIT_FOR`. **Positive control runs the whole suite.**
-  Guards that cannot be shown reachable are removed, not shipped as coverage.
-- **Release:** gate_all 121/121, A60 presence 0 violations, `register_completeness` +
-  `register_coverage` PASS, `release_verify` clean in every section, collision gate holding.
+**Encoding `at_gallons`.** A number, or `[lo, hi]` when the source states a band. Only UMD needs the
+band form ("Minimum 8-10 gallons"); every Illinois row is a point. The conservative reader takes
+`hi`. The alternative, authoring UMD at its low end and losing the 10, was rejected: it discards a
+figure the source states, and it makes the cautious source look less cautious than it is.
 
 ---
 
-## 7. D5, consumers. CONFIRMED by reading both repos, not assumed
+## 7. D4 and D5: display and consumers
 
-**plant-app: already built, and that is the hazard.** The consumer is wired end to end today, on
+### 7.1 What the card shows, and what it shows when the two figures disagree (ruling 4)
+
+- Each reading renders as **its own line, attributed to its source**, carrying that reading's own
+  `count` and `at_gallons`: "Illinois Extension: 4 to 6 plants in a 1 gallon pot."
+- **No consumer ever computes or prints `min_pot_gallons / count`**, and no consumer prints a count
+  against `min_pot_gallons`. The existing string at `container-model.ts:256` is the thing being
+  removed.
+- The **Pot size row is unchanged** and keeps showing `min_pot_gallons`. When `at_gallons` is smaller
+  than it (7 of the 10 Illinois rows), the two rows sit on the same card saying different things,
+  and **the attribution is what resolves it**: the pot-size row is this project's recommended
+  minimum, the plants-per-pot row is a named institution's observed capacity at a pot it chose. A
+  reading is never phrased as advice to use a smaller pot.
+- With two readings that disagree, **both render, both attributed**, in the order authored. The card
+  does not pick a winner; only the planner does, by ruling 2.
+- Copy rule, per the project convention: no em dashes in any rendered string.
+
+### 7.2 The two consumers
+
+**plant-app: already built, and that is the hazard.** Wired end to end today on
 `feat/community-foundation` at `a7f6288c`:
 
 | file | what it does now |
 |---|---|
-| `src/lib/container-model.ts:98` | `plantsPerPotOf` parses `cn.plants_per_pot`, requiring a 2-element integer array; anything else is `null` |
+| `src/lib/container-model.ts:98` | `plantsPerPotOf` requires a 2-element integer array; anything else is `null` |
 | `src/lib/container-model.ts:198` | sets `plantsPerPot` on `ContainerFacts` |
-| `src/lib/container-model.ts:250-267` | renders a seasoned-only row, "Plants per pot", text `"${count} in a ${f.minGallons} gallon pot"` |
+| `src/lib/container-model.ts:250-267` | renders the seasoned-only row "Plants per pot", text `"${count} in a ${f.minGallons} gallon pot"` |
 | `src/lib/planner/catalog.ts:151` | maps it to `containerPlantsPerPot` |
 | `src/lib/planner/rootstock.ts:112` | `share = containerPlantsPerPot[1]`, divides `min_pot_gallons` |
 
 A code comment at `container-model.ts:253` already says "latent today -- no crop ships
-plants_per_pot yet". **This field's consumer therefore ships before its data, which inverts the
-usual risk**: the frontend-first rule is already satisfied, but the built frontend implements the
-binding this spec rejects. Under the recommended object shape it reads `null` and keeps today's
-behavior until it is changed deliberately. Under a bare array it would be wrong on day one. The app
-changes owed: read `at_gallons` for the divisor, and render the source's size in the row rather than
-`minGallons`.
+plants_per_pot yet". **This field's consumer ships before its data**, so the frontend-first rule is
+already satisfied in form but the built frontend implements the binding this spec rejects. Under
+`{readings: [...]}` it reads `null` and holds today's behavior until changed deliberately.
 
-**plant-astro: not built.** Measured: **no ContainerCard exists** and `plants_per_pot` /
-`plantsPerPot` appear **nowhere** in `src/`. `container_notes` is read only by
-`CareGuideCard.astro` (`${min_pot_gallons}+ gal pot`), `HeroCard.astro` (value
-`${recommended_pot_gallons} gal`, sub `min ${min_pot_gallons} gal pot`) and `lib/containers.ts` for
-the beds tool. Worth flagging for the arc: the two consumers already disagree about which pot figure
-is the headline -- astro's hero leads with `recommended_pot_gallons`, the app's planner computes
-from `min_pot_gallons`. A count bound to either would inherit that disagreement, which is a third
-argument for carrying its own.
+App changes owed: parse `readings`; conservative per-plant by 4.2 and the maximum by 4.3; the switch
+predicate; render per 7.1; and a regression test for the object-reads-null guard that
+`container-model.test.ts` does not currently cover.
+
+**plant-astro: filed as PLA-586.** There is no ContainerCard and `plants_per_pot` appears nowhere in
+`src/`; `container_notes` is read only by `CareGuideCard.astro:101`, `HeroCard.astro:165-167` and
+`lib/containers.ts`. PLA-586 mirrors plant-app's "In a pot" card (PLA-539) rather than designing a
+new one, so **this field's astro contract is the app's contract**, restated here so PLA-586 can be
+built against it without reading this whole spec:
+
+- Read `container_notes.plants_per_pot`; treat **absent, `null`, and `{readings: []}` as the same
+  thing: render no row.**
+- For each reading render one attributed line per 7.1, using that reading's own `count` and
+  `at_gallons`. **Never `min_pot_gallons`.**
+- Dual register: the row is seasoned-only in the app card; astro matches unless PLA-480's design
+  pass says otherwise.
+- Astro renders; it does **not** compute per-plant gallons. The conservative pick and the switch
+  predicate (4.2, 4.3) are planner logic and have no astro equivalent, because astro has no planner.
+- Note the pre-existing headline disagreement PLA-586 inherits: astro's HeroCard leads with
+  `recommended_pot_gallons` while the app's planner computes from `min_pot_gallons`. This field is
+  bound to neither, so it does not deepen the split, but PLA-586 should not accidentally resolve it
+  by using `plants_per_pot` as a tiebreak.
+- PLA-586 is blocked on PLA-535 (the astro submodule is 72+ revisions behind); nothing renders there
+  until that bump lands.
 
 **Export allowlist: confirmed, no change needed.** `container_notes` is present in `SHIP_TOP_LEVEL`
 (`scripts/export-projection.mjs:44`), so a new subkey ships with no projection change. PLA-580's
@@ -365,60 +479,89 @@ item 4 is closed.
 
 ---
 
-## 8. The authorable population, and what the promote still has to rule
+## 8. D4 armor
 
-From Illinois, unambiguous and ready to author (7 crops): `parsley` 1 @ 0.5; `cabbage` 1 @ 1;
-`green-beans-bush` 2-3 @ 1; `lettuce-leaf` 4-6 @ 1; `swiss-chard` 1 @ 1; `cherry-tomato` 1 @ 1;
-`eggplant` 1 @ 2.
-
-Held for an authoring read in the promote, each with its ambiguity named in section 2.6:
-`cucumber` and its three siblings; `bell-pepper` and the four other pepper slugs; the "Standard
-tomatoes" row against `beefsteak-tomato` / `heirloom-tomato` / `roma-tomato`.
-
-UMD's size-class row is authorable in principle (1 @ 8-10 gallons for tomatoes, pepper, eggplant,
-cucumber, winter squash) but `at_gallons` is a **range** there, not a point, and it conflicts with
-Illinois on two crops. Recommendation: **do not author from UMD in this pass**. Take the per-crop
-table where it speaks, leave the rest null, and record UMD's row in the promote document as a known
-second reading rather than silently preferring one source over the other.
-
-The 18 prose crops are **not** authorable from the prose (section 2.5). If the arc wants them, each
-needs its own T1 read against the source the block already cites, which is a separate pass.
+- **Shape gate, whole_crop_gate `A60`** (A58 is `container_path`, A59 is `plant_dimensions`; A60 is
+  the next free id, measured). New `tools/plants_per_pot_gate.py` + tests, TDD, wired the way A58
+  was: shape armed on the tooling commit, the **presence floor behind `A60_PRESENCE_ARMED = False`
+  until the commit that writes canonical**.
+  Rules: value is `null` or an object whose only key is `readings`; `readings` is a **non-empty**
+  list (an empty list is not a legitimate value -- absence is spelled `null`); each reading's keys
+  are exactly `{count, at_gallons, sources, anchoring_urls}`; `count` is `[min, max]` integers with
+  `1 <= min <= max`; `at_gallons` is a positive number or `[lo, hi]` with `0 < lo <= hi`; `sources`
+  non-empty and every key present in `anchoring_urls` with a `url` and a `verified` date; **no two
+  readings in one crop share a source key**; **`plants_per_pot` non-null requires
+  `container_ok: true`**; and the key is **absent** on every uncertified shell.
+- **`numeric_sanity_gate`:** `count[max] <= 30`; `at_gallons` (or its `hi`) in `[0.5, 100]`. The 0.5
+  floor is deliberate and differs from the `1..100` that `min_pot_gallons` and
+  `recommended_pot_gallons` use at `numeric_sanity_gate.py:66-67`, because Illinois publishes a
+  half-gallon row. A comment says so at the bound, or a later reader will "fix" it.
+- **Cross-field coherence, fails LOUD:** `at_gallons` is **not** required to equal or exceed
+  `min_pot_gallons`, and the gate must not assert it. Measured, that assertion would fail on 9 of 10
+  authored rows -- it is the very confusion this spec exists to prevent. What the gate *does* check
+  is that `at_gallons` is present whenever `count` is.
+- **`register_completeness`:** `plants_per_pot` is structured, not prose; no register pair.
+- **`field_additions` provenance:** one record per authored **reading**, carrying URL, fetch date,
+  sha256 and the **verbatim row or sentence** the count was copied from. The EVIDENCE_HASHES guard
+  from PLA-465 applies: no 64-hex token in the promote spec that is not a measured digest.
+- **Suite + mutation harness, PLA-215:** one mutation per guard family, MUTATION-APPLIED marker +
+  sentinel, `set(pre) == set(post)` before value comparison, refusal-spec passes for good input,
+  suite replay-pinned via `promote_fixture.COMMIT_FOR`. **Positive control runs the whole suite.**
+  Guards that cannot be shown reachable are removed, not shipped as coverage. A positive control is
+  owed specifically on the two-reading case, since section 4.3 records that no authored crop
+  exercises it.
+- **Release:** gate_all 121/121, A60 presence 0 violations, `register_completeness` +
+  `register_coverage` PASS, `release_verify` clean in every section, collision gate holding.
 
 ---
 
-## 9. Sequencing, and the one ordering hazard
+## 9. The authorable population under the rulings
 
-1. **Now:** this spec, held for Trevor's read. No promote.
-2. **plant-app first**, if a bare array is ever chosen over the object: the divisor and the rendered
-   sentence must change *before* any data lands. Under the recommended object shape this ordering is
-   enforced by the shape itself and the app can be changed at leisure.
-3. **Promote:** A60 gate (shape armed, presence floor disarmed), suite, harness, the authoring reads
-   in section 8, `field_additions` records, gauntlet on a scratch post-state, HOLD for approval, then
+**Authored (8 readings across 7 crops):**
+
+| crop | readings |
+|---|---|
+| `parsley` | uiuc `[1,1]` @ 0.5 |
+| `cabbage` | uiuc `[1,1]` @ 1 |
+| `green-beans-bush` | uiuc `[2,3]` @ 1 |
+| `lettuce-leaf` | uiuc `[4,6]` @ 1 |
+| `swiss-chard` | uiuc `[1,1]` @ 1 |
+| `cherry-tomato` | uiuc `[1,1]` @ 1 |
+| `eggplant` | uiuc `[1,1]` @ 2 **and** umd `[1,1]` @ `[8,10]` |
+
+**Held (ruling 5):** Illinois' cucumbers and pepper rows, and UMD's tomatoes / pepper / cucumber /
+Winter squash groups, all because one row names several slugs. **Unauthored:** Illinois' "Standard
+tomatoes", which names no slug at all.
+
+**Null:** the other 114 certified crops, including the 4 Illinois rows that give a thinning spacing.
+
+The 18 prose crops are **not** authorable from the prose (2.5). Each would need its own T1 read
+against the source the block already cites, which is a separate pass.
+
+---
+
+## 10. Sequencing
+
+1. **Now:** this spec, amended, held for Trevor's read. No promote.
+2. **Promote:** A60 gate (shape armed, presence floor disarmed), suite, harness, the 8 readings in
+   section 9, `field_additions` records, gauntlet on a scratch post-state, HOLD for approval, then
    the canonical write with `--expect-sha` and `A60_PRESENCE_ARMED = True` in the same commit.
-4. **plant-astro:** a ContainerCard has to exist before this renders there at all. That is the
-   2026-09-06 spec's section 6 work, unstarted.
-5. **Close PLA-580** with the record: the binding, the population, and the four-to-five-crop honest
-   scope of the planner effect.
+3. **plant-app:** the changes in 7.2. Safe to do before or after the data lands, because the object
+   shape reads null until then.
+4. **plant-astro:** PLA-586, itself blocked on PLA-535's submodule bump.
+5. **PLA-533** may move `min_pot_gallons` under the count-1 rows; nothing in this field depends on
+   its outcome, which is the point of ruling 3.
+6. **Close PLA-580** with the record: the binding, the 8 readings, and section 5's honest finding
+   that the measured effect is two crops, both loosened.
 
 ---
 
-## 10. Out of scope, by name
+## 11. Out of scope, by name
 
 `min_pot_gallons` semantics and PLA-533's provenance audit of the 102 figures; the strawberry
 diameter count and any diameter-to-volume conversion; the 18 prose counts as an authoring source;
-UMD's size-class model as a dataset shape; `critical_warnings` (PLA-7 Plan D); the 88 unmatched
-cultivar names (Plan B); whether the planner should extrapolate a density beyond `at_gallons`.
-
----
-
-## 11. The open question for Trevor
-
-Section 8 recommends taking Illinois where it is unambiguous and leaving UMD's conflicting size-class
-row unauthored. The alternative is to carry both, which the object shape *can* hold (a list of
-readings rather than one), at the cost of a consumer that has to choose. **Recommendation: one
-reading per crop for now**, because no consumer is built to choose and a list would ship a decision
-nobody has made. Raised here rather than decided because it is a product call about how much
-disagreement to show a grower.
+`critical_warnings` (PLA-581, Plan D); the 88 unmatched cultivar names (Plan B); the astro card
+itself (PLA-586); whether the planner should extrapolate a density beyond `at_gallons`.
 
 ---
 
@@ -441,13 +584,18 @@ disagreement to show a grower.
 
 **Dataset.** 128 crops; **121** `verified_gs_arc`, **7** with `verification_status: null` (avocado,
 olive, oyster-/shiitake-/lions-mane-/wine-cap-/button-mushroom). `plants_per_pot`: **0** occurrences
-dataset-wide (byte count on the canonical file). `container_ok: true`: **110** of 121 certified.
-`min_pot_gallons` present: **102**; `recommended_pot_gallons` present: **95**; both: **95**; min
-without recommended: **7** (`lettuce-leaf`, `orange-navel`, `mandarin-clementine`, `mulberry`,
-`grapefruit`, `cherry-sweet`, `cherry-sour`). `'container_path' in container_notes` is `False` on
-all 7 shells. Certified crops that are `container_ok: true` with no count in any source read: **86**.
-Certified but not `container_ok`: **11** (apricot, asparagus, field-corn, flint-corn, nectarine,
-pawpaw, peach, persimmon, plum, popcorn, sweet-corn).
+dataset-wide. `container_ok: true`: **110** of 121 certified. `min_pot_gallons` present: **102**;
+`recommended_pot_gallons` present: **95**; both: **95**; min without recommended: **7**
+(`lettuce-leaf`, `orange-navel`, `mandarin-clementine`, `mulberry`, `grapefruit`, `cherry-sweet`,
+`cherry-sour`). `'container_path' in container_notes` is `False` on all 7 shells. Certified crops
+that are `container_ok: true` with no count in any source read: **86**. Certified but not
+`container_ok`: **11** (apricot, asparagus, field-corn, flint-corn, nectarine, pawpaw, peach,
+persimmon, plum, popcorn, sweet-corn).
+
+**`min_pot_gallons` for the crops in section 5:** parsley 1, cabbage 5, swiss-chard 3, cherry-tomato
+5, eggplant 5, green-beans-bush 5, lettuce-leaf 1, cucumber 5 (and english-/pickling-/slicing- all
+5), bell-pepper 3, beefsteak-tomato 15, heirloom-tomato 15, butternut-/acorn-/spaghetti-squash and
+pumpkin 10.
 
 **Register / gates.** `docs/field_addition_register.md` holds 30 rows; 29 is `container_path`, 30 is
 plant dimensions; this field is 31. Highest whole_crop_gate id in `tools/whole_crop_gate.py` is
@@ -455,14 +603,20 @@ plant dimensions; this field is 31. Highest whole_crop_gate id in `tools/whole_c
 `recommended_pot_gallons` at `1..100`.
 
 **Consumers.** plant-app `feat/community-foundation` @ `a7f6288c`: `container-model.ts` lines 98,
-198, 250-267; `planner/catalog.ts:151`; `planner/rootstock.ts:103-118`; `planner/types.ts:39`;
-`container_notes` in `SHIP_TOP_LEVEL` at `export-projection.mjs:44`. plant-astro @ `aa17dff`: no
-ContainerCard, no `plants_per_pot` reference; `container_notes` read in `CareGuideCard.astro:101`,
-`HeroCard.astro:165-167`, `lib/containers.ts`.
+198, 250-267, guard `if (!Array.isArray(v) || v.length !== 2) return null;` at 100; test table at
+`container-model.test.ts:109-117` (no object case); `planner/catalog.ts:151`;
+`planner/rootstock.ts:103-118`; `planner/types.ts:39`; `container_notes` in `SHIP_TOP_LEVEL` at
+`export-projection.mjs:44`. plant-astro @ `aa17dff`: no ContainerCard, no `plants_per_pot`
+reference; `container_notes` read in `CareGuideCard.astro:101`, `HeroCard.astro:165-167`,
+`lib/containers.ts`.
 
 **Discrepancies recorded against the 2026-09-06 spec.** (a) UMD publishes a count against a stated
 size; the spec says it carries narrative counts only. (b) The prose-count population is 18, not 13.
 (c) The lettuce worked example's arithmetic matches neither the dataset (`min_pot_gallons` is 1, not
-2) nor the source (0.17, not 0.33). (d) PLA-580's summary line renders `min_pot_gallons` semantics as
-"per plant"; the spec's own section 4 says a pot holding `plants_per_pot` plants. The app implements
-the spec, not the summary.
+2) nor the source (0.25 conservative, not 0.33). (d) PLA-580's summary line renders
+`min_pot_gallons` semantics as "per plant"; the spec's own section 4 says a pot holding
+`plants_per_pot` plants. The app implements the spec, not the summary.
+
+**Correction recorded against this document's own first draft.** "Dividing by 1 changes nothing" was
+false under D2; see 4.1. It understated the field's reach and the section 5 table exists because of
+it.
