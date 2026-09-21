@@ -10,30 +10,44 @@ measurement is given.
 encoding), PLA-465, PLA-580, PLA-586, PLA-539, PLA-10.
 
 **Amendment history.** First draft 2026-09-21, held. **Amendment 1** (same day, Trevor's read):
-D1 approved with an evidence condition, **D2 reversed**, D3 / D4 / D5 approved as recommended. The
-rulings are in section 0; every section they touch is amended in place and says so.
+D1 approved with an evidence condition, **D2 reversed**, D3 / D4 / D5 approved as recommended.
+**Amendment 2** (same day, his read of amendment 1): **APPROVED**, with one condition on the
+`container_safety` consumer read, applied as section 8.6. The rulings are in section 0; every
+section they touch is amended in place and says so.
 
 ---
 
-> ## RULED 2026-09-21, AMENDED, HELD FOR A SECOND READ
+> ## HANDOFF
 >
-> **D1 APPROVED**, on the condition that every warning in `container_safety` carries its own T1
-> source verbatim with bytes and sha256, and that any warning without one is **cut**. Section 4.5
-> is that evidence table: **three warnings keep, one candidate cut** (mosquito). **PLA-7 authors
-> zero per-crop safety entries.** `container_safety` is a new top-level key and needs its own
-> consumer line; section 8.5 measures what that line actually is, and it is **not** an allowlist
-> entry.
+> **APPROVED** by Trevor 2026-09-21, as amended, with the 8.6 condition applied. Merged to `main`
+> and pushed as **docs only**.
 >
-> **D2 REVERSED.** Not `[]` on 121. Three documented states: **`null` = not assessed** (all 121 ship
-> null now), **`[]` = assessed, none found**, **`[...]` = authored entries**. Section 5 is rewritten.
+> **RULED, in summary.** `critical_warnings[]` is a top-level per-crop key with **three documented
+> states**: `null` = not assessed (what the promote writes, on all 121 certified), `[]` = assessed
+> and none found, `[...]` = authored. Key absent on the 7 shells. **PLA-7 authors zero per-crop
+> safety entries**: the three crop-invariant warnings that survived the section 4.5 evidence test
+> live in a new **top-level `container_safety` object**. `severity` is MODELED; `stage` is gated
+> against the crop's own ladder.
 >
-> **D3, D4, D5 APPROVED** as recommended.
+> **THE CONSUMER CONDITION (8.6), because it is the one thing easy to get wrong.** The
+> `container_safety` read is tolerant of the key's **ABSENCE** from the dataset, so it can land
+> before the promote. It is **never** tolerant of **LOSING** it. Each consumer carries a
+> **build-time assertion: if the dataset carries `container_safety`, the rendered output must
+> contain it, or the build fails.** A tolerant read of safety content must not be able to fail
+> silently.
 >
-> **No promote, no gate, no data change.** Canonical is byte-identical to `1721208e` throughout.
+> **PROMOTE NOT BUILT, and not to be built yet.** It follows **PLA-466** and then **PLA-580**, each
+> re-pinning on the canonical before it. The PLA-581 promote is a **later session against whatever
+> canonical those two produce**, explicitly not `1721208e`, which will be stale. Section 10
+> instructs that session to re-measure its base and re-run section 12's dataset counts before
+> authoring.
 >
-> **One thing found while applying ruling 1 needs your eye** (section 4.2): the D3 app rule that was
-> to carry the tip-over class **cannot fire on a single one of the 18 crops**. Its named inputs do
-> not exist in the dataset, and `mature_height_ft` is null on all 18.
+> **This branch is docs only.** Canonical does not move; nothing in this arc has written a byte of
+> `crops_data_final.json`.
+>
+> **One item was returned rather than closed** (section 4.2): the D3 app rule that was to carry the
+> tip-over class **cannot fire on a single one of the 18 crops**, because none of its named inputs
+> exists. Owed to PLA-10, filed there and on PLA-7.
 
 **The headline.** The container-safety class was scoped on the assumption that balcony load is a
 per-crop warning. **It is not a per-crop anything.** Read from raw bytes, exactly one T1 sentence in
@@ -76,6 +90,12 @@ reproducible from any net this session ran.
    ladder; A61 with the A60 collision recorded; the named positive controls; consumer lines
    first. The experience-mode rule in its checkable form goes into PLA-586's and PLA-539's
    contracts.
+4. **APPROVED as amended (amendment 2), with one condition.** On `container_safety`'s consumer
+   read: **tolerant of the key's ABSENCE** in the dataset, so the read can land before the promote,
+   **but never tolerant of LOSING it.** Each consumer carries a **build-time assertion: if the
+   dataset carries `container_safety`, the rendered output must contain it; a missing block fails
+   the build.** A tolerant read of safety content must not be able to fail silently. Written into
+   PLA-586's and PLA-539's contracts beside the mode rule. Applied as **section 8.6**.
 
 ---
 
@@ -698,6 +718,10 @@ That is testable in the consumer repos and is the honest expression of PLA-7's c
 - Each entry renders its `title` plainly and its body through `RegisterText`.
 - **No rendered sentence may state a weight, a load, or a pot count that no source named.** The
   balcony warning is a referral; rendering a number beside it would fabricate the claim.
+- **The read is tolerant of `container_safety` being ABSENT, never of it being LOST**: a
+  build-time assertion fails the build if the dataset carries the key and the rendered output
+  does not. Section 8.6 has the mechanism and why a render-function unit test does not satisfy
+  it.
 - No em dashes in any rendered copy.
 
 ### 8.5 `container_safety`'s consumer line is NOT an allowlist entry, and it lands in the OTHER order
@@ -742,6 +766,63 @@ directions.
 `((await loadDatasetRaw()).control_methods ?? {})` at `IndoorGuide.astro:63`. Both `critical_warnings`
 and `container_safety` are inert there until a component reads them.
 
+### 8.6 The condition on the tolerant read: tolerant of ABSENCE, never of LOSS
+
+**Trevor's condition, 2026-09-21, and it closes a hole 8.5 opened.** Recommending a tolerant read
+(`raw.container_safety ?? null`) buys safe ordering and costs the loud failure that made the
+throwing precedent safe. A tolerant read cannot tell "the promote has not landed yet" from "the
+key was dropped, renamed or pruned and the safety block silently stopped rendering". For safety
+content that is not an acceptable trade.
+
+**The rule, in both consumers:**
+
+> The read is **tolerant of the key's ABSENCE** from the dataset, so it can land before the promote.
+> It is **never tolerant of LOSING it**. Each consumer carries a **build-time assertion: if the
+> dataset carries `container_safety`, the rendered output must contain it. A missing block fails
+> the build.**
+
+It is a conditional, and the condition is read from the dataset, not assumed: absent -> render
+nothing, no failure; present -> the artifact must carry it, or exit non-zero.
+
+**plant-app already has the instrument, and this is literally its P4 arm's defect class.**
+`scripts/verify-export-projection.mjs` (`npm run verify:export`) reads the **shipped bytes** and
+re-derives rather than trusting the build ran. Its own header states the reason: *"the failure this
+repo keeps paying for is an instrument that reports a zero over a population it never opened."* Its
+P4 arm exists for keys whose loss *"breaks behavior with no visible symptom"*, and comments the
+exact principle this condition needs: *"Absence here is a SILENT breakage, so it is a violation, not
+a warning."*
+
+So the app's work is a **new P6 arm**, not a new script. One detail the app session must not
+hand-wave: P1 to P5 read only the built payload, but P6's condition lives in the **dataset**, so the
+gate needs the dataset path too (the same resolution `build-guides-data.mjs` uses). The arm then
+reads: if the dataset object has `container_safety`, every warning id in it must be present in the
+emitted artifact; otherwise the arm is a no-op. Belt and braces at the emit site as well: if
+`raw.container_safety` is present, `build-guides-data.mjs` emits it and asserts the emit was
+non-empty.
+
+**And P6 must be mutation-covered, not merely written.** plant-app already has the harness:
+`npm run mutate:export` (`scripts/mutate-export-projection-gate.mjs`, `package.json:72`), which
+injects each defect class into a scratch payload and runs the gate unchanged. A P6 arm that has
+never been shown to redden is the same coverage-in-name-only failure this dataset's own PLA-215
+convention exists to stop, and it would be guarding safety content. **Two mutations at minimum:**
+the dataset carries the key and the artifact does not (must redden), and the dataset does not carry
+it and the artifact does not either (must stay green, the refusal-spec pass that proves the arm is a
+conditional rather than an unconditional presence check).
+
+**plant-astro has no such instrument at all, so PLA-586 builds the first one.** Measured: `build` is
+a bare `astro build`, `test` is `vitest run`, and **no test in the repository reads anything under
+`dist/`**. The honest form is a **`postbuild` check over the built HTML**: for a sample of pages
+whose crop is `container_ok: true`, assert each `container_safety` warning's rendered text is
+present, and exit non-zero if not. A vitest test over the card's render function is **not**
+sufficient for this condition: it proves the function would render, not that the page includes it,
+and the failure being guarded against is precisely a block that stops being reached.
+
+**Both assertions must also be mode-blind**, which is where this condition meets 8.3: a safety block
+hidden inside a `.seasoned-only` or `.beginner-only` wrapper would still appear in the built HTML
+and pass a naive text check. The astro check therefore asserts on the rendered element **and** that
+no ancestor carries a `-only` class. Stated here so the two rules are implemented as one check
+rather than two that each half-cover.
+
 ---
 
 ## 9. The authorable population under the rulings
@@ -772,8 +853,10 @@ the whole of its risk is in the gate and the three-state rule, not in the bytes.
 3. **PLA-466's promote lands first**, on canonical `1721208e`. PLA-580's promote follows.
 4. **The two plant-app consumer lines** (8.5), which are different mechanisms with **opposite**
    ordering: `'critical_warnings'` into `SHIP_TOP_LEVEL` **before** the promote, and the
-   `container_safety` read in `build-guides-data.mjs` **after** it, unless the read is written with
-   a tolerant guard, which is the recommended form and lets both land together beforehand.
+   `container_safety` read in `build-guides-data.mjs` written with a **tolerant guard**, which is
+   the ruled form and lets both land together beforehand. **The tolerant read ships with its
+   P6 assertion in the same change** (8.6), never after: a tolerant read without the assertion
+   is the silent-loss hole the condition exists to close.
 5. **The PLA-581 promote, a later session, against whatever canonical PLA-466 and PLA-580
    produce** -- explicitly **not** `1721208e`, which will be stale. That session **re-measures its
    base and re-runs section 12's dataset counts before authoring**, because every count here was
@@ -787,7 +870,10 @@ the whole of its risk is in the gate and the three-state rule, not in the bytes.
    field becoming another `growth_stages_annual`.
 7. **plant-astro (PLA-586)** builds the card to 8.4, itself blocked on PLA-535's submodule bump.
    Its contract and PLA-539's both gain the experience-mode rule in its checkable form (8.3):
-   **no `.seasoned-only` or `.beginner-only` wrapper may hide a safety block.**
+   **no `.seasoned-only` or `.beginner-only` wrapper may hide a safety block.** PLA-586 also
+   **builds astro's first build-output assertion** (8.6): the repo has none today, and the mode
+   rule and the loss rule are implemented as **one** check over the built HTML, because a block
+   hidden by a `-only` ancestor would pass a naive text search.
 8. **PLA-142 notified that the shape is fixed** for its `harvest` class, and that it inherits three
    things: the five positive controls in 7.3, the overlap pass against `tips_by_stage` and
    `failure_diagnostics` that this spec does not touch, and **the `null` -> `[]` transition**. Every
@@ -906,6 +992,17 @@ on 121 and non-empty on **0**.
 `SHIP_TOP_LEVEL`**, which confirms that allowlist governs crop keys only. `pesticide_safety_education`
 is the nearest precedent for `container_safety` in both kind and mechanism.
 
+*The build-output verification instruments (amendment 2).* plant-app **has one**:
+`scripts/verify-export-projection.mjs`, wired as `npm run verify:export` (`package.json:71`),
+reads the shipped bytes at `assets/data/guides.dataset` and re-derives; it takes an explicit
+payload path so a mutation harness can run it against a scratch copy. Its **P4** arm is the
+same defect class as this condition and says so at the check: *"Absence here is a SILENT
+breakage, so it is a violation, not a warning"* (`:93-101`), over the
+`LOAD_BEARING_BUT_UNRENDERED` set (`export-projection.mjs:137-142`). plant-astro **has none**:
+`build` is a bare `astro build` and `test` is `vitest run` (`package.json:9-13`), and **no test
+in the repository reads anything under `dist/`** (measured over every `src/**/*.test.ts`).
+PLA-586 therefore builds astro's first one.
+
 *The dataset-level consumer mechanism.* plant-app `scripts/build-guides-data.mjs`: `raw.control_methods`
 at `:196`, `raw.pesticide_safety_education` at `:197`, throws on a missing key at `:199` and `:202`,
 emits at `:235`; `raw.region_chill_delivered` at `:107` with the same throw at `:109` and emit at
@@ -923,7 +1020,11 @@ on all 121 with `null` a violation, which would have written an unsourced negati
 for a class (`harvest`) nobody has assessed. It reasoned about the `safety` class and generalized to
 a two-class field. (iv) The same draft read `growth_stages_annual`'s three states as evidence that a
 third state is incoherent; the defect there is that its `null` was **never documented**, and 5.1 is
-amended to say so. (v) The first draft said `container_safety` "needs whatever the app's
+amended to say so. (vi) Amendment 1 recommended a tolerant `container_safety` read without saying what replaces the
+loud failure the throwing precedent provided; Trevor's amendment-2 condition closes that, and
+8.6 now states it. The recommendation was right and incomplete, which is the more dangerous
+shape: it bought safe ordering by giving up the signal that the key had been lost.
+(v) The first draft said `container_safety` "needs whatever the app's
 dataset-level projection does ... one line to check in the app session"; measured, there is no
 dataset-level projection at all, and 8.5 now gives the mechanism and the **reversed ordering** that
 finding produces.
