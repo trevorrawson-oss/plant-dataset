@@ -54,6 +54,7 @@ COMMIT_FOR = {
     # PLA-465 promote 2 (2026-09-18). NEVER AMEND 17e0154.
     # The twelve null woody crops recorded: 12 open_findings on 11 crops + 1 dated addendum on plum.
     '892c76fb9e89fd9a242f682a7040a71886cb128ec899092a4f6414d2e0708edb': '17e0154',
+    '1721208ee0cbe4249ecf32ca3bd47a786f8a689cadcb7bb300d8d8ada4d82054': 'ab44218',  # PLA-465 mandarin UCR anchor repair
     # PLA-465 plant dimensions promote 1 (2026-09-16). NEVER AMEND 6659f62.
     # mature_height_ft / mature_spread_ft / footprint_inches on all 121 certified crops; 16 woody crops
     # authored with field_additions provenance records; A59 presence armed in the same commit.
