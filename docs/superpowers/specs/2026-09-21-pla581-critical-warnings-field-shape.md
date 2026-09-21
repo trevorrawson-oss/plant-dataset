@@ -7,21 +7,33 @@ change). **Branch:** `worktree-pla581-critical-warnings`, spec commit only. **Ba
 section 5. Where this document and that one disagree, the disagreement is named in section 2 and the
 measurement is given.
 **Read with:** PLA-581, PLA-142, PLA-7 (D4), PLA-463 (the framing-copy pattern), PLA-464 (absence
-encoding), PLA-465, PLA-580, PLA-586, PLA-539.
+encoding), PLA-465, PLA-580, PLA-586, PLA-539, PLA-10.
+
+**Amendment history.** First draft 2026-09-21, held. **Amendment 1** (same day, Trevor's read):
+D1 approved with an evidence condition, **D2 reversed**, D3 / D4 / D5 approved as recommended. The
+rulings are in section 0; every section they touch is amended in place and says so.
 
 ---
 
-> ## HELD FOR TREVOR'S READ
+> ## RULED 2026-09-21, AMENDED, HELD FOR A SECOND READ
 >
-> **Nothing is decided.** Five decisions are below, each with a recommendation and the measurement
-> behind it. **No promote, no gate, no data change.** Canonical is byte-identical to `1721208e`
-> throughout.
+> **D1 APPROVED**, on the condition that every warning in `container_safety` carries its own T1
+> source verbatim with bytes and sha256, and that any warning without one is **cut**. Section 4.5
+> is that evidence table: **three warnings keep, one candidate cut** (mosquito). **PLA-7 authors
+> zero per-crop safety entries.** `container_safety` is a new top-level key and needs its own
+> consumer line; section 8.5 measures what that line actually is, and it is **not** an allowlist
+> entry.
 >
-> **One recommendation changes PLA-581's "complete when" list** and is flagged as such in section 4:
-> the recommendation is that **PLA-7 authors zero `safety` entries into `critical_warnings[]`**,
-> because no T1 source publishes a container-safety warning that varies by crop. The safety content
-> is still authored and still renders on every container-capable crop; it lives in one place instead
-> of 110.
+> **D2 REVERSED.** Not `[]` on 121. Three documented states: **`null` = not assessed** (all 121 ship
+> null now), **`[]` = assessed, none found**, **`[...]` = authored entries**. Section 5 is rewritten.
+>
+> **D3, D4, D5 APPROVED** as recommended.
+>
+> **No promote, no gate, no data change.** Canonical is byte-identical to `1721208e` throughout.
+>
+> **One thing found while applying ruling 1 needs your eye** (section 4.2): the D3 app rule that was
+> to carry the tip-over class **cannot fire on a single one of the 18 crops**. Its named inputs do
+> not exist in the dataset, and `mature_height_ft` is null on all 18.
 
 **The headline.** The container-safety class was scoped on the assumption that balcony load is a
 per-crop warning. **It is not a per-crop anything.** Read from raw bytes, exactly one T1 sentence in
@@ -44,15 +56,37 @@ reproducible from any net this session ran.
 
 ---
 
+## 0. The rulings, as given (2026-09-21)
+
+1. **D1 APPROVED.** Crop-invariant warnings live in a top-level `container_safety` object, not in
+   per-crop `critical_warnings[]`. PLA-581's "complete when" changes accordingly and the change is
+   recorded on the ticket. **Condition:** each warning lists its own T1 source, verbatim, with bytes
+   and sha256; **any warning without one is cut, not shipped because it is generic.** The mosquito
+   candidate specifically: state what supports a container version or drop it. **Tip-over stays
+   where it is** (per-crop `container_notes` prose on 18 crops, plus the D3 app rule); no new
+   entries. `container_safety` needs its own consumer line.
+2. **D2 REVERSED.** `[]` on 121 asserts "assessed, no critical warnings" on crops nobody has
+   assessed for PLA-142's harvest class. That is an **unsourced negative**, the same defect class as
+   `container_suitable: false` and astro's "in-ground" today. Three documented states, per PLA-464's
+   precedent: `null` = not assessed, `[]` = assessed and none found, `[...]` = authored entries.
+   The `growth_stages_annual` lesson is that its `null` was **never documented**, not that `null` is
+   wrong. Document all three in the spec and the register row; the gate enforces the three-state
+   rule.
+3. **D3, D4, D5 APPROVED** as recommended. `severity` modeled; `stage` gated against the crop's own
+   ladder; A61 with the A60 collision recorded; the named positive controls; consumer lines
+   first. The experience-mode rule in its checkable form goes into PLA-586's and PLA-539's
+   contracts.
+
+---
+
 ## 1. What this adds, in one table
 
 | field | where | shape | who authors | who reads |
 |---|---|---|---|---|
-| `critical_warnings` | top-level, per crop | `[]` or a non-empty list of entries (section 5); **never `null`**; **key absent on the 7 shells** | PLA-581 promote creates it roster-wide as `[]`; **PLA-142 authors the `harvest` class** | plant-app "In a pot" chapter + guide hero (PLA-539); plant-astro ContainerCard (PLA-586) |
-| `container_safety` | **top level of the dataset, not on a crop** | one object holding the 3 crop-invariant warnings, each with its own `sources` + `anchoring_urls` | PLA-581 promote, once | both consumers, on every crop with `container_ok: true` |
+| `critical_warnings` | top-level, per crop | `null` / `[]` / non-empty list, **all three meaning different things** (section 5); **key absent on the 7 shells** | PLA-581 promote creates it roster-wide as **`null`**; **PLA-142 authors the `harvest` class** and moves each crop `null` -> `[]` or `[...]` as it assesses it | plant-app "In a pot" chapter + guide hero (PLA-539); plant-astro ContainerCard (PLA-586) |
+| `container_safety` | **top level of the dataset, not on a crop** | one object holding the **3** crop-invariant warnings that survived the section 4.5 evidence test, each with its own `sources` + `anchoring_urls` | PLA-581 promote, once | both consumers, on every crop with `container_ok: true` |
 
-The second row is the D1 recommendation, not a settled fact. Sections 4 and 4.3 price the
-alternatives.
+Both rows are now ruled. Sections 4.1 and 4.5 carry the pricing and the evidence.
 
 ---
 
@@ -205,9 +239,9 @@ top-heavy annuals the hazard actually applies to. **There is no structured field
 
 ---
 
-## 4. D1: where a generic container warning lives. RECOMMENDED, not ruled
+## 4. D1: where a generic container warning lives. APPROVED, with the evidence condition applied
 
-### 4.1 The three options, priced
+### 4.1 The three options, priced (Option C ruled)
 
 **Option A: per crop.** Every `container_ok: true` crop carries the three crop-invariant warnings as
 `critical_warnings` entries. **110 crops x 3 entries = 330 entries**, each byte-identical to 109
@@ -222,7 +256,7 @@ reference id and the consumer joins it to a shared table. Avoids duplication but
 the join key would be `container_ok: true`, which the consumer can already read directly. The
 indirection buys nothing. **Not recommended.**
 
-**Option C: outside the crop record entirely. RECOMMENDED.** A new top-level `container_safety`
+**Option C: outside the crop record entirely. RULED (D1, approved 2026-09-21).** A new top-level `container_safety`
 object in `crops_data_final.json`, a sibling of `source_catalog` and `zone_sources`, holding the
 three crop-invariant warnings once, each with its own `sources` and `anchoring_urls`. Consumers
 render all of them on any crop with `container_ok: true`.
@@ -233,32 +267,55 @@ date. The dataset is where sourcing discipline lives: `source_catalog` admission
 two consumers, so it would be written twice and drift. This also matches PLA-463's framing copy in
 kind: crop-invariant, sourced, authored once, selected by a property.
 
-### 4.2 The tip-over class: author nothing, render what exists
+### 4.2 The tip-over class: RULED to stay where it is, and the app rule behind it does not exist
 
-The tip-over hazard is the one candidate with real per-crop variation, and **the dataset already
-carries it on 18 crops, in both registers, inside `container_notes`, certified.** Promoting it into
-`critical_warnings` would put the same sentence twice in the same card, which is the overlap PLA-142
-named as its own open question: *"authoring should dedupe rather than duplicate."*
+**Ruled:** tip-over stays as per-crop `container_notes` prose on 18 crops, plus the PLA-7 D3 app
+rule; no new entries. The first half holds as written: the dataset already carries the hazard on 18
+crops, in both registers, certified, and promoting it into `critical_warnings` would put the same
+sentence twice in the same card, which is the overlap PLA-142 named as its own open question
+(*"authoring should dedupe rather than duplicate"*). The work it needs is a render decision in
+PLA-586 and PLA-539, which is where `shape_requirements_*` starts rendering anyway.
 
-Recommendation: **do not author it.** The work it needs is a render decision in PLA-586 and PLA-539,
-which is where `shape_requirements_*` starts rendering anyway. If a hero-level treatment is wanted
-later, the honest route is a `class: safety` entry on those 18 crops that **replaces** the prose
-sentence rather than repeating it, and that is a content pass, not a field-shape question.
+**The second half does not hold yet, and this is the one thing in the rulings that measurement
+contradicts.** The ruling names the D3 app rule as running over `mature_height_ft` and
+`container_path`. Measured on `1721208e`:
 
-### 4.3 What this means for PLA-581's "complete when", stated plainly
+| input | state on the 18 tip-over crops |
+|---|---|
+| `mature_height_ft` | **`null` on all 18.** The 16 crops that carry a height are woody perennials and woody herbs (`apple`, `fig`, `peach`, `rosemary`, ...); the intersection with the 18 is **empty**. |
+| `container_path` | **`direct` on all 18**, which is also the value on 86 of 121 crops. It carries no signal about plant habit. |
+| `height_inches` (what PLA-7's D3 actually names) | **0 occurrences dataset-wide.** |
+| `planting_layout` `vertical` (the other input D3 names) | the key exists on **6** crops, every value is `"block"`; `"vertical"` occurs **0** times. |
+| `footprint_inches` | key present on 121, **non-empty on 0** (the defined-but-unauthored slot, PLA-465 section 6). |
 
-The issue says *"The container `safety` class authored with T1 sources and raw-bytes
-`field_additions` records."* Under this recommendation, **`critical_warnings[]` ships empty on all
-121 certified crops** and the safety content lands in `container_safety`. The field still exists
-roster-wide with its shape ruled, PLA-142's slot is still fixed, PLA-7's safety requirement is still
-met on both consumers in every mode. What changes is that the deliverable is one authored object and
-two consumer contracts, not 110 crop edits.
+Two things follow. First, a small correction of attribution rather than of intent: PLA-7's D3 says
+wind and support *"rides PLA-10's `height_inches` and the `vertical` layout entry"*, which is a
+**different field from PLA-465's `mature_height_ft`** and belongs to an arc that has not run.
+Second, and this is the part that matters: **there is no input, existing or named, that would let an
+app rule fire on any of the 18 crops.** The rule is not weak here, it is empty.
 
-**If you would rather see the warnings on the crop records**, Option A is buildable at the cost in
-4.1, and the gate work in section 7 is the same either way. That is a product call, not a technical
-one, so it is yours.
+**What this leaves standing, and it is enough:** the 18 crops' own prose already states the hazard
+in both registers and will render under PLA-586 and PLA-539. The tip-over class is covered by that
+prose alone, with no app rule and no new field, which is exactly the outcome the ruling wanted. The
+app rule should be recorded as **owed to PLA-10**, not as a live half of this decision, so a later
+session does not read "plus the D3 app rule" as something that shipped. **Filed as a note on PLA-10
+and PLA-7 rather than built here.**
 
-### 4.4 Draft copy for the three shared warnings, held for your read
+If a hero-level treatment of tip-over is wanted before PLA-10 lands, the honest route is a
+`class: safety` entry on those 18 crops that **replaces** the prose sentence rather than repeating
+it, selected by the crop's own prose and recorded as a modeled selector. That is a content pass, not
+a field-shape question, and it is not recommended now.
+
+### 4.3 PLA-581's "complete when", as amended by the ruling
+
+The issue said *"The container `safety` class authored with T1 sources and raw-bytes
+`field_additions` records."* **Amended:** `critical_warnings[]` ships **`null`** on all 121
+certified crops (ruling 2), and the safety content lands in `container_safety` with per-warning T1
+evidence (4.5). The field still exists roster-wide with its shape ruled, PLA-142's slot is still
+fixed, and PLA-7's safety requirement is still met on both consumers in every mode. The deliverable
+is **one authored object and two consumer lines, not 110 crop edits**. Recorded on the ticket.
+
+### 4.4 Copy for the three shared warnings
 
 Dual register, no em dashes, American English, "plant" lowercase. Each carries only what its source
 says. **No number appears anywhere, because no source published one.**
@@ -295,9 +352,86 @@ The `csu_ext` lifting warning is deliberately **not** authored as a fourth entry
 moving a pot, not a hazard, and it belongs in the ContainerCard's prose if anywhere. Named here so
 the omission is a decision rather than an oversight.
 
+### 4.5 The D1 condition: per-warning evidence, and what it cuts
+
+Ruling 1: *"list each warning in the object with its own T1 source, verbatim, bytes and sha256. Any
+warning without one is cut, not shipped because it is generic."* Applied. Every digest below is a
+measured sha256 of the fetched body, never a stated one.
+
+**KEEP: `balcony_load`**
+
+| | |
+|---|---|
+| source key | `uiuc_ext` (`tier: T1`, `university_extension`, admitted in `source_catalog`) |
+| url | `https://extension.illinois.edu/container-gardens/container-size` |
+| fetched | 2026-09-21, HTTP 200 on both user agents, identical bytes |
+| bytes | 28,186 |
+| sha256 | `0b482e6ef1b9d9093dc0a0029e2753cf20bf787c7c329dd9ff23f7cbe0fe9705` |
+| verbatim | *"Consult with a building architect concerning weight limitations when placing heavy pots on balcony or rooftop gardens."* |
+
+**KEEP: `container_material`** (two independent sources, which is why this one is not a single-source
+claim)
+
+| | |
+|---|---|
+| source key | `csu_ext` (`tier: T1`) |
+| url | `https://extension.colostate.edu/resource/container-gardens/` |
+| fetched | 2026-09-21, HTTP 200 both UAs |
+| bytes | 141,247 |
+| sha256 | `a0197e08d33decedb9ae7fe0ecd6cf7a50296559ac7d0d26623a83b02db2159d` |
+| verbatim | *"However, make sure you never use a container that holds toxic materials, especially if edible plants are going to be grown."* |
+| second source key | `uiuc_ext` (`tier: T1`) |
+| url | `https://extension.illinois.edu/container-gardens/vegetable-containers` |
+| bytes | 24,343 |
+| sha256 | `62b5e5c5f5ce244fb868faccdc9ac11e0babb38aad6be60a6776d97577ed8d89` |
+| verbatim | *"The container needs to have good drainage, and should not contain chemicals that are toxic to plants and human beings."* |
+
+**KEEP: `hanging_security`**
+
+| | |
+|---|---|
+| source key | `uiuc_ext` (`tier: T1`) |
+| url | `https://extension.illinois.edu/container-gardens/container-material-choices` |
+| fetched | 2026-09-21, HTTP 200 both UAs |
+| bytes | 32,678 |
+| sha256 | `5ab9a68fcdf516a59c964c9ee6715ef0abfbd10a7ab0cac83682128e54637452` |
+| verbatim | *"Secure hanging items well and consider potential safety issues when hanging."* |
+
+**CUT: the mosquito warning. Nothing supports a container version.**
+
+It was never among the three proposed, and section 11 of the first draft already held it out of
+scope. Ruling 1 asks for the reason on the record rather than in a list of exclusions, so here it
+is, from bytes.
+
+| | |
+|---|---|
+| source key | `uiuc_ext` |
+| url | `https://extension.illinois.edu/container-gardens/problems-algae-and-mosquitoes` |
+| bytes | 27,257 |
+| sha256 | `07399314a5bc14b9508f92a6e8a5fe957ffc78c10d57813e12d0784daaaa0501` |
+| verbatim, first sentence | *"Mosquitoes only become a problem in **water garden containers** that are not maintained."* |
+
+The page sits under **Container Water Gardens**, a section whose sibling pages are "Fish and Other
+Animals", "Pumps and Fountains" and "Planting the Water Garden Container". Its remedies are
+goldfish, Mosquito Dunks and *"Water garden containers can be filled with gravel after the plants
+and water have been added."* Every one of those presupposes a standing body of water that is the
+point of the container. **None of it transfers to a saucer under a vegetable pot**, and the
+dataset's own 94 saucer sentences say nothing about mosquitoes (measured: 0 occurrences roster-wide).
+
+Searched for a container-scoped version and did not find one: no page among the sixteen fetched ties
+a plant saucer to mosquito breeding, and the general mosquito-control literature that does mention
+plant saucers is about standing water around a home, not about growing a crop in a pot. **Dropped.
+If it is wanted later it needs its own source, not this one.**
+
+**Also cut, and named so the omission is a decision:** the `csu_ext` lifting warning (4.4, a handling
+hazard rather than a safety one) and any pounds-per-pot figure (2.6, no source publishes one, so a
+number would be fabricated).
+
+**Net: 3 warnings ship, 4 sources across them, 0 shipped on generality alone.**
+
 ---
 
-## 5. D2: encoding of absence. RECOMMENDED
+## 5. D2: encoding of absence. REVERSED AND RULED
 
 ### 5.1 What the roster actually does, measured
 
@@ -317,33 +451,57 @@ four are genuine collections, and they are the cautionary case, not the preceden
 `description_sources` null on 1 crop, `harvest_ramp_weeks` null on 1, and
 `growth_stages_annual` / `growth_stages_year_one` **using all three states at once** -- absent 98,
 `null` 10, `[]` 13, and **non-empty 0**. Nobody can say what the difference between those 10 nulls
-and those 13 empties means, because no crop has ever carried a value. That is the ambiguity 5.2
-exists to refuse.
+and those 13 empties means, **because it was never written down** (see 5.2, which corrects the
+inference the first draft drew from this row: the defect is the missing documentation, not the third
+state).
 
-### 5.2 The recommendation: three states, and `null` is a violation
+### 5.2 RULED: three documented states, and the first draft was wrong
 
-- **key absent** -> an uncertified shell. Measured: the 7 shells carry **no key** for
-  `container_path`, `mature_height_ft` or any other register field, which is how A39 exempts them
-  and how the A1 and PLA-465 promotes left them byte-identical. Same here.
-- **`[]`** -> certified, and no warning is authored for this crop. **The common value**, on all 121
-  under the section 4 recommendation.
-- **non-empty list** -> authored warnings.
+**The correction, against this document's own recommendation.** The first draft recommended `[]` on
+all 121 with `null` a violation. That is wrong, and the reason is worth keeping because it is a
+class of defect, not a preference. **`[]` means "assessed, none found."** Shipping it on 121 crops
+would assert that every crop had been assessed for a critical warning, when `critical_warnings`
+spans two classes and **PLA-142's `harvest` class has not been assessed on a single crop.** The
+promote would be writing an **unsourced negative** into 121 records, the same defect as
+`container_suitable: false` on a crop nobody read and astro's "in-ground" on a crop whose own notes
+say a pot works. The draft had reasoned about the `safety` class alone and then generalized the
+answer to a field that is not only about safety.
 
-**`null` is a gate violation, not a shorthand.** There is no third certified state for it to mean, so
-admitting it would create an ambiguity between "nobody looked" and "looked, nothing to say" that no
-consumer could resolve and no gate could check. The PLA-580 gate rules `[]` a violation for
-`plants_per_pot` for the mirror-image reason, and the two are consistent once the question is stated
-correctly: **spell the state that exists and refuse the one that does not.** For `plants_per_pot`
-absence means "no source published a count", which is a genuine null; for `critical_warnings`
-absence means "this crop has no hero warning", which is a genuine empty list.
+**The three states, all documented, all meaningful:**
 
-This also gives the consumers one rule: `absent`, `null` and `[]` all render nothing, and only a
-non-empty list renders. PLA-586's card should treat all three alike anyway, so a gate slip never
-reaches a user as a crash.
+| state | meaning | who writes it |
+|---|---|---|
+| **`null`** | **not assessed.** No pass has yet asked whether this crop has a critical warning. | the PLA-581 promote, on **all 121** certified crops |
+| **`[]`** | **assessed, none found.** A pass looked and this crop legitimately has none. | PLA-142, per crop, as its `harvest` pass reaches each one |
+| **`[...]`** | authored entries | PLA-142 (`harvest`); PLA-7 authors none (ruling 1) |
+
+**Key absent** remains the uncertified-shell exemption, not a fourth semantic state: the 7 shells
+carry no key for `container_path`, `mature_height_ft` or any other register field, which is how A39
+exempts them and how the A1 and PLA-465 promotes left them byte-identical.
+
+**On `growth_stages_annual`, correcting 5.1's use of it.** The first draft cited its absent 98 /
+`null` 10 / `[]` 13 / non-empty 0 as evidence that a three-state collection is incoherent. That is
+the wrong lesson. The defect there is that **the `null` was never documented**, so no reader can
+recover what it was meant to say. A three-state field is fine when all three states are written
+down, which is what this section and the register row now do. The measurement stands; the inference
+drawn from it in the first draft does not.
+
+**Consistency with PLA-580.** That gate rules `[]` a violation for `plants_per_pot` and this one
+admits it, and the two are consistent once each field's own states are named. `plants_per_pot` has
+**two** states, "no source published a count" (`null`) and "here are the readings", so `[]` spells
+nothing. `critical_warnings` has **three**, because "not assessed" and "assessed, none found" are
+genuinely different facts about a crop and a later pass must be able to tell them apart. The shared
+rule is the one both gates enforce: **spell every state that exists and refuse every one that does
+not.**
+
+**For the consumers this changes nothing:** absent, `null` and `[]` all render no warnings block, and
+only a non-empty list renders. The distinction is for the dataset and for PLA-142's progress, not
+for a user. PLA-586's card should treat all three alike anyway, so a gate slip never reaches a user
+as a crash.
 
 ---
 
-## 6. D3: `severity` and `stage` vocabularies. RECOMMENDED, with one honest caveat
+## 6. D3: `severity` and `stage` vocabularies. APPROVED as recommended
 
 ### 6.1 `severity`: keep two values, and record that it is MODELED
 
@@ -393,8 +551,13 @@ commit that writes canonical, exactly as A58 and A59 were wired.
 
 Rules:
 
-1. `critical_warnings` is a **list**. `null` is a violation (5.2). The key is **absent** on every
-   uncertified shell and **present** on every certified crop.
+1. **The three-state rule (5.2).** `critical_warnings` is `null`, `[]`, or a non-empty list, and
+   nothing else: a string, a dict or a number is a violation. The key is **absent** on every
+   uncertified shell and **present** on every certified crop. The gate does not prefer one state
+   over another; it enforces that the value is one of the three and that the key's presence tracks
+   certification. **The three meanings are carried in the register row and in this spec, not in the
+   gate**, because they are not mechanically distinguishable, which is exactly the
+   `growth_stages_annual` failure this field is avoiding.
 2. Each entry's key set is exactly `{id, class, severity, stage, title, body_seasoned,
    body_beginner, sources, anchoring_urls}`.
 3. `id` is kebab-case and **unique within the crop**. Per the CLAUDE.md join-key rule, an `id` is
@@ -437,7 +600,7 @@ warning.
   `promote_fixture.COMMIT_FOR`. **Positive control runs the whole suite**, never a single driver.
 - **Guards that cannot be shown reachable are removed, not shipped as coverage.**
 
-**Four positive controls are owed by name**, because under the section 4 recommendation the authored
+**Five positive controls are owed by name**, because under the rulings the authored
 population exercises none of them. This is the `guard-reachability-must-be-measured` lesson applied
 at authoring time rather than discovered later:
 
@@ -450,10 +613,18 @@ at authoring time rather than discovered later:
 3. **A second entry on one crop.** With at most one entry per crop, `id` uniqueness and `severity`
    ordering are both unexercised. A `[2 entries]` fixture is the control; a 1-entry fixture passes
    under any uniqueness rule and is not one.
-4. **A non-empty `critical_warnings` at all.** Under the recommendation every certified crop ships
-   `[]`, so **the entire entry-shape rule set is unreached by live data**. Without this control the
-   gate is coverage in name only, which is the PLA-114 / PLA-162 failure mode the convention exists
-   to stop.
+4. **A non-empty `critical_warnings` at all, AND an `[]` one.** Under the rulings every certified
+   crop ships **`null`**, so **both** the entry-shape rule set **and** the `[]` branch are unreached
+   by live data. Two fixtures, not one: a crop with `[]` and a crop with entries, each asserted to
+   pass rule 1 and each asserted to be distinguishable from `null` by the gate's own reader.
+   Without these the gate is coverage in name only, which is the PLA-114 / PLA-162 failure mode the
+   convention exists to stop.
+5. **A `null` that is not silently coerced.** The one control the D2 reversal adds: a driver that
+   sets a certified crop's `critical_warnings` to `[]` where the spec says `null` must **redden**,
+   and vice versa. A gate that accepts all three states without distinguishing them would pass both
+   mutations, which would make rule 1 look like coverage while enforcing nothing about which state
+   a promote wrote. This is the `refusal-spec` pass in its useful form: prove the reader can tell
+   `null` from `[]` before trusting any claim that the promote wrote the right one.
 
 ### 7.4 Release
 
@@ -465,7 +636,7 @@ known pre-existing failures read, not counted.
 
 ## 8. D5: consumers
 
-### 8.1 The allowlist line first, and it is stronger than "silently dropped"
+### 8.1 The `critical_warnings` allowlist line first, and it is stronger than "silently dropped"
 
 `critical_warnings` is a top-level key, and plant-app's `scripts/export-projection.mjs` classifies
 every top-level key as SHIP or NEVER_SHIP. **Measured correction to PLA-581's framing:** an
@@ -529,48 +700,105 @@ That is testable in the consumer repos and is the honest expression of PLA-7's c
   balcony warning is a referral; rendering a number beside it would fabricate the claim.
 - No em dashes in any rendered copy.
 
+### 8.5 `container_safety`'s consumer line is NOT an allowlist entry, and it lands in the OTHER order
+
+Ruling 1 says `container_safety` "needs its own allowlist line too". It needs its own consumer line,
+and measurement says the mechanism is different from `critical_warnings`, in a way that **reverses
+the ordering**. Both facts matter to whoever schedules the app work.
+
+**`SHIP_TOP_LEVEL` governs top-level CROP keys only.** `projectRoster` iterates `Object.entries(crop)`
+over the crops array. A top-level **dataset** key never reaches it. There are 19 top-level dataset
+keys on `1721208e` (`source_catalog`, `zone_frost_data`, `control_methods`,
+`pesticide_safety_education`, `soil_education`, ...), and **none of them appears in
+`SHIP_TOP_LEVEL`.**
+
+**The real mechanism is an explicit read and emit**, and the closest precedent is the one this
+warning most resembles, `pesticide_safety_education`. In `plant-app/scripts/build-guides-data.mjs`:
+
+```js
+const rawMethods = raw.control_methods;              // :196
+const rawSafety  = raw.pesticide_safety_education;   // :197
+if (!rawMethods) throw new Error('control_methods missing from dataset; ...');          // :199
+if (!rawSafety)  throw new Error('pesticide_safety_education missing from dataset; ...'); // :202
+emit(CONTROL_OUT, JSON.stringify({ methods, safety }));                                  // :235
+```
+
+**The ordering is the opposite of `critical_warnings`, and this is the part that bites:**
+
+| key | mechanism | must land | why |
+|---|---|---|---|
+| `critical_warnings` | `SHIP_TOP_LEVEL` entry | **BEFORE** the dataset promote | an unclassified crop key makes `projectRoster` throw |
+| `container_safety` | explicit read + emit in `build-guides-data.mjs` | **AFTER** the dataset promote | the precedent pattern throws on a **missing** dataset key |
+
+Two ways to run it, and the second is recommended: land the `SHIP_TOP_LEVEL` line early and the
+`container_safety` read late, in two app commits either side of the promote; **or** write the
+`container_safety` read with a tolerant guard (`raw.container_safety ?? null`, render nothing when
+absent) so both app lines can land together before the promote and neither build ever breaks. The
+tolerant form is what astro already does for this class of key, and it makes the app safe in both
+directions.
+
+**plant-astro needs nothing first, for either key.** It reads dataset-level sections directly through
+`loadDatasetRaw()` with a nullish fallback already in the idiom, for example
+`((await loadDatasetRaw()).control_methods ?? {})` at `IndoorGuide.astro:63`. Both `critical_warnings`
+and `container_safety` are inert there until a component reads them.
+
 ---
 
-## 9. The authorable population under the recommendation
+## 9. The authorable population under the rulings
 
 | what | count |
 |---|---|
-| Certified crops carrying `critical_warnings: []` | **121** |
+| Certified crops carrying `critical_warnings: null` (**not assessed**) | **121** |
+| Certified crops carrying `[]` (**assessed, none found**) | **0**, and that is the point: PLA-142 earns each one |
 | Certified crops carrying a non-empty `critical_warnings` | **0** |
 | Shells carrying the key at all | **0** of 7 |
 | Warnings authored into top-level `container_safety` | **3** (`balcony_load`, `container_material`, `hanging_security`) |
+| Candidates **cut** by the 4.5 evidence test | **3** (mosquito, the lifting warning, any pounds figure) |
+| Distinct T1 sources across the 3 kept warnings | **4** reads across 2 institutions (`uiuc_ext` x3, `csu_ext` x1) |
 | Crops those 3 render on | **110** (`container_ok: true`) |
 | Tip-over prose left where it is, to be rendered by PLA-586 / PLA-539 | **18 crops** |
 | `field_additions` provenance records | **3**, one per shared warning |
 
-Under Option A instead: 330 entries across 110 crops, 3 `field_additions` records or 330 depending on
-how provenance is scoped, and a copy obligation on every future crop.
+**The promote writes 121 nulls and one object.** It is the smallest content promote in the arc, and
+the whole of its risk is in the gate and the three-state rule, not in the bytes.
 
 ---
 
 ## 10. Sequencing
 
-1. **Done:** this spec. Held for your read. Canonical unmoved.
-2. **Your rulings on D1 through D5.** D1 is the one that changes the size of the work.
+1. **Done:** this spec, amended once for the rulings. Held for a second read. Canonical unmoved.
+2. **Done:** your rulings on D1 through D5 (section 0). One item is returned to you rather than
+   closed: the tip-over app rule in 4.2, which has no input to fire on.
 3. **PLA-466's promote lands first**, on canonical `1721208e`. PLA-580's promote follows.
-4. **plant-app allowlist line** (`'critical_warnings'` into `SHIP_TOP_LEVEL`) lands **before** the
-   dataset promote, or the app's export build breaks on the next run.
+4. **The two plant-app consumer lines** (8.5), which are different mechanisms with **opposite**
+   ordering: `'critical_warnings'` into `SHIP_TOP_LEVEL` **before** the promote, and the
+   `container_safety` read in `build-guides-data.mjs` **after** it, unless the read is written with
+   a tolerant guard, which is the recommended form and lets both land together beforehand.
 5. **The PLA-581 promote, a later session, against whatever canonical PLA-466 and PLA-580
    produce** -- explicitly **not** `1721208e`, which will be stale. That session **re-measures its
    base and re-runs section 12's dataset counts before authoring**, because every count here was
    taken on `1721208e`. Then: the A61 gate (shape armed, presence floor disarmed), the
-   `register_completeness` `title` ruling, the suite, the harness with all four named positive
+   `register_completeness` `title` ruling, the suite, the harness with all five named positive
    controls, the 3 `container_safety` warnings, `field_additions` records, gauntlet on a scratch
    post-state, HOLD for approval, then the canonical write with `--expect-sha` and
    `A61_PRESENCE_ARMED = True` in the same commit.
 6. **Register row 32** (30 is the highest live; PLA-580 takes 31). Same collision caveat as the gate
-   id.
+   id. **The row must document all three states**, per ruling 2; that is the part that stops this
+   field becoming another `growth_stages_annual`.
 7. **plant-astro (PLA-586)** builds the card to 8.4, itself blocked on PLA-535's submodule bump.
-8. **PLA-142 notified that the shape is fixed** for its `harvest` class, including that it inherits
-   the four positive controls in 7.3 and owes the overlap pass against `tips_by_stage` and
-   `failure_diagnostics` that this spec does not touch.
-9. **Close PLA-581** with the record: the measured absence of any per-crop container-safety datum,
-   where the three shared warnings live, and the render contract.
+   Its contract and PLA-539's both gain the experience-mode rule in its checkable form (8.3):
+   **no `.seasoned-only` or `.beginner-only` wrapper may hide a safety block.**
+8. **PLA-142 notified that the shape is fixed** for its `harvest` class, and that it inherits three
+   things: the five positive controls in 7.3, the overlap pass against `tips_by_stage` and
+   `failure_diagnostics` that this spec does not touch, and **the `null` -> `[]` transition**. Every
+   crop it assesses and finds clean moves from "not assessed" to "assessed, none found", which is
+   the work ruling 2 exists to keep honest and is also a free progress metric for that arc.
+9. **PLA-10 and PLA-7 notified** of 4.2: the wind-and-support app rule has no input in the dataset
+   today (`height_inches` 0 occurrences, `planting_layout` `vertical` 0 occurrences,
+   `footprint_inches` non-empty on 0, `mature_height_ft` null on all 18 tip-over crops).
+10. **Close PLA-581** with the record: the measured absence of any per-crop container-safety datum,
+    the three-state encoding and why `[]` on 121 was refused, where the three shared warnings live,
+    and the render contract.
 
 ---
 
@@ -578,7 +806,7 @@ how provenance is scoped, and a copy obligation on every future crop.
 
 PLA-142's **`harvest` class** and its overlap pass against `tips_by_stage` and `failure_diagnostics`;
 **green-roof structural figures** (Penn State), which are an engineered assembly and do not transfer
-to a pot; **mosquito control in container water gardens** (Illinois), a different product with its
+to a pot; **mosquito control in container water gardens** (Illinois), formally CUT, evidence in 4.5, a different product with its
 own page; the **`csu_ext` lifting warning** (4.4, a decision recorded rather than an omission); the
 **94 saucer sentences**, which are root-rot guidance and correctly placed where they are; the **18
 tip-over prose sentences**, left where they are for PLA-586 and PLA-539 to render (4.2);
@@ -659,9 +887,43 @@ gallon**, that is the citable figure": no such figure was found in any source re
 refers the question to an architect instead. (d) "`[]` is the common, legitimate value" is endorsed
 and sharpened in 5.2: `[]` is the **only** empty value, and `null` becomes a violation.
 
+**Measured for amendment 1 (2026-09-21, same canonical).**
+
+*The tip-over app rule's inputs.* On the 18 tip-over crops: `mature_height_ft` is `null` on **all
+18**; `container_path` is `direct` on **all 18** (a value shared by 86 of 121). The 16 crops that do
+carry a height are `apple`, `blueberry`, `elderberry`, `fig`, `lavender`, `lemon`, `mulberry`,
+`nectarine`, `oregano`, `pawpaw`, `peach`, `persimmon`, `pomegranate`, `rosemary`, `sage`, `thyme`;
+**the intersection with the 18 is empty**. The inputs PLA-7's D3 actually names fare no better:
+`height_inches` **0** occurrences dataset-wide, `"vertical"` **0** occurrences,
+`planting_layout` present on **6** crops with every value `"block"`, `footprint_inches` key present
+on 121 and non-empty on **0**.
+
+*Top-level dataset keys.* **19** on `1721208e`: `crops`, `version`, `schema_version`,
+`versioning_note`, `zone_frost_data`, `zone_sources`, `sources_schema_note`, `total_crops`,
+`source_catalog`, `previous_remediations`, `last_remediation`, `soil_education`, `ph_education`,
+`region_source_map`, `region_chill_delivered`, `region_chill_delivered_provenance`,
+`control_methods`, `pesticide_safety_education`, `uscrn_soil_temp`. **None of them appears in
+`SHIP_TOP_LEVEL`**, which confirms that allowlist governs crop keys only. `pesticide_safety_education`
+is the nearest precedent for `container_safety` in both kind and mechanism.
+
+*The dataset-level consumer mechanism.* plant-app `scripts/build-guides-data.mjs`: `raw.control_methods`
+at `:196`, `raw.pesticide_safety_education` at `:197`, throws on a missing key at `:199` and `:202`,
+emits at `:235`; `raw.region_chill_delivered` at `:107` with the same throw at `:109` and emit at
+`:111`. plant-astro `src/components/guides/IndoorGuide.astro:63` reads
+`((await loadDatasetRaw()).control_methods ?? {})`, the tolerant idiom.
+
 **Corrections recorded against this document's own drafts.** (i) An early pass counted 18 tip-over
 crops using a net that matched `potato` and `sweet-potato` on "harvest by **tipping out** the bag",
 a harvest action rather than a hazard; the narrowed net excludes both and picks up `banana-pepper`
 and `bell-pepper`, landing on 18 again for different reasons. The coincidence is recorded so the
 number is not mistaken for a stable count under any net. (ii) A wind net returned 8 crops, of which
 4 are the corn crops describing wind **pollination**; the tip-plus-wind population is 4.
+(iii) **The first draft's D2 was wrong** and section 5.2 says so against itself: it recommended `[]`
+on all 121 with `null` a violation, which would have written an unsourced negative into every record
+for a class (`harvest`) nobody has assessed. It reasoned about the `safety` class and generalized to
+a two-class field. (iv) The same draft read `growth_stages_annual`'s three states as evidence that a
+third state is incoherent; the defect there is that its `null` was **never documented**, and 5.1 is
+amended to say so. (v) The first draft said `container_safety` "needs whatever the app's
+dataset-level projection does ... one line to check in the app session"; measured, there is no
+dataset-level projection at all, and 8.5 now gives the mechanism and the **reversed ordering** that
+finding produces.
