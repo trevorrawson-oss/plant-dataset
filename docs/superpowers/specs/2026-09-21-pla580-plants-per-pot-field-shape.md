@@ -11,7 +11,25 @@ given. **Read with:** PLA-580, PLA-7 (D3), PLA-409, PLA-533, PLA-539, PLA-586, P
 correction he caught (section 4.1) and six rulings, listed in 3.1. **Amendment 2** (same day, his
 read of amendment 1): four further amendments, listed in 3.2, of which the largest is that the
 planner's extrapolation beyond a reading's own pot size is **modeled, not sourced**, and is written
-down as such.
+down as such. **Amendment 3** (same day): Trevor ruled the `min_pot_gallons` semantics; section 5.2
+is now that ruling, with the measurement kept as its evidence.
+
+---
+
+> ## HANDOFF
+>
+> **APPROVED** by Trevor 2026-09-21, as amended at `ad99d9c`.
+>
+> **RULED, same day:** `min_pot_gallons` means **the smallest pot for the crop, not a per-plant
+> volume**. Where no `plants_per_pot` reading exists, the planner's fallback is **one plant per
+> `min_pot_gallons` pot** -- today's behavior, and the conservative one. Section 5.2.
+>
+> **PROMOTE NOT BUILT, and not to be built yet.** PLA-466's promote lands first on canonical
+> `1721208e`. The PLA-580 promote is built in a **later session against whatever canonical PLA-466
+> produces**, not against `1721208e`. Section 10.
+>
+> **This branch is docs only.** Canonical does not move; nothing in this arc has written a byte of
+> `crops_data_final.json`.
 
 **The headline.** The 2026-09-06 sketch assumed a count could be bound to `min_pot_gallons`. It
 cannot. Measured against raw bytes, the dataset's `min_pot_gallons` disagrees with the pot size
@@ -23,8 +41,8 @@ would already render the error.
 **The second headline.** Switching the planner to the new field is **not** direction-neutral.
 Measured, **every one of the ten Illinois readings is more permissive than `min_pot_gallons`**, by
 2.0x to 10.0x, with no exceptions. That is the dangerous direction, and it is why ruling 3 holds the
-switch to `count > 1` rows. Section 5.2 records what that unbroken pattern may mean, as a hypothesis
-for PLA-533 rather than a conclusion.
+switch to `count > 1` rows. That unbroken pattern is what prompted the semantics ruling in section
+5.2.
 
 ---
 
@@ -275,6 +293,12 @@ in prose. One unit, no converter, no inferred volume from a diameter.
 | 3 | `at_gallons` is **always `[lo, hi]`**, `lo == hi` for a single size. One type per field. The conservative reader takes `hi` | 1, 3, 6, 8 |
 | 4 | The planner divides by **`count[min]`**, the conservative end. This is the contract; the first draft's `count[max]` is superseded | 4.2, 8 |
 
+### 3.3 Trevor's ruling, amendment 3
+
+| # | ruling | applied in |
+|---|---|---|
+| 1 | **`min_pot_gallons` is the smallest pot for the crop, not a per-plant volume.** With no reading, the planner charges **one plant per `min_pot_gallons` pot**: today's behavior, the conservative one | 4.2, 5.2, 7.2 step 0 |
+
 ---
 
 ## 4. D2, meaning: a per-pot capacity at a stated size. RULED
@@ -338,11 +362,16 @@ The planner uses the field **only when a crop has at least one reading whose `co
 count-1 row and does switch.
 
 The reason is ruling 3's: on a count-1 row the field carries no capacity information the planner did
-not already have (one plant, one pot), so the only thing switching would do is **replace an
-unaudited number with a different unaudited number, in the more permissive direction**. PLA-533
-owns the audit of `min_pot_gallons`; until it reports, this arc does not quietly overwrite its
-output. Section 5 shows the switch would be more permissive on **all seven** unambiguous count-1
-readings, which is what makes the hold worth having.
+not already have (one plant, one pot), so the only thing switching would do is **replace one
+whole-container figure with another, in the more permissive direction**. Section 5 shows the switch
+would be more permissive on **all seven** unambiguous count-1 readings, which is what makes the hold
+worth having. PLA-533 still owns the per-figure provenance audit, and ruling 3 leaves it free to
+move those numbers without this field having overridden them first.
+
+**The fallback, stated once (section 5.2's ruling).** Where a crop has **no reading at all** -- 114
+of 121 certified crops after this pass -- the planner charges **one plant per `min_pot_gallons`
+pot**. That is today's behavior and the conservative one, and it is now the ruled meaning rather
+than an accident of the code.
 
 ### 4.3 Conflicting readings (ruling 2)
 
@@ -449,26 +478,38 @@ capacity-by-area is now a live question on PLA-10.
 inside a roster count. If either reads wrong in the app, the honest lever is a second T1 reading that
 restrains it, or PLA-10's area model, not a fudge factor on the first.
 
-### 5.2 A hypothesis for PLA-533, not a conclusion (amendment 2)
+### 5.2 RULED: what `min_pot_gallons` means (Trevor, 2026-09-21)
 
-**Ten of ten Illinois readings are more permissive than `min_pot_gallons`, by 2.0x to 10.0x, with no
-exceptions.** A pattern that unbroken is unlikely to be ten independent authoring differences.
+> **`min_pot_gallons` is the smallest pot for the crop. It is not a per-plant volume.**
+>
+> **Where no `plants_per_pot` reading exists, the planner's fallback is one plant per
+> `min_pot_gallons` pot** -- today's behavior, and the conservative one.
 
-**The hypothesis:** `min_pot_gallons` is, and was authored as, *the minimum pot for the crop* --
-a whole-container figure -- rather than *a per-plant root volume*. Illinois' sizes are also
-whole-container figures but for smaller pots, so the gap would be a mixture of genuinely different
-pots and a semantic mismatch. If that is right, then **PLA-409's per-plant reading of
-`min_pot_gallons` is the original error**, and this field is exposing it rather than introducing it.
-PLA-7's own kickoff records the same tension from the other side: it says the app consumes
-`min_pot_gallons` "PER PLANT" and that "that per-plant semantics is written nowhere in the dataset
-and must be", while the 2026-09-06 spec section 4 defines the field as the pot holding
-`plants_per_pot` plants. Two documents, two meanings, and no source read.
+This settles a question the arc had been carrying in two contradictory documents, and it is a
+**semantics ruling, not an audit result**. The per-figure provenance of the 102 authored numbers is
+still PLA-533's work, now as backfill against a meaning that is fixed.
 
-**This is offered as a hypothesis for PLA-533 to test, not as a finding.** This session did not read
-the provenance of a single `min_pot_gallons` figure, and PLA-533 owns exactly that. Recorded here
-and as a comment on PLA-533 so the audit has a specific thing to look for: whether the authored
-figures behave like whole-container minimums or like per-plant volumes, and whether any source was
-ever read per-plant. Nothing in this spec depends on the answer, which is the point of ruling 3.
+**The evidence that prompted it.** Ten of ten Illinois readings are more permissive than
+`min_pot_gallons`, by 2.0x to 10.0x, with no exceptions (section 5 table). A pattern that unbroken
+is unlikely to be ten independent authoring differences. It is what a whole-container figure
+compared against other, smaller whole-container figures looks like: Illinois' sizes are also
+whole-container, for smaller pots, so the gap is part genuinely different pots and part semantic
+mismatch.
+
+**What the ruling settles.** PLA-7's kickoff says the app consumes `min_pot_gallons` "PER PLANT" and
+that "that per-plant semantics is written nowhere in the dataset and must be"; the 2026-09-06 spec
+section 4 defines it as the pot holding `plants_per_pot` plants. Two documents, two meanings, no
+source read. **The second is now the ruled one**, which means **PLA-409's per-plant reading was the
+original error**, and this field exposes it rather than introducing it. Nothing in this arc has
+written that error into data: PLA-409's arithmetic lives in the app, and ruling 3 keeps the planner
+on `min_pot_gallons` for every count-1 row regardless.
+
+**What follows for each consumer.** The fallback is stated in 4.2 and in the planner contract at
+7.2, so the app's container code carries the same sentence as this spec. A pot with no reading is
+one plant; a pot with a reading is priced by 4.2's formula. There is no third case.
+
+**What does not follow.** No figure changes here. The ruling does not re-author, re-derive or
+re-read a single `min_pot_gallons` value, and this spec still touches none of them (section 1).
 
 ---
 
@@ -519,8 +560,12 @@ look less cautious than it is).
 
 Stated for PLA-539 to implement:
 
+0. **The ruled meaning, which the container code should state in a comment** (5.2):
+   `min_pot_gallons` is **the smallest pot for the crop, not a per-plant volume**. With no reading,
+   the charge is **one plant per `min_pot_gallons` pot**. This is the fallback, it is today's
+   behavior, and it is the conservative one.
 1. Parse `container_notes.plants_per_pot.readings`. Absent, `null`, and an empty list all mean the
-   same thing: **no readings, behave exactly as today.**
+   same thing: **no readings, fall back to step 0.**
 2. Per reading, conservative gallons per plant = `at_gallons[1] / count[0]` (4.2).
 3. **Switch predicate:** use the field only if some reading has `count != [1, 1]`. Otherwise keep
    `min_pot_gallons` (4.2, ruling 3).
@@ -653,29 +698,35 @@ against the source the block already cites, which is a separate pass.
 
 ## 10. Sequencing
 
-1. **Now:** this spec, amended twice, held for Trevor's read. No promote.
-2. **Promote:** A60 gate (shape armed, presence floor disarmed), suite, harness with both named
-   positive controls, the 8 readings in section 9, `field_additions` records, gauntlet on a scratch
-   post-state, HOLD for approval, then the canonical write with `--expect-sha` and
-   `A60_PRESENCE_ARMED = True` in the same commit.
-3. **plant-app (PLA-539):** the contract in 7.2, including the `count[0]` divisor, the modeled-rule
-   comment, and the object-reads-null regression test. Safe before or after the data lands, because
-   the object shape reads null until then.
-4. **plant-astro (PLA-586):** 7.3, itself blocked on PLA-535's submodule bump.
-5. **PLA-533** may move `min_pot_gallons` under the count-1 rows, and 5.2 gives it a hypothesis to
-   test. Nothing in this field depends on its outcome, which is the point of ruling 3.
-6. **PLA-10** carries the capacity-by-area question from 4.4.
-7. **Close PLA-580** with the record: the binding, the 8 readings, section 5's finding that the
-   measured effect is two crops both loosened, and 4.4's line between what is sourced and what is
-   modeled.
+1. **Done:** this spec, amended three times, **approved** 2026-09-21 and merged to `main` as docs.
+   Canonical unmoved.
+2. **PLA-466's promote lands first**, on canonical `1721208e`.
+3. **Promote, a LATER session, against whatever canonical PLA-466 produces** -- explicitly **not**
+   against `1721208e`, which will be stale by then. That session re-measures its base, re-pins
+   `promote_fixture.COMMIT_FOR`, and re-runs section 12's dataset measurements before authoring,
+   because the counts in this document were taken on `1721208e`. Then: A60 gate (shape armed,
+   presence floor disarmed), suite, harness with both named positive controls, the 8 readings in
+   section 9, `field_additions` records, gauntlet on a scratch post-state, HOLD for approval, then
+   the canonical write with `--expect-sha` and `A60_PRESENCE_ARMED = True` in the same commit.
+4. **plant-app (PLA-539):** the contract in 7.2, including the ruled meaning at step 0, the
+   `count[0]` divisor, the modeled-rule comment, and the object-reads-null regression test. Safe
+   before or after the data lands, because the object shape reads null until then.
+5. **plant-astro (PLA-586):** 7.3, itself blocked on PLA-535's submodule bump.
+6. **PLA-533** carries the per-figure provenance audit as **backfill against 5.2's ruled meaning**.
+   It may move `min_pot_gallons` values; nothing in this field depends on the outcome, which is the
+   point of ruling 3.
+7. **PLA-10** carries the capacity-by-area question from 4.4.
+8. **Close PLA-580** with the record: the binding, the 8 readings, section 5's finding that the
+   measured effect is two crops both loosened, 4.4's line between what is sourced and what is
+   modeled, and 5.2's ruling.
 
 ---
 
 ## 11. Out of scope, by name
 
-`min_pot_gallons` semantics and PLA-533's provenance audit of the 102 figures (5.2 hands it a
-hypothesis, not an answer); **capacity-by-area as the governing constraint for multi-plant pots,
-which is PLA-10's** (4.4); the strawberry diameter count and any diameter-to-volume conversion; the
+PLA-533's **per-figure provenance audit** of the 102 `min_pot_gallons` values (5.2 rules the
+*semantics*; the audit of each number is backfill and stays PLA-533's); **capacity-by-area as the
+governing constraint for multi-plant pots, which is PLA-10's** (4.4); the strawberry diameter count and any diameter-to-volume conversion; the
 18 prose counts as an authoring source; `critical_warnings` (PLA-581, Plan D); the 88 unmatched
 cultivar names (Plan B); the astro card itself (PLA-586); the app changes themselves (PLA-539).
 
@@ -731,8 +782,9 @@ size; the spec says it carries narrative counts only. (b) The prose-count popula
 (c) The lettuce worked example's arithmetic matches neither the dataset (`min_pot_gallons` is 1, not
 2) nor the source (0.25 conservative, not 0.33). (d) PLA-580's summary line renders
 `min_pot_gallons` semantics as "per plant"; the spec's own section 4 says a pot holding
-`plants_per_pot` plants. The app implements the spec, not the summary. 5.2 records that this
-disagreement may be the arc's original error rather than a wording slip.
+`plants_per_pot` plants. The app implements the spec, not the summary. **5.2 rules the second
+reading correct**, which makes PLA-409's per-plant arithmetic the arc's original error rather than a
+wording slip.
 
 **Corrections recorded against this document's own drafts.** (i) "Dividing by 1 changes nothing" was
 false under D2; see 4.1. (ii) The first draft divided by `count[max]`; amendment 4 makes `count[min]`
