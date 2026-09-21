@@ -4,6 +4,26 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-09-20 -- PLA-465 MANDARIN UCR ANCHOR REPAIR LANDED: THE SATSUMA ANCHOR ADJUDICATED CELL BY CELL, NOT WHOLESALE (`892c76fb` -> `1721208e`) [Claude Code]
+
+**Canonical `892c76fb` -> `1721208ee0cbe4249ecf32ca3bd47a786f8a689cadcb7bb300d8d8ada4d82054`.** ONE promote, one crop.
+
+**The recorded reason was too wide, and acting on it wholesale would have been a defect.** PLA-465 promote 1 surfaced "mandarin-clementine's UCR anchor is a satsuma page, the wrong scion". The page identification is right: `crc3178` is Frost Owari Satsuma, *Citrus unshiu*, re-read from raw bytes. The verdict was not. Two computed facts the record did not carry: the anchor sits on **19** cells, not one; and the crop is **not scoped to clementine** (its `varieties.note_seasoned` opens "Mandarins (Citrus reticulata and its hybrids)" and **Owari Satsuma is its FIRST recommended variety**). Eight cells make satsuma-specific claims the page carries verbatim, so a blanket repoint would have **stripped eight correct attributions in the name of fixing a citation**. Adjudicated per cell under the asparagus-R4 rule: the anchored document must contain that cell's claim.
+
+**7 REPOINTED / 8 KEPT / 1 DROPPED / 3 HELD; census 19 -> 18.** Repoints: 6 to `crc0279` (Algerian clementine), 1 to `crc3913` (Gold Nugget). Measured on `crc3178`: "clementine" 0, "Gold Nugget" 0, "Pixie" 0, "pollin" 0, "Murcott" 0. Each repoint also moves `verified` to 2026-09-20, because carrying the old date onto a new url fabricates the attribution, and the promote refuses one that keeps it.
+
+**Trevor's ruling 1 (drop), and ITS PREMISE WAS WRONG.** `failure_diagnostics[0]` loses the credit from `sources` AND `anchoring_urls`. But the claim is **not** left uncited: the cell cited two sources and retains `uhawaii_ctahr` (CTAHR F&N-14, read from raw bytes), which **carries the colour half verbatim** ("In areas with cooler nights, the fruits turn bright orange upon ripening") and **CONTRADICTS the sugar half**, attributing low sugar to cooler HIGH elevations. The finding names unsupported and contradicted as **different states**, on Trevor's instruction, so a later pass does not read the first and assume the second was checked. The owed T1 read is therefore narrower than commissioned (the sugar mechanism, not a re-citation) and was NOT done. No gate refused the cell; had the drop left it at zero sources the promote itself refuses, by an encoded guard with a driver and a mutation.
+
+**Trevor's ruling 2 (hold).** The three `ca_south_coast` cells stay on `crc3178`: the claim spans two accessions and one url per source key cannot hold both ends. Recorded and routed to **PLA-559**, linked to plum's `plum_self_fertile_boolean_european_default` as the same family -- *one record, two types, a single-value shape that breaks wherever they diverge*.
+
+**A NEAR-MISS, and the guard it produced.** A **fabricated sha256** went into a staged finding after only its first 16 characters had been measured; the other 48 were invented to fill the field. Caught by recomputation before any run. The promote now refuses any 64-hex token in the spec that is not a member of `EVIDENCE_HASHES`, the digests this session actually measured.
+
+**FOUR guards were found UNREACHABLE and REMOVED rather than shipped as coverage** -- no-op repoint; addenda count; `KEY` left in the dropped cell's `anchoring_urls` (since `census()` IS that predicate); post-census count. Two were found on the re-stage, one of them by the harness reporting a **SURVIVOR**. Each is a comment saying why it is absent plus a driver pinning which guard does catch the case.
+
+**Armor and gauntlet.** Suite **101**; harness **83 injected / 83 caught / 0 survived / 0 broken**, positive control the WHOLE suite. On the landed bytes: `gate_all` **121/121**; `plant_dimensions_gate --presence` 0 / 121 of 128 / 16 authored / ARMED; register gates PASS; `release_verify` clean in every section; collision gate **36 / 24 / 12** hold. Full `tools/` tree **5763 passed / 2 failed / 1 skipped**, both failures PRE-EXISTING on the untouched base and read, not counted: `bare_host_scan`'s pinned population (filed **PLA-544**, carrying Trevor's convention that a known-failing test must be pinned to its population, since red-and-growing is a new defect wearing an old failure's name), and `cited_claim_scan`'s cache-coverage refusal.
+
+**Write-up:** `docs/2026-09-18-pla465-mandarin-ucr-anchor-repair.md`. **Owed:** the A59 N/A predicate on `cane_type`; PLA-543; the narrowed climate read (not ticketed); **oregano's `uarizona_ext` anchor is *Lippia graveolens*, a different genus, same defect class, still unrepaired.**
+
 ## 2026-09-18 (later) -- A59 GAINS A COVERAGE RULE: A WOODY NULL MUST BE CANE-FRUIT N/A OR EXPLAINED BY A RECORD NAMING THE FIELD (canonical UNCHANGED at `892c76fb`) [Claude Code]
 
 **TOOLING ONLY. No canonical byte changed; `LATEST.txt` not bumped.** This is the A59 N/A predicate the promote-2 findings recorded as owed, built as the last item of the PLA-465 arc.

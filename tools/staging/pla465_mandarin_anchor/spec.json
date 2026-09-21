@@ -1,0 +1,121 @@
+{
+ "_what": "PLA-465 owed repair, RE-STAGED 2026-09-20 on Trevor's two rulings. mandarin-clementine's ucr_citrus anchor was crc3178, the Frost Owari Satsuma accession, on all 19 cells citing that key. Adjudicated cell by cell against raw bytes. 7 cells whose claim names another cultivar are REPOINTED. 8 satsuma-specific cells KEEP crc3178. RULING 1: failure_diagnostics[0] DROPS the ucr_citrus credit entirely (sources + anchoring_urls). RULING 2: the three ca_south_coast cells stay HELD on crc3178, with the structural finding recorded and routed to PLA-559. Two open_findings appended. No prose, no dimension value; height stays null.",
+ "base_sha": "892c76fb9e89fd9a242f682a7040a71886cb128ec899092a4f6414d2e0708edb",
+ "session": "pla465_2026-09-20",
+ "crop": "mandarin-clementine",
+ "source_key": "ucr_citrus",
+ "old_url": "https://citrusvariety.ucr.edu/crc3178",
+ "verified_before": "2026-07-02",
+ "repoints": [
+  {
+   "path": "tips_by_stage.bloom[1]",
+   "from": "https://citrusvariety.ucr.edu/crc3178",
+   "to": "https://citrusvariety.ucr.edu/crc0279",
+   "verified": "2026-09-20",
+   "why": "The cell's claim is clementine and W. Murcott seedless in isolation and seedy when cross-pollinated. crc3178 (Frost Owari Satsuma) contains the strings 'clementine' 0 times, 'Murcott' 0 times and 'pollin' 0 times. crc0279 (Algerian clementine) carries the mechanism verbatim: 'shedding is correlated with the seed content of the fruit...the bearing behavior...can be regularized by cross-pollination', followed by Chapot's ranked pollinator list."
+  },
+  {
+   "path": "tips_by_stage.ripening_harvest[1]",
+   "from": "https://citrusvariety.ucr.edu/crc3178",
+   "to": "https://citrusvariety.ucr.edu/crc3913",
+   "verified": "2026-09-20",
+   "why": "The cell's claim is that late holding types such as Gold Nugget or Pixie keep on the tree into spring, the exception to the pick-promptly rule. crc3178 contains 'Gold Nugget' 0 times and 'Pixie' 0 times, and says the opposite of its own scion: 'Fruit holds poorly on trees after maturity'. crc3913 (Gold Nugget, the cell's first-named cultivar) carries it verbatim: 'holds exceptionally well on the tree, with summer-harvested fruit still being of good quality' and 'outstanding storage characteristics both on and off the tree', with Season of ripeness at Riverside February to June."
+  },
+  {
+   "path": "regions.ca_desert.resolved_by_zone.9",
+   "from": "https://citrusvariety.ucr.edu/crc3178",
+   "to": "https://citrusvariety.ucr.edu/crc0279",
+   "verified": "2026-09-20",
+   "why": "The cell is clementine-led: harvest names clementine and late mandarins with satsuma earlier, and the note reads 'Clementine and late mandarins such as W. Murcott thrive on the heat; satsuma prefers the milder end', plus spring fruit-drop managed by steady irrigation. crc3178 is a satsuma accession and names clementine 0 times. crc0279 carries both halves verbatim: 'In regions of high total heat, the Clementine matures very early -- only slightly later than the satsuma mandarins. Such regions also favor production of fruit of maximum size and best eating quality', and for the drop, 'excessive shedding of younf fruits during the fruit-setting period' regularized by 'adequate nitrogenous fertilizer and efficiency in irrigation'."
+  },
+  {
+   "path": "regions.ca_desert.resolved_by_zone.10",
+   "from": "https://citrusvariety.ucr.edu/crc3178",
+   "to": "https://citrusvariety.ucr.edu/crc0279",
+   "verified": "2026-09-20",
+   "why": "The cell is clementine-led: harvest names clementine and late mandarins with satsuma earlier, and the note reads 'Clementine and late mandarins such as W. Murcott thrive on the heat; satsuma prefers the milder end', plus spring fruit-drop managed by steady irrigation. crc3178 is a satsuma accession and names clementine 0 times. crc0279 carries both halves verbatim: 'In regions of high total heat, the Clementine matures very early -- only slightly later than the satsuma mandarins. Such regions also favor production of fruit of maximum size and best eating quality', and for the drop, 'excessive shedding of younf fruits during the fruit-setting period' regularized by 'adequate nitrogenous fertilizer and efficiency in irrigation'."
+  },
+  {
+   "path": "regions.ca_desert.resolved_by_zone.11",
+   "from": "https://citrusvariety.ucr.edu/crc3178",
+   "to": "https://citrusvariety.ucr.edu/crc0279",
+   "verified": "2026-09-20",
+   "why": "The cell is clementine-led: harvest names clementine and late mandarins with satsuma earlier, and the note reads 'Clementine and late mandarins such as W. Murcott thrive on the heat; satsuma prefers the milder end', plus spring fruit-drop managed by steady irrigation. crc3178 is a satsuma accession and names clementine 0 times. crc0279 carries both halves verbatim: 'In regions of high total heat, the Clementine matures very early -- only slightly later than the satsuma mandarins. Such regions also favor production of fruit of maximum size and best eating quality', and for the drop, 'excessive shedding of younf fruits during the fruit-setting period' regularized by 'adequate nitrogenous fertilizer and efficiency in irrigation'."
+  },
+  {
+   "path": "regions.low_desert_az.resolved_by_zone.9",
+   "from": "https://citrusvariety.ucr.edu/crc3178",
+   "to": "https://citrusvariety.ucr.edu/crc0279",
+   "verified": "2026-09-20",
+   "why": "The cell is clementine-led: harvest names clementine and late mandarins with satsuma earlier, and the note reads 'Clementine and late mandarins such as W. Murcott thrive on the heat; satsuma prefers the milder end', plus spring fruit-drop managed by steady irrigation. crc3178 is a satsuma accession and names clementine 0 times. crc0279 carries both halves verbatim: 'In regions of high total heat, the Clementine matures very early -- only slightly later than the satsuma mandarins. Such regions also favor production of fruit of maximum size and best eating quality', and for the drop, 'excessive shedding of younf fruits during the fruit-setting period' regularized by 'adequate nitrogenous fertilizer and efficiency in irrigation'."
+  },
+  {
+   "path": "regions.low_desert_az.resolved_by_zone.10",
+   "from": "https://citrusvariety.ucr.edu/crc3178",
+   "to": "https://citrusvariety.ucr.edu/crc0279",
+   "verified": "2026-09-20",
+   "why": "The cell is clementine-led: harvest names clementine and late mandarins with satsuma earlier, and the note reads 'Clementine and late mandarins such as W. Murcott thrive on the heat; satsuma prefers the milder end', plus spring fruit-drop managed by steady irrigation. crc3178 is a satsuma accession and names clementine 0 times. crc0279 carries both halves verbatim: 'In regions of high total heat, the Clementine matures very early -- only slightly later than the satsuma mandarins. Such regions also favor production of fruit of maximum size and best eating quality', and for the drop, 'excessive shedding of younf fruits during the fruit-setting period' regularized by 'adequate nitrogenous fertilizer and efficiency in irrigation'."
+  }
+ ],
+ "field_addition": {
+  "field": "ucr_citrus_anchor",
+  "date": "2026-09-20",
+  "sources": [
+   "ucr_citrus"
+  ],
+  "note": "PLA-465 owed repair, re-staged on Trevor's rulings of 2026-09-20. The crop cited ucr_citrus at https://citrusvariety.ucr.edu/crc3178 on all 19 cells carrying that key; crc3178 is the Frost Owari Satsuma accession (Citrus unshiu Marcovitch, CRC 3178), read 2026-09-18 from raw bytes, 235255 bytes, sha256 3a610c2fc8a9b4762a3a4787723db9e7bb678029979077cf282a008db2b47547. The crop is scoped to mandarins broadly and Owari Satsuma is its first recommended variety, so the anchor is NOT uniformly wrong: 8 cells make satsuma-specific claims the page carries verbatim ('Fruit holds poorly on trees after maturity and must be picked promptly but stores well') and keep it. 7 cells whose claim is about another cultivar are repointed: 6 to https://citrusvariety.ucr.edu/crc0279 (Algerian clementine, Citrus clementina, 113471 bytes, sha256 e64774ebf68e70424aed0377b1e36231213cbf203b2d246bd71ce3f00bfd2e30) and 1 to https://citrusvariety.ucr.edu/crc3913 (Gold Nugget mandarin, 141796 bytes, sha256 60703aa3d2d0d5cf1308211c4f0e5ca409fd2237cc1e4356cba042b99da5725c). 1 cell DROPS the credit entirely (failure_diagnostics[0]: no UCR accession page carries its climate claim). 3 cells stay HELD on crc3178 by ruling (ca_south_coast 9, 10, 11: the claim spans two accessions and one url per source key cannot hold both; routed to PLA-559). Height is unaffected and stays null: crc0279 describes the clementine tree only as 'Tree medium in vigor and size, spreading and round-topped', with 'feet' appearing 0 times, which re-verifies the PLA-465 ruling rather than changing it."
+ },
+ "addendum": {
+  "id": "mandarin_clementine_plant_dimensions_unusable_anchor_pla465",
+  "mark": " [ADDENDUM 2026-09-20, PLA-465:",
+  "suffix": " [ADDENDUM 2026-09-20, PLA-465: the satsuma-anchor defect this record names has been adjudicated cell by cell and resolved. crc3178 was cited on 19 cells; it is the Frost Owari Satsuma accession, re-verified from raw bytes. It is not uniformly the wrong scion: this crop covers mandarins broadly and Owari Satsuma is its first recommended variety, so 8 cells whose claims the page carries verbatim KEEP it. 7 cells whose claim is about another cultivar were repointed (6 to crc0279 Algerian clementine, 1 to crc3913 Gold Nugget). 1 cell DROPPED the credit (failure_diagnostics[0]; see mandarin_clementine_climate_claim_citation_pla465). 3 cells stay on crc3178 by ruling because their claim spans two accessions (see mandarin_clementine_region_span_single_anchor_pla465, routed to PLA-559). The height ruling in this record is UNCHANGED and was re-verified: crc0279 gives the clementine tree only as 'medium in vigor and size' and states no figure in feet.]"
+ },
+ "expected": {
+  "repoints": 7,
+  "to_crc0279": 6,
+  "to_crc3913": 1,
+  "keeps": 8,
+  "dropped": 1,
+  "held": 3,
+  "cells_before": 19,
+  "cells_after": 18,
+  "findings": 2
+ },
+ "drop": {
+  "path": "failure_diagnostics[0]",
+  "source_key": "ucr_citrus",
+  "from": "https://citrusvariety.ucr.edu/crc3178",
+  "why": "crc3178 contains the string 'green' 0 times and says nothing about diurnal range; the cell's claim is that fruit stays green-skinned and low in sugar where the climate lacks a warm-day cool-night swing. No UCR accession page carries that claim: it is climate-quality, which is outside ucr_citrus's own citable_for. Trevor's ruling 2026-09-20: DROP the credit rather than move it.",
+  "must_retain": [
+   "uhawaii_ctahr"
+  ]
+ },
+ "findings": [
+  {
+   "crop": "mandarin-clementine",
+   "entry": {
+    "id": "mandarin_clementine_climate_claim_citation_pla465",
+    "severity": "low",
+    "status": "accepted",
+    "blocks_launch": false,
+    "filed_in_session": "pla465_2026-09-20",
+    "summary": "failure_diagnostics[0] (fruit stays green and tart) lost its ucr_citrus credit at PLA-465's anchor repair (2026-09-20). The cited page was https://citrusvariety.ucr.edu/crc3178, the Frost Owari Satsuma accession, which contains 'green' 0 times and carries nothing on diurnal range. THE CLAIM IS NOT LEFT UNCITED, and the ruling was taken on the premise that it would be: the drop leaves uhawaii_ctahr (CTAHR F&N-14, https://www.ctahr.hawaii.edu/oc/freepubs/pdf/F_N-14.pdf, 266558 bytes, sha256 4d2a3549ec909ea85fc8be84efaea8ef3ed44ad31b4d8ee9547539c7eafaef47), read from raw bytes 2026-09-20, which carries the COLOR half verbatim: 'Fruit of citruses such as orange and tangerine usually fails to develop color when grown at Hawaii's lower elevations, and a green or green-yellow skin coloration is normal in ripe fruit. In areas with cooler nights, the fruits turn bright orange upon ripening.' THE SUGAR HALF IS NOT MERELY UNSUPPORTED, IT IS CONTRADICTED BY THE SURVIVING SOURCE, and those are different states that a later pass must not conflate. UNSUPPORTED means the page is silent and a hunt may still find the claim intact elsewhere. CONTRADICTED means the page that was actually read makes the OPPOSITE attribution, so a later hunt has to reconcile with it, not merely add to it. This is the second state. The record's claim is that fruit runs low in sugar in the warm humid lowlands for want of cool nights; CTAHR attributes low sugar to the opposite condition, cooler HIGH elevations, saying of trees grown in or above the 500 to 1000 ft range 'where cooler temperatures are common, the fruit may fail to develop high levels of sugar'. So the record joins green skin and low sugar under one diurnal-swing cause that its own cited page splits into two opposed ones. Do not read this entry as 'a citation is missing' and assume the contradiction is still unchecked: it was checked on 2026-09-20 from raw bytes, and it is a contradiction.",
+    "resolution_note": "Trevor's ruling 2026-09-20: drop the ucr_citrus credit, and do NOT run the targeted read in this promote. What that read now owes is narrower than the ruling assumed: not a re-citation of the claim, which uhawaii_ctahr already carries for color, but a T1 statement on whether the low-sugar half shares the cool-night mechanism. UF/IFAS or TAMU on citrus color break and degreening are the likely homes. Until then the sugar clause stands on the cited page's contrary attribution and should not be read as sourced.",
+    "deferred_to": null
+   }
+  },
+  {
+   "crop": "mandarin-clementine",
+   "entry": {
+    "id": "mandarin_clementine_region_span_single_anchor_pla465",
+    "severity": "low",
+    "status": "deferred",
+    "blocks_launch": false,
+    "filed_in_session": "pla465_2026-09-20",
+    "summary": "regions.ca_south_coast.resolved_by_zone 9, 10 and 11 each claim a harvest window that spans two cultivars whose evidence is on two different UCR accession pages: 'Dec - Mar (early satsuma through late Pixie and Gold Nugget)', noted as 'the home of the famous Ojai Pixie and of excellent clementine and Gold Nugget crops'. anchoring_urls holds ONE url per source key, so the ucr_citrus key cannot carry both ends. The early end is crc3178 (satsuma, ripeness Oct to Dec); the late end is crc3568 (Pixie, 'matures in late winter and holds exceptionally late on the tree') or crc3913 (Gold Nugget, ripeness February to June, which is what reaches the cell's March end). All three were read from raw bytes 2026-09-20 and none carries the span. THIS IS NOT A MANDARIN DEFECT: it reaches any region cell bounded by an early variety at one end and a late one at the other. Same family as plum_self_fertile_boolean_european_default, which states the general form as one record, two types, a single-value shape that breaks wherever they diverge.",
+    "resolution_note": "Trevor's ruling 2026-09-20: LEAVE HELD, do not repoint. Picking one accession would silently credit it for the other end's half of the claim. The three cells stay on crc3178 and the structural question is filed as its own ticket, PLA-559, linked to plum's type-aware finding as the same family. Resolve these cells under that ticket's ruling, not separately.",
+    "deferred_to": "PLA-559"
+   }
+  }
+ ]
+}
