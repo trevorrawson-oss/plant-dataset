@@ -7,9 +7,17 @@ build — never edit dataset content inside plant-astro; that copy is build plum
 it leads to stale-checkout confusion.)
 
 ## Read these first, every session
-- **CURRENT_STATE.md** — the live-state surface. Read before acting. Confirm the canonical is
-  current: `shasum -a 256 crops_data_final.json` matches `LATEST.txt`, and check `git log -1` +
-  `git status -sb`. Its header carries the binding SESSION PROTOCOL — follow it before any promote.
+- **CURRENT_STATE.md** — the live-state surface. Read before acting. **Confirm the CHECKOUT before the
+  canonical.** `shasum -a 256 crops_data_final.json` matching `LATEST.txt` is **VACUOUS ON A STALE
+  BRANCH**: the branch carries both files, so an old canonical and an old `LATEST.txt` agree perfectly
+  on the wrong base (measured 2026-09-22, PLA-464 — a checkout 5 commits behind `main` passed the
+  check at `079e3923` while canonical was really `526788f2`). Run `git fetch origin`; `git rev-parse
+  --abbrev-ref HEAD` (**must be `main`**, or a worktree branch this session deliberately opened and
+  names); `git rev-parse HEAD origin/main` (**the two SHAs must be IDENTICAL** — a stale branch is
+  also "ahead 0"); and **report the branch name**. Only then does the shasum check mean anything.
+  Also `git log -1` + `git status -sb`. If a kickoff names an expected SHA and it is absent, that
+  absence is the stop signal, whatever the shasum says. Its header carries the binding SESSION
+  PROTOCOL — follow it before any promote.
 - **STATE_HISTORY.md** — the append-only recovery log (read to reconstruct true position).
 
 ## What this is
