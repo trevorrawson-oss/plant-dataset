@@ -66,8 +66,44 @@ def launch_ready(path):
     return ready, blocked
 
 
+# ---------------------------------------------------------------- THE FLOOR
+# gate_all PASSED ON AN EMPTY POPULATION. Measured 2026-09-22: with every crop
+# decertified it printed "ran whole_crop_gate on 0 certified crop(s)" and
+# "PASS -- gate passes 0/0 certified" and exited 0. It is the gate protocol #6
+# requires before every promote and the one every landing record cites, so a
+# vacuous pass here is the most expensive one in the repo. Reporting the count
+# was never the gap -- it already did that honestly and passed anyway.
+#
+# The floor is NOT a constant: the certified count moves, so a hardcoded number
+# would either block a legitimate change or rot into a rubber stamp. It asserts
+# against the number ALREADY RECORDED in CLAUDE.md's count sentence -- the one
+# present-tense home for it, already machine-checked against canonical by
+# doc_roster_claim_gate with this module's own certified predicate. That gate's
+# parser and derived-truth function are IMPORTED, never retyped, because a
+# retyped table is how two bugs got in before.
+#
+# It fails on disagreement in EITHER direction: 0 != 121 catches a vacuous run,
+# and 120 != 121 catches a crop silently dropping out of certification.
+from doc_roster_claim_gate import COUNT_RE, roster_facts  # noqa: E402
+
+
+def recorded_certified(root="."):
+    """The certified count as CLAUDE.md states it, or None if unreadable."""
+    try:
+        m = COUNT_RE.search(open(os.path.join(root, "CLAUDE.md"), encoding="utf-8").read())
+    except OSError:
+        return None
+    return int(m.group(2)) if m else None
+
+
 def main():
-    path = sys.argv[1] if len(sys.argv) > 1 else "crops_data_final.json"
+    argv = sys.argv[1:]
+    expect = None
+    if "--expect-certified" in argv:
+        i = argv.index("--expect-certified")
+        expect = int(argv[i + 1])
+        del argv[i:i + 2]
+    path = argv[0] if argv else "crops_data_final.json"
     cert, failed = run(path)
     ready, blocked = launch_ready(path)
     print(f"gate_all: ran whole_crop_gate on {len(cert)} certified crop(s)")
@@ -93,6 +129,22 @@ def main():
 
     # "PASS" is load-bearing: tools/test_gate_all.py asserts it appears on a clean run. Both
     # numbers sit on the same line so the verdict can never be read as a launch-ready count.
+    # THE FLOOR. `expect` is for a promote whose post-state intentionally moves the
+    # count before CLAUDE.md is updated; it is explicit and shows up in the record,
+    # which a silent pass never did.
+    floor = expect if expect is not None else recorded_certified()
+    if floor is None:
+        print("gate_all: REFUSED -- no recorded certified count to check against "
+              "(CLAUDE.md count sentence unreadable). Pass --expect-certified N.")
+        sys.exit(2)
+    if len(cert) != floor:
+        src = "--expect-certified" if expect is not None else "CLAUDE.md"
+        print(f"gate_all: REFUSED -- inspected {len(cert)} certified crop(s) but {src} "
+              f"records {floor}. Disagreement in either direction is a defect: too few means "
+              f"this run inspected less than it claims, too many means the record is stale. "
+              f"A promote that intentionally moves the count passes --expect-certified N.")
+        sys.exit(2)
+
     print(f"gate_all: PASS -- gate passes {len(cert)}/{len(cert)} certified, "
           f"launch-ready {len(ready)}/{len(cert)}")
     print(f"  container-citation floor: {len(_ccf_uncited(json.load(open(path, encoding='utf-8'))))}"
