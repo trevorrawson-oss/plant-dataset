@@ -63,6 +63,78 @@ Lock the shapes already scaffolded (so they stop being undocumented null):
 - **`establishment_years`** -- int (years to first real harvest / bearing age). Distinct from the `tips_by_stage.establishment` prose stage.
 - **`pollination`** -- the relationship model (A4 below).
 
+### A2a. `rootstock_options[]` holds ROOTSTOCKS ONLY -- the Option A model (PLA-464)
+
+**Ruled by Trevor 2026-09-16 (Option A, rulings D1-D6); landed `d7b33682` -> `a98b6cfd`; recorded here
+2026-09-22 and re-measured against canonical `526788f2`.**
+
+A2 above defines the *shape* of a `rootstock_options[]` entry. It never said what may BE one, and the
+array drifted into carrying three different concepts: real rootstocks, propagation modes (the absence
+of a rootstock), and genetic-dwarf cultivars (which are varieties). The mix is what made `size_class`
+unreadable: `dwarf` meant a size-controlling rootstock on Gisela 5 and a cultivar on "Dwarf
+Everbearing", and no consumer could tell them apart.
+
+**The rule.** An entry in `rootstock_options[]` is a ROOTSTOCK: a distinct plant a scion is grafted or
+budded onto. Two classes are excluded by name:
+
+| excluded class | why it is not a rootstock | where it goes instead |
+| -- | -- | -- |
+| **propagation mode** ("Own-root (from cuttings)", "Own roots (cutting-grown)", "Own-root seedling (ungrafted)") | it asserts that no rootstock decision exists | the array goes `[]`; `rootstock_selection_basis` carries the meaning, and the one load-bearing sentence folds into `recommended_rootstock_note` |
+| **genetic-dwarf cultivar** ("Genetic dwarf (e.g. Dwarf Everbearing)", "Own-root / genetic dwarf (North Star, Meteor)") | it names a variety, not a stock | `varieties.recommended[]`, with `container_suitable` + `container_min_gallons` |
+
+Six rows were retired on five crops (fig[0], pomegranate[0], mulberry[0] and [2], pawpaw[1],
+cherry-sour[4]). A seedling stock a scion is actually grafted ONTO stays: mulberry's "Morus seedling
+(alba or rubra)" and pawpaw's "Pawpaw seedling (grafted)" are rootstocks and were kept.
+
+**Empty vs absent.** The array now carries three states, and `rootstock_selection_basis` is what
+separates the two that look alike:
+
+| `rootstock_options` | `rootstock_selection_basis` | meaning |
+| -- | -- | -- |
+| key absent | absent | the crop has no rootstock concept (annuals, berries, mushrooms). Nothing was authored and nothing is owed. |
+| `[]` | PRESENT | **authored no-rootstock**: a positive claim that this crop is not grafted onto a choice of stock. |
+| `[]` | absent | **shell**: an uncertified crop whose rootstock work has not been done. |
+| one or more entries | present or absent | a real list of stocks to choose between. |
+
+**Measured on canonical `526788f2`, 2026-09-22 -- the rule classifies every crop, with no exception:**
+
+| state | basis | cert | n | crops |
+| -- | -- | -- | -- | -- |
+| absent | absent | certified | 102 | every crop with no rootstock concept |
+| absent | absent | shell | 5 | the 5 mushrooms |
+| `[]` | PRESENT | certified | 2 | fig (`own_root`), pomegranate (`own_root_no_rootstock`) |
+| `[]` | absent | shell | 2 | avocado, olive |
+| listed | present | certified | 14 | peach, apple, lemon, plum, apricot, pear-european, pear-asian, lime, persimmon, mulberry, pawpaw, cherry-sweet, nectarine, cherry-sour |
+| listed | absent | certified | 3 | orange-navel, mandarin-clementine, grapefruit |
+
+All four `[]` crops fall in a named cell and are classified correctly: the two with a basis are
+certified, the two without are shells.
+
+**The discriminator is scoped to the `[]` population, and that scope is load-bearing.** "Basis present"
+does NOT mean "authored" in general: three certified citrus crops carry a listed array of three real
+rootstocks each and no `rootstock_selection_basis` key at all. A rule written as *basis present implies
+authored* would read those three as unauthored. The correct predicate is the narrow one: **an empty
+`rootstock_options` on a CERTIFIED crop implies a non-null `rootstock_selection_basis`.** That holds on
+the landed data (fig and pomegranate both carry one; avocado and olive are shells and exempt).
+
+**NOT GATED.** No standing gate enforces the predicate above; `register_completeness_gate` only rules
+`rootstock_selection_basis` as a prose field, and nothing checks it against array emptiness. The three
+basis-less citrus crops are PLA-463's to resolve when the basis vocabulary is locked. Recorded here so
+a later reader does not mistake a documented rule for an enforced one.
+
+**Consumer contract, executed against `526788f2` on 2026-09-22 (not read: run).** Both consumers
+distinguish the three states correctly.
+
+- **plant-astro** `RootstockCard.astro` reads `rootstockPresence()` (PLA-536, live in production since
+  2026-09-18): `absent` renders nothing, `empty` renders the heading plus `recommended_rootstock_note`
+  alone with no list and no nursery block, `listed` renders the full card. An `empty` crop with no note
+  renders nothing at all, which is the shell cell.
+- **plant-app** maps the array through `buildCatalog()`; `BedCropSheet` gates the picker on
+  `rootstocks.length > 0` and `RootstockRow` returns null on an empty array. An authored `[]` therefore
+  hides the Rootstock label and row cleanly.
+- **A shell reaches neither consumer.** astro emits zone pages only for certified crops
+  (`builtCropZonePaths`), and the app's export ships the certified allowlist only.
+
 ### A3. Field-applicability (sub-typing decision) -- *Open decision A-2*
 The existing surface is **flat: present-but-null on applicable archetypes, absent on others** (chill fields on 26 woody crops, not on annuals). **Recommendation: keep flat, gated by archetype**, NOT a nested `perennial:{...}` sub-object. Rationale: matches what is already deployed (no retrofit of the 26 crops); the renderer branches on archetype/lifecycle it already reads; avoids a breaking nest. Document a **field-applicability matrix** (Section 5) so the migration knows which group each archetype carries. (Sub-typed groups are the alternative; cleaner namespacing but a breaking move on already-scaffolded crops.)
 
@@ -209,6 +281,7 @@ Which archetypes carry which new/formalized field group (present-but-null; absen
 
 **RESOLVED (Trevor, 2026-06-10):**
 - **A-1 rootstock:** ✅ structured `recommended_rootstock` + `rootstock_options[]` with the choose-by delineators (mature_height_ft, container_size_gallons, what_to_ask_nursery, size_class, traits_*). See A2.
+  - **AMENDED 2026-09-16 (PLA-464, Option A):** the array holds ROOTSTOCKS ONLY -- no propagation modes, no genetic-dwarf cultivars -- and an authored `[]` with a present `rootstock_selection_basis` means "this crop is not grafted onto a choice of stock". See **A2a**.
 - **A-3 pollination:** ✅ go deeper -- variety-level bloom-overlap calendar (the apple sample), not just crop-level. Crop-level `pollination` block + variety-level `bloom_group`/`bloom_window_relative`/`bloom_duration_days`/`chill_hours_required`. See A4.
 - **B-1 drip/watering:** ✅ build the structured, app-ready by-stage model now (`watering_method` + `schedule_by_stage[{stage_id,system,rate,frequency,level,note_*}]`). Dataset supplies per-stage targets; app owns hydraulics. See B2/B3.
 - **C-1 vocab:** ✅ carry BOTH level AND how-often/how-much. `harvest_urgency` = level + cadence; `fertilizer` = frequency + amount + type. See C3.
