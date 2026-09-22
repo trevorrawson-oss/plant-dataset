@@ -25,7 +25,9 @@ def make_crop():
             "regions": regions}
 
 fails = []
+ran = []          # every check that actually executed -- the inspected population
 def check(name, cond):
+    ran.append(name)
     print(("PASS " if cond else "FAIL ") + name)
     if not cond:
         fails.append(name)
@@ -112,6 +114,17 @@ for rid, m in DONORS.items():
         check(f"donor {rid} {new}<-{donor}",
               new in EXPECTED_SPANS[rid] and donor in EXPECTED_SPANS[rid])
 
+# A suite that ran no checks is not a green suite (CLAUDE.md: a check that cannot
+# distinguish "inspected and clean" from "inspected nothing" is not a check). The floor
+# is the count at authoring; adding checks is fine, losing them is not.
+MIN_CHECKS = 28
 if fails:
-    print(f"\n{len(fails)} test(s) FAILED"); sys.exit(1)
-print("\nall zone_span_gate tests passed")
+    print(f"\n{len(fails)} test(s) FAILED")
+    # RAISE, never sys.exit: under pytest a module-level sys.exit surfaces as
+    # INTERNALERROR, which reads as a broken harness rather than a real failure.
+    raise AssertionError(f"{len(fails)} zone_span_gate check(s) FAILED: {fails}")
+if len(ran) < MIN_CHECKS:
+    raise AssertionError(
+        f"VACUOUS: only {len(ran)} check(s) ran, floor is {MIN_CHECKS}. "
+        "A suite that inspects nothing must not report all tests passed.")
+print(f"\nall zone_span_gate tests passed ({len(ran)} checks run, floor {MIN_CHECKS})")

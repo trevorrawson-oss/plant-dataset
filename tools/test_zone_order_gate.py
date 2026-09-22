@@ -104,9 +104,19 @@ check("a crop with no archetype does NOT bounce",
       zone_order_violations(mk(archetype=None, zones={
           "9": ("perennializes", "Feb - Apr"), "10": ("perennializes", "Mar - May")})) == [])
 
+# A suite that ran no checks is not a green suite (CLAUDE.md: a check that cannot
+# distinguish "inspected and clean" from "inspected nothing" is not a check). The floor
+# is the count at authoring; adding checks is fine, losing them is not.
+MIN_CHECKS = 16
 print(f"\n{'='*62}\n{len(PASS)} passed, {len(FAIL)} failed")
 if FAIL:
     for f in FAIL:
         print(f"  FAILED: {f}")
-    sys.exit(1)
-print("ALL GREEN")
+    # RAISE, never sys.exit: under pytest a module-level sys.exit surfaces as
+    # INTERNALERROR, which reads as a broken harness rather than a real failure.
+    raise AssertionError(f"{len(FAIL)} zone_order_gate check(s) FAILED: {FAIL}")
+if len(PASS) < MIN_CHECKS:
+    raise AssertionError(
+        f"VACUOUS: only {len(PASS)} check(s) ran, floor is {MIN_CHECKS}. "
+        "A suite that inspects nothing must not report ALL GREEN.")
+print(f"ALL GREEN ({len(PASS)} checks run, floor {MIN_CHECKS})")
