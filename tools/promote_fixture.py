@@ -55,6 +55,12 @@ COMMIT_FOR = {
     # The twelve null woody crops recorded: 12 open_findings on 11 crops + 1 dated addendum on plum.
     '892c76fb9e89fd9a242f682a7040a71886cb128ec899092a4f6414d2e0708edb': '17e0154',
     '1721208ee0cbe4249ecf32ca3bd47a786f8a689cadcb7bb300d8d8ada4d82054': 'ab44218',  # PLA-465 mandarin UCR anchor repair
+    # PLA-466 rootstock attribution repair (2026-09-21). NEVER AMEND 9429413.
+    # St. Julien A dropped, three plum rootstock rows repointed to ucd_fruitnut, Citation admitted,
+    # lemon/lime size_class nulled, and the dataset's FIRST live blocking findings on plum, apple,
+    # pear-european and pear-asian (launch_ready false, status untouched). whole_crop_gate section G
+    # was narrowed in the same commit, so a fixture rebuilt at this SHA carries the new contract.
+    '079e3923660a53189bcf5e0bee0506e78225e473b2dadcba54cbfb3045337696': '9429413',
     # PLA-465 plant dimensions promote 1 (2026-09-16). NEVER AMEND 6659f62.
     # mature_height_ft / mature_spread_ft / footprint_inches on all 121 certified crops; 16 woody crops
     # authored with field_additions provenance records; A59 presence armed in the same commit.
