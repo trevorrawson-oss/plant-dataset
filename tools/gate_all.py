@@ -83,8 +83,9 @@ def main():
           f"launch-ready {len(ready)}/{len(cert)}")
     if blocked:
         print(f"  NOT launch-ready ({len(blocked)}): {', '.join(sorted(blocked))}")
-        print("  (certified means verified; launch-ready means fit to launch. A blocking finding "
-              "drives the flags, never the status -- PLA-466.)")
+        print("  (CERTIFIED = status verified_gs_arc. LAUNCH-READY = that plus both "
+              "launch_ready_* flags. A blocking finding drives the flags, never the status "
+              "-- PLA-466.)")
     sys.exit(0)
 
 
