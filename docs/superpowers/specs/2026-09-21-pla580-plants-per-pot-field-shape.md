@@ -13,6 +13,7 @@ read of amendment 1): four further amendments, listed in 3.2, of which the large
 planner's extrapolation beyond a reading's own pot size is **modeled, not sourced**, and is written
 down as such. **Amendment 3** (same day): Trevor ruled the `min_pot_gallons` semantics; section 5.2
 is now that ruling, with the measurement kept as its evidence.
+**Amendment 4** (2026-09-21, written by the PROMOTE session after the field landed at `526788f2`): three defects this document carried, each found by re-measuring rather than by re-reading, corrected below and listed in 3.4. None changed what was authored; all three would have misled the next reader.
 
 ---
 
@@ -60,7 +61,7 @@ re-read and not re-derived by this arc. PLA-533 owns the audit of the former.
 ## 2. The reads, from raw bytes (found / absent / undetermined)
 
 All four sources fetched 2026-09-21. Byte counts, sha256 digests and the exact fetch results are in
-section 13. Every quotation below is copied from those bytes.
+**section 12** (amendment 4: this said 'section 13', which does not exist). Every quotation below is copied from those bytes.
 
 ### 2.1 Illinois Extension: FOUND, and it is the only per-crop table
 
@@ -144,7 +145,15 @@ recorded. Nothing in this spec depends on Clemson.
 ### 2.5 The dataset's own prose: 18 crops, and the sketch said 13
 
 Measured on canonical `1721208e`: **18** certified crops carry a count-shaped phrase in
-`container_notes` prose, not 13. They matter because they are the tempting shortcut, and three of
+`container_notes` prose, not 13. **Amendment 4: this figure is NOT REPRODUCIBLE.** The document never
+recorded the pattern that produced it, and the promote session's pattern -- a count word or digit within
+40 characters of `plant`/`plants` and 30 of `per pot`/`per container`, plus `N plants fit` -- finds **16**
+(banana-pepper, bee-balm, bell-pepper, broccoli, brussels-sprouts, cabbage, cauliflower, cayenne-pepper,
+collards, eggplant, habanero, jalapeno, kale, okra, strawberry, zinnia). It misses tomatillo and edamame,
+whose phrasings are a pollination minimum and a yield note and match no count-shaped pattern at all,
+which is probably how the original reached 18. **Nothing depends on the number**: 2.5's rule is that our
+own prose is not a source, and that rule holds at 16, at 18 or at any count. Recorded so a later reader
+does not treat 18 as a measurement they can reproduce. They matter because they are the tempting shortcut, and three of
 them show why the shortcut is unsafe:
 
 - **15 are capacity counts stated with a gallons figure in the same sentence**, e.g. bell-pepper
@@ -183,7 +192,7 @@ names**, which is the same ambiguity:
 | UMD tomatoes, pepper, cucumber, Winter squash | 5 / 5 / 4 / 3-4 slugs each | **HELD**, same rule |
 
 **Certified crops with no count anywhere: 86** of the 110 that are `container_ok: true` (full list in
-section 13). Among them are `beet`, `carrot`, `radish` and `spinach`, which Illinois *does* have a
+amendment 4: the full list was never written into this document -- there is no section 13 -- and it is now in the landing record, `docs/2026-09-21-pla580-plants-per-pot-outcome.md`, derived by enumerating the count-bearing slugs and subtracting). Among them are `beet`, `carrot`, `radish` and `spinach`, which Illinois *does* have a
 row for but gives a thinning spacing rather than a count. They get null, and the reason is recorded:
 a thinning spacing is not a capacity.
 
@@ -292,6 +301,18 @@ in prose. One unit, no converter, no inferred volume from a diameter.
 | 2 | The unbroken permissive direction is recorded as a **hypothesis for PLA-533**, not a conclusion: it is consistent with `min_pot_gallons` being a minimum pot for the crop rather than a per-plant volume, which would make PLA-409's per-plant reading the original error | 5.2 |
 | 3 | `at_gallons` is **always `[lo, hi]`**, `lo == hi` for a single size. One type per field. The conservative reader takes `hi` | 1, 3, 6, 8 |
 | 4 | The planner divides by **`count[min]`**, the conservative end. This is the contract; the first draft's `count[max]` is superseded | 4.2, 8 |
+
+### 3.4 Amendment 4: three defects in this document, found by the promote session
+
+| # | defect | corrected in |
+|---|---|---|
+| 1 | The 7 shells were described as carrying `verification_status: null`. Each in fact carries a `verification_status` OBJECT with `status: null`, so the 121/7 split is by `status` and A60 exempts a shell on its STATUS rather than on key absence | 12 |
+| 2 | Two references to a **section 13** that does not exist (this document ends at 12), for the source digests and for the 86-crop list | 2, 2.6, 12 |
+| 3 | The **18 prose crops** figure is not reproducible; the pattern was never recorded and a reasonable one finds 16. Nothing depends on it, because 2.5 rules prose unauthorable at any count | 2.5 |
+
+**None of the three changed a byte of what was authored.** They are recorded because a spec is read by
+the next arc, and a figure presented as measured that cannot be reproduced is the same class of defect
+as a stale record: it commissions work against something that was never established.
 
 ### 3.3 Trevor's ruling, amendment 3
 
@@ -749,8 +770,12 @@ cultivar names (Plan B); the astro card itself (PLA-586); the app changes themse
 | `clemson_hgic` | `https://hgic.clemson.edu/factsheet/container-vegetable-gardening/` | **403** (2 attempts) | 1,486 (error body) | n/a |
 | `clemson_hgic` | `https://web.archive.org/web/20250214051543/https://hgic.clemson.edu/factsheet/container-vegetable-gardening/` | 200 | 204,582 | `4b4dd8d59860c6ffeef2745c2f72ac886a3f03f98e1225ea050fbd6fdc211f01` |
 
-**Dataset.** 128 crops; **121** `verified_gs_arc`, **7** with `verification_status: null` (avocado,
-olive, oyster-/shiitake-/lions-mane-/wine-cap-/button-mushroom). `plants_per_pot`: **0** occurrences
+**Dataset.** 128 crops; **121** `verified_gs_arc`, **7** shells (avocado,
+olive, oyster-/shiitake-/lions-mane-/wine-cap-/button-mushroom). **Amendment 4:** this said the 7 carry
+`verification_status: null`. They do not. Each carries a `verification_status` OBJECT whose `status` is
+`null` (alongside `launch_ready_core`, `launch_ready_seasoned` and `last_audited`). The 121/7 split is
+therefore by `status == verified_gs_arc`, and A60 exempts a shell on its STATUS, never on the key being
+absent from the crop. The distinction is load-bearing for anyone writing the next gate. `plants_per_pot`: **0** occurrences
 dataset-wide. `container_ok: true`: **110** of 121 certified. `min_pot_gallons` present: **102**;
 `recommended_pot_gallons` present: **95**; both: **95**; min without recommended: **7**
 (`lettuce-leaf`, `orange-navel`, `mandarin-clementine`, `mulberry`, `grapefruit`, `cherry-sweet`,
