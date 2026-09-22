@@ -72,6 +72,27 @@ armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered gates) +
   evidence and the out-of-scope list in `docs/promote_suite_mutation_convention.md`. The 24-suite
   backlog is opportunistic and is NOT a condition of this rule -- a written list of what was not
   verified is a legitimate close.
+- **A CHECK THAT CANNOT DISTINGUISH "INSPECTED AND CLEAN" FROM "INSPECTED NOTHING" IS NOT A CHECK.**
+  Every gate, scan and suite entry point must report the population it INSPECTED, and a scoped gate must
+  REFUSE when that population is zero or falls below its declared floor. Printing the count is necessary
+  and not sufficient: `0 inspected, 0 violations, exit 0` is still green that proves nothing. **Worked
+  example, measured 2026-09-22:** `zone_order_gate` prints `0 violation(s) across 0 crop(s) / 128 scanned`
+  on the live roster, and prints that line BYTE-IDENTICALLY after both of its in-scope crops are
+  re-archetyped away. Its scope is `archetype == 'herbaceous_perennial'` — **2 of 128** — and the 128 is
+  the OUTER loop, not the inspected population. **The number that looks like coverage is the number that
+  isn't.** `chill_gate` and `temp_scan` are the same class with no population reported at all, and
+  `release_verify` section F reports `ok` off an empty filter. The rule generalizes past gates: a guard
+  that never reaches its entry point, a mutation driver that reddens on an earlier check, and a suite that
+  collects nothing are all the same defect wearing different clothes.
+- **RUN A SCRIPT-STYLE TEST AS A SCRIPT, NEVER UNDER pytest.** 72 of the 247 `tools/test_*.py` entry points
+  carry module-level asserts with no `def test_`, so **pytest reports `no tests ran` and exits 5 whether
+  they passed or were never reached**, and they contribute ZERO to the tree's "N passed". Invoke them as
+  `python3 tools/<name>.py` from the repo root and require the file's own PASS line and **rc 0**. `rc 5`
+  means nothing ran and is graded BROKEN, exactly as the mutation convention already grades it; `tools/run_test_tree.py`
+  is the runner that enforces this across every entry point. Two shapes to know: a failing module-level
+  assert surfaces as a pytest collection ERROR that **aborts collection for the whole run**, and a bare
+  `sys.exit(1)` at module level surfaces as `INTERNALERROR`, which reads as a broken harness rather than a
+  real failure — so a script-style test signals failure by RAISING, never by `sys.exit`.
 - **Release verification before any promote** (protocol #6): `whole_crop_gate` 18/18 +
   `tools/gate_all.py` (the whole suite on **every** certified crop) + `release_verify` + the
   per-batch source-truth sample. A green gate is NOT a clean release.
