@@ -178,16 +178,30 @@ def main():
     P.append("")
 
     P.append("## Flip gates (generated)")
-    certified = 0
+    # PLA-466: report BOTH numbers. "verified" (status) and "launch-ready" (flags) are distinct
+    # states; a blocking finding drives the flags, never the status. A single "N certified" line
+    # conflated them and would have silently reported a drop as a loss of verification.
+    verified = 0
+    launch_ready = 0
+    blocked = []
     for c in anchors:
         vs = c.get("verification_status") or {}
         core = vs.get("launch_ready_core"); seas = vs.get("launch_ready_seasoned")
         st = vs.get("status")
-        if core and seas and st == "verified_gs_arc":
-            certified += 1
+        if st == "verified_gs_arc":
+            verified += 1
+            if core and seas:
+                launch_ready += 1
+            else:
+                blocked.append(c["slug"])
         P.append(f"- **{c['slug']}:** launch_ready_core={core} launch_ready_seasoned={seas} status=`{st}`")
-    P.append(f"- **{certified} anchors certified** (launch_ready true + status `verified_gs_arc`). "
+    P.append(f"- **{verified} verified, {launch_ready} launch-ready.** verified = status "
+             f"`verified_gs_arc`; launch-ready = that plus both launch_ready flags true. "
              f"(Target denominator is a roadmap call -- see the headline slot -- not derivable here.)")
+    if blocked:
+        P.append(f"- **{len(blocked)} verified but NOT launch-ready:** {', '.join(sorted(blocked))} "
+                 f"-- each carries an open blocking finding. A blocking finding drives the launch "
+                 f"flags, never `status` (PLA-466).")
     P.append("")
 
     P.append("<!-- FILL: Live locked decisions / guardrails (editorial -- accretes; carry forward + amend) -->")

@@ -60,6 +60,20 @@ def shape_violations(crop):
                 V.append(f"{slug}/{nm}: container_min_gallons present but container_suitable is not true")
             if not (_num(g) and 1 <= g <= 100):
                 V.append(f"{slug}/{nm}: container_min_gallons {g!r} outside [1, 100]")
+    # PLA-466 1(b). rootstock_options[].container_suitable had NO shape gate: the loop above is
+    # scoped to varieties.recommended[]. It was boolean on all 60 rows (45 false / 15 true / 0
+    # null) until PLA-466 nulled five, where null means "not assessed" and false would assert an
+    # unsourced negative. Gated from here so the three-value domain is enforced rather than assumed.
+    for r in _rootstocks(crop):
+        nm = r.get("name") or "?"
+        if "container_suitable" not in r:
+            V.append(f"{slug}/{nm}: rootstock_options entry has no container_suitable key")
+            continue
+        cs = r["container_suitable"]
+        if cs is not None and not isinstance(cs, bool):
+            V.append(f"{slug}/{nm}: rootstock container_suitable must be true, false or null, got {cs!r}")
+        if cs is not True and r.get("container_size_gallons") is not None:
+            V.append(f"{slug}/{nm}: container_size_gallons present but container_suitable is not true")
     if "container_path" not in cn:
         return V
     path = cn["container_path"]

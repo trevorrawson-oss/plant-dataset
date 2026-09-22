@@ -45,9 +45,31 @@ def run(path):
     return cert, failed
 
 
+def launch_ready(path):
+    """(launch_ready_slugs, blocked_slugs) among the certified.
+
+    PLA-466: "certified" and "launch-ready" are DISTINCT. A bare "121/121 PASS" must not be read
+    as 121 launch-ready, because a crop can pass every gate while honestly carrying a live
+    blocking finding with both launch flags false. Reported alongside the gate verdict so the
+    summary matches the state trio rather than contradicting it.
+    """
+    data = json.load(open(path, encoding="utf-8"))
+    ready, blocked = [], []
+    for c in data["crops"]:
+        vs = c.get("verification_status") or {}
+        if vs.get("status") != "verified_gs_arc":
+            continue
+        if vs.get("launch_ready_core") and vs.get("launch_ready_seasoned"):
+            ready.append(c["slug"])
+        else:
+            blocked.append(c["slug"])
+    return ready, blocked
+
+
 def main():
     path = sys.argv[1] if len(sys.argv) > 1 else "crops_data_final.json"
     cert, failed = run(path)
+    ready, blocked = launch_ready(path)
     print(f"gate_all: ran whole_crop_gate on {len(cert)} certified crop(s)")
     if failed:
         for slug, n in failed:
@@ -55,7 +77,14 @@ def main():
         print(f"\ngate_all: {len(failed)} of {len(cert)} certified crop(s) FAILED whole_crop_gate "
               f"-- run `python3 tools/whole_crop_gate.py <slug>` for detail")
         sys.exit(1)
-    print("gate_all: PASS -- every certified crop passes the whole suite")
+    # "PASS" is load-bearing: tools/test_gate_all.py asserts it appears on a clean run. Both
+    # numbers sit on the same line so the verdict can never be read as a launch-ready count.
+    print(f"gate_all: PASS -- gate passes {len(cert)}/{len(cert)} certified, "
+          f"launch-ready {len(ready)}/{len(cert)}")
+    if blocked:
+        print(f"  NOT launch-ready ({len(blocked)}): {', '.join(sorted(blocked))}")
+        print("  (certified means verified; launch-ready means fit to launch. A blocking finding "
+              "drives the flags, never the status -- PLA-466.)")
     sys.exit(0)
 
 

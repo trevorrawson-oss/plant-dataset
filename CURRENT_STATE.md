@@ -25,6 +25,8 @@
 
 > **The release-entry stack was REMOVED here on 2026-07-29** and lives in `STATE_HISTORY.md` (+ `STATE_HISTORY_ARCHIVE.md`), which is the append-only recovery log and the authority. This file had re-accumulated **80** entries, ~250KB of its 353KB, drifting back into a second history log -- the split `148e737` performed. Every removed entry was verified present in the history files before deletion (the 10 newest were BYTE-IDENTICAL in both). Only the current release is kept below, so this stays a LIVE SURFACE.
 
+**`079e3923` (2026-09-21) -- PLA-466 ROOTSTOCK ATTRIBUTION REPAIR LANDED: ST. JULIEN A DROPPED AS ABSENT, THE DEAD PLUM ANCHOR REPOINTED, AND THE DATASET'S FIRST LIVE BLOCKING FINDINGS** (`1721208e` -> `079e3923`; ONE promote; SEVEN crops -- plum, apple, pear-european, pear-asian, lemon, lime, persimmon -- plus one `source_catalog` entry). Started as three reads and surfaced six larger defects. **St. Julien A is ABSENT** from the only T1 page it was cited to, measured identically on FIVE independent reads (four Wayback captures 2025-05-24..2026-01-13 plus Trevor's live residential save 2026-09-21: Julien 0, insititia 0 on all five); the row is DROPPED and **NC-140 is deliberately not cited as the reason**, because it was not read in this arc and PLA-463 already caught that claim misapplied once. **The cited plum URL is DEAD FOR THE PUBLIC, page-specific** (residential read 403 while a control on the SAME `/site/` subtree returns 200; the sandbox 403s on BOTH, so a sandbox-only instrument cannot tell dead from blocked -- PLA-568). Three rows repointed to `fruitsandnuts.ucdavis.edu/rootstock-selection`, the page's OWN declared canonical, `verified` moving to 2026-09-21 because carrying the old date onto a new url would fabricate the attribution; each anchor carries a note recording the GENERIC path and the expected title so PLA-568 can detect reuse rather than trust a 200. **Marianna keeps semi_dwarf [10,15]** (verbatim) but its container claims go NULL -- the page makes no container claim about any rootstock. **Citation ADMITTED** at dwarf [8,12]. **The Myrobalan row was wrong three ways**: renamed to the clonal selection, `clemson_hgic` DROPPED (its plum factsheet does not mention Myrobalan AT ALL), and all three prose fields replaced because the superlative, the European/Japanese split and the 29C sucker differential are ABSENT from both live sources. **plum's varieties credit DROPPED, not repointed** (1 of 7 names; the two "Burbank" hits are the breeder, checked in context) with the finding recording that the two survivors are UNCHECKED, not verified. **Not plum-only:** apple and both pears anchor 47 region cells to a chill page that is DEAD and UNRECOVERABLE (zero Wayback captures, a zero RETRIED after an IA outage and confirmed against a query that did return captures); the proposed successor was READ AND REJECTED for R4. **Four crops take the first live blocking findings**, launch flags false, `status` UNTOUCHED, no values nulled. **Section G NARROWED** (Trevor's Option A): a live blocker fails only while launch_ready still claims readiness; "certified" and "launch-ready" are now DISTINCT and both numbers are reported in CLAUDE.md, CURRENT_STATE and `gate_all`. Replayed over `1721208e`: IDENTICAL verdict set on all 121. **lemon and lime**: tristeza was CONTRADICTED, not merely unsupported, corrected on both with each document kept to its own lime; size_class NULLED (not "standard", an unread value); `rootstock_selection_basis` HELD for Rule N. **container_suitable NULL on a rootstock row for the first time** (45/15/0 before), gated by a new shape rule and BLOCKING the astro bump because `RootstockCard.astro` prints "in-ground" for null (PLA-535 precondition, PLA-586 contract). The `rooststock` spelling is recorded as UC Davis's OWN slug and title so no later pass "fixes" it into a 404. 17 new findings, 2 `field_additions`. **The build caught three of my own errors**: two wrong pins refused by the guards, and one guard that tested a CONSTANT rather than the written value, exposed by the harness and then REMOVED as redundant rather than shipped as coverage; the harness's liveness defence exited HARNESS DEAD rather than record a false survivor. Suite 60; harness 32/32, positive control the WHOLE suite; section G 6/6. Gauntlet ON THE LANDED BYTES: `gate_all` PASS 121/121 certified, launch-ready 117/121; `release_verify` clean; collision gate 27 passed, 36/24/12 hold, `PINNED_SHA` RE-MEASURED 892c76fb -> 079e3923 with the fixture UNCHANGED. **The collision pin had skipped a canonical** (set at 17e0154, canonical moved at ab44218 without re-measure), so that preflight was RED from ab44218 while that landing reports the gate as holding -- filed PLA-544, third instance, with the convention that gauntlet numbers must come from the LANDED bytes.
+
 **`1721208e` (2026-09-20) -- PLA-465 MANDARIN UCR ANCHOR REPAIR LANDED: THE SATSUMA ANCHOR ADJUDICATED CELL BY CELL, NOT WHOLESALE** (`892c76fb` -> `1721208e`; ONE promote, one crop; 7 anchor urls repointed, 1 credit dropped, 2 findings, 1 provenance record, 1 dated addendum; NO prose and NO dimension value moved). The crop cited `ucr_citrus` at `crc3178` (Frost Owari Satsuma, *Citrus unshiu*, re-read from raw bytes) on **19** cells, surfaced by promote 1 as "the wrong scion". **That reason was too wide and acting on it wholesale would have been a defect:** the crop is scoped to mandarins broadly and Owari Satsuma is its FIRST recommended variety, so **8 cells make satsuma-specific claims the page carries verbatim** and a blanket repoint would have stripped 8 correct attributions. Adjudicated per cell under the asparagus-R4 rule. **7 REPOINTED** (6 to `crc0279` Algerian clementine, 1 to `crc3913` Gold Nugget; measured on `crc3178`: "clementine" 0, "Gold Nugget" 0, "Pixie" 0, "pollin" 0, "Murcott" 0), each also moving `verified` to 2026-09-20. **8 KEPT. 1 DROPPED** (`failure_diagnostics[0]`, Trevor's ruling; cleared from `sources` AND `anchoring_urls`). **3 HELD** (`ca_south_coast` 9/10/11, Trevor's ruling; the claim spans two accessions and one url per source key cannot hold both ends, routed to **PLA-559**, same family as plum's type-aware finding). Census **19 -> 18**. Height stays null and the promote refuses if it is not. **Ruling 1's premise was wrong and the record says so:** the cell is not left uncited, it retains `uhawaii_ctahr`, which carries the colour half verbatim and **CONTRADICTS** the sugar half (low sugar attributed to cooler HIGH elevations); the finding names *unsupported* and *contradicted* as different states so a later pass does not read the first and assume the second was checked. **A fabricated sha256 near-miss** was caught by recomputation before any run and closed by an `EVIDENCE_HASHES` guard. **FOUR guards were found UNREACHABLE and REMOVED** rather than shipped as coverage, two of them on the re-stage and one by the harness reporting a SURVIVOR. Suite **101**; harness **83/83**, positive control the WHOLE suite. `gate_all` 121/121; presence 0 / 121 of 128 / 16 authored / ARMED; register gates PASS; `release_verify` clean in every section; collision gate **36 / 24 / 12** hold. Full `tools/` tree 5763 / 2 / 1, both failures PRE-EXISTING and read (**PLA-544**, carrying the convention that a known-failing test must be pinned to its population).
 
 **`a7f234ce` (2026-09-16) -- PLA-465 PLANT DIMENSIONS PROMOTE 1 LANDED: `mature_height_ft` / `mature_spread_ft` / `footprint_inches` ON ALL 121 CERTIFIED CROPS, 16 WOODY CROPS AUTHORED** (`a98b6cfd` -> `a7f234ce`; ONE promote; 457 leaves added; the 7 shells byte-identical; data + pin commits LOCAL). Register row 30, R1 as changed (define for 121, author the woody). 16 authored from raw-bytes T1 reads confirmed by two adversarial reviewers (apple on M26 from WSU EB0937, blueberry PSU, lemon HS402, fig Clemson, twelve on NC State Plant Toolbox species pages), each with a `field_additions` provenance record; 105 null; footprint null everywhere (PLA-429's slot). **The staging moved once, before the gauntleted run:** the review struck apricot (page self-contradicts) and plum (species basis is a decision), 18 -> 16. **Twelve woody crops stay null and each is a RULING:** apricot, plum, cherry-sour, cherry-sweet, both pears, navel, grapefruit, clementine, lime, raspberry, blackberry (the write-up carries the ruling each needs). A59 wired, **presence ARMED here**; numeric bounds 120/80 tree, 20/20 elsewhere; suite 55/55; harness 39/39 with the **positive control now the whole suite** (PLA-464's harness re-run under it: 58/58 stand, no pre-red driver). `gate_all` 121/121; presence 0 / 121 of 128; register gates PASS; release_verify B clean; collision gate RE-MEASURED, 36 / 24 / 12 hold. Findings not fixed: oregano's `uarizona_ext` anchor is a different genus; mandarin's UCR anchor is a satsuma page; pear-asian's recommended rootstock. Write-up: `docs/2026-09-16-pla465-plant-dimensions-prepared.md`.
@@ -38,7 +40,8 @@
 The arc continues; 48 carries the verify block, the corrected worklist and what is closed.)
 
 ## Canonical pointer
-- **Current SHA:** `1721208ee0cbe4249ecf32ca3bd47a786f8a689cadcb7bb300d8d8ada4d82054`. `LATEST.txt` session: PLA-465 MANDARIN UCR ANCHOR REPAIR LANDED -- the satsuma anchor adjudicated cell by cell, not wholesale (`892c76fb` -> `1721208e`; ONE promote, one crop). The crop cited `ucr_citrus` at `crc3178` (Frost Owari Satsuma) on all 19 cells carrying that key; promote 1 surfaced it as 'the wrong scion'. THAT REASON WAS TOO WIDE: this crop covers mandarins broadly and Owari Satsuma is its FIRST recommended variety, so 8 cells make satsuma-specific claims the page carries verbatim and a blanket repoint would have stripped 8 correct attributions. 7 REPOINTED (6 to crc0279, 1 to crc3913), 8 KEPT, 1 DROPPED (Trevor's ruling; cleared from `sources` AND `anchoring_urls`), 3 HELD (Trevor's ruling; the claim spans two accessions, routed to PLA-559). Census 19 -> 18. Two `open_findings`, one `field_additions` record, one dated addendum. Height stays null. The climate finding names UNSUPPORTED and CONTRADICTED as different states: the surviving source carries the colour half verbatim and contradicts the sugar half. A fabricated sha256 near-miss was caught by recomputation and closed by an `EVIDENCE_HASHES` guard; FOUR unreachable guards were removed rather than shipped as coverage. Suite 101; harness 83/83.
+- **Current SHA:** `079e3923660a53189bcf5e0bee0506e78225e473b2dadcba54cbfb3045337696`. `LATEST.txt` session: PLA-466 ROOTSTOCK ATTRIBUTION REPAIR LANDED -- St. Julien A DROPPED as absent (measured identically on five independent reads), the dead plum anchor REPOINTED to ucd_fruitnut at the page's own declared canonical, and the FIRST LIVE BLOCKING FINDINGS in the dataset (`1721208e` -> `079e3923`; ONE promote; SEVEN crops + one `source_catalog` entry). plum, apple, pear-european and pear-asian go launch_ready false with a `blocks_launch` finding while `verification_status.status` is UNTOUCHED -- the values may be right, the ATTRIBUTION failed, and status is the page gate. NO VALUES NULLED; the T1 re-source comes first (PLA-579). **`whole_crop_gate` section G was NARROWED**: a live blocker now fails only while launch_ready still claims readiness, so "certified" and "launch-ready" are DISTINCT and both numbers are reported everywhere. Replayed over `1721208e`: identical verdict set on all 121. container_suitable is NULL on a rootstock row for the first time (45/15/0 before), gated by a new shape rule and BLOCKING the astro bump (PLA-535). Suite 60; harness 32/32. (2026-09-21).
+- **Prior SHA:** `1721208ee0cbe4249ecf32ca3bd47a786f8a689cadcb7bb300d8d8ada4d82054`. `LATEST.txt` session: PLA-465 MANDARIN UCR ANCHOR REPAIR LANDED -- the satsuma anchor adjudicated cell by cell, not wholesale (`892c76fb` -> `1721208e`; ONE promote, one crop). The crop cited `ucr_citrus` at `crc3178` (Frost Owari Satsuma) on all 19 cells carrying that key; promote 1 surfaced it as 'the wrong scion'. THAT REASON WAS TOO WIDE: this crop covers mandarins broadly and Owari Satsuma is its FIRST recommended variety, so 8 cells make satsuma-specific claims the page carries verbatim and a blanket repoint would have stripped 8 correct attributions. 7 REPOINTED (6 to crc0279, 1 to crc3913), 8 KEPT, 1 DROPPED (Trevor's ruling; cleared from `sources` AND `anchoring_urls`), 3 HELD (Trevor's ruling; the claim spans two accessions, routed to PLA-559). Census 19 -> 18. Two `open_findings`, one `field_additions` record, one dated addendum. Height stays null. The climate finding names UNSUPPORTED and CONTRADICTED as different states: the surviving source carries the colour half verbatim and contradicts the sugar half. A fabricated sha256 near-miss was caught by recomputation and closed by an `EVIDENCE_HASHES` guard; FOUR unreachable guards were removed rather than shipped as coverage. Suite 101; harness 83/83.
 - **Prior SHA:** `892c76fb9e89fd9a242f682a7040a71886cb128ec899092a4f6414d2e0708edb` (PLA-465 PROMOTE 2 LANDED -- the twelve nulls recorded as findings with their reasons and routing (`a7f234ce` -> `892c76fb`; ONE promote; 96 leaves added / 1 changed, all under `verification_status`; no dimension value moved). Four classes: unusable source, not admitted (PLA-532), percent-of-standard declined, not a property of the plant, type-aware attached. Three contradictions carried into the records; the estimate question filed as PLA-543; the percent question reaches five crops (PLA-463 Plan E). Suite 57/57; harness 41/41; PLA-464 58/58 and A1 44/44 re-measured under the whole-suite control. `gate_all` 121/121; register gates PASS; `release_verify` clean; collision gate RE-MEASURED, 36 / 24 / 12 hold. Commits HELD for the push. (2026-09-18).)
 - **Prior SHA:** `a7f234ce449c6d74b4f1be2398bb808cfe29bebf9a1f7cc51efdcaea56246c93` (PLA-465 PLANT DIMENSIONS PROMOTE 1 LANDED -- three crop-level dimension keys on all 121 certified crops, 16 tree + woody crops authored from raw-bytes T1 reads confirmed by an adversarial review, 105 null, footprint null everywhere (`a98b6cfd` -> `a7f234ce`; ONE promote; 457 leaves added; shells byte-identical). The staging moved 18 -> 16 before the gauntleted run (apricot, plum struck by the review). Twelve woody crops null, each a ruling. A59 PRESENCE ARMED in the write commit; suite 55/55; harness 39/39, positive control the whole suite; `gate_all` 121/121; register gates PASS; collision gate RE-MEASURED, 36 / 24 / 12 hold. Data + pin commits HELD for the push. plant-app `build:guides` two revisions behind; astro pin 5504b76 (PLA-363 step 3). (2026-09-16).)
 - **Prior SHA:** `a98b6cfdfd7c5ffdcccdb222ceaa141fdca79e0ed674f991c0dcb396c2534412` (PLA-464 OPTION A LANDED -- `rootstock_options[]` holds rootstocks only; six non-rootstock rows retired on five crops; three note fold-ins; fig's `recommended_rootstock` nulled, mulberry's renamed; mulberry's 15 gal KEPT, proven unanchored by a raw read, routed to PLA-533 with Dwarf Everbearing's 15 in one finding naming both paths (`d7b33682` -> `a98b6cfd`; ONE promote; 18 declared changes; shells and 116 other certified crops byte-identical). D5 amended after measurement and confirmed by Trevor. NO STANDING GATE ties the two mulberry figures after this promote; the finding is the tie. Suite 80/80; harness 58/58; `gate_all` 121 all PASS; `container_path_gate --presence` 0 / 121 of 128 / ARMED; `register_completeness` PASS; `release_verify` clean; collision gate `PINNED_SHA` RE-MEASURED, 36 / 24 / 12 hold. Commits HELD for the push. plant-app `build:guides` three revisions behind; astro pin 5504b76 (PLA-363 step 3). (2026-09-16).)
@@ -139,7 +142,7 @@ The arc continues; 48 carries the verify block, the corrected worklist and what 
 
 **POST-114 (2026-07-06) ALL DONE + PUSHED. 114 certified. Canonical `3358d496` -> `035b950d` (§A pilot) -> `e5b1aa88` (§C degrees + §B offline gate) -> `8e568c5b` (§A pet_safe ROLLOUT complete).** **origin/main == `8a64c5c` (IN SYNC; everything pushed 2026-07-06).** This day shipped: §A pet_safe 6-crop pilot + the full 108-crop rollout (39 not-pet-friendly crops marked, 75 safe, warnings-only); §C spelled-degrees -> `°F` (11 crops) + hardened gate; §B offline non-null-URL gate. **THE ONLY REMAINING PUBLISH STEP (Trevor, in the plant-astro repo):** the plant-astro submodule pointer bump to plant-dataset HEAD `8a64c5c` + the **not-pet-friendly ICON** render (graceful-omit; a positive "pet friendly" icon is backfillable from the rollout log). Nothing more to push from this repo. **POST-114 BACKLOG:** §A pet_safe DONE (pilot + rollout); §C spelled-degrees DONE; §B OFFLINE gate DONE. **Remaining:** §B **online URL-liveness sweep** (~1,030 URLs; repoint dead `uga_b577`/citrus-TAMU/lime-`ucanr.edu`/cucumber-B577, build `url_health_gate --online`, then optionally backfill the 57 legacy `zones{}` nulls); §D `rhs` tier (answered in principle by §A's ASPCA precedent); §E design-case archetypes. **NEW-CHAT PICKUP:** canonical `8e568c5b` (114 certified; pet_safe rollout complete = 39 warnings/75 safe; §C clean; batch 2 complete); everything pushed (origin `8a64c5c`); only the plant-astro icon remains. **STANDING FLAGS:** the general-purpose subagent dispatch was unreliable (4x corrupted, earlier waves) -- this whole day's safety-critical pet-toxicity research was done DIRECTLY in the main loop via WebFetch (no subagents); the earlier incident's canonical write-deny was bypassable via `dangerouslyDisableSandbox` (harden before any unattended run).
 
-## Gate record (generated 2026-07-06, on canonical `4abf43a5`; §B online sweep: url_health --online 189 RED on 8e568c5b -> 0 GREEN, url_health offline 0, register 0, whole_crop_gate 22/22 on the changed slugs + 114/114 certified pass, release_verify 0 new concerns/slug; pet_safe_gate 0 (39 warnings), pet_safe_coverage 114/114, temp_scan 0 -- all exit 0)
+## Gate record (generated 2026-09-21, on canonical `079e3923`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **roma-tomato: `PASS` (0)**
@@ -184,6 +187,7 @@ The arc continues; 48 carries the verify block, the corrected worklist and what 
 - **cabbage: `PASS` (0)**
 - **onion: `PASS` (0)**
 - **spring-onion: `PASS` (0)**
+- **sweet-corn: `PASS` (0)**
 - **edamame: `PASS` (0)**
 - **parsley: `PASS` (0)**
 - **cilantro-coriander: `PASS` (0)**
@@ -220,6 +224,7 @@ The arc continues; 48 carries the verify block, the corrected worklist and what 
 - **honeydew-melon: `PASS` (0)**
 - **grapefruit: `PASS` (0)**
 - **cherry-sweet: `PASS` (0)**
+- **artichoke: `PASS` (0)**
 - **turnip: `PASS` (0)**
 - **leek: `PASS` (0)**
 - **brussels-sprouts: `PASS` (0)**
@@ -230,6 +235,7 @@ The arc continues; 48 carries the verify block, the corrected worklist and what 
 - **sunflower-sprouts: `PASS` (0)**
 - **pea-shoots: `PASS` (0)**
 - **celery: `PASS` (0)**
+- **asparagus: `PASS` (0)**
 - **shallot: `PASS` (0)**
 - **lemongrass: `PASS` (0)**
 - **marigold: `PASS` (0)**
@@ -254,123 +260,134 @@ The arc continues; 48 carries the verify block, the corrected worklist and what 
 - **beet: `PASS` (0)**
 - **cucumber: `PASS` (0)**
 - **collards: `PASS` (0)**
+- **dry-bean: `PASS` (0)**
+- **field-corn: `PASS` (0)**
+- **popcorn: `PASS` (0)**
+- **flint-corn: `PASS` (0)**
 - **register_completeness_gate: `PASS`**
 
 ## Region fill state (generated)
-- **cherry-tomato: 10/10 region cells filled**; 8 heat_pause, 8 second_planting
-- **beefsteak-tomato: 10/10 region cells filled**; 8 heat_pause, 6 second_planting
-- **roma-tomato: 10/10 region cells filled**; 8 heat_pause, 8 second_planting
-- **bell-pepper: 10/10 region cells filled**; 7 heat_pause
-- **jalapeno: 10/10 region cells filled**; 8 heat_pause
-- **slicing-cucumber: 10/10 region cells filled**; 5 heat_pause
-- **kale: 10/10 region cells filled**; 13 heat_pause
-- **spinach: 10/10 region cells filled**; 18 heat_pause
-- **carrot: 10/10 region cells filled**; 13 heat_pause
-- **basil: 10/10 region cells filled**
-- **zucchini-courgette: 10/10 region cells filled**; 5 heat_pause
-- **green-beans-bush: 10/10 region cells filled**; 8 heat_pause
-- **sugar-snap-peas: 10/10 region cells filled**; 18 heat_pause
-- **broccoli: 10/10 region cells filled**; 10 heat_pause, 14 second_planting
-- **garlic: 10/10 region cells filled**
-- **peach: 10/10 region cells filled**
-- **apple: 10/10 region cells filled**
-- **lemon: 10/10 region cells filled**
-- **blueberry: 10/10 region cells filled**
-- **heirloom-tomato: 10/10 region cells filled**; 8 heat_pause, 6 second_planting
-- **grape-tomato: 10/10 region cells filled**; 8 heat_pause, 8 second_planting
-- **banana-pepper: 10/10 region cells filled**; 7 heat_pause
-- **cayenne-pepper: 10/10 region cells filled**; 6 heat_pause
-- **habanero: 10/10 region cells filled**; 5 heat_pause
-- **pickling-cucumber: 10/10 region cells filled**; 5 heat_pause
-- **english-cucumber: 10/10 region cells filled**; 5 heat_pause
-- **yellow-summer-squash: 10/10 region cells filled**; 5 heat_pause
-- **butternut-squash: 10/10 region cells filled**
-- **acorn-squash: 10/10 region cells filled**
-- **spaghetti-squash: 10/10 region cells filled**
-- **pole-beans: 10/10 region cells filled**; 8 heat_pause
-- **snow-peas: 10/10 region cells filled**; 18 heat_pause
-- **broad-beans-fava: 10/10 region cells filled**; 15 heat_pause
-- **lettuce-leaf: 10/10 region cells filled**; 15 heat_pause
-- **swiss-chard: 10/10 region cells filled**; 6 heat_pause
-- **arugula: 10/10 region cells filled**; 15 heat_pause
-- **bok-choy: 10/10 region cells filled**; 16 heat_pause
-- **radish: 10/10 region cells filled**; 20 heat_pause
-- **potato: 10/10 region cells filled**; 12 heat_pause
-- **sweet-potato: 10/10 region cells filled**
-- **cauliflower: 10/10 region cells filled**; 9 heat_pause
-- **cabbage: 10/10 region cells filled**; 9 heat_pause
-- **onion: 10/10 region cells filled**
-- **spring-onion: 10/10 region cells filled**; 15 heat_pause
-- **edamame: 10/10 region cells filled**; 4 heat_pause
-- **parsley: 10/10 region cells filled**; 10 heat_pause
-- **cilantro-coriander: 10/10 region cells filled**; 15 heat_pause
-- **chives: 10/10 region cells filled**; 10 heat_pause
-- **mint: 10/10 region cells filled**; 6 heat_pause
-- **thyme: 10/10 region cells filled**
-- **dill: 10/10 region cells filled**; 15 heat_pause
-- **rosemary: 10/10 region cells filled**
-- **oregano: 10/10 region cells filled**
-- **sage: 10/10 region cells filled**
-- **eggplant: 10/10 region cells filled**; 3 heat_pause
-- **tomatillo: 10/10 region cells filled**; 5 heat_pause
-- **watermelon: 10/10 region cells filled**
-- **cantaloupe: 10/10 region cells filled**
-- **strawberry: 10/10 region cells filled**
-- **pumpkin: 10/10 region cells filled**
-- **plum: 10/10 region cells filled**
-- **apricot: 10/10 region cells filled**
-- **pear-european: 10/10 region cells filled**
-- **pear-asian: 10/10 region cells filled**
-- **lime: 10/10 region cells filled**
-- **orange-navel: 10/10 region cells filled**
-- **mandarin-clementine: 10/10 region cells filled**
-- **fig: 10/10 region cells filled**
-- **pomegranate: 10/10 region cells filled**
-- **raspberry: 10/10 region cells filled**
-- **blackberry: 10/10 region cells filled**
-- **elderberry: 10/10 region cells filled**
-- **persimmon: 10/10 region cells filled**
-- **mulberry: 10/10 region cells filled**
-- **pawpaw: 10/10 region cells filled**
-- **parsnip: 10/10 region cells filled**; 11 heat_pause
-- **kohlrabi: 10/10 region cells filled**; 10 heat_pause, 14 second_planting
-- **honeydew-melon: 10/10 region cells filled**
-- **grapefruit: 10/10 region cells filled**
-- **cherry-sweet: 10/10 region cells filled**
-- **turnip: 10/10 region cells filled**; 13 heat_pause
-- **leek: 10/10 region cells filled**
-- **brussels-sprouts: 10/10 region cells filled**; 5 heat_pause
-- **okra: 10/10 region cells filled**
-- **nectarine: 10/10 region cells filled**
-- **cherry-sour: 10/10 region cells filled**
+- **cherry-tomato: 16/16 region cells filled**; 21 heat_pause, 17 second_planting
+- **beefsteak-tomato: 16/16 region cells filled**; 21 heat_pause, 15 second_planting
+- **roma-tomato: 16/16 region cells filled**; 21 heat_pause, 17 second_planting
+- **bell-pepper: 16/16 region cells filled**; 17 heat_pause, 16 second_planting
+- **jalapeno: 16/16 region cells filled**; 20 heat_pause, 14 second_planting
+- **slicing-cucumber: 16/16 region cells filled**; 17 heat_pause, 7 second_planting
+- **kale: 16/16 region cells filled**; 24 heat_pause, 8 second_planting
+- **spinach: 16/16 region cells filled**; 33 heat_pause, 8 second_planting
+- **carrot: 16/16 region cells filled**; 22 heat_pause, 8 second_planting
+- **basil: 16/16 region cells filled**
+- **zucchini-courgette: 16/16 region cells filled**; 18 heat_pause, 7 second_planting
+- **green-beans-bush: 16/16 region cells filled**; 17 heat_pause, 7 second_planting
+- **sugar-snap-peas: 16/16 region cells filled**; 29 heat_pause, 3 second_planting
+- **broccoli: 16/16 region cells filled**; 16 heat_pause, 26 second_planting
+- **garlic: 16/16 region cells filled**
+- **peach: 16/16 region cells filled**
+- **apple: 16/16 region cells filled**
+- **lemon: 16/16 region cells filled**
+- **blueberry: 16/16 region cells filled**
+- **heirloom-tomato: 16/16 region cells filled**; 21 heat_pause, 15 second_planting
+- **grape-tomato: 16/16 region cells filled**; 21 heat_pause, 17 second_planting
+- **banana-pepper: 16/16 region cells filled**; 17 heat_pause, 16 second_planting
+- **cayenne-pepper: 16/16 region cells filled**; 14 heat_pause, 8 second_planting
+- **habanero: 16/16 region cells filled**; 10 heat_pause, 8 second_planting
+- **pickling-cucumber: 16/16 region cells filled**; 17 heat_pause, 7 second_planting
+- **english-cucumber: 16/16 region cells filled**; 17 heat_pause, 7 second_planting
+- **yellow-summer-squash: 16/16 region cells filled**; 18 heat_pause, 7 second_planting
+- **butternut-squash: 16/16 region cells filled**; 9 second_planting
+- **acorn-squash: 16/16 region cells filled**; 9 second_planting
+- **spaghetti-squash: 16/16 region cells filled**; 9 second_planting
+- **pole-beans: 16/16 region cells filled**; 13 heat_pause, 16 second_planting
+- **snow-peas: 16/16 region cells filled**; 29 heat_pause, 3 second_planting
+- **broad-beans-fava: 16/16 region cells filled**; 29 heat_pause, 7 second_planting
+- **lettuce-leaf: 16/16 region cells filled**; 27 heat_pause, 8 second_planting
+- **swiss-chard: 16/16 region cells filled**; 19 heat_pause, 17 second_planting
+- **arugula: 16/16 region cells filled**; 30 heat_pause, 8 second_planting
+- **bok-choy: 16/16 region cells filled**; 31 heat_pause, 8 second_planting
+- **radish: 16/16 region cells filled**; 35 heat_pause, 7 second_planting
+- **potato: 16/16 region cells filled**; 22 heat_pause, 7 second_planting
+- **sweet-potato: 16/16 region cells filled**
+- **cauliflower: 16/16 region cells filled**; 15 heat_pause, 8 second_planting
+- **cabbage: 16/16 region cells filled**; 14 heat_pause, 8 second_planting
+- **onion: 16/16 region cells filled**
+- **spring-onion: 16/16 region cells filled**; 28 heat_pause, 4 second_planting
+- **sweet-corn: 16/16 region cells filled**; 9 heat_pause, 5 second_planting
+- **edamame: 16/16 region cells filled**; 10 heat_pause, 3 second_planting
+- **parsley: 16/16 region cells filled**; 17 heat_pause, 4 second_planting
+- **cilantro-coriander: 16/16 region cells filled**; 30 heat_pause, 4 second_planting
+- **chives: 16/16 region cells filled**; 19 heat_pause
+- **mint: 16/16 region cells filled**; 12 heat_pause
+- **thyme: 16/16 region cells filled**
+- **dill: 16/16 region cells filled**; 30 heat_pause, 4 second_planting
+- **rosemary: 16/16 region cells filled**
+- **oregano: 16/16 region cells filled**
+- **sage: 16/16 region cells filled**
+- **eggplant: 16/16 region cells filled**; 9 heat_pause, 11 second_planting
+- **tomatillo: 16/16 region cells filled**; 11 heat_pause, 13 second_planting
+- **watermelon: 16/16 region cells filled**; 6 second_planting
+- **cantaloupe: 16/16 region cells filled**; 6 second_planting
+- **strawberry: 16/16 region cells filled**
+- **pumpkin: 16/16 region cells filled**; 9 second_planting
+- **plum: 16/16 region cells filled**
+- **apricot: 16/16 region cells filled**
+- **pear-european: 16/16 region cells filled**
+- **pear-asian: 16/16 region cells filled**
+- **lime: 16/16 region cells filled**
+- **orange-navel: 16/16 region cells filled**
+- **mandarin-clementine: 16/16 region cells filled**
+- **fig: 16/16 region cells filled**
+- **pomegranate: 16/16 region cells filled**
+- **raspberry: 16/16 region cells filled**
+- **blackberry: 16/16 region cells filled**
+- **elderberry: 16/16 region cells filled**
+- **persimmon: 16/16 region cells filled**
+- **mulberry: 16/16 region cells filled**
+- **pawpaw: 16/16 region cells filled**
+- **parsnip: 16/16 region cells filled**; 21 heat_pause
+- **kohlrabi: 16/16 region cells filled**; 20 heat_pause, 26 second_planting
+- **honeydew-melon: 16/16 region cells filled**; 6 second_planting
+- **grapefruit: 16/16 region cells filled**
+- **cherry-sweet: 16/16 region cells filled**
+- **artichoke: 16/16 region cells filled**
+- **turnip: 16/16 region cells filled**; 28 heat_pause, 8 second_planting
+- **leek: 16/16 region cells filled**; 4 heat_pause, 4 second_planting
+- **brussels-sprouts: 16/16 region cells filled**; 8 heat_pause
+- **okra: 16/16 region cells filled**
+- **nectarine: 16/16 region cells filled**
+- **cherry-sour: 16/16 region cells filled**
 - **microgreens-mix: 0/0 region cells filled**
 - **sunflower-sprouts: 0/0 region cells filled**
 - **pea-shoots: 0/0 region cells filled**
-- **celery: 10/10 region cells filled**; 13 heat_pause
-- **shallot: 10/10 region cells filled**
-- **lemongrass: 10/10 region cells filled**
-- **marigold: 10/10 region cells filled**
-- **nasturtium: 10/10 region cells filled**; 6 heat_pause
-- **lavender: 10/10 region cells filled**
-- **sunflower: 10/10 region cells filled**
-- **borage: 10/10 region cells filled**; 11 heat_pause
-- **calendula: 10/10 region cells filled**; 14 heat_pause
-- **zinnia: 10/10 region cells filled**
-- **cosmos: 10/10 region cells filled**
-- **chamomile: 10/10 region cells filled**; 14 heat_pause
-- **sweet-alyssum: 10/10 region cells filled**; 15 heat_pause
-- **echinacea: 10/10 region cells filled**
-- **bee-balm: 10/10 region cells filled**
-- **viola: 10/10 region cells filled**; 15 heat_pause
-- **sweet-pea: 10/10 region cells filled**; 17 heat_pause
+- **celery: 16/16 region cells filled**; 22 heat_pause, 2 second_planting
+- **asparagus: 16/16 region cells filled**
+- **shallot: 16/16 region cells filled**
+- **lemongrass: 16/16 region cells filled**
+- **marigold: 16/16 region cells filled**
+- **nasturtium: 16/16 region cells filled**; 12 heat_pause
+- **lavender: 16/16 region cells filled**
+- **sunflower: 16/16 region cells filled**
+- **borage: 16/16 region cells filled**; 21 heat_pause, 1 second_planting
+- **calendula: 16/16 region cells filled**; 29 heat_pause, 1 second_planting
+- **zinnia: 16/16 region cells filled**
+- **cosmos: 16/16 region cells filled**
+- **chamomile: 16/16 region cells filled**; 29 heat_pause
+- **sweet-alyssum: 16/16 region cells filled**; 27 heat_pause
+- **echinacea: 16/16 region cells filled**
+- **bee-balm: 16/16 region cells filled**; 4 heat_pause
+- **viola: 16/16 region cells filled**; 27 heat_pause
+- **sweet-pea: 16/16 region cells filled**; 28 heat_pause
 - **radish-microgreens: 0/0 region cells filled**
 - **broccoli-microgreens: 0/0 region cells filled**
 - **arugula-microgreens: 0/0 region cells filled**
 - **wheatgrass: 0/0 region cells filled**
 - **cilantro-microgreens: 0/0 region cells filled**
-- **beet: 10/10 region cells filled**; 13 heat_pause
-- **cucumber: 10/10 region cells filled**; 5 heat_pause
-- **collards: 10/10 region cells filled**; 8 heat_pause
+- **beet: 16/16 region cells filled**; 28 heat_pause, 8 second_planting
+- **cucumber: 16/16 region cells filled**; 17 heat_pause, 7 second_planting
+- **collards: 16/16 region cells filled**; 17 heat_pause, 8 second_planting
+- **dry-bean: 16/16 region cells filled**; 7 heat_pause
+- **field-corn: 16/16 region cells filled**; 7 heat_pause
+- **popcorn: 16/16 region cells filled**; 7 heat_pause
+- **flint-corn: 16/16 region cells filled**; 7 heat_pause
 
 ## Flip gates (generated)
 - **cherry-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -389,7 +406,7 @@ The arc continues; 48 carries the verify block, the corrected worklist and what 
 - **broccoli:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **garlic:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **peach:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **apple:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **apple:** launch_ready_core=False launch_ready_seasoned=False status=`verified_gs_arc`
 - **lemon:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **blueberry:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **heirloom-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -417,6 +434,7 @@ The arc continues; 48 carries the verify block, the corrected worklist and what 
 - **cabbage:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **onion:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **spring-onion:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **sweet-corn:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **edamame:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **parsley:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **cilantro-coriander:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -433,10 +451,10 @@ The arc continues; 48 carries the verify block, the corrected worklist and what 
 - **cantaloupe:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **strawberry:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **pumpkin:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **plum:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **plum:** launch_ready_core=False launch_ready_seasoned=False status=`verified_gs_arc`
 - **apricot:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **pear-european:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **pear-asian:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **pear-european:** launch_ready_core=False launch_ready_seasoned=False status=`verified_gs_arc`
+- **pear-asian:** launch_ready_core=False launch_ready_seasoned=False status=`verified_gs_arc`
 - **lime:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **orange-navel:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **mandarin-clementine:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -453,6 +471,7 @@ The arc continues; 48 carries the verify block, the corrected worklist and what 
 - **honeydew-melon:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **grapefruit:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **cherry-sweet:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **artichoke:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **turnip:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **leek:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **brussels-sprouts:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -463,6 +482,7 @@ The arc continues; 48 carries the verify block, the corrected worklist and what 
 - **sunflower-sprouts:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **pea-shoots:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **celery:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **asparagus:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **shallot:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **lemongrass:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **marigold:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -487,7 +507,12 @@ The arc continues; 48 carries the verify block, the corrected worklist and what 
 - **beet:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **cucumber:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **collards:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **114 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
+- **dry-bean:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **field-corn:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **popcorn:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **flint-corn:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **121 verified, 117 launch-ready.** verified = status `verified_gs_arc`; launch-ready = that plus both launch_ready flags true. (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
+- **4 verified but NOT launch-ready:** apple, pear-asian, pear-european, plum -- each carries an open blocking finding. A blocking finding drives the launch flags, never `status` (PLA-466).
 
 ## Live locked decisions / guardrails
 

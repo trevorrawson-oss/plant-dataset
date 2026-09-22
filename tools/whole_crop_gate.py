@@ -24,6 +24,17 @@ never from a hand roster; that discipline is the bolting-miss preventer):
      s11_finding_001 predicate fix.
   G. flip-state report + two-field predicate (blocks_launch AND status !=
      "resolved").
+     CONTRACT, narrowed 2026-09-21 (PLA-466, Trevor's ruling). "CERTIFIED" and
+     "LAUNCH-READY" ARE DISTINCT STATES. verification_status.status records
+     whether the crop's content was verified; launch_ready_core/_seasoned record
+     whether it is fit to launch. A blocking finding drives THE FLAGS, never the
+     status: pulling status would take the crop off the site for a record
+     problem. So a live blocker is a VIOLATION only while the crop still CLAIMS
+     readiness on either flag. A live blocker with both flags false is the
+     COHERENT state and passes. Before this change the gate read "certified
+     implies no live blocker", which was never exercised: all 12 blocking
+     findings in the dataset were status:resolved, so PLA-466's four were the
+     first live ones and the contradiction surfaced only then.
 
 NOT covered here (run separately):
   - §3 cross-field consistency: CROP-SPECIFIC. Author the checks per crop
@@ -1252,7 +1263,14 @@ print(f"  launch_ready_core={vs.get('launch_ready_core')} launch_ready_seasoned=
 of = vs.get("open_findings") or []
 blockers = [f for f in of if isinstance(f, dict) and f.get("blocks_launch") and f.get("status") != "resolved"]
 print(f"  open_findings blockers (blocks_launch AND status!=resolved): {len(blockers)}")
-for b in blockers: fail(f"open finding blocks launch: {b.get('id', b)}")
+# PLA-466: the violation is CLAIMING readiness while a blocker stands, not recording the blocker.
+claims_ready = bool(vs.get("launch_ready_core")) or bool(vs.get("launch_ready_seasoned"))
+if blockers and claims_ready:
+    for b in blockers:
+        fail(f"open finding blocks launch while launch_ready is still true: {b.get('id', b)}")
+elif blockers:
+    print(f"  launch_ready is false on both flags: {len(blockers)} live blocker(s) recorded, "
+          f"which is the coherent state (PLA-466)")
 
 print()
 if violations:

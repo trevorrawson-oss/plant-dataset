@@ -241,6 +241,31 @@ if os.path.exists(_path):
     _annuals = [c for c in _data["crops"]
                 if c.get("calendar_basis") == "frost_anchored" and _certified(c)]
     assert len(_annuals) >= 10, ("certified annuals unexpectedly few (>=10)", len(_annuals))
+    # PLA-544 convention, added 2026-09-21 (PLA-466): pin this population BY IDENTITY, not by a
+    # floor. A >=10 floor lets the set shrink by 70 crops in silence, which is the failure mode
+    # PLA-544 was filed for. Measured on canonical 1721208e. PLA-466's four launch_ready flips do
+    # NOT move it: apple, plum, pear-european and pear-asian are perennial_chill_gated, so they
+    # were never in this frost_anchored set. A crop entering or leaving now prints by name.
+    _PINNED_ANNUALS = {
+        'acorn-squash', 'artichoke', 'arugula', 'asparagus', 'banana-pepper', 'basil',
+        'bee-balm', 'beefsteak-tomato', 'beet', 'bell-pepper', 'bok-choy', 'borage',
+        'broad-beans-fava', 'broccoli', 'brussels-sprouts', 'butternut-squash', 'cabbage',
+        'calendula', 'cantaloupe', 'carrot', 'cauliflower', 'cayenne-pepper', 'celery',
+        'chamomile', 'cherry-tomato', 'chives', 'cilantro-coriander', 'collards', 'cosmos',
+        'cucumber', 'dill', 'dry-bean', 'echinacea', 'edamame', 'eggplant', 'english-cucumber',
+        'field-corn', 'flint-corn', 'garlic', 'grape-tomato', 'green-beans-bush', 'habanero',
+        'heirloom-tomato', 'honeydew-melon', 'jalapeno', 'kale', 'kohlrabi', 'leek',
+        'lemongrass', 'lettuce-leaf', 'marigold', 'mint', 'nasturtium', 'okra', 'onion',
+        'parsley', 'parsnip', 'pickling-cucumber', 'pole-beans', 'popcorn', 'potato', 'pumpkin',
+        'radish', 'roma-tomato', 'shallot', 'slicing-cucumber', 'snow-peas', 'spaghetti-squash',
+        'spinach', 'spring-onion', 'sugar-snap-peas', 'sunflower', 'sweet-alyssum', 'sweet-corn',
+        'sweet-pea', 'sweet-potato', 'swiss-chard', 'tomatillo', 'turnip', 'viola', 'watermelon',
+        'yellow-summer-squash', 'zinnia', 'zucchini-courgette',
+    }
+    _got = {c["slug"] for c in _annuals}
+    assert _got == _PINNED_ANNUALS, (
+        "annual population moved -- update the pin deliberately, with a reason",
+        {"left": sorted(_PINNED_ANNUALS - _got), "joined": sorted(_got - _PINNED_ANNUALS)})
     for c in _annuals:
         fp = ac.annual_calendar_violations(c)
         assert fp == [], (f"FALSE POSITIVE on certified annual {c['slug']}", fp)

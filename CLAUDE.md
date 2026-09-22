@@ -13,9 +13,18 @@ it leads to stale-checkout confusion.)
 - **STATE_HISTORY.md** — the append-only recovery log (read to reconstruct true position).
 
 ## What this is
-128 crops: 121 certified gold-standard anchors + 7 honest shells (the ~105-certified bot-pipeline
-goal is met and passed; the 7 remaining shells are the 5 mushrooms + avocado/olive). The armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered
-gates) + `tools/release_verify.py`. Gate detail + the live roster live in CURRENT_STATE.md.
+128 crops: 121 certified gold-standard anchors, of which only **117 are launch-ready**, + 7 honest
+shells (the ~105-certified bot-pipeline goal is met and passed; the 7 remaining shells are the 5
+mushrooms + avocado/olive). **Those two numbers are DISTINCT and must not be collapsed** (PLA-466,
+2026-09-21). **CERTIFIED** = `verification_status.status == verified_gs_arc`. **LAUNCH-READY** = that
+PLUS both `launch_ready_*` flags true. Those are the only two terms; do not introduce a third. A
+blocking finding drives the FLAGS, never the status, because status is the page gate and pulling it
+would take a crop off the site for a record problem. The 4 certified but not launch-ready are
+**plum, apple, pear-european, pear-asian**, each carrying an open blocking finding for an anchored
+claim that fails R4 (see PLA-579). `tools/doc_roster_claim_gate.py` machine-checks the first
+sentence's three numbers against canonical; the launch-ready count is NOT yet gated (PLA-591). The
+armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered gates) +
+`tools/release_verify.py`. Gate detail + the live roster live in CURRENT_STATE.md.
 
 ## Who does what (the two-lane split is RETIRED)
 - **Claude Code (here) does BOTH**: AUTHORS content (biology, dual-register consumer prose,

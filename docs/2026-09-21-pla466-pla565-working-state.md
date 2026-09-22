@@ -1,16 +1,30 @@
-# PLA-466 / PLA-565 working state -- 2026-09-21
+# PLA-466 / PLA-565 -- LANDED 2026-09-21
 
-**Status: PARKED, awaiting Trevor's fetches and rulings. NOTHING WRITTEN TO CANONICAL.**
+**Status: LANDED. `1721208e` -> `079e3923`.** This document was written while the arc was parked
+and is kept as the EVIDENCE RECORD: the hashes below are what every claim in the promote rests on,
+and they are not reproduced in `STATE_HISTORY.md`.
 
-Canonical at park: `1721208ee0cbe4249ecf32ca3bd47a786f8a689cadcb7bb300d8d8ada4d82054`
-`origin/main` at park: `21a43f0e29e946dd4d956be2bd331ea9d81dff3c`
+For the narrative -- what moved, why, the gate contract change and what is owed -- read the
+**2026-09-21 entry in `STATE_HISTORY.md`**, which is the authority. This file is the ledger.
 
-A Plan C field-shape session is running in parallel on its own branch. It commits a spec
-document only and does not touch canonical, so the `--expect-sha 1721208e` pin stays valid.
-**Check `origin/main` before committing anything to canonical or the state trio.**
+  canonical at landing   079e3923660a53189bcf5e0bee0506e78225e473b2dadcba54cbfb3045337696
+  base                   1721208ee0cbe4249ecf32ca3bd47a786f8a689cadcb7bb300d8d8ada4d82054
+  promote                tools/promote_pla466_rootstock.py
+  guard suite            tools/test_promote_pla466_rootstock.py (60)
+  mutation harness       tools/mutate_pla466_rootstock_suite.py (32/32, 0 survived)
+  section G refusal spec tools/test_gate_g_launch_blocker_predicate.py (6)
 
-This document is written so a fresh session can pick the arc up cold. Read it top to bottom
-before acting.
+**Superseded below:** sections 5 (rulings), 6 (held drafts), 9 (the write plan) describe the
+PARKED state and were all executed. Sections 2 (evidence ledger), 3 (instrument warnings) and 4
+(findings) remain accurate and are why this file is kept. Section 10's fetch list is CLOSED: all
+four fetches were supplied by Trevor from a residential browser on 2026-09-21 and their results
+are in section 4 and in `STATE_HISTORY.md`.
+
+**Two corrections to what this file said while parked**, both measured after it was written:
+- the astro pin is **11 commits** behind serving `a7f234ce`, not "72+"
+- the post-state SHA is **`079e3923`**, not the `1899551e` an earlier draft carried; that figure
+  predates the two records Trevor required (the `rooststock` slug record on persimmon, and the
+  fragility note on plum's repointed anchors), which also took the promote from 6 crops to 7
 
 ---
 
