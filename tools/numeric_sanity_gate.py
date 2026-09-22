@@ -40,6 +40,24 @@ def _endpoints(v):
     return None
 
 
+def _plants_per_pot_readings(cn):
+    """The readings under container_notes.plants_per_pot, or [] (PLA-580, register row 31).
+
+    DELIBERATELY RETYPED rather than imported. This module has NO module-level imports at all --
+    five other modules import it, and keeping it dependency-free is why. The retype is the risk
+    "import a gate's table, never retype it" warns about, so the agreement with
+    plants_per_pot_gate.readings_of is MEASURED in test_plants_per_pot_gate.NumericSanityAgreement
+    over the whole value domain, rather than assumed. If you change one, that test fails.
+    """
+    v = cn.get("plants_per_pot")
+    if not isinstance(v, dict):
+        return []
+    rs = v.get("readings")
+    if not isinstance(rs, list):
+        return []
+    return [r for r in rs if isinstance(r, dict)]
+
+
 def numeric_sanity_violations(crop):
     """Return a list ([] = clean) -- one per numeric field whose value(s) fall outside their
     physical bound. Skips absent / empty / non-numeric fields (presence is other gates' job; this
@@ -66,6 +84,16 @@ def numeric_sanity_violations(crop):
     check(cn.get("min_pot_gallons"), "container_notes.min_pot_gallons", 1, 100)
     check(cn.get("recommended_pot_gallons"), "container_notes.recommended_pot_gallons", 1, 100)
     check(cn.get("depth_inches_min"), "container_notes.depth_inches_min", 1, 60)
+
+    # plants_per_pot (PLA-580, register row 31): a per-pot capacity and the pot size it was
+    # measured at. THE 0.5 FLOOR ON at_gallons IS DELIBERATE and differs from the 1..100 that
+    # min_pot_gallons and recommended_pot_gallons carry two lines above, because Illinois Extension
+    # publishes a HALF-GALLON row ("Half-gallon containers | parsley | 1 plant"). Do NOT "fix" it
+    # to 1 to match its neighbours; test_plants_per_pot_gate pins both floors so neither drifts
+    # onto the other. The count ceiling of 30 is a sanity bound, not a capacity claim.
+    for _i, _r in enumerate(_plants_per_pot_readings(cn)):
+        check(_r.get("count"), f"container_notes.plants_per_pot[{_i}].count", 1, 30)
+        check(_r.get("at_gallons"), f"container_notes.plants_per_pot[{_i}].at_gallons", 0.5, 100)
 
     # spacing is ARCHETYPE-AWARE: a non-tree (annual/herbaceous/woody-ornamental subshrub) above
     # ~6ft is absurd; a fruit tree legitimately reaches 25ft (300in). Indoor carries [] -> skipped.

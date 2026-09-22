@@ -1,0 +1,390 @@
+{
+  "_what": "PLA-580 container_notes.plants_per_pot, register row 31. Derived from the source bytes by build_spec.py; the promote verifies every value against its own independent literals (EXPECTED_READINGS). Held and unauthored rows are recorded in source_ledger so a hold is a decision, not an omission.",
+  "base_sha": "079e3923660a53189bcf5e0bee0506e78225e473b2dadcba54cbfb3045337696",
+  "fetch_date": "2026-09-21",
+  "sources": {
+    "uiuc_ext": {
+      "url": "https://extension.illinois.edu/container-gardens/growing-vegetables-containers",
+      "bytes": 28754,
+      "sha256": "f9f336d5eb33a1dc0833f53d98b2e909cf2d6ce920795dc8913fab94de393119",
+      "institution": "University of Illinois Extension"
+    },
+    "umd_ext": {
+      "url": "https://extension.umd.edu/resource/types-containers-growing-vegetables",
+      "bytes": 34659,
+      "sha256": "96521c5d0cf8860e7895a8c6da426ac48a372894c531431c64666bda8151f407",
+      "institution": "University of Maryland Extension"
+    }
+  },
+  "authored": [
+    {
+      "crop": "cabbage",
+      "readings": [
+        {
+          "count": [
+            1,
+            1
+          ],
+          "at_gallons": [
+            1,
+            1
+          ],
+          "sources": [
+            "uiuc_ext"
+          ],
+          "anchoring_urls": {
+            "uiuc_ext": {
+              "url": "https://extension.illinois.edu/container-gardens/growing-vegetables-containers",
+              "verified": "2026-09-21"
+            }
+          }
+        }
+      ],
+      "field_additions": [
+        {
+          "field": "plants_per_pot",
+          "date": "2026-09-21",
+          "sources": [
+            "uiuc_ext"
+          ],
+          "note": "PLA-580 plants_per_pot: count [1, 1], at_gallons [1, 1]. University of Illinois Extension, https://extension.illinois.edu/container-gardens/growing-vegetables-containers (raw read 2026-09-21, 28754 bytes, sha256 f9f336d5eb33a1dc0833f53d98b2e909cf2d6ce920795dc8913fab94de393119); verbatim: \"One gallon containers | cabbages | 1 plant\". One table, 14 data rows; 10 carry a count and 4 give a thinning spacing instead. The container size is stated per row and varies across four values. The count is a capacity AT THE STATED POT SIZE, not a per-plant volume and not bound to min_pot_gallons. amend-not-recert."
+        }
+      ]
+    },
+    {
+      "crop": "cherry-tomato",
+      "readings": [
+        {
+          "count": [
+            1,
+            1
+          ],
+          "at_gallons": [
+            1,
+            1
+          ],
+          "sources": [
+            "uiuc_ext"
+          ],
+          "anchoring_urls": {
+            "uiuc_ext": {
+              "url": "https://extension.illinois.edu/container-gardens/growing-vegetables-containers",
+              "verified": "2026-09-21"
+            }
+          }
+        }
+      ],
+      "field_additions": [
+        {
+          "field": "plants_per_pot",
+          "date": "2026-09-21",
+          "sources": [
+            "uiuc_ext"
+          ],
+          "note": "PLA-580 plants_per_pot: count [1, 1], at_gallons [1, 1]. University of Illinois Extension, https://extension.illinois.edu/container-gardens/growing-vegetables-containers (raw read 2026-09-21, 28754 bytes, sha256 f9f336d5eb33a1dc0833f53d98b2e909cf2d6ce920795dc8913fab94de393119); verbatim: \"One gallon containers | cherry and patio tomatoes | 1 plant\". One table, 14 data rows; 10 carry a count and 4 give a thinning spacing instead. The container size is stated per row and varies across four values. The count is a capacity AT THE STATED POT SIZE, not a per-plant volume and not bound to min_pot_gallons. amend-not-recert."
+        }
+      ]
+    },
+    {
+      "crop": "eggplant",
+      "readings": [
+        {
+          "count": [
+            1,
+            1
+          ],
+          "at_gallons": [
+            2,
+            2
+          ],
+          "sources": [
+            "uiuc_ext"
+          ],
+          "anchoring_urls": {
+            "uiuc_ext": {
+              "url": "https://extension.illinois.edu/container-gardens/growing-vegetables-containers",
+              "verified": "2026-09-21"
+            }
+          }
+        },
+        {
+          "count": [
+            1,
+            1
+          ],
+          "at_gallons": [
+            8,
+            10
+          ],
+          "sources": [
+            "umd_ext"
+          ],
+          "anchoring_urls": {
+            "umd_ext": {
+              "url": "https://extension.umd.edu/resource/types-containers-growing-vegetables",
+              "verified": "2026-09-21"
+            }
+          }
+        }
+      ],
+      "field_additions": [
+        {
+          "field": "plants_per_pot",
+          "date": "2026-09-21",
+          "sources": [
+            "uiuc_ext"
+          ],
+          "note": "PLA-580 plants_per_pot: count [1, 1], at_gallons [2, 2]. University of Illinois Extension, https://extension.illinois.edu/container-gardens/growing-vegetables-containers (raw read 2026-09-21, 28754 bytes, sha256 f9f336d5eb33a1dc0833f53d98b2e909cf2d6ce920795dc8913fab94de393119); verbatim: \"Two gallon containers | eggplant | 1 plant\". One table, 14 data rows; 10 carry a count and 4 give a thinning spacing instead. The container size is stated per row and varies across four values. The count is a capacity AT THE STATED POT SIZE, not a per-plant volume and not bound to min_pot_gallons. amend-not-recert."
+        },
+        {
+          "field": "plants_per_pot",
+          "date": "2026-09-21",
+          "sources": [
+            "umd_ext"
+          ],
+          "note": "PLA-580 plants_per_pot: count [1, 1], at_gallons [8, 10]. University of Maryland Extension, https://extension.umd.edu/resource/types-containers-growing-vegetables (raw read 2026-09-21, 34659 bytes, sha256 96521c5d0cf8860e7895a8c6da426ac48a372894c531431c64666bda8151f407); verbatim: \"For Large Vegetables-one plant per container. Minimum 8-10 gallons of growing media, with a depth of 12-16 inches Examples: tomatoes, pepper, eggplant, cucumber, Winter squash\". A SIZE-CLASS count: one count, one size band, five named crop groups, of which only eggplant names a single slug. The Medium and Small classes on the same page carry a volume and a depth but no count, and the Medium class names dwarf eggplant with no count, so neither yields a reading. This is the only genuinely banded size in either source. The count is a capacity AT THE STATED POT SIZE, not a per-plant volume and not bound to min_pot_gallons. amend-not-recert."
+        }
+      ]
+    },
+    {
+      "crop": "green-beans-bush",
+      "readings": [
+        {
+          "count": [
+            2,
+            3
+          ],
+          "at_gallons": [
+            1,
+            1
+          ],
+          "sources": [
+            "uiuc_ext"
+          ],
+          "anchoring_urls": {
+            "uiuc_ext": {
+              "url": "https://extension.illinois.edu/container-gardens/growing-vegetables-containers",
+              "verified": "2026-09-21"
+            }
+          }
+        }
+      ],
+      "field_additions": [
+        {
+          "field": "plants_per_pot",
+          "date": "2026-09-21",
+          "sources": [
+            "uiuc_ext"
+          ],
+          "note": "PLA-580 plants_per_pot: count [2, 3], at_gallons [1, 1]. University of Illinois Extension, https://extension.illinois.edu/container-gardens/growing-vegetables-containers (raw read 2026-09-21, 28754 bytes, sha256 f9f336d5eb33a1dc0833f53d98b2e909cf2d6ce920795dc8913fab94de393119); verbatim: \"One gallon containers | green beans | 2-3 plants\". One table, 14 data rows; 10 carry a count and 4 give a thinning spacing instead. The container size is stated per row and varies across four values. The count is a capacity AT THE STATED POT SIZE, not a per-plant volume and not bound to min_pot_gallons. amend-not-recert."
+        }
+      ]
+    },
+    {
+      "crop": "lettuce-leaf",
+      "readings": [
+        {
+          "count": [
+            4,
+            6
+          ],
+          "at_gallons": [
+            1,
+            1
+          ],
+          "sources": [
+            "uiuc_ext"
+          ],
+          "anchoring_urls": {
+            "uiuc_ext": {
+              "url": "https://extension.illinois.edu/container-gardens/growing-vegetables-containers",
+              "verified": "2026-09-21"
+            }
+          }
+        }
+      ],
+      "field_additions": [
+        {
+          "field": "plants_per_pot",
+          "date": "2026-09-21",
+          "sources": [
+            "uiuc_ext"
+          ],
+          "note": "PLA-580 plants_per_pot: count [4, 6], at_gallons [1, 1]. University of Illinois Extension, https://extension.illinois.edu/container-gardens/growing-vegetables-containers (raw read 2026-09-21, 28754 bytes, sha256 f9f336d5eb33a1dc0833f53d98b2e909cf2d6ce920795dc8913fab94de393119); verbatim: \"One gallon containers | leaf lettuce | 4-6 plants\". One table, 14 data rows; 10 carry a count and 4 give a thinning spacing instead. The container size is stated per row and varies across four values. The count is a capacity AT THE STATED POT SIZE, not a per-plant volume and not bound to min_pot_gallons. amend-not-recert."
+        }
+      ]
+    },
+    {
+      "crop": "parsley",
+      "readings": [
+        {
+          "count": [
+            1,
+            1
+          ],
+          "at_gallons": [
+            0.5,
+            0.5
+          ],
+          "sources": [
+            "uiuc_ext"
+          ],
+          "anchoring_urls": {
+            "uiuc_ext": {
+              "url": "https://extension.illinois.edu/container-gardens/growing-vegetables-containers",
+              "verified": "2026-09-21"
+            }
+          }
+        }
+      ],
+      "field_additions": [
+        {
+          "field": "plants_per_pot",
+          "date": "2026-09-21",
+          "sources": [
+            "uiuc_ext"
+          ],
+          "note": "PLA-580 plants_per_pot: count [1, 1], at_gallons [0.5, 0.5]. University of Illinois Extension, https://extension.illinois.edu/container-gardens/growing-vegetables-containers (raw read 2026-09-21, 28754 bytes, sha256 f9f336d5eb33a1dc0833f53d98b2e909cf2d6ce920795dc8913fab94de393119); verbatim: \"Half-gallon containers | parsley | 1 plant\". One table, 14 data rows; 10 carry a count and 4 give a thinning spacing instead. The container size is stated per row and varies across four values. The count is a capacity AT THE STATED POT SIZE, not a per-plant volume and not bound to min_pot_gallons. amend-not-recert."
+        }
+      ]
+    },
+    {
+      "crop": "swiss-chard",
+      "readings": [
+        {
+          "count": [
+            1,
+            1
+          ],
+          "at_gallons": [
+            1,
+            1
+          ],
+          "sources": [
+            "uiuc_ext"
+          ],
+          "anchoring_urls": {
+            "uiuc_ext": {
+              "url": "https://extension.illinois.edu/container-gardens/growing-vegetables-containers",
+              "verified": "2026-09-21"
+            }
+          }
+        }
+      ],
+      "field_additions": [
+        {
+          "field": "plants_per_pot",
+          "date": "2026-09-21",
+          "sources": [
+            "uiuc_ext"
+          ],
+          "note": "PLA-580 plants_per_pot: count [1, 1], at_gallons [1, 1]. University of Illinois Extension, https://extension.illinois.edu/container-gardens/growing-vegetables-containers (raw read 2026-09-21, 28754 bytes, sha256 f9f336d5eb33a1dc0833f53d98b2e909cf2d6ce920795dc8913fab94de393119); verbatim: \"One gallon containers | Swiss chard | 1 plant\". One table, 14 data rows; 10 carry a count and 4 give a thinning spacing instead. The container size is stated per row and varies across four values. The count is a capacity AT THE STATED POT SIZE, not a per-plant volume and not bound to min_pot_gallons. amend-not-recert."
+        }
+      ]
+    }
+  ],
+  "source_ledger": [
+    {
+      "source_row": "parsley",
+      "outcome": "AUTHORED -> parsley",
+      "why": "count [1, 1] at [0.5, 0.5] gal"
+    },
+    {
+      "source_row": "cabbages",
+      "outcome": "AUTHORED -> cabbage",
+      "why": "count [1, 1] at [1, 1] gal"
+    },
+    {
+      "source_row": "cucumbers",
+      "outcome": "HELD (ruling 5)",
+      "why": "names cucumber, english-cucumber, pickling-cucumber and slicing-cucumber"
+    },
+    {
+      "source_row": "green beans",
+      "outcome": "AUTHORED -> green-beans-bush",
+      "why": "count [2, 3] at [1, 1] gal"
+    },
+    {
+      "source_row": "leaf lettuce",
+      "outcome": "AUTHORED -> lettuce-leaf",
+      "why": "count [4, 6] at [1, 1] gal"
+    },
+    {
+      "source_row": "spinach",
+      "outcome": "NO COUNT",
+      "why": "a thinning spacing ('direct seed, thin to 1-2 inches apart') is not a capacity"
+    },
+    {
+      "source_row": "Swiss chard",
+      "outcome": "AUTHORED -> swiss-chard",
+      "why": "count [1, 1] at [1, 1] gal"
+    },
+    {
+      "source_row": "cherry and patio tomatoes",
+      "outcome": "AUTHORED -> cherry-tomato",
+      "why": "count [1, 1] at [1, 1] gal"
+    },
+    {
+      "source_row": "beets",
+      "outcome": "NO COUNT",
+      "why": "a thinning spacing ('thin to 2-3 inches apart') is not a capacity"
+    },
+    {
+      "source_row": "carrots",
+      "outcome": "NO COUNT",
+      "why": "a thinning spacing ('thin to 2-3 inches apart') is not a capacity"
+    },
+    {
+      "source_row": "eggplant",
+      "outcome": "AUTHORED -> eggplant",
+      "why": "count [1, 1] at [2, 2] gal"
+    },
+    {
+      "source_row": "pepper",
+      "outcome": "HELD (ruling 5)",
+      "why": "names bell-pepper and four more, spanning sweet and hot"
+    },
+    {
+      "source_row": "radishes",
+      "outcome": "NO COUNT",
+      "why": "a thinning spacing ('thin to 1-2 inches apart') is not a capacity"
+    },
+    {
+      "source_row": "Standard tomatoes",
+      "outcome": "UNAUTHORED (ruling 5)",
+      "why": "names no slug; grape-/roma-/beefsteak-/heirloom- are separate crops"
+    },
+    {
+      "source_row": "UMD tomatoes",
+      "outcome": "HELD (ruling 5)",
+      "why": "a category name, not a crop name"
+    },
+    {
+      "source_row": "UMD pepper",
+      "outcome": "HELD (ruling 5)",
+      "why": "a category name, not a crop name"
+    },
+    {
+      "source_row": "UMD eggplant",
+      "outcome": "AUTHORED -> eggplant",
+      "why": "count [1, 1] at [8, 10] gal"
+    },
+    {
+      "source_row": "UMD cucumber",
+      "outcome": "HELD (ruling 5)",
+      "why": "a category name, not a crop name"
+    },
+    {
+      "source_row": "UMD Winter squash",
+      "outcome": "HELD (ruling 5)",
+      "why": "a category name, not a crop name"
+    }
+  ],
+  "expected": {
+    "keys": 121,
+    "authored_crops": 7,
+    "readings": 8,
+    "null": 114,
+    "shells": 7
+  }
+}

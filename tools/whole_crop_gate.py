@@ -940,6 +940,32 @@ print(f"  plant-dimension violations: {len(_pdv)}")
 for m in _pdv:
     fail(f"plant-dimensions: {m}")
 
+# ---------------- A60. plants_per_pot (PLA-580 spec 2026-09-21, section 8; register row 31) ----------------
+# container_notes.plants_per_pot: null, or {readings: [{count, at_gallons, sources, anchoring_urls}]}.
+# A count and the pot size it was measured at are ONE datum and travel together; the field is bound to
+# NEITHER min_pot_gallons nor recommended_pot_gallons. The gate deliberately does NOT assert
+# at_gallons >= min_pot_gallons -- measured, that assertion fails on 9 of 10 authored rows, and it is the
+# confusion the field exists to prevent. Do not add it.
+# SHAPE fires only when the key is present and non-null, so it arms GREEN on 079e3923 (0/128 carry the
+# key). {readings: []} is REFUSED: absence is spelled null, because [] would assert "assessed, none
+# found" and this field has no such state. An authored value on a CERTIFIED crop must be backed by a
+# verification_status.field_additions[] entry with field == "plants_per_pot" (amend-not-recert, the A40
+# timing-spine pattern), and requires container_ok true. The key is ABSENT on every uncertified shell.
+# The PRESENCE floor (a certified crop carries the key, null being a value) is behind A60_PRESENCE_ARMED
+# and flips to True in the SAME commit that writes the canonical carrying the key, never before: armed
+# early it would redden gate_all on live canonical and flood a parallel session (gates arm off the data).
+# numeric_sanity (A33) owns the bounds: count within [1, 30], at_gallons within [0.5, 100] -- the 0.5
+# floor differs from min/recommended_pot_gallons' 1..100 on purpose (Illinois publishes a half-gallon row).
+# ARMED 2026-09-21 in the commit that wrote 526788f2 (121/121 certified crops carry the key; 7 authored
+# carrying 8 readings; the 7 shells exempt by status).
+from plants_per_pot_gate import shape_violations as _ppp_shape, presence_violations as _ppp_presence
+A60_PRESENCE_ARMED = True
+print(f"A60. plants_per_pot (readings array, count/at_gallons pairs, per-reading sources, provenance; presence {'ARMED' if A60_PRESENCE_ARMED else 'off'})")
+_pppv = _ppp_shape(crop) + (_ppp_presence(crop) if A60_PRESENCE_ARMED else [])
+print(f"  plants-per-pot violations: {len(_pppv)}")
+for m in _pppv:
+    fail(f"plants-per-pot: {m}")
+
 # ---------------- A55. perennial year-pill coherence (PLA-6 Round 2) ----------------
 # HARD-FLIPPED 2026-08-22, the day its findings reached zero, which is the same soft-then-hard
 # discipline A49/A50 followed. It shipped standalone on 2026-08-22 with 4 live findings and was
