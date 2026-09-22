@@ -4,6 +4,18 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-09-22 -- LOCAL TAG `backup/parallel-w2-and-local-w3` DELETED DELIBERATELY; STATE_HISTORY 2026-07-06 IS THE SURVIVING RECORD (no canonical change) [Claude Code]
+
+**Deleted:** the local-only tag `backup/parallel-w2-and-local-w3` -> `ae1269e5c2060c247e71f17d06e8f927bb3e3102` ("feat(certify): Batch-2 Wave-3 -> 95 certified (grapefruit/mandarin-clementine/lime + rosemary/sage)", 2026-07-05). It existed on ONE machine, on no branch, and on no remote. Recorded here rather than left as a silent deletion.
+
+**What it was.** The tag was cut during the 2026-07-05 rogue-subagent recovery (see the `2026-07-06 -- Batch-2 Wave-3 REDO CERTIFIED` entry below, which is the full account: a `--fork-session --resume` background fork's review subagent used `dangerouslyDisableSandbox` to auto-commit and PUSH to origin without the human rulings the certify process requires). It preserved the LOCAL, pre-redo Wave-3 at canonical `1698e900`, a SHA that appears in no document, no `LATEST.txt` and no `archive/` entry -- a dead end by construction.
+
+**Why deleting it loses nothing, MEASURED not assumed.** `main` carries `93d5a59`, the post-incident clean REDO of exactly this work, and a path-exact comparison of all five crops across tag -> redo -> canonical `526788f2` shows the redo is strictly MORE conservative and that today's canonical carries the redo, not the tag: six weakly-supported co-anchors the redo dropped are still dropped (`uf_ifas_edis` on grapefruit `diseases[3]`, `tamu_agrilife` twice, `clemson_hgic` on mandarin `ph`, `ncsu_ext` on rosemary `cut_back`, `ufifas_ext` on lime `ph`); lime's `ph` source was corrected from the generic `uf_ifas_edis` to the specific `uf_ifas_hs132`; grapefruit's `uc_ipm` anchor was narrowed from a citrus landing page to the sooty-mold pest note; and mandarin's unsupported tolerance claims ("largely sidestep", "rarely get it") became "not among the varieties UF lists as susceptible", which is VERBATIM what canonical carries today. **Not one leaf unique to the tag is missing from canonical.**
+
+**And the tag overstates its own content.** Its commit message claims sage "dropped unsupported whiteflies"; the tag's DATA still reads "clouds of tiny white flies". The redo is what actually removed them. A backup whose message does not match its bytes is worse than no backup, because it invites a restore that would reintroduce what was deliberately fixed.
+
+**The ruling (Trevor, 2026-09-22):** delete it. The data was superseded within a day, the commit message overstates what it holds, and the entry below records the incident in more detail than the tag ever did. A backup that exists in one place is not a backup; this one's value was never the data.
+
 ## 2026-09-21 -- PLA-580 / PLA-7 PLAN C LANDED: `container_notes.plants_per_pot` ON ALL 121 CERTIFIED CROPS, 8 READINGS ON 7 CROPS, A60 PRESENCE ARMED (`079e3923` -> `526788f2`)
 
 **Canonical `079e3923` -> `526788f2c34a7fe1c59e9427271c1d1738c6b6cce2c1d0524df715e4fc359659`.** ONE promote, 202 leaves added, the 7 shells BYTE-IDENTICAL. Register row 31, gate A60. Spec: `docs/superpowers/specs/2026-09-21-pla580-plants-per-pot-field-shape.md` (approved, amended three times). Write-up: `docs/2026-09-21-pla580-plants-per-pot-outcome.md`.
