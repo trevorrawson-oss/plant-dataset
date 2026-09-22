@@ -77,10 +77,26 @@ def main():
         print(f"\ngate_all: {len(failed)} of {len(cert)} certified crop(s) FAILED whole_crop_gate "
               f"-- run `python3 tools/whole_crop_gate.py <slug>` for detail")
         sys.exit(1)
+    # ROSTER-LEVEL FLOORS. whole_crop_gate is PER-CROP and structurally cannot see a COUNT, so a
+    # ratchet has to run here, once, over the whole roster. PLA-533 ruling 1 (Trevor, 2026-09-22):
+    # the population of certified crops stating a container_notes.min_pot_gallons with no citation
+    # may go DOWN, never UP. Armed at 4, where it is GREEN -- it does not wait for those four to be
+    # re-sourced, it stops the population growing while the audit runs.
+    from container_citation_floor_gate import violations as _ccf_violations, uncited as _ccf_uncited
+    _ccf = _ccf_violations(json.load(open(path, encoding="utf-8")))
+    if _ccf:
+        for m in _ccf:
+            print(f"  VIOLATION: container-citation-floor: {m}")
+        print(f"\ngate_all: container_citation_floor_gate FAILED ({len(_ccf)} violation(s)) "
+              f"-- run `python3 tools/container_citation_floor_gate.py` for detail")
+        sys.exit(1)
+
     # "PASS" is load-bearing: tools/test_gate_all.py asserts it appears on a clean run. Both
     # numbers sit on the same line so the verdict can never be read as a launch-ready count.
     print(f"gate_all: PASS -- gate passes {len(cert)}/{len(cert)} certified, "
           f"launch-ready {len(ready)}/{len(cert)}")
+    print(f"  container-citation floor: {len(_ccf_uncited(json.load(open(path, encoding='utf-8'))))}"
+          f" uncited min_pot_gallons (PLA-533 ratchet, may shrink never grow)")
     if blocked:
         print(f"  NOT launch-ready ({len(blocked)}): {', '.join(sorted(blocked))}")
         print("  (CERTIFIED = status verified_gs_arc. LAUNCH-READY = that plus both "
