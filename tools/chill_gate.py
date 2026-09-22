@@ -69,11 +69,27 @@ if __name__ == "__main__":
     import json, sys
     path = sys.argv[1] if len(sys.argv) > 1 else "crops_data_final.json"
     data = json.load(open(path))
+    # A check that cannot distinguish "inspected and clean" from "inspected nothing"
+    # is not a check (CLAUDE.md, 2026-09-22). This gate reported only its violation
+    # count, so 128 clean crops and an EMPTY roster printed the same line. Both
+    # populations are now reported and floored. Measured on 526788f2: 128 crops and
+    # 39 zone-cells across 16 regions. The floors sit deliberately BELOW those, so
+    # ordinary roster movement does not flood, while zero or a collapse refuses.
+    MIN_CROPS, MIN_TABLE_CELLS = 100, 30
     total = 0
     for v in chill_table_violations(data):
         print(f"  TABLE: {v}"); total += 1
-    for c in data["crops"]:
+    crops = data["crops"]
+    for c in crops:
         for v in chill_delivered_absent_violations(c):
             print(f"  {c.get('slug')}: {v}"); total += 1
-    print(f"chill gate: {total} violation(s)")
+    table = data.get("region_chill_delivered") or {}
+    cells = sum(len(z) for z in table.values() if isinstance(z, dict))
+    print(f"chill gate: {total} violation(s) across {len(crops)} crops "
+          f"and {cells} chill-table cell(s) in {len(table)} region(s)")
+    if len(crops) < MIN_CROPS or cells < MIN_TABLE_CELLS:
+        print(f"  REFUSED (VACUOUS): inspected {len(crops)} crops / {cells} table cells, "
+              f"floors are {MIN_CROPS} / {MIN_TABLE_CELLS}. A gate that inspected nothing "
+              f"must not report a clean run.")
+        sys.exit(2)
     sys.exit(1 if total else 0)

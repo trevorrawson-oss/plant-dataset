@@ -67,20 +67,23 @@ if __name__ == "__main__":
     path = sys.argv[1] if len(sys.argv) > 1 else "crops_data_final.json"
     data = json.load(open(path, encoding="utf-8"))
     total = 0
+    inspected = 0   # user-facing strings actually examined -- the population
 
     def walk(o, pat, slug):
-        global total
+        global total, inspected
         if isinstance(o, dict):
             for k, v in o.items():
                 p = f"{pat}.{k}" if pat else k
                 if not is_backend(k, pat):
                     if isinstance(v, str):
+                        inspected += 1
                         for h in spelled_temp_hits(v):
                             print(f"  {slug} {p}: {h!r}")
                             total += 1
                     elif isinstance(v, list):
                         for i, x in enumerate(v):
                             if isinstance(x, str):
+                                inspected += 1
                                 for h in spelled_temp_hits(x):
                                     print(f"  {slug} {p}[{i}]: {h!r}")
                                     total += 1
@@ -89,7 +92,17 @@ if __name__ == "__main__":
             for i, x in enumerate(o):
                 walk(x, f"{pat}[{i}]", slug)
 
+    # A check that cannot distinguish "inspected and clean" from "inspected nothing"
+    # is not a check (CLAUDE.md, 2026-09-22). This scan printed only its hit count, so
+    # a clean roster and an EMPTY one produced the same line. The floor is set well
+    # below the measurement on 526788f2 so ordinary authoring never trips it.
+    MIN_STRINGS = 50000
     for c in data["crops"]:
         walk(c, "", c.get("slug", "?"))
-    print(f"spelled-temp scan: {total} user-facing hit(s)")
+    print(f"spelled-temp scan: {total} user-facing hit(s) across {inspected} "
+          f"user-facing string(s) in {len(data['crops'])} crop(s)")
+    if inspected < MIN_STRINGS:
+        print(f"  REFUSED (VACUOUS): inspected {inspected} strings, floor is {MIN_STRINGS}. "
+              f"A scan that inspected nothing must not report a clean run.")
+        sys.exit(2)
     sys.exit(1 if total else 0)

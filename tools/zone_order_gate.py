@@ -109,17 +109,32 @@ def zone_order_violations(crop):
     return out
 
 
+# The DECLARED population for this gate's scope. Measured 2026-09-22 on canonical
+# 526788f2: archetype == 'herbaceous_perennial' has exactly two members, artichoke
+# and asparagus. The gate previously printed "/ 128 scanned", which is the OUTER
+# loop, not the inspected population -- so it printed the same line with 2 crops in
+# scope and with 0, byte for byte. The number that looks like coverage is the number
+# that isn't (CLAUDE.md, 2026-09-22). Gaining members is fine; losing them refuses.
+MIN_IN_SCOPE = 2
+
+
 def main(path):
     data = json.load(open(path, encoding="utf-8"))
     total = 0
     hit = set()
+    in_scope = [c for c in data["crops"] if c.get("archetype") == ARCHETYPE]
     for crop in data["crops"]:
         for v in zone_order_violations(crop):
             print(f"  {crop.get('slug')}: {v}")
             total += 1
             hit.add(crop.get("slug"))
     print(f"zone order gate: {total} violation(s) across {len(hit)} crop(s) / "
-          f"{len(data['crops'])} scanned (scope: archetype == {ARCHETYPE!r})")
+          f"{len(in_scope)} IN SCOPE of {len(data['crops'])} scanned "
+          f"(scope: archetype == {ARCHETYPE!r})")
+    if len(in_scope) < MIN_IN_SCOPE:
+        print(f"  REFUSED (VACUOUS): {len(in_scope)} crop(s) in scope, floor is "
+              f"{MIN_IN_SCOPE}. A gate that inspected nothing must not report a clean run.")
+        return 2
     return 1 if total else 0
 
 

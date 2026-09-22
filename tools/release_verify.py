@@ -190,11 +190,25 @@ def main():
     if not any("novel region keys" in m for m in concerns):
         ok("no novel (non-benign) keys vs reference on any filled cell")
 
+    # F. region_notes presence. The filter is "cells that HAVE seasoned notes", so an
+    # empty filter printed ok -- the same line for a crop with 16 noted cells and for a
+    # crop that had lost every one (confirmed by running it in a zero-cell state,
+    # 2026-09-22). A check that cannot distinguish "inspected and clean" from "inspected
+    # nothing" is not a check (CLAUDE.md). The population is reported and floored, with
+    # crops that legitimately carry NO regions exempt: measured on 526788f2, 8 certified
+    # crops have no regions at all (every microgreen), while every crop WITH regions
+    # carries seasoned notes on all 16 of them (min == median == max == 16).
     print("F. region_notes presence")
+    noted = [r for r, cell in regions.items() if cell.get("region_notes_seasoned")]
     missing = [r for r, cell in regions.items()
                if cell.get("region_notes_seasoned") and not cell.get("region_notes_beginner")]
     if missing: concern(f"region_notes_beginner missing where seasoned present: {missing}")
-    else: ok("every cell with seasoned notes has beginner notes")
+    elif not regions: ok("no regions on this crop (zone-independent); nothing to check")
+    elif not noted:
+        concern(f"VACUOUS: {len(regions)} region cell(s) present but NOT ONE carries "
+                f"region_notes_seasoned, so this check inspected nothing")
+    else: ok(f"all {len(noted)} cell(s) with seasoned notes have beginner notes "
+             f"({len(regions)} region cell(s) present)")
 
     # G. exemplar value-divergence -- the "byte-identical to <ref>" smell.
     # SHAPE should match the exemplar (checked in E); biological VALUES (calendar
