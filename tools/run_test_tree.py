@@ -46,6 +46,44 @@ COLLECTABLE = re.compile(r"^\s*def test_|^\s*class Test|unittest\.TestCase", re.
 MIN_COLLECTABLE = 150
 MIN_SCRIPT = 60
 
+# ---------------------------------------------------------------- WAIVERS
+# A CHECK THAT IS ALWAYS RED IS AS USELESS AS ONE THAT IS ALWAYS GREEN, and both
+# are closed the same way: waive the EXACT known cases and fail on everything else
+# (Trevor, 2026-09-22). This tree has carried the same two failures through four
+# landed promotes, each landing asserting in prose that they were pre-existing --
+# a convention doing a gate's job, the third instance of that pattern after E1's
+# `--no-verify` bypass and plant-astro's 26-error baseline.
+#
+# A waiver is keyed on test id AND FAILURE CHARACTER. A third failure fails. Either
+# of these two failing DIFFERENTLY fails, because "still red" is not the same fact
+# as "red for the reason we accepted".
+WAIVERS = {
+    "tools/test_bare_host_scan.py::test_self_pathed_population_at_this_canonical": {
+        "ticket": "PLA-544",
+        "reason": "the pinned self-pathed population is stale; RED since 2026-09-04 and rode "
+                  "through four landed promotes without being re-measured",
+        # Measured 2026-09-22: expected (315, 155), actual (321, 161). Moving off
+        # 321/161 in EITHER direction breaks the waiver and fails the tree.
+        "character": re.compile(r"CITATIONS/SOLE moved: 321/161\b"),
+    },
+    "tools/test_cited_claim_scan.py::test_MUTATION_the_anchoring_only_walk_reproduces_the_false_pass": {
+        "ticket": "PLA-161",
+        "reason": "8 of 28 cited URLs are uncached, so absence is UNDETERMINED rather than "
+                  "proven; the guard is correctly REFUSING, not wrong",
+        # If UNDETERMINED ever becomes a real absence, or the uncached count moves,
+        # the character no longer matches and the tree fails.
+        "character": re.compile(
+            r"UnreportableAbsence: \d+ of 28 cited URLs are uncached and therefore "
+            r"UNDETERMINED, not absent"),
+    },
+}
+
+# A script-style file may legitimately SKIP (its staged inputs are gone). It says so
+# by printing a line beginning SKIP and exiting 0. Exit 0 alone must NOT read as a
+# pass: measured 2026-09-22, tools/test_build_berry_pilot_patch.py exits 0 having run
+# ZERO of its assertions, and its own message says "NOT COVERED".
+SKIP_RE = re.compile(r"^SKIP\b", re.M)
+
 
 def classify():
     """(collectable, script_style) -- repo-relative paths, sorted."""
@@ -75,6 +113,13 @@ def check_collection(collectable):
         if "::" in line:
             seen.add(line.split("::", 1)[0].strip())
     return [f for f in collectable if f not in seen], r
+
+
+def failure_blocks(out):
+    """{test_name: its failure text} from pytest's `____ test_name ____` sections, so a
+    waiver's character is matched against ITS OWN failure and not the whole log."""
+    parts = re.split(r"\n_{5,} (\S+) _{5,}\n", out)
+    return {parts[i]: parts[i + 1] for i in range(1, len(parts) - 1, 2)}
 
 
 def main():
@@ -118,6 +163,7 @@ def main():
         return 0
 
     failures = []
+    waived_ok, skipped, ran_ok = [], [], 0
 
     # 1. Per-file collection: rc 5 at file granularity.
     print("\n[1/3] per-file collection (a file yielding 0 tests is rc-5 in miniature)")
@@ -138,22 +184,52 @@ def main():
         print("  BROKEN: pytest exited 5 -- NOTHING WAS COLLECTED. Graded BROKEN, not green.")
         failures.append("pytest rc=5 (nothing collected)")
     elif r.returncode != 0:
-        failures.append(f"pytest rc={r.returncode}")
-        for l in r.stdout.splitlines()[-12:]:
-            print(f"    | {l[:150]}")
+        failed_ids = [l.split(" ", 1)[1].split(" ")[0]
+                      for l in r.stdout.splitlines() if l.startswith("FAILED ")]
+        blocks = failure_blocks(r.stdout)
+        fired = set()
+        for tid in failed_ids:
+            w = WAIVERS.get(tid)
+            body = blocks.get(tid.split("::")[-1], r.stdout)
+            if w is None:
+                print(f"  FAIL (not waived): {tid}")
+                failures.append(f"unwaived test failure: {tid}")
+            elif w["character"].search(body):
+                fired.add(tid)
+                waived_ok.append(f"{tid} [{w['ticket']}]")
+            else:
+                print(f"  FAIL (WAIVED TEST FAILING DIFFERENTLY): {tid} [{w['ticket']}] -- the "
+                      f"waiver covers a specific failure character and this is not it")
+                failures.append(f"waived test changed character: {tid}")
+        for t in waived_ok:
+            print(f"  WAIVED: {t}")
+        # A waiver that no longer fires is a standing permission nobody revisits.
+        # Reported loudly, but NOT failed: failing here would punish whoever fixed it.
+        # Only meaningful when pytest actually RAN and reported failures. On a
+        # collection error (rc 2) there are no FAILED lines at all, so "the test now
+        # passes" would be a false reading of a tree that never ran.
+        if failed_ids:
+            for tid, w in WAIVERS.items():
+                if tid not in fired and tid not in failed_ids:
+                    print(f"  STALE WAIVER (the test now passes -- remove it): {tid} [{w['ticket']}]")
 
     # 3. The script-style population, run as scripts.
     print(f"\n[3/3] {len(script)} script-style files, each as `python3 <file>`")
-    ran_ok = 0
     for f in script:
         rs = run([sys.executable, f])
-        if rs.returncode == 0:
-            ran_ok += 1
-        else:
+        if rs.returncode != 0:
             last = [l for l in (rs.stdout + rs.stderr).splitlines() if l.strip()][-1:] or [""]
             print(f"  FAIL rc={rs.returncode} {f} | {last[0][:130]}")
             failures.append(f"{f}: rc={rs.returncode}")
-    print(f"  ok: {ran_ok}/{len(script)} script-style files exited 0")
+        elif SKIP_RE.search(rs.stdout):
+            # Exit 0 having run nothing. Counting this as a pass is the very defect
+            # this runner exists to refuse, so it is reported as its own state.
+            skipped.append(f)
+        else:
+            ran_ok += 1
+    print(f"  ok: {ran_ok}/{len(script)} script-style files RAN and exited 0")
+    for f in skipped:
+        print(f"  SKIPPED (exited 0 having run nothing -- NOT a pass): {f}")
 
     print("\n" + "=" * 72)
     if failures:
@@ -161,8 +237,13 @@ def main():
         for m in failures[:30]:
             print(f"  - {m}")
         return 1
-    print(f"VERDICT: PASS -- {len(collectable)} collectable files (all yielding tests) "
-          f"+ {len(script)} script-style files, every entry point inspected")
+    # The verdict states what was INSPECTED, waived and skipped, never a bare PASS:
+    # a summary that cannot distinguish "ran and was clean" from "ran nothing" is the
+    # defect this runner exists to refuse, and that applies to its own output.
+    print(f"VERDICT: PASS -- {len(collectable)} collectable files (all yielding tests); "
+          f"{ran_ok} of {len(script)} script-style files RAN"
+          + (f", {len(skipped)} SKIPPED (ran nothing)" if skipped else "")
+          + (f"; {len(waived_ok)} waived failure(s)" if waived_ok else ""))
     return 0
 
 

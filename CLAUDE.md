@@ -84,6 +84,17 @@ armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered gates) +
   `release_verify` section F reports `ok` off an empty filter. The rule generalizes past gates: a guard
   that never reaches its entry point, a mutation driver that reddens on an earlier check, and a suite that
   collects nothing are all the same defect wearing different clothes.
+- **AND ITS SECOND HALF: A CHECK THAT IS ALWAYS RED IS AS USELESS AS ONE THAT IS ALWAYS GREEN.**
+  Both get closed the same way -- **waive the EXACT known cases and fail on everything else.** A
+  standing failure that every landing explains in prose is a convention doing a gate's job, and a
+  reader learns to skip the verdict just as surely as they learn to trust a green that checks
+  nothing. Ruled 2026-09-22 on the THIRD instance of the pattern: E1's blanket `--no-verify` on the
+  pre-commit hook, plant-astro's 26-error `astro check` baseline, and the test tree's two failures
+  carried through four landed promotes. A waiver is keyed on **identity AND failure character**, so a
+  third failure fails and either waived case failing DIFFERENTLY fails -- "still red" is not the same
+  fact as "red for the reason we accepted". Each entry carries its ticket and a one-line reason, and
+  a waiver that stops firing is reported as STALE rather than left as standing permission. Live in
+  `tools/run_test_tree.py` (`WAIVERS`), mutation-proved both ways.
 - **RUN A SCRIPT-STYLE TEST AS A SCRIPT, NEVER UNDER pytest.** 72 of the 247 `tools/test_*.py` entry points
   carry module-level asserts with no `def test_`, so **pytest reports `no tests ran` and exits 5 whether
   they passed or were never reached**, and they contribute ZERO to the tree's "N passed". Invoke them as

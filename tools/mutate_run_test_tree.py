@@ -128,6 +128,55 @@ def main():
         os.unlink(probe_path)
     results.append(("M5 discovery floor: too few entry points found -> BROKEN", ok5, r.returncode))
 
+    # ---- M6: a THIRD failure (not waived) must fail the tree -------------
+    WPOP = ["tools/test_bare_host_scan.py", "tools/test_container_path_gate.py"]
+    def run_wpop(): return run_runner(WPOP)
+    # baseline: the waived failure alone leaves the tree PASSING
+    rc, out = run_wpop()
+    if rc != 0 or "WAIVED" not in out:
+        print("HARNESS DEAD: the waiver baseline is not green-with-a-waiver; "
+              "every verdict below would be caught for the wrong reason.")
+        sys.exit(3)
+    print("waiver baseline: PASS with the waived failure reported (the waiver fires)\n")
+
+    orig = read("tools/test_container_path_gate.py")
+    try:
+        # APPENDED at module level, not spliced in: this file's tests live inside a
+        # unittest.TestCase, so an unindented def mid-class is an IndentationError --
+        # the file then collects NOTHING and the per-file collection guard fires
+        # FIRST, so the driver never reaches the waiver branch it is meant to test.
+        # Measured while authoring; a driver that reddens for the wrong reason is
+        # vacuous coverage.
+        write("tools/test_container_path_gate.py",
+              orig + "\n\ndef test_MUTATION_APPLIED_M6_third_failure():\n"
+                     "    assert False, 'M6 a third, UNWAIVED failure'\n")
+        if "M6 a third, UNWAIVED failure" not in read("tools/test_container_path_gate.py"):
+            print("  HARNESS DEAD: M6 did not reach disk"); sys.exit(3)
+        rc, out = run_wpop()
+    finally:
+        write("tools/test_container_path_gate.py", orig)
+        assert read("tools/test_container_path_gate.py") == orig, "FAILED TO RESTORE"
+    ok6 = rc != 0 and "unwaived test failure" in out
+    results.append(("M6 a THIRD, unwaived failure FAILS the tree", ok6, rc))
+
+    # ---- M7: a WAIVED test failing DIFFERENTLY must fail ------------------
+    # Driven over WPOP, not POP: POP does not contain the waived file, so a mutation
+    # there could never reach the waiver branch -- a driver that never reaches its
+    # entry point is vacuous, which is this convention's own recurring lesson.
+    orig7 = read("tools/test_bare_host_scan.py")
+    try:
+        write("tools/test_bare_host_scan.py",
+              orig7.replace("CITATIONS/SOLE moved: {citations}/{sole}",
+                            "CITATIONS/SOLE moved: MUTATION-APPLIED-M7 {citations}/{sole}", 1))
+        if "MUTATION-APPLIED-M7" not in read("tools/test_bare_host_scan.py"):
+            print("  HARNESS DEAD: M7 did not reach disk"); sys.exit(3)
+        rc, out = run_wpop()
+    finally:
+        write("tools/test_bare_host_scan.py", orig7)
+        assert read("tools/test_bare_host_scan.py") == orig7, "FAILED TO RESTORE"
+    ok7 = rc != 0 and "changed character" in out
+    results.append(("M7 a WAIVED test failing DIFFERENTLY fails (character, not just id)", ok7, rc))
+
     # ---- SENTINEL: a mutation that MUST redden, or the harness is dead ----
     rc, out = mutate(SHAPE_A, 'print("chill_gate: all tests passed")',
                      'import THIS_MODULE_DOES_NOT_EXIST_SENTINEL\nprint("chill_gate: all tests passed")',
