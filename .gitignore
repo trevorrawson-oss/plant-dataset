@@ -22,8 +22,15 @@ CROP_REVIEW_*.doc
 # Session handoff staging (gitignored -- durable for a fresh chat, not committed)
 _handoff/
 
-# Fetched-document cache for tools/doc_mentions_crop_scan.py (regenerable, 14MB)
-tools/.doc_cache/
+# Fetched-document cache for tools/doc_mentions_crop_scan.py (regenerable, now 28MB / 1,216 docs).
+# NO TRAILING SLASH, deliberately: a trailing slash matches a DIRECTORY only, so a fresh worktree
+# that links the real cache in as a SYMLINK had the link show up UNTRACKED and committable, absolute
+# path and all (found 2026-09-21, PLA-580). Without the slash the pattern matches the directory, the
+# symlink or a file at that exact path. MEASURED before changing, per Trevor's condition: put to
+# `git check-ignore` against 1,780 tracked paths plus 13 adversarial near-misses (.doc_cache_backup,
+# .doc_cache2, .doc_cachex/y, doc_cache, .doc_cache.json, a/tools/.doc_cache, ...), the change newly
+# ignores EXACTLY ONE path -- tools/.doc_cache itself -- and nothing stops being ignored.
+tools/.doc_cache
 
 # Audit / comparison snapshots of the canonical (24MB each -- never commit these).
 # The canonical is crops_data_final.json; every prior state is recoverable from git
