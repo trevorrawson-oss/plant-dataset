@@ -175,5 +175,12 @@ projects carry the same three names, so chat project and repo map 1:1.
 ## Workflow / git
 - Dataset commits go on `main` here. **Don't commit until Trevor approves** each change; when a
   discrete task is done, summarize what changed and what's next. Trevor confirms every push.
+- **A PIPE HIDES THE EXIT CODE. Capture status BEFORE piping, or set `-o pipefail`.** `cmd | tail`
+  reports TAIL's status, not `cmd`'s, so a red run reads as rc 0. This bit twice in one session
+  (2026-09-22): gate proofs printed `rc=0` for gates that had correctly exited 2, and a background
+  full-tree run was reported "exited 0" when the runner returned 1. It also blinds you while a job
+  runs -- `tail` buffers, so a long background run writes NOTHING until it finishes. Do
+  `cmd > out.log 2>&1; rc=$?` and read the log, or `set -o pipefail` first. Never read a verdict off
+  a piped command's `$?`.
 - A dataset content change reaches the live site only via a **plant-astro submodule bump** (a
   website concern, done in that repo, gated on Trevor) — not from a push here.
