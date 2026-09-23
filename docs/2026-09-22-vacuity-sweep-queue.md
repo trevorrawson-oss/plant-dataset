@@ -19,7 +19,21 @@ landings. The governing rule is in CLAUDE.md and CURRENT_STATE.md, both halves:
 | `15f9b16` | the two standing failures become a WAIVER keyed on identity AND character; a SKIP stops counting as a pass |
 | `2a0544a` | `gate_all` refuses a population disagreeing with the recorded certified count |
 
-**Full-tree run, 47:21:** 175 collectable + 72 script-style = 247 entry points; all 175 yield at
+**TREE VERIFIED GREEN on `b3a9156bf2e95fecc044d6e133ef3df9ee37c3af` (2026-09-22, 59:28), WITH THE
+WAIVER ACTIVE. PLA-581 can cite this.** Runner exit code **0**, captured unpiped. `VERDICT: PASS --
+176 collectable files (all yielding tests); 71 of 72 script-style files RAN, 1 SKIPPED (ran nothing);
+2 waived failure(s)`. **248 entry points** (176 + 72); pytest rc=1 with **2 failed / 6,009 passed**,
+converted to PASS by the waiver firing on exactly those two -- `test_bare_host_scan` [PLA-544] and
+`test_cited_claim_scan` [PLA-161] -- with no third failure, no character change, and **no STALE
+WAIVER line**, so neither waiver is standing permission for something already fixed. **Skip
+reconciled:** pytest reports NO skip of its own; the single skip is
+`tools/test_build_berry_pilot_patch.py` in stage 3, which accounts for PLA-580's "1 skipped" exactly
+-- same file, different route (their `pytest tools/` imported it and caught the module-level skip;
+this runner classifies it script-style, so pytest never sees it). Observed, not diagnosed: 59:28
+against the previous run's 47:21, which one added file (20 tests) does not explain; most likely
+machine load from a concurrent session on the same checkout.
+
+**Previous full-tree run, 47:21 (superseded, kept for the comparison):** 175 collectable + 72 script-style = 247 entry points; all 175 yield at
 least one test; 2 failed / 5,989 passed. **The tree was larger than we were counting** -- the 72
 script-style files had never appeared in any landing record's pass count, because pytest reports
 them as "no tests ran". One qualification found while proving the waiver: of those 72, **71 RAN and
