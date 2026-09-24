@@ -114,3 +114,24 @@ A certified woody crop may carry a null `mature_height_ft` only if it is cane fr
 **A correction this work forced.** The promote-2 record said the predicate "exists because `cane_type` is non-null on exactly those two". Wrong: `cane_type` is non-null on FOUR crops with three meanings (blueberry `not_applicable`, elderberry `multistem_perennial`, the two cane crops a real cane value), and a gate built on presence would have exempted blueberry and elderberry, which both carry authored heights. The predicate is the sub-form router already in `berries_woody_gate`, imported not re-encoded. The conclusion was right; the reason was not. Corrected in STATE_HISTORY by a new dated entry, the original left byte-for-byte.
 
 **Two build findings.** The first implementation defined the explanation predicate and never called it; the test written red before the gate caught it, and the hand probe meant to confirm the rule bites was vacuous at the same moment (same ten violations before and after the sabotage). And the cane branch is measurably REDUNDANT on today's data, kept because it is reachable and says something a record does not; both tests drive it in isolation, and the gate's docstring says so.
+
+---
+
+## ADDENDUM 2026-09-23: the counts per field (the note above is left as written)
+
+The record above says "16 crops are authored" and "105 certified crops take null on all three".
+Both are true, but they read as one count for three fields, and plant-app's independent measure of
+`mature_spread_ft` (null on 107) disagreed with the 105 a reader infers. Re-measured on canonical
+`526788f2`, per field, over the 121 certified crops:
+
+| field | authored | null |
+|---|---|---|
+| `mature_height_ft` | **16** | **105** |
+| `mature_spread_ft` | **14** | **107** |
+| `footprint_inches` | 0 | 121 |
+
+The two-crop difference is **apple** (height `[10, 14]`) and **lemon** (height `[10, 20]`), which carry
+a height with a null spread. Both nulls are RECORDED, not gaps: each crop's `plant_dimensions`
+`field_additions` record says verbatim "spread not stated on the page". There are 16
+`plant_dimensions` records in total, one per crop with an authored height. The 105 crops null on all
+three keys are exactly the 105 height-null crops. No value was changed; filed on PLA-465.
