@@ -966,6 +966,33 @@ print(f"  plants-per-pot violations: {len(_pppv)}")
 for m in _pppv:
     fail(f"plants-per-pot: {m}")
 
+# ---------------- A61. critical_warnings + container_safety (PLA-581 spec 2026-09-21, section 7; register row 32) ----------------
+# Per crop: critical_warnings has THREE documented states -- null = not assessed, [] = assessed none found,
+# [...] = authored -- and the key is absent on the shells. [] and [...] are CLAIMS and need a
+# verification_status.field_additions[] entry with field == "critical_warnings", which is what stops a
+# null -> [] collapse from passing silently. stage is gated against THIS crop's own growth_stages.
+# Per dataset: the top-level container_safety object (the crop-invariant container warnings, authored once)
+# is checked here too, on every crop's run, because the pre-commit hook and release_verify run this gate
+# and not gate_all. Its copy carries no figure: no source publishes a weight, load or count for it.
+# SHAPE fires only when a key is present, so it arms GREEN on 526788f2 (neither key exists). The PRESENCE
+# floor (a certified crop carries the key; the dataset carries container_safety) is behind
+# A61_PRESENCE_ARMED and flips to True in the SAME commit that writes the canonical, never before: armed
+# early it would redden gate_all on live canonical and flood a parallel session (gates arm off the data).
+# ARMED 2026-09-24 in the commit that wrote 83384c85 (121/121 certified crops carry critical_warnings, all
+# null = not assessed; the dataset carries container_safety with 3 warnings; the 7 shells exempt by status).
+from critical_warnings_gate import (shape_violations as _cw_shape, presence_violations as _cw_presence,
+                                    dataset_violations as _cw_dataset, state_of as _cw_state)
+A61_PRESENCE_ARMED = True
+print(f"A61. critical_warnings (three states, entry shape, own-ladder stage, provenance) + container_safety "
+      f"(dataset-level, no figures); presence {'ARMED' if A61_PRESENCE_ARMED else 'off'}")
+_cwv = (_cw_shape(crop, data.get("source_catalog") or {}) + (_cw_presence(crop) if A61_PRESENCE_ARMED else [])
+        + _cw_dataset(data, presence=A61_PRESENCE_ARMED))
+print(f"  critical_warnings state: {_cw_state(crop)}; container_safety: "
+      f"{len(data['container_safety']['warnings']) if isinstance(data.get('container_safety'), dict) and isinstance(data['container_safety'].get('warnings'), list) else 'absent or malformed'}")
+print(f"  critical-warnings violations: {len(_cwv)}")
+for m in _cwv:
+    fail(f"critical-warnings: {m}")
+
 # ---------------- A55. perennial year-pill coherence (PLA-6 Round 2) ----------------
 # HARD-FLIPPED 2026-08-22, the day its findings reached zero, which is the same soft-then-hard
 # discipline A49/A50 followed. It shipped standalone on 2026-08-22 with 4 live findings and was

@@ -1,0 +1,186 @@
+{
+ "_what": "PLA-581 container_safety + evidence + the cut ledger; built by build_spec.py from _raw/ bytes",
+ "base_sha": "526788f2c34a7fe1c59e9427271c1d1738c6b6cce2c1d0524df715e4fc359659",
+ "fetch_date": "2026-09-23",
+ "pages": {
+  "uiuc_size": {
+   "source": "uiuc_ext",
+   "url": "https://extension.illinois.edu/container-gardens/container-size",
+   "bytes": 28186,
+   "sha256": "0b482e6ef1b9d9093dc0a0029e2753cf20bf787c7c329dd9ff23f7cbe0fe9705"
+  },
+  "csu_gardens": {
+   "source": "csu_ext",
+   "url": "https://extension.colostate.edu/resource/container-gardens/",
+   "bytes": 141247,
+   "sha256": "a4dec7f1631e49d06f9e7fc2673d2064bdd7f641266ce78b579a88cf186badf5"
+  },
+  "uiuc_vegcont": {
+   "source": "uiuc_ext",
+   "url": "https://extension.illinois.edu/container-gardens/vegetable-containers",
+   "bytes": 24343,
+   "sha256": "62b5e5c5f5ce244fb868faccdc9ac11e0babb38aad6be60a6776d97577ed8d89"
+  },
+  "uiuc_material": {
+   "source": "uiuc_ext",
+   "url": "https://extension.illinois.edu/container-gardens/container-material-choices",
+   "bytes": 32678,
+   "sha256": "5ab9a68fcdf516a59c964c9ee6715ef0abfbd10a7ab0cac83682128e54637452"
+  }
+ },
+ "evidence": {
+  "balcony_load": [
+   {
+    "url": "https://extension.illinois.edu/container-gardens/container-size",
+    "sentence": "Consult with a building architect concerning weight limitations when placing heavy pots on balcony or rooftop gardens."
+   }
+  ],
+  "container_material": [
+   {
+    "url": "https://extension.colostate.edu/resource/container-gardens/",
+    "sentence": "About any container can be used including clay (often called terra cotta), plastic pots, wood barrels, wire baskets lined with sphagnum moss or coconut coir, planter boxes, ceramic pots (often found in bold colors), and even cement blocks."
+   },
+   {
+    "url": "https://extension.colostate.edu/resource/container-gardens/",
+    "sentence": "However, make sure you never use a container that holds toxic materials, especially if edible plants are going to be grown."
+   },
+   {
+    "url": "https://extension.illinois.edu/container-gardens/vegetable-containers",
+    "sentence": "The container needs to have good drainage, and should not contain chemicals that are toxic to plants and human beings."
+   },
+   {
+    "url": "https://extension.illinois.edu/container-gardens/container-material-choices",
+    "sentence": "Exercise caution with treated lumber when growing food, or where toddlers are concerned."
+   }
+  ],
+  "hanging_security": [
+   {
+    "url": "https://extension.illinois.edu/container-gardens/container-material-choices",
+    "sentence": "Examples are a hanging basket, window, fence or rail box."
+   },
+   {
+    "url": "https://extension.illinois.edu/container-gardens/container-material-choices",
+    "sentence": "Secure hanging items well and consider potential safety issues when hanging."
+   },
+   {
+    "url": "https://extension.illinois.edu/container-gardens/container-material-choices",
+    "sentence": "It may drip on people or possessions below."
+   },
+   {
+    "url": "https://extension.illinois.edu/container-gardens/container-material-choices",
+    "sentence": "Consider this when determining placement of a hanging container."
+   }
+  ]
+ },
+ "container_safety": {
+  "warnings": [
+   {
+    "id": "balcony_load",
+    "class": "safety",
+    "severity": "high",
+    "stage": null,
+    "title": "Ask what your balcony or roof can carry",
+    "body_seasoned": "Illinois Extension's guidance is to consult a building architect about weight limits before placing heavy pots on a balcony or rooftop garden. It gives no weight figure.",
+    "body_beginner": "A balcony or roof can only hold so much weight. Before you set heavy pots there, ask a building architect what it can safely carry.",
+    "sources": [
+     "uiuc_ext"
+    ],
+    "anchoring_urls": {
+     "uiuc_ext": {
+      "url": "https://extension.illinois.edu/container-gardens/container-size",
+      "verified": "2026-09-23"
+     }
+    }
+   },
+   {
+    "id": "container_material",
+    "class": "safety",
+    "severity": "high",
+    "stage": null,
+    "title": "Never grow food in a container with anything toxic in it",
+    "body_seasoned": "Colorado State accepts nearly any container material but warns against using a container that holds toxic materials, especially for edible plants. Illinois adds that a vegetable container should be free of chemicals toxic to plants or people, and urges caution with treated lumber when growing food. If you cannot account for what a repurposed container once held, that alone is a reason to keep food out of it.",
+    "body_beginner": "Many kinds of containers can be used. Whatever you choose, keep anything toxic out of it, especially if you are growing food.",
+    "sources": [
+     "csu_ext",
+     "uiuc_ext"
+    ],
+    "anchoring_urls": {
+     "csu_ext": {
+      "url": "https://extension.colostate.edu/resource/container-gardens/",
+      "verified": "2026-09-23"
+     },
+     "uiuc_ext": {
+      "url": "https://extension.illinois.edu/container-gardens/vegetable-containers",
+      "verified": "2026-09-23"
+     }
+    }
+   },
+   {
+    "id": "hanging_security",
+    "class": "safety",
+    "severity": "high",
+    "stage": null,
+    "title": "Secure hanging containers well",
+    "body_seasoned": "Illinois Extension asks growers to secure hanging containers well and to think through the safety issues of hanging them. Placement matters too, since a hanging container can drip onto people or belongings below.",
+    "body_beginner": "Fasten hanging baskets and window or rail boxes securely. Think about what is below them too, since they can drip on people or things underneath.",
+    "sources": [
+     "uiuc_ext"
+    ],
+    "anchoring_urls": {
+     "uiuc_ext": {
+      "url": "https://extension.illinois.edu/container-gardens/container-material-choices",
+      "verified": "2026-09-23"
+     }
+    }
+   }
+  ],
+  "field_additions": [
+   {
+    "field": "container_safety.balcony_load",
+    "date": "2026-09-23",
+    "sources": [
+     "uiuc_ext"
+    ],
+    "note": "PLA-581 container_safety.balcony_load. University of Illinois Extension, https://extension.illinois.edu/container-gardens/container-size (raw read 2026-09-23, 28186 bytes, sha256 0b482e6ef1b9d9093dc0a0029e2753cf20bf787c7c329dd9ff23f7cbe0fe9705); verbatim: \"Consult with a building architect concerning weight limitations when placing heavy pots on balcony or rooftop gardens.\" Severity is high on all three warnings, MODELED and uniform: no source grades them, so no ranking is claimed. Authored once at dataset level and rendered on every container_ok crop; no figure appears in the copy because no source publishes one."
+   },
+   {
+    "field": "container_safety.container_material",
+    "date": "2026-09-23",
+    "sources": [
+     "csu_ext",
+     "uiuc_ext"
+    ],
+    "note": "PLA-581 container_safety.container_material. Colorado State University Extension, https://extension.colostate.edu/resource/container-gardens/ (raw read 2026-09-23, 141247 bytes, sha256 a4dec7f1631e49d06f9e7fc2673d2064bdd7f641266ce78b579a88cf186badf5); verbatim: \"About any container can be used including clay (often called terra cotta), plastic pots, wood barrels, wire baskets lined with sphagnum moss or coconut coir, planter boxes, ceramic pots (often found in bold colors), and even cement blocks.\" \"However, make sure you never use a container that holds toxic materials, especially if edible plants are going to be grown.\" This page's 2026-09-21 read (spec section 12) recorded a different sha256 at the same byte length; no copy of that read was kept, so the cause is undetermined, and the sentences quoted here are present in these bytes. University of Illinois Extension, https://extension.illinois.edu/container-gardens/vegetable-containers (raw read 2026-09-23, 24343 bytes, sha256 62b5e5c5f5ce244fb868faccdc9ac11e0babb38aad6be60a6776d97577ed8d89); verbatim: \"The container needs to have good drainage, and should not contain chemicals that are toxic to plants and human beings.\" University of Illinois Extension, https://extension.illinois.edu/container-gardens/container-material-choices (raw read 2026-09-23, 32678 bytes, sha256 5ab9a68fcdf516a59c964c9ee6715ef0abfbd10a7ab0cac83682128e54637452); verbatim: \"Exercise caution with treated lumber when growing food, or where toddlers are concerned.\" The last sentence of the seasoned body is a DECLARED INFERENCE (spec section 14): a history nobody can verify cannot be shown to meet the rule the sources state. Severity is high on all three warnings, MODELED and uniform: no source grades them, so no ranking is claimed. Authored once at dataset level and rendered on every container_ok crop; no figure appears in the copy because no source publishes one."
+   },
+   {
+    "field": "container_safety.hanging_security",
+    "date": "2026-09-23",
+    "sources": [
+     "uiuc_ext"
+    ],
+    "note": "PLA-581 container_safety.hanging_security. University of Illinois Extension, https://extension.illinois.edu/container-gardens/container-material-choices (raw read 2026-09-23, 32678 bytes, sha256 5ab9a68fcdf516a59c964c9ee6715ef0abfbd10a7ab0cac83682128e54637452); verbatim: \"Examples are a hanging basket, window, fence or rail box.\" \"Secure hanging items well and consider potential safety issues when hanging.\" \"It may drip on people or possessions below.\" \"Consider this when determining placement of a hanging container.\" Severity is high on all three warnings, MODELED and uniform: no source grades them, so no ranking is claimed. Authored once at dataset level and rendered on every container_ok crop; no figure appears in the copy because no source publishes one."
+   }
+  ]
+ },
+ "cut": [
+  {
+   "candidate": "mosquito",
+   "why": "The only source (uiuc_ext, problems-algae-and-mosquitoes) sits under Container Water Gardens and opens 'Mosquitoes only become a problem in water garden containers that are not maintained'; every remedy presupposes standing water that is the point of the container. Nothing supports a saucer-under-a-pot version. Spec 4.5."
+  },
+  {
+   "candidate": "lifting",
+   "why": "csu_ext's 'the weight may be too much to lift easily' is advice about MOVING a pot, a handling hazard rather than a safety one; it belongs in container prose if anywhere. Spec 4.4."
+  },
+  {
+   "candidate": "pounds_figure",
+   "why": "No source read publishes a potting-mix weight per gallon or a pounds-per-pot load (eleven extension domains searched); Illinois refers the question to an architect. A rendered number would be fabricated. Spec 2.6."
+  }
+ ],
+ "expected": {
+  "certified_null": 121,
+  "shells": 7,
+  "warnings": 3,
+  "records": 3,
+  "pages": 4
+ }
+}
