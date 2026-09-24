@@ -75,6 +75,24 @@ state. Exactly 1 of 72, measured.
    `bloom_datum_scan`, `doc_mentions_crop_scan`, `region_cell_audit`, `rgv_cell_audit`.
 6. **Two predicate copies.** `doc_roster_claim_gate` declares its own `CERTIFIED = "verified_gs_arc"`
    rather than importing `gate_all`'s. The floor added no third copy, but the two should be unified.
+7. **`release_verify` is RED ON EVERY ROSTER-WIDE RUN, so its exit code carries no information.**
+   Filed 2026-09-23 from the PLA-581 gauntlet (Trevor); NOT a PLA-581 item. A presence-or-null pass
+   changes every certified crop, so the byte-identity `--ref` must be an uncertified SHELL
+   (`avocado`), and a shell fails `whole_crop_gate` by design -- so section B always adds `reference
+   avocado not PASS`, and section E adds a `novel region keys vs avocado` concern for every filled
+   region cell whose key the SHELL lacks (the reference-gap false-novel-key class). MEASURED, both
+   landings, base AND post, same command shape (`--ref avocado`, the other 120 declared):
+   PLA-580 (`079e3923` -> `526788f2`, with the `release_verify.py` of its own landing commit
+   `2588678`): **rc 1 / 10 concerns on the post-state, rc 1 / 11 on the base**; today's code
+   reproduces the 10 byte-for-byte; all 10 are shell-reference artifacts (1 x avocado not PASS,
+   9 x `plantings_provenance` "novel" vs avocado). PLA-581 (`526788f2` -> preview `3be60693`,
+   `--slug basil`): **rc 1 / 1 concern on the post, rc 1 / 2 on the base** (avocado not PASS; the
+   base's second is section A seeing the declared crops unchanged, expected when the candidate IS
+   the base). The concern COUNT moved only with `--slug`; the EXIT CODE never moved. Both landing
+   records had to prove the concerns pre-existing by diffing against a base run, which is a
+   convention doing a gate's job. The fix is the CLAUDE.md second half: waive the EXACT known cases
+   (a shell reference's own gate verdict; a key novel only because the reference lacks it) keyed
+   on identity AND character, and fail on everything else.
 
 ## Confirmed NOT vacuous, so nobody re-checks them
 
