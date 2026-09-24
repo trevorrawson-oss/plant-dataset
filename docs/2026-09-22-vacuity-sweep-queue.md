@@ -93,6 +93,19 @@ state. Exactly 1 of 72, measured.
    convention doing a gate's job. The fix is the CLAUDE.md second half: waive the EXACT known cases
    (a shell reference's own gate verdict; a key novel only because the reference lacks it) keyed
    on identity AND character, and fail on everything else.
+8. **The PLA-466 and PLA-580 landing commits went in with `--no-verify`, so NONE of the hook's checks
+   ran on those committed trees.** Filed 2026-09-24 (Trevor), NOT a PLA-581 item; the blanket bypass is
+   what PLA-581 replaced with `EXPORT_WAIVERS`. **MEASURED, read-only, each commit with ITS OWN
+   tools** (`git archive` of `tools/` at the commit), the hook's two DATASET arms: the regression arm
+   (`--base` parent landing, `--candidate` the commit's canonical) and the roster-claim arm
+   (`CLAUDE.md`, `docs/crop_expansion_roadmap.md`, `LATEST.txt` at the commit). PLA-466 (`9429413`,
+   `1721208e` -> `079e3923`): regression rc 0, 7 crops changed, all 7 "no new violations"; roster
+   claims 0. PLA-580 (`2588678`, `079e3923` -> `526788f2`): regression rc 0, 121 crops, all 121 "no new
+   violations"; roster claims 0. **Nothing besides E1 would have blocked either commit.** Not
+   re-measurable: E1 itself, because it reads plant-app's LIVE on-disk export, not a commit; that half
+   rests on the two landing records, which state E1 was the only block. Closed as measured; the
+   remaining risk is structural (a blanket bypass silences every arm at once), and `EXPORT_WAIVERS`
+   removes the reason to use one.
 
 ## Confirmed NOT vacuous, so nobody re-checks them
 
