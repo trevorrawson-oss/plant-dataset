@@ -46,3 +46,13 @@ audit_export/
 tools/staging/*/scratch_*.json
 tools/staging/*/control_methods.json
 tools/staging/*/shipped_precedents.json
+
+# Raw evidence bytes, named <sha256>.html (PLA-581, 2026-09-23), kept LOCAL like the doc cache so the
+# NEXT drift in a cited page can be DIFFED: the csu_ext digest drifted between 2026-09-21 and
+# 2026-09-23 and the cause is undetermined only because the 09-21 bytes were not kept.
+# MANIFEST.tsv IS TRACKED (Trevor, 2026-09-23): the repo records what the cache should hold, by url and
+# digest, so a check can report each file present / missing / mismatched instead of reading a missing
+# cache as nothing to compare. The directory therefore exists in every checkout, so a symlinked cache
+# cannot replace it and the no-trailing-slash concern above does not arise here.
+tools/.evidence_cache/*
+!tools/.evidence_cache/MANIFEST.tsv
