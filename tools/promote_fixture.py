@@ -48,6 +48,10 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # PLA-581 / PLA-7 Plan D (2026-09-24). NEVER AMEND 2b7e45a.
+    # critical_warnings null (not assessed) on all 121 certified crops; top-level container_safety
+    # with 3 sourced warnings; the 7 shells byte-identical; A61's presence floor armed in the same commit.
+    '83384c85d9daccc71b3d4a0da795872a761538b0e4d8e94b0d401a674a8a6cd6': '2b7e45a',
     # PLA-580 / PLA-7 Plan C (2026-09-21). NEVER AMEND 2588678.
     # container_notes.plants_per_pot on all 121 certified crops, 8 readings on 7 crops, 114 null,
     # the 7 shells byte-identical; A60's presence floor is armed in the same commit as the write.
