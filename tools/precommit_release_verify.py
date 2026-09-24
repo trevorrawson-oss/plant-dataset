@@ -26,7 +26,7 @@ Modes:
   (default)                 git: staged `:crops_data_final.json` vs `HEAD:crops_data_final.json`
   --base A --candidate B    offline test on two files (no git)
 """
-import json, subprocess, sys, os, argparse, tempfile
+import json, re, subprocess, sys, os, argparse, tempfile
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import doc_roster_claim_gate as roster
@@ -106,6 +106,48 @@ def export_currency_concerns(staged_names, app_root=None):
         return []
     violations, _ = esg.app_violations(root, esg.sha256_bytes(staged))
     return violations
+
+
+# ---------------------------------------------------------------- EXPORT WAIVERS
+# A CHECK THAT IS ALWAYS RED IS AS USELESS AS ONE THAT IS ALWAYS GREEN (Trevor, 2026-09-22), and E1
+# was the FIRST instance named: the PLA-466 and PLA-580 landings (as their records state) bypassed
+# this hook with a blanket `--no-verify` because plant-app's export was stale, and explained it in
+# prose. The blanket bypass
+# also switched off every OTHER check in the hook for that commit. Ruled 2026-09-24 (PLA-581): waive
+# the EXACT known case and fail on everything else, the run_test_tree WAIVERS pattern.
+#
+# Keyed on IDENTITY (the check: E1 app-provenance, never E2) AND CHARACTER (the export is stamped at
+# exactly d7b33682f992). An export rebuilt at ANY other SHA and still stale fails -- that is a
+# different fact from the one accepted. A waiver that no longer fires is reported STALE, loudly,
+# but does not block: failing there would punish whoever fixed it.
+EXPORT_WAIVERS = {
+    "E1 app-provenance": {
+        "ticket": "PLA-465",
+        "reason": "plant-app cannot rebuild from ANY canonical until 378c7b9f (the PLA-465 key "
+                  "classification, feat/pla-465-dimension-keys) is released; its shipped export is "
+                  "frozen at d7b33682",
+        "character": re.compile(r"^E1 app-provenance: export was built from canonical d7b33682f992 "
+                                r"but canonical is now [0-9a-f]{12}\."),
+    },
+}
+
+
+def apply_export_waivers(violations, waivers=None):
+    """(unwaived, waived, stale): waived is [(violation, waiver name)]; stale lists waivers that
+    did not fire. The CHARACTER pattern is anchored on the check's own prefix (`^E1
+    app-provenance:`), so it carries identity AND character in one match. A separate
+    `startswith(name)` identity test was written first and REMOVED: it could never fire before the
+    anchored pattern did, and an unreachable guard reads as coverage."""
+    waivers = EXPORT_WAIVERS if waivers is None else waivers
+    unwaived, waived, fired = [], [], set()
+    for v in violations:
+        hit = next((name for name, w in waivers.items() if w["character"].search(v)), None)
+        if hit is None:
+            unwaived.append(v)
+        else:
+            waived.append((v, hit))
+            fired.add(hit)
+    return unwaived, waived, [n for n in waivers if n not in fired]
 
 
 def gate_violations(path, slug):
@@ -231,7 +273,16 @@ def main():
         print("pre-commit release-verify (safety net -- NOT a substitute for protocol #6):")
         concerns = check(base_path, cand_path)
         if not (a.base and a.candidate):
-            stale_export = export_currency_concerns(staged)
+            unwaived, waived, stale_waivers = apply_export_waivers(export_currency_concerns(staged))
+            for v, name in waived:
+                w = EXPORT_WAIVERS[name]
+                print(f"  WAIVED [{w['ticket']}]: {v}\n    reason: {w['reason']}")
+            import export_staleness_gate as _esg   # the app root is the gate's constant, never retyped
+            if os.path.isdir(_esg.DEFAULT_APP_ROOT):   # stale only means something if E1 was measured
+                for name in stale_waivers:
+                    print(f"  STALE WAIVER (no longer fires -- remove it): {name} "
+                          f"[{EXPORT_WAIVERS[name]['ticket']}]")
+            stale_export = unwaived
             if stale_export:
                 print("\nBLOCKED -- the shipped export does not match the canonical being committed:")
                 for c in stale_export:

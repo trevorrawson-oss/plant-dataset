@@ -94,7 +94,9 @@ armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered gates) +
   third failure fails and either waived case failing DIFFERENTLY fails -- "still red" is not the same
   fact as "red for the reason we accepted". Each entry carries its ticket and a one-line reason, and
   a waiver that stops firing is reported as STALE rather than left as standing permission. Live in
-  `tools/run_test_tree.py` (`WAIVERS`), mutation-proved both ways.
+  `tools/run_test_tree.py` (`WAIVERS`), mutation-proved both ways; the pre-commit hook's E1 arm carries
+  the same mechanism in `tools/precommit_release_verify.py` (`EXPORT_WAIVERS`, 2026-09-24, PLA-581),
+  replacing the blanket `--no-verify` recorded on the PLA-466 and PLA-580 landings.
 - **RUN A SCRIPT-STYLE TEST AS A SCRIPT, NEVER UNDER pytest.** 72 of the 247 `tools/test_*.py` entry points
   carry module-level asserts with no `def test_`, so **pytest reports `no tests ran` and exits 5 whether
   they passed or were never reached**, and they contribute ZERO to the tree's "N passed". Invoke them as
