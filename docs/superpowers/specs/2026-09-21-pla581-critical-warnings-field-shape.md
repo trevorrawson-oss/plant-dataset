@@ -1028,3 +1028,192 @@ shape: it bought safe ordering by giving up the signal that the key had been los
 dataset-level projection does ... one line to check in the app session"; measured, there is no
 dataset-level projection at all, and 8.5 now gives the mechanism and the **reversed ordering** that
 finding produces.
+
+---
+
+## 13. Corrections and rulings recorded at the promote (2026-09-23, base `526788f2`)
+
+Appended, not edited in place: the approved text above is left byte-for-byte, and the promote
+re-reads section 4.4's body copy from it as its oracle. Every section-12 dataset count was re-run
+on `1721208e`, `079e3923` and `526788f2` before any promote code was written; none moved except
+launch-ready 121 -> 117 (PLA-466, not a count this spec relies on), and a canonical-to-canonical
+diff carrying a positive control found `container_notes` changed on 121 crops by `plants_per_pot`
+alone (PLA-580) and on 0 crops by anything else.
+
+**Corrections to this spec.**
+
+1. **`planting_layout` is 4 `"block"` + 2 `"row"`, not "every value `block`"** (sections 4.2 and 12).
+   The two `row` crops are `artichoke` and `asparagus`, and the split was already that on
+   `1721208e`, so this is a transcription error in the spec, not a move. The conclusion it supported
+   is unchanged: `"vertical"` occurs 0 times.
+2. **Rule 9 of section 7.1 is unreachable and is not shipped.** "A `class: safety` entry with an
+   empty `sources` is a violation" can never fire first, because rule 8 requires non-empty `sources`
+   on EVERY entry. An unreachable guard reads as coverage, so the gate carries no rule-9 branch; a
+   driver proves rule 8 refuses the sourceless safety entry instead.
+3. **The "94 saucer crops in 93 distinct sentences" figure: the 93 is NOT REPRODUCIBLE, and the
+   method was never recorded.** Re-measured, 94 crops reproduces exactly; 93 does not under either
+   plausible unit (130 distinct strings, 112 distinct split sentences, identical on all three
+   canonicals). It is not carried as a number anywhere in PLA-581, and nothing in the gate, the
+   promote, the staged spec or register row 32 depends on it.
+4. **Section 7.2's `title` concern is moot.** `title` was already ruled globally as
+   USER-FACING-CATEGORICAL (`register_completeness_gate` `EXCLUDED_KEYS`, the C11 ruling of
+   2026-06-27), so a long title never trips the prose heuristic. The one unruled string key in an
+   entry was `class`; it is ruled path-scoped to `critical_warnings[]`, on the authority of this
+   spec's closed enum.
+5. **The 18 tip-over crops are net-dependent** (as correction (i) in section 12 already warns): a
+   net matching only "tip over" finds 16, and the 18 needs bare "tip", because `banana-pepper` and
+   `bell-pepper` say "does not tip". Nothing in PLA-581 depends on the count.
+
+**Rulings made at the promote (Trevor, 2026-09-23).**
+
+- `severity` on the three `container_safety` warnings is **`high`, uniform and MODELED**: no source
+  grades them, so no ranking between them is claimed. Measured before writing: no consumer renders
+  this field's severity today, and the existing pest/disease styling maps `high` to its strongest
+  treatment while leaving `critical` unmapped (noted on PLA-586).
+- **`[]` requires a provenance record at the gate.** `[]` and `[...]` on a certified crop need a
+  `field_additions` entry with `field == "critical_warnings"`. This extends rule 1 of 7.1: the three
+  meanings stay documented in the register row, and the gate now also refuses a `[]` nobody
+  recorded, which is the null -> `[]` collapse the three-state rule exists to stop.
+- **`container_safety` is `{warnings: [...], field_additions: [...]}`**: provenance lives beside the
+  warnings, one record per warning with `field == "container_safety.<id>"`. Consumers read
+  `container_safety.warnings` and never render `field_additions`.
+- **Titles are authored in the claude.ai lane.** The final titles are in section 14, which
+  supersedes two earlier sets sent the same day; the promote refuses the canonical write while any
+  staged title is a placeholder. The promote refuses the canonical write while any staged title is a
+  placeholder.
+- **The no-figure rule refuses NUMBERS only**: digits and the spelled words one through twenty,
+  thirty through ninety, half, dozen, hundred and thousand. A bare unit word states no figure, and section 4.4's approved
+  balcony sentence needs one to say that none exists ("No extension source publishes a pounds
+  figure for this").
+- **The canonical write is held** until plant-app lands `critical_warnings` in `SHIP_TOP_LEVEL` and
+  the tolerant `container_safety` read with its P6 loss assertion (PLA-539).
+
+---
+
+## 14. Amendment 3 (2026-09-23): the three warnings' copy, REVISED after a full read of the cited pages
+
+**Why.** A check of section 4.4's approved bodies against the cached raw bytes of their own cited
+pages found claims the pages do not make: on `container-material-choices`, nothing supports
+"structural support rather than trim or a light hook" or "the watered weight rather than the dry
+weight", and "not over a spot where someone sits or walks" is only "It may drip on people or
+possessions below"; on `container-size`, decks appear only in the WIND sentence, while the LOAD
+sentence names "balcony or rooftop gardens" alone. A full read of all four pages in the claude.ai lane
+found more overreach than those four, so Trevor ruled all six bodies REVISED, not recorded as
+modeled, and the titles change with them.
+
+**What this amends.** Section 4.4's text above stays byte for byte, as the record of what was first
+approved. **The bodies and titles below supersede it**, and the promote's body oracle reads THIS
+section. Every other ruling in sections 0 to 13 stands.
+
+**`balcony_load`** (source `uiuc_ext`, container-size page)
+
+- *title:* "Ask what your balcony or roof can carry"
+- *beginner:* "A balcony or roof can only hold so much weight. Before you set heavy pots there, ask a
+  building architect what it can safely carry."
+- *seasoned:* "Illinois Extension's guidance is to consult a building architect about weight limits
+  before placing heavy pots on a balcony or rooftop garden. It gives no weight figure."
+
+**`container_material`** (sources `csu_ext`, `uiuc_ext`; the `uiuc_ext` evidence now spans the
+vegetable-containers page AND the container-material-choices page, the latter for the
+treated-lumber sentence)
+
+- *title:* "Never grow food in a container with anything toxic in it"
+- *beginner:* "Many kinds of containers can be used. Whatever you choose, keep anything toxic out of
+  it, especially if you are growing food."
+- *seasoned:* "Colorado State accepts nearly any container material but warns against using a
+  container that holds toxic materials, especially for edible plants. Illinois adds that a vegetable
+  container should be free of chemicals toxic to plants or people, and urges caution with treated
+  lumber when growing food. If you cannot account for what a repurposed container once held, that
+  alone is a reason to keep food out of it."
+
+**DECLARED INFERENCE:** the last sentence of `container_material` seasoned is this project's
+inference, not a source's claim. A history nobody can verify cannot be shown to meet the rule the
+sources state, so the copy draws the conservative conclusion. It is declared here so it is never
+read as sourced.
+
+**`hanging_security`** (source `uiuc_ext`, container-material-choices page)
+
+- *title:* "Secure hanging containers well"
+- *beginner:* "Fasten hanging baskets and window or rail boxes securely. Think about what is below them
+  too, since they can drip on people or things underneath."
+- *seasoned:* "Illinois Extension asks growers to secure hanging containers well and to think through
+  the safety issues of hanging them. Placement matters too, since a hanging container can drip onto
+  people or belongings below."
+
+**Checks run on the revised copy before any promote code ran on it** (cached raw bytes, no fresh
+fetch): the no-figure rule (clean on all nine strings); the repo's 8-gram verbatim rule, using
+`verbatim_scan`'s own `norm_words` / `ngrams` (0 shared 8-grams with any of the four pages, against
+a positive control of 10 hits for a sentence copied from `container-size`); and an INDEPENDENT
+clause-by-clause support check, recorded below.
+
+**Independent clause check (2026-09-23), a reviewer with no stake in the copy, working from the four
+cached pages read in full; every quote re-verified against the bytes afterwards. Result: 0
+UNSUPPORTED, 4 PARTIAL, 1 DECLARED INFERENCE. HELD for a ruling on the four partials:**
+
+1. `balcony_load` seasoned, "not a number to look up": a gloss. The page sends readers to an architect
+   and publishes no figure, but it never says not to look one up.
+2. `container_material` beginner, "What matters is that nothing toxic is in the container": the rule is
+   sourced (csu_ext: "make sure you never use a container that holds toxic materials"), but the
+   RANKING is not, and it runs against the same csu_ext page: "No matter what container you select
+   the most important thing to consider is drainage." Illinois' vegetable-containers sentence also puts
+   drainage first.
+3. `hanging_security` seasoned, "a point it repeats for wood containers": the wood sentence ("Consider
+   safety issues if wood containers are hanging.") repeats only the safety-issues half, not "secure
+   ... well".
+4. `hanging_security` seasoned, the causal "since wood can rot over time": both halves are on the
+   page ("Wood or other formerly living material may rot over time." and the hanging-wood sentence),
+   but the page never links them; they share a paragraph that opens with the rot question.
+
+The declared inference (`container_material` seasoned, last sentence): its premises are sourced (the
+no-toxic rule on csu_ext and Illinois vegetable-containers; repurposed containers in use on Illinois
+material-choices), and the step from "holds" to "once held / an unknown history disqualifies" is this
+project's. One tension to know about: Illinois advises cleaning recycled containers for reuse, but
+that advice concerns pathogens, not chemical residue, so it neither supports nor refutes the
+inference. Evidence for the added treated-lumber clause: `uiuc_ext` container-material-choices,
+"Exercise caution with treated lumber when growing food, or where toddlers are concerned."
+
+**Ruling on the four partials (Trevor, 2026-09-23): all four REVISED.** Three strings replaced above:
+`balcony_load` seasoned (the "not a number to look up" gloss removed), `container_material` beginner
+(the "What matters" ranking removed), `hanging_security` seasoned (neither the overstated "a point it
+repeats" nor the unstated causal "since wood can rot"). The declared inference stays, recorded as
+declared. The replaced strings were re-checked the same three ways; the result follows.
+
+**Second independent clause check (2026-09-23), the three replaced strings only: 0 UNSUPPORTED, 3
+PARTIAL. No-figure rule clean; 0 shared 8-grams (positive control 10). HELD for a ruling;** every
+quote below re-verified against the bytes:
+
+1. `balcony_load` seasoned, "so the architect is where that answer comes from": the page does send
+   weight-limit questions to an architect, but the "so" (no figure, THEREFORE the architect) is the
+   copy's own link, and the page's "weight limitations" are the structure's, not a figure for the
+   pot. Reviewer: low severity.
+2. `container_material` beginner, "as long as nothing toxic is in them": "as long as" states toxicity
+   as the SOLE condition for a container working. Both cited pages add conditions: csu_ext, "No
+   matter what container you select the most important thing to consider is drainage."; Illinois
+   vegetable-containers, "The container needs to have good drainage, and should not contain
+   chemicals that are toxic to plants and human beings." and "It is important to use containers that
+   can accommodate roots of the vegetables you want to grow". The substantive one of the three.
+3. `hanging_security` seasoned, "it flags those safety issues again for wood containers that hang":
+   the wood line exists ("Consider safety issues if wood containers are hanging."), but "those ...
+   again" asserts it is the SAME concern; on the page it sits under "Will the material rot over
+   time?". Reviewer: low severity.
+
+**Ruling on the three partials (Trevor, 2026-09-23): all three REVISED, structurally.** One claim per
+sentence, each mapping to a page sentence, with no connective that asserts its own link. The three
+strings above are replaced again. The one remaining connective, "since" in `hanging_security`
+seasoned, is ILLINOIS'S OWN link: the page says "It may drip on people or possessions below.
+Consider this when determining placement of a hanging container." The wood sentence is DROPPED: it
+sits under the page's rot question and cannot be attached to hanging safety without claiming a link
+the page does not make. Re-checked the same three ways; the result follows.
+
+**Third independent clause check (2026-09-23), the three restructured strings only: 0 UNSUPPORTED,
+0 PARTIAL. No-figure rule clean; 0 shared 8-grams (positive control 10).** Every clause maps to a page
+sentence; "It gives no weight figure" holds on a full read of container-size; the "since" in
+`hanging_security` seasoned is confirmed as the page's own link ("It may drip on people or
+possessions below. Consider this when determining placement of a hanging container."). Cleared to
+proceed under the ruling. Advisory notes the reviewer raised WITHOUT changing a verdict, recorded so
+they are not rediscovered: `container_material` beginner does not mention drainage, which csu_ext
+calls "the most important thing to consider" (an omission, not a false claim; drainage is carried
+per crop in `container_notes`); "anything toxic" is as broad as csu_ext's unqualified "toxic
+materials" and marginally wider than Illinois' "chemicals that are toxic to plants and human beings";
+"before placing" paraphrases "when placing"; `hanging_security` drops "potential" from "potential
+safety issues".
