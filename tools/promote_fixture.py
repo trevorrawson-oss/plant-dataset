@@ -48,6 +48,10 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # PLA-533 2a blockers (2026-09-25). NEVER AMEND 8df48dc.
+    # seven blocks_launch open_findings on orange-navel (4), grapefruit (2), mandarin-clementine (1);
+    # launch_ready false on all three, status untouched; every other crop byte-identical.
+    'edcd9bf95ad7e3a90ada7c522db23e00172d1f57d74ff33da219908d7a266229': '8df48dc',
     # PLA-581 / PLA-7 Plan D (2026-09-24). NEVER AMEND 2b7e45a.
     # critical_warnings null (not assessed) on all 121 certified crops; top-level container_safety
     # with 3 sourced warnings; the 7 shells byte-identical; A61's presence floor armed in the same commit.
