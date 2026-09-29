@@ -1,0 +1,257 @@
+{
+  "_note": "PLA-533 2a blocking findings, Trevor ruling 1 (2026-09-25): LAND 7 of 8; orange-navel mulch HELD for PLA-610; mandarin NPK drafted only. Built from _handoff/pla533_2a_held/DRAFT_open_findings.json + the close condition.",
+  "close_condition": " CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+  "findings": [
+    {
+      "crop": "orange-navel",
+      "finding": {
+        "id": "orange_navel_sulfur_acidification_contradicted_pla533",
+        "severity": "high",
+        "status": "open",
+        "blocks_launch": true,
+        "filed_in_session": "pla533_2a_2026_09_25",
+        "summary": "BLOCKS LAUNCH. Five strings advise acidifying high-pH soil with sulfur as the durable fix: ph.note_seasoned ('acidify the soil gradually with elemental sulfur for a durable fix'), ph.note_beginner ('over time you can add sulfur to make the soil a little more acidic'), soil.preferred_description_seasoned ('slow acidification help'), failure_diagnostics[4].next_season_tip_seasoned ('Lowering soil pH toward slightly acidic over time (sulfur, acidifying amendments) ... is the durable fix on high-pH ground') and _beginner. The UF/IFAS page says a naturally basic soil cannot be changed on any permanent basis. failure_diagnostics[4] CITES uf_ifas_hs132, the page that says the opposite: a mis-attribution as well as a contradiction. CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+        "basis": "UF/IFAS HS132 (1022a27c...): 'If the soil is naturally basic, it will be difficult to change the reaction on any permanent basis.' HS132's only sulfur mention is in a pest-control context ('sulfur is not used in a regular program of pest control'). No cached page recommends sulfur acidification.",
+        "deferred_to": "PLA-533"
+      },
+      "field_quotes": [
+        [
+          "/ph/note_seasoned",
+          "acidify the soil gradually with elemental sulfur for a durable fix"
+        ],
+        [
+          "/ph/note_beginner",
+          "over time you can add sulfur to make the soil a little more acidic"
+        ],
+        [
+          "/soil/preferred_description_seasoned",
+          "slow acidification help"
+        ],
+        [
+          "/failure_diagnostics/4/next_season_tip_seasoned",
+          "(sulfur, acidifying amendments)"
+        ],
+        [
+          "/failure_diagnostics/4/next_season_tip_beginner",
+          "(with sulfur)"
+        ]
+      ],
+      "evidence": [
+        [
+          "1022a27cf8b7eeda30a87755128be2e4748e3bd9ff0465cedebb7b684e1627fe",
+          "If the soil is naturally basic, it will be difficult to change the reaction on any permanent basis."
+        ]
+      ]
+    },
+    {
+      "crop": "orange-navel",
+      "finding": {
+        "id": "orange_navel_juice_freezing_contradicted_pla533",
+        "severity": "medium",
+        "status": "open",
+        "blocks_launch": true,
+        "filed_in_session": "pla533_2a_2026_09_25",
+        "summary": "BLOCKS LAUNCH. storage.freezer_seasoned ('the juice freezes excellently ... for up to about six months') and storage.freezer_beginner ('the juice does ... freeze it in a sealed container for up to about six months') recommend storing navel juice. The Arizona page says navel juice should be drunk directly because stored juice turns bitter (limonin). CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+        "basis": "University of Arizona, Oranges for Southern Arizona (4fb8059f...): 'They can be juiced, but the juice should be consumed directly because most navel orange juice contains bitter compounds including limonin, which make stored juice disagreeable.'",
+        "deferred_to": "PLA-533"
+      },
+      "field_quotes": [
+        [
+          "/storage/freezer_seasoned",
+          "the juice freezes excellently"
+        ],
+        [
+          "/storage/freezer_beginner",
+          "but the juice does"
+        ]
+      ],
+      "evidence": [
+        [
+          "4fb8059f2d1cb7552603150a8b2faebe38231ed0a5fed78c77d493fa375dc7ae",
+          "but the juice should be consumed directly because most navel orange juice contains bitter compounds including limonin, which make stored juice disagreeable."
+        ]
+      ]
+    },
+    {
+      "crop": "orange-navel",
+      "finding": {
+        "id": "orange_navel_best_pot_tree_contradicted_pla533",
+        "severity": "medium",
+        "status": "open",
+        "blocks_launch": true,
+        "filed_in_session": "pla533_2a_2026_09_25",
+        "summary": "BLOCKS LAUNCH. container_notes.notes_beginner ('Oranges are one of the best fruit trees to grow in a pot') and container_notes.notes_seasoned ('Citrus are among the best fruit trees for containers' ... 'citrus genuinely thrives in pots') rank oranges among the best container fruit trees. TAMU names the smaller citrus types as best suited and says the rest grow in containers only for a limited time. Separately, notes_seasoned ends with an AUTHORING NOTE leaked into consumer copy: 'Do not lift peach's container guidance here; unlike peach, citrus genuinely thrives in pots.' (kickoff text, orange Step 6). Measured 2026-09-25: NOT RENDERED by plant-astro (no template reads container_notes prose) or plant-app origin/main; it SHIPS in plant-app's bundled src/data/guides.json. CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+        "basis": "TAMU citrus fact sheet (5dcf248a...): 'The smaller citrus types (calamondin, limes, kumquats, lemons and limequats) are best suited to container culture, but all will grow for a limited time.'",
+        "deferred_to": "PLA-533"
+      },
+      "field_quotes": [
+        [
+          "/container_notes/notes_beginner",
+          "Oranges are one of the best fruit trees to grow in a pot"
+        ],
+        [
+          "/container_notes/notes_seasoned",
+          "Citrus are among the best fruit trees for containers"
+        ],
+        [
+          "/container_notes/notes_seasoned",
+          "Do not lift peach's container guidance here; unlike peach, citrus genuinely thrives in pots."
+        ]
+      ],
+      "evidence": [
+        [
+          "5dcf248a248560eddb33d9ead33d0a9e05b36c2bf022fcca49ab20f56d96a25f",
+          "The smaller citrus types (calamondin, limes, kumquats, lemons and limequats) are best suited to container culture, but all will grow for a limited time."
+        ]
+      ]
+    },
+    {
+      "crop": "orange-navel",
+      "finding": {
+        "id": "orange_navel_yield_figure_contradicted_pla533",
+        "severity": "medium",
+        "status": "open",
+        "blocks_launch": true,
+        "filed_in_session": "pla533_2a_2026_09_25",
+        "summary": "BLOCKS LAUNCH. yield_expectations.per_plant_seasoned ('A mature standard navel commonly yields on the order of one hundred to two hundred or more pounds of fruit per year') states a heavy-yield figure no cached page gives, and two UF/IFAS pages characterize navels as low-yielding. CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+        "basis": "UF/IFAS HS132 (1022a27c...) cultivar table: 'Navels Early (Oct-Jan) 0-6 Shy Bearers, susceptible to Postbloom Fruit Drop (PFD)'. UF/IFAS HS141 (70844740...): 'Inadequate fruit set and severe fruit drop are major causes of low yield of navel orange.'",
+        "deferred_to": "PLA-533"
+      },
+      "field_quotes": [
+        [
+          "/yield_expectations/per_plant_seasoned",
+          "one hundred to two hundred or more pounds"
+        ]
+      ],
+      "evidence": [
+        [
+          "1022a27cf8b7eeda30a87755128be2e4748e3bd9ff0465cedebb7b684e1627fe",
+          "Shy Bearers"
+        ],
+        [
+          "70844740696e5b28cfe1381f44e7f2ed2f646c4d8c54e359a8af84a6221de724",
+          "Inadequate fruit set and severe fruit drop are major causes of low yield of navel orange."
+        ]
+      ]
+    },
+    {
+      "crop": "grapefruit",
+      "finding": {
+        "id": "grapefruit_mulched_basin_contradicted_pla533",
+        "severity": "high",
+        "status": "open",
+        "blocks_launch": true,
+        "filed_in_session": "pla533_2a_2026_09_25",
+        "summary": "BLOCKS LAUNCH, PENDING PLA-610. watering.method_seasoned ('Maintain a mulched, grass-free basin, with mulch pulled back from the trunk.') and watering.method_beginner ('Mulch the area under the tree (but keep the mulch away from the trunk) and keep grass out.') recommend mulching. Three cached T1 pages say mulch is not recommended around citrus. See PLA-610 for the side-by-side read (UF/IFAS CH092/CH093 reportedly recommend mulch with clearance for lime). Values are NOT changed by this finding. CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+        "basis": "UF/IFAS HS132 (1022a27c...): 'Mulches are not recommended around citrus trees, but if trees are located in a cultivated plant bed where mulch is used, it should be kept at least a foot away from tree trunks.' UF/IFAS HS141 (70844740...): 'Trees should not be wrapped or mulched.' TAMU (5dcf248a...): 'Organic mulches are not recommended for citrus trees because of the potential for inducing foot rot disease.'",
+        "deferred_to": "PLA-610"
+      },
+      "field_quotes": [
+        [
+          "/watering/method_seasoned",
+          "Maintain a mulched, grass-free basin"
+        ],
+        [
+          "/watering/method_beginner",
+          "Mulch the area under the tree"
+        ]
+      ],
+      "evidence": [
+        [
+          "1022a27cf8b7eeda30a87755128be2e4748e3bd9ff0465cedebb7b684e1627fe",
+          "Mulches are not recommended around citrus trees"
+        ],
+        [
+          "70844740696e5b28cfe1381f44e7f2ed2f646c4d8c54e359a8af84a6221de724",
+          "Trees should not be wrapped or mulched."
+        ],
+        [
+          "5dcf248a248560eddb33d9ead33d0a9e05b36c2bf022fcca49ab20f56d96a25f",
+          "Organic mulches are not recommended for citrus trees because of the potential for inducing foot rot disease."
+        ]
+      ]
+    },
+    {
+      "crop": "grapefruit",
+      "finding": {
+        "id": "grapefruit_sulfur_acidification_contradicted_pla533",
+        "severity": "high",
+        "status": "open",
+        "blocks_launch": true,
+        "filed_in_session": "pla533_2a_2026_09_25",
+        "summary": "BLOCKS LAUNCH. Five strings advise acidifying high-pH soil with sulfur as the durable fix: ph.note_seasoned ('acidify the soil gradually with elemental sulfur for a durable fix'), ph.note_beginner ('over time you can add sulfur'), soil.preferred_description_seasoned ('gradual acidification help'), failure_diagnostics[5].next_season_tip_seasoned ('Lowering soil pH toward slightly acidic over time with sulfur ... is the durable fix on high-pH ground') and _beginner. ph.sources is ['uf_ifas_hs132'] and failure_diagnostics[5] cites uf_ifas_hs132 + az_coop_ext: the claim is CITED TO THE PAGE THAT CONTRADICTS IT. (Out of scope here: grapefruit's pests[1] sulfur SPRAY for rust mite is a different claim and is not covered by this finding.) CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+        "basis": "UF/IFAS HS132 (1022a27c...): 'If the soil is naturally basic, it will be difficult to change the reaction on any permanent basis.' HS132's only sulfur mention is in a pest-control context. No cached page recommends sulfur acidification.",
+        "deferred_to": "PLA-533"
+      },
+      "field_quotes": [
+        [
+          "/ph/note_seasoned",
+          "acidify the soil gradually with elemental sulfur for a durable fix"
+        ],
+        [
+          "/ph/note_beginner",
+          "over time you can add sulfur"
+        ],
+        [
+          "/soil/preferred_description_seasoned",
+          "gradual acidification help"
+        ],
+        [
+          "/failure_diagnostics/5/next_season_tip_seasoned",
+          "over time with sulfur"
+        ],
+        [
+          "/failure_diagnostics/5/next_season_tip_beginner",
+          "with sulfur"
+        ]
+      ],
+      "evidence": [
+        [
+          "1022a27cf8b7eeda30a87755128be2e4748e3bd9ff0465cedebb7b684e1627fe",
+          "If the soil is naturally basic, it will be difficult to change the reaction on any permanent basis."
+        ]
+      ]
+    },
+    {
+      "crop": "mandarin-clementine",
+      "finding": {
+        "id": "mandarin_clementine_sulfur_acidification_contradicted_pla533",
+        "severity": "high",
+        "status": "open",
+        "blocks_launch": true,
+        "filed_in_session": "pla533_2a_2026_09_25",
+        "summary": "BLOCKS LAUNCH. Five strings advise acidifying high-pH soil with sulfur: soil.preferred_description_seasoned ('acidify slowly with elemental sulfur'), ph.note_seasoned ('acidify gradually with elemental sulfur for a durable fix'), ph.note_beginner ('over time add sulfur to make the soil a little more acidic'), failure_diagnostics[3].next_season_tip_seasoned ('Lowering soil pH toward slightly acidic over time with sulfur is the durable fix on high-pH ground') and _beginner. ALL FIVE CITE uf_ifas_hs132 (soil with uc_ipm; ph alone; failure_diagnostics[3] with clemson_hgic): the claim is cited to the page that contradicts it. Sibling contrast: lime.ph and lemon.diseases[5], citing the same HS132, advise supplementing micronutrients 'rather than trying to acidify' -- consistent with the page. Found by the rootstock-sweep session (plant-dataset-67, PLA-609), re-verified on canonical 83384c85 by PLA-533 2a. CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+        "basis": "UF/IFAS HS132 (sha256 1022a27c..., verified independently by two sessions): 'If the soil is naturally basic, it will be difficult to change the reaction on any permanent basis.' HS132's only sulfur mention is in a pest-control context.",
+        "deferred_to": "PLA-533"
+      },
+      "field_quotes": [
+        [
+          "/soil/preferred_description_seasoned",
+          "acidify slowly with elemental sulfur"
+        ],
+        [
+          "/ph/note_seasoned",
+          "acidify gradually with elemental sulfur for a durable fix"
+        ],
+        [
+          "/ph/note_beginner",
+          "over time add sulfur"
+        ],
+        [
+          "/failure_diagnostics/3/next_season_tip_seasoned",
+          "over time with sulfur is the durable fix"
+        ],
+        [
+          "/failure_diagnostics/3/next_season_tip_beginner",
+          "acidic with sulfur"
+        ]
+      ],
+      "evidence": [
+        [
+          "1022a27cf8b7eeda30a87755128be2e4748e3bd9ff0465cedebb7b684e1627fe",
+          "If the soil is naturally basic, it will be difficult to change the reaction on any permanent basis."
+        ]
+      ]
+    }
+  ]
+}

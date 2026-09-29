@@ -32,6 +32,11 @@ sys.path.insert(0, os.path.join(REPO, "tools"))
 import problem_id_collision_gate as G  # noqa: E402
 
 CANON = os.path.join(REPO, "crops_data_final.json")
+# RE-MEASURED 2026-09-25 (PLA-533 2a blockers), 83384c85 -> edcd9bf9. The fixture below is UNCHANGED: the
+# gate was run on both states and its WHOLE OUTPUT is byte-identical, all 50 lines, 36 findings / 12 open /
+# 24 registered, with a positive control (plum's pests emptied in a scratch copy -> 33 / 9 / 24). The
+# promote appends to verification_status.open_findings and flips two launch_ready flags on three crops;
+# it touches no pests[] or diseases[] entry, so the picture could not move. Only this SHA advances.
 # RE-MEASURED 2026-09-23 (PLA-581), 526788f2 -> 83384c85. The fixture below is UNCHANGED: the gate
 # was run on both states and its WHOLE OUTPUT is byte-identical, all 50 lines, 36 findings / 12 open /
 # 24 registered, with a positive control (plum's pests emptied in a scratch copy -> 33 / 9 / 24)
@@ -50,7 +55,7 @@ CANON = os.path.join(REPO, "crops_data_final.json")
 # to 1721208e at ab44218 (the PLA-465 mandarin repair) WITHOUT this pin being re-measured, so this
 # preflight was red from ab44218 onward and that landing's record reports a collision-gate check it
 # did not actually run green. Filed under PLA-544 as the third instance of that class.
-PINNED_SHA = "83384c85d9daccc71b3d4a0da795872a761538b0e4d8e94b0d401a674a8a6cd6"
+PINNED_SHA = "edcd9bf95ad7e3a90ada7c522db23e00172d1f57d74ff33da219908d7a266229"
 
 # ---------------------------------------------------------------------------------------------
 # The PLA-449 fixture, transcribed from the ticket. NEVER computed from a scan.
