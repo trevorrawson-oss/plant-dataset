@@ -48,6 +48,10 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # PLA-457 sulfur/oil interval (2026-09-29). NEVER AMEND f26ed3e.
+    # 21 rung notes on 10 crops + both control_methods cautions to the scoped 30-day claim with a label
+    # deferral; source_catalog + purdue_ext_bp69w. No flag, finding, id or region moves.
+    'd8906b4313864161c361534cde1b8404c93a81ce44cc5640bf5f51f624b23ce9': 'f26ed3e',
     # PLA-533 subtractive pass (2026-09-29). NEVER AMEND 8da666e.
     # 31 prose edits on five citrus, Flying Dragon 25 gal -> null x2, lime sour orange row removed and
     # recommended_rootstock -> null; the seven blocking findings and all launch flags byte-identical.
