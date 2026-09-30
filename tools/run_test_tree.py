@@ -57,24 +57,20 @@ MIN_SCRIPT = 60
 # A waiver is keyed on test id AND FAILURE CHARACTER. A third failure fails. Either
 # of these two failing DIFFERENTLY fails, because "still red" is not the same fact
 # as "red for the reason we accepted".
+#
+# The PLA-544 bare_host_scan waiver was REMOVED 2026-09-30: its test now pins the self-pathed
+# population BY IDENTITY (bare_host_self_pathed_known.json) and passes, so growth fails by name.
 WAIVERS = {
-    "tools/test_bare_host_scan.py::test_self_pathed_population_at_this_canonical": {
-        "ticket": "PLA-544",
-        "reason": "the pinned self-pathed population is stale; RED since 2026-09-04 and rode "
-                  "through four landed promotes without being re-measured",
-        # Measured 2026-09-22: expected (315, 155), actual (321, 161). Moving off
-        # 321/161 in EITHER direction breaks the waiver and fails the tree.
-        "character": re.compile(r"CITATIONS/SOLE moved: 321/161\b"),
-    },
     "tools/test_cited_claim_scan.py::test_MUTATION_the_anchoring_only_walk_reproduces_the_false_pass": {
-        "ticket": "PLA-161",
-        "reason": "8 of 28 cited URLs are uncached, so absence is UNDETERMINED rather than "
-                  "proven; the guard is correctly REFUSING, not wrong",
-        # If UNDETERMINED ever becomes a real absence, or the uncached count moves,
-        # the character no longer matches and the tree fails.
+        "ticket": "PLA-161 / PLA-544",
+        "reason": "8 of 28 cited URLs are uncached in the LOCAL doc cache, so absence is "
+                  "UNDETERMINED rather than proven; an environment gap, not a data defect",
+        # PLA-544 (2026-09-30) gave the test failure text that names itself as cache coverage
+        # and lists every uncached URL. If the uncached count moves, or the failure becomes a
+        # real absence, the character no longer matches and the tree fails.
         "character": re.compile(
-            r"UnreportableAbsence: \d+ of 28 cited URLs are uncached and therefore "
-            r"UNDETERMINED, not absent"),
+            r"CACHE COVERAGE, NOT A DATA DEFECT: \S+: 8 of 28 cited URLs are not in the local "
+            r"tools/\.doc_cache"),
     },
 }
 

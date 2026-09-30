@@ -88,16 +88,71 @@ def test_SELF_PATHED_finds_hunt_28(data, crops):
 
 # --- the population, with its units pinned ---------------------------------------------------
 
+# PLA-544, resolved 2026-09-30 by the ticket's OPTION 3: the population is pinned BY IDENTITY,
+# (crop, path, source_id), in bare_host_self_pathed_known.json, measured on 00dda31c. The old
+# count pin (315, 155) went stale at a3f08375 (2026-09-04) when six uada_ext rows entered, and a
+# count failure reads the same at 316 and at 321, so it rode four promotes unread. Now a NEW row
+# fails by NAME, and a row that leaves is reported, never failed (a lead that disappears is
+# progress). The six uada_ext rows are IN the pinned set as unadjudicated LEADS for PLA-625:
+# they were not re-pinned away, they were named.
+SELF_PATHED_KNOWN_FILE = os.path.join(REPO, 'tools', 'bare_host_self_pathed_known.json')
+SIX_UADA = {
+    ('mulberry', 'regions.mid_south.plantings[0]', 'uada_ext'),
+    ('mulberry', 'regions.mid_south.plantings[0].bloom[0]', 'uada_ext'),
+    ('mulberry', 'regions.mid_south.plantings[0].harvest_end[0]', 'uada_ext'),
+    ('mulberry', 'regions.mid_south.plantings[0].harvest_start[0]', 'uada_ext'),
+    ('persimmon', 'regions.mid_south.plantings[0]', 'uada_ext'),
+    ('persimmon', 'regions.mid_south.plantings[0].bloom[0]', 'uada_ext'),
+}
+
+
+def _self_pathed_known():
+    with open(SELF_PATHED_KNOWN_FILE, encoding='utf-8') as fh:
+        doc = json.load(fh)
+    return doc, {tuple(i.split('|')) for i in doc['identities']}
+
+
+def test_self_pathed_pin_is_the_measured_population():
+    """The pin's own units, as literals: 321 CITATIONS / 161 SOLE / 80 DECISIONS / 37 CROPS."""
+    doc, known = _self_pathed_known()
+    assert doc['measured_on'].startswith('00dda31c')
+    assert len(known) == doc['count'] == 321
+    assert SIX_UADA <= known, 'the six uada_ext leads must be named in the pin, not dropped'
+    decisions = {(c, region_of(p), s) for c, p, s in known}
+    assert len(decisions) == 80
+    assert len({c for c, _p, _s in known}) == 37
+
+
 def test_self_pathed_population_at_this_canonical(data):
-    """Pinned so a later reader can tell drift from a re-price. Units are named, not implied."""
-    rows = B.self_pathed(data)
-    citations = len(rows)
-    sole = sum(1 for r in rows if r['is_sole'])
-    decisions = {(r['crop'], region_of(r['path']), r['source_id']) for r in rows}
-    crops_touched = {r['crop'] for r in rows}
-    assert (citations, sole) == (315, 155), f'CITATIONS/SOLE moved: {citations}/{sole}'
-    assert len(decisions) == 78, f'DECISIONS moved: {len(decisions)}'
-    assert len(crops_touched) == 37, f'CROPS moved: {len(crops_touched)}'
+    """GROWTH FAILS BY NAME: a self-pathed row not in the pinned set prints itself."""
+    _doc, known = _self_pathed_known()
+    live = {(r['crop'], r['path'], r['source_id']) for r in B.self_pathed(data)}
+    new = sorted(live - known)
+    assert not new, ('NEW self-pathed bare rows (leads to adjudicate, then add to '
+                     'bare_host_self_pathed_known.json): ' + '; '.join('|'.join(r) for r in new))
+    closed = sorted(known - live)
+    if closed:
+        print(f'self-pathed rows CLOSED since the pin ({len(closed)}): '
+              + '; '.join('|'.join(r) for r in closed))
+
+
+def test_self_pathed_live_sole_count_matches_the_pin(data):
+    """The SOLE split is part of the population's identity: 161 of the 321 at the pin."""
+    _doc, known = _self_pathed_known()
+    rows = [r for r in B.self_pathed(data) if (r['crop'], r['path'], r['source_id']) in known]
+    if len(rows) == len(known):
+        assert sum(1 for r in rows if r['is_sole']) == 161
+
+
+def test_MUTATION_a_new_self_pathed_row_fails_by_name(data):
+    """Positive control for the identity pin: inject a row and read the failure text."""
+    import copy
+    d = copy.deepcopy(data)
+    lemon = {c['slug']: c for c in d['crops']}['lemon']
+    lemon['storage'] = {'x': 1, 'sources': ['clemson_hgic'],
+                        'anchoring_urls': {'clemson_hgic': {'url': 'https://hgic.clemson.edu'}}}
+    with pytest.raises(AssertionError, match=r'lemon\|storage\|clemson_hgic'):
+        test_self_pathed_population_at_this_canonical(d)
 
 
 def test_every_self_pathed_row_names_a_real_alternative_document(data):

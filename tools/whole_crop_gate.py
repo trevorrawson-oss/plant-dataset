@@ -993,6 +993,35 @@ print(f"  critical-warnings violations: {len(_cwv)}")
 for m in _cwv:
     fail(f"critical-warnings: {m}")
 
+# ---------------- A62. sourced-block identity ratchet (PLA-607, 2026-09-30) ----------------
+# On a CERTIFIED crop, every NAMED block carrying authored content must be cited; a missing
+# sources key, null and [] all count as uncited. Today's uncited blocks (2634 on 00dda31c) are
+# waived BY IDENTITY in sourced_block_ratchet_known.py, so a NEW one fails here by name. It also
+# fails a citation key on a block the ratchet does not name: naming a sourced field is part of
+# adding it. The PLA-533 container pot-size ratchet is folded into the same gate (its set check
+# runs here; its count ceiling is roster-level, in gate_all). §F is unchanged; this is its other
+# question ("should this have been cited?"). No-op off certified.
+from sourced_block_ratchet_gate import crop_violations as _sbr_violations, uncited as _sbr_uncited
+print("A62. sourced-block identity ratchet (named blocks cited or waived by identity; unnamed sourced fields refused)")
+_sbrv = _sbr_violations(crop)
+print(f"  uncited named blocks: {len(_sbr_uncited(crop))}; ratchet violations: {len(_sbrv)}")
+for m in _sbrv:
+    fail(f"sourced-block-ratchet: {m}")
+
+# ---------------- A63. bare-host SOLE citation (PLA-544, 2026-09-30) ----------------
+# A citation anchored at a bare domain or site root that is the SOLE citation on its node fails,
+# whether or not the crop paths that source id elsewhere (the self_pathed blind spot). Today's
+# 381 are waived BY IDENTITY in bare_host_gate_known.py. Co-cited bare anchors are reported,
+# never blocking. No-op off certified.
+from bare_host_gate import crop_violations as _bh_violations, scan_crop as _bh_scan
+print("A63. bare-host sole citation (a node citing only a domain root; waived by identity)")
+_bhrows, _ = _bh_scan(crop)
+_bhv = _bh_violations(crop)
+print(f"  bare anchors: {len(_bhrows)} ({sum(1 for _i, s, _u in _bhrows if s)} sole); "
+      f"violations: {len(_bhv)}")
+for m in _bhv:
+    fail(f"bare-host: {m}")
+
 # ---------------- A55. perennial year-pill coherence (PLA-6 Round 2) ----------------
 # HARD-FLIPPED 2026-08-22, the day its findings reached zero, which is the same soft-then-hard
 # discipline A49/A50 followed. It shipped standalone on 2026-08-22 with 4 live findings and was

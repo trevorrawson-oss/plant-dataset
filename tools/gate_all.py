@@ -113,19 +113,28 @@ def main():
         print(f"\ngate_all: {len(failed)} of {len(cert)} certified crop(s) FAILED whole_crop_gate "
               f"-- run `python3 tools/whole_crop_gate.py <slug>` for detail")
         sys.exit(1)
-    # ROSTER-LEVEL FLOORS. whole_crop_gate is PER-CROP and structurally cannot see a COUNT, so a
-    # ratchet has to run here, once, over the whole roster. PLA-533 ruling 1 (Trevor, 2026-09-22):
-    # the population of certified crops stating a container_notes.min_pot_gallons with no citation
-    # may go DOWN, never UP. Armed at 4, where it is GREEN -- it does not wait for those four to be
-    # re-sourced, it stops the population growing while the audit runs.
-    from container_citation_floor_gate import violations as _ccf_violations, uncited as _ccf_uncited
-    _ccf = _ccf_violations(json.load(open(path, encoding="utf-8")))
-    if _ccf:
-        for m in _ccf:
-            print(f"  VIOLATION: container-citation-floor: {m}")
-        print(f"\ngate_all: container_citation_floor_gate FAILED ({len(_ccf)} violation(s)) "
-              f"-- run `python3 tools/container_citation_floor_gate.py` for detail")
-        sys.exit(1)
+    # ROSTER-LEVEL RATCHETS. whole_crop_gate is PER-CROP (A62/A63 run there on every crop above)
+    # and structurally cannot see a COUNT or an inspected POPULATION, so each ratchet's roster half
+    # runs here, once. Both report what they inspected and REFUSE an empty or below-floor run.
+    #   PLA-607 (2026-09-30): the sourced-block identity ratchet, with PLA-533 ruling 1's container
+    #     pot-size ratchet (4, may go down never up) folded in as its sub-rule -- one gate, not two.
+    #   PLA-544 (2026-09-30): a SOLE citation anchored at a bare host; co-cited ones are reported.
+    import sourced_block_ratchet_gate as _sbr
+    import bare_host_gate as _bh
+    _data = json.load(open(path, encoding="utf-8"))
+    _sbr_n, _sbr_insp, _sbr_live, _sbr_v, _sbr_stale, _sbr_pot = _sbr.roster(_data)
+    _bh_n, _bh_insp, _bh_sole, _bh_co, _bh_v, _bh_stale = _bh.roster(_data)
+    for _name, _v, _why in (("sourced_block_ratchet_gate", _sbr_v, _sbr.refusal(_sbr_n, _sbr_insp)),
+                            ("bare_host_gate", _bh_v, _bh.refusal(_bh_n, _bh_insp))):
+        if _why:
+            print(f"gate_all: REFUSED -- {_name} {_why}. A check that inspected nothing is not a pass.")
+            sys.exit(2)
+        if _v:
+            for m in _v:
+                print(f"  VIOLATION: {_name}: {m}")
+            print(f"\ngate_all: {_name} FAILED ({len(_v)} violation(s)) "
+                  f"-- run `python3 tools/{_name}.py` for detail")
+            sys.exit(1)
 
     # "PASS" is load-bearing: tools/test_gate_all.py asserts it appears on a clean run. Both
     # numbers sit on the same line so the verdict can never be read as a launch-ready count.
@@ -147,8 +156,12 @@ def main():
 
     print(f"gate_all: PASS -- gate passes {len(cert)}/{len(cert)} certified, "
           f"launch-ready {len(ready)}/{len(cert)}")
-    print(f"  container-citation floor: {len(_ccf_uncited(json.load(open(path, encoding='utf-8'))))}"
-          f" uncited min_pot_gallons (PLA-533 ratchet, may shrink never grow)")
+    print(f"  sourced-block ratchet (PLA-607): inspected {_sbr_insp} named blocks, {len(_sbr_live)} "
+          f"uncited, all waived by identity ({len(_sbr_stale)} closed since arming); container "
+          f"pot-size sub-rule {len(_sbr_pot)}/{_sbr.POT_CEILING} (PLA-533, may shrink never grow)")
+    print(f"  bare-host (PLA-544): inspected {_bh_insp} anchors, {len(_bh_sole)} SOLE bare, all "
+          f"waived by identity ({len(_bh_stale)} closed since arming); {len(_bh_co)} co-cited "
+          f"bare (reported, non-blocking)")
     if blocked:
         print(f"  NOT launch-ready ({len(blocked)}): {', '.join(sorted(blocked))}")
         print("  (CERTIFIED = status verified_gs_arc. LAUNCH-READY = that plus both "

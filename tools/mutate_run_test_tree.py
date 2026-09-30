@@ -129,7 +129,9 @@ def main():
     results.append(("M5 discovery floor: too few entry points found -> BROKEN", ok5, r.returncode))
 
     # ---- M6: a THIRD failure (not waived) must fail the tree -------------
-    WPOP = ["tools/test_bare_host_scan.py", "tools/test_container_path_gate.py"]
+    # Re-homed 2026-09-30 (PLA-544): the bare_host_scan waiver was removed when its test was pinned
+    # by identity and went green; the remaining waiver is cited_claim_scan's cache-coverage one.
+    WPOP = ["tools/test_cited_claim_scan.py", "tools/test_container_path_gate.py"]
     def run_wpop(): return run_runner(WPOP)
     # baseline: the waived failure alone leaves the tree PASSING
     rc, out = run_wpop()
@@ -163,17 +165,19 @@ def main():
     # Driven over WPOP, not POP: POP does not contain the waived file, so a mutation
     # there could never reach the waiver branch -- a driver that never reaches its
     # entry point is vacuous, which is this convention's own recurring lesson.
-    orig7 = read("tools/test_bare_host_scan.py")
+    W7 = "tools/test_cited_claim_scan.py"
+    orig7 = read(W7)
+    if orig7.count('f"CACHE COVERAGE, NOT A DATA DEFECT: {slug}: ') != 1:
+        print("  HARNESS DEAD: M7 anchor not found exactly once"); sys.exit(3)
     try:
-        write("tools/test_bare_host_scan.py",
-              orig7.replace("CITATIONS/SOLE moved: {citations}/{sole}",
-                            "CITATIONS/SOLE moved: MUTATION-APPLIED-M7 {citations}/{sole}", 1))
-        if "MUTATION-APPLIED-M7" not in read("tools/test_bare_host_scan.py"):
+        write(W7, orig7.replace('f"CACHE COVERAGE, NOT A DATA DEFECT: {slug}: ',
+                                'f"CACHE COVERAGE, NOT A DATA DEFECT: MUTATION-APPLIED-M7 {slug}: ', 1))
+        if "MUTATION-APPLIED-M7" not in read(W7):
             print("  HARNESS DEAD: M7 did not reach disk"); sys.exit(3)
         rc, out = run_wpop()
     finally:
-        write("tools/test_bare_host_scan.py", orig7)
-        assert read("tools/test_bare_host_scan.py") == orig7, "FAILED TO RESTORE"
+        write(W7, orig7)
+        assert read(W7) == orig7, "FAILED TO RESTORE"
     ok7 = rc != 0 and "changed character" in out
     results.append(("M7 a WAIVED test failing DIFFERENTLY fails (character, not just id)", ok7, rc))
 

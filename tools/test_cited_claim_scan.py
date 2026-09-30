@@ -267,6 +267,15 @@ def test_MUTATION_the_anchoring_only_walk_reproduces_the_false_pass():
         ccs.cited_urls = ccs.anchoring_urls_only
         for slug in FALSE_PASS_CROPS:
             report = ccs.scan_crop(slug, 24, 32)
+            # PLA-544: this test depends on the LOCAL document cache (tools/.doc_cache, gitignored,
+            # per machine). When URLs are uncached the guard correctly REFUSES, and that refusal
+            # must not be readable as a data defect, so it is named as what it is, with every URL.
+            if report.uncached:
+                raise AssertionError(
+                    f"CACHE COVERAGE, NOT A DATA DEFECT: {slug}: {len(report.uncached)} of "
+                    f"{len(report.rows)} cited URLs are not in the local tools/.doc_cache, so "
+                    f"absence is UNDETERMINED and this test cannot run its assertion. Uncached: "
+                    + ", ".join(f"{sid} {u}" for sid, u in report.uncached))
             assert ccs.assert_absence_reportable(report, used_proximity=False) is True, (
                 f"{slug} was expected to reproduce the false pass under the narrow walk"
             )

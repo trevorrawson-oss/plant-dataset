@@ -108,6 +108,14 @@ armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered gates) +
   assert surfaces as a pytest collection ERROR that **aborts collection for the whole run**, and a bare
   `sys.exit(1)` at module level surfaces as `INTERNALERROR`, which reads as a broken harness rather than a
   real failure — so a script-style test signals failure by RAISING, never by `sys.exit`.
+- **THE FULL TEST TREE RUNS BEFORE ANY COMMIT THAT TOUCHES `tools/`, AND ONLY THEN** (ruled 2026-09-30).
+  `python3 tools/run_test_tree.py` takes ~1 hour single-process (6,318 pytest tests on 2026-09-30;
+  speed-up is PLA-630). Decide by `git diff --name-only`: anything under `tools/` -> full tree, exit code
+  captured unpiped. A pure data promote with no tool change does NOT run it: release verification (below)
+  plus the promote's own suite and mutation harness suffice. While iterating, run only the suites for the
+  files being changed. Why it earns the hour on tooling: on 2026-09-30 it was the ONLY check that caught
+  two region-harness crashes the PLA-607/544 gates introduced; `gate_all` and `release_verify` both passed.
+  Tell Trevor the time cost before starting a long run.
 - **Release verification before any promote** (protocol #6): `whole_crop_gate` 18/18 +
   `tools/gate_all.py` (the whole suite on **every** certified crop) + `release_verify` + the
   per-batch source-truth sample. A green gate is NOT a clean release.
