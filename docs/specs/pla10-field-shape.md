@@ -304,7 +304,8 @@ microgreens exactly**, unless a decision row drops a row entry.
   `null`**. The build fails on the first microgreen page until the schema is `.nullable().optional()`.
 - Both planner catalogs (astro `catalog.ts:126`, app `catalog.ts:105`) admit a crop only with a non-empty array. That
   keeps the microgreens out (correct, as today), but any crop that does go `null` **silently drops out of both
-  planners**, and neither catalog can place a hill default from its entry yet.
+  planners**. Placement is rows only (hill layouts are display-only, ruled 2026-09-30). Hill placement, when built, is
+  `hill_spacing_inches` on both axes with `plants_per_hill` per cell, not hill x row: PLA-636.
 - `display_readiness_gate` demands a 2-positive pair for placeability on the non-indoor path. The microgreens take its
   indoor early return (`display_readiness_gate.py:66`), but the gate must still accept `null` wherever A44 check 7
   allows it, rather than reading it as "absent".
@@ -688,9 +689,11 @@ introduces `spacing_inches: null` (the 8 microgreens, §2.4), and measured today
 - astro `content.config.ts:46` declares `spacing_inches: z.array(z.number()).optional()`, which **rejects `null`**: the
   astro build fails on the first microgreen page until it is `.nullable().optional()`;
 - both planner catalogs (astro `catalog.ts:126`, app `catalog.ts:105`) **drop any crop without a non-empty array**. That is
-  correct for the microgreens, but a hill default whose row entry is dropped would vanish from both planners, so both
-  catalogs must also place a crop from its default entry (`hill_spacing_inches` x `row_spacing_inches`,
-  `plants_per_hill` per position);
+  correct for the microgreens. **Placement is rows only in both planners for now; hill layouts are display-only**
+  (ruled 2026-09-30). A hill-default crop is placed in rows from the `spacing_inches` fallback (its row entry, §2.4),
+  so the catalogs need no hill-placement change for promote 1. They must still accept `null` without crashing. **Hill
+  placement, when built, is `hill_spacing_inches` on BOTH axes with `plants_per_hill` per cell, not hill x row: PLA-636**,
+  future planner work outside this arc;
 - `display_readiness_gate` **must accept `null`** where A44 allows it (a dataset gate, in promote 1's tools commit);
 - both hero surfaces render the hill tile from a hill default.
 
@@ -743,7 +746,7 @@ Line numbers are as measured today on astro `277529c` and app `71e327ba`.
 | **Herb pot-size intent** | **does not exist today** (no canned intent; `container_notes` is not in FACT_KEYS). When built: `plants_per_pot.readings` (sourced) -> `min_pot_gallons` / `recommended_pot_gallons` -> the §8 area fallback, labelled modeled | never `spacing_inches` alone |
 | **Hero spacing tile, astro** `HeroCard.astro:200` via `hero-spacing.ts` (2-finite guard, 77b51d2) | **R2:** when the default entry is a `hill`, read the **default entry**: `hill_spacing_inches` "between hills" + `plants_per_hill` "plants per hill". Otherwise `spacing_inches`, "between plants" / "between trees". `spacing_inches` is never relabelled: it always means between individual plants. | `spacing_inches: null` occurs only when no entry carries a between-plants figure (the 8 microgreens after promote 1): tile dropped; a malformed value drops the tile (already) |
 | **Hero spacing tile, app** `at-a-glance.ts:145-158` (`isPair`), `SeedlingDetailSheet.tsx:140` (**truthy guard, still owed**: it hides `null` but renders `[]` as "undefined") | same as astro | same |
-| **Planner catalogs** astro `catalog.ts:126`, app `catalog.ts:105` | admit a crop with a `spacing_inches` pair; a hill default places at `hill_spacing_inches` x `row_spacing_inches` with `plants_per_hill` per position. `null` with `planting_layout: []` stays excluded (microgreens) | today both drop a crop without a non-empty array: correct for the microgreens; a hill default whose row entry is dropped would vanish (§2.4) |
+| **Planner catalogs** astro `catalog.ts:126`, app `catalog.ts:105` | admit a crop with a `spacing_inches` pair and **place it in rows only** (ruled 2026-09-30); a hill-default crop places in rows from its `spacing_inches` fallback. Hill layouts are **display-only** (the hero tile), not placed. `null` with `planting_layout: []` stays excluded (microgreens). **Hill placement, when built, is `hill_spacing_inches` on both axes with `plants_per_hill` per cell, not hill x row: PLA-636** (future planner work, not this arc) | today both drop a crop without a non-empty array: correct for the microgreens; a hill-default crop is never dropped because its row entry feeds `spacing_inches` (§2.4) |
 | **Hero height**, astro `container-card.ts:168-169` (`sizeRange`, needs 0 < lo <= hi); app: no top-level height reader yet | `mature_height_ft` / `mature_spread_ft`; below about 3 ft render inches (D3 consumer rule) | tile hidden on null |
 | **Picker (PLA-629)** | spacing: `picked_rootstock.spacing_inches ?? spacing_inches`; height: `picked_rootstock.mature_height_ft ?? mature_height_ft`; layout: `picked_entry.in_row_inches` / `.row_spacing_inches` / `.mature_height_ft ?? mature_height_ft`; habit: `varieties[].plant_habit` (after PLA-12) | default entry / crop-level silently (D2) |
 | **Layout tile + block advisory**, app `at-a-glance.ts:168-172`, `plot-calc.ts:122-123` | `pollination_block_min_rows` at the root (unchanged); "LAYOUT" tile may read the default entry's `arrangement` | as today |
