@@ -22,7 +22,7 @@ PLA-426 / PLA-429 / PLA-629 Backlog; PLA-534 Todo.
 | # | question | ruling | rests on |
 | -- | -- | -- | -- |
 | **R1** | **Rootstock basis for tree spacing: which crops move?** | **TAKEN.** Move a tree crop's `spacing_inches` only where a cited page states a spacing for the recommended rootstock or its size class, carrying the other classes as `rootstock_options[].spacing_inches` overrides from the same page. **Promote 1 moves apple only**; pear-european, grapefruit, cherry-sweet, pear-asian and cherry-sour get findings recording the basis gap. The D10 rationale's WSU EB0937 example is **struck**: it was unconfirmed (§3). | §5. apple is the only crop with a cited page giving spacing by class (UMN: standard 20-25 / semi-dwarf 12-15 / dwarf 6-8 ft). |
-| **R2** | **What `spacing_inches` means on a crop whose default entry is a hill.** | **NOT TAKEN as recommended. `spacing_inches` keeps ONE meaning on every crop: the distance between individual plants.** A hill entry carries the between-hills distance (`hill_spacing_inches`) and `plants_per_hill`. Consumers reading the default entry render "between hills" when the default is a hill. **Amended (Trevor, 2026-09-30): the mirror is the between-plants figure from the default entry, falling back to any other entry that carries one (declared order); `null` only when no entry does.** The 8 zone-independent crops move from `[]` to `null` with `row_spacing_reason: "not_applicable"`. | Trevor's ruling. Re-measured: under the fallback rule **no hill candidate goes `null`** (every one has a per-plant figure on a cited page); the only `null`s after promote 1 are the 8 microgreens (§2.4). `null` still reaches consumers, so the consumer repoint is a **hard blocker** on promote 1 (§10.1). |
+| **R2** | **What `spacing_inches` means on a crop whose default entry is a hill.** | **NOT TAKEN as recommended. `spacing_inches` keeps ONE meaning on every crop: the distance between individual plants.** A hill entry carries the between-hills distance (`hill_spacing_inches`) and `plants_per_hill`. Consumers reading the default entry render "between hills" when the default is a hill. **Amended (Trevor, 2026-09-30): the mirror is the between-plants figure from the default entry, falling back to any other entry that carries one (declared order); `null` only when no entry does.** The 8 zone-independent crops move from `[]` to `null` with `row_spacing_reason: "not_applicable"`. **Further rulings (2026-09-30):** `row_spacing_inches` follows the default entry only, no fallback; a third reason value `see_layout` marks a hill default whose row figure lives on a non-default entry (§3); no dedicated spacing-reason field. | Trevor's ruling. Re-measured: under the fallback rule **no hill candidate goes `null`** (every one has a per-plant figure on a cited page); the only `null`s after promote 1 are the 8 microgreens (§2.4). `null` still reaches consumers, so the consumer repoint is a **hard blocker** on promote 1 (§10.1). |
 | **R3** | **Citation-gate scoping (PLA-607's deferred question): are `growth_stages[]` and `notifications[]` sourced block types?** | **TAKEN. Both stay NAMED (sourced) on A62; the 1,073 waivers stay.** This arc adds one scoped coherence check: a spacing restated in either family (or in the other prose fields listed in §9) on a repaired crop must agree with the new values after the promote. | §9. 334 of 728 stage items and 167 of 538 notifications carry a number with a unit; 47 + 26 restate a spacing; 17 crops already cite per item. |
 | **R4** | **`varieties[].plant_habit` controlled vocabulary (PLA-13, 2026-09-30).** | **TAKEN.** `standard, compact, dwarf, bush, half_runner, vining, erect, semi_erect, trailing`, a closed enum with a per-family allowlist; present-or-null on dict entries; `dwarf` only where `container_path == "cultivar"`. | §7. dry-bean already carries `half_runner`; the bramble pages split spacing on erect vs semi-erect/trailing. |
 | **R5** | **A crop whose in-row spacing has no page in its cited set.** | **TAKEN.** Hunt first, inside promote 1. A crop still without a page after a recorded hunt ships its default entry under a **MIGRATION waiver**: keyed by identity, valid only while the entry's `in_row_inches` byte-equals the pre-promote `spacing_inches`, listed by name, able only to shrink. | §2.3. About 8 crops: bok-choy, rosemary, mulberry, borage, cosmos, sweet-alyssum, bee-balm, viola. The value exists today uncited; moving it into an entry changes where it lives, not what is claimed. |
@@ -79,7 +79,7 @@ value (netting, fence) is an enum change by ruling, not a free string.
 | -- | -- | -- |
 | `spacing_inches` | between individual plants (existing field, D1; one meaning on every crop, R2) | `==` the `in_row_inches` of **the first entry that carries one, default first, then declared order**; **`null` only when no entry carries one** (a new state for this field), which after promote 1 means the 8 `zone_independent` crops (today `[]`, §3) |
 | `row_spacing_inches` | between rows (new) | `== default.row_spacing_inches`; `null` on microgreens |
-| `row_spacing_reason` | why null (new) | `== default.row_spacing_reason`; `"not_applicable"` on `zone_independent` crops and nowhere else |
+| `row_spacing_reason` | why null (new) | `null` when `row_spacing_inches` is non-null. Otherwise one of three values (ruled 2026-09-30): **`"see_layout"`** iff the default is a `hill` with no row figure and a non-default entry carries one; **`"not_applicable"`** on `zone_independent` crops and nowhere else; **`"not_authored"`** in every other case. `row_spacing_inches` follows the **default entry only, no fallback**. |
 | `spacing_inches_anchoring_urls` | **retired** | the 11 existing dicts move into the default entry's `anchoring_urls` |
 
 The mirrors carry **no** citation keys. Consumers read them exactly as they read `spacing_inches` today.
@@ -173,8 +173,10 @@ the hero tile; that move is the decision row, not an accident.)
 
 (UGA C1035: "hills ... 8 ft on all sides". Clemson: "Plants should be spaced 5 to 6 feet apart within the row" in
 "rows spaced 6 to 8 feet apart". The hill default carries no between-plants figure, so `spacing_inches` falls back to
-the row entry's `[60, 72]`. **`row_spacing_inches` / `row_spacing_reason` still mirror the default** (`[96, 96]`),
-because the fallback is ruled for the between-plants figure only. The hero renders the default's hill tile ("8 ft
+the row entry's `[60, 72]`. **`row_spacing_inches` follows the default only, no fallback** (ruled 2026-09-30), and
+here the hill entry carries its own `[96, 96]`. Had UGA given hill spacing with no row figure, the crop-root
+`row_spacing_inches` would be `null` with `row_spacing_reason: "see_layout"`, pointing the reader at the Clemson row
+entry's `[72, 96]`. The hero renders the default's hill tile ("8 ft
 between hills, 2 plants per hill"). Today's `[36, 72]` sits below the crop's own hill prose, a D1 blend. Whether
 watermelon's default is the hill or the row is a promote-1 decision row.)
 
@@ -208,15 +210,19 @@ refuses a population below its floor:
 4. `hill` iff `plants_per_hill` and `hill_spacing_inches` are present; `row` and `block` require `in_row_inches`;
    `hill` carries `in_row_inches` only when its page states one. `block` entry iff `pollination_block_min_rows` is
    present and an int >= 2.
-5. Every `[lo, hi]` holds numbers with `0 < lo <= hi`. `row_spacing_inches` is null iff `row_spacing_reason ==
-   "not_authored"`.
+5. Every `[lo, hi]` holds numbers with `0 < lo <= hi`. On an **entry**, `row_spacing_inches` is null iff
+   `row_spacing_reason == "not_authored"` (`see_layout` and `not_applicable` are crop-root values only).
 6. `mature_height_ft` appears only on entries with `support != "none"`, in A59's shape.
 7. **Mirror equality**: `spacing_inches ==` the `in_row_inches` of the **first entry carrying one, default first,
-   then declared order**; `null` iff no entry carries one. `row_spacing_inches` and `row_spacing_reason` equal the
-   **default's** (the fallback is for the between-plants figure only). On `zone_independent`: `planting_layout == []`,
-   `spacing_inches` `null`, `row_spacing_inches` `null`, `row_spacing_reason == "not_applicable"`. Mutations the gate
-   must catch: mirror taken from the second carrier while the default carries one; mirror non-null when no entry
-   carries one; a `[]` mirror surviving on a zone-independent crop.
+   then declared order**; `null` iff no entry carries one. `row_spacing_inches` equals the **default's, no fallback**.
+   Crop-root `row_spacing_reason` is `null` iff `row_spacing_inches` is non-null; otherwise `"see_layout"` iff the
+   default is a `hill` and some non-default entry carries a non-null `row_spacing_inches`, `"not_applicable"` iff
+   `zone_independent`, else `"not_authored"`. On `zone_independent`: `planting_layout == []`, `spacing_inches` `null`,
+   `row_spacing_inches` `null`, `row_spacing_reason == "not_applicable"`. Mutations the gate must catch: mirror taken
+   from the second carrier while the default carries one; mirror non-null when no entry carries one; a `[]` mirror
+   surviving on a zone-independent crop; crop-root `row_spacing_inches` borrowed from a non-default entry;
+   `see_layout` on a `row` / `block` default, or with no entry carrying a row figure; `not_authored` where
+   `see_layout` holds.
 8. No crop-root `spacing_inches_sources` or `spacing_inches_anchoring_urls`. A62's discovery guard fails the first, and
    this check fails the second by name, so a second authored copy cannot reappear (§2).
 9. Report the inspected population (crops and entries) and REFUSE below a literal floor (CLAUDE.md,
@@ -324,15 +330,26 @@ key and the document disagree; promote 1 resolves the key against the catalog be
 ## 3. `row_spacing_inches`: present-or-null with a reason
 
 - Present-or-null on **every certified crop** at the root (mirror) and on every entry.
-- `row_spacing_reason` values: **`not_authored`** (a row spacing exists in the world and this dataset has not
-  sourced it) and **`not_applicable`** (no ground rows). `not_applicable` appears only on `zone_independent` crops:
-  measured, exactly the 8 microgreens. It never appears on an entry.
+- **`row_spacing_inches` follows the default entry only, no fallback** (ruled 2026-09-30); the between-plants fallback
+  in §2.4 does not extend to rows.
+- `row_spacing_reason` values at the crop root (ruled 2026-09-30, three values):
+  - **`not_authored`**: a row spacing exists in the world and this dataset has not sourced it.
+  - **`not_applicable`**: no ground rows. Only on `zone_independent` crops: measured, exactly the 8 microgreens.
+  - **`see_layout`**: the default is a `hill` whose entry carries no row figure, and a **non-default** entry does. The
+    reader goes to `planting_layout[]` for the row figure of the layout it is showing. Legal only on a hill default. A
+    `row` / `block` default with no row figure is `not_authored` even when another entry has one, because a row default
+    that lacks its own row spacing is a data gap, not a pointer.
+
+  On an entry the reason is only ever `not_authored`. Population of `see_layout` is 0 until promote 1's decision rows
+  set hill defaults; it depends on whether each hill page states a between-hill-rows figure. UGA's "8 ft on all sides"
+  does; NMSU CR457 gives both hill and row spacing ("hills 24-45 in apart in rows 36-60 in"), so the measured candidates
+  are expected to be few.
 - **The 8 zone-independent crops change shape in promote 1.** They carry `spacing_inches: []` today (the timing-spine
   "legitimately N/A" contract). Promote 1 writes `spacing_inches: null`, `row_spacing_inches: null`,
   `row_spacing_reason: "not_applicable"` and `planting_layout: []` on each: arugula-microgreens,
   broccoli-microgreens, cilantro-microgreens, microgreens-mix, pea-shoots, radish-microgreens, sunflower-sprouts,
-  wheatgrass. The reason for the null is carried by `row_spacing_reason` together with the empty layout; no separate
-  spacing-reason field is added. A consumer tells this `null` apart from a data gap by `planting_layout == []`. The 7
+  wheatgrass. **No dedicated spacing-reason field** (ruled 2026-09-30): the empty layout plus `row_spacing_reason:
+  "not_applicable"` carries the reason. A consumer tells this `null` apart from a data gap by `planting_layout == []`. The 7
   shells keep `[]` (A39 exempts them). Consequences: `timing_spine_gate.is_microgreen()` must stop keying on `[]`, and
   the consumers must accept `null` first (§2.4, §10.1 hard blocker).
 - **Orchard trees are authored where their cited pages carry a row spacing** (D10 as amended). Cached cited pages with
@@ -716,13 +733,13 @@ Line numbers are as measured today on astro `277529c` and app `71e327ba`.
 
 | surface | reads | fallback while null |
 | -- | -- | -- |
-| **Planner row width, app** `planner/fit.ts:182-207` `rowWidthFt` | row's own `rowSpacingInches` (user decision, wins, `:193`) -> legacy per-planting (`:198`) -> **crop `row_spacing_inches`** (hi for roomy/Beginner, lo for tight/Seasoned, mirroring spacing) -> today's `planningSpacingInches` max | `row_spacing_reason == "not_authored"`: keep today's path, the lookup cache (`row-spacing.ts:119`) then the plant-spacing placeholder with its "No verified row spacing" caption (PLA-426's read-through; the lookup demotes to fallback, it does not retire). `"not_applicable"`: not placeable in rows (microgreens are already excluded by `catalog.ts:105`). |
+| **Planner row width, app** `planner/fit.ts:182-207` `rowWidthFt` | row's own `rowSpacingInches` (user decision, wins, `:193`) -> legacy per-planting (`:198`) -> **crop `row_spacing_inches`** (hi for roomy/Beginner, lo for tight/Seasoned, mirroring spacing) -> today's `planningSpacingInches` max | `row_spacing_reason == "see_layout"`: read the row figure from the entry the planner is placing. For the hill default that entry has none, so offer the non-default entry that does (or place by `hill_spacing_inches` on all sides), and never borrow its row figure silently into the hill layout. `"not_authored"`: keep today's path, the lookup cache (`row-spacing.ts:119`) then the plant-spacing placeholder with its "No verified row spacing" caption (PLA-426's read-through; the lookup demotes to fallback, it does not retire). `"not_applicable"`: not placeable in rows (microgreens are already excluded by `catalog.ts:105`). |
 | **Planner row width, astro** `planner/fit.ts:171-178` | **crop `row_spacing_inches`** -> today's max of `planningSpacingInches` | same as app, minus the user decision |
 | **Area per plant**, both `fit.ts:5-8` | `(in_row/12) * (row/12)` when `row_spacing_inches` is present | `(s/12)^2`, as today |
 | **Herb `set_spacing`** `planner-tools.ts:998-1000` | compare a row value against `row_spacing_inches[0]`, a plant value against `spacing_inches[0]` | no row minimum known: no below-minimum warning on rows |
 | **Herb `plan_rows`** `planner-tools.ts:824-844` | given -> **dataset `row_spacing_inches`** -> cache -> placeholder -> refuse | as today |
-| **Herb prompt** `herb/prompt.ts:200-209` | the "ROW SPACING IS NOT IN THE CERTIFIED DATASET YET" paragraph retires for crops where `row_spacing_inches` is present | kept, scoped to `not_authored` crops |
-| **Herb spacing intent** `herb/slice.ts:12-20` FACT_KEYS; `canned.ts:27,31` | add `row_spacing_inches`, `row_spacing_reason`; "Space X apart in rows Y apart" | "Space X apart" (in-row only, as today) |
+| **Herb prompt** `herb/prompt.ts:200-209` | the "ROW SPACING IS NOT IN THE CERTIFIED DATASET YET" paragraph retires for crops where `row_spacing_inches` is present, and for `see_layout` crops (the row figure is in the dataset, on another layout) | kept, scoped to `not_authored` crops |
+| **Herb spacing intent** `herb/slice.ts:12-20` FACT_KEYS; `canned.ts:27,31` | add `row_spacing_inches`, `row_spacing_reason`, and the `planting_layout` entries; "Space X apart in rows Y apart" | `see_layout`: answer from the layout being discussed, naming it ("in hills, 8 ft apart; planted in rows, rows are 6 to 8 ft apart"); `not_authored`: "Space X apart" (in-row only, as today) |
 | **Herb pot-size intent** | **does not exist today** (no canned intent; `container_notes` is not in FACT_KEYS). When built: `plants_per_pot.readings` (sourced) -> `min_pot_gallons` / `recommended_pot_gallons` -> the §8 area fallback, labelled modeled | never `spacing_inches` alone |
 | **Hero spacing tile, astro** `HeroCard.astro:200` via `hero-spacing.ts` (2-finite guard, 77b51d2) | **R2:** when the default entry is a `hill`, read the **default entry**: `hill_spacing_inches` "between hills" + `plants_per_hill` "plants per hill". Otherwise `spacing_inches`, "between plants" / "between trees". `spacing_inches` is never relabelled: it always means between individual plants. | `spacing_inches: null` occurs only when no entry carries a between-plants figure (the 8 microgreens after promote 1): tile dropped; a malformed value drops the tile (already) |
 | **Hero spacing tile, app** `at-a-glance.ts:145-158` (`isPair`), `SeedlingDetailSheet.tsx:140` (**truthy guard, still owed**: it hides `null` but renders `[]` as "undefined") | same as astro | same |
