@@ -1,0 +1,49 @@
+{
+ "_what": "PLA-626 delete-first on apricot and plum, Trevor rulings 2026-09-29 (review: _handoff/pla626_delete_first_review.md). Base d8906b43 (PLA-457 landed). Removes wrong text only; adds no claim, number or citation. apricot: recommended_rootstock 'Myrobalan 29C' -> null (FNRIC confines Myrobalan to very heavy or wet soils; UC IPM apricot PMG: plum-parentage stocks highly susceptible to bacterial canker; nothing promoted into it), and the wrong-crop 'prune brownline' cut from Marianna 2624's traits_seasoned. plum: St. Julien (row dropped, attribution retracted by PLA-466) and the note's container claim (Marianna container flag null, not assessed) cut from recommended_rootstock_note; St. Julien cut from both container_notes registers. KEPT by ruling: apricot's Myrobalan-canker, Lovell-canker and Marianna nematode/oak-root text (supported by UC IPM's apricot PMG; an attribution defect for PLA-566), plum's Myrobalan heavier/wetter-soils clause (FNRIC supports it), plum soil 'or Myrobalan', plum Guardian 'Lovell, Halford' (Clemson verbatim).",
+ "edits": [
+  {
+   "group": "core/wrong-crop",
+   "crop": "apricot",
+   "path": "/rootstock_options/2/traits_seasoned",
+   "before": "resistance to root-knot nematode, oak root fungus, and prune brownline.",
+   "after": "resistance to root-knot nematode and oak root fungus.",
+   "added_words": []
+  },
+  {
+   "group": "core/note",
+   "crop": "plum",
+   "path": "/recommended_rootstock_note",
+   "before": "while Marianna and St. Julien are size-limiting choices for smaller trees and containers.",
+   "after": "while Marianna is a size-limiting choice for smaller trees.",
+   "added_words": [
+    "a",
+    "choice",
+    "is"
+   ]
+  },
+  {
+   "group": "cascade/st-julien",
+   "crop": "plum",
+   "path": "/container_notes/notes_beginner",
+   "before": "especially with a semi-dwarfing rootstock like St. Julien or Marianna,",
+   "after": "especially with a semi-dwarfing rootstock like Marianna,",
+   "added_words": []
+  },
+  {
+   "group": "cascade/st-julien",
+   "crop": "plum",
+   "path": "/container_notes/notes_seasoned",
+   "before": "best on a size-limiting rootstock such as St. Julien or Marianna,",
+   "after": "best on a size-limiting rootstock such as Marianna,",
+   "added_words": []
+  }
+ ],
+ "retractions": [
+  {
+   "crop": "apricot",
+   "path": "/recommended_rootstock",
+   "before": "Myrobalan 29C",
+   "after": null
+  }
+ ]
+}
