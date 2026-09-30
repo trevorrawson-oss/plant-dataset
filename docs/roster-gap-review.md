@@ -1,11 +1,28 @@
 # Roster gap review -- which parent crops are missing (PLA-635)
 
-**Status:** SCOPING, awaiting Trevor's ruling. Nothing here authorizes adding a crop. Read-only on the
+**Status:** SCOPING. Partly ruled 2026-09-30 (section 0a); the remaining buckets await Trevor. Nothing here authorizes adding a crop. Read-only on the
 canonical; no schema change, no sourcing pass. Measured 2026-09-30 on canonical `00dda31c`
 (origin/main `3ba3460`, branch `main`, HEAD == origin/main).
 
 **Ruling buckets (the ticket's):** FIRST BATCH / LATER / VARIETY NOT PARENT / NO SOURCE PATH. Every
 row below carries a *proposed* bucket; Trevor rules.
+
+## 0a. Rulings of 2026-09-30 (Trevor): "follow what UC says"
+
+These supersede any conflicting row below. UC's garden publications group crops by market name
+(Mauk & Shea, UCCE Riverside: "B. Lemons, C. Limes, D. Oranges, F. Kumquats"; one UC IPM page per
+crop), and separately document how each type behaves. The working rule: follow UC's behavior
+evidence, and split only where that behavior means one crop entry cannot be right.
+
+| item | ruling | the UC evidence |
+|---|---|---|
+| **Persimmon** | **SPLIT** into `persimmon` (Asian, *D. kaki*) and `persimmon-american` (*D. virginiana*: Meader, Prok) | UC IPM: *"There are two kinds of persimmons grown in the West: the American persimmon and the Japanese or Oriental persimmon,"* each described separately. Our own `northern_tier` cell already recommends American only. |
+| **Meyer lemon** | **SPLIT** (first batch; PLA-137) | Mauk & Shea file Improved Meyer under lemons but call it *"probably a lemon-sweet orange hybrid ... fairly cold resistant, similar to sweet orange."* UC IPM ranks Meyer among the hardy citrus and Eureka among the most cold-sensitive. UC MG Sacramento recommends Meyer where it does not recommend true lemon. |
+| **Key lime** | **VARIETY of `lime`**, with a hardiness override. No split. | Mauk & Shea keep one "C. Limes" group: 1. Bearss, 2. Mexican (Key). UC MG Santa Clara: Bearss is *"hardier than Mexican/West Indian (Key) lime."* The difference is hardiness, which a variety override expresses. |
+| **Orange** | **WIDEN `orange-navel` to one `orange` crop** (slug `orange`, with a redirect). Navel, Valencia and blood oranges become varieties. **This replaces the earlier sweet-orange parent.** | Mauk & Shea: *"D. Oranges: 1. Navel (Washington, Cara Cara, Lane Late), 2. Valencia, 3. Blood oranges (Moro, Tarocco)."* UC MG Santa Clara: *"Harvest dates depend on the variety ... winter for Navel orange, and summer for Valencia."* PLA-533's open finding stays attached; the rename does not close it. |
+| **Daikon** | **OWN CROP** (`daikon`) | UC MG Sacramento's planting schedule gives "Radish" and "Radish, daikon" separate rows. UC MG Santa Clara has its own Daikon page. UC MG Sonoma: daikon is planted in late summer or early fall for harvest in late fall and winter. |
+| **Pluot, plumcot, pluerry, aprium, nectaplum, peacotum** | **VARIETIES of the dominant parent**: plum (pluot, plumcot, pluerry), apricot (aprium), nectarine (nectaplum), peach (peacotum) | UC MG Santa Clara: *"stone fruit hybrids ... Pluot and aprium: hybrids of a plum and an apricot, named for which fruit dominates."* Its pruning advice groups "plum, pluot" together. |
+| **Tiers** | **Removed.** Every crop and variety gets full (former Tier 1) treatment. | Trevor. The master list is re-issued as `~/Documents/plant-project/08-reference/master_crop_list_v2_2026-09-30.pdf`: 231 parents planned, 1,431 varieties listed (755 already in the dataset), against a ~1,200-variety launch target. |
 
 ## 0. Method, and what each column means
 
@@ -110,7 +127,7 @@ artichoke/asparagus, and tropical fruit.
 | **wheatgrass** | **ALREADY IN ROSTER** as a microgreen. | `wheatgrass` (`microgreen` archetype; varieties hard red winter, hard red spring, soft white winter wheat). |
 | **barley** (and "wheatgrass" as Trevor meant it) | **RULED 2026-09-30 (Trevor): he meant the field grains (wheat, barley, oats), with a future beer-making section in mind.** That makes them a WANTED lane (section 4.5), not a dismissal. The measurement below still stands: no T1 path is cached yet. | *Barley grass* is grown like wheatgrass, but it is a different species (*Hordeum*), so rule 7 makes it a new crop, a microgreen sibling of `wheatgrass`. The cache names barley only in cover-crop context: NO SOURCE PATH. *Barley grain*: also cover-crop mentions only, and a backyard small-grain has weak beginner fit: NO SOURCE PATH, grains lane (section 4.5). |
 | **rainbow chard** | **VARIETY NOT PARENT, already authored.** | `swiss-chard` already carries Bright Lights ("an All-America Selections rainbow mix") and Ruby Red. |
-| **blood orange** | **VARIETY, and its parent does not exist. RULED 2026-09-30 (Trevor): wanted, parent and all. FIRST BATCH** (C4). | A blood orange (Moro, Tarocco) is a sweet orange, NOT a navel. So it does not belong under `orange-navel` as named, and the master list's "blood orange as a variety within its parent" (p38) has no parent to land in. The same gap holds Valencia and Hamlin. UA's "Oranges for southern Arizona" (already cited on `orange-navel`) names blood 19x, Moro 12x, Valencia 38x, Hamlin 10x. See section 4.1 row C4. |
+| **blood orange** | **VARIETY, and its parent does not exist. RULED 2026-09-30 (Trevor): wanted, parent and all. FIRST BATCH** (C4). | A blood orange (Moro, Tarocco) is a sweet orange, NOT a navel. So it does not belong under `orange-navel` as named, and the master list's "blood orange as a variety within its parent" (p38) has no parent to land in. The same gap holds Valencia and Hamlin. UA's "Oranges for southern Arizona" (already cited on `orange-navel`) names blood 19x, Moro 12x, Valencia 38x, Hamlin 10x. See section 4.1 row C4. **Superseded by section 0a: widen `orange-navel` to `orange`.** |
 
 ## 3. What the consumers reference that the dataset does not carry
 
@@ -161,8 +178,8 @@ Zone ranges in this table are orientation only, NOT sourced claims. Each one get
 | C1 | **meyer-lemon** | SPLIT from `lemon` | PLA-137: inverted region suitability; test-user and master-list demand | DEDICATED, CITED: AZ1001, UCCE Riverside (Mauk & Shea), UCCE San Diego, UC MG Sacramento GN 127, UCCE Placer 31-018C (PLA-137) | SPLIT | the hardiest lemon; container-grown across the north | **FIRST BATCH** |
 | C2 | kumquat | P (*Citrus japonica*; eaten whole) | citrus beyond the five; master list | PARTIAL: 12 cached pages name it (UC MG Santa Clara 5x, UC 178097 4x, TAMU citrus 3x, LSU 3x); no dedicated page cached | M | containers everywhere; ground z9-11 | LATER |
 | C3 | calamondin | P (*C. x microcarpa*) | master list; containerizable | PARTIAL: UF HS132 3x, TAMU citrus 3x | M | indoor/container | LATER |
-| C4 | **sweet orange (non-navel)**: Valencia, blood (Moro, Tarocco), Hamlin | P, OR widen `orange-navel` to `orange` | blood orange (test user) has no parent; Valencia is the most-grown orange and is missing | DEDICATED, CITED: UA "Oranges for southern Arizona" (cited on `orange-navel`); UF HS132 | S-M | same as navel | **FIRST BATCH (ruled 2026-09-30).** Build it as a **new parent**, not a rename of `orange-navel`: a rename changes the slug and URL of a certified crop that carries an open PLA-533 blocking finding. Guard: author the new parent from its own T1 reads. Do NOT copy navel text across (`template-inheritance-fabricates-attributions`); a copy would carry the navel's contested claim into a clean crop. Varieties at PLA-12: Moro, Tarocco, Sanguinelli, Valencia, Hamlin. The slug name is open (`orange-sweet`?). |
-| C5 | Key lime | SPLIT candidate from `lime` | `lime` holds Persian, Key, Makrut (grown for its LEAVES, a use-pattern difference under rule 7) and Australian finger lime (*Microcitrus*): four taxa | DEDICATED, CITED: UF CH092 (Key lime, 71x; cited on `lime`) | SPLIT | Key lime is the most cold-sensitive | **RULE WITH C1** (PLA-137 open q2: decide the citrus policy once) |
+| C4 | **sweet orange (non-navel)**: Valencia, blood (Moro, Tarocco), Hamlin | P, OR widen `orange-navel` to `orange` | blood orange (test user) has no parent; Valencia is the most-grown orange and is missing | DEDICATED, CITED: UA "Oranges for southern Arizona" (cited on `orange-navel`); UF HS132 | S-M | same as navel | **FIRST BATCH (ruled 2026-09-30).** Build it as a **new parent**, not a rename of `orange-navel`: a rename changes the slug and URL of a certified crop that carries an open PLA-533 blocking finding. Guard: author the new parent from its own T1 reads. Do NOT copy navel text across (`template-inheritance-fabricates-attributions`); a copy would carry the navel's contested claim into a clean crop. Varieties at PLA-12: Moro, Tarocco, Sanguinelli, Valencia, Hamlin. **SUPERSEDED by section 0a (follow UC): no new parent; widen `orange-navel` to one `orange` crop instead.** |
+| C5 | Key lime | SPLIT candidate from `lime` | `lime` holds Persian, Key, Makrut (grown for its LEAVES, a use-pattern difference under rule 7) and Australian finger lime (*Microcitrus*): four taxa | DEDICATED, CITED: UF CH092 (Key lime, 71x; cited on `lime`) | SPLIT | Key lime is the most cold-sensitive | **RULED 0a: VARIETY of `lime`**, no split |
 | C6 | citron / Buddha's hand | P (*C. medica*) | test user | NONE CACHED (1 passing mention, UC MG Santa Clara) | M | niche, z9-11 | NO SOURCE PATH (master list tier 4) |
 
 ### 4.2 Nut trees (no coverage today; not in the master list at all)
@@ -181,7 +198,7 @@ harvest (drop, hull, cure, store) want its own shape? The first nut crop should 
 
 | # | candidate | P/V | gap | T1 | cost | fit | proposed |
 |---|---|---|---|---|---|---|---|
-| F1 | **interspecific Prunus**: pluot, plumcot, aprium, nectaplum, peacotum, pluerry | **VARIETY NOT PARENT** (provisional) | 6 of 14 test-user requests | PARTIAL: NMSU H310 (pluot, aprium, plumcot), UC 131938, UC MG Santa Clara fruit tips (all but pluerry); pluerry NONE | -- | as the dominant parent | **VARIETY NOT PARENT, to PLA-12's list.** Reasoning below. |
+| F1 | **interspecific Prunus**: pluot, plumcot, aprium, nectaplum, peacotum, pluerry | **VARIETY NOT PARENT** (provisional) | 6 of 14 test-user requests | PARTIAL: NMSU H310 (pluot, aprium, plumcot), UC 131938, UC MG Santa Clara fruit tips (all but pluerry); pluerry NONE | -- | as the dominant parent | **RULED 0a: VARIETY NOT PARENT**, under the dominant parent (UC). Reasoning below. |
 | F2 | quince | P (*Cydonia*) | master list | PARTIAL, strong: WSU W. Washington fruit handbook (13x; the handbook is cited on 12 crops), WSU "Unusual fruits" 2022, AZ1269 | M | broad, z5-9 | LATER |
 | F3 | jujube | P | arid Southwest gap | PARTIAL: NMSU H310 (9x), UAEX fruit trees (8x; both cited) | M | Southwest/South, heat-loving | LATER |
 | F4 | loquat | P | subtropical | PARTIAL: UC MG San Diego 4x | M | z8-10 | LATER |
@@ -267,7 +284,7 @@ T1), which names bachelor button, pineapple sage, anise hyssop, daylily and hops
 | G-6 | lima bean | P (*P. lunatus*) | master list | PARTIAL, strong: UMN "Growing beans" (8x), CTAHR B-91 (24x), MSU P3616 | S | South, heat | LATER (strong batch-2) |
 | G-7 | endive / escarole, radicchio | P (two species: *C. endivia*, *C. intybus*) | master list; chicories have zero coverage | **DEDICATED, CITED**: UMN "Growing lettuce, endive and radicchio" (cited on `lettuce-leaf`); UF VH021; CTAHR res-164 | S | cool-season | LATER (strong batch-2) |
 | G-8 | mustard greens | P | master list; southern greens | PARTIAL, strong: MSU P3616 (cited on collards/kale), LSU, Clemson | S | broad | LATER |
-| G-9 | daikon | P or V of `radish` | master list leans "crop" (fall-only cycle) | PARTIAL, strong: CTAHR B-91 (32x), UMN "Growing radishes" | S | fall | **RULING NEEDED**: split-criterion test (section 6) |
+| G-9 | daikon | P or V of `radish` | master list leans "crop" (fall-only cycle) | PARTIAL, strong: CTAHR B-91 (32x), UMN "Growing radishes" | S | fall | **RULED 0a: OWN CROP** (UC planting calendars list it separately) |
 | G-10 | celeriac, sunchoke, horseradish | P each | master list | PARTIAL: WSU EM051E/EM057E, MSU P3616 | S-M | broad | LATER |
 | G-11 | peanut | P | southern gap | PARTIAL: MSU P3616 (8x), MSU planting dates | M | South, long warm season | LATER |
 | G-12 | **lettuce** (Trevor's list) | NOT a new parent | `lettuce-leaf` already carries Romaine/Cos and Buttercrunch (butterhead); only crisphead is absent | cited: UMN lettuce page | -- | -- | **VARIETY NOT PARENT.** Heading types differ by days to maturity and heat, which is a variety delta, not a split (section 6). The narrow slug is a naming issue, not a data one. A rename of `lettuce-leaf` to `lettuce` is a URL change on a certified crop; flag it for PLA-625, not here. |
@@ -348,18 +365,18 @@ crops; this test is for dividing existing ones.
 | crop | members | test result | proposal |
 |---|---|---|---|
 | **lemon** | Eureka/Lisbon vs Improved Meyer (and Ponderosa) | **(1) and (2) met.** Meyer is named in 8 of 16 region cells; `low_desert_az` tells the reader to grow Eureka or Lisbon *because* Meyer is not sold there; harvest shape differs (PLA-137 §2) | **SPLIT: FIRST BATCH (C1)** |
-| **persimmon** | Asian (*D. kaki*: Fuyu, Izu, Hachiya, Great Wall) vs American (*D. virginiana*: Meader, Prok) | **(1) met, in the data today.** `northern_tier`: *"Up north, grow American persimmon ... Asian persimmon usually will not survive here."* `nevada` and the California cells are Asian-only. The parent's regions map switches species by region. That is the lemon/Meyer condition, carried in prose. | **SPLIT candidate, strong. LATER** (rule it with the citrus policy; persimmon is certified and launch-ready, so the split re-sources ~16 region cells) |
-| **lime** | Persian, Key, Makrut, finger lime | Key lime is named in only 3 cells, Persian throughout: (1) not yet shown. But **Makrut is grown for its leaves** (rule 7's use pattern) and finger lime is a different genus. | **RULE WITH C1** (PLA-137 q2). At minimum, Makrut and finger lime are misfiled as lime *varieties*. |
+| **persimmon** | Asian (*D. kaki*: Fuyu, Izu, Hachiya, Great Wall) vs American (*D. virginiana*: Meader, Prok) | **(1) met, in the data today.** `northern_tier`: *"Up north, grow American persimmon ... Asian persimmon usually will not survive here."* `nevada` and the California cells are Asian-only. The parent's regions map switches species by region. That is the lemon/Meyer condition, carried in prose. | **RULED 0a: SPLIT.** Sequenced after the first batch; the split re-sources ~16 region cells of a certified, launch-ready crop |
+| **lime** | Persian, Key, Makrut, finger lime | Key lime is named in only 3 cells, Persian throughout: (1) not yet shown. But **Makrut is grown for its leaves** (rule 7's use pattern) and finger lime is a different genus. | **RULED 0a: NO SPLIT** (UC groups limes). Makrut (grown for leaves) and finger lime (*Microcitrus*) remain a PLA-12 variety-level question. |
 | **plum** | European vs Japanese | Partial (1): every cell discusses both; only `rgv`, `ca_desert` and `low_desert_az` are Japanese-only, and "only the low-chill members fit here" is what a variety list already expresses. Pear-european/pear-asian is the precedent in favor. | **NOT NOW.** Re-test at PLA-12; `plum` also carries PLA-579. |
 | lettuce-leaf | leaf, romaine, butterhead | none of (1)-(3); days-to-maturity deltas | NO SPLIT (G-12) |
-| radish vs daikon | spring radish vs fall daikon | (2) is plausible (fall-only cycle); not measured cell by cell | RULING NEEDED (G-9) |
+| radish vs daikon | spring radish vs fall daikon | (2) is plausible (fall-only cycle); not measured cell by cell | **RULED 0a: OWN CROP** |
 | mulberry | *M. alba* hybrids vs *M. nigra* (Black Beauty) | not measured | flag for PLA-12 |
 | sage, oregano, dry-bean, swiss-chard | -- | all members share one taxon and one cycle | NO SPLIT |
 
 The opposite problem, noted but not in scope: `cucumber` (generic) overlaps `slicing-`, `pickling-`
 and `english-cucumber`. That is a possible MERGE, not a split. PLA-625 territory.
 
-## 7. Recommended first batch (8)
+## 7. Recommended first batch (7 new parents + the orange widening)
 
 | # | crop | kind | tier | why this one first |
 |---|---|---|---|---|
@@ -370,13 +387,13 @@ and `english-cucumber`. That is a possible MERGE, not a split. PLA-625 territory
 | 5 | **ground cherry** | new | S | UMN page already cited on `tomatillo`. Pre-scoped in the master list, and it fixes a live rule-7 misfile (Pineapple under `tomatillo`). |
 | 6 | **rhubarb** | new | M | The batch's perennial. Third member of an existing archetype, a northern must-have, and the one real T1 hunt in the batch. |
 | 7 | **lemon balm** | new | S | A test-user request on an existing archetype with a T1 factsheet already in the catalog. It gives the batch a herb. |
-| 8 | **sweet orange (non-navel)**: the blood orange's parent | new | S-M | **Ruled in by Trevor 2026-09-30.** A test-user request with no home today. Its dedicated T1 page (UA "Oranges for southern Arizona") is already cited on `orange-navel`. It pairs naturally with meyer-lemon: both are citrus parents authored in one lane. |
+| + | **orange widening** (`orange-navel` -> `orange`) | widen, not new | S-M | **Ruled 2026-09-30 (follow UC), replacing the earlier sweet-orange parent.** Valencia and blood oranges (Moro, Tarocco), a test-user request, become varieties of one orange crop. Its dedicated T1 page (UA "Oranges for southern Arizona") is already cited on `orange-navel`. It rides with meyer-lemon in one citrus lane. |
 
 **Why this shape:**
 - **No new archetype, so no new gate suite.** The batch runs on the existing register and exercises
   it across 5 archetypes (`evergreen_fruit_tree`, `cool_season_annual`, `warm_season_fruiting`,
   `herbaceous_perennial`, `culinary_herb`).
-- **6 of 8 have their dedicated T1 page already cited on a sibling.** That keeps the independent
+- **6 of the 8 items have their dedicated T1 page already cited on a sibling.** That keeps the independent
   source-truth review pass cheap and the batch honest.
 - **Zone spread:** rutabaga and rhubarb serve the north, cowpea the Southeast, Meyer lemon the
   citrus belt plus containers everywhere, and napa, ground cherry and lemon balm grow nearly anywhere.
@@ -389,7 +406,7 @@ bachelor button. All are tier S with strong T1.
 **Immediately after, in this order:**
 1. **avocado + olive** (finish the shells; section 5).
 2. **grape** as the vine-archetype pilot (V1); muscadine, hardy kiwi and hops follow on that archetype.
-3. **The citrus policy ruling**: Key lime and the persimmon split, decided once.
+3. **The two ruled parents** (section 0a): the persimmon split (`persimmon-american`) and `daikon`.
 4. **The grains and brewing lane** (wheat, barley, oats, hops): T1 hunt first, then the
    cool-season-grass pilot. Hops follows the grape vine pilot.
 5. **The tropical lane** (section 4.9): a UF/IFAS + CTAHR T1 hunt first. Avocado pilots the
@@ -402,19 +419,20 @@ Counted from the tables above (each candidate species is one; a multi-species ro
 
 | bucket | parents |
 |---|---|
-| FIRST BATCH | **8** (7 new, including the sweet-orange parent, + 1 split: meyer-lemon) |
+| FIRST BATCH | **7** (6 new + 1 split: meyer-lemon); the orange widening adds no parent |
+| RULED PARENTS (2026-09-30) | **2**: `persimmon-american` (split), `daikon` |
 | WANTED LANE, T1 hunt owed (Trevor 2026-09-30) | **13**: grains and brewing 4 (wheat, barley, oats, hops); tropical 9 (pineapple, banana, papaya, mango, guava, lychee, longan, jackfruit, passion fruit) |
 | LATER, with a MEASURED T1 path (DEDICATED or PARTIAL) | **41**: citrus 2, nuts 5 (pecan, chestnut, almond, pistachio, walnut), pome/stone 3, small fruit and vines 8, grains 3 (sorghum, millet, amaranth), herbs 5 (pineapple sage, fennel, tarragon, marjoram, sorrel), flowers 6, vegetables 9 (incl. broccolini) |
-| LATER, T1 not measured | 3 (chervil, stevia, shiso) + up to 16 master-list "hot family" proposals whose parent-vs-variety status is unruled (G-13) |
-| RULING NEEDED (Key lime, daikon, persimmon split) | 3 |
+| APRIL PROPOSALS, not yet re-measured | **40**: the master list's proposed crops this review has no row for (the G-13 families, the lettuce heading types, mache, mizuna, tatsoi, gai lan, romanesco, chervil, stevia, shiso and others; enumerated in master list v2) |
+| RULING NEEDED | 0 (all three were ruled 2026-09-30; section 0a) |
 | NO SOURCE PATH | 10 (citron, hazelnut, quinoa, buckwheat, rye, barley grass, Cleveland sage, mullein, dragon fruit, starfruit) |
-| VARIETY NOT PARENT | cara cara, rainbow chard, blood orange (under the new sweet-orange parent), the 6 interspecific Prunus, lettuce heading types |
+| VARIETY NOT PARENT | cara cara, rainbow chard, blood orange and Valencia (under `orange`), Key lime (under `lime`), the 6 interspecific Prunus, lettuce heading types (proposed) |
 
-**For the split (PLA-537):** the roster is 128 today. The first batch takes it to **136** (8 new
-parent files, one of them carved out of `lemon`). The measured horizon is 136 + 41 LATER + 13
-wanted-lane + up to 3 rulings = **~193 parents**. If the unmeasured and hot-family rows all rule as parents, it reaches
-**~203**, bracketing the master list's ~195. Plan the layout for **~200 parents**. Two structural
-points matter more than the number:
+**For the split (PLA-537):** the roster is 128 today. The first batch takes it to **135** (7 new
+parent files, one of them carved out of `lemon`; `orange-navel` is renamed in place). The measured
+horizon is 135 + 2 ruled + 41 LATER + 13 wanted-lane = **~191 parents**. If all 40 April proposals
+rule as parents, it reaches **~231** (master list v2's "parents planned"). Plan the layout for
+**~230 parents**. Two structural points matter more than the number:
 - **A split turns one crop file into two.** The per-crop layout must support that as a first-class
   operation: problem ids and variety ids copied, not re-derived (the join-key rule), and the rollup
   hash must attribute the move.
