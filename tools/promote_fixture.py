@@ -48,6 +48,10 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # PLA-626 apricot/plum rootstock delete-first (2026-09-29). NEVER AMEND b0c3958.
+    # apricot recommended_rootstock -> null, Marianna's "prune brownline" cut; plum note loses St. Julien and
+    # "and containers", St. Julien out of both container_notes registers. No finding or flag moves.
+    '00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e': 'b0c3958',
     # PLA-457 sulfur/oil interval (2026-09-29). NEVER AMEND f26ed3e.
     # 21 rung notes on 10 crops + both control_methods cautions to the scoped 30-day claim with a label
     # deferral; source_catalog + purdue_ext_bp69w. No flag, finding, id or region moves.
