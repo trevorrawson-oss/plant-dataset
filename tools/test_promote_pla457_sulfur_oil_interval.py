@@ -22,15 +22,15 @@ sys.path.insert(0, HERE)
 import promote_fixture  # noqa: E402
 import promote_pla457_sulfur_oil_interval as P  # noqa: E402
 
-BASE_SHA = "72371c02fa306d8e1849053416baf34e232b80bbdf1af5169d546c12c8f45222"
-OUTPUT_SHA = "e4e55a14be8c4f32dca69e6ab23b742c31d2236dd742f5230ae425835ff260aa"
+BASE_SHA = "cd0f9f176bdfdf346003d96399cb7d038fa2e6522c3003deae829f40b2515917"  # re-pinned 2026-09-29 from 72371c02
+OUTPUT_SHA = "d8906b4313864161c361534cde1b8404c93a81ce44cc5640bf5f51f624b23ce9"  # on cd0f9f17; was e4e55a14 on 72371c02
 ROSTER = 128
-N_NOTES = 20
+N_NOTES = 21
 N_CROPS = 10
-N_PRE = 22
-N_POST = 22
+N_PRE = 23
+N_POST = 23
 N_NEW_SOURCES = 1
-N_LEAVES = 20
+N_LEAVES = 21
 CROPS = ("apple", "apricot", "cherry-sour", "cherry-sweet", "grape-tomato", "lemongrass", "oregano",
          "plum", "sage", "strawberry")
 # The five statements the strict (sulfur AND oil in one sentence) scan cannot see: the rung's own
@@ -108,6 +108,16 @@ class TheNet(Base):
                  if not w.startswith("control_methods")}
         self.assertTrue(PRONOUN_FIVE <= found, f"missing {PRONOUN_FIVE - found}")
 
+    def test_the_net_finds_the_hyphenated_statement(self):
+        # Found 2026-09-29 on the re-pin by an independent scan, missed by the 09-06 net: the number
+        # and unit are joined by a hyphen ("a 2-week gap"), which `\s*` never matched, so the post
+        # check reported 0 sub-30 statements while this one survived. Named as a literal.
+        found = {tuple(w.split("/")[i] for i in (0, 2, 3, 4)) for w, s in P.interval_sentences(self.data)
+                 if not w.startswith("control_methods")}
+        self.assertIn(("strawberry", "two-spotted-spider-mite", "sulfur", "note_seasoned"), found)
+        self.assertTrue(P.SUB_30.search("keep a 2-week gap from any oil spray"))
+        self.assertTrue(P.DURATION.search("keep a 2-week gap from any oil spray"))
+
     def test_the_net_excludes_mints_harvest_phi(self):
         self.assertFalse(any(w.startswith("mint/") for w, s in P.interval_sentences(self.data)))
 
@@ -143,7 +153,7 @@ class TheNet(Base):
         post = self.post()
         rg = self.rung(post, "sage", "pests", "spider-mites", "horticultural_oil")
         rg["note_beginner"] = (rg.get("note_beginner") or "") + " Keep sulfur 30 days from oil while in leaf; check the label."
-        self.assertRefuses("expected 22", P.check_post_statements, post)
+        self.assertRefuses("expected 23", P.check_post_statements, post)
 
 
 class SpecShape(Base):
@@ -194,10 +204,10 @@ class SpecShape(Base):
         self.assertIsNone(P.lifted_from_anchor("Keep sulfur at least 30 days of an oil spray apart."))
         self.assertIsNotNone(P.lifted_from_anchor("Remember: if you have applied an oil spray within the last month, wait."))
 
-    def test_refuses_a_row_count_other_than_twenty(self):
+    def test_refuses_a_row_count_other_than_twenty_one(self):
         s = self.fresh_spec()
         s["notes"] = s["notes"][:-1]
-        self.assertRefuses("expected 20", P.check_spec_shape, s)
+        self.assertRefuses("expected 21", P.check_spec_shape, s)
 
     def test_refuses_a_duplicated_row(self):
         s = self.fresh_spec()

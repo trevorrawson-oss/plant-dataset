@@ -47,6 +47,15 @@ MUTATIONS = [
     ("net", "pronoun_arm_on_sulfur_rungs_removed",
      '(m == "sulfur" and has_o) or', '(False) or  ' + MARKER + '\n                                          ',
      "test_the_net_finds_the_five_pronoun_statements"),
+    # 2026-09-29 re-pin: the hyphen arm of both duration patterns ("a 2-week gap"), missed on 09-06
+    ("net", "duration_hyphen_arm_removed",
+     'DURATION = re.compile(r"\\b(\\d+|one|two|three|four|several|a)[\\s-]*(days?|weeks?|months?)\\b|\\bmonth\\b", re.I)',
+     'DURATION = re.compile(r"\\b(\\d+|one|two|three|four|several|a)\\s*(days?|weeks?|months?)\\b|\\bmonth\\b", re.I)  ' + MARKER,
+     "test_the_net_finds_the_hyphenated_statement"),
+    ("net", "sub30_hyphen_arm_removed",
+     'SUB_30 = re.compile(r"\\b(2|two|three|3|10|14|21)[\\s-]*(weeks?|days?)\\b", re.I)',
+     'SUB_30 = re.compile(r"\\b(2|two|three|3|10|14|21)\\s*(weeks?|days?)\\b", re.I)  ' + MARKER,
+     "test_the_net_finds_the_hyphenated_statement"),
     ("net", "pre_count_not_pinned", "    if len(found) != EXPECTED_PRE_STATEMENTS:", "    if False:  " + MARKER,
      "test_refuses_a_pre_count_drift"),
     ("net", "stray_statement_accepted", "    if stray:", "    if False:  " + MARKER,
@@ -70,7 +79,7 @@ MUTATIONS = [
     ("scope", "scope_matches_anything", 'SCOPE = re.compile(r"in leaf|has leaves|growing season", re.I)', 'SCOPE = re.compile(r"")  ' + MARKER,
      "test_refuses_a_missing_scope"),
     ("scope", "sub_thirty_never_matches",
-     'SUB_30 = re.compile(r"\\b(2|two|three|3|10|14|21)\\s*(weeks?|days?)\\b", re.I)',
+     'SUB_30 = re.compile(r"\\b(2|two|three|3|10|14|21)[\\s-]*(weeks?|days?)\\b", re.I)',
      'SUB_30 = re.compile(r"(?!x)x")  ' + MARKER,
      "test_refuses_a_sub_thirty_interval"),
     ("scope", "spec_rows_not_checked_for_scope", '        if not scoped_thirty_with_label(r["new"]):', "        if False:  " + MARKER,
@@ -86,7 +95,7 @@ MUTATIONS = [
 
     # ---- spec shape
     ("spec", "row_count_not_pinned", "    if len(rows) != EXPECTED_NOTES:", "    if False:  " + MARKER,
-     "test_refuses_a_row_count_other_than_twenty"),
+     "test_refuses_a_row_count_other_than_twenty_one"),
     ("spec", "duplicate_row_accepted", "        if key in seen:", "        if False:  " + MARKER,
      "test_refuses_a_duplicated_row"),
     ("spec", "self_rewrite_accepted", '        if r["old"] == r["new"]:', "        if False:  " + MARKER,
@@ -299,6 +308,8 @@ def main():
             sys.exit(f"HARNESS DEAD: sentinel could not be applied: {err}")
         rc, _ = run_suite(tools, sel)
         open(os.path.join(tools, tgt), "w", encoding="utf-8").write(clean)
+        if rc == 5:
+            sys.exit("HARNESS DEAD: the sentinel's selector collected no tests (rc 5)")
         if rc == 0:
             sys.exit("HARNESS DEAD: the sentinel mutation SURVIVED. The harness is not measuring "
                      "anything and no result below can be trusted.")
@@ -314,6 +325,12 @@ def main():
                 continue
             rc, out = run_suite(tools, sel)
             open(os.path.join(tools, PROMOTE), "w", encoding="utf-8").write(clean)
+            if rc == 5:
+                # pytest exits 5 when -k collects NOTHING: a mistyped selector, not a red driver.
+                # Graded BROKEN (the PLA-7 A1 harness rule), never caught. Added 2026-09-29.
+                broken.append((fam, name, f"selector {sel!r} collected no tests (rc 5)"))
+                print(f"  BROKEN   {fam}/{name}: selector collected nothing")
+                continue
             if rc == 0:
                 survived.append((fam, name, sel))
                 print(f"  SURVIVED {fam}/{name}   (driver: {sel})")

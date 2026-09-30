@@ -3,6 +3,13 @@
 interval is 30 days, scoped to growing-season use with green tissue present, deferring to the oil
 product's label. Base 72371c02.
 
+RE-PINNED 2026-09-29 to cd0f9f17 (post d8906b43, was e4e55a14). All twenty 09-06 old sentences still
+matched exactly once. An independent scan of the re-pinned post found a 2-week statement the net had
+never seen: strawberry/two-spotted-spider-mite's SULFUR rung, "keep a 2-week gap from any oil spray".
+DURATION and SUB_30 used \s* between number and unit, so a hyphen hid it, and the 09-06 post check's
+"0 under 30 days" was false. Both patterns are now [\s-]*, a 21st row rewrites that sentence, and the
+pins move 20/22/22 -> 21/23/23 (still ten crops). Counts below are the 09-06 ones.
+
 THE DEFECT. `control_methods.horticultural_oil` said "2 weeks" citing UC IPM PN 7405, which says
 30 days: a misquote. `control_methods.sulfur` said "2 weeks" faithfully to PN 7406. Twenty shipped
 rung notes on ten crops carried 2 weeks, two weeks or 30 days depending on which note their author
@@ -66,28 +73,31 @@ sys.path.insert(0, HERE)
 from source_catalog_title_gate import title_violations  # noqa: E402  -- A54, imported never retyped
 import control_ladder_gate as CLG  # noqa: E402
 
-BASE_SHA = "72371c02fa306d8e1849053416baf34e232b80bbdf1af5169d546c12c8f45222"  # PLA-450 Option B, 4b826e4
+BASE_SHA = "cd0f9f176bdfdf346003d96399cb7d038fa2e6522c3003deae829f40b2515917"  # PLA-533 subtractive, 8da666e (re-pinned 2026-09-29 from 72371c02)
 METHODS = ("horticultural_oil", "sulfur")
 FIELDS = ("pests", "diseases")
 REGISTERS = ("note_beginner", "note_seasoned")
 
-# Pinned BEFORE the first run, from the widened scan on 72371c02.
-EXPECTED_NOTES = 20
+# Pinned from the widened scan: 20/22/22 on 72371c02 (09-06); 21/23/23 on cd0f9f17 (2026-09-29) once
+# the net was made hyphen-aware. The crop count is unchanged: the 21st note is on strawberry.
+EXPECTED_NOTES = 21
 EXPECTED_CROPS = 10
-EXPECTED_PRE_STATEMENTS = 22      # 20 notes + 2 cautions, all carrying an interval
-EXPECTED_POST_STATEMENTS = 22     # the same 22, all at 30 days with a label deferral
+EXPECTED_PRE_STATEMENTS = 23      # 21 notes + 2 cautions, all carrying an interval
+EXPECTED_POST_STATEMENTS = 23     # the same 23, all at 30 days with a label deferral
 EXPECTED_NEW_SOURCES = 1
 
 # The widened net (guard 1). A sentence states the interval when it carries a duration and names
 # BOTH materials, OR names the other material while sitting on a rung whose method IS the first.
 SULFUR = re.compile(r"\bsul(?:f|ph)ur\b", re.I)
 OIL = re.compile(r"\boils?\b", re.I)
-DURATION = re.compile(r"\b(\d+|one|two|three|four|several|a)\s*(days?|weeks?|months?)\b|\bmonth\b", re.I)
+# [\s-]* not \s*: "a 2-week gap" joins number and unit with a hyphen. The 09-06 net used \s* and missed
+# strawberry's sulfur rung, so its "0 under 30 days" was false (found on the 2026-09-29 re-pin).
+DURATION = re.compile(r"\b(\d+|one|two|three|four|several|a)[\s-]*(days?|weeks?|months?)\b|\bmonth\b", re.I)
 THIRTY = re.compile(r"\b30 days\b")
 LABEL = re.compile(r"\blabel\b", re.I)
 SCOPE = re.compile(r"in leaf|has leaves|growing season", re.I)
 HARVEST_PHI = re.compile(r"\bof harvest\b", re.I)     # mint's PHI sentence names sulfur, oil and 30 days
-SUB_30 = re.compile(r"\b(2|two|three|3|10|14|21)\s*(weeks?|days?)\b", re.I)
+SUB_30 = re.compile(r"\b(2|two|three|3|10|14|21)[\s-]*(weeks?|days?)\b", re.I)
 
 # house style
 DASHES = re.compile(r"[–—]")
