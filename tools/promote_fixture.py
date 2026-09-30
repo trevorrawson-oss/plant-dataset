@@ -48,6 +48,10 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # PLA-533 subtractive pass (2026-09-29). NEVER AMEND 8da666e.
+    # 31 prose edits on five citrus, Flying Dragon 25 gal -> null x2, lime sour orange row removed and
+    # recommended_rootstock -> null; the seven blocking findings and all launch flags byte-identical.
+    'cd0f9f176bdfdf346003d96399cb7d038fa2e6522c3003deae829f40b2515917': '8da666e',
     # PLA-533 2a blockers (2026-09-25). NEVER AMEND 8df48dc.
     # seven blocks_launch open_findings on orange-navel (4), grapefruit (2), mandarin-clementine (1);
     # launch_ready false on all three, status untouched; every other crop byte-identical.
