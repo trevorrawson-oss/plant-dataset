@@ -1,0 +1,298 @@
+{
+  "_note": "PLA-533 subtractive pass (Trevor rulings 2026-09-29, two batches; chat review _handoff/pla533_subtractive_review.md). Deletes and grammar-repair rewrites only; nothing adds a claim, a number or a citation. None of these closes a PLA-533 blocking finding. Third batch (2026-09-29): lime row 1's 'than sour orange' sentence DELETED (was held). Variant B (Trevor, 2026-09-29): lime note's framing clause 'Tristeza virus is a lime concern rather than a rootstock one:' CUT (contradicted by CH093); the Tahiti half (CH093) and Key-lime half (CH092, unread) stay.",
+  "base_sha": "edcd9bf95ad7e3a90ada7c522db23e00172d1f57d74ff33da219908d7a266229",
+  "edits": [
+    {
+      "group": "delete/sulfur",
+      "crop": "orange-navel",
+      "path": "/failure_diagnostics/4/next_season_tip_seasoned",
+      "before": "Lowering soil pH toward slightly acidic over time (sulfur, acidifying amendments) makes the existing nutrients available and is the durable fix on high-pH ground.",
+      "after": "",
+      "added_words": []
+    },
+    {
+      "group": "delete/sulfur",
+      "crop": "orange-navel",
+      "path": "/failure_diagnostics/4/next_season_tip_beginner",
+      "before": "Over time, working to make the soil a little more acidic (with sulfur) helps the tree use the nutrients already there, which is the lasting fix on high-pH soil.",
+      "after": "",
+      "added_words": []
+    },
+    {
+      "group": "delete/sulfur",
+      "crop": "grapefruit",
+      "path": "/failure_diagnostics/5/next_season_tip_seasoned",
+      "before": "Lowering soil pH toward slightly acidic over time with sulfur makes the existing nutrients available and is the durable fix on high-pH ground.",
+      "after": "",
+      "added_words": []
+    },
+    {
+      "group": "delete/sulfur",
+      "crop": "grapefruit",
+      "path": "/failure_diagnostics/5/next_season_tip_beginner",
+      "before": "Over time, making the soil a little more acidic with sulfur helps the tree use the nutrients already there.",
+      "after": "",
+      "added_words": []
+    },
+    {
+      "group": "delete/sulfur",
+      "crop": "mandarin-clementine",
+      "path": "/failure_diagnostics/3/next_season_tip_seasoned",
+      "before": "Lowering soil pH toward slightly acidic over time with sulfur is the durable fix on high-pH ground.",
+      "after": "",
+      "added_words": []
+    },
+    {
+      "group": "delete/sulfur",
+      "crop": "mandarin-clementine",
+      "path": "/failure_diagnostics/3/next_season_tip_beginner",
+      "before": "Over time, making the soil a little more acidic with sulfur helps the tree use the nutrients already there.",
+      "after": "",
+      "added_words": []
+    },
+    {
+      "group": "delete/leaked-note",
+      "crop": "orange-navel",
+      "path": "/container_notes/notes_seasoned",
+      "before": "Do not lift peach's container guidance here; unlike peach, citrus genuinely thrives in pots.",
+      "after": "",
+      "added_words": []
+    },
+    {
+      "group": "delete/dangling",
+      "crop": "orange-navel",
+      "path": "/container_notes/watering_adjustment_seasoned",
+      "before": "See the container watering note for detail.",
+      "after": "",
+      "added_words": []
+    },
+    {
+      "group": "delete/dangling",
+      "crop": "orange-navel",
+      "path": "/container_notes/fertilizer_adjustment_seasoned",
+      "before": "See the container fertilizer note for detail.",
+      "after": "",
+      "added_words": []
+    },
+    {
+      "group": "rewrite/sulfur",
+      "crop": "orange-navel",
+      "path": "/soil/preferred_description_seasoned",
+      "before": "so a micronutrient-inclusive citrus fertilizer and slow acidification help.",
+      "after": "so a micronutrient-inclusive citrus fertilizer helps.",
+      "added_words": [
+        "helps"
+      ]
+    },
+    {
+      "group": "rewrite/sulfur",
+      "crop": "orange-navel",
+      "path": "/ph/note_seasoned",
+      "before": "Correct with chelated micronutrients and a citrus fertilizer that includes them, and acidify the soil gradually with elemental sulfur for a durable fix.",
+      "after": "Correct with chelated micronutrients and a citrus fertilizer that includes them.",
+      "added_words": []
+    },
+    {
+      "group": "rewrite/sulfur",
+      "crop": "orange-navel",
+      "path": "/ph/note_beginner",
+      "before": "If that happens, use a citrus fertilizer that includes iron and zinc, and over time you can add sulfur to make the soil a little more acidic.",
+      "after": "If that happens, use a citrus fertilizer that includes iron and zinc.",
+      "added_words": []
+    },
+    {
+      "group": "rewrite/sulfur",
+      "crop": "grapefruit",
+      "path": "/soil/preferred_description_seasoned",
+      "before": "so a micronutrient-inclusive citrus fertilizer and gradual acidification help.",
+      "after": "so a micronutrient-inclusive citrus fertilizer helps.",
+      "added_words": [
+        "helps"
+      ]
+    },
+    {
+      "group": "rewrite/sulfur",
+      "crop": "grapefruit",
+      "path": "/ph/note_seasoned",
+      "before": "Correct with chelated micronutrients and a citrus fertilizer that includes them, and acidify the soil gradually with elemental sulfur for a durable fix.",
+      "after": "Correct with chelated micronutrients and a citrus fertilizer that includes them.",
+      "added_words": []
+    },
+    {
+      "group": "rewrite/sulfur",
+      "crop": "grapefruit",
+      "path": "/ph/note_beginner",
+      "before": "If that happens, use a citrus fertilizer that includes iron and zinc, and over time you can add sulfur to make the soil a little more acidic.",
+      "after": "If that happens, use a citrus fertilizer that includes iron and zinc.",
+      "added_words": []
+    },
+    {
+      "group": "rewrite/sulfur",
+      "crop": "mandarin-clementine",
+      "path": "/soil/preferred_description_seasoned",
+      "before": "so use a micronutrient-inclusive citrus fertilizer and acidify slowly with elemental sulfur.",
+      "after": "so use a micronutrient-inclusive citrus fertilizer.",
+      "added_words": []
+    },
+    {
+      "group": "rewrite/sulfur",
+      "crop": "mandarin-clementine",
+      "path": "/ph/note_seasoned",
+      "before": "Correct with chelated micronutrients and a citrus fertilizer that supplies them, and acidify gradually with elemental sulfur for a durable fix.",
+      "after": "Correct with chelated micronutrients and a citrus fertilizer that supplies them.",
+      "added_words": []
+    },
+    {
+      "group": "rewrite/sulfur",
+      "crop": "mandarin-clementine",
+      "path": "/ph/note_beginner",
+      "before": "If that happens, use a citrus fertilizer that includes iron and zinc, and over time add sulfur to make the soil a little more acidic.",
+      "after": "If that happens, use a citrus fertilizer that includes iron and zinc.",
+      "added_words": []
+    },
+    {
+      "group": "rewrite/juice",
+      "crop": "orange-navel",
+      "path": "/storage/freezer_seasoned",
+      "before": "Whole navels do not freeze well, but the juice freezes excellently.",
+      "after": "Whole navels do not freeze well.",
+      "added_words": []
+    },
+    {
+      "group": "rewrite/juice",
+      "crop": "orange-navel",
+      "path": "/storage/freezer_seasoned",
+      "before": "Squeeze and freeze juice in airtight containers for up to about six months; segments can also be frozen in syrup.",
+      "after": "Segments can be frozen in syrup.",
+      "added_words": []
+    },
+    {
+      "group": "rewrite/juice",
+      "crop": "orange-navel",
+      "path": "/storage/freezer_beginner",
+      "before": "Whole oranges do not freeze well, but the juice does.",
+      "after": "Whole oranges do not freeze well.",
+      "added_words": []
+    },
+    {
+      "group": "delete/juice",
+      "crop": "orange-navel",
+      "path": "/storage/freezer_beginner",
+      "before": "Squeeze the juice and freeze it in a sealed container for up to about six months.",
+      "after": "",
+      "added_words": []
+    },
+    {
+      "group": "rewrite/pot",
+      "crop": "orange-navel",
+      "path": "/container_notes/notes_seasoned",
+      "before": "Citrus are among the best fruit trees for containers, and a navel on Flying Dragon (a naturally dwarfing trifoliate rootstock) is well suited to a large pot.",
+      "after": "A navel on Flying Dragon (a naturally dwarfing trifoliate rootstock) is well suited to a large pot.",
+      "added_words": []
+    },
+    {
+      "group": "rewrite/pot-beginner",
+      "crop": "orange-navel",
+      "path": "/container_notes/notes_beginner",
+      "before": "Oranges are one of the best fruit trees to grow in a pot, especially a dwarf type on Flying Dragon rootstock.",
+      "after": "A dwarf orange on Flying Dragon rootstock does well in a big pot.",
+      "added_words": [
+        "orange",
+        "does",
+        "well",
+        "big"
+      ]
+    },
+    {
+      "group": "delete/lime-note",
+      "crop": "lime",
+      "path": "/recommended_rootstock_note",
+      "before": "Where it is, sour orange is a broad default with good fruit quality and foot-rot resistance.",
+      "after": "",
+      "added_words": []
+    },
+    {
+      "group": "rewrite/yield",
+      "crop": "orange-navel",
+      "path": "/yield_expectations/per_plant_seasoned",
+      "before": "A mature standard navel commonly yields on the order of one hundred to two hundred or more pounds of fruit per year under good conditions, with the figure varying widely by variety, climate, tree size, and rootstock.",
+      "after": "A mature navel's yield varies widely by variety, climate, tree size, and rootstock.",
+      "added_words": [
+        "navel's",
+        "yield",
+        "varies"
+      ]
+    },
+    {
+      "group": "rewrite/yield",
+      "crop": "orange-navel",
+      "path": "/yield_expectations/per_plant_beginner",
+      "before": "A full-grown orange tree can produce a lot of fruit, often a hundred pounds or more a year in good conditions, though it depends on the variety, climate, and tree size.",
+      "after": "How much fruit a full-grown orange tree produces depends on the variety, climate, and tree size.",
+      "added_words": [
+        "how",
+        "much",
+        "produces"
+      ]
+    },
+    {
+      "group": "rewrite/lemon",
+      "crop": "lemon",
+      "path": "/rootstock_options/0/traits_seasoned",
+      "before": "On lemon, susceptibility to severe tristeza strains does not depend on the rootstock, so it is not a reason to choose against this one.",
+      "after": "On lemon, susceptibility to severe tristeza strains does not depend on the rootstock.",
+      "added_words": []
+    },
+    {
+      "group": "rewrite/fd-wrong-crop",
+      "crop": "grapefruit",
+      "path": "/rootstock_options/2/traits_beginner",
+      "before": "Flying Dragon is a special dwarfing rootstock that keeps the tree small, which makes it perfect for pots and small yards, and it is the key to growing oranges in cold climates since you can move the pot under cover for winter.",
+      "after": "Flying Dragon is a special dwarfing rootstock that keeps the tree small, which makes it perfect for pots and small yards.",
+      "added_words": []
+    },
+    {
+      "group": "delete/lime-row1-comparison",
+      "crop": "lime",
+      "path": "/rootstock_options/1/traits_seasoned",
+      "before": "Trade-offs are somewhat lower fruit quality and greater susceptibility to some diseases than sour orange.",
+      "after": "",
+      "added_words": []
+    },
+    {
+      "group": "rewrite/lime-note-tristeza",
+      "crop": "lime",
+      "path": "/recommended_rootstock_note",
+      "before": "Tristeza virus is a lime concern rather than a rootstock one: Key limes",
+      "after": "Key limes",
+      "added_words": []
+    }
+  ],
+  "retractions": [
+    {
+      "group": "retract/shape-B",
+      "crop": "orange-navel",
+      "path": "/rootstock_options/2/container_size_gallons",
+      "before": 25,
+      "after": null
+    },
+    {
+      "group": "retract/shape-B",
+      "crop": "grapefruit",
+      "path": "/rootstock_options/2/container_size_gallons",
+      "before": 25,
+      "after": null
+    }
+  ],
+  "lime_row_removed": {
+    "crop": "lime",
+    "path": "/rootstock_options/0",
+    "name": "sour orange (Citrus aurantium)"
+  },
+  "lime_recommended_retracted": {
+    "crop": "lime",
+    "path": "/recommended_rootstock",
+    "before": "sour orange (Citrus aurantium), or rough lemon on sandy and calcareous soils",
+    "after": null
+  }
+}
