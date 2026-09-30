@@ -316,7 +316,7 @@ microgreens exactly**, unless a decision row drops a row entry.
   `test_register_coverage_gate.py:89`, `test_display_readiness_gate.py:46`) change with it. Shells keep `[]` (A39 exempts
   them; `test_reset_to_shell.py:68`).
 - The hero guards already drop the tile on a non-pair (astro `hero-spacing.ts`, app `at-a-glance.ts` `isPair`). App
-  `SeedlingDetailSheet.tsx:140`'s truthy guard hides `null` correctly (and stops seeing `[]` on microgreens).
+  `SeedlingDetailSheet.tsx:140`'s guard was fixed under PLA-633 (plant-app `7e02f379`).
 - `numeric_sanity` skips a null. Its annual ceiling of 72 on `spacing_inches` no longer needs raising for hills,
   because the 96-inch watermelon hill lands in `hill_spacing_inches` (§10.1).
 
@@ -511,7 +511,7 @@ Recorded for the reviewer, not acted on.
 | name | meaning | state |
 | -- | -- | -- |
 | **`footprint_inches`** (PLA-429) | width of the plant's own body at the ground: trunk, crown, rootball. The physical floor, strictly below `spacing_inches[0]` (A59 already enforces). | **null on all 121, stays null** (not a published datum; LOW). The app's `PLANT_FOOTPRINT_FLOOR_INCHES = 6` (`solve-fit.ts:101`, capped by the guide minimum at `:169-170`) stands. |
-| **ground area** (PLA-534) | area a plant consumes on the ground, what vertical growing reduces | **derived, not a field**: `in_row_inches x row_spacing_inches` of the chosen entry; on `hill`, `hill_spacing_inches x row_spacing_inches` per hill, divided by `plants_per_hill` for per-plant. PLA-534's "much less ground" delta is expressed between two entries of one crop. |
+| **ground area** (PLA-534) | area a plant consumes on the ground, what vertical growing reduces | **derived, not a field**: `in_row_inches x row_spacing_inches` of the chosen entry; on `hill`, `hill_spacing_inches` squared per hill (a hill occupies a square cell, the same cell PLA-636's placement uses), divided by `plants_per_hill` for per-plant. A hill layout whose page gives a distinct between-row figure is authored as a `row` entry, not a `hill`, so a hill's area never multiplies by a row spacing. PLA-534's "much less ground" delta is expressed between two entries of one crop. |
 | `mature_spread_ft` | canopy spread | a field (§4), not a footprint |
 
 The app's `areaPerPlantSqft = (s/12)^2` (`fit.ts:5-8`, both consumers) uses in-row on both axes today. Once
@@ -604,10 +604,13 @@ mirrors or is re-authored in the same promote. The six blend crops' restatements
 ## 10. Promote plan
 
 Sequence (from the rulings, updated with measured state):
-1. **D9 pulled-forward items, still OWED**, measured today:
-   - app `planner-tools.ts:998-1000` still compares a row spacing to `spacing_inches[0]`;
-   - `herb/prompt.ts:200-209` still says row spacing is not in the dataset;
-   - `SeedlingDetailSheet.tsx:140` still has a truthy-only guard;
+1. **D9 pulled-forward items**, measured today:
+   - **DONE:** the app `set_spacing` warning that compared a row spacing to `spacing_inches[0]`
+     (`planner-tools.ts:998-1000`), and the `SeedlingDetailSheet.tsx:140` empty-array guard. Both landed under PLA-633
+     (plant-app `7e02f379`, OTA `106562e7`).
+   - **OWED to the running consumer repoint:** both planners' `rowWidthFt` (app `planner/fit.ts:182-207`, astro
+     `planner/fit.ts:171-178`) reading `row_spacing_inches`; the `herb/prompt.ts:200-209` "row spacing is not in the
+     dataset" paragraph;
    - the PLA-465 allowlist line is on `feat/community-foundation` as cherry-pick `1cbf0c61`, not on the app's `main`.
 2. This spec, then the rulings.
 3. PLA-532.
@@ -739,13 +742,13 @@ Line numbers are as measured today on astro `277529c` and app `71e327ba`.
 | **Planner row width, app** `planner/fit.ts:182-207` `rowWidthFt` | row's own `rowSpacingInches` (user decision, wins, `:193`) -> legacy per-planting (`:198`) -> **crop `row_spacing_inches`** (hi for roomy/Beginner, lo for tight/Seasoned, mirroring spacing) -> today's `planningSpacingInches` max | `row_spacing_reason == "see_layout"` (the default is a hill with no row figure; another entry carries one): **do not read the default entry's row figure, it has none.** Read the row figure from the entry that carries it, and surface that layout as an option the grower can pick. Never use its row figure silently inside the hill layout, and never substitute `hill_spacing_inches` for it. `"not_authored"` (a `row` or `block` default with a null row spacing): fall back as before, via the lookup cache (`row-spacing.ts:119`) then plant spacing, with the "No verified row spacing" caption (PLA-426's read-through; the lookup demotes to fallback, it does not retire). `"not_applicable"`: not placeable in rows (microgreens are already excluded by `catalog.ts:105`). |
 | **Planner row width, astro** `planner/fit.ts:171-178` | **crop `row_spacing_inches`** -> today's max of `planningSpacingInches` | same as app, minus the user decision and the lookup cache: `see_layout` surfaces the entry that carries the row figure; `not_authored` falls back to plant spacing as before |
 | **Area per plant**, both `fit.ts:5-8` | `(in_row/12) * (row/12)` when `row_spacing_inches` is present | `(s/12)^2`, as today |
-| **Herb `set_spacing`** `planner-tools.ts:998-1000` | compare a row value against `row_spacing_inches[0]`, a plant value against `spacing_inches[0]` | no row minimum known: no below-minimum warning on rows |
+| **Herb `set_spacing`** `planner-tools.ts:998-1000` (the row-vs-plant-minimum warning fixed under PLA-633, plant-app `7e02f379`) | compare a row value against `row_spacing_inches[0]`, a plant value against `spacing_inches[0]` | no row minimum known: no below-minimum warning on rows |
 | **Herb `plan_rows`** `planner-tools.ts:824-844` | given -> **dataset `row_spacing_inches`** -> cache -> placeholder -> refuse | as today |
 | **Herb prompt** `herb/prompt.ts:200-209` | the "ROW SPACING IS NOT IN THE CERTIFIED DATASET YET" paragraph retires for crops where `row_spacing_inches` is present, and for `see_layout` crops (the row figure is in the dataset, on another layout) | kept, scoped to `not_authored` crops |
 | **Herb spacing intent** `herb/slice.ts:12-20` FACT_KEYS; `canned.ts:27,31` | add `row_spacing_inches`, `row_spacing_reason`, and the `planting_layout` entries; "Space X apart in rows Y apart" | `see_layout`: answer from the layout being discussed, naming it ("in hills, 8 ft apart; planted in rows, rows are 6 to 8 ft apart"); `not_authored`: "Space X apart" (in-row only, as today) |
 | **Herb pot-size intent** | **does not exist today** (no canned intent; `container_notes` is not in FACT_KEYS). When built: `plants_per_pot.readings` (sourced) -> `min_pot_gallons` / `recommended_pot_gallons` -> the §8 area fallback, labelled modeled | never `spacing_inches` alone |
 | **Hero spacing tile, astro** `HeroCard.astro:200` via `hero-spacing.ts` (2-finite guard, 77b51d2) | **R2:** when the default entry is a `hill`, read the **default entry**: `hill_spacing_inches` "between hills" + `plants_per_hill` "plants per hill". Otherwise `spacing_inches`, "between plants" / "between trees". `spacing_inches` is never relabelled: it always means between individual plants. | `spacing_inches: null` occurs only when no entry carries a between-plants figure (the 8 microgreens after promote 1): tile dropped; a malformed value drops the tile (already) |
-| **Hero spacing tile, app** `at-a-glance.ts:145-158` (`isPair`), `SeedlingDetailSheet.tsx:140` (**truthy guard, still owed**: it hides `null` but renders `[]` as "undefined") | same as astro | same |
+| **Hero spacing tile, app** `at-a-glance.ts:145-158` (`isPair`), `SeedlingDetailSheet.tsx:140` (empty-array guard **fixed**, PLA-633, plant-app `7e02f379`) | same as astro | same |
 | **Planner catalogs** astro `catalog.ts:126`, app `catalog.ts:105` | admit a crop with a `spacing_inches` pair and **place it in rows only** (ruled 2026-09-30); a hill-default crop places in rows from its `spacing_inches` fallback. Hill layouts are **display-only** (the hero tile), not placed. `null` with `planting_layout: []` stays excluded (microgreens). **Hill placement, when built, is `hill_spacing_inches` on both axes with `plants_per_hill` per cell, not hill x row: PLA-636** (future planner work, not this arc) | today both drop a crop without a non-empty array: correct for the microgreens; a hill-default crop is never dropped because its row entry feeds `spacing_inches` (§2.4) |
 | **Hero height**, astro `container-card.ts:168-169` (`sizeRange`, needs 0 < lo <= hi); app: no top-level height reader yet | `mature_height_ft` / `mature_spread_ft`; below about 3 ft render inches (D3 consumer rule) | tile hidden on null |
 | **Picker (PLA-629)** | spacing: `picked_rootstock.spacing_inches ?? spacing_inches`; height: `picked_rootstock.mature_height_ft ?? mature_height_ft`; layout: `picked_entry.in_row_inches` / `.row_spacing_inches` / `.mature_height_ft ?? mature_height_ft`; habit: `varieties[].plant_habit` (after PLA-12) | default entry / crop-level silently (D2) |
