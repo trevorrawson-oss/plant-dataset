@@ -1,0 +1,39 @@
+{
+  "slug": "potato",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): umn_ext https://extension.umn.edu/vegetables/growing-potatoes states \"Plant tuber pieces cut side down, 10 to 12 inches apart and about three to five inches deep, in rows 30 to 36 inches apart.\" -> in_row_inches [10,12]; AGREES (lane A, mechanical; worklist 56 §4): umn_ext https://extension.umn.edu/vegetables/growing-potatoes states \"in rows 30 to 36 inches apart\" -> row_spacing_inches [30,36]. Today's spacing_inches [10,12] is unchanged; quotes checked as substrings of the hashed bytes. Override(s) applied: in_row_quote = 'Plant tuber pieces cut side down, 10 to 12 inches apart and about three to five inches deep, in rows 30 to 36 inches apart.'. Live page wording changed since the doc cache ('seed pieces' -> 'tuber pieces'); figures unchanged.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        10,
+        12
+      ],
+      "row_spacing_inches": [
+        30,
+        36
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "umn_ext"
+      ],
+      "anchoring_urls": {
+        "umn_ext": {
+          "url": "https://extension.umn.edu/vegetables/growing-potatoes",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "retired_anchor": {
+    "umn_ext": "moved",
+    "umaine_ext": {
+      "dropped": "UMaine 2077e states 'Seed spacing ranges from eight to 12 inches within the row and 30 to 36 inches between rows', not the entry's UMN [10,12]; a second anchor for a different in-row figure would support nothing in the entry"
+    },
+    "clemson_hgic": {
+      "dropped": "Clemson potato states 'Space the seed pieces 8 to 10 inches apart', not the entry's UMN [10,12]"
+    }
+  }
+}

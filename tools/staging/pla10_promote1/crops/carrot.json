@@ -1,0 +1,42 @@
+{
+  "slug": "carrot",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): umn_ext https://extension.umn.edu/vegetables/growing-carrots-and-parsnips states \"thin by pulling up extra seedlings so that the remaining plants are about two to four inches apart.\" -> in_row_inches [2,4]; AGREES (lane A, mechanical; worklist 56 §4): clemson_hgic https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/ states \"Plant carrots in rows 12 to 18 inches apart\" -> row_spacing_inches [12,18]. Today's spacing_inches [2,4] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        2,
+        4
+      ],
+      "row_spacing_inches": [
+        12,
+        18
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "umn_ext",
+        "clemson_hgic"
+      ],
+      "anchoring_urls": {
+        "umn_ext": {
+          "url": "https://extension.umn.edu/vegetables/growing-carrots-and-parsnips",
+          "verified": "2026-10-01"
+        },
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "retired_anchor": {
+    "umn_ext": "moved",
+    "clemson_hgic": "moved",
+    "umd_ext": {
+      "dropped": "UMD growing-carrots-home-garden states 'plant in wide rows and thin to 1 to 2 inches apart' and 'Thin to 1 - 4 inches apart', neither the entry's [2,4] (UMN) nor its row figure (Clemson); the anchor supported a value no longer authored from that page"
+    }
+  }
+}

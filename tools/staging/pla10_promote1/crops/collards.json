@@ -1,0 +1,99 @@
+{
+  "slug": "collards",
+  "decision": "PARTIAL -> W1: author the page's figure. umd_ext growing-leafy-greens states \"Kale, collard, and mustard: 12\"- 24\" in-row x 30\"- 36\" between rows for large plants.\" -> in_row [12,24], row [30,36]. Today's [18,24] is on no cited page for collards (NCSU 15-18 full-grown; UMN 8 in; ISU 15-18 for kale/collards/endive); VCE 426-331 'Collards, kale 12-24 in 18-36 in' agrees with UMD on 12-24. Prose restating 18-24 is re-authored to 12-24.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        12,
+        24
+      ],
+      "row_spacing_inches": [
+        30,
+        36
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "umd_ext"
+      ],
+      "anchoring_urls": {
+        "umd_ext": {
+          "url": "https://extension.umd.edu/resource/growing-leafy-greens-home-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "new": "Harden off over 7 to 10 days before setting out; thin or set plants 12 to 24 inches apart and protect seedlings from flea beetles with row cover.",
+      "reason": "restates the moved in-row figure (UMD: 12-24 in)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "new": "You can sow collard seeds right in the garden or start them indoors. For spring, start seeds about a month before planting out, and set plants in the garden a few weeks before your last frost, or just sow seeds once the soil can be worked. For a fall crop, sow in mid to late summer so it is ready before winter. Space full-size plants 12 to 24 inches apart. If you grow your own transplants, let them get used to the outdoors over a week before planting.",
+      "reason": "restates the moved in-row figure (UMD: 12-24 in)"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "new": "Collards can be direct sown or transplanted, and in the South direct sowing is the norm. For a spring crop, start seeds indoors about 4 to 5 weeks before set-out and transplant around 3 to 4 weeks before the last frost, or direct sow as soon as the soil is workable; collards tolerate frost. For a fall and winter crop, sow in mid to late summer so plants size up before cold, then harvest through fall and, in mild zones, winter. Harden transplants off over 7 to 10 days. Thin or set plants 12 to 24 inches apart for full-size plants.",
+      "reason": "restates the moved in-row figure (UMD: 12-24 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "new": "Space plants about 12 to 24 inches apart for big plants, or closer together if you plan to cut them while young.",
+      "reason": "restates the moved in-row figure (UMD: 12-24 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "new": "Thin or transplant to about 12 to 24 inches apart for full-size plants, or closer (10 to 15 inches) if you will cut them young; harden transplants off over 7 to 10 days.",
+      "reason": "restates the moved in-row figure (UMD: 12-24 in)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "fertilizer.amount_seasoned",
+      "verdict": "agrees",
+      "note": "a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+    },
+    {
+      "path": "pests[1].control_ladder[3].note_seasoned",
+      "verdict": "agrees",
+      "note": "an insect's egg rows, not a spacing"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "verdict": "edited",
+      "note": "18-24 -> 12-24"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "verdict": "edited",
+      "note": "18-24 -> 12-24"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "edited",
+      "note": "18-24 -> 12-24"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "verdict": "edited",
+      "note": "18-24 -> 12-24"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "verdict": "edited",
+      "note": "18-24 -> 12-24"
+    },
+    {
+      "path": "yield_expectations.per_plant_seasoned",
+      "verdict": "agrees",
+      "note": "a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+    }
+  ]
+}

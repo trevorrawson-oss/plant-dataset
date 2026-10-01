@@ -1,0 +1,30 @@
+{
+  "slug": "brussels-sprouts",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): iastate_ext https://yardandgarden.extension.iastate.edu/how-to/growing-brussels-sprouts-home-garden states \"When planting cole crops in the garden, space plants 18 to 24 inches apart within the row.\" -> in_row_inches [18,24]; AGREES (lane A, mechanical; worklist 56 §4): iastate_ext https://yardandgarden.extension.iastate.edu/how-to/growing-brussels-sprouts-home-garden states \"Rows should be approximately 24 to 30 inches apart.\" -> row_spacing_inches [24,30]. Today's spacing_inches [18,24] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        18,
+        24
+      ],
+      "row_spacing_inches": [
+        24,
+        30
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "iastate_ext"
+      ],
+      "anchoring_urls": {
+        "iastate_ext": {
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-brussels-sprouts-home-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

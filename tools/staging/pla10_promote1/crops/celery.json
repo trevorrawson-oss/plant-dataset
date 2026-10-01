@@ -1,0 +1,90 @@
+{
+  "slug": "celery",
+  "decision": "DIFFERS -> W1: author the page's figure. uf_ifas_vh021 Table 1 row (columns: planting dates N/C/S, yield per 10 ft, plants per 10 ft, days to harvest, Spacing Plants, Spacing Rows, seed depth) \"Celery Jan–Mar Sept–Mar Oct–Mar 15 10–20 75–90 6–12 18 On surface\" -> in_row [6,12]; Spacing Rows 18, a stated MINIMUM (footnote 4: 'Minimum distance between rows (when planting in rows)') in a planting-guide table -> row [18,18] with 'minimum' recorded (W2). Today's [6,10] is on no cited page (WSU EM051E Table 4 gives 8 in / rows 24-36 on a PDF; USU 12 in / rows 2 ft). The anchor keyed uf_ifas_vh021 at ask.ifas.ufl.edu/publication/VH021 moves into the entry (the edis url 301s to it; same bytes); the msu_ext anchor is dropped. Prose restating 6-10 is re-authored to 6-12.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        6,
+        12
+      ],
+      "row_spacing_inches": [
+        18,
+        18
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "uf_ifas_vh021"
+      ],
+      "anchoring_urls": {
+        "uf_ifas_vh021": {
+          "url": "https://ask.ifas.ufl.edu/publication/VH021",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "retired_anchor": {
+    "msu_ext": {
+      "dropped": "MSU how_to_grow_celery states no planting distance in its cached text; it supported nothing the entry carries"
+    },
+    "uf_ifas_vh021": "moved"
+  },
+  "edits": [
+    {
+      "path": "notifications[1].body_beginner",
+      "new": "Plant celery outside only after hard frosts are over, because cold young plants often bolt later. Space them 6 to 12 inches apart in rich, damp soil, and harden them off first by watering a little less.",
+      "reason": "restates the moved in-row figure (VH021: 6-12 in)"
+    },
+    {
+      "path": "notifications[1].body_seasoned",
+      "new": "Set celery out only after the danger of hard frost and prolonged cold has passed, since chilled young plants bolt. Space 6 to 12 inches apart in rich, moist soil, and harden off first by easing water, not by chilling.",
+      "reason": "restates the moved in-row figure (VH021: 6-12 in)"
+    },
+    {
+      "path": "thinning.tip_beginner",
+      "new": "You do not thin celery, because you plant it as young transplants spaced where they will grow, 6 to 12 inches apart, instead of sowing a crowded row. Planting on the closer side gives more but slimmer stalks; a bit farther apart gives stockier plants. You set the spacing when you plant, so there is nothing to pull out later.",
+      "reason": "restates the moved in-row figure (VH021: 6-12 in)"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "new": "Celery is not thinned, because it is grown from transplants set directly at their final spacing of 6 to 12 inches rather than from a thickly sown row. Closer spacing (toward 6 inches, especially for self-blanching types planted in blocks) gives higher yield but more slender stalks, while wider spacing gives stockier plants; choose your spacing at transplanting rather than thinning later.",
+      "reason": "restates the moved in-row figure (VH021: 6-12 in)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "fertilizer.amount_seasoned",
+      "verdict": "agrees",
+      "note": "a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+    },
+    {
+      "path": "fertilizer.notes_seasoned",
+      "verdict": "agrees",
+      "note": "a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+    },
+    {
+      "path": "notifications[1].body_beginner",
+      "verdict": "edited",
+      "note": "6-10 -> 6-12"
+    },
+    {
+      "path": "notifications[1].body_seasoned",
+      "verdict": "edited",
+      "note": "6-10 -> 6-12"
+    },
+    {
+      "path": "thinning.tip_beginner",
+      "verdict": "edited",
+      "note": "6-10 -> 6-12"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "verdict": "edited",
+      "note": "6-10 -> 6-12"
+    }
+  ]
+}

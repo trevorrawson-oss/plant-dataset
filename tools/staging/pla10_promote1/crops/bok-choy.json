@@ -1,0 +1,69 @@
+{
+  "slug": "bok-choy",
+  "decision": "PARTIAL -> W1: author the page's figure. ncsu_ext (Brassica rapa Chinensis Group, the species-scoped page) states \"Bury seeds 1/4 to 1/2 in deep and space or thin plants to 6 in apart.\" -> in_row [6,6]; no row figure (not_authored). Today's [6,12] joins this 6 with UMN's joint Chinese-cabbage-and-bok-choy page ('thin to one plant every 12 to 18 inches', full-size heads), a two-page blend (W6) and the UMN figure never reaches 12 as a low. The species page wins on scope; UMN [12,18] is the alternative for a full-size-head regime. bok-choy leaves the R5 hunt list (W5): a cited page states a figure. Prose that gives 6 in for baby plants and 12-18 for full-size heads states the entry's figure and a second page-backed regime: agrees.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        6,
+        6
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "ncsu_ext"
+      ],
+      "anchoring_urls": {
+        "ncsu_ext": {
+          "url": "https://plants.ces.ncsu.edu/plants/brassica-rapa-chinensis-group/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "restatements": [
+    {
+      "path": "container_notes.notes_beginner",
+      "verdict": "agrees",
+      "note": "container guidance, no in-ground figure"
+    },
+    {
+      "path": "fertilizer.amount_seasoned",
+      "verdict": "agrees",
+      "note": "a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "verdict": "agrees",
+      "note": "6 in for baby plants is the entry's NCSU figure; a foot for full-size is UMN's regime"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "agrees",
+      "note": "6 in (NCSU) is the entry's figure; 12 to 18 for full-size heads is UMN's regime, both cited in the sentence"
+    },
+    {
+      "path": "tips_by_stage.established[0].text_beginner",
+      "verdict": "agrees",
+      "note": "6 in for baby bok choy is the entry's figure; a foot for full-size is UMN's regime"
+    },
+    {
+      "path": "tips_by_stage.established[0].text_seasoned",
+      "verdict": "agrees",
+      "note": "6 in is the entry's figure; 12 to 18 for full-size heads is UMN's regime"
+    },
+    {
+      "path": "yield_expectations.factors_seasoned[3]",
+      "verdict": "agrees",
+      "note": "6 in (entry) and 12 to 18 (UMN full-size regime)"
+    },
+    {
+      "path": "yield_expectations.per_plant_seasoned",
+      "verdict": "agrees",
+      "note": "'at about 6 inches' is the entry's figure"
+    }
+  ]
+}

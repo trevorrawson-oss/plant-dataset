@@ -1,0 +1,30 @@
+{
+  "slug": "green-beans-bush",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): clemson_hgic https://hgic.clemson.edu/factsheet/bush-pole-type-snap-beans/ states \"Plant bush-type beans in rows spaced 2 to 3 feet apart with the seed spaced 2 to 4 inches apart in the row.\" -> in_row_inches [2,4]; AGREES (lane A, mechanical; worklist 56 §4): clemson_hgic https://hgic.clemson.edu/factsheet/bush-pole-type-snap-beans/ states \"Plant bush-type beans in rows spaced 2 to 3 feet apart\" -> row_spacing_inches [24,36]. Today's spacing_inches [2,4] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        2,
+        4
+      ],
+      "row_spacing_inches": [
+        24,
+        36
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "clemson_hgic"
+      ],
+      "anchoring_urls": {
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/bush-pole-type-snap-beans/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

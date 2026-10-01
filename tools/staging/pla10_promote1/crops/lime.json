@@ -1,0 +1,33 @@
+{
+  "slug": "lime",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): uf_ifas_edis https://ask.ifas.ufl.edu/publication/CH092 states \"Key lime trees in the home landscape should be planted in full-sun, 12 to 20 feet or more (4.1 to 6.1 m) away from buildings and other trees.\" -> in_row_inches [144,240]; no between-rows figure on the cited page: row_spacing_inches not_authored. Today's spacing_inches [144,240] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        144,
+        240
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "uf_ifas_edis"
+      ],
+      "anchoring_urls": {
+        "uf_ifas_edis": {
+          "url": "https://ask.ifas.ufl.edu/publication/CH092",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "retired_anchor": {
+    "uf_ifas_edis": "moved",
+    "ufifas_ext": {
+      "dropped": "CH093 (the sibling UF citrus page) carries no planting-distance sentence in its cached text; the entry's [144,240] is CH092's 'Key lime trees ... 12 to 20 feet or more'"
+    }
+  }
+}

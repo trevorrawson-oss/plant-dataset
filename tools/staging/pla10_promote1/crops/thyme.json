@@ -1,0 +1,27 @@
+{
+  "slug": "thyme",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): umd_ext https://extension.umd.edu/resource/thyme states \"Thin plants 8-12” apart.\" -> in_row_inches [8,12]; no between-rows figure on the cited page: row_spacing_inches not_authored. Today's spacing_inches [8,12] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        8,
+        12
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "umd_ext"
+      ],
+      "anchoring_urls": {
+        "umd_ext": {
+          "url": "https://extension.umd.edu/resource/thyme",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

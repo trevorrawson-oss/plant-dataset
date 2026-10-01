@@ -1,0 +1,30 @@
+{
+  "slug": "cabbage",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): nmsu_ext https://pubs.nmsu.edu/_circulars/CR457B/ states \"Cabbage 67 1/2 12—24 24—36\" -> in_row_inches [12,24]; AGREES (lane A, mechanical; worklist 56 §4): nmsu_ext https://pubs.nmsu.edu/_circulars/CR457B/ states \"Cabbage 67 1/2 12—24 24—36\" -> row_spacing_inches [24,36]. Today's spacing_inches [12,24] is unchanged; quotes checked as substrings of the hashed bytes. Override(s) applied: in_row_quote = 'Cabbage 67 1/2 12—24 24—36'; row_quote = 'Cabbage 67 1/2 12—24 24—36'. NMSU CR457B Table 2 row quoted as the row string (columns: Days to maturity, Depth, Distance Between Plants in Rows (in.), Distance Between Rows (in.)).",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        12,
+        24
+      ],
+      "row_spacing_inches": [
+        24,
+        36
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "nmsu_ext"
+      ],
+      "anchoring_urls": {
+        "nmsu_ext": {
+          "url": "https://pubs.nmsu.edu/_circulars/CR457B/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

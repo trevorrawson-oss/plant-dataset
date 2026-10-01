@@ -1,0 +1,24 @@
+{
+  "slug": "mulberry",
+  "decision": "PARTIAL -> W2 + W3. ncsu_ext_handbook_tree_fruit Table 15-5 (Fruit Crop | Minimum Spacing Between Trees (feet)) row \"Red Mulberry 20–30\" -> in_row [240,360]: a stated MINIMUM that is itself a range, authored as the range with 'minimum' recorded (W2). Scope (W3): the row names Red Mulberry (Morus rubra); the crop covers alba and rubra (rootstock row 'Morus seedling (alba or rubra)'), so the page names the crop's group with a shared genus; accepted with the scope recorded. No row figure (not_authored). Today's [300,360] has no page for 300; the NCSU toolbox 'Available Space To Plant' fields are footprints (W5). mulberry leaves the R5 hunt list: a cited page states a figure. No restatements (0 scanner hits).",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            240,
+            360
+          ],
+          "sid": "ncsu_ext_handbook_tree_fruit",
+          "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+          "quote": "Red Mulberry 20–30"
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ]
+}

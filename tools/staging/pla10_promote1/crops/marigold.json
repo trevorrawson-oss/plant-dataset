@@ -1,0 +1,27 @@
+{
+  "slug": "marigold",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): clemson_hgic https://hgic.clemson.edu/factsheet/how-to-grow-and-care-for-marigolds-in-south-carolina/ states \"French Marigold Spacing – 8 to 10 inches apart. African Marigold Spacing – 12 to 16 inches apart.\" -> in_row_inches [8,16]; no between-rows figure on the cited page: row_spacing_inches not_authored. Today's spacing_inches [8,16] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        8,
+        16
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "clemson_hgic"
+      ],
+      "anchoring_urls": {
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/how-to-grow-and-care-for-marigolds-in-south-carolina/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "cherry-sour",
+  "decision": "NO_PAGE -> lane C hunt FOUND (HUNTS.md), so NOT an R5 waiver case. unh_ext home-orchard fact sheet states \"Plant plum, apricot, and cherry trees 15 to 20 feet apart in the home orchard.\" and names sour cherries ('Sour or pie cherries that have performed well in NH include Montmorency, North Star, and Meteor') -> in_row [180,240] (W3 group sentence); no row figure (not_authored). The UIUC home-garden table gives Montmorency 14-20 ft in-row ('14 x 22 to 20 x 26') and UMN stone fruits 'Space trees 12 to 20 feet apart' as corroboration; the UNH prose sentence is taken for both cherries. Today's hi 300 is on no page; ISU's 'spacing equals mature height' is a rule, not a figure. No restatements (0 scanner hits).",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            180,
+            240
+          ],
+          "sid": "unh_ext",
+          "url": "https://extension.unh.edu/resource/growing-fruits-growing-plums-cherries-and-apricots-nh-home-orchards-fact-sheet",
+          "quote": "Plant plum, apricot, and cherry trees 15 to 20 feet apart in the home orchard."
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ]
+}

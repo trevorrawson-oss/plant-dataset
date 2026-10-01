@@ -1,0 +1,30 @@
+{
+  "slug": "beefsteak-tomato",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): iastate_ext https://yardandgarden.extension.iastate.edu/how-to/growing-tomatoes-home-garden states \"Tomatoes allowed to sprawl over the ground should be spaced 3-4 feet apart.\" -> in_row_inches [36,48]; AGREES (lane A, mechanical; worklist 56 §4): iastate_ext https://yardandgarden.extension.iastate.edu/how-to/growing-tomatoes-home-garden states \"Rows should be spaced 4-5 feet apart.\" -> row_spacing_inches [48,60]. Today's spacing_inches [36,48] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        36,
+        48
+      ],
+      "row_spacing_inches": [
+        48,
+        60
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "iastate_ext"
+      ],
+      "anchoring_urls": {
+        "iastate_ext": {
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-tomatoes-home-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

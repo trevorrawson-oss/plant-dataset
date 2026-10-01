@@ -1,0 +1,35 @@
+{
+  "slug": "cucumber",
+  "decision": "PARTIAL -> W1: author the page's figure. vce_426_331 Table 5 row (Distance between plants in row | Distance between rows) \"Cucumbers 12-18 in 48-72 in\" -> in_row [12,18], row [48,72]. Today's [12,24] is a VCE/UMD lo + OSU slicing hi blend that no cited page states; WSU Table 4 'Cucumber 12-18 36-48' agrees on 12-18. A hill entry is NOT authored: UMN's hills ('three or four seeds ... five to six feet between hills') give seeds, not plants after thinning, so plants_per_hill cannot be stated (spec §5.1). The one scanner hit is a sow-per-station sentence with no figure: agrees.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            12,
+            18
+          ],
+          "sid": "vce_426_331",
+          "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+          "quote": "Cucumbers 12-18 in 48-72 in"
+        },
+        "row_spacing_inches": {
+          "value": [
+            48,
+            72
+          ],
+          "sid": "vce_426_331",
+          "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+          "quote": "Cucumbers 12-18 in 48-72 in"
+        }
+      }
+    }
+  ],
+  "restatements": {
+    "start_method.notes_seasoned": "agrees: 'several seeds per hill or station and thin to the strongest' states no distance"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "bee-balm",
+  "decision": "DIFFERS -> W1 (and W3: the page says 'bee balms', Monarda generally, which names the crop's group; the crop is bee balm). iastate_ext powdery-mildew FAQ states \"When planting bee balms, select a site that receives at least 6 hours of direct sun each day and space plants 2 to 2½ feet apart.\" -> in_row [24,30]; no between-rows figure (not_authored). Today's [18,24] overlaps only at 24 and is on no cited page; the NCSU toolbox 'Available Space To Plant: 12 inches-3 feet' is a footprint and does not count (W5). bee-balm leaves the R5 hunt list: a cited page states a figure. The two prose restatements of 18-24 are re-authored.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        24,
+        30
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "iastate_ext"
+      ],
+      "anchoring_urls": {
+        "iastate_ext": {
+          "url": "https://yardandgarden.extension.iastate.edu/faq/leaves-my-bee-balms-are-covered-grayish-white-powder-what-problem",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "tips_by_stage.establishment[1].text_beginner",
+      "new": "Give plants plenty of room, about 24 to 30 inches apart, when you plant. Space is one of the best ways to prevent the mildew bee balm often gets.",
+      "reason": "restates the moved in-row figure (ISU: 2 to 2.5 ft)"
+    },
+    {
+      "path": "tips_by_stage.establishment[1].text_seasoned",
+      "new": "Space plants about 24 to 30 inches apart (2 to 2.5 feet, for airflow) at planting; generous spacing is a primary defense against the powdery mildew bee balm is prone to.",
+      "reason": "restates the moved in-row figure (ISU: 2 to 2.5 ft)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "tips_by_stage.establishment[1].text_beginner",
+      "verdict": "edited",
+      "note": "18-24 -> 24-30"
+    },
+    {
+      "path": "tips_by_stage.establishment[1].text_seasoned",
+      "verdict": "edited",
+      "note": "18-24 -> 24-30"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "slug": "chamomile",
+  "decision": "PARTIAL -> W1: author the page's figure. msu_bozeman (Montana State WARC herb page; the quoted sentence is the culture recommendation, NOT the trial layout '8.4\" between plants and 18\" between rows', which is excluded) states \"Transplants may be spaced 8\" apart in rows 18\" apart.\" -> in_row [8,8], row [18,18]. Nothing cited states 12 (TX MG and UC MG give plant WIDTH, not spacing; NCSU toolbox is a category). Today's [8,12] -> [8,8]; the seven prose restatements of 8-12 are re-authored to about 8.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            8,
+            8
+          ],
+          "sid": "msu_bozeman",
+          "url": "https://agresearch.montana.edu/warc/research_current/research_past/herbsandoils/chamomile.html",
+          "quote": "Transplants may be spaced 8\" apart in rows 18\" apart."
+        },
+        "row_spacing_inches": {
+          "value": [
+            18,
+            18
+          ],
+          "sid": "msu_bozeman",
+          "url": "https://agresearch.montana.edu/warc/research_current/research_past/herbsandoils/chamomile.html",
+          "quote": "Transplants may be spaced 8\" apart in rows 18\" apart."
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "replace": [
+        "about 8 to 12 inches apart",
+        "about 8 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (MSU: 8 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "replace": [
+        "Thin to 8 to 12 in for airflow",
+        "Thin to about 8 in for airflow"
+      ],
+      "reason": "restates the moved in-row figure (MSU: 8 in)"
+    },
+    {
+      "path": "notifications[1].body_beginner",
+      "replace": [
+        "about 8 to 12 inches apart",
+        "about 8 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (MSU: 8 in)"
+    },
+    {
+      "path": "notifications[1].body_seasoned",
+      "replace": [
+        "Thin chamomile to 8 to 12 in",
+        "Thin chamomile to about 8 in"
+      ],
+      "reason": "restates the moved in-row figure (MSU: 8 in)"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "replace": [
+        "so thin to 8 to 12 in",
+        "so thin to about 8 in"
+      ],
+      "reason": "restates the moved in-row figure (MSU: 8 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "replace": [
+        "about 8 to 12 inches apart",
+        "about 8 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (MSU: 8 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "replace": [
+        "Thin seedlings to 8 to 12 in",
+        "Thin seedlings to about 8 in"
+      ],
+      "reason": "restates the moved in-row figure (MSU: 8 in)"
+    }
+  ],
+  "restatements": {
+    "growth_stages[1].user_action_beginner": "edited: 8-12 -> about 8",
+    "growth_stages[1].user_action_seasoned": "edited: 8-12 -> about 8",
+    "notifications[1].body_beginner": "edited: 8-12 -> about 8",
+    "notifications[1].body_seasoned": "edited: 8-12 -> about 8",
+    "start_method.notes_seasoned": "edited: 8-12 -> about 8",
+    "tips_by_stage.seedling[0].text_beginner": "edited: 8-12 -> about 8",
+    "tips_by_stage.seedling[0].text_seasoned": "edited: 8-12 -> about 8",
+    "regions.rgv.plantings[0].plant_out[0].synthesis_note_seasoned": "agrees: a planting-date note, no spacing"
+  }
+}

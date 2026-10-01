@@ -1,0 +1,132 @@
+{
+  "slug": "shallot",
+  "decision": "DIFFERS -> W1: author the page's figure. usu_ext shallots-in-the-garden (the shallot-specific page) states \"Bulb sets should be planted at 3–6 inches apart in rows 12–18 inches apart.\" -> in_row [3,6], row [12,18]. Today's [6,8] has no page for 8 (UMD's '8 inches apart for large bulbs' is bulb-onion scope; UF Gardening Solutions gives 'about six inches'). Ten prose strings restating 6-8 are re-authored to 3-6; container notes (6 in) and the 6-inch yield note sit inside the range.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            3,
+            6
+          ],
+          "sid": "usu_ext",
+          "url": "https://extension.usu.edu/yardandgarden/research/shallots-in-the-garden",
+          "quote": "Bulb sets should be planted at 3–6 inches apart in rows 12–18 inches apart."
+        },
+        "row_spacing_inches": {
+          "value": [
+            12,
+            18
+          ],
+          "sid": "usu_ext",
+          "url": "https://extension.usu.edu/yardandgarden/research/shallots-in-the-garden",
+          "quote": "Bulb sets should be planted at 3–6 inches apart in rows 12–18 inches apart."
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "notifications[0].body_beginner",
+      "replace": [
+        "spaced 6 to 8 inches apart",
+        "spaced 3 to 6 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "notifications[0].body_seasoned",
+      "replace": [
+        "at final 6 to 8 inch spacing",
+        "at final 3 to 6 inch spacing"
+      ],
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "regions.mid_atlantic.region_notes_beginner",
+      "replace": [
+        "6 to 8 inches apart",
+        "3 to 6 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "regions.mid_atlantic.region_notes_seasoned",
+      "replace": [
+        "6 to 8 inches apart, tip at the surface",
+        "3 to 6 inches apart, tip at the surface"
+      ],
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "regions.mid_south.region_notes_beginner",
+      "replace": [
+        "6 to 8 inches apart",
+        "3 to 6 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "regions.mid_south.region_notes_seasoned",
+      "replace": [
+        "6 to 8 inches apart, tip at the surface",
+        "3 to 6 inches apart, tip at the surface"
+      ],
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "regions.northern_tier.region_notes_beginner",
+      "replace": [
+        "6 to 8 inches apart",
+        "3 to 6 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "regions.northern_tier.region_notes_seasoned",
+      "replace": [
+        "6 to 8 inches apart, tip at the surface",
+        "3 to 6 inches apart, tip at the surface"
+      ],
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "tips_by_stage.germination_emergence[0].text_beginner",
+      "replace": [
+        "spaced 6 to 8 inches apart",
+        "spaced 3 to 6 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "tips_by_stage.germination_emergence[0].text_seasoned",
+      "replace": [
+        "at final 6 to 8 inch spacing",
+        "at final 3 to 6 inch spacing"
+      ],
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    }
+  ],
+  "restatements": {
+    "notifications[0].body_beginner": "edited: 6-8 -> 3-6",
+    "notifications[0].body_seasoned": "edited: 6-8 -> 3-6",
+    "regions.mid_atlantic.region_notes_beginner": "edited: 6-8 -> 3-6",
+    "regions.mid_atlantic.region_notes_seasoned": "edited: 6-8 -> 3-6",
+    "regions.mid_south.region_notes_beginner": "edited: 6-8 -> 3-6",
+    "regions.mid_south.region_notes_seasoned": "edited: 6-8 -> 3-6",
+    "regions.northern_tier.region_notes_beginner": "edited: 6-8 -> 3-6",
+    "regions.northern_tier.region_notes_seasoned": "edited: 6-8 -> 3-6",
+    "tips_by_stage.germination_emergence[0].text_beginner": "edited: 6-8 -> 3-6",
+    "tips_by_stage.germination_emergence[0].text_seasoned": "edited: 6-8 -> 3-6",
+    "container_notes.notes_beginner": "agrees: container spacing of 6 inches, inside the entry's range",
+    "container_notes.notes_seasoned": "agrees: container spacing of 6 inches, inside the entry's range",
+    "regions.rgv.plantings[0].plant_out[0].synthesis_note_seasoned": "agrees: a planting-date note, no spacing",
+    "start_method.notes_seasoned": "agrees: depth and 'at final spacing', no figure",
+    "yield_expectations.per_plant_beginner": "agrees: wider vs closer, no figure",
+    "yield_expectations.per_plant_seasoned": "agrees: 'at 6-inch spacing' is inside the entry's range"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "cilantro-coriander",
+  "decision": "PARTIAL -> W1 + W2. usu_ext states \"Plant cilantro seeds ½ inch deep and space 2 inches apart if you are planning to use the plant for its leaves.\" -> in_row [2,2]: the page states no thin-to, so this seed spacing IS the leaf-crop figure (W1's sowing-distance clause does not apply); the 8-10 in figure on the same page is the coriander-seed regime. \"Rows should be at least 15 inches apart.\" is a recommendation stating a minimum -> row [15,15], 'minimum' recorded (W2). Today's [2,4] joins USU's 2 with a hi no cited page states; UWI ('thin ... to 3-6in apart', rows about a foot) is the alternative regime. The two prose restatements give 2-4 for cut leaf (contains the entry's 2) and 6-8 for fuller plants (Clemson's regime): agrees.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        2,
+        2
+      ],
+      "row_spacing_inches": [
+        15,
+        15
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "usu_ext"
+      ],
+      "anchoring_urls": {
+        "usu_ext": {
+          "url": "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "restatements": [
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "verdict": "agrees",
+      "note": "cut-leaf 2 to 4 contains the entry's 2; 6 to 8 for fuller plants is Clemson's regime"
+    },
+    {
+      "path": "notifications[0].body_seasoned",
+      "verdict": "agrees",
+      "note": "cut-leaf 2 to 4 contains the entry's 2; 6 to 8 for fuller plants is Clemson's regime"
+    }
+  ]
+}

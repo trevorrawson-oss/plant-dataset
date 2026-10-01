@@ -1,0 +1,27 @@
+{
+  "slug": "sage",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): uwi_hort https://hort.extension.wisc.edu/articles/sage-salvia-officinalis/ states \"Space plants 18 to 24 inches apart and divide every few years to rejuvenate the plants.\" -> in_row_inches [18,24]; no between-rows figure on the cited page: row_spacing_inches not_authored. Today's spacing_inches [18,24] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        18,
+        24
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "uwi_hort"
+      ],
+      "anchoring_urls": {
+        "uwi_hort": {
+          "url": "https://hort.extension.wisc.edu/articles/sage-salvia-officinalis/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

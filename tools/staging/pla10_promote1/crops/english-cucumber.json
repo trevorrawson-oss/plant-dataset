@@ -1,0 +1,30 @@
+{
+  "slug": "english-cucumber",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): vce_426_331 https://www.pubs.ext.vt.edu/426/426-331/426-331.html states \"Cucumbers 12-18 in 48-72 in\" -> in_row_inches [12,18]; AGREES (lane A, mechanical; worklist 56 §4): vce_426_331 https://www.pubs.ext.vt.edu/426/426-331/426-331.html states \"Cucumbers 12-18 in 48-72 in\" -> row_spacing_inches [48,72]. Today's spacing_inches [12,18] is unchanged; quotes checked as substrings of the hashed bytes. Override(s) applied: row_quote = 'Cucumbers 12-18 in 48-72 in'. VCE 426-331 Table 5 row quoted as the row string (Distance between plants in row | Distance between rows).",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        12,
+        18
+      ],
+      "row_spacing_inches": [
+        48,
+        72
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "vce_426_331"
+      ],
+      "anchoring_urls": {
+        "vce_426_331": {
+          "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

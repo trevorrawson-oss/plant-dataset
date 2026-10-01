@@ -1,0 +1,29 @@
+{
+  "slug": "grapefruit",
+  "decision": "PARTIAL -> W2 + W3. uf_ifas_hs132 (citrus-wide; names no species; accepted for all citrus under W3) states \"For home plantings, the spacing recommended should be a minimum of 15 feet between trees.\" -> in_row [180,180], a stated MINIMUM in a recommendation; no cited page states a range the promote can quote (TAMU's 'twice that far' is arithmetic on 6-8 ft and states no endpoint), so the minimum authors as the point (W2). No row figure (CG040's windbreak sentence excluded): not_authored. Today's [216,360] is on no page; R1's off-basis finding (Swingle rootstock, HS1260 not cited) stands. The three prose strings already say 'a minimum of about 15 feet': agrees.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            180,
+            180
+          ],
+          "sid": "uf_ifas_hs132",
+          "url": "https://edis.ifas.ufl.edu/publication/HS132",
+          "quote": "For home plantings, the spacing recommended should be a minimum of 15 feet between trees."
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ],
+  "restatements": {
+    "tips_by_stage.planting[1].text_seasoned": "agrees: states the minimum of about 15 feet between citrus (the entry's figure)",
+    "year_one_notes_beginner": "agrees: states at least about 15 feet from the next citrus",
+    "year_one_notes_seasoned": "agrees: states a minimum 15 feet between citrus"
+  }
+}

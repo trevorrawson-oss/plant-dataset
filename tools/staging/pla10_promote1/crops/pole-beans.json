@@ -1,0 +1,30 @@
+{
+  "slug": "pole-beans",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): uiuc_ext https://extension.illinois.edu/gardening/snap-beans states \"Plant seeds of pole beans 4 to 6 inches apart in rows 30 to 36 inches apart\" -> in_row_inches [4,6]; AGREES (lane A, mechanical; worklist 56 §4): uiuc_ext https://extension.illinois.edu/gardening/snap-beans states \"Plant seeds of pole beans 4 to 6 inches apart in rows 30 to 36 inches apart\" -> row_spacing_inches [30,36]. Today's spacing_inches [4,6] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        4,
+        6
+      ],
+      "row_spacing_inches": [
+        30,
+        36
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "uiuc_ext"
+      ],
+      "anchoring_urls": {
+        "uiuc_ext": {
+          "url": "https://extension.illinois.edu/gardening/snap-beans",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "sweet-pea",
+  "decision": "COMMERCIAL -> W4 + lane C, context checked 2026-10-01. Cornell's '2 to 4 plants per foot on a trellis' is a high-tunnel cut-flower trellis density (promote 2's support pass) and is not authored. The hunt FOUND osu_ext 'Sweet peas add color and fragrance to Oregon gardens' (an OSU Extension news feature; the publisher is catalogued). PAGE CONTEXT: the page names both types ('bush or dwarf types such as Supersnoop ... taller climbing varieties ... can be trained on fences and trellises'); the spacing sentences sit in its general 'Planting and care' section (location, soil prep, planting, slug control, training: pinching tips), which precedes no type split and names no trellis: \"Sow seeds 3/4-1 inch deep and 2 inches apart.\" then \"Thin seedlings to 5–6 inches apart.\" So the figure is a sow-and-thin distance between plants along the row for either type, NOT a trellis density, and the row-none arrangement is the same promote-1 default every trellised crop carries (pole-beans, snow-peas, sugar-snap-peas were staged row-none from pages describing trellised culture; support entries are promote 2's, D7). -> in_row [5,6] (W1: the thinned spacing, not the 2-in sowing distance); no row figure (not_authored). PSU's sowing table gives 'Lathyrus odoratus (bush type) 6-8' as the bush-only alternative. So sweet-pea is NOT an R5 waiver case. Today's lo 3 is a derived density, on no page. The one scanner hit is a planting-date note: agrees. If Trevor reads the page as trellised, the fallback is an R5 waiver at today's [3,6] in the tools module (sweet-pea is ELIGIBLE).",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            5,
+            6
+          ],
+          "sid": "osu_ext",
+          "url": "https://extension.oregonstate.edu/news/old-fashioned-sweet-peas-fill-garden-fragrance",
+          "quote": "Thin seedlings to 5–6 inches apart."
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ],
+  "restatements": {
+    "regions.rgv.plantings[0].plant_out[0].synthesis_note_seasoned": "agrees: a planting-date note, no spacing"
+  }
+}

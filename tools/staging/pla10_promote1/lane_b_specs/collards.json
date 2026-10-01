@@ -1,0 +1,84 @@
+{
+  "slug": "collards",
+  "decision": "PARTIAL -> W1: author the page's figure. umd_ext growing-leafy-greens states \"Kale, collard, and mustard: 12\"- 24\" in-row x 30\"- 36\" between rows for large plants.\" -> in_row [12,24], row [30,36]. Today's [18,24] is on no cited page for collards (NCSU 15-18 full-grown; UMN 8 in; ISU 15-18 for kale/collards/endive); VCE 426-331 'Collards, kale 12-24 in 18-36 in' agrees with UMD on 12-24. Prose restating 18-24 is re-authored to 12-24.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            12,
+            24
+          ],
+          "sid": "umd_ext",
+          "url": "https://extension.umd.edu/resource/growing-leafy-greens-home-garden",
+          "quote": "Kale, collard, and mustard: 12\"- 24\" in-row x 30\"- 36\" between rows for large plants."
+        },
+        "row_spacing_inches": {
+          "value": [
+            30,
+            36
+          ],
+          "sid": "umd_ext",
+          "url": "https://extension.umd.edu/resource/growing-leafy-greens-home-garden",
+          "quote": "Kale, collard, and mustard: 12\"- 24\" in-row x 30\"- 36\" between rows for large plants."
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "replace": [
+        "thin or set plants 18 to 24 inches apart",
+        "thin or set plants 12 to 24 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (UMD: 12-24 in)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "replace": [
+        "Space full-size plants 18 to 24 inches apart",
+        "Space full-size plants 12 to 24 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (UMD: 12-24 in)"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "replace": [
+        "Thin or set plants 18 to 24 inches apart for full-size plants",
+        "Thin or set plants 12 to 24 inches apart for full-size plants"
+      ],
+      "reason": "restates the moved in-row figure (UMD: 12-24 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "replace": [
+        "about 18 to 24 inches apart for big plants",
+        "about 12 to 24 inches apart for big plants"
+      ],
+      "reason": "restates the moved in-row figure (UMD: 12-24 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "replace": [
+        "about 18 to 24 inches apart for full-size plants",
+        "about 12 to 24 inches apart for full-size plants"
+      ],
+      "reason": "restates the moved in-row figure (UMD: 12-24 in)"
+    }
+  ],
+  "restatements": {
+    "fertilizer.amount_seasoned": "agrees: a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement",
+    "pests[1].control_ladder[3].note_seasoned": "agrees: an insect's egg rows, not a spacing",
+    "growth_stages[1].user_action_seasoned": "edited: 18-24 -> 12-24",
+    "start_method.notes_beginner": "edited: 18-24 -> 12-24",
+    "start_method.notes_seasoned": "edited: 18-24 -> 12-24",
+    "tips_by_stage.seedling[0].text_beginner": "edited: 18-24 -> 12-24",
+    "tips_by_stage.seedling[0].text_seasoned": "edited: 18-24 -> 12-24",
+    "yield_expectations.per_plant_seasoned": "agrees: a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+  }
+}

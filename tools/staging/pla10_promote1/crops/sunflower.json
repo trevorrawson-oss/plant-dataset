@@ -1,0 +1,27 @@
+{
+  "slug": "sunflower",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): mu_ext https://extension.missouri.edu/publications/ym102 states \"Varieties 2 to 5 feet tall, plant 6 inches apart. Varieties over 5 feet, plant 12 inches apart. Giant varieties, plant 24 inches apart.\" -> in_row_inches [6,24]; no between-rows figure on the cited page: row_spacing_inches not_authored. Today's spacing_inches [6,24] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        6,
+        24
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "mu_ext"
+      ],
+      "anchoring_urls": {
+        "mu_ext": {
+          "url": "https://extension.missouri.edu/publications/ym102",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

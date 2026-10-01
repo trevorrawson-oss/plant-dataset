@@ -1,0 +1,27 @@
+{
+  "slug": "nasturtium",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): uwi_hort https://hort.extension.wisc.edu/articles/nasturtium-tropaeolum-majus/ states \"Sow seeds ½ inch deep (they need darkness to germinate) and 10 to 12 inches apart.\" -> in_row_inches [10,12]; no between-rows figure on the cited page: row_spacing_inches not_authored. Today's spacing_inches [10,12] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        10,
+        12
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "uwi_hort"
+      ],
+      "anchoring_urls": {
+        "uwi_hort": {
+          "url": "https://hort.extension.wisc.edu/articles/nasturtium-tropaeolum-majus/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

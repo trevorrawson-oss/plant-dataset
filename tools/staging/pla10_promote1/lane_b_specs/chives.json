@@ -1,0 +1,91 @@
+{
+  "slug": "chives",
+  "decision": "DIFFERS -> W1: author the page's figure. umn_ext growing-chives states \"Space plants 6 to 12 inches apart.\" (the division/replant paragraph: a clump spacing) -> in_row [6,12]; no row figure (not_authored). Today's [8,12] is on no cited page (UWI gives clumps 12 to 20). The seven prose restatements of 8-12 are re-authored to 6-12.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            6,
+            12
+          ],
+          "sid": "umn_ext",
+          "url": "https://extension.umn.edu/vegetables/growing-chives",
+          "quote": "Space plants 6 to 12 inches apart."
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "failure_diagnostics[3].what_happened_seasoned",
+      "replace": [
+        "replant at 8 to 12 inch spacing",
+        "replant at 6 to 12 inch spacing"
+      ],
+      "reason": "restates the moved in-row figure (UMN: 6-12 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "replace": [
+        "about 8 to 12 inches apart",
+        "about 6 to 12 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (UMN: 6-12 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "replace": [
+        "about 8 to 12 inches",
+        "about 6 to 12 inches"
+      ],
+      "reason": "restates the moved in-row figure (UMN: 6-12 in)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "replace": [
+        "about 8 to 12 inches apart",
+        "about 6 to 12 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (UMN: 6-12 in)"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "replace": [
+        "Set clumps 8 to 12 inches apart",
+        "Set clumps 6 to 12 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (UMN: 6-12 in)"
+    },
+    {
+      "path": "tips_by_stage.establishment[0].text_beginner",
+      "replace": [
+        "about 8 to 12 inches apart",
+        "about 6 to 12 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (UMN: 6-12 in)"
+    },
+    {
+      "path": "tips_by_stage.establishment[0].text_seasoned",
+      "replace": [
+        "about 8 to 12 inches",
+        "about 6 to 12 inches"
+      ],
+      "reason": "restates the moved in-row figure (UMN: 6-12 in)"
+    }
+  ],
+  "restatements": {
+    "failure_diagnostics[3].what_happened_seasoned": "edited: 8-12 -> 6-12",
+    "growth_stages[1].user_action_beginner": "edited: 8-12 -> 6-12",
+    "growth_stages[1].user_action_seasoned": "edited: 8-12 -> 6-12",
+    "start_method.notes_beginner": "edited: 8-12 -> 6-12",
+    "start_method.notes_seasoned": "edited: 8-12 -> 6-12",
+    "tips_by_stage.establishment[0].text_beginner": "edited: 8-12 -> 6-12",
+    "tips_by_stage.establishment[0].text_seasoned": "edited: 8-12 -> 6-12"
+  }
+}

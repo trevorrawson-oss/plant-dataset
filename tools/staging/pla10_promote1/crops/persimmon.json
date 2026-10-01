@@ -1,0 +1,42 @@
+{
+  "slug": "persimmon",
+  "decision": "DIFFERS -> W1: author the page's figure. tamu_agrilife persimmons fact sheet (PDF; a home/small-grower guide) states \"Plant the trees every 15 to 18 feet in rows that are 20 feet apart.\" -> in_row [180,216], row [240,240]. Today's hi 20 ft is on no cited page; NCSU Table 15-5 'Persimmons 15' is a minimum and UF HS1389's 15 x 20 ft is per-acre commercial. The two scanner hits (tree height; drainage mounds) are not spacing restatements. EVIDENCE NOTE: the page is a PDF; the manifest hashes the raw bytes and the quote is checked against pypdf's text extraction of those bytes (ruled 2026-10-01; PDF_TEXT_EXTRACTOR pins pypdf 6.14.2).",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        180,
+        216
+      ],
+      "row_spacing_inches": [
+        240,
+        240
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "tamu_agrilife"
+      ],
+      "anchoring_urls": {
+        "tamu_agrilife": {
+          "url": "https://aggie-horticulture.tamu.edu/fruit-nut/wp-content/uploads/sites/6/2015/04/persimmons_2015.pdf",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "restatements": [
+    {
+      "path": "container_notes.notes_seasoned",
+      "verdict": "agrees",
+      "note": "a tree height, not a spacing"
+    },
+    {
+      "path": "diseases[1].control_ladder[0].note_seasoned",
+      "verdict": "agrees",
+      "note": "drainage-mound height, not a spacing"
+    }
+  ]
+}

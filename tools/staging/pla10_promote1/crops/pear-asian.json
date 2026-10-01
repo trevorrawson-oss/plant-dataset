@@ -1,0 +1,109 @@
+{
+  "slug": "pear-asian",
+  "decision": "DIFFERS -> W2 + W6. Two cited pages BOTH name Asian pear and BOTH state a MINIMUM, and they disagree: NCSU Table 15-5 has its own row 'Pears, Asian | 20' (a single minimum, 20 ft) and clemson_hgic asian-pear states \"Plant trees at least 10 to 15 feet apart in fall or early spring.\" (a minimum stated as a RANGE). This is not a scope argument: NCSU's row is Asian-pear-specific too. It is W2 as refined: a stated minimum authors as the point UNLESS another cited page for the crop states a range, in which case the range wins and the minimum is noted. Clemson's sentence is the range -> in_row [120,180], 'minimum' recorded; NCSU's 20 ft minimum is noted and sits above the range (the two pages disagree, W6: one page's figure is authored, never a value joined from both). Secondary: Clemson's is a recommending sentence in a crop factsheet; NCSU's is a cross-fruit table cell. UC ANR's 12 ft / rows 17-18 ft is commercial (200 trees per acre), not authored (W4). No row figure (not_authored). Today's [144,300] matches no page. The crop keeps its open R4 blocking finding (PLA-579), unrelated to this field. The 16 scanner hits are fruit-thinning distances (6 in), fire-blight cut lengths and a pollinizer distance: none restates plant spacing.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        120,
+        180
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "clemson_hgic"
+      ],
+      "anchoring_urls": {
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/asian-pear/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "restatements": [
+    {
+      "path": "diseases[0].organic_treatment_beginner",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "diseases[0].organic_treatment_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "failure_diagnostics[1].next_season_tip_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "failure_diagnostics[3].next_season_tip_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "first_harvest_notes_beginner",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "first_harvest_notes_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "full_harvest_notes_beginner",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "full_harvest_notes_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "growth_stages[3].user_action_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "growth_stages[5].user_action_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "notifications[5].body_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "pests[0].control_ladder[2].note_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "pollination.notes_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "pollinator_notes_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "tips_by_stage.dormant_prune[1].text_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "tips_by_stage.fruit_set[0].text_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning, fire-blight cut length or pollinizer distance, not a plant spacing"
+    }
+  ]
+}

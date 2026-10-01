@@ -1,0 +1,27 @@
+{
+  "slug": "basil",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): umn_ext https://extension.umn.edu/vegetables/growing-basil states \"Thin and transplant seedlings to stand 6-12 inches apart once they have developed two to three pairs of true leaves.\" -> in_row_inches [6,12]; no between-rows figure on the cited page: row_spacing_inches not_authored. Today's spacing_inches [6,12] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        6,
+        12
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "umn_ext"
+      ],
+      "anchoring_urls": {
+        "umn_ext": {
+          "url": "https://extension.umn.edu/vegetables/growing-basil",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

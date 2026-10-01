@@ -1,0 +1,30 @@
+{
+  "slug": "pomegranate",
+  "decision": "COMMERCIAL -> W4 + lane C. UGA C997's 18x18 is an orchard figure and its 10x15 is explicitly 'not a currently recommended strategy': never authored (W4). The hunt FOUND uf_ifas_edis MG056 (cited by the crop; fetched this session) \"The spacing of 10-16 ft (3-5 m) between plants and 13-20 ft (4-6 m) between rows are used for orchards, and similar spacing should be maintained for dooryard trees\" -> in_row [120,192], row [156,240]: the sentence extends the figure to dooryard (home) trees, the fig MG214 pattern. So pomegranate is NOT an R5 waiver case. Today's [120,180] has no page for 180. No restatements (0 scanner hits).",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        120,
+        192
+      ],
+      "row_spacing_inches": [
+        156,
+        240
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "uf_ifas_edis"
+      ],
+      "anchoring_urls": {
+        "uf_ifas_edis": {
+          "url": "https://edis.ifas.ufl.edu/publication/MG056",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "blueberry",
+  "decision": "PARTIAL -> W1 with a type decision: today's [48,72] is a highbush lo / rabbiteye hi blend (NCSU: 'Plant highbush varieties every 4-5 ft in the row and 8-10 ft between rows.' / 'Plant rabbiteye varieties 5-6 ft in the row and 10-12 ft between rows'). The default is the HIGHBUSH figure: the crop's own planting prose leads with highbush ('about 4 to 5 feet apart for highbush, 5 to 6 feet for the larger rabbiteye'), northern and southern highbush cover most of the roster's zones, and UGA C946 and Clemson give the same 4-5 ft for highbush. ncsu_ext -> in_row [48,60], row [96,120]. A rabbiteye entry waits on varieties[].plant_habit / a cultivar-type axis (not promote 1). The two prose restatements already split by type and keep the entry's highbush figure: agrees.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            48,
+            60
+          ],
+          "sid": "ncsu_ext",
+          "url": "https://content.ces.ncsu.edu/growing-blueberries-in-the-home-garden",
+          "quote": "Plant highbush varieties every 4-5 ft in the row and 8-10 ft between rows."
+        },
+        "row_spacing_inches": {
+          "value": [
+            96,
+            120
+          ],
+          "sid": "ncsu_ext",
+          "url": "https://content.ces.ncsu.edu/growing-blueberries-in-the-home-garden",
+          "quote": "Plant highbush varieties every 4-5 ft in the row and 8-10 ft between rows."
+        }
+      }
+    }
+  ],
+  "restatements": {
+    "planting_method_notes_beginner": "agrees: states 4 to 5 ft for highbush (the entry) and more for rabbiteye, both on the NCSU page",
+    "planting_method_notes_seasoned": "agrees: states 4 to 5 ft for highbush (the entry) and 5 to 6 ft for rabbiteye, both on the NCSU page"
+  }
+}

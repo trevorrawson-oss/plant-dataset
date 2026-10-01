@@ -1,0 +1,24 @@
+{
+  "slug": "mint",
+  "decision": "PARTIAL -> W1 + W6: today's [12,24] is a cross-page blend (UF 12 lo, nothing states 24 as a plant spacing; USU's 'at least 2 feet' is a ROW minimum). One page per entry: uf_ifas Gardening Solutions mint states \"Space plants about 12 inches apart to give them room to spread and grow.\" -> in_row [12,12]. The other cited point is UMD's 'Space plants 18 inches apart.' ([18,18], peppermint and spearmint); UF is taken as the named page and the figure closer to today's low. Row: USU 'Row spacing should be at least 2 feet apart to allow for growth.' is a minimum on a DIFFERENT page; not joined into this entry (single page), so not_authored, lead recorded for session 3 if the two-page reading of W6 is confirmed. No restatements (0 scanner hits).",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            12,
+            12
+          ],
+          "sid": "uf_ifas",
+          "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/mint/",
+          "quote": "Space plants about 12 inches apart to give them room to spread and grow."
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ]
+}

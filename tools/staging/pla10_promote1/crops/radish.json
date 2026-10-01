@@ -1,0 +1,42 @@
+{
+  "slug": "radish",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): umd_ext https://extension.umd.edu/resource/growing-radishes-home-garden states \"When they germinate, thin the seedlings so that the remaining plants are 2 to 4 inches apart depending on the type.\" -> in_row_inches [2,4]; AGREES (lane A, mechanical; worklist 56 §4): clemson_hgic https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/ states \"Plant radish seed in rows 12 to 24 inches apart\" -> row_spacing_inches [12,24]. Today's spacing_inches [2,4] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        2,
+        4
+      ],
+      "row_spacing_inches": [
+        12,
+        24
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "umd_ext",
+        "clemson_hgic"
+      ],
+      "anchoring_urls": {
+        "umd_ext": {
+          "url": "https://extension.umd.edu/resource/growing-radishes-home-garden",
+          "verified": "2026-10-01"
+        },
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "retired_anchor": {
+    "umn_ext": {
+      "dropped": "UMN growing-radishes states 'thin radishes to about two inches between plants' and 'four to six inches' for daikons, not the entry's UMD [2,4]"
+    },
+    "umd_ext": "moved",
+    "clemson_hgic": "moved"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "slug": "nectarine",
+  "decision": "SCOPE -> W3: hunt first. The hunt FOUND a page whose sentence names nectarine: unh_ext 'Growing Peaches and Nectarines in the Home Garden' (PDF) \"Plant peach and nectarine trees 12 to 15 feet apart.\" -> in_row [144,180]. CONFIRMED 2026-10-01: (a) the sentence itself names nectarine, not only the title; (b) it is for STANDARD trees: the same page says 'Dwarf peach trees aren't recommended as dwarfing rootstocks for peaches are not reliably hardy in New Hampshire', and no trained form (espalier, hedgerow) is described; the figure is a cold-climate home-garden standard-tree spacing; no row figure (not_authored). UIUC's home-garden table ('Peach, Apricot. Nectarine, Plum | Seedling (standard) | 14 x 20 to 20 x 28', in-row 14-20 ft) corroborates the lower band. UGA C1063 (peaches, 18-20 ft; today's figure) is the sibling page and is not accepted since the hunt succeeded. Clemson peaches-nectarines carries no tree spacing (verified live). A notable move: 18-20 ft -> 12-15 ft. The 12 scanner hits are fruit-thinning distances (one fruit every 6 to 8 inches): agrees. EVIDENCE NOTE: the page is a PDF; the manifest hashes the raw bytes and the quote is checked against pypdf's text extraction of those bytes (ruled 2026-10-01; PDF_TEXT_EXTRACTOR pins pypdf 6.14.2).",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        144,
+        180
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "unh_ext"
+      ],
+      "anchoring_urls": {
+        "unh_ext": {
+          "url": "https://extension.unh.edu/sites/default/files/migrated_unmanaged_files/Resource000586_Rep608.pdf",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "restatements": [
+    {
+      "path": "failure_diagnostics[2].next_season_tip_beginner",
+      "verdict": "agrees",
+      "note": "fruit thinning (one fruit every 6 to 8 inches), not a plant spacing"
+    },
+    {
+      "path": "failure_diagnostics[2].next_season_tip_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning (one fruit every 6 to 8 inches), not a plant spacing"
+    },
+    {
+      "path": "failure_diagnostics[2].what_happened_beginner",
+      "verdict": "agrees",
+      "note": "fruit thinning (one fruit every 6 to 8 inches), not a plant spacing"
+    },
+    {
+      "path": "failure_diagnostics[2].what_happened_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning (one fruit every 6 to 8 inches), not a plant spacing"
+    },
+    {
+      "path": "first_harvest_notes_beginner",
+      "verdict": "agrees",
+      "note": "fruit thinning (one fruit every 6 to 8 inches), not a plant spacing"
+    },
+    {
+      "path": "first_harvest_notes_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning (one fruit every 6 to 8 inches), not a plant spacing"
+    },
+    {
+      "path": "full_harvest_notes_beginner",
+      "verdict": "agrees",
+      "note": "fruit thinning (one fruit every 6 to 8 inches), not a plant spacing"
+    },
+    {
+      "path": "full_harvest_notes_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning (one fruit every 6 to 8 inches), not a plant spacing"
+    },
+    {
+      "path": "growth_stages[6].user_action_beginner",
+      "verdict": "agrees",
+      "note": "fruit thinning (one fruit every 6 to 8 inches), not a plant spacing"
+    },
+    {
+      "path": "growth_stages[6].user_action_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning (one fruit every 6 to 8 inches), not a plant spacing"
+    },
+    {
+      "path": "tips_by_stage.fruit_set[0].text_beginner",
+      "verdict": "agrees",
+      "note": "fruit thinning (one fruit every 6 to 8 inches), not a plant spacing"
+    },
+    {
+      "path": "tips_by_stage.fruit_set[0].text_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning (one fruit every 6 to 8 inches), not a plant spacing"
+    }
+  ]
+}

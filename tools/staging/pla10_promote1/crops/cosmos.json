@@ -1,0 +1,71 @@
+{
+  "slug": "cosmos",
+  "decision": "NO_PAGE -> lane C hunt FOUND (HUNTS.md), so cosmos is NOT an R5 waiver case (W5: a citable page exists). Three catalogued pages state a figure: usu_ext cosmos-in-the-garden (species page, home garden) \"A plant spacing of 1-2 feet apart is recommended\" -> [12,24]; UF/IFAS FP149 (a 'Sonata White' cultivar sheet) 'Place these plants 12 to 18 inches apart in the garden.' -> [12,18]; PSU's sowing table 'Cosmos sp. 10-14'. The species-scoped garden page authors -> in_row [12,24]; no row figure (not_authored). Today's [12,18] was unsupported on the crop's cited set (FP149 matches it, but at cultivar scope). usu_ext is in the catalog; the crop did not cite this page before. Four prose strings restating 12-18 are re-authored to 12-24.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        12,
+        24
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "usu_ext"
+      ],
+      "anchoring_urls": {
+        "usu_ext": {
+          "url": "https://extension.usu.edu/yardandgarden/research/cosmos-in-the-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "new": "Space plants about 12 to 24 inches apart, do not add fertilizer, and water the soil, not the leaves.",
+      "reason": "restates the moved in-row figure (USU: 1-2 ft)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "new": "Thin or space to 12 to 24 in; do not enrich or fertilize the soil, and water at the base.",
+      "reason": "restates the moved in-row figure (USU: 1-2 ft)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "new": "Once seedlings have a few real leaves, thin them to about 12 to 24 inches apart. Room for air to move helps prevent mildew and mold.",
+      "reason": "restates the moved in-row figure (USU: 1-2 ft)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "new": "Thin or space seedlings to 12 to 24 in once they have a few true leaves; airflow limits powdery mildew and gray mold later.",
+      "reason": "restates the moved in-row figure (USU: 1-2 ft)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "verdict": "edited",
+      "note": "12-18 -> 12-24"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "verdict": "edited",
+      "note": "12-18 -> 12-24"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "verdict": "edited",
+      "note": "12-18 -> 12-24"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "verdict": "edited",
+      "note": "12-18 -> 12-24"
+    }
+  ]
+}

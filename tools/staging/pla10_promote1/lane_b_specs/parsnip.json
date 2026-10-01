@@ -1,0 +1,129 @@
+{
+  "slug": "parsnip",
+  "decision": "PARTIAL -> W1 + W6: today's [3,6] is a Clemson (3) + RHS (6) union across two pages, which W6 forbids; one page's figure is authored. clemson_hgic carrot-beet-radish-parsnip states \"When the parsnip plants are 1 to 2 inches tall, thin them to 3 inches apart for good root development.\" -> in_row [3,3]; \"Rows are spaced 18 to 24 inches apart.\" -> row [18,24]. RHS 'leave one every 15cm (6in)' is the alternative point. Ten prose strings restating 3-6 (and the per-foot yield arithmetic) are re-authored to 3.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            3,
+            3
+          ],
+          "sid": "clemson_hgic",
+          "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+          "quote": "When the parsnip plants are 1 to 2 inches tall, thin them to 3 inches apart for good root development."
+        },
+        "row_spacing_inches": {
+          "value": [
+            18,
+            24
+          ],
+          "sid": "clemson_hgic",
+          "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+          "quote": "Rows are spaced 18 to 24 inches apart."
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "replace": [
+        "final 3 to 6 inches apart",
+        "final 3 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "replace": [
+        "final 3 to 6 inches once",
+        "final 3 inches once"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "notifications[2].body_beginner",
+      "replace": [
+        "thin them to 3 to 6 inches apart",
+        "thin them to 3 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "notifications[2].body_seasoned",
+      "replace": [
+        "final 3 to 6 inches",
+        "final 3 inches"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "thinning.tip_beginner",
+      "replace": [
+        "final 3 to 6 inches apart",
+        "final 3 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "replace": [
+        "final 3 to 6 inches apart",
+        "final 3 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "replace": [
+        "final 3 to 6 inches apart",
+        "final 3 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "replace": [
+        "final 3 to 6 inches once",
+        "final 3 inches once"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "yield_expectations.per_plant_beginner",
+      "replace": [
+        "Spaced 3 to 6 inches apart, a foot of row gives you roughly 2 to 4 big roots",
+        "Spaced 3 inches apart, a foot of row gives you roughly 4 big roots"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: 3 in) and its per-foot arithmetic"
+    },
+    {
+      "path": "yield_expectations.per_plant_seasoned",
+      "replace": [
+        "at a 3 to 6 inch final spacing, expect roughly 2 to 4 large roots per foot of row",
+        "at a 3 inch final spacing, expect roughly 4 large roots per foot of row"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: 3 in) and its per-foot arithmetic"
+    }
+  ],
+  "restatements": {
+    "growth_stages[1].user_action_beginner": "edited: 3-6 -> 3",
+    "growth_stages[1].user_action_seasoned": "edited: 3-6 -> 3",
+    "notifications[2].body_beginner": "edited: 3-6 -> 3",
+    "notifications[2].body_seasoned": "edited: 3-6 -> 3",
+    "thinning.tip_beginner": "edited: 3-6 -> 3",
+    "thinning.tip_seasoned": "edited: 3-6 -> 3",
+    "tips_by_stage.seedling[0].text_beginner": "edited: 3-6 -> 3",
+    "tips_by_stage.seedling[0].text_seasoned": "edited: 3-6 -> 3",
+    "yield_expectations.per_plant_beginner": "edited: 3-6 -> 3",
+    "yield_expectations.per_plant_seasoned": "edited: 3-6 -> 3",
+    "failure_diagnostics[0].next_season_tip_beginner": "agrees: sowing depth and a radish marker row, no plant spacing",
+    "failure_diagnostics[0].next_season_tip_seasoned": "agrees: sowing depth and a radish marker row, no plant spacing",
+    "growth_stages[2].user_action_seasoned": "agrees: water per week and shoulder hilling, no plant spacing"
+  }
+}

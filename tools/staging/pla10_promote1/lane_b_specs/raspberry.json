@@ -1,0 +1,24 @@
+{
+  "slug": "raspberry",
+  "decision": "AGREES on the in-row figure, moved to lane B because the page CHANGED: UMN's raspberry page now redirects to a new URL (recorded in MANIFEST.tsv) whose bytes still carry \"Plant them 18 to 24 inches apart in moist soil.\" -> in_row [18,24] (unchanged), but no longer carry 'Spacing for red raspberries can be from 5 to 10 feet between rows'. Row: not_authored. Leads on other cited pages, not joined into this single-page entry pending the W6 two-page reading (lane A report): UGA C766 'If more than one row is to be planted, space the rows 12 feet apart.' (home garden, [144,144]) and PSU 'rows are typically spaced 8 to 12 feet apart in field production' (commercial framing). The figure does not move, so no restatement is adjudicated.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            18,
+            24
+          ],
+          "sid": "umn_ext",
+          "url": "https://extension.umn.edu/fruit/growing-raspberries-home-garden",
+          "quote": "Plant them 18 to 24 inches apart in moist soil."
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ]
+}

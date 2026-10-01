@@ -1,0 +1,32 @@
+{
+  "slug": "arugula",
+  "decision": "DIFFERS -> W1: today's [1,3] is a SOWING density (Cornell: 'Plant ... 1 inch apart' then thin), never the in-row figure where a page states a thinned spacing. Two cited pages state a thinned figure: VH021 Table 1 'Arugula ... 3-4 | 10' (Florida; rows a minimum 10) and uwi_hort arugula \"Thin seedlings to 3 to 6 inches apart for individual plants, or leave denser plantings for cut-and-come-again treatment.\" The UW sentence is a crop-specific prose recommendation whose range contains the crop's own full-plant prose (4 to 6), so it authors -> in_row [3,6]; no row figure on UW (not_authored; VH021's minimum 10 is on a second page, not joined under W6). The prose keeps its two regimes (baby-leaf 1 to 3 dense, full plants 4 to 6): the full-plant figure sits inside the entry and the baby-leaf density is the cut-and-come-again regime the UW sentence names: agrees.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            3,
+            6
+          ],
+          "sid": "uwi_hort",
+          "url": "https://hort.extension.wisc.edu/articles/arugula/",
+          "quote": "Thin seedlings to 3 to 6 inches apart for individual plants, or leave denser plantings for cut-and-come-again treatment."
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ],
+  "restatements": {
+    "fertilizer.amount_seasoned": "agrees: a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement",
+    "growth_stages[1].user_action_seasoned": "agrees: full plants 4 to 6 sits inside the entry's 3-6; 1 to 3 is the baby-leaf cut-and-come-again density the UW sentence names",
+    "notifications[0].body_seasoned": "agrees: full plants 4 to 6 sits inside the entry's 3-6; 1 to 3 is the baby-leaf density",
+    "regions.rgv.plantings[0].plant_out[0].synthesis_note_seasoned": "agrees: a planting-date note, no spacing",
+    "thinning.tip_beginner": "agrees: bigger plants 4 to 6 sits inside the entry's 3-6; an inch or two is the baby-leaf density",
+    "thinning.tip_seasoned": "agrees: full plants 4 to 6 sits inside the entry's 3-6; 1 to 3 is the baby-leaf density"
+  }
+}

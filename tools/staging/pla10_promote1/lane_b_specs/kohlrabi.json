@@ -1,0 +1,150 @@
+{
+  "slug": "kohlrabi",
+  "decision": "DIFFERS -> W1: author the page's figure. iastate_ext growing-kohlrabi states \"After thinning, kohlrabi seedlings should be spaced 6-8 inches apart within the row.\" -> in_row [6,8]; \"When planting kohlrabi in the garden, sow seeds in rows spaced 18 to 24 inches apart.\" -> row [18,24]. Today's [6,9] has no page for 9 (USU 6 / rows 12; UMN 4; VCE 4-6; NMSU 3-6; VH021 3-5). Twelve prose strings restating 6-9 are re-authored to 6-8; container notes (about 6 in) and per-row fertilizer rates agree.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            6,
+            8
+          ],
+          "sid": "iastate_ext",
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-kohlrabi-home-garden",
+          "quote": "After thinning, kohlrabi seedlings should be spaced 6-8 inches apart within the row."
+        },
+        "row_spacing_inches": {
+          "value": [
+            18,
+            24
+          ],
+          "sid": "iastate_ext",
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-kohlrabi-home-garden",
+          "quote": "When planting kohlrabi in the garden, sow seeds in rows spaced 18 to 24 inches apart."
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "failure_diagnostics[3].next_season_tip_beginner",
+      "replace": [
+        "Thin to 6 to 9 inches",
+        "Thin to 6 to 8 inches"
+      ],
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "failure_diagnostics[3].what_happened_beginner",
+      "replace": [
+        "thin to 6 to 9 inches",
+        "thin to 6 to 8 inches"
+      ],
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "failure_diagnostics[3].what_happened_seasoned",
+      "replace": [
+        "thin to 6 to 9 inches",
+        "thin to 6 to 8 inches"
+      ],
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "replace": [
+        "about 6 to 9 inches apart",
+        "about 6 to 8 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "replace": [
+        "Thin to 6 to 9 inches",
+        "Thin to 6 to 8 inches"
+      ],
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "replace": [
+        "about 6 to 9 inches apart",
+        "about 6 to 8 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "replace": [
+        "thin to 6 to 9 inches apart",
+        "thin to 6 to 8 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "thinning.tip_beginner",
+      "replace": [
+        "about 6 to 9 inches of room",
+        "about 6 to 8 inches of room"
+      ],
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "replace": [
+        "to 6 to 9 inches apart",
+        "to 6 to 8 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "replace": [
+        "about 6 to 9 inches apart",
+        "about 6 to 8 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "replace": [
+        "Thin to 6 to 9 inches apart",
+        "Thin to 6 to 8 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "yield_expectations.factors_seasoned[4]",
+      "replace": [
+        "spacing at 6 to 9 inches",
+        "spacing at 6 to 8 inches"
+      ],
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    }
+  ],
+  "restatements": {
+    "failure_diagnostics[3].next_season_tip_beginner": "edited: 6-9 -> 6-8",
+    "failure_diagnostics[3].what_happened_beginner": "edited: 6-9 -> 6-8",
+    "failure_diagnostics[3].what_happened_seasoned": "edited: 6-9 -> 6-8",
+    "growth_stages[1].user_action_beginner": "edited: 6-9 -> 6-8",
+    "growth_stages[1].user_action_seasoned": "edited: 6-9 -> 6-8",
+    "start_method.notes_beginner": "edited: 6-9 -> 6-8",
+    "start_method.notes_seasoned": "edited: 6-9 -> 6-8",
+    "thinning.tip_beginner": "edited: 6-9 -> 6-8",
+    "thinning.tip_seasoned": "edited: 6-9 -> 6-8",
+    "tips_by_stage.seedling[0].text_beginner": "edited: 6-9 -> 6-8",
+    "tips_by_stage.seedling[0].text_seasoned": "edited: 6-9 -> 6-8",
+    "yield_expectations.factors_seasoned[4]": "edited: 6-9 -> 6-8",
+    "container_notes.notes_beginner": "agrees: container spacing of about 6 inches, inside the entry's range",
+    "container_notes.notes_seasoned": "agrees: container spacing of about 6 inches, inside the entry's range",
+    "container_notes.shape_requirements_beginner": "agrees: container spacing of about 6 inches, inside the entry's range",
+    "container_notes.shape_requirements_seasoned": "agrees: container spacing of about 6 inches, inside the entry's range",
+    "fertilizer.amount_seasoned": "agrees: a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement",
+    "fertilizer.notes_seasoned": "agrees: a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+  }
+}

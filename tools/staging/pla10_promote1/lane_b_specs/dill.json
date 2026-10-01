@@ -1,0 +1,343 @@
+{
+  "slug": "dill",
+  "decision": "DIFFERS -> W1: author the page's figure. usu_ext dill-in-the-garden states \"After emergence, thin plants to 9 inches apart and space rows 12 inch apart.\" -> in_row [9,9], row [12,12]. Today's [8,12] blends USU's 9 with a non-catalog 10-12 (open_findings[2]); UWI gives 3-6 (cut-leaf regime). 34 prose strings restate 8-12 (7 crop fields and 27 shared region notes) and are re-authored to 'about 9'; the cut-leaf 4-6 regime in the same sentences is left as is.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            9,
+            9
+          ],
+          "sid": "usu_ext",
+          "url": "https://extension.usu.edu/yardandgarden/research/dill-in-the-garden",
+          "quote": "After emergence, thin plants to 9 inches apart and space rows 12 inch apart."
+        },
+        "row_spacing_inches": {
+          "value": [
+            12,
+            12
+          ],
+          "sid": "usu_ext",
+          "url": "https://extension.usu.edu/yardandgarden/research/dill-in-the-garden",
+          "quote": "space rows 12 inch apart"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "replace": [
+        "about 8 to 12 inches apart",
+        "about 9 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "replace": [
+        "Thin to 8 to 12 inches for full plants",
+        "Thin to about 9 inches for full plants"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in)"
+    },
+    {
+      "path": "notifications[0].body_seasoned",
+      "replace": [
+        "Thin to 8 to 12 inches for full plants",
+        "Thin to about 9 inches for full plants"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "replace": [
+        "about 8 to 12 inches apart",
+        "about 9 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in)"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "replace": [
+        "thin to 8 to 12 inches for full plants",
+        "thin to about 9 inches for full plants"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "replace": [
+        "about 8 to 12 inches apart",
+        "about 9 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "replace": [
+        "Thin dill seedlings to 8 to 12 inches for full plants",
+        "Thin dill seedlings to about 9 inches for full plants"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in)"
+    },
+    {
+      "path": "regions.ca_desert.resolved_by_zone.10.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_desert.resolved_by_zone.11.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_desert.resolved_by_zone.9.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_interior.resolved_by_zone.8.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_interior.resolved_by_zone.9.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_north_coast.resolved_by_zone.10.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_north_coast.resolved_by_zone.9.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_south_coast.resolved_by_zone.10.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_south_coast.resolved_by_zone.11.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_south_coast.resolved_by_zone.9.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.fl_peninsula.resolved_by_zone.10.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.fl_peninsula.resolved_by_zone.11.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.hawaii_tropical.resolved_by_zone.10.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.hawaii_tropical.resolved_by_zone.11.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.hawaii_tropical.resolved_by_zone.12.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.hawaii_tropical.resolved_by_zone.13.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.low_desert_az.resolved_by_zone.10.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.low_desert_az.resolved_by_zone.9.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.northern_tier.resolved_by_zone.3.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.northern_tier.resolved_by_zone.4.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.northern_tier.resolved_by_zone.5.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.northern_tier.resolved_by_zone.6.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.northern_tier.resolved_by_zone.7.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.se_gulf.resolved_by_zone.10.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.se_gulf.resolved_by_zone.8.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.se_gulf.resolved_by_zone.9.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.warm_arid.resolved_by_zone.8.notes",
+      "replace": [
+        "thinning to 8 to 12 inches and using the thinnings",
+        "thinning to about 9 inches and using the thinnings"
+      ],
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    }
+  ],
+  "restatements": {
+    "growth_stages[1].user_action_beginner": "edited: 8-12 -> about 9",
+    "growth_stages[1].user_action_seasoned": "edited: 8-12 -> about 9",
+    "notifications[0].body_seasoned": "edited: 8-12 -> about 9",
+    "start_method.notes_beginner": "edited: 8-12 -> about 9",
+    "start_method.notes_seasoned": "edited: 8-12 -> about 9",
+    "tips_by_stage.seedling[0].text_beginner": "edited: 8-12 -> about 9",
+    "tips_by_stage.seedling[0].text_seasoned": "edited: 8-12 -> about 9",
+    "regions.ca_desert.resolved_by_zone.10.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.ca_desert.resolved_by_zone.11.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.ca_desert.resolved_by_zone.9.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.ca_interior.resolved_by_zone.8.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.ca_interior.resolved_by_zone.9.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.ca_north_coast.resolved_by_zone.10.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.ca_north_coast.resolved_by_zone.9.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.ca_south_coast.resolved_by_zone.10.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.ca_south_coast.resolved_by_zone.11.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.ca_south_coast.resolved_by_zone.9.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.fl_peninsula.resolved_by_zone.10.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.fl_peninsula.resolved_by_zone.11.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.hawaii_tropical.resolved_by_zone.10.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.hawaii_tropical.resolved_by_zone.11.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.hawaii_tropical.resolved_by_zone.12.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.hawaii_tropical.resolved_by_zone.13.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.low_desert_az.resolved_by_zone.10.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.low_desert_az.resolved_by_zone.9.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.northern_tier.resolved_by_zone.3.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.northern_tier.resolved_by_zone.4.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.northern_tier.resolved_by_zone.5.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.northern_tier.resolved_by_zone.6.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.northern_tier.resolved_by_zone.7.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.se_gulf.resolved_by_zone.10.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.se_gulf.resolved_by_zone.8.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.se_gulf.resolved_by_zone.9.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "regions.warm_arid.resolved_by_zone.8.notes": "edited: 8-12 -> about 9 (shared region note)",
+    "varieties.recommended[2].note": "agrees: 'about 18 inches' is a plant height, not a spacing"
+  }
+}

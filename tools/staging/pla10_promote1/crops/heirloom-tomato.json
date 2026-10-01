@@ -1,0 +1,30 @@
+{
+  "slug": "heirloom-tomato",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): mu_ext https://extension.missouri.edu/g6461 states \"Ideal spacing for home garden tomatoes is generally 24 to 36 inches between plants.\" -> in_row_inches [24,36]; AGREES (lane A, mechanical; worklist 56 §4): mu_ext https://extension.missouri.edu/g6461 states \"Rows should be 4 to 5 feet apart.\" -> row_spacing_inches [48,60]. Today's spacing_inches [24,36] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        24,
+        36
+      ],
+      "row_spacing_inches": [
+        48,
+        60
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "mu_ext"
+      ],
+      "anchoring_urls": {
+        "mu_ext": {
+          "url": "https://extension.missouri.edu/g6461",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

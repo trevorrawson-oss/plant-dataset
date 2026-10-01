@@ -1,0 +1,74 @@
+{
+  "slug": "pear-european",
+  "decision": "DIFFERS -> W1. uga_ext C742 Home Garden Pears (cited by the crop; fetched this session) states \"Plant them 20 ft apart.\" (the whips on calleryana rootstock the page recommends) -> in_row [240,240], a recommended point, which NCSU Table 15-5's minimum 'Pears 20' corroborates. No row figure (not_authored). Today's [180,300] matches no page (R1: not by rootstock class; a single species figure). The crop keeps its open R4 blocking finding (PLA-579). The 9 scanner hits are fire-blight cut lengths, fruit thinning and a pollinizer distance: none restates plant spacing.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        240,
+        240
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "uga_ext"
+      ],
+      "anchoring_urls": {
+        "uga_ext": {
+          "url": "https://fieldreport.caes.uga.edu/publications/C742/home-garden-pears/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "restatements": [
+    {
+      "path": "diseases[0].organic_treatment_beginner",
+      "verdict": "agrees",
+      "note": "fire-blight cut length, fruit thinning or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "diseases[0].organic_treatment_seasoned",
+      "verdict": "agrees",
+      "note": "fire-blight cut length, fruit thinning or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "failure_diagnostics[1].next_season_tip_seasoned",
+      "verdict": "agrees",
+      "note": "fire-blight cut length, fruit thinning or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "full_harvest_notes_seasoned",
+      "verdict": "agrees",
+      "note": "fire-blight cut length, fruit thinning or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "growth_stages[3].user_action_seasoned",
+      "verdict": "agrees",
+      "note": "fire-blight cut length, fruit thinning or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "growth_stages[5].user_action_seasoned",
+      "verdict": "agrees",
+      "note": "fire-blight cut length, fruit thinning or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "pollination.notes_seasoned",
+      "verdict": "agrees",
+      "note": "fire-blight cut length, fruit thinning or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "pollinator_notes_seasoned",
+      "verdict": "agrees",
+      "note": "fire-blight cut length, fruit thinning or pollinizer distance, not a plant spacing"
+    },
+    {
+      "path": "tips_by_stage.dormant_prune[1].text_seasoned",
+      "verdict": "agrees",
+      "note": "fire-blight cut length, fruit thinning or pollinizer distance, not a plant spacing"
+    }
+  ]
+}

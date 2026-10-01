@@ -1,0 +1,164 @@
+{
+  "slug": "shallot",
+  "decision": "DIFFERS -> W1: author the page's figure. usu_ext shallots-in-the-garden (the shallot-specific page) states \"Bulb sets should be planted at 3–6 inches apart in rows 12–18 inches apart.\" -> in_row [3,6], row [12,18]. Today's [6,8] has no page for 8 (UMD's '8 inches apart for large bulbs' is bulb-onion scope; UF Gardening Solutions gives 'about six inches'). Ten prose strings restating 6-8 are re-authored to 3-6; container notes (6 in) and the 6-inch yield note sit inside the range.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        3,
+        6
+      ],
+      "row_spacing_inches": [
+        12,
+        18
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "usu_ext"
+      ],
+      "anchoring_urls": {
+        "usu_ext": {
+          "url": "https://extension.usu.edu/yardandgarden/research/shallots-in-the-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "notifications[0].body_beginner",
+      "new": "Plant your shallot sets now, once the soil can be worked in spring (or in fall where winters are mild). Push each one in pointy-end up so the tip just shows, spaced 3 to 6 inches apart. Use firm, not-too-big sets so they do not bolt.",
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "notifications[0].body_seasoned",
+      "new": "Push sets into workable soil as soon as it can be worked in spring, or in fall in mild-winter zones. Set them tip-up with the point just at the surface, at final 3 to 6 inch spacing, since shallots are not thinned. Firm, modestly sized sets resist bolting.",
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "regions.mid_atlantic.region_notes_beginner",
+      "new": "In the Piedmont and Coastal Plain, shallots are a one-time spring crop grown from sets. There is no local planting guide specific to shallot, so this follows onion, a very close relative: push sets into workable soil early, from late February into late March in the Coastal Plain, pointy end up, 3 to 6 inches apart. Grow intermediate-day types in the warmer Coastal Plain; the cooler Piedmont is long-day country. Each set splits into a clump you dig in early-to-mid summer once the tops flop over.",
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "regions.mid_atlantic.region_notes_seasoned",
+      "new": "No VCE 426-331 row exists for shallot in this belt, so this cell follows the guide's Onion (bulbing) row, the closest related allium it documents, with an identical set-planted, spring-only culture and days-to-maturity range. Shallots share onion's photoperiod response, both being Allium cepa, so day-length suitability splits by zone like onion: the cooler Piedmont north (zone 7) is long-day country, while the Coastal Plain south (zone 8) is intermediate-day country, where short-day set types are the traditional choice in eastern North Carolina. Push sets into workable soil as the ground allows, and in the intermediate-day Coastal Plain set them early, from late February into late March, so the clump sizes up before the day-length trigger, 3 to 6 inches apart, tip at the surface. The clump divides and sizes up as days lengthen, then is dug once most tops fall, roughly mid-to-late summer regardless of the exact planting date.",
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "regions.mid_south.region_notes_beginner",
+      "new": "In the Ozark Uplands and Delta Lowlands, shallots are a one-time spring crop grown from sets. There is no local planting guide specific to shallot, so this follows onion, a very close relative: push sets into workable soil early, from February into late March, pointy end up, 3 to 6 inches apart. Grow intermediate-day types for this latitude. Each set splits into a clump you dig in early-to-mid summer once the tops flop over.",
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "regions.mid_south.region_notes_seasoned",
+      "new": "No University of Arkansas Cooperative Extension row exists for shallot in this belt, so this cell follows the guide's Onion (bulbing) row, the closest related allium it documents, with an identical set-planted, spring-only culture and days-to-maturity range. Shallots share onion's photoperiod response, both being Allium cepa, so this is intermediate-day territory: grow intermediate-day shallots or reliable traditional set types, with short-day types also suited to the lowland south and long-day types workable at the cooler northern edge. Push sets into workable soil early, from February into late March, a week and a half later in the cooler zone 7 uplands, 3 to 6 inches apart, tip at the surface; setting early lets the clump size up before the day-length trigger. The clump divides and sizes up as days lengthen, then is dug once most tops fall, roughly mid-to-late summer regardless of the exact planting date.",
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "regions.northern_tier.region_notes_beginner",
+      "new": "In the colder northern states (zones 3 to 7), shallots are a one-time spring crop grown from sets. Plant the little bulbs as soon as the ground can be worked, pointy-end up, 3 to 6 inches apart. Each set splits into a clump of several shallots that you dig in mid-to-late summer once the tops flop over. Long-day or any reliable set type works here. Winters are too hard for fall planting in the open ground.",
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "regions.northern_tier.region_notes_seasoned",
+      "new": "In the cold-winter North (zones 3 to 7), shallot is a single spring-planted crop from sets. Push sets into workable soil about two weeks before the last frost, 3 to 6 inches apart, tip at the surface. The clump divides and sizes up as summer days reach 14 to 16 hours, then matures when most tops fall, roughly 90 to 120 days out. Long-day seed hybrids and traditional set types both perform; fall planting is not viable in the open ground here.",
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "tips_by_stage.germination_emergence[0].text_beginner",
+      "new": "Push each set in pointy-end up so the tip just shows, about 1 to 2 inches deep, spaced 3 to 6 inches apart, since you do not thin shallots. Plant them shallow and do not pile soil over the bulbs, because the roots are shallow and that hurts them.",
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    },
+    {
+      "path": "tips_by_stage.germination_emergence[0].text_seasoned",
+      "new": "Push sets in root-end down with the tip just at the surface, 1 to 2 inches deep, at final 3 to 6 inch spacing, since shallots are not thinned. Plant shallow; burying the bulb or hilling soil over it damages the shallow roots and shrinks the clump.",
+      "reason": "restates the moved in-row figure (USU: 3-6 in)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "notifications[0].body_beginner",
+      "verdict": "edited",
+      "note": "6-8 -> 3-6"
+    },
+    {
+      "path": "notifications[0].body_seasoned",
+      "verdict": "edited",
+      "note": "6-8 -> 3-6"
+    },
+    {
+      "path": "regions.mid_atlantic.region_notes_beginner",
+      "verdict": "edited",
+      "note": "6-8 -> 3-6"
+    },
+    {
+      "path": "regions.mid_atlantic.region_notes_seasoned",
+      "verdict": "edited",
+      "note": "6-8 -> 3-6"
+    },
+    {
+      "path": "regions.mid_south.region_notes_beginner",
+      "verdict": "edited",
+      "note": "6-8 -> 3-6"
+    },
+    {
+      "path": "regions.mid_south.region_notes_seasoned",
+      "verdict": "edited",
+      "note": "6-8 -> 3-6"
+    },
+    {
+      "path": "regions.northern_tier.region_notes_beginner",
+      "verdict": "edited",
+      "note": "6-8 -> 3-6"
+    },
+    {
+      "path": "regions.northern_tier.region_notes_seasoned",
+      "verdict": "edited",
+      "note": "6-8 -> 3-6"
+    },
+    {
+      "path": "tips_by_stage.germination_emergence[0].text_beginner",
+      "verdict": "edited",
+      "note": "6-8 -> 3-6"
+    },
+    {
+      "path": "tips_by_stage.germination_emergence[0].text_seasoned",
+      "verdict": "edited",
+      "note": "6-8 -> 3-6"
+    },
+    {
+      "path": "container_notes.notes_beginner",
+      "verdict": "agrees",
+      "note": "container spacing of 6 inches, inside the entry's range"
+    },
+    {
+      "path": "container_notes.notes_seasoned",
+      "verdict": "agrees",
+      "note": "container spacing of 6 inches, inside the entry's range"
+    },
+    {
+      "path": "regions.rgv.plantings[0].plant_out[0].synthesis_note_seasoned",
+      "verdict": "agrees",
+      "note": "a planting-date note, no spacing"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "agrees",
+      "note": "depth and 'at final spacing', no figure"
+    },
+    {
+      "path": "yield_expectations.per_plant_beginner",
+      "verdict": "agrees",
+      "note": "wider vs closer, no figure"
+    },
+    {
+      "path": "yield_expectations.per_plant_seasoned",
+      "verdict": "agrees",
+      "note": "'at 6-inch spacing' is inside the entry's range"
+    }
+  ]
+}

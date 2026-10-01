@@ -1,0 +1,27 @@
+{
+  "slug": "plum",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): clemson_hgic https://hgic.clemson.edu/factsheet/plum/ states \"Plums should be planted 18 to 22 feet apart.\" -> in_row_inches [216,264]; no between-rows figure on the cited page: row_spacing_inches not_authored. Today's spacing_inches [216,264] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        216,
+        264
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "clemson_hgic"
+      ],
+      "anchoring_urls": {
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/plum/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

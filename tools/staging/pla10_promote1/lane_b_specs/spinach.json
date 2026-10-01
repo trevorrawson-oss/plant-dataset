@@ -1,0 +1,32 @@
+{
+  "slug": "spinach",
+  "decision": "AGREES (lane A row held: the WSU page is a PDF). The same figure sits on a cited HTML page: umn_ext growing-spinach-and-swiss-chard \"Thin spinach to two to four inches apart.\" -> in_row [2,4] (today's value); \"Plant seeds one-fourth to one-half inch deep, in rows 18 to 30 inches apart.\" (the shared spinach-and-chard sowing sentence) -> row [18,30]. WSU Table 4 'Spinach ½ 2-4 12-18' agrees on 2-4 (rows 12-18 there). Unchanged in-row figure: no restatement adjudication.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            2,
+            4
+          ],
+          "sid": "umn_ext",
+          "url": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard",
+          "quote": "Thin spinach to two to four inches apart."
+        },
+        "row_spacing_inches": {
+          "value": [
+            18,
+            30
+          ],
+          "sid": "umn_ext",
+          "url": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard",
+          "quote": "Plant seeds one-fourth to one-half inch deep, in rows 18 to 30 inches apart."
+        }
+      }
+    }
+  ]
+}

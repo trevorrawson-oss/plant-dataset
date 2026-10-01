@@ -1,0 +1,24 @@
+{
+  "slug": "orange-navel",
+  "decision": "SCOPE -> W2 + W3. HS132 (citrus-wide, accepted under W3) states only a MINIMUM ('a minimum of 15 feet between trees'); another cited genus-level page states a RANGE, so the range wins and the minimum is noted (W2): uhawaii_ctahr F&N-14 (PDF; its text is column-interleaved, the quoted clause reads contiguously) \"should be 15-20 feet away from other trees or structures\" -> in_row [180,240] (the lemon/lime sentence form: a placement distance from other trees). No row figure (not_authored). Today's hi 300 is on no page (CTAHR's 'planted 25 feet apart' is a 70-trees-per-acre orchard figure). If the PDF ruling does not land, the fallback is HS132's minimum as the point [180,180]. No restatements (0 scanner hits). EVIDENCE NOTE: the page is a PDF; the manifest hashes the raw bytes and the quote is checked against pypdf's text extraction of those bytes (ruled 2026-10-01; PDF_TEXT_EXTRACTOR pins pypdf 6.14.2).",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            180,
+            240
+          ],
+          "sid": "uhawaii_ctahr",
+          "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/F_N-14.pdf",
+          "quote": "should be 15-20 feet away from other trees or structures"
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ]
+}

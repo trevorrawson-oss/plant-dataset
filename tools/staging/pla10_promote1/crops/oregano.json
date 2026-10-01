@@ -1,0 +1,27 @@
+{
+  "slug": "oregano",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): uf_ifas https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/ states \"Space your plants 10-12 inches apart, this will help with air circulation\" -> in_row_inches [10,12]; no between-rows figure on the cited page: row_spacing_inches not_authored. Today's spacing_inches [10,12] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        10,
+        12
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "uf_ifas"
+      ],
+      "anchoring_urls": {
+        "uf_ifas": {
+          "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

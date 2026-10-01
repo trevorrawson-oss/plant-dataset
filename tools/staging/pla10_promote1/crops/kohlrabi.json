@@ -1,0 +1,184 @@
+{
+  "slug": "kohlrabi",
+  "decision": "DIFFERS -> W1: author the page's figure. iastate_ext growing-kohlrabi states \"After thinning, kohlrabi seedlings should be spaced 6-8 inches apart within the row.\" -> in_row [6,8]; \"When planting kohlrabi in the garden, sow seeds in rows spaced 18 to 24 inches apart.\" -> row [18,24]. Today's [6,9] has no page for 9 (USU 6 / rows 12; UMN 4; VCE 4-6; NMSU 3-6; VH021 3-5). Twelve prose strings restating 6-9 are re-authored to 6-8; container notes (about 6 in) and per-row fertilizer rates agree.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        6,
+        8
+      ],
+      "row_spacing_inches": [
+        18,
+        24
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "iastate_ext"
+      ],
+      "anchoring_urls": {
+        "iastate_ext": {
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-kohlrabi-home-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "failure_diagnostics[3].next_season_tip_beginner",
+      "new": "Thin to 6 to 8 inches, grow in full sun, and go easy on nitrogen late in the crop.",
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "failure_diagnostics[3].what_happened_beginner",
+      "new": "The plant grew plenty of leaves but never formed a real bulb. This usually comes from plants set too close together, too much shade, or a lot of nitrogen late on, all of which push leafy growth over the bulb. Next time, thin to 6 to 8 inches, grow in full sun, and keep feeding modest and even.",
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "failure_diagnostics[3].what_happened_seasoned",
+      "new": "The plant made foliage but no usable swollen stem. The usual causes are crowding, insufficient light, or excess late nitrogen, each favoring leaves over the bulb. Next time thin to 6 to 8 inches, site in full sun, and keep nitrogen modest and front-loaded so the plant transitions to bulbing.",
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "new": "Thin direct-sown seedlings to about 6 to 8 inches apart. Before planting transplants outside, harden them off over about a week, and avoid setting them out into a long cold snap.",
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "new": "Thin to 6 to 8 inches; harden off transplants over 7 to 10 days and avoid exposing young plants to a prolonged cold spell, which vernalizes them and triggers bolting.",
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "new": "You can sow kohlrabi seeds right in the garden or start with young plants. For direct sowing, plant the seeds about a quarter to half an inch deep once the soil can be worked, then thin the seedlings to about 6 to 8 inches apart. For transplants, start seeds indoors about a month before planting out, and set them in the garden a week or two before the last frost. Let homegrown seedlings get used to the outdoors over a week before planting. Sow again in mid-summer for a fall crop.",
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "new": "Kohlrabi is grown both ways. Direct sowing is simple and common since the crop is fast: sow 1/4 to 1/2 inch deep once the soil is workable and thin to 6 to 8 inches apart. For an earlier or more uniform crop, start transplants indoors about 4 to 5 weeks before set-out and plant them out 1 to 2 weeks before the last frost, since young plants take light frost. Avoid exposing young plants to a long cold spell (more than about a week of nights below roughly 45 to 50°F), which can trigger bolting. Sow the fall crop in mid-summer. Harden transplants off over 7 to 10 days.",
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "thinning.tip_beginner",
+      "new": "When the seedlings have a few real leaves, thin them so each plant has about 6 to 8 inches of room. Snip the extras off at the soil instead of pulling, so you don't disturb the ones you keep. Crowded kohlrabi makes small, poor bulbs.",
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "new": "Thin direct-sown kohlrabi to 6 to 8 inches apart once seedlings have 2 to 3 true leaves, snipping rather than pulling to avoid disturbing the keepers. Crowded plants compete for moisture and make small, misshapen bulbs, and crowding stress can also push them woody.",
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "new": "Thin the seedlings to about 6 to 8 inches apart so each one has room to form a good bulb.",
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "new": "Thin to 6 to 8 inches apart; crowded plants make small, misshapen bulbs and compete for moisture.",
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "yield_expectations.factors_seasoned[4]",
+      "new": "Spacing and succession: yield over the season comes from spacing at 6 to 8 inches and sowing in small batches every 2 to 3 weeks.",
+      "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "failure_diagnostics[3].next_season_tip_beginner",
+      "verdict": "edited",
+      "note": "6-9 -> 6-8"
+    },
+    {
+      "path": "failure_diagnostics[3].what_happened_beginner",
+      "verdict": "edited",
+      "note": "6-9 -> 6-8"
+    },
+    {
+      "path": "failure_diagnostics[3].what_happened_seasoned",
+      "verdict": "edited",
+      "note": "6-9 -> 6-8"
+    },
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "verdict": "edited",
+      "note": "6-9 -> 6-8"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "verdict": "edited",
+      "note": "6-9 -> 6-8"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "verdict": "edited",
+      "note": "6-9 -> 6-8"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "edited",
+      "note": "6-9 -> 6-8"
+    },
+    {
+      "path": "thinning.tip_beginner",
+      "verdict": "edited",
+      "note": "6-9 -> 6-8"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "verdict": "edited",
+      "note": "6-9 -> 6-8"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "verdict": "edited",
+      "note": "6-9 -> 6-8"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "verdict": "edited",
+      "note": "6-9 -> 6-8"
+    },
+    {
+      "path": "yield_expectations.factors_seasoned[4]",
+      "verdict": "edited",
+      "note": "6-9 -> 6-8"
+    },
+    {
+      "path": "container_notes.notes_beginner",
+      "verdict": "agrees",
+      "note": "container spacing of about 6 inches, inside the entry's range"
+    },
+    {
+      "path": "container_notes.notes_seasoned",
+      "verdict": "agrees",
+      "note": "container spacing of about 6 inches, inside the entry's range"
+    },
+    {
+      "path": "container_notes.shape_requirements_beginner",
+      "verdict": "agrees",
+      "note": "container spacing of about 6 inches, inside the entry's range"
+    },
+    {
+      "path": "container_notes.shape_requirements_seasoned",
+      "verdict": "agrees",
+      "note": "container spacing of about 6 inches, inside the entry's range"
+    },
+    {
+      "path": "fertilizer.amount_seasoned",
+      "verdict": "agrees",
+      "note": "a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+    },
+    {
+      "path": "fertilizer.notes_seasoned",
+      "verdict": "agrees",
+      "note": "a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+    }
+  ]
+}

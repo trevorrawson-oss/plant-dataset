@@ -1,0 +1,149 @@
+{
+  "slug": "parsnip",
+  "decision": "PARTIAL -> W1 + W6: today's [3,6] is a Clemson (3) + RHS (6) union across two pages, which W6 forbids; one page's figure is authored. clemson_hgic carrot-beet-radish-parsnip states \"When the parsnip plants are 1 to 2 inches tall, thin them to 3 inches apart for good root development.\" -> in_row [3,3]; \"Rows are spaced 18 to 24 inches apart.\" -> row [18,24]. RHS 'leave one every 15cm (6in)' is the alternative point. Ten prose strings restating 3-6 (and the per-foot yield arithmetic) are re-authored to 3.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        3,
+        3
+      ],
+      "row_spacing_inches": [
+        18,
+        24
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "clemson_hgic"
+      ],
+      "anchoring_urls": {
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "new": "Thin the seedlings to a final 3 inches apart once they are growing well, snipping the extras at the soil line. Keep weeds out, because slow parsnips do not compete well, and keep the soil evenly damp.",
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "new": "Thin to a final 3 inches once seedlings are well established, snipping at the soil line. Keep the bed weed-free, since slow parsnips compete poorly, and hold even moisture.",
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "notifications[2].body_beginner",
+      "new": "Once the seedlings are growing well, thin them to 3 inches apart, snipping the extras at the soil line. Crowded parsnips stay small and twisted.",
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "notifications[2].body_seasoned",
+      "new": "Once seedlings are well established, thin to a final 3 inches; snip at the soil line. Crowded parsnips stay small and forked.",
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "thinning.tip_beginner",
+      "new": "Thinning means pulling out some of the baby parsnips so the rest have room. Once the slow seedlings are a few inches tall and growing well, thin them to a final 3 inches apart. Snip the extras off at the soil line with scissors instead of pulling, so you do not disturb the ones you keep. Crowded parsnips stay small and twisted.",
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "new": "Thin parsnips to a final 3 inches apart once the slow seedlings are well established. (Clemson HGIC; Texas A&M AgriLife) Because germination is erratic and seed is sown fairly thickly to insure a stand, the row often comes up uneven and crowded; crowded roots stay small and misshapen. Snip the extras at the soil line rather than pulling, which disturbs neighbors. Larger-rooted varieties take the wider end of the spacing.",
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "new": "Thin the seedlings to a final 3 inches apart once they are growing well, snipping the extras at the soil line instead of pulling. Crowded parsnips grow small and twisted. (Clemson HGIC; Texas A&M AgriLife)",
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "new": "Thin to a final 3 inches once the slow seedlings are established; snip at the soil line rather than pulling. Crowded parsnips grow small and forked. (Clemson HGIC; Texas A&M AgriLife)",
+      "reason": "restates the moved in-row figure (Clemson: thin to 3 in)"
+    },
+    {
+      "path": "yield_expectations.per_plant_beginner",
+      "new": "Each parsnip plant gives you one parsnip, the single long root it grows. So it helps to think about how much row you plant rather than per plant. Spaced 3 inches apart, a foot of row gives you roughly 4 big roots.",
+      "reason": "restates the moved in-row figure (Clemson: 3 in) and its per-foot arithmetic"
+    },
+    {
+      "path": "yield_expectations.per_plant_seasoned",
+      "new": "One root per plant. Parsnips are not a cut-and-come-again crop, so yield is best thought of by row length: at a 3 inch final spacing, expect roughly 4 large roots per foot of row, each often 8 to 12 inches long.",
+      "reason": "restates the moved in-row figure (Clemson: 3 in) and its per-foot arithmetic"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "verdict": "edited",
+      "note": "3-6 -> 3"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "verdict": "edited",
+      "note": "3-6 -> 3"
+    },
+    {
+      "path": "notifications[2].body_beginner",
+      "verdict": "edited",
+      "note": "3-6 -> 3"
+    },
+    {
+      "path": "notifications[2].body_seasoned",
+      "verdict": "edited",
+      "note": "3-6 -> 3"
+    },
+    {
+      "path": "thinning.tip_beginner",
+      "verdict": "edited",
+      "note": "3-6 -> 3"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "verdict": "edited",
+      "note": "3-6 -> 3"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "verdict": "edited",
+      "note": "3-6 -> 3"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "verdict": "edited",
+      "note": "3-6 -> 3"
+    },
+    {
+      "path": "yield_expectations.per_plant_beginner",
+      "verdict": "edited",
+      "note": "3-6 -> 3"
+    },
+    {
+      "path": "yield_expectations.per_plant_seasoned",
+      "verdict": "edited",
+      "note": "3-6 -> 3"
+    },
+    {
+      "path": "failure_diagnostics[0].next_season_tip_beginner",
+      "verdict": "agrees",
+      "note": "sowing depth and a radish marker row, no plant spacing"
+    },
+    {
+      "path": "failure_diagnostics[0].next_season_tip_seasoned",
+      "verdict": "agrees",
+      "note": "sowing depth and a radish marker row, no plant spacing"
+    },
+    {
+      "path": "growth_stages[2].user_action_seasoned",
+      "verdict": "agrees",
+      "note": "water per week and shoulder hilling, no plant spacing"
+    }
+  ]
+}

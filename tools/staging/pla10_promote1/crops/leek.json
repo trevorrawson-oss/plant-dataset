@@ -1,0 +1,30 @@
+{
+  "slug": "leek",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): usu_ext https://extension.usu.edu/yardandgarden/research/leeks-in-the-garden states \"After emergence, seeds should be thinned to 4-6 inches apart in rows 8-16 inches apart.\" -> in_row_inches [4,6]; AGREES (lane A, mechanical; worklist 56 §4): usu_ext https://extension.usu.edu/yardandgarden/research/leeks-in-the-garden states \"After emergence, seeds should be thinned to 4-6 inches apart in rows 8-16 inches apart.\" -> row_spacing_inches [8,16]. Today's spacing_inches [4,6] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        4,
+        6
+      ],
+      "row_spacing_inches": [
+        8,
+        16
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "usu_ext"
+      ],
+      "anchoring_urls": {
+        "usu_ext": {
+          "url": "https://extension.usu.edu/yardandgarden/research/leeks-in-the-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

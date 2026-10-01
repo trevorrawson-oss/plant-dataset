@@ -1,0 +1,51 @@
+{
+  "slug": "tomatillo",
+  "decision": "DIFFERS -> W1, and a SCOPE repair: today's four spacing anchors are TOMATO pages, and no tomatillo page states 48. usu_ext tomatillos-in-the-garden states \"Transplants should be planted 2 feet apart in rows spaced 3 feet apart.\" -> in_row [24,24], row [36,36]. WSU Table 4 'Tomatillo 18-36 36-48' (a PDF) is the range alternative; UC MG Alameda 'about two feet apart' agrees with USU. The four tomato-page anchors are dropped ('a tomato page, not tomatillo's'). The three scanner hits (plant size; watering depths) are not spacing restatements.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            24,
+            24
+          ],
+          "sid": "usu_ext",
+          "url": "https://extension.usu.edu/yardandgarden/research/tomatillos-in-the-garden",
+          "quote": "Transplants should be planted 2 feet apart in rows spaced 3 feet apart."
+        },
+        "row_spacing_inches": {
+          "value": [
+            36,
+            36
+          ],
+          "sid": "usu_ext",
+          "url": "https://extension.usu.edu/yardandgarden/research/tomatillos-in-the-garden",
+          "quote": "Transplants should be planted 2 feet apart in rows spaced 3 feet apart."
+        }
+      }
+    }
+  ],
+  "restatements": {
+    "description_seasoned": "agrees: '3 to 4 feet tall and wide ... wide spacing' is plant size, no figure",
+    "failure_diagnostics[3].next_season_tip_beginner": "agrees: mulch depth, no spacing",
+    "failure_diagnostics[3].next_season_tip_seasoned": "agrees: watering depth and mulch depth, no spacing"
+  },
+  "retired_anchor": {
+    "psu_ext": {
+      "dropped": "a tomato page, not tomatillo's (PSU heat-stress-and-tomatoes: staked 18-24 in, determinate 24 in, indeterminate unstaked 24-36 in)"
+    },
+    "iastate_ext": {
+      "dropped": "a tomato page, not tomatillo's (ISU growing-tomatoes: staked 1.5-2 ft, caged 2-3 ft, sprawl 3-4 ft)"
+    },
+    "umd_ext": {
+      "dropped": "a tomato page, not tomatillo's (UMD growing-tomatoes: 18-36 in rows x 48-60 in between rows)"
+    },
+    "umn_ext": {
+      "dropped": "a tomato page, not tomatillo's (UMN growing-tomatoes: no in-garden spacing)"
+    }
+  }
+}

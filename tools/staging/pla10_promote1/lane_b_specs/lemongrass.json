@@ -1,0 +1,37 @@
+{
+  "slug": "lemongrass",
+  "decision": "PARTIAL -> W1: author the page's figure. usu_ext lemongrass-in-the-garden states \"Lemongrass divisions should be spaced 3 feet apart in the garden\" -> in_row [36,36]; no row figure (not_authored). Today's [24,36] has no page for 24 (the NCSU toolbox 'Available Space To Plant: 12 inches-3 feet' is a footprint, W5; UC MG and UF give size only). The one restatement ('Space clumps 2 to 3 feet apart') is re-authored to about 3 feet.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            36,
+            36
+          ],
+          "sid": "usu_ext",
+          "url": "https://extension.usu.edu/yardandgarden/research/lemongrass-in-the-garden",
+          "quote": "Lemongrass divisions should be spaced 3 feet apart in the garden"
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "notifications[1].body_seasoned",
+      "replace": [
+        "Space clumps 2 to 3 feet apart.",
+        "Space clumps about 3 feet apart."
+      ],
+      "reason": "restates the moved in-row figure (USU: 3 ft)"
+    }
+  ],
+  "restatements": {
+    "notifications[1].body_seasoned": "edited: 2-3 ft -> about 3 ft"
+  }
+}

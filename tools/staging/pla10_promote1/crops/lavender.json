@@ -1,0 +1,27 @@
+{
+  "slug": "lavender",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): usu_ext_english_lavender https://extension.usu.edu/yardandgarden/research/english-lavender-in-the-garden states \"Space lavender plants 18-24 inches apart into light, well aerated, gravelly soil.\" -> in_row_inches [18,24]; no between-rows figure on the cited page: row_spacing_inches not_authored. Today's spacing_inches [18,24] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        18,
+        24
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "usu_ext_english_lavender"
+      ],
+      "anchoring_urls": {
+        "usu_ext_english_lavender": {
+          "url": "https://extension.usu.edu/yardandgarden/research/english-lavender-in-the-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

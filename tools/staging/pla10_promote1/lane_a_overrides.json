@@ -1,0 +1,71 @@
+{
+  "beet": {
+    "row_quote": "Beets Sept–Mar Sept–Feb Oct–Jan 7.5 30–60 50–70 2–4 12",
+    "note": "VH021 Table 1 row quoted as the full row string (columns: Planting dates N/C/S, Yield per 10 ft, Plants per 10 ft, Days to Harvest, Spacing Plants, Spacing Rows); Spacing Rows = 12, a stated minimum per footnote 4."
+  },
+  "cabbage": {
+    "in_row_quote": "Cabbage 67 1/2 12—24 24—36",
+    "row_quote": "Cabbage 67 1/2 12—24 24—36",
+    "note": "NMSU CR457B Table 2 row quoted as the row string (columns: Days to maturity, Depth, Distance Between Plants in Rows (in.), Distance Between Rows (in.))."
+  },
+  "eggplant": {
+    "row_quote": "Eggplant 18-24 in 30-42 in",
+    "note": "VCE 426-331 Table 5 row quoted as the row string (Distance between plants in row | Distance between rows)."
+  },
+  "english-cucumber": {
+    "row_quote": "Cucumbers 12-18 in 48-72 in",
+    "note": "VCE 426-331 Table 5 row quoted as the row string (Distance between plants in row | Distance between rows)."
+  },
+  "okra": {
+    "row_quote": "Okra 12-18 in 36-48 in",
+    "note": "VCE 426-331 Table 5 row quoted as the row string (Distance between plants in row | Distance between rows)."
+  },
+  "swiss-chard": {
+    "row_quote": "Chard, Swiss 6-12 in 18-30 in",
+    "note": "VCE 426-331 Table 5 row quoted as the row string (Distance between plants in row | Distance between rows)."
+  },
+  "parsley": {
+    "in_row_quote": "Place the plants 6 to 12 inches apart in relatively fertile soil",
+    "note": "Live page wording changed since the doc cache ('6-12″ apart in relatively rich soil' -> '6 to 12 inches apart in relatively fertile soil'); figure unchanged. The page redirects to /articles/parsley-petroselinum-crispum/ (recorded in MANIFEST.tsv)."
+  },
+  "potato": {
+    "in_row_quote": "Plant tuber pieces cut side down, 10 to 12 inches apart and about three to five inches deep, in rows 30 to 36 inches apart.",
+    "note": "Live page wording changed since the doc cache ('seed pieces' -> 'tuber pieces'); figures unchanged.",
+    "retired_anchor_dropped": {
+      "umaine_ext": "UMaine 2077e states 'Seed spacing ranges from eight to 12 inches within the row and 30 to 36 inches between rows', not the entry's UMN [10,12]; a second anchor for a different in-row figure would support nothing in the entry",
+      "clemson_hgic": "Clemson potato states 'Space the seed pieces 8 to 10 inches apart', not the entry's UMN [10,12]"
+    }
+  },
+  "onion": {
+    "note": "The row figure 'with a foot between rows' is read through the promote's IDIOMS table ('a foot' = 1 ft; ruled 2026-10-01) and authors as [12,12] from the same sentence as the in-row figure."
+  },
+  "carrot": {
+    "retired_anchor_dropped": {
+      "umd_ext": "UMD growing-carrots-home-garden states 'plant in wide rows and thin to 1 to 2 inches apart' and 'Thin to 1 - 4 inches apart', neither the entry's [2,4] (UMN) nor its row figure (Clemson); the anchor supported a value no longer authored from that page"
+    }
+  },
+  "cherry-tomato": {
+    "retired_anchor_dropped": {
+      "iastate_ext": "ISU growing-tomatoes states support-conditional figures (staked 1.5-2 ft, caged 2-3 ft, sprawl 3-4 ft, rows 4-5 ft), none equal to the PSU [24,36] the entry quotes; the staked and caged figures belong to promote 2's support entries",
+      "umd_ext": "UMD growing-tomatoes states a general envelope 'Spacing: 18\"-36\" in rows x 48\"-60\" between rows', not the entry's PSU indeterminate-unstaked figure",
+      "umn_ext": "UMN growing-tomatoes states no in-garden plant spacing (only seedling thinning to two inches)"
+    }
+  },
+  "grape-tomato": {
+    "retired_anchor_dropped": {
+      "iastate_ext": "ISU growing-tomatoes states support-conditional figures (staked 1.5-2 ft, caged 2-3 ft, sprawl 3-4 ft, rows 4-5 ft), none equal to the PSU [24,36] the entry quotes; the staked and caged figures belong to promote 2's support entries",
+      "umd_ext": "UMD growing-tomatoes states a general envelope 'Spacing: 18\"-36\" in rows x 48\"-60\" between rows', not the entry's PSU indeterminate-unstaked figure",
+      "umn_ext": "UMN growing-tomatoes states no in-garden plant spacing (only seedling thinning to two inches)"
+    }
+  },
+  "lime": {
+    "retired_anchor_dropped": {
+      "ufifas_ext": "CH093 (the sibling UF citrus page) carries no planting-distance sentence in its cached text; the entry's [144,240] is CH092's 'Key lime trees ... 12 to 20 feet or more'"
+    }
+  },
+  "radish": {
+    "retired_anchor_dropped": {
+      "umn_ext": "UMN growing-radishes states 'thin radishes to about two inches between plants' and 'four to six inches' for daikons, not the entry's UMD [2,4]"
+    }
+  }
+}

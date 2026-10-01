@@ -1,0 +1,37 @@
+{
+  "slug": "pickling-cucumber",
+  "decision": "DIFFERS -> W1: the only pickling-specific figure on a cited page. osu_ext planting table row \"Cucumbers (pickling) 4 weeks May May-June May-June April 15-June 25' of row 48\" 6-12\"\" (footnote: narrower spacings for small gardens) -> in_row [6,12], row [48,48]. Today's [8,18] is a Clemson lo + ISU hi blend across two pages (W6). No hill entry (ISU/UMN hills give seeds, not plants after thinning). The one scanner hit (sow per station) is not a spacing restatement. EVIDENCE NOTE: the page is a PDF; the manifest hashes the raw bytes and the quote is checked against pypdf's text extraction of those bytes (ruled 2026-10-01; PDF_TEXT_EXTRACTOR pins pypdf 6.14.2).",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        6,
+        12
+      ],
+      "row_spacing_inches": [
+        48,
+        48
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "osu_ext"
+      ],
+      "anchoring_urls": {
+        "osu_ext": {
+          "url": "https://ir.library.oregonstate.edu/downloads/v979v342w",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "restatements": [
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "agrees",
+      "note": "'several seeds per hill or station' states no distance"
+    }
+  ]
+}

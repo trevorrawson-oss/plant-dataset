@@ -1,0 +1,65 @@
+{
+  "slug": "viola",
+  "decision": "DIFFERS -> W1 + W6 (a span from two clauses of ONE sentence is fine). clemson_hgic pansies-and-johnny-jump-ups states \"Plant pansies and Johnny-jump-ups 6 to 8 inches apart for small-flowered cultivars and 10 to 12 inches apart for large-flowered.\" The crop covers pansies, violas and Johnny-jump-ups, so the envelope of both clauses authors -> in_row [6,12]; no row figure (not_authored). Today's hi 10 is on no page. viola leaves the R5 hunt list (a cited page states a figure). Four prose strings restating 6-10 are re-authored to 6-12.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            6,
+            12
+          ],
+          "sid": "clemson_hgic",
+          "url": "https://hgic.clemson.edu/factsheet/pansies-and-johnny-jump-ups/",
+          "quote": "Plant pansies and Johnny-jump-ups 6 to 8 inches apart for small-flowered cultivars and 10 to 12 inches apart for large-flowered."
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "replace": [
+        "about 6 to 10 inches apart",
+        "about 6 to 12 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (Clemson envelope 6-12 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "replace": [
+        "space to 6 to 10 in",
+        "space to 6 to 12 in"
+      ],
+      "reason": "restates the moved in-row figure (Clemson envelope 6-12 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "replace": [
+        "6 to 10 inches of space",
+        "6 to 12 inches of space"
+      ],
+      "reason": "restates the moved in-row figure (Clemson envelope 6-12 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "replace": [
+        "space them 6 to 10 in",
+        "space them 6 to 12 in"
+      ],
+      "reason": "restates the moved in-row figure (Clemson envelope 6-12 in)"
+    }
+  ],
+  "restatements": {
+    "growth_stages[1].user_action_beginner": "edited: 6-10 -> 6-12",
+    "growth_stages[1].user_action_seasoned": "edited: 6-10 -> 6-12",
+    "tips_by_stage.seedling[0].text_beginner": "edited: 6-10 -> 6-12",
+    "tips_by_stage.seedling[0].text_seasoned": "edited: 6-10 -> 6-12",
+    "regions.rgv.plantings[0].plant_out[0].synthesis_note_seasoned": "agrees: a planting-date note, no spacing"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "lemon",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): uf_ifas_hs1153 https://edis.ifas.ufl.edu/publication/HS402 states \"Lemon trees in the home landscape should be planted in full sun, 15 to 25 feet or more (6.1 to 7.6 m) away from buildings and other trees.\" -> in_row_inches [180,300]; no between-rows figure on the cited page: row_spacing_inches not_authored. Today's spacing_inches [180,300] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        180,
+        300
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "uf_ifas_hs1153"
+      ],
+      "anchoring_urls": {
+        "uf_ifas_hs1153": {
+          "url": "https://edis.ifas.ufl.edu/publication/HS402",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "retired_anchor": {
+    "uf_ifas_hs1153": "moved"
+  }
+}

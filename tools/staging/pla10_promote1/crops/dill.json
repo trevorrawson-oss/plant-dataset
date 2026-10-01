@@ -1,0 +1,379 @@
+{
+  "slug": "dill",
+  "decision": "DIFFERS -> W1: author the page's figure. usu_ext dill-in-the-garden states \"After emergence, thin plants to 9 inches apart and space rows 12 inch apart.\" -> in_row [9,9], row [12,12]. Today's [8,12] blends USU's 9 with a non-catalog 10-12 (open_findings[2]); UWI gives 3-6 (cut-leaf regime). 34 prose strings restate 8-12 (7 crop fields and 27 shared region notes) and are re-authored to 'about 9'; the cut-leaf 4-6 regime in the same sentences is left as is.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        9,
+        9
+      ],
+      "row_spacing_inches": [
+        12,
+        12
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "usu_ext"
+      ],
+      "anchoring_urls": {
+        "usu_ext": {
+          "url": "https://extension.usu.edu/yardandgarden/research/dill-in-the-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "new": "Thin the seedlings to about 9 inches apart, and use the ones you pull. Keep the water steady.",
+      "reason": "restates the moved in-row figure (USU: 9 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "new": "Thin to about 9 inches for full plants, or 4 to 6 inches for cut leaf, and use the thinnings in the kitchen. Keep moisture steady to delay the bolt.",
+      "reason": "restates the moved in-row figure (USU: 9 in)"
+    },
+    {
+      "path": "notifications[0].body_seasoned",
+      "new": "Your dill should have a true leaf or two now. Thin to about 9 inches for full plants or 4 to 6 inches for cut leaf, and use the thinnings.",
+      "reason": "restates the moved in-row figure (USU: 9 in)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "new": "Plant dill straight in the garden from seed, because it has a deep little root and does not like being moved. Sow the seeds about a quarter inch deep as soon as the soil can be worked in spring, since young plants handle light frost. The seeds are slow, often taking two to three weeks, so keep the soil moist. Thin the plants to about 9 inches apart, and sow again every couple of weeks for a steady supply. In hot areas plant in fall through spring instead of summer, because heat makes it bolt; a summer crop is really for the seed and pickling heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in)"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "new": "Dill is almost always direct-sown, since it forms a slender taproot and resents transplanting. Sow seed about 0.25 inch deep as soon as the soil can be worked in spring; young dill tolerates light frost, so Wisconsin Horticulture suggests sowing a week or two before the last hard frost, and it germinates slowly, often 10 to 21 days. Sow a little thicker than the final stand and thin to about 9 inches for full plants, or 4 to 6 inches for cut leaf. Succession-sow every 2 to 3 weeks for a steady leaf supply. In hot regions, shift sowing to fall through spring, since summer heat and long days bolt the crop to seed; midsummer plantings are grown for seed and pickling heads rather than leaves.",
+      "reason": "restates the moved in-row figure (USU: 9 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "new": "Thin the little dill plants so they are not crowded, about 9 inches apart, and use the ones you pull. Crowded dill flowers sooner, so giving it room keeps the leaves coming.",
+      "reason": "restates the moved in-row figure (USU: 9 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "new": "Thin dill seedlings to about 9 inches for full plants or 4 to 6 inches for cut leaf, and use the thinnings. Crowded plants bolt sooner and mildew more, so give them room. Keep moisture steady to delay the bolt.",
+      "reason": "restates the moved in-row figure (USU: 9 in)"
+    },
+    {
+      "path": "regions.ca_desert.resolved_by_zone.10.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_desert.resolved_by_zone.11.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_desert.resolved_by_zone.9.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_interior.resolved_by_zone.8.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_interior.resolved_by_zone.9.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_north_coast.resolved_by_zone.10.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_north_coast.resolved_by_zone.9.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_south_coast.resolved_by_zone.10.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_south_coast.resolved_by_zone.11.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.ca_south_coast.resolved_by_zone.9.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.fl_peninsula.resolved_by_zone.10.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.fl_peninsula.resolved_by_zone.11.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.hawaii_tropical.resolved_by_zone.10.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.hawaii_tropical.resolved_by_zone.11.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.hawaii_tropical.resolved_by_zone.12.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.hawaii_tropical.resolved_by_zone.13.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.low_desert_az.resolved_by_zone.10.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.low_desert_az.resolved_by_zone.9.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.northern_tier.resolved_by_zone.3.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.northern_tier.resolved_by_zone.4.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.northern_tier.resolved_by_zone.5.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.northern_tier.resolved_by_zone.6.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.northern_tier.resolved_by_zone.7.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.se_gulf.resolved_by_zone.10.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.se_gulf.resolved_by_zone.8.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.se_gulf.resolved_by_zone.9.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    },
+    {
+      "path": "regions.warm_arid.resolved_by_zone.8.notes",
+      "new": "Direct sow shallowly and succession-sow every 2 to 3 weeks, thinning to about 9 inches and using the thinnings. Dill bolts to seed and pickling heads once summer heat and long days set in, so crop the leaves through the cool windows; let warm-season plants run on for seed heads.",
+      "reason": "restates the moved in-row figure (USU: 9 in); region note shared across zones"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "verdict": "edited",
+      "note": "8-12 -> about 9"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "verdict": "edited",
+      "note": "8-12 -> about 9"
+    },
+    {
+      "path": "notifications[0].body_seasoned",
+      "verdict": "edited",
+      "note": "8-12 -> about 9"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "verdict": "edited",
+      "note": "8-12 -> about 9"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "edited",
+      "note": "8-12 -> about 9"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "verdict": "edited",
+      "note": "8-12 -> about 9"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "verdict": "edited",
+      "note": "8-12 -> about 9"
+    },
+    {
+      "path": "regions.ca_desert.resolved_by_zone.10.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.ca_desert.resolved_by_zone.11.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.ca_desert.resolved_by_zone.9.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.ca_interior.resolved_by_zone.8.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.ca_interior.resolved_by_zone.9.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.ca_north_coast.resolved_by_zone.10.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.ca_north_coast.resolved_by_zone.9.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.ca_south_coast.resolved_by_zone.10.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.ca_south_coast.resolved_by_zone.11.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.ca_south_coast.resolved_by_zone.9.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.fl_peninsula.resolved_by_zone.10.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.fl_peninsula.resolved_by_zone.11.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.hawaii_tropical.resolved_by_zone.10.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.hawaii_tropical.resolved_by_zone.11.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.hawaii_tropical.resolved_by_zone.12.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.hawaii_tropical.resolved_by_zone.13.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.low_desert_az.resolved_by_zone.10.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.low_desert_az.resolved_by_zone.9.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.northern_tier.resolved_by_zone.3.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.northern_tier.resolved_by_zone.4.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.northern_tier.resolved_by_zone.5.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.northern_tier.resolved_by_zone.6.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.northern_tier.resolved_by_zone.7.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.se_gulf.resolved_by_zone.10.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.se_gulf.resolved_by_zone.8.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.se_gulf.resolved_by_zone.9.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "regions.warm_arid.resolved_by_zone.8.notes",
+      "verdict": "edited",
+      "note": "8-12 -> about 9 (shared region note)"
+    },
+    {
+      "path": "varieties.recommended[2].note",
+      "verdict": "agrees",
+      "note": "'about 18 inches' is a plant height, not a spacing"
+    }
+  ]
+}

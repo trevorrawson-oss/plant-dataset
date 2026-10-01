@@ -1,0 +1,109 @@
+{
+  "slug": "chamomile",
+  "decision": "PARTIAL -> W1: author the page's figure. msu_bozeman (Montana State WARC herb page; the quoted sentence is the culture recommendation, NOT the trial layout '8.4\" between plants and 18\" between rows', which is excluded) states \"Transplants may be spaced 8\" apart in rows 18\" apart.\" -> in_row [8,8], row [18,18]. Nothing cited states 12 (TX MG and UC MG give plant WIDTH, not spacing; NCSU toolbox is a category). Today's [8,12] -> [8,8]; the seven prose restatements of 8-12 are re-authored to about 8.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        8,
+        8
+      ],
+      "row_spacing_inches": [
+        18,
+        18
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "msu_bozeman"
+      ],
+      "anchoring_urls": {
+        "msu_bozeman": {
+          "url": "https://agresearch.montana.edu/warc/research_current/research_past/herbsandoils/chamomile.html",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "new": "Thin plants to about 8 inches apart and water the soil, not the leaves.",
+      "reason": "restates the moved in-row figure (MSU: 8 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "new": "Thin to about 8 in for airflow; water at the base and watch for aphids and damping-off in damp weather.",
+      "reason": "restates the moved in-row figure (MSU: 8 in)"
+    },
+    {
+      "path": "notifications[1].body_beginner",
+      "new": "Thin your chamomile to about 8 inches apart now so air can move between the plants.",
+      "reason": "restates the moved in-row figure (MSU: 8 in)"
+    },
+    {
+      "path": "notifications[1].body_seasoned",
+      "new": "Thin chamomile to about 8 in once seedlings have a few true leaves; airflow limits powdery mildew and botrytis.",
+      "reason": "restates the moved in-row figure (MSU: 8 in)"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "new": "Chamomile is easiest direct-sown: scatter the fine seed on the surface of cool soil (around 55°F) and press it in without covering, since light aids germination. It sprouts in about 1 to 2 weeks and self-thins little, so thin to about 8 in. To gain time in short-season areas, start indoors about 4 to 6 weeks before the last frost and transplant while seedlings are small, because larger plants transplant poorly. Sowing in fall lets it overwinter and reseed in mild zones.",
+      "reason": "restates the moved in-row figure (MSU: 8 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "new": "Once seedlings have a few real leaves, thin them to about 8 inches apart. Room for air to move helps prevent mildew and mold.",
+      "reason": "restates the moved in-row figure (MSU: 8 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "new": "Thin seedlings to about 8 in once they have a few true leaves; spacing for airflow is the main defense against powdery mildew, botrytis, and damping-off on a stand of fine-seeded chamomile.",
+      "reason": "restates the moved in-row figure (MSU: 8 in)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "verdict": "edited",
+      "note": "8-12 -> about 8"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "verdict": "edited",
+      "note": "8-12 -> about 8"
+    },
+    {
+      "path": "notifications[1].body_beginner",
+      "verdict": "edited",
+      "note": "8-12 -> about 8"
+    },
+    {
+      "path": "notifications[1].body_seasoned",
+      "verdict": "edited",
+      "note": "8-12 -> about 8"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "edited",
+      "note": "8-12 -> about 8"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "verdict": "edited",
+      "note": "8-12 -> about 8"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "verdict": "edited",
+      "note": "8-12 -> about 8"
+    },
+    {
+      "path": "regions.rgv.plantings[0].plant_out[0].synthesis_note_seasoned",
+      "verdict": "agrees",
+      "note": "a planting-date note, no spacing"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "peach",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): ncsu_ext https://content.ces.ncsu.edu/north-carolina-production-guide-for-smaller-orchard-plantings states \"should be planted on an 18- to 20-foot x 20-foot spacing\" -> in_row_inches [216,240]; AGREES (lane A, mechanical; worklist 56 §4): ncsu_ext https://content.ces.ncsu.edu/north-carolina-production-guide-for-smaller-orchard-plantings states \"should be planted on an 18- to 20-foot x 20-foot spacing\" -> row_spacing_inches [240,240]. Today's spacing_inches [216,240] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        216,
+        240
+      ],
+      "row_spacing_inches": [
+        240,
+        240
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "ncsu_ext"
+      ],
+      "anchoring_urls": {
+        "ncsu_ext": {
+          "url": "https://content.ces.ncsu.edu/north-carolina-production-guide-for-smaller-orchard-plantings",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "slug": "turnip",
+  "decision": "PARTIAL -> W1 + W6: today's [2,4] is a Clemson lo + USU hi blend across two pages. clemson_hgic turnips-rutabagas (covers turnip and rutabaga jointly) states \"Space plants 2 to 3 inches apart in the row.\" -> in_row [2,3]; \"Plant in rows that are 14 to 18 inches apart.\" -> row [14,18]. USU's 'thin turnips 3-4 inches between plants in rows 12-18 inches apart' is the alternative. Eleven prose strings restating 2-4 are re-authored to 2-3; container notes keep their pot guidance.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            2,
+            3
+          ],
+          "sid": "clemson_hgic",
+          "url": "https://hgic.clemson.edu/factsheet/turnips-rutabagas/",
+          "quote": "Space plants 2 to 3 inches apart in the row."
+        },
+        "row_spacing_inches": {
+          "value": [
+            14,
+            18
+          ],
+          "sid": "clemson_hgic",
+          "url": "https://hgic.clemson.edu/factsheet/turnips-rutabagas/",
+          "quote": "Plant in rows that are 14 to 18 inches apart."
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "failure_diagnostics[3].next_season_tip_beginner",
+      "replace": [
+        "thin the turnips to 2 to 4 inches",
+        "thin the turnips to 2 to 3 inches"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: 2-3 in)"
+    },
+    {
+      "path": "failure_diagnostics[3].next_season_tip_seasoned",
+      "replace": [
+        "thin to 2 to 4 inches",
+        "thin to 2 to 3 inches"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: 2-3 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "replace": [
+        "about 2 to 4 inches apart once",
+        "about 2 to 3 inches apart once"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: 2-3 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "replace": [
+        "final 2 to 4 inches apart once",
+        "final 2 to 3 inches apart once"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: 2-3 in)"
+    },
+    {
+      "path": "notifications[1].body_beginner",
+      "replace": [
+        "thin them to 2 to 4 inches apart",
+        "thin them to 2 to 3 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: 2-3 in)"
+    },
+    {
+      "path": "notifications[1].body_seasoned",
+      "replace": [
+        "final 2 to 4 inches apart",
+        "final 2 to 3 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: 2-3 in)"
+    },
+    {
+      "path": "thinning.tip_beginner",
+      "replace": [
+        "about 2 to 4 inches apart once",
+        "about 2 to 3 inches apart once"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: 2-3 in)"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "new": "Turnips are sown a little thick and must be thinned, or the crowded roots stay small and misshapen. Thin to a final 2 to 3 inches apart once seedlings reach 2 to 4 inches tall, closer for salad turnips and greens and toward 3 inches for full-size roots, snipping the extras at the soil line rather than pulling so you do not disturb the ones you keep. Do not waste the thinnings: the young leaves are tender baby turnip greens, so thinning is also a first small harvest.",
+      "reason": "restates the moved in-row figure (Clemson: 2-3 in); the 'wider (3 to 4 inches)' clause (USU) is re-authored to 'toward 3 inches'"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "replace": [
+        "about 2 to 4 inches apart once",
+        "about 2 to 3 inches apart once"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: 2-3 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "replace": [
+        "final 2 to 4 inches once",
+        "final 2 to 3 inches once"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: 2-3 in)"
+    },
+    {
+      "path": "yield_expectations.per_plant_seasoned",
+      "replace": [
+        "at a 2 to 4 inch final spacing",
+        "at a 2 to 3 inch final spacing"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: 2-3 in)"
+    }
+  ],
+  "restatements": {
+    "failure_diagnostics[3].next_season_tip_beginner": "edited: 2-4 -> 2-3",
+    "failure_diagnostics[3].next_season_tip_seasoned": "edited: 2-4 -> 2-3",
+    "growth_stages[1].user_action_beginner": "edited: 2-4 -> 2-3",
+    "growth_stages[1].user_action_seasoned": "edited: 2-4 -> 2-3",
+    "notifications[1].body_beginner": "edited: 2-4 -> 2-3",
+    "notifications[1].body_seasoned": "edited: 2-4 -> 2-3",
+    "thinning.tip_beginner": "edited: 2-4 -> 2-3",
+    "thinning.tip_seasoned": "edited: 2-4 -> 2-3",
+    "tips_by_stage.seedling[0].text_beginner": "edited: 2-4 -> 2-3",
+    "tips_by_stage.seedling[0].text_seasoned": "edited: 2-4 -> 2-3",
+    "yield_expectations.per_plant_seasoned": "edited: 2-4 -> 2-3",
+    "container_notes.notes_beginner": "agrees: container guidance (about 3 to 4 inches in a pot), not the in-ground entry",
+    "container_notes.notes_seasoned": "agrees: container guidance (about 3 to 4 inches in a pot), not the in-ground entry",
+    "container_notes.shape_requirements_beginner": "agrees: container guidance (about 3 to 4 inches in a pot), not the in-ground entry",
+    "container_notes.shape_requirements_seasoned": "agrees: container guidance (about 3 to 4 inches in a pot), not the in-ground entry",
+    "notifications[0].body_beginner": "agrees: sowing depth, no plant spacing",
+    "notifications[0].body_seasoned": "agrees: sowing depth, no plant spacing",
+    "yield_expectations.per_plant_beginner": "agrees: yield per row, no figure"
+  }
+}

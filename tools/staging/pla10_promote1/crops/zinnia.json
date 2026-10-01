@@ -1,0 +1,74 @@
+{
+  "slug": "zinnia",
+  "decision": "DIFFERS -> W1 + W6 (two clauses of ONE sentence). clemson_hgic_1149 states \"Dwarf cultivars should be planted or thinned 8 to 9 inches apart, whereas taller 2- to 3-foot zinnia cultivars should be spaced a foot apart.\" -> in_row [8,12] (dwarf 8-9, tall 12). Today's [9,12] has no page for 9 as a low; UF/IFAS FP623 'spaced 8 to 12 inches apart' agrees. Row: the live page states 'When planting multiple rows of zinnias, space the rows a foot apart.' (the worklist's '12 to 18 inches' sentence is no longer on the page); 'a foot' is read through the promote's IDIOMS table (ruled 2026-10-01) -> row [12,12]. Four prose strings restating 9-12 are re-authored to 8-12.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        8,
+        12
+      ],
+      "row_spacing_inches": [
+        12,
+        12
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "clemson_hgic_1149"
+      ],
+      "anchoring_urls": {
+        "clemson_hgic_1149": {
+          "url": "https://hgic.clemson.edu/factsheet/how-to-grow-zinnias-the-best-varieties-care-tips/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "new": "Space plants about 8 to 12 inches apart and water the soil, not the leaves.",
+      "reason": "restates the moved in-row figure (Clemson: dwarf 8-9, tall a foot)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "new": "Thin or space to 8 to 12 in; water at the base to keep foliage dry.",
+      "reason": "restates the moved in-row figure (Clemson: dwarf 8-9, tall a foot)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "new": "Once seedlings have a few real leaves, thin them so plants stand about 8 to 12 inches apart. Giving them room for air to move helps prevent the white powdery mildew zinnias often get.",
+      "reason": "restates the moved in-row figure (Clemson: dwarf 8-9, tall a foot)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "new": "Thin or space seedlings to 8 to 12 in once they have a few true leaves; generous spacing for airflow is a primary cultural defense against powdery mildew later.",
+      "reason": "restates the moved in-row figure (Clemson: dwarf 8-9, tall a foot)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "verdict": "edited",
+      "note": "9-12 -> 8-12"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "verdict": "edited",
+      "note": "9-12 -> 8-12"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "verdict": "edited",
+      "note": "9-12 -> 8-12"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "verdict": "edited",
+      "note": "9-12 -> 8-12"
+    }
+  ]
+}

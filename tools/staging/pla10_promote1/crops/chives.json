@@ -1,0 +1,101 @@
+{
+  "slug": "chives",
+  "decision": "DIFFERS -> W1: author the page's figure. umn_ext growing-chives states \"Space plants 6 to 12 inches apart.\" (the division/replant paragraph: a clump spacing) -> in_row [6,12]; no row figure (not_authored). Today's [8,12] is on no cited page (UWI gives clumps 12 to 20). The seven prose restatements of 8-12 are re-authored to 6-12.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        6,
+        12
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "umn_ext"
+      ],
+      "anchoring_urls": {
+        "umn_ext": {
+          "url": "https://extension.umn.edu/vegetables/growing-chives",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "failure_diagnostics[3].what_happened_seasoned",
+      "new": "The clump crowded itself, vigor fell, and the center thinned or died out, a classic sign an established perennial chive is overdue for division. Next spring lift the clump and split it into divisions of at least several bulblets each, discarding a dead center, and replant at 6 to 12 inch spacing in refreshed soil.",
+      "reason": "restates the moved in-row figure (UMN: 6-12 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "new": "Go easy on cutting the first year and keep the soil moist so the plant gets strong for winter. Space plants about 6 to 12 inches apart.",
+      "reason": "restates the moved in-row figure (UMN: 6-12 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "new": "Harvest sparingly the first year and keep moisture steady so the clump can bank strength for winter; a light feeding helps a weak plant. Thin or space seedlings to about 6 to 12 inches.",
+      "reason": "restates the moved in-row figure (UMN: 6-12 in)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "new": "The easiest way to start chives is to buy a small pot or split a clump from a friend, which is ready to cut almost right away. You can also grow them from seed, but the seed is slow, taking a couple of weeks or more, so start it indoors about 6 to 8 weeks before the last frost, sowing a small pinch of seeds in each cell and growing them on as a little clump that you plant out whole without separating, or sow it outside once the soil is warm. Plant outside in spring in cold areas, or in fall through winter where summers are hot. Space plants about 6 to 12 inches apart, and remember one clump can be split into many.",
+      "reason": "restates the moved in-row figure (UMN: 6-12 in)"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "new": "Chives are easiest to establish from a division or a nursery clump, which gives a cuttable plant in weeks, but they also grow readily from seed. The seed is slow, germinating over about 2 to 3 weeks (up to 4 to 6 in cool soil), so start it indoors 6 to 8 weeks before the last frost, sowing a pinch of about 8 to 10 seeds per cell and growing them on as an undivided clump that transplants out whole after hardening off, with no thinning (RHS), or direct-sow once the soil warms. Plant outdoors in spring after hard-frost danger passes in cold regions, or in fall through late winter in mild and hot regions. Set clumps 6 to 12 inches apart; they widen over the years and are the easiest herb to propagate by simply lifting and splitting an established clump.",
+      "reason": "restates the moved in-row figure (UMN: 6-12 in)"
+    },
+    {
+      "path": "tips_by_stage.establishment[0].text_beginner",
+      "new": "Go easy cutting chives the first year, since taking too much weakens the young plant before winter. Keep the soil moist and space plants about 6 to 12 inches apart.",
+      "reason": "restates the moved in-row figure (UMN: 6-12 in)"
+    },
+    {
+      "path": "tips_by_stage.establishment[0].text_seasoned",
+      "new": "Do not over-harvest first-year chives: taking too many leaves weakens a young clump and hurts its ability to overwinter. Cut lightly, keep moisture steady, and space plants about 6 to 12 inches so the clumps have room to widen.",
+      "reason": "restates the moved in-row figure (UMN: 6-12 in)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "failure_diagnostics[3].what_happened_seasoned",
+      "verdict": "edited",
+      "note": "8-12 -> 6-12"
+    },
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "verdict": "edited",
+      "note": "8-12 -> 6-12"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "verdict": "edited",
+      "note": "8-12 -> 6-12"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "verdict": "edited",
+      "note": "8-12 -> 6-12"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "edited",
+      "note": "8-12 -> 6-12"
+    },
+    {
+      "path": "tips_by_stage.establishment[0].text_beginner",
+      "verdict": "edited",
+      "note": "8-12 -> 6-12"
+    },
+    {
+      "path": "tips_by_stage.establishment[0].text_seasoned",
+      "verdict": "edited",
+      "note": "8-12 -> 6-12"
+    }
+  ]
+}

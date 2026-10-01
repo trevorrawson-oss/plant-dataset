@@ -1,0 +1,27 @@
+{
+  "slug": "borage",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): ucanr_marin_mg https://ucanr.edu/site/uc-marin-master-gardeners/document/borage states \"Thin so mature plants stand a foot or two apart.\" -> in_row_inches [12,24]; no between-rows figure on the cited page: row_spacing_inches not_authored. Today's spacing_inches [12,24] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        12,
+        24
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "ucanr_marin_mg"
+      ],
+      "anchoring_urls": {
+        "ucanr_marin_mg": {
+          "url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/borage",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

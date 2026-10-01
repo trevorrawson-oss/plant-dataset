@@ -1,0 +1,72 @@
+{
+  "slug": "zinnia",
+  "decision": "DIFFERS -> W1 + W6 (two clauses of ONE sentence). clemson_hgic_1149 states \"Dwarf cultivars should be planted or thinned 8 to 9 inches apart, whereas taller 2- to 3-foot zinnia cultivars should be spaced a foot apart.\" -> in_row [8,12] (dwarf 8-9, tall 12). Today's [9,12] has no page for 9 as a low; UF/IFAS FP623 'spaced 8 to 12 inches apart' agrees. Row: the live page states 'When planting multiple rows of zinnias, space the rows a foot apart.' (the worklist's '12 to 18 inches' sentence is no longer on the page); 'a foot' is read through the promote's IDIOMS table (ruled 2026-10-01) -> row [12,12]. Four prose strings restating 9-12 are re-authored to 8-12.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            8,
+            12
+          ],
+          "sid": "clemson_hgic_1149",
+          "url": "https://hgic.clemson.edu/factsheet/how-to-grow-zinnias-the-best-varieties-care-tips/",
+          "quote": "Dwarf cultivars should be planted or thinned 8 to 9 inches apart, whereas taller 2- to 3-foot zinnia cultivars should be spaced a foot apart."
+        },
+        "row_spacing_inches": {
+          "value": [
+            12,
+            12
+          ],
+          "sid": "clemson_hgic_1149",
+          "url": "https://hgic.clemson.edu/factsheet/how-to-grow-zinnias-the-best-varieties-care-tips/",
+          "quote": "When planting multiple rows of zinnias, space the rows a foot apart."
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "replace": [
+        "about 9 to 12 inches apart",
+        "about 8 to 12 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: dwarf 8-9, tall a foot)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "replace": [
+        "space to 9 to 12 in",
+        "space to 8 to 12 in"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: dwarf 8-9, tall a foot)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_beginner",
+      "replace": [
+        "about 9 to 12 inches apart",
+        "about 8 to 12 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: dwarf 8-9, tall a foot)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "replace": [
+        "seedlings to 9 to 12 in",
+        "seedlings to 8 to 12 in"
+      ],
+      "reason": "restates the moved in-row figure (Clemson: dwarf 8-9, tall a foot)"
+    }
+  ],
+  "restatements": {
+    "growth_stages[1].user_action_beginner": "edited: 9-12 -> 8-12",
+    "growth_stages[1].user_action_seasoned": "edited: 9-12 -> 8-12",
+    "tips_by_stage.seedling[0].text_beginner": "edited: 9-12 -> 8-12",
+    "tips_by_stage.seedling[0].text_seasoned": "edited: 9-12 -> 8-12"
+  }
+}

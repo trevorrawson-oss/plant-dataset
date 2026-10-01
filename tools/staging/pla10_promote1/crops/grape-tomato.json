@@ -1,0 +1,42 @@
+{
+  "slug": "grape-tomato",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): psu_ext https://extension.psu.edu/heat-stress-and-tomatoes states \"24 to 36 inches between plants in a row and a minimum of 5–6 feet between rows for indeterminate tomatoes without stakes\" -> in_row_inches [24,36]; AGREES (lane A, mechanical; worklist 56 §4): psu_ext https://extension.psu.edu/heat-stress-and-tomatoes states \"a minimum of 5–6 feet between rows\" -> row_spacing_inches [60,72]. Today's spacing_inches [24,36] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        24,
+        36
+      ],
+      "row_spacing_inches": [
+        60,
+        72
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "psu_ext"
+      ],
+      "anchoring_urls": {
+        "psu_ext": {
+          "url": "https://extension.psu.edu/heat-stress-and-tomatoes",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "retired_anchor": {
+    "psu_ext": "moved",
+    "iastate_ext": {
+      "dropped": "ISU growing-tomatoes states support-conditional figures (staked 1.5-2 ft, caged 2-3 ft, sprawl 3-4 ft, rows 4-5 ft), none equal to the PSU [24,36] the entry quotes; the staked and caged figures belong to promote 2's support entries"
+    },
+    "umd_ext": {
+      "dropped": "UMD growing-tomatoes states a general envelope 'Spacing: 18\"-36\" in rows x 48\"-60\" between rows', not the entry's PSU indeterminate-unstaked figure"
+    },
+    "umn_ext": {
+      "dropped": "UMN growing-tomatoes states no in-garden plant spacing (only seedling thinning to two inches)"
+    }
+  }
+}

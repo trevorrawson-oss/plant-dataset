@@ -1,0 +1,73 @@
+{
+  "slug": "banana-pepper",
+  "decision": "DIFFERS -> W1: author the page's figure. uga_ext C1005 Home Garden Peppers (names 'Sweet Banana' among its cultivars; same species C. annuum) states \"When planting, space pepper plants 12–24 in. apart in the row, with rows about 3 ft apart.\" -> in_row [12,24], row [36,36]. Today's [12,18] is a two-page blend (Clemson 12 lo + UMN/ISU 18 hi) that no cited page states; VCE 426-331 Table 5 ('Peppers 12-24 in 30-36 in') and UMD ('12\"- 24\" in-rows x 30\"- 36\"') agree with UGA on 12-24. The four prose restatements of 12-18 are re-authored to 12-24 in the same promote (R3).",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            12,
+            24
+          ],
+          "sid": "uga_ext",
+          "url": "https://fieldreport.caes.uga.edu/publications/C1005/home-garden-peppers/",
+          "quote": "When planting, space pepper plants 12–24 in. apart in the row, with rows about 3 ft apart."
+        },
+        "row_spacing_inches": {
+          "value": [
+            36,
+            36
+          ],
+          "sid": "uga_ext",
+          "url": "https://fieldreport.caes.uga.edu/publications/C1005/home-garden-peppers/",
+          "quote": "with rows about 3 ft apart"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[2].user_action_beginner",
+      "replace": [
+        "12 to 18 inches apart",
+        "12 to 24 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (UGA C1005: 12-24 in)"
+    },
+    {
+      "path": "growth_stages[2].user_action_seasoned",
+      "replace": [
+        "12 to 18 inches apart in rows about 3 feet apart",
+        "12 to 24 inches apart in rows about 3 feet apart"
+      ],
+      "reason": "restates the moved in-row figure (UGA C1005: 12-24 in)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "replace": [
+        "space them 12 to 18 inches apart",
+        "space them 12 to 24 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (UGA C1005: 12-24 in)"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "replace": [
+        "set them 12 to 18 inches apart in rows about 3 feet apart",
+        "set them 12 to 24 inches apart in rows about 3 feet apart"
+      ],
+      "reason": "restates the moved in-row figure (UGA C1005: 12-24 in)"
+    }
+  ],
+  "restatements": {
+    "growth_stages[2].user_action_beginner": "edited: 12-18 -> 12-24",
+    "growth_stages[2].user_action_seasoned": "edited: 12-18 -> 12-24",
+    "start_method.notes_beginner": "edited: 12-18 -> 12-24",
+    "start_method.notes_seasoned": "edited: 12-18 -> 12-24",
+    "yield_expectations.per_plant_seasoned": "agrees: a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+  }
+}

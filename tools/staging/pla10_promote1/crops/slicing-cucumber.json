@@ -1,0 +1,42 @@
+{
+  "slug": "slicing-cucumber",
+  "decision": "DIFFERS -> W1: author the page's figure. vce_426_331 Table 5 row \"Cucumbers 12-18 in 48-72 in\" -> in_row [12,18], row [48,72]. Today's [12,24] has no page for 24 (UMD 12 in; Clemson 8-10 non-trellised; NMSU CR457B 8-12; VH021 6-12). No hill entry: UMN's hills give seeds per hill, not plants after thinning, so plants_per_hill cannot be stated. The two scanner hits (a fertilizer rate per row; sow per station) are not plant-spacing restatements.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        12,
+        18
+      ],
+      "row_spacing_inches": [
+        48,
+        72
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "vce_426_331"
+      ],
+      "anchoring_urls": {
+        "vce_426_331": {
+          "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "restatements": [
+    {
+      "path": "fertilizer.amount_seasoned",
+      "verdict": "agrees",
+      "note": "a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "agrees",
+      "note": "'several seeds per hill or station' states no distance"
+    }
+  ]
+}

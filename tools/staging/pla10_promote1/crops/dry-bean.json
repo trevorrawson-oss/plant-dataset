@@ -1,0 +1,42 @@
+{
+  "slug": "dry-bean",
+  "decision": "SCOPE -> W3: hunt first. The hunt FOUND two dry-bean-naming pages: WSU FS135E 'Growing Dry Beans in Home Gardens' (a PDF on wpcdn.web.wsu.edu: 'Plant seeds 2–3 inches apart in rows spaced 2–3 feet apart') and usu_ext beans-in-the-garden (HTML; names dry beans: 'leave dry beans on the plant until pods yellow and dry') \"Plant seeds 1 inch deep, spaced 2-3 inches apart, in rows 18-24 inches wide.\" -> in_row [2,3], row [18,24]. The USU page is taken (HTML bytes; exact catalogued host); WSU corroborates 2-3. Clemson's snap-bean sentence (today's source) is not accepted since the hunt succeeded. Today's hi 4 rests on UMN's generic 'four inches apart'. The two scanner hits are yields per row: agrees.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        2,
+        3
+      ],
+      "row_spacing_inches": [
+        18,
+        24
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "usu_ext"
+      ],
+      "anchoring_urls": {
+        "usu_ext": {
+          "url": "https://extension.usu.edu/yardandgarden/research/beans-in-the-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "restatements": [
+    {
+      "path": "yield_expectations.per_plant_beginner",
+      "verdict": "agrees",
+      "note": "a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+    },
+    {
+      "path": "yield_expectations.per_plant_seasoned",
+      "verdict": "agrees",
+      "note": "a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+    }
+  ]
+}

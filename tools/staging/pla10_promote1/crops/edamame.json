@@ -1,0 +1,30 @@
+{
+  "slug": "edamame",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): vce_spes_455 https://www.pubs.ext.vt.edu/SPES/spes-455/spes-455.html states \"Sow seeds 2-4 inches apart in furrows\" -> in_row_inches [2,4]; AGREES (lane A, mechanical; worklist 56 §4): vce_spes_455 https://www.pubs.ext.vt.edu/SPES/spes-455/spes-455.html states \"Rows can be spaced 15-36 inches apart\" -> row_spacing_inches [15,36]. Today's spacing_inches [2,4] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        2,
+        4
+      ],
+      "row_spacing_inches": [
+        15,
+        36
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "vce_spes_455"
+      ],
+      "anchoring_urls": {
+        "vce_spes_455": {
+          "url": "https://www.pubs.ext.vt.edu/SPES/spes-455/spes-455.html",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

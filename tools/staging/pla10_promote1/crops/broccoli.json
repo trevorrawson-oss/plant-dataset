@@ -1,0 +1,30 @@
+{
+  "slug": "broccoli",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): vce_426_331 https://www.pubs.ext.vt.edu/426/426-331/426-331.html states \"Broccoli 12-24 in 18-36 in\" -> in_row_inches [12,24]; AGREES (lane A, mechanical; worklist 56 §4): vce_426_331 https://www.pubs.ext.vt.edu/426/426-331/426-331.html states \"Broccoli 12-24 in 18-36 in\" -> row_spacing_inches [18,36]. Today's spacing_inches [12,24] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        12,
+        24
+      ],
+      "row_spacing_inches": [
+        18,
+        36
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "vce_426_331"
+      ],
+      "anchoring_urls": {
+        "vce_426_331": {
+          "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

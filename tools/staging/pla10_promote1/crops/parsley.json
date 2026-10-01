@@ -1,0 +1,27 @@
+{
+  "slug": "parsley",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): uwi_hort https://hort.extension.wisc.edu/articles/parsley/ states \"Place the plants 6 to 12 inches apart in relatively fertile soil\" -> in_row_inches [6,12]; no between-rows figure on the cited page: row_spacing_inches not_authored. Today's spacing_inches [6,12] is unchanged; quotes checked as substrings of the hashed bytes. Override(s) applied: in_row_quote = 'Place the plants 6 to 12 inches apart in relatively fertile soil'. Live page wording changed since the doc cache ('6-12″ apart in relatively rich soil' -> '6 to 12 inches apart in relatively fertile soil'); figure unchanged. The page redirects to /articles/parsley-petroselinum-crispum/ (recorded in MANIFEST.tsv).",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        6,
+        12
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "uwi_hort"
+      ],
+      "anchoring_urls": {
+        "uwi_hort": {
+          "url": "https://hort.extension.wisc.edu/articles/parsley/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

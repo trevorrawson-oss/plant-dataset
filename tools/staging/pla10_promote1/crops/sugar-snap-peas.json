@@ -1,0 +1,30 @@
+{
+  "slug": "sugar-snap-peas",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): usu_ext https://extension.usu.edu/yardandgarden/research/peas-in-the-garden states \"Plant seeds ½-1 inch deep, spaced 1-2 inches apart, in rows 12-24 inches apart.\" -> in_row_inches [1,2]; AGREES (lane A, mechanical; worklist 56 §4): usu_ext https://extension.usu.edu/yardandgarden/research/peas-in-the-garden states \"in rows 12-24 inches apart\" -> row_spacing_inches [12,24]. Today's spacing_inches [1,2] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        1,
+        2
+      ],
+      "row_spacing_inches": [
+        12,
+        24
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "usu_ext"
+      ],
+      "anchoring_urls": {
+        "usu_ext": {
+          "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "lettuce-leaf",
+  "decision": "DIFFERS -> W1: author the page's figure. clemson_hgic lettuce states \"Plant leaf lettuce in rows 1 to 2 feet apart with seed one-quarter inch deep and 6 to 10 inches apart in the row.\" -> in_row [6,10], row [12,24]. Today's [6,8] is UIUC's Cos/Butterhead figure, not a leaf-lettuce one; UMD's leaf envelope 4-10 and thin-to 4-8 are the alternatives (the W1 call: Clemson's leaf-specific sentence over UMD's wider class row). The one scanner hit is a fertilizer rate per row: agrees.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            6,
+            10
+          ],
+          "sid": "clemson_hgic",
+          "url": "https://hgic.clemson.edu/factsheet/lettuce/",
+          "quote": "Plant leaf lettuce in rows 1 to 2 feet apart with seed one-quarter inch deep and 6 to 10 inches apart in the row."
+        },
+        "row_spacing_inches": {
+          "value": [
+            12,
+            24
+          ],
+          "sid": "clemson_hgic",
+          "url": "https://hgic.clemson.edu/factsheet/lettuce/",
+          "quote": "Plant leaf lettuce in rows 1 to 2 feet apart"
+        }
+      }
+    }
+  ],
+  "restatements": {
+    "fertilizer.amount_seasoned": "agrees: a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+  }
+}

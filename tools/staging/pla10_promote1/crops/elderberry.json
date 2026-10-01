@@ -1,0 +1,56 @@
+{
+  "slug": "elderberry",
+  "decision": "DIFFERS -> W1: author the page's figure. psu_ext elderberry-in-the-garden-and-the-kitchen states \"Ensure spacing is 5 to 7 feet between plants\" -> in_row [60,84]; no between-rows figure on any cited page (not_authored, as spec §10.1 expects). Today's [48,96] matches neither end on any cited page (MU AF1017's cached copy carries no spacing text; MSU and the NCSU toolbox give size only). The planting prose's '6 to 8 feet apart for full-size bushes' is re-authored to 5 to 7; its 4-ft hedge figure is a different layout and is left.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        60,
+        84
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "psu_ext"
+      ],
+      "anchoring_urls": {
+        "psu_ext": {
+          "url": "https://extension.psu.edu/elderberry-in-the-garden-and-the-kitchen",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "planting_method_notes_beginner",
+      "new": "Plant elderberry in late winter or early spring, at the same depth it was growing, in moist rich soil, and water it in. Give each plant room: about 4 feet apart for a hedge, or 5 to 7 feet apart for full-size bushes. Plant at least two different varieties near each other, and expect it to grow fast and send up suckers.",
+      "reason": "restates the moved in-row figure (PSU: 5 to 7 ft)"
+    },
+    {
+      "path": "planting_method_notes_seasoned",
+      "new": "Set dormant bare-root plants or rooted cuttings in late winter to early spring at the depth they grew, in moist, fertile soil, and water in well; container plants can go in spring or fall. Space plants about 4 feet apart in a hedge-style row, or 5 to 7 feet apart for full-size freestanding shrubs, with wider spacing between rows. Expect vigorous growth and suckering, and plan at least two cultivars for cross-pollination.",
+      "reason": "restates the moved in-row figure (PSU: 5 to 7 ft)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "planting_method_notes_beginner",
+      "verdict": "edited",
+      "note": "6-8 ft -> 5-7 ft"
+    },
+    {
+      "path": "planting_method_notes_seasoned",
+      "verdict": "edited",
+      "note": "6-8 ft -> 5-7 ft"
+    },
+    {
+      "path": "sources_summary.note",
+      "verdict": "agrees",
+      "note": "a sourcing record (cross-pollination within 60 ft), not a spacing restatement"
+    }
+  ]
+}

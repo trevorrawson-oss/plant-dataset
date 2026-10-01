@@ -1,0 +1,27 @@
+{
+  "slug": "mandarin-clementine",
+  "decision": "DIFFERS -> W2 + W3. uf_ifas_hs132 (citrus-wide, W3) states \"For home plantings, the spacing recommended should be a minimum of 15 feet between trees.\" -> in_row [180,180], a stated minimum authored as the point (W2; no cited page states a quotable range). Row not_authored: CH116's 'spaced 15 feet in a row and 20 feet between rows' is a research trial's layout, excluded (spec §3). Today's [120,216] was recorded as modeled; its 120 sits below the HS132 floor. No restatements (0 scanner hits).",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        180,
+        180
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "uf_ifas_hs132"
+      ],
+      "anchoring_urls": {
+        "uf_ifas_hs132": {
+          "url": "https://edis.ifas.ufl.edu/publication/HS132",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

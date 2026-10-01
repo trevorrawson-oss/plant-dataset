@@ -1,0 +1,80 @@
+{
+  "slug": "celery",
+  "decision": "DIFFERS -> W1: author the page's figure. uf_ifas_vh021 Table 1 row (columns: planting dates N/C/S, yield per 10 ft, plants per 10 ft, days to harvest, Spacing Plants, Spacing Rows, seed depth) \"Celery Jan–Mar Sept–Mar Oct–Mar 15 10–20 75–90 6–12 18 On surface\" -> in_row [6,12]; Spacing Rows 18, a stated MINIMUM (footnote 4: 'Minimum distance between rows (when planting in rows)') in a planting-guide table -> row [18,18] with 'minimum' recorded (W2). Today's [6,10] is on no cited page (WSU EM051E Table 4 gives 8 in / rows 24-36 on a PDF; USU 12 in / rows 2 ft). The anchor keyed uf_ifas_vh021 at ask.ifas.ufl.edu/publication/VH021 moves into the entry (the edis url 301s to it; same bytes); the msu_ext anchor is dropped. Prose restating 6-10 is re-authored to 6-12.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            6,
+            12
+          ],
+          "sid": "uf_ifas_vh021",
+          "url": "https://ask.ifas.ufl.edu/publication/VH021",
+          "quote": "Celery Jan–Mar Sept–Mar Oct–Mar 15 10–20 75–90 6–12 18 On surface"
+        },
+        "row_spacing_inches": {
+          "value": [
+            18,
+            18
+          ],
+          "sid": "uf_ifas_vh021",
+          "url": "https://ask.ifas.ufl.edu/publication/VH021",
+          "quote": "Celery Jan–Mar Sept–Mar Oct–Mar 15 10–20 75–90 6–12 18 On surface"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "notifications[1].body_beginner",
+      "replace": [
+        "Space them 6 to 10 inches apart",
+        "Space them 6 to 12 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (VH021: 6-12 in)"
+    },
+    {
+      "path": "notifications[1].body_seasoned",
+      "replace": [
+        "Space 6 to 10 inches apart",
+        "Space 6 to 12 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (VH021: 6-12 in)"
+    },
+    {
+      "path": "thinning.tip_beginner",
+      "replace": [
+        "6 to 10 inches apart",
+        "6 to 12 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (VH021: 6-12 in)"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "replace": [
+        "final spacing of 6 to 10 inches",
+        "final spacing of 6 to 12 inches"
+      ],
+      "reason": "restates the moved in-row figure (VH021: 6-12 in)"
+    }
+  ],
+  "restatements": {
+    "fertilizer.amount_seasoned": "agrees: a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement",
+    "fertilizer.notes_seasoned": "agrees: a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement",
+    "notifications[1].body_beginner": "edited: 6-10 -> 6-12",
+    "notifications[1].body_seasoned": "edited: 6-10 -> 6-12",
+    "thinning.tip_beginner": "edited: 6-10 -> 6-12",
+    "thinning.tip_seasoned": "edited: 6-10 -> 6-12"
+  },
+  "retired_anchor": {
+    "msu_ext": {
+      "dropped": "MSU how_to_grow_celery states no planting distance in its cached text; it supported nothing the entry carries"
+    },
+    "uf_ifas_vh021": "moved"
+  }
+}

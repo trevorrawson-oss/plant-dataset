@@ -1,0 +1,46 @@
+{
+  "slug": "bee-balm",
+  "decision": "DIFFERS -> W1 (and W3: the page says 'bee balms', Monarda generally, which names the crop's group; the crop is bee balm). iastate_ext powdery-mildew FAQ states \"When planting bee balms, select a site that receives at least 6 hours of direct sun each day and space plants 2 to 2½ feet apart.\" -> in_row [24,30]; no between-rows figure (not_authored). Today's [18,24] overlaps only at 24 and is on no cited page; the NCSU toolbox 'Available Space To Plant: 12 inches-3 feet' is a footprint and does not count (W5). bee-balm leaves the R5 hunt list: a cited page states a figure. The two prose restatements of 18-24 are re-authored.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            24,
+            30
+          ],
+          "sid": "iastate_ext",
+          "url": "https://yardandgarden.extension.iastate.edu/faq/leaves-my-bee-balms-are-covered-grayish-white-powder-what-problem",
+          "quote": "When planting bee balms, select a site that receives at least 6 hours of direct sun each day and space plants 2 to 2½ feet apart."
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "tips_by_stage.establishment[1].text_beginner",
+      "replace": [
+        "about 18 to 24 inches apart",
+        "about 24 to 30 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (ISU: 2 to 2.5 ft)"
+    },
+    {
+      "path": "tips_by_stage.establishment[1].text_seasoned",
+      "replace": [
+        "about 18 to 24 inches apart (2 to 2.5 feet for maximum airflow)",
+        "about 24 to 30 inches apart (2 to 2.5 feet, for airflow)"
+      ],
+      "reason": "restates the moved in-row figure (ISU: 2 to 2.5 ft)"
+    }
+  ],
+  "restatements": {
+    "tips_by_stage.establishment[1].text_beginner": "edited: 18-24 -> 24-30",
+    "tips_by_stage.establishment[1].text_seasoned": "edited: 18-24 -> 24-30"
+  }
+}

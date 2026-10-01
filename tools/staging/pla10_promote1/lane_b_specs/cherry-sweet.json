@@ -1,0 +1,28 @@
+{
+  "slug": "cherry-sweet",
+  "decision": "COMMERCIAL -> W4 + W5 + lane C. OSU PNW-619's 15x20 ft is a per-acre commercial figure by rootstock class and is not authored; R1's basis finding stands (not reopened). The hunt FOUND a home-orchard page: unh_ext 'Growing Plums, Cherries and Apricots in NH Home Orchards' states \"Plant plum, apricot, and cherry trees 15 to 20 feet apart in the home orchard.\" (names sweet cherry varieties on the page; a group sentence naming the crop's group, W3) -> in_row [180,240]; no row figure (not_authored). So cherry-sweet is NOT an R5 waiver case. Alternatives: UIUC 'Sweet Cherry | Seedling (standard) | 20 x 26' (240 in-row), UMaine 25 ft standard. Today's hi 300 is on no page. unh_ext is in the catalog; the crop did not cite it before. The two scanner hits are a pollinizer distance (100 ft): agrees.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            180,
+            240
+          ],
+          "sid": "unh_ext",
+          "url": "https://extension.unh.edu/resource/growing-fruits-growing-plums-cherries-and-apricots-nh-home-orchards-fact-sheet",
+          "quote": "Plant plum, apricot, and cherry trees 15 to 20 feet apart in the home orchard."
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ],
+  "restatements": {
+    "pollination.notes_beginner": "agrees: a pollinizer distance (within about 100 feet), not a plant spacing",
+    "pollinator_notes_beginner": "agrees: a pollinizer distance (within about 100 feet), not a plant spacing"
+  }
+}

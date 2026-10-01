@@ -1,0 +1,47 @@
+{
+  "slug": "elderberry",
+  "decision": "DIFFERS -> W1: author the page's figure. psu_ext elderberry-in-the-garden-and-the-kitchen states \"Ensure spacing is 5 to 7 feet between plants\" -> in_row [60,84]; no between-rows figure on any cited page (not_authored, as spec §10.1 expects). Today's [48,96] matches neither end on any cited page (MU AF1017's cached copy carries no spacing text; MSU and the NCSU toolbox give size only). The planting prose's '6 to 8 feet apart for full-size bushes' is re-authored to 5 to 7; its 4-ft hedge figure is a different layout and is left.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            60,
+            84
+          ],
+          "sid": "psu_ext",
+          "url": "https://extension.psu.edu/elderberry-in-the-garden-and-the-kitchen",
+          "quote": "Ensure spacing is 5 to 7 feet between plants"
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "planting_method_notes_beginner",
+      "replace": [
+        "or 6 to 8 feet apart for full-size bushes",
+        "or 5 to 7 feet apart for full-size bushes"
+      ],
+      "reason": "restates the moved in-row figure (PSU: 5 to 7 ft)"
+    },
+    {
+      "path": "planting_method_notes_seasoned",
+      "replace": [
+        "or 6 to 8 feet apart for full-size freestanding shrubs",
+        "or 5 to 7 feet apart for full-size freestanding shrubs"
+      ],
+      "reason": "restates the moved in-row figure (PSU: 5 to 7 ft)"
+    }
+  ],
+  "restatements": {
+    "planting_method_notes_beginner": "edited: 6-8 ft -> 5-7 ft",
+    "planting_method_notes_seasoned": "edited: 6-8 ft -> 5-7 ft",
+    "sources_summary.note": "agrees: a sourcing record (cross-pollination within 60 ft), not a spacing restatement"
+  }
+}

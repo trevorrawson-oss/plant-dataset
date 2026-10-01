@@ -1,0 +1,30 @@
+{
+  "slug": "snow-peas",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): umd_ext https://extension.umd.edu/resource/peas/ states \"Sow seed in garden 1 to 3 inches apart\" -> in_row_inches [1,3]; AGREES (lane A, mechanical; worklist 56 §4): umd_ext https://extension.umd.edu/resource/peas/ states \"Plant in wide rows, about 18 inches apart.\" -> row_spacing_inches [18,18]. Today's spacing_inches [1,3] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        1,
+        3
+      ],
+      "row_spacing_inches": [
+        18,
+        18
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "umd_ext"
+      ],
+      "anchoring_urls": {
+        "umd_ext": {
+          "url": "https://extension.umd.edu/resource/peas/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

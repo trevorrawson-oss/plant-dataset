@@ -1,0 +1,61 @@
+{
+  "slug": "tomatillo",
+  "decision": "DIFFERS -> W1, and a SCOPE repair: today's four spacing anchors are TOMATO pages, and no tomatillo page states 48. usu_ext tomatillos-in-the-garden states \"Transplants should be planted 2 feet apart in rows spaced 3 feet apart.\" -> in_row [24,24], row [36,36]. WSU Table 4 'Tomatillo 18-36 36-48' (a PDF) is the range alternative; UC MG Alameda 'about two feet apart' agrees with USU. The four tomato-page anchors are dropped ('a tomato page, not tomatillo's'). The three scanner hits (plant size; watering depths) are not spacing restatements.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        24,
+        24
+      ],
+      "row_spacing_inches": [
+        36,
+        36
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "usu_ext"
+      ],
+      "anchoring_urls": {
+        "usu_ext": {
+          "url": "https://extension.usu.edu/yardandgarden/research/tomatillos-in-the-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "retired_anchor": {
+    "psu_ext": {
+      "dropped": "a tomato page, not tomatillo's (PSU heat-stress-and-tomatoes: staked 18-24 in, determinate 24 in, indeterminate unstaked 24-36 in)"
+    },
+    "iastate_ext": {
+      "dropped": "a tomato page, not tomatillo's (ISU growing-tomatoes: staked 1.5-2 ft, caged 2-3 ft, sprawl 3-4 ft)"
+    },
+    "umd_ext": {
+      "dropped": "a tomato page, not tomatillo's (UMD growing-tomatoes: 18-36 in rows x 48-60 in between rows)"
+    },
+    "umn_ext": {
+      "dropped": "a tomato page, not tomatillo's (UMN growing-tomatoes: no in-garden spacing)"
+    }
+  },
+  "restatements": [
+    {
+      "path": "description_seasoned",
+      "verdict": "agrees",
+      "note": "'3 to 4 feet tall and wide ... wide spacing' is plant size, no figure"
+    },
+    {
+      "path": "failure_diagnostics[3].next_season_tip_beginner",
+      "verdict": "agrees",
+      "note": "mulch depth, no spacing"
+    },
+    {
+      "path": "failure_diagnostics[3].next_season_tip_seasoned",
+      "verdict": "agrees",
+      "note": "watering depth and mulch depth, no spacing"
+    }
+  ]
+}

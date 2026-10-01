@@ -1,0 +1,82 @@
+{
+  "slug": "rosemary",
+  "decision": "PARTIAL -> W1: two cited pages state the same point. psu_ext herb-garden-plants-rosemary (HTML) states \"transplant out in full sun (two feet apart)\" and TAMU's Growing Herbs in Texas table (a PDF) 'Rosemary ... Space 24 in.' -> in_row [24,24]; the PSU page is taken so the figure is cited from raw HTML bytes. No row figure (not_authored). Nothing cited states 36 (the NCSU toolbox field is a footprint, W5). rosemary leaves the R5 hunt list. Six prose strings restating 24-36 are re-authored to about 24.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            24,
+            24
+          ],
+          "sid": "psu_ext",
+          "url": "https://extension.psu.edu/herb-garden-plants-rosemary",
+          "quote": "transplant out in full sun (two feet apart)"
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[0].timing_beginner",
+      "replace": [
+        "about 24 to 36 inches between plants",
+        "about 24 inches between plants"
+      ],
+      "reason": "restates the moved in-row figure (PSU: two feet apart)"
+    },
+    {
+      "path": "growth_stages[0].timing_seasoned",
+      "replace": [
+        "Space plants 24 to 36 inches apart",
+        "Space plants about 24 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (PSU: two feet apart)"
+    },
+    {
+      "path": "notifications[0].body_beginner",
+      "replace": [
+        "leaving 24 to 36 inches between plants",
+        "leaving about 24 inches between plants"
+      ],
+      "reason": "restates the moved in-row figure (PSU: two feet apart)"
+    },
+    {
+      "path": "notifications[0].body_seasoned",
+      "replace": [
+        "spacing plants 24 to 36 inches apart",
+        "spacing plants about 24 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (PSU: two feet apart)"
+    },
+    {
+      "path": "tips_by_stage.transplant[1].text_beginner",
+      "replace": [
+        "about 24 to 36 inches between plants",
+        "about 24 inches between plants"
+      ],
+      "reason": "restates the moved in-row figure (PSU: two feet apart)"
+    },
+    {
+      "path": "tips_by_stage.transplant[1].text_seasoned",
+      "replace": [
+        "Space plants 24 to 36 inches apart",
+        "Space plants about 24 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (PSU: two feet apart)"
+    }
+  ],
+  "restatements": {
+    "growth_stages[0].timing_beginner": "edited: 24-36 -> about 24",
+    "growth_stages[0].timing_seasoned": "edited: 24-36 -> about 24",
+    "notifications[0].body_beginner": "edited: 24-36 -> about 24",
+    "notifications[0].body_seasoned": "edited: 24-36 -> about 24",
+    "tips_by_stage.transplant[1].text_beginner": "edited: 24-36 -> about 24",
+    "tips_by_stage.transplant[1].text_seasoned": "edited: 24-36 -> about 24"
+  }
+}

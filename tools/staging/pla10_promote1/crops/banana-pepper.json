@@ -1,0 +1,79 @@
+{
+  "slug": "banana-pepper",
+  "decision": "DIFFERS -> W1: author the page's figure. uga_ext C1005 Home Garden Peppers (names 'Sweet Banana' among its cultivars; same species C. annuum) states \"When planting, space pepper plants 12–24 in. apart in the row, with rows about 3 ft apart.\" -> in_row [12,24], row [36,36]. Today's [12,18] is a two-page blend (Clemson 12 lo + UMN/ISU 18 hi) that no cited page states; VCE 426-331 Table 5 ('Peppers 12-24 in 30-36 in') and UMD ('12\"- 24\" in-rows x 30\"- 36\"') agree with UGA on 12-24. The four prose restatements of 12-18 are re-authored to 12-24 in the same promote (R3).",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        12,
+        24
+      ],
+      "row_spacing_inches": [
+        36,
+        36
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "uga_ext"
+      ],
+      "anchoring_urls": {
+        "uga_ext": {
+          "url": "https://fieldreport.caes.uga.edu/publications/C1005/home-garden-peppers/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[2].user_action_beginner",
+      "new": "Harden the plants off over about a week, then plant them 12 to 24 inches apart into warm soil. A sheet of black plastic mulch warms the soil, and mulch of any kind helps keep watering even.",
+      "reason": "restates the moved in-row figure (UGA C1005: 12-24 in)"
+    },
+    {
+      "path": "growth_stages[2].user_action_seasoned",
+      "new": "Harden off over 7 to 10 days, then transplant into warm soil, 12 to 24 inches apart in rows about 3 feet apart. Black plastic or fabric mulch warms the soil and gives a warm-season crop a head start; mulch also steadies moisture against blossom-end rot.",
+      "reason": "restates the moved in-row figure (UGA C1005: 12-24 in)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "new": "Start banana pepper seeds indoors about 8 weeks before you plan to plant out, keeping them warm (80 to 90°F) to sprout well. Peppers need more warmth and a longer head start than many crops, and they go outside only once the soil is warm (about 60 to 65°F) and nights stay above 50 to 55°F. Use stocky transplants and space them 12 to 24 inches apart.",
+      "reason": "restates the moved in-row figure (UGA C1005: 12-24 in)"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "new": "Start banana pepper seeds indoors about 8 weeks before transplanting (Georgia and Clemson use 6 to 8 weeks; Maryland 8 to 10), with bottom heat of 80 to 90°F for fast, even germination. Peppers need warmth and a longer indoor head start than many vegetables and are set out after the soil has warmed to 60 to 65°F and nights hold above 50 to 55°F. Choose sturdy transplants and set them 12 to 24 inches apart in rows about 3 feet apart. Direct sowing is practical only in the longest, warmest regions; nearly everywhere this is a transplant crop.",
+      "reason": "restates the moved in-row figure (UGA C1005: 12-24 in)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "growth_stages[2].user_action_beginner",
+      "verdict": "edited",
+      "note": "12-18 -> 12-24"
+    },
+    {
+      "path": "growth_stages[2].user_action_seasoned",
+      "verdict": "edited",
+      "note": "12-18 -> 12-24"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "verdict": "edited",
+      "note": "12-18 -> 12-24"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "edited",
+      "note": "12-18 -> 12-24"
+    },
+    {
+      "path": "yield_expectations.per_plant_seasoned",
+      "verdict": "agrees",
+      "note": "a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+    }
+  ]
+}

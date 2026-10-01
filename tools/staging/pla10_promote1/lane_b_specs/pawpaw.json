@@ -1,0 +1,28 @@
+{
+  "slug": "pawpaw",
+  "decision": "PARTIAL -> W1: author the page's figure. ksu_pawpaw planting guide states \"When planting trees, allow 8 feet (2.5m) between them.\" -> in_row [96,96], a recommended point; no row figure (not_authored). Today's hi 180 (15 ft) is on no cited page; NCSU Table 15-5 'Pawpaw 10' is a minimum on a second page (not joined, W6) and the Clemson pawpaw factsheet (fetched) carries no spacing sentence. The two scanner hits (years to first fruit; a caterpillar's length) are not spacing restatements.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            96,
+            96
+          ],
+          "sid": "ksu_pawpaw",
+          "url": "https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/pawpaw-planting-guide.php",
+          "quote": "When planting trees, allow 8 feet (2.5m) between them."
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ],
+  "restatements": {
+    "first_harvest_notes_beginner": "agrees: years to first fruit, no spacing",
+    "pests[1].symptoms_beginner": "agrees: a caterpillar's length, no spacing"
+  }
+}

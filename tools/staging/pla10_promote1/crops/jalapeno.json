@@ -1,0 +1,30 @@
+{
+  "slug": "jalapeno",
+  "decision": "AGREES (lane A row held: the page is a PDF). osu_ext 'Growing Your Own' planting table row (columns ... Distance between rows | Distance apart in the row) \"Peppers 10 weeks May May-June May-June May 5-10 plants 24\" 12-18\"\" -> in_row [12,18], row [24,24], today's value. HTML alternatives state other figures (ISU 18 in, rows 24-30; Clemson 12 in, rows 3 ft; UMD 12-24). Unchanged figure: no restatement adjudication. EVIDENCE NOTE: the page is a PDF; the manifest hashes the raw bytes and the quote is checked against pypdf's text extraction of those bytes (ruled 2026-10-01; PDF_TEXT_EXTRACTOR pins pypdf 6.14.2).",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        12,
+        18
+      ],
+      "row_spacing_inches": [
+        24,
+        24
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "osu_ext"
+      ],
+      "anchoring_urls": {
+        "osu_ext": {
+          "url": "https://ir.library.oregonstate.edu/downloads/v979v342w",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

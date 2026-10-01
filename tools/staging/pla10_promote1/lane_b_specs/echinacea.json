@@ -1,0 +1,24 @@
+{
+  "slug": "echinacea",
+  "decision": "NO_PAGE -> lane C hunt FOUND (HUNTS.md), so NOT an R5 waiver case. uf_ifas_edis FP192 (Echinacea purpurea landscape fact sheet) states \"Plant spacing: 18 to 24 inches\" -> in_row [18,24], equal to today's value; no row figure (not_authored). uf_ifas_edis is in the catalog; the crop cited UF Gardening Solutions but not this EDIS sheet before. The figure does not move, so no restatement is adjudicated.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            18,
+            24
+          ],
+          "sid": "uf_ifas_edis",
+          "url": "https://edis.ifas.ufl.edu/publication/FP192",
+          "quote": "Plant spacing: 18 to 24 inches"
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ]
+}

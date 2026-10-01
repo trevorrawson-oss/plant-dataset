@@ -1,0 +1,30 @@
+{
+  "slug": "onion",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): uf_ifas_gs https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/onions-and-shallots/ states \"Aim to plant your bulbs an inch deep and between four and six inches apart, with a foot between rows.\" -> in_row_inches [4,6]; AGREES (lane A, mechanical; worklist 56 §4): uf_ifas_gs https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/onions-and-shallots/ states \"Aim to plant your bulbs an inch deep and between four and six inches apart, with a foot between rows.\" -> row_spacing_inches [12,12]. Today's spacing_inches [4,6] is unchanged; quotes checked as substrings of the hashed bytes. The row figure 'with a foot between rows' is read through the promote's IDIOMS table ('a foot' = 1 ft; ruled 2026-10-01) and authors as [12,12] from the same sentence as the in-row figure.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        4,
+        6
+      ],
+      "row_spacing_inches": [
+        12,
+        12
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "uf_ifas_gs"
+      ],
+      "anchoring_urls": {
+        "uf_ifas_gs": {
+          "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/onions-and-shallots/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

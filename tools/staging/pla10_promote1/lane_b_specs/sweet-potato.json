@@ -1,0 +1,85 @@
+{
+  "slug": "sweet-potato",
+  "decision": "DIFFERS -> W1: author the page's figure. uf_ifas Gardening Solutions sweet-potatoes (a retired anchor, now the entry's source) states \"Plant your sweet potatoes in rows spaced 36 inches apart with 12 to 14 inches between each plant.\" -> in_row [12,14], row [36,36]. Today's [12,18] has no cited page for 18 (Clemson 8-12; NCSU organic 8-14 commercial; USU 12; VCE 9-12). Retired anchors: uf_ifas moved; clemson_hgic_1322_sweet_potato and ncsu_ext dropped with what each states. Four prose strings restating 12-18 (and rows 3-4 ft) are re-authored.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            12,
+            14
+          ],
+          "sid": "uf_ifas",
+          "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/sweet-potatoes/",
+          "quote": "Plant your sweet potatoes in rows spaced 36 inches apart with 12 to 14 inches between each plant."
+        },
+        "row_spacing_inches": {
+          "value": [
+            36,
+            36
+          ],
+          "sid": "uf_ifas",
+          "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/sweet-potatoes/",
+          "quote": "Plant your sweet potatoes in rows spaced 36 inches apart"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "notifications[0].body_beginner",
+      "replace": [
+        "about a foot apart",
+        "about 12 to 14 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (UF: 12-14 in)"
+    },
+    {
+      "path": "notifications[0].body_seasoned",
+      "replace": [
+        "12 to 18 inches apart on ridges, rows 3 to 4 feet apart",
+        "12 to 14 inches apart on ridges, rows about 3 feet apart"
+      ],
+      "reason": "restates the moved in-row and row figures (UF: 12-14 in, rows 36 in)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "replace": [
+        "spacing them 12 to 18 inches apart along ridges or mounds in rows about 3 to 4 feet apart",
+        "spacing them 12 to 14 inches apart along ridges or mounds in rows about 3 feet apart"
+      ],
+      "reason": "restates the moved in-row and row figures (UF: 12-14 in, rows 36 in)"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "replace": [
+        "spacing them 12 to 18 inches apart on ridges or mounds in rows 3 to 4 feet apart",
+        "spacing them 12 to 14 inches apart on ridges or mounds in rows about 3 feet apart"
+      ],
+      "reason": "restates the moved in-row and row figures (UF: 12-14 in, rows 36 in)"
+    }
+  ],
+  "restatements": {
+    "notifications[0].body_beginner": "edited: 12-18 -> 12-14; rows -> about 3 ft",
+    "notifications[0].body_seasoned": "edited: 12-18 -> 12-14; rows -> about 3 ft",
+    "start_method.notes_beginner": "edited: 12-18 -> 12-14; rows -> about 3 ft",
+    "start_method.notes_seasoned": "edited: 12-18 -> 12-14; rows -> about 3 ft",
+    "fertilizer.amount_seasoned": "agrees: a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement",
+    "fertilizer.notes_seasoned": "agrees: a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement",
+    "soil_prep_beginner": "agrees: ridge height, no plant spacing",
+    "soil_prep_seasoned": "agrees: ridge height, no plant spacing"
+  },
+  "retired_anchor": {
+    "clemson_hgic_1322_sweet_potato": {
+      "dropped": "Clemson sweet-potato states 'rows 3 feet apart with 8 to 12 inches between plants in the row', not the entry's UF [12,14]"
+    },
+    "ncsu_ext": {
+      "dropped": "the NC organic commodities production guide is commercial: in-row 8 to 14 inches set by machinery, rows 42 or 44 inches; not a home-garden recommendation"
+    },
+    "uf_ifas": "moved"
+  }
+}

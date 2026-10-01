@@ -1,0 +1,30 @@
+{
+  "slug": "beet",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): uf_ifas_vh021 https://edis.ifas.ufl.edu/publication/VH021 states \"Beets Sept–Mar Sept–Feb Oct–Jan 7.5 30–60 50–70 2–4 12\" -> in_row_inches [2,4]; AGREES (lane A, mechanical; worklist 56 §4): uf_ifas_vh021 https://edis.ifas.ufl.edu/publication/VH021 states \"Beets Sept–Mar Sept–Feb Oct–Jan 7.5 30–60 50–70 2–4 12\" -> row_spacing_inches [12,12]. Today's spacing_inches [2,4] is unchanged; quotes checked as substrings of the hashed bytes. Override(s) applied: row_quote = 'Beets Sept–Mar Sept–Feb Oct–Jan 7.5 30–60 50–70 2–4 12'. VH021 Table 1 row quoted as the full row string (columns: Planting dates N/C/S, Yield per 10 ft, Plants per 10 ft, Days to Harvest, Spacing Plants, Spacing Rows); Spacing Rows = 12, a stated minimum per footnote 4.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        2,
+        4
+      ],
+      "row_spacing_inches": [
+        12,
+        12
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "uf_ifas_vh021"
+      ],
+      "anchoring_urls": {
+        "uf_ifas_vh021": {
+          "url": "https://edis.ifas.ufl.edu/publication/VH021",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

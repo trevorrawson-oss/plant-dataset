@@ -1,0 +1,30 @@
+{
+  "slug": "spring-onion",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): clemson_hgic https://hgic.clemson.edu/factsheet/onion-leek-shallot-garlic/ states \"Place seeds or sets 1 to 2 inches apart in the row for green onions and 3 inches for bulb onions.\" -> in_row_inches [1,2]; AGREES (lane A, mechanical; worklist 56 §4): clemson_hgic https://hgic.clemson.edu/factsheet/onion-leek-shallot-garlic/ states \"Plant onions in rows 1 to 2 feet apart in a moist seedbed.\" -> row_spacing_inches [12,24]. Today's spacing_inches [1,2] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        1,
+        2
+      ],
+      "row_spacing_inches": [
+        12,
+        24
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "clemson_hgic"
+      ],
+      "anchoring_urls": {
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/onion-leek-shallot-garlic/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

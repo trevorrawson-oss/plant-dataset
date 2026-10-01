@@ -1,0 +1,91 @@
+{
+  "slug": "rosemary",
+  "decision": "PARTIAL -> W1: two cited pages state the same point. psu_ext herb-garden-plants-rosemary (HTML) states \"transplant out in full sun (two feet apart)\" and TAMU's Growing Herbs in Texas table (a PDF) 'Rosemary ... Space 24 in.' -> in_row [24,24]; the PSU page is taken so the figure is cited from raw HTML bytes. No row figure (not_authored). Nothing cited states 36 (the NCSU toolbox field is a footprint, W5). rosemary leaves the R5 hunt list. Six prose strings restating 24-36 are re-authored to about 24.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        24,
+        24
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "psu_ext"
+      ],
+      "anchoring_urls": {
+        "psu_ext": {
+          "url": "https://extension.psu.edu/herb-garden-plants-rosemary",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[0].timing_beginner",
+      "new": "After your last spring frost, plant the rosemary you bought in the sunniest, best-draining spot. Leave about 24 inches between plants for airflow.",
+      "reason": "restates the moved in-row figure (PSU: two feet apart)"
+    },
+    {
+      "path": "growth_stages[0].timing_seasoned",
+      "new": "Set the nursery plant out after the last spring frost, in the sunniest, sharpest-draining spot you have. Space plants about 24 inches apart, and on heavy or humid ground plant on a mound or raised bed.",
+      "reason": "restates the moved in-row figure (PSU: two feet apart)"
+    },
+    {
+      "path": "notifications[0].body_beginner",
+      "new": "It is time to plant your rosemary. Put it in a sunny, well-draining spot now that frost has passed, leaving about 24 inches between plants, and do not add fertilizer.",
+      "reason": "restates the moved in-row figure (PSU: two feet apart)"
+    },
+    {
+      "path": "notifications[0].body_seasoned",
+      "new": "Your plant-out window is open. Set the nursery plant in full sun in sharply drained soil after the last frost, spacing plants about 24 inches apart. Skip rich compost and fertilizer.",
+      "reason": "restates the moved in-row figure (PSU: two feet apart)"
+    },
+    {
+      "path": "tips_by_stage.transplant[1].text_beginner",
+      "new": "Leave about 24 inches between plants. That space lets air move around each one, which helps prevent the leaf problems rosemary can get when it stays damp.",
+      "reason": "restates the moved in-row figure (PSU: two feet apart)"
+    },
+    {
+      "path": "tips_by_stage.transplant[1].text_seasoned",
+      "new": "Space plants about 24 inches apart for airflow. Good air circulation between plants is one of the simplest ways to head off the foliar disease rosemary can get in damp or crowded conditions.",
+      "reason": "restates the moved in-row figure (PSU: two feet apart)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "growth_stages[0].timing_beginner",
+      "verdict": "edited",
+      "note": "24-36 -> about 24"
+    },
+    {
+      "path": "growth_stages[0].timing_seasoned",
+      "verdict": "edited",
+      "note": "24-36 -> about 24"
+    },
+    {
+      "path": "notifications[0].body_beginner",
+      "verdict": "edited",
+      "note": "24-36 -> about 24"
+    },
+    {
+      "path": "notifications[0].body_seasoned",
+      "verdict": "edited",
+      "note": "24-36 -> about 24"
+    },
+    {
+      "path": "tips_by_stage.transplant[1].text_beginner",
+      "verdict": "edited",
+      "note": "24-36 -> about 24"
+    },
+    {
+      "path": "tips_by_stage.transplant[1].text_seasoned",
+      "verdict": "edited",
+      "note": "24-36 -> about 24"
+    }
+  ]
+}

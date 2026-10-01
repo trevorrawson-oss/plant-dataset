@@ -1,0 +1,56 @@
+{
+  "slug": "sweet-alyssum",
+  "decision": "NO_PAGE -> lane C hunt FOUND (HUNTS.md), so NOT an R5 waiver case. psu_ext 'Sowing Annual Seeds' Table 1 (representative spacings for annual flower seeds sown in the home garden; column Spacing (in inches)) row \"Lobularia maritima sweet alyssum 8–10\" -> in_row [8,10]; no row figure (not_authored). Today's [4,8] is on no page found (the NCSU toolbox field is a footprint, W5). psu_ext is in the catalog; the crop did not cite this page before. Three prose strings restating 4-8 are re-authored to 8-10.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            8,
+            10
+          ],
+          "sid": "psu_ext",
+          "url": "https://extension.psu.edu/sowing-annual-seeds",
+          "quote": "Lobularia maritima sweet alyssum 8–10"
+        },
+        "row_spacing_inches": null
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "replace": [
+        "about 4 to 8 inches apart",
+        "about 8 to 10 inches apart"
+      ],
+      "reason": "restates the moved in-row figure (PSU table: 8-10 in)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "replace": [
+        "space to about 4 to 8 in",
+        "space to about 8 to 10 in"
+      ],
+      "reason": "restates the moved in-row figure (PSU table: 8-10 in)"
+    },
+    {
+      "path": "tips_by_stage.seedling[0].text_seasoned",
+      "replace": [
+        "about 4 to 8 in",
+        "about 8 to 10 in"
+      ],
+      "reason": "restates the moved in-row figure (PSU table: 8-10 in)"
+    }
+  ],
+  "restatements": {
+    "growth_stages[1].user_action_beginner": "edited: 4-8 -> 8-10",
+    "growth_stages[1].user_action_seasoned": "edited: 4-8 -> 8-10",
+    "tips_by_stage.seedling[0].text_seasoned": "edited: 4-8 -> 8-10",
+    "regions.rgv.plantings[0].plant_out[0].synthesis_note_seasoned": "agrees: a planting-date note, no spacing"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "kale",
+  "decision": "AGREES (lane A, mechanical; worklist 56 §4): usu_ext https://extension.usu.edu/yardandgarden/research/kale-in-the-garden states \"Thin seedlings or transplant kale 12-18 inches apart in the row with rows 2 feet apart.\" -> in_row_inches [12,18]; AGREES (lane A, mechanical; worklist 56 §4): usu_ext https://extension.usu.edu/yardandgarden/research/kale-in-the-garden states \"with rows 2 feet apart\" -> row_spacing_inches [24,24]. Today's spacing_inches [12,18] is unchanged; quotes checked as substrings of the hashed bytes.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        12,
+        18
+      ],
+      "row_spacing_inches": [
+        24,
+        24
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "usu_ext"
+      ],
+      "anchoring_urls": {
+        "usu_ext": {
+          "url": "https://extension.usu.edu/yardandgarden/research/kale-in-the-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

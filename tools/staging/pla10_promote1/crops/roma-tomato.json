@@ -1,0 +1,54 @@
+{
+  "slug": "roma-tomato",
+  "decision": "PARTIAL -> W1 with a page choice between two cited anchors. PSU gives '24 inches between plants in a row and a minimum of 4–5 feet between rows for determinate tomatoes without stakes' (a point; rows a minimum range); iastate_ext growing-tomatoes gives \"Determinate tomatoes can be planted 1.5-2 feet apart in rows 4 feet apart.\" (a range; rows a point, not a minimum). Roma is determinate, and the ISU sentence is the general determinate recommendation rather than PSU's unstaked-only clause (support entries are promote 2's), so ISU authors -> in_row [18,24], row [48,48]. Today's [24,30] has no page for 30. Retired anchors: iastate_ext moved; psu_ext, umd_ext and umn_ext dropped with what each states. The two scanner hits are watering depths: agrees.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        18,
+        24
+      ],
+      "row_spacing_inches": [
+        48,
+        48
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "iastate_ext"
+      ],
+      "anchoring_urls": {
+        "iastate_ext": {
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-tomatoes-home-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "retired_anchor": {
+    "psu_ext": {
+      "dropped": "PSU heat-stress-and-tomatoes states '24 inches between plants in a row and a minimum of 4–5 feet between rows for determinate tomatoes without stakes' (a point for one support case) and staked/indeterminate figures; the entry authors ISU's determinate range"
+    },
+    "iastate_ext": "moved",
+    "umd_ext": {
+      "dropped": "UMD growing-tomatoes states a general envelope 'Spacing: 18\"-36\" in rows x 48\"-60\" between rows', not a determinate figure"
+    },
+    "umn_ext": {
+      "dropped": "UMN growing-tomatoes states no in-garden plant spacing (only seedling thinning to two inches)"
+    }
+  },
+  "restatements": [
+    {
+      "path": "failure_diagnostics[2].next_season_tip_beginner",
+      "verdict": "agrees",
+      "note": "mulch depth, no spacing"
+    },
+    {
+      "path": "failure_diagnostics[2].next_season_tip_seasoned",
+      "verdict": "agrees",
+      "note": "watering depth and mulch depth, no spacing"
+    }
+  ]
+}

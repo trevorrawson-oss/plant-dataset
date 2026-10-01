@@ -1,0 +1,30 @@
+{
+  "slug": "garlic",
+  "decision": "AGREES (lane A row held: the page is a PDF). wsu_ext EM051E Table 4 row (Depth | Distance Between Plants (inch) | Distance Between Rows (inch) | ...) \"Garlic 2 4-6 12-24\" -> in_row [4,6], row [12,24], today's value. HTML alternatives do not carry the same figure: UMN garlic gives double rows 'six inches apart' (rows on 30-in beds); the UC MG Santa Clara 'Plant cloves 4 to 6 inches apart' page returns 403 to the fetcher today. Unchanged figure: no restatement adjudication. EVIDENCE NOTE: the page is a PDF; the manifest hashes the raw bytes and the quote is checked against pypdf's text extraction of those bytes (ruled 2026-10-01; PDF_TEXT_EXTRACTOR pins pypdf 6.14.2).",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        4,
+        6
+      ],
+      "row_spacing_inches": [
+        12,
+        24
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "wsu_ext"
+      ],
+      "anchoring_urls": {
+        "wsu_ext": {
+          "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

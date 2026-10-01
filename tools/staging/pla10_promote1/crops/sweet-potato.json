@@ -1,0 +1,103 @@
+{
+  "slug": "sweet-potato",
+  "decision": "DIFFERS -> W1: author the page's figure. uf_ifas Gardening Solutions sweet-potatoes (a retired anchor, now the entry's source) states \"Plant your sweet potatoes in rows spaced 36 inches apart with 12 to 14 inches between each plant.\" -> in_row [12,14], row [36,36]. Today's [12,18] has no cited page for 18 (Clemson 8-12; NCSU organic 8-14 commercial; USU 12; VCE 9-12). Retired anchors: uf_ifas moved; clemson_hgic_1322_sweet_potato and ncsu_ext dropped with what each states. Four prose strings restating 12-18 (and rows 3-4 ft) are re-authored.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        12,
+        14
+      ],
+      "row_spacing_inches": [
+        36,
+        36
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "uf_ifas"
+      ],
+      "anchoring_urls": {
+        "uf_ifas": {
+          "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/sweet-potatoes/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "retired_anchor": {
+    "clemson_hgic_1322_sweet_potato": {
+      "dropped": "Clemson sweet-potato states 'rows 3 feet apart with 8 to 12 inches between plants in the row', not the entry's UF [12,14]"
+    },
+    "ncsu_ext": {
+      "dropped": "the NC organic commodities production guide is commercial: in-row 8 to 14 inches set by machinery, rows 42 or 44 inches; not a home-garden recommendation"
+    },
+    "uf_ifas": "moved"
+  },
+  "edits": [
+    {
+      "path": "notifications[0].body_beginner",
+      "new": "Plant your sweet potato slips once all frost is past and the soil has warmed to about 65°F, usually a few weeks after your last frost. Set them 3 to 4 inches deep and about 12 to 14 inches apart on ridges or mounds.",
+      "reason": "restates the moved in-row figure (UF: 12-14 in)"
+    },
+    {
+      "path": "notifications[0].body_seasoned",
+      "new": "Set certified slips out once all frost danger is past and the soil is above about 65°F, usually a few weeks after your last frost. Plant 3 to 4 inches deep, 12 to 14 inches apart on ridges, rows about 3 feet apart.",
+      "reason": "restates the moved in-row and row figures (UF: 12-14 in, rows 36 in)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "new": "Grow sweet potatoes from slips, which are rooted sprouts. You can buy them as certified disease-free plants, or grow your own by half-burying a healthy sweet potato in warm, damp soil about 6 weeks ahead and pulling off the sprouts once they have roots. Plant the slips 3 to 4 inches deep, with a couple of the leaf joints buried, spacing them 12 to 14 inches apart along ridges or mounds in rows about 3 feet apart. Wait until all frost is past and the soil has warmed to about 65°F. There is nothing to start from seed indoors. In cool-summer areas, laying down black plastic warms the soil and gives you extra time.",
+      "reason": "restates the moved in-row and row figures (UF: 12-14 in, rows 36 in)"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "new": "Sweet potatoes are grown from slips: rooted sprouts pulled from a bedded seed root, not from seed and not from seed-potato-style pieces. Buy certified, disease-free and weevil-free slips, or bed a healthy root in warm, moist medium about 6 weeks ahead and pull the sprouts once they have roots. Set slips 3 to 4 inches deep with two or more nodes buried, spacing them 12 to 14 inches apart on ridges or mounds in rows about 3 feet apart, once all frost danger has passed and the soil is above about 65°F (70 to 80°F is better). There is no indoor seed-starting step; the slip itself is the transplant. In short-season areas, planting through black plastic warms the soil and buys extra growing days.",
+      "reason": "restates the moved in-row and row figures (UF: 12-14 in, rows 36 in)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "notifications[0].body_beginner",
+      "verdict": "edited",
+      "note": "12-18 -> 12-14; rows -> about 3 ft"
+    },
+    {
+      "path": "notifications[0].body_seasoned",
+      "verdict": "edited",
+      "note": "12-18 -> 12-14; rows -> about 3 ft"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "verdict": "edited",
+      "note": "12-18 -> 12-14; rows -> about 3 ft"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "edited",
+      "note": "12-18 -> 12-14; rows -> about 3 ft"
+    },
+    {
+      "path": "fertilizer.amount_seasoned",
+      "verdict": "agrees",
+      "note": "a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+    },
+    {
+      "path": "fertilizer.notes_seasoned",
+      "verdict": "agrees",
+      "note": "a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement"
+    },
+    {
+      "path": "soil_prep_beginner",
+      "verdict": "agrees",
+      "note": "ridge height, no plant spacing"
+    },
+    {
+      "path": "soil_prep_seasoned",
+      "verdict": "agrees",
+      "note": "ridge height, no plant spacing"
+    }
+  ]
+}
