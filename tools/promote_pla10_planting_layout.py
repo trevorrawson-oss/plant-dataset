@@ -32,6 +32,13 @@ WHY EACH GUARD EXISTS.
     (an endpoint in inches or feet). Every entry source is in source_catalog. The only exception is an
     R5 migration waiver (planting_layout_migration_known), whose entry must byte-equal the pre-promote
     spacing_inches; the gate checks the same thing, this checks it against the BASE.
+    PDF pages (ruled 2026-10-01): the manifest keeps hashing the RAW PDF bytes (that is the evidence);
+    the substring check for a `.pdf` cache file runs against pypdf's text extraction of those bytes,
+    because every fetched extension PDF is Flate-compressed and the raw bytes never contain the quote
+    (measured on 7 of session 2's 93 crops). The extractor is pinned in PDF_TEXT_EXTRACTOR (pypdf 6.14.2
+    at the ruling) so the extraction is reproducible; a different pypdf is a re-measurement, not a
+    silent change. Number words: digits, the word table and the IDIOMS table ('a foot' = 1 ft, so
+    "with a foot between rows" states 12 in; "two feet" and "a foot or two" read through the word table).
  3. NO ANCHOR IS LOST. A retired spacing_inches_anchoring_urls entry is either moved (that source and
     url appear in an entry) or dropped with a recorded reason (lemon's mis-keyed hs1153, spec §2.4).
  4. RESTATEMENTS ARE ADJUDICATED, NOT SCANNED-AND-HOPED (R3, spec §9). On every crop whose
@@ -56,6 +63,8 @@ Usage:
   promote_pla10_planting_layout.py --expect-sha <sha>          # writes canonical, on approval only
 """
 import argparse, copy, csv, glob, hashlib, html, json, os, re, sys, unicodedata
+import io
+import pypdf
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
@@ -83,6 +92,10 @@ RETIRED = "spacing_inches_anchoring_urls"
 NUMERIC_FIELDS = ("in_row_inches", "hill_spacing_inches", "row_spacing_inches", "plants_per_hill",
                   "mature_height_ft")
 EVIDENCE_COLS = ("crop", "entry_id", "field", "value", "source_id", "url", "sha256", "quote")
+# Ruled 2026-10-01: PDF evidence is read through pypdf; the version is the pin (reproducible extraction).
+PDF_TEXT_EXTRACTOR = ("pypdf", pypdf.__version__)
+# Ruled 2026-10-01: number idioms the quote check reads, in FEET ("a foot" -> 1.0); the test pins the table.
+IDIOMS = (("a foot", 1.0),)
 STAGE_KEYS = {"slug", "decision", "planting_layout", "retired_anchor", "rootstock_spacing", "edits",
               "restatements"}
 # Restatement scanner (guard 4): a distance next to a spacing word, in any string leaf outside the
@@ -272,6 +285,9 @@ def _numbers(s):
     for w, n in words.items():
         if re.search(rf"\b{w}\b", s, re.I):
             nums.add(float(n))
+    for phrase, n in IDIOMS:
+        if re.search(rf"\b{phrase}\b", s, re.I):
+            nums.add(float(n))
     return nums
 
 
@@ -283,6 +299,12 @@ def quote_states(field, value, quote):
     if field == "mature_height_ft":
         return bool(ends & nums) or bool({x * 12 for x in ends} & nums)
     return bool(ends & nums) or bool({x / 12 for x in ends} & nums)
+
+
+def pdf_text(raw):
+    """The text of a PDF's HASHED bytes, through the pinned extractor (PDF_TEXT_EXTRACTOR)."""
+    reader = pypdf.PdfReader(io.BytesIO(raw))
+    return "\n".join((page.extract_text() or "") for page in reader.pages)
 
 
 def manifest(evidence_dir):
@@ -321,7 +343,10 @@ def check_evidence(post_idx, stage, ev, catalog, evidence_dir):
             raw = open(files[0], "rb").read()
             if sha256_bytes(raw) != r["sha256"]:
                 refuse(f"{tag}: the cached bytes hash to {sha256_bytes(raw)[:12]}, not their name")
-            text_cache[r["sha256"]] = norm_text(raw.decode("utf-8", "replace"))
+            if files[0].endswith(".pdf"):
+                text_cache[r["sha256"]] = norm_text(pdf_text(raw))
+            else:
+                text_cache[r["sha256"]] = norm_text(raw.decode("utf-8", "replace"))
         q = norm_text(r["quote"])
         if len(q) < 12 or q not in text_cache[r["sha256"]]:
             refuse(f"{tag}: the quote is not in the cached bytes: {r['quote'][:80]!r}")

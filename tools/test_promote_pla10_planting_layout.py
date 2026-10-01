@@ -92,11 +92,14 @@ class Synthetic:
                               f"Space plants {sp[0]:g} to {sp[1]:g} inches apart in the row.")
         self.write()
 
-    def add_evidence(self, slug, eid, field, value, sid, url, quote, page_text=None):
-        text = page_text if page_text is not None else f"<html><p>{slug} page. {quote}</p></html>"
-        raw = text.encode("utf-8")
+    def add_evidence(self, slug, eid, field, value, sid, url, quote, page_text=None, raw_bytes=None, ext="html"):
+        if raw_bytes is None:
+            text = page_text if page_text is not None else f"<html><p>{slug} page. {quote}</p></html>"
+            raw = text.encode("utf-8")
+        else:
+            raw = raw_bytes
         h = hashlib.sha256(raw).hexdigest()
-        with open(os.path.join(self.ev_dir, h + ".html"), "wb") as f:
+        with open(os.path.join(self.ev_dir, h + "." + ext), "wb") as f:
             f.write(raw)
         self.manifest.append((h, url))
         self.ev.append({"crop": slug, "entry_id": eid, "field": field, "value": P.compact(value),
@@ -505,6 +508,79 @@ class R5Migration(Base):
         self.waive("cabbage", list(IDX["cabbage"]["spacing_inches"]))
         self.uncite("cabbage")
         self.refused("cabbage: a migration waiver off the R5 list")
+
+
+def flate_pdf(text):
+    """A one-page PDF whose only content stream is zlib-compressed (/FlateDecode), so the quote is NOT a
+    substring of the raw bytes. The 2026-10-01 defect: every fetched extension PDF is built this way."""
+    import zlib
+    esc = text.replace("\\", "\\\\").replace("(", "\\(").replace(")", "\\)")
+    content = zlib.compress(f"BT /F1 12 Tf 72 700 Td ({esc}) Tj ET".encode("latin-1"))
+    objs = [b"<< /Type /Catalog /Pages 2 0 R >>",
+            b"<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
+            b"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R "
+            b"/Resources << /Font << /F1 5 0 R >> >> >>",
+            b"<< /Length " + str(len(content)).encode() + b" /Filter /FlateDecode >>\nstream\n" + content + b"\nendstream",
+            b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>"]
+    out = bytearray(b"%PDF-1.4\n")
+    offsets = []
+    for i, o in enumerate(objs, 1):
+        offsets.append(len(out))
+        out += f"{i} 0 obj\n".encode() + o + b"\nendobj\n"
+    xref = len(out)
+    out += f"xref\n0 {len(objs) + 1}\n0000000000 65535 f \n".encode()
+    for off in offsets:
+        out += f"{off:010d} 00000 n \n".encode()
+    out += f"trailer\n<< /Root 1 0 R /Size {len(objs) + 1} >>\nstartxref\n{xref}\n%%EOF\n".encode()
+    return bytes(out)
+
+
+class PdfEvidence(Base):
+    """Ruled 2026-10-01: the manifest keeps hashing the raw PDF bytes; the quote check for a .pdf cache file
+    runs against pypdf's text extraction of those bytes."""
+    QUOTE = "Set cabbage transplants 12 to 24 inches apart in the row."
+
+    def swap_in_pdf(self, quote):
+        r = next(r for r in self.s.ev if r["crop"] == "cabbage")
+        self.s.ev.remove(r)
+        raw = flate_pdf(quote)
+        self.assertNotIn(P.norm_text(self.QUOTE), P.norm_text(raw.decode("utf-8", "replace")),
+                         "fixture is not compressed: the quote is in the raw bytes, so the test proves nothing")
+        self.s.add_evidence("cabbage", "row-none", "in_row_inches", IDX["cabbage"]["spacing_inches"],
+                            r["source_id"], r["url"], self.QUOTE, raw_bytes=raw, ext="pdf")
+
+    def test_a_quote_inside_a_compressed_pdf_passes(self):
+        self.swap_in_pdf(self.QUOTE)
+        self.s.write(); self.s.run()
+
+    def test_a_quote_absent_from_the_pdf_text_REFUSES(self):
+        self.swap_in_pdf("Set cabbage transplants evenly along the row, never crowded.")
+        self.refused("the quote is not in the cached bytes")
+
+    def test_the_extractor_is_pinned(self):
+        self.assertEqual(P.PDF_TEXT_EXTRACTOR[0], "pypdf")
+        import pypdf
+        self.assertEqual(P.PDF_TEXT_EXTRACTOR[1], pypdf.__version__)
+
+
+class Idioms(unittest.TestCase):
+    """Ruled 2026-10-01: the number-word table reads 'a foot' (onion: 'with a foot between rows'; zinnia:
+    'space the rows a foot apart'), 'two feet' and 'a foot or two' (borage, UC Marin)."""
+
+    def test_a_foot_states_12_inches(self):
+        self.assertTrue(P.quote_states("row_spacing_inches", [12, 12], "between four and six inches apart, with a foot between rows."))
+
+    def test_two_feet_states_24_inches(self):
+        self.assertTrue(P.quote_states("in_row_inches", [24, 24], "transplant out in full sun (two feet apart)"))
+
+    def test_a_foot_or_two_states_12_to_24(self):
+        self.assertTrue(P.quote_states("in_row_inches", [12, 24], "Thin so mature plants stand a foot or two apart."))
+        self.assertTrue(P.quote_states("in_row_inches", [12, 12], "Thin so mature plants stand a foot or two apart."))
+
+    def test_the_table_is_not_wider_than_ruled(self):
+        self.assertFalse(P.quote_states("in_row_inches", [36, 36], "Space plants a yard apart."))
+        self.assertFalse(P.quote_states("in_row_inches", [12, 12], "Space plants a stride apart."))
+        self.assertEqual(P.IDIOMS, (("a foot", 1.0),))
 
 
 class CLI(unittest.TestCase):
