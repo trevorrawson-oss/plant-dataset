@@ -1,7 +1,9 @@
 # PLA-10 promote 1, session 2 hand-off (2026-10-01)
 
 Canonical READ-ONLY throughout: `c5fc3d13` == LATEST.txt, unchanged. HEAD at session start `459704c` == origin/main.
-Nothing landed: no promote, no canonical write, no gate arming. Two commits on Trevor's order: A (tooling: PDF reader + idioms), B (data staging).
+Nothing landed: no promote, no canonical write, no gate arming. Two commits on Trevor's order, PUSHED 2026-10-01 (`459704c..cd1a96b`): A `58c485c` (tooling: the PDF reader through pypdf 6.14.2 + the 'a foot' idiom), B `cd1a96b` (data staging). The four rulings below are TAKEN and closed; session 3 does not reopen them.
+
+Working-tree note: an untracked `.codex/` directory and an untracked `AGENTS.md` were present in the checkout during session 2. They are not this arc's; they were left untouched and are in no commit. Leave them out of session 3's commits too.
 
 ## What is staged
 - **93 of the 113 crops** (every session-2 row of worklist 56 §4), one `row-none` entry each, in `crops/<slug>.json`.
