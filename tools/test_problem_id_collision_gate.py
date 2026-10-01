@@ -70,7 +70,10 @@ CANON = os.path.join(REPO, "crops_data_final.json")
 # to 1721208e at ab44218 (the PLA-465 mandarin repair) WITHOUT this pin being re-measured, so this
 # preflight was red from ab44218 onward and that landing's record reports a collision-gate check it
 # did not actually run green. Filed under PLA-544 as the third instance of that class.
-PINNED_SHA = "00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e"
+# RE-MEASURED 2026-09-30 (PLA-532), 00dda31c -> c5fc3d13. A catalog-only promote (8 source_catalog
+# ids, no crop touched). Every count test in this file was run on the post-state and passed (26 of
+# 27; only this preflight reddened), so 36 / 24 / 12 hold and only this SHA advanced.
+PINNED_SHA = "c5fc3d13764f6d08b24574bbb07ecb15f5cfddeb7ba80f7439a72d8829813e28"
 
 # ---------------------------------------------------------------------------------------------
 # The PLA-449 fixture, transcribed from the ticket. NEVER computed from a scan.
