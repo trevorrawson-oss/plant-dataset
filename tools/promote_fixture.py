@@ -48,6 +48,9 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # PLA-532 container and vertical technique sources admitted (2026-09-30). NEVER AMEND a181270.
+    # Catalog only: source_catalog 221 -> 229 (8 document-scoped ids), no crop, no existing entry moves.
+    'c5fc3d13764f6d08b24574bbb07ecb15f5cfddeb7ba80f7439a72d8829813e28': 'a181270',
     # PLA-626 apricot/plum rootstock delete-first (2026-09-29). NEVER AMEND b0c3958.
     # apricot recommended_rootstock -> null, Marianna's "prune brownline" cut; plum note loses St. Julien and
     # "and containers", St. Julien out of both container_notes registers. No finding or flag moves.
