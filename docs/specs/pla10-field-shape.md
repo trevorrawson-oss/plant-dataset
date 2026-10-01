@@ -25,7 +25,7 @@ PLA-426 / PLA-429 / PLA-629 Backlog; PLA-534 Todo.
 | **R2** | **What `spacing_inches` means on a crop whose default entry is a hill.** | **NOT TAKEN as recommended. `spacing_inches` keeps ONE meaning on every crop: the distance between individual plants.** A hill entry carries the between-hills distance (`hill_spacing_inches`) and `plants_per_hill`. Consumers reading the default entry render "between hills" when the default is a hill. **Amended (Trevor, 2026-09-30): the mirror is the between-plants figure from the default entry, falling back to any other entry that carries one (declared order); `null` only when no entry does.** The 8 zone-independent crops move from `[]` to `null` with `row_spacing_reason: "not_applicable"`. **Further rulings (2026-09-30):** `row_spacing_inches` follows the default entry only, no fallback; a third reason value `see_layout` marks a hill default whose row figure lives on a non-default entry (§3); no dedicated spacing-reason field. | Trevor's ruling. Re-measured: under the fallback rule **no hill candidate goes `null`** (every one has a per-plant figure on a cited page); the only `null`s after promote 1 are the 8 microgreens (§2.4). `null` still reaches consumers, so the consumer repoint is a **hard blocker** on promote 1 (§10.1). |
 | **R3** | **Citation-gate scoping (PLA-607's deferred question): are `growth_stages[]` and `notifications[]` sourced block types?** | **TAKEN. Both stay NAMED (sourced) on A62; the 1,073 waivers stay.** This arc adds one scoped coherence check: a spacing restated in either family (or in the other prose fields listed in §9) on a repaired crop must agree with the new values after the promote. | §9. 334 of 728 stage items and 167 of 538 notifications carry a number with a unit; 47 + 26 restate a spacing; 17 crops already cite per item. |
 | **R4** | **`varieties[].plant_habit` controlled vocabulary (PLA-13, 2026-09-30).** | **TAKEN.** `standard, compact, dwarf, bush, half_runner, vining, erect, semi_erect, trailing`, a closed enum with a per-family allowlist; present-or-null on dict entries; `dwarf` only where `container_path == "cultivar"`. | §7. dry-bean already carries `half_runner`; the bramble pages split spacing on erect vs semi-erect/trailing. |
-| **R5** | **A crop whose in-row spacing has no page in its cited set.** | **TAKEN.** Hunt first, inside promote 1. A crop still without a page after a recorded hunt ships its default entry under a **MIGRATION waiver**: keyed by identity, valid only while the entry's `in_row_inches` byte-equals the pre-promote `spacing_inches`, listed by name, able only to shrink. | §2.3. About 8 crops: bok-choy, rosemary, mulberry, borage, cosmos, sweet-alyssum, bee-balm, viola. The value exists today uncited; moving it into an entry changes where it lives, not what is claimed. |
+| **R5** | **A crop whose in-row spacing has no page in its cited set.** | **TAKEN.** Hunt first, inside promote 1. A crop still without a page after a recorded hunt ships its default entry under a **MIGRATION waiver**: keyed by identity, valid only while the entry's `in_row_inches` byte-equals the pre-promote `spacing_inches`, listed by name, able only to shrink. **[W5, Trevor 2026-10-01: WIDENED. Eligibility is "no CITABLE page after a recorded hunt", not "no page". It admits echinacea, cherry-sour, pomegranate, sweet-pea and cherry-sweet on the same terms (byte-equal, listed by name, shrink-only); NCSU Toolbox "Available Space To Plant" is a footprint and does not count. The 13 eligible names are in `tools/planting_layout_migration_known.py` (`f6de39a`). Six of the original eight carry a cached figure after all (worklist 56 §3).]** | §2.3. About 8 crops: bok-choy, rosemary, mulberry, borage, cosmos, sweet-alyssum, bee-balm, viola. The value exists today uncited; moving it into an entry changes where it lives, not what is claimed. |
 
 **Decided in this spec (technical calls, each reversible before the promote that uses it):** D8 goes option (b), the
 layout entry is the sourced record and `spacing_inches` is a gated mirror (§2); height and spread cite through a
@@ -292,8 +292,8 @@ page**, so a row entry can sit behind any hill default and **none goes `null`**:
 | butternut, acorn, spaghetti, pumpkin | UMN pumpkins and winter squash: "Plant ... seeds three-fourths of an inch deep, 24 to 36 inches apart. Use the closer spacing if the variety is a bush type. Spacing between rows should be 5 to 6 feet." (pumpkin also UGA C1206: "Spacing rows per plants 72 by 48 in") |
 | zucchini, yellow-summer-squash | OSU: "36 to 40-inch spacing between rows with plants 18-36 inches apart within the row"; UMN / SDSU "thin to stand 8 to 12 inches apart" |
 | watermelon | Clemson: "Plants should be spaced 5 to 6 feet apart within the row" |
-| cantaloupe | UGA B1179: "4 to 6 feet between rows and 2 to 3 feet in the row"; ISU "Transplants should be planted 2 feet apart in row" |
-| honeydew-melon | ISU: "Transplants should be planted 2 feet apart in row, with rows 4-6 feet apart" |
+| cantaloupe | UGA B1179: "4 to 6 feet between rows and 2 to 3 feet in the row"; ~~ISU~~ USU [CORRECTION 2026-10-01: the sentence is USU's] "Transplants should be planted 2 feet apart in row" |
+| honeydew-melon | ~~ISU~~ USU [CORRECTION 2026-10-01: the sentence is USU's]: "Transplants should be planted 2 feet apart in row, with rows 4-6 feet apart" |
 
 Regex over cached pages, then the lines read, so this is **0 of 9 as measured**. Promote 1 must author the row entry
 for any of these whose default it sets to a hill, or the crop goes `null`. **After promote 1, `null` = the 8
@@ -323,8 +323,10 @@ microgreens exactly**, unless a decision row drops a row entry.
 That makes the consumer repoint (§11) a **hard blocker** on promote 1 (§10.1), not an ordering preference: data that
 lands first fails the astro build on the first `null`.
 
-**Migrated anchor to check:** lemon's `spacing_inches_anchoring_urls` keys `uf_ifas_hs1153` to the URL of **HS402**. The
-key and the document disagree; promote 1 resolves the key against the catalog before moving the anchor.
+~~**Migrated anchor to check:** lemon's `spacing_inches_anchoring_urls` keys `uf_ifas_hs1153` to the URL of **HS402**. The
+key and the document disagree; promote 1 resolves the key against the catalog before moving the anchor.~~
+**[CORRECTION 2026-10-01: lemon is NOT mis-keyed. The cached page is titled "HS1153/HS402" and the catalog name says
+the same: one document under two numbers. The anchor moves as-is. See worklist 56 §3.]**
 
 ---
 
@@ -643,7 +645,7 @@ Sequence (from the rulings, updated with measured state):
 | -- | -- | -- | -- |
 | butternut-squash | [24, 72] | in-row 24-36; rows 5-6 ft (own prose) | `soil_prep_*` (states both, already right), `yield_expectations.factors_seasoned[2]` |
 | acorn-squash | [24, 48] | vining 24-36 in-row, rows 3-6 ft; bush 18-24 (not authored, D2) | `soil_prep_*` |
-| spaghetti-squash | [24, 48] | 24-36 in-row, rows 3-5 ft | `soil_prep_*` |
+| spaghetti-squash | [24, 48] | 24-36 in-row, rows 3-5 ft | `soil_prep_*` **[CORRECTION 2026-10-01: NOT a blend repair. VCE 426-331 Table 5, which the crop cites, states winter squash 2-4 ft in-row, today's `[24, 48]`. D1 is five repairs plus a spaghetti decision row.]** |
 | watermelon | [36, 72] | hills 4-8 ft, rows 6-8 ft (prose); UGA 8 ft all sides. On a hill default the mirror falls back to the Clemson row entry, "5 to 6 feet apart within the row" (R2 as amended) | `soil_prep_seasoned`, `growth_stages[0]` ("per hill") |
 | blackberry | [36, 72] | recommend **erect** as default: Clemson "2 to 4 feet apart in the row and 10 feet between rows"; trailing waits on `plant_habit` | `planting_method_notes_*` (states both types, already right) |
 | strawberry | [15, 24] | matted row 15 x 36-48 (generic); region 18-24 | 18 spacing-bearing fields incl. region `synthesis_note`s; the in-row default is a decision row |
@@ -758,11 +760,26 @@ Line numbers are as measured today on astro `277529c` and app `71e327ba`.
 | **Export allowlist**, app `export-projection.mjs:43-85` `SHIP_TOP_LEVEL` | add `row_spacing_inches`, `row_spacing_reason` (promote 1); `mature_dimensions_sources` / `_anchoring_urls` (promote 2); drop `spacing_inches_anchoring_urls` (`:82`) when it is retired | the build throws until classified |
 | **Astro content schema** `content.config.ts:46` | `spacing_inches: z.array(z.number()).optional()` **must become `.nullable().optional()`** (R2's null state, §2.4); new keys pass through (`.passthrough()` at `:107`) | **hard blocker**: the build fails on the first microgreen page after promote 1 until changed |
 
+
+### Corrections appended 2026-10-01 (from the promote-1 worklist read, `docs/kickoffs/56-...` §3)
+
+Appended, never rewritten; each verified against the cached page by the worklist's read agents.
+- **lemon is not mis-keyed** (§2.4, "Surfaced"): HS1153/HS402 is one document. Struck in place above.
+- **The 2-ft melon sentence is USU's, not ISU's** (§2.4 table). Struck in place above.
+- **spaghetti-squash** (§10.1): VCE 426-331 Table 5 states today's `[24, 48]`; not a blend repair. D1 is five
+  repairs (butternut, acorn, watermelon, blackberry, strawberry) plus a spaghetti decision row.
+- **acorn, butternut and spaghetti hill figures** exist only on UGA C1206, a PUMPKIN page: out of scope for those
+  three, so they default to `row` unless a hunt finds an in-scope hill page (§2.4, §10.1).
+- **apple** (§5.1): NCSU Extension Gardener Handbook Table 15-4, already cited by apple, gives spacing per NAMED
+  rootstock (MM106 12-16 ft, MM111 14-18 ft). The MM106 / MM111 decision row reads it before UMN's class figures.
+  Clemson and UGA C740 call M26 dwarfing; the dataset records it `semi_dwarf` (recorded, not reopened here).
+- **R5** widened by W5 (the R5 row above).
+
 ---
 
 ## Surfaced, not fixed here
 
-- lemon's spacing anchor is keyed `uf_ifas_hs1153` but points at HS402 (§2.3).
+- ~~lemon's spacing anchor is keyed `uf_ifas_hs1153` but points at HS402 (§2.3).~~ [CORRECTION 2026-10-01: struck; HS1153 and HS402 are one document, see §2.4.]
 - plant-app's PLA-465 allowlist change exists on `feat/community-foundation` (cherry-pick `1cbf0c61`), not on `main`.
 - Herb has no pot-size intent, so PLA-629's "Herb's ... pot-size intents read the picked value" has nothing to read
   into yet.
