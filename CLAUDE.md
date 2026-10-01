@@ -108,21 +108,28 @@ armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered gates) +
   assert surfaces as a pytest collection ERROR that **aborts collection for the whole run**, and a bare
   `sys.exit(1)` at module level surfaces as `INTERNALERROR`, which reads as a broken harness rather than a
   real failure — so a script-style test signals failure by RAISING, never by `sys.exit`.
-- **THE FULL TEST TREE RUNS BEFORE ANY COMMIT THAT CHANGES GATE OR TEST LOGIC UNDER `tools/`, AND ONLY
-  THEN** (ruled 2026-09-30, narrowed 2026-10-01). `python3 tools/run_test_tree.py` takes ~1 hour
-  single-process (6,369 pytest tests on 2026-10-01; speed-up is PLA-630). Decide by `git diff`: a change to
-  a gate, a promote, a suite, a harness or any other logic under `tools/` -> full tree, exit code captured
-  unpiped. **A commit that ONLY updates a pin (a `COMMIT_FOR` entry, a `PINNED_SHA`), a waiver identity,
-  or a measured population** does NOT run it: run the adjacent suites plus the test that reads the value,
-  and SAY SO in the commit message, naming what ran. A pure data promote with no tool change does NOT run
-  it either: release verification (below) plus the promote's own suite and mutation harness suffice. While
-  iterating, run only the suites for the files being changed. Why it earns the hour on logic: on
-  2026-09-30 it was the ONLY check that caught two region-harness crashes the PLA-607/544 gates
-  introduced; `gate_all` and `release_verify` both passed. Why pins were narrowed out: pins and waivers
-  live as `.py` modules under `tools/` (the harnesses copy only `tools/*.py`), so the old touch-`tools/`
-  trigger charged a full hour for a one-line SHA pin (PLA-532's `e92d754`); moving them to a data
-  directory the harnesses copy is a follow-up on PLA-544. Tell Trevor the time cost before starting a
-  long run.
+- **A LOGIC CHANGE UNDER `tools/` RUNS THE AFFECTED SET, NOT THE FULL TREE** (ruled 2026-09-30, narrowed
+  2026-10-01 twice; the second narrowing is Trevor's, PLA-10 promote 1's tools commit). Decide by `git diff`.
+  A change to a gate, a promote, a suite, a harness or any other logic under `tools/` runs, through
+  `python3 tools/run_test_tree.py --files ...` (so rc 5 is still BROKEN and script-style files still run as
+  scripts), exit code captured unpiped: **(a)** every `tools/test_*.py` that names a changed module
+  (`grep -lE '<changed module names>' tools/test_*.py`; this catches imports AND subprocess calls of
+  `whole_crop_gate` / `gate_all`); **(b)** the harnesses that copy `tools/` into a scratch dir
+  (`test_region_harness.py`, `test_rgv_harness.py`, and any test the grep finds calling `shutil.copy` on
+  `tools/`); **(c)** the mutation harness of every changed gate or promote. Name the set that ran in the
+  commit message. **A commit that ONLY updates a pin (a `COMMIT_FOR` entry, a `PINNED_SHA`), a waiver
+  identity, or a measured population** runs only the adjacent suites plus the test that reads the value. A
+  pure data promote with no tool change runs release verification (below) plus the promote's own suite and
+  mutation harness. **The full tree** (`python3 tools/run_test_tree.py`, ~1 hour single-process, 6,369
+  pytest tests on 2026-10-01; speed-up PLA-630) runs only when a change touches SHARED test infrastructure
+  every suite leans on (`promote_fixture.py`, `run_test_tree.py`, a harness helper module), or on Trevor's
+  ask. **Why narrowed, measured 2026-10-01:** every recorded full-tree catch was tooling breaking tooling --
+  the 2026-09-30 region-harness crashes from a JSON waiver file the harnesses did not copy (PLA-607/544),
+  and the 2026-09-06 PLA-450 suite reading the live registry against replayed history -- and none was a
+  user-facing app or dataset defect. Each of those sat in a suite that names the changed module or in a
+  harness that copies `tools/`, which is exactly what (a) and (b) run. User-facing protection is
+  `gate_all`, `release_verify`, the promote guards, the mutation harnesses and the consumer builds. Tell
+  Trevor the time cost before starting any run over ~10 minutes.
 - **Release verification before any promote** (protocol #6): `whole_crop_gate` 18/18 +
   `tools/gate_all.py` (the whole suite on **every** certified crop) + `release_verify` + the
   per-batch source-truth sample. A green gate is NOT a clean release.
