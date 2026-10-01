@@ -123,3 +123,58 @@ assert any("footprint_inches" in v for v in numeric_sanity_violations(c)), numer
 c = annual(); c["mature_height_ft"] = None; c["mature_spread_ft"] = None; c["footprint_inches"] = None
 assert not any("mature_" in v or "footprint" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
 print("PASS numeric_sanity plant-dimension bounds (PLA-465)")
+
+
+# --- PLA-10 promote 1 (spec §10.1): planting_layout entries + the row mirror + rootstock spacing ----
+def _e(**kw):
+    e = {"id": "row-none", "arrangement": "row", "support": "none", "default": True,
+         "in_row_inches": [12, 18], "row_spacing_inches": [30, 36]}
+    e.update(kw)
+    return e
+
+
+def with_layout(base, *entries, **root):
+    c = base(); c["planting_layout"] = list(entries); c.update(root)
+    return c
+
+
+# clean annual row entry + root mirror; clean watermelon hill at 96; clean blackberry rows at 120
+assert numeric_sanity_violations(with_layout(annual, _e(), row_spacing_inches=[30, 36])) == []
+assert numeric_sanity_violations(with_layout(annual, _e(id="hill-none", arrangement="hill",
+    hill_spacing_inches=[96, 96], plants_per_hill=[2, 2], row_spacing_inches=[96, 96]))) == []
+assert numeric_sanity_violations(with_layout(tree, _e(in_row_inches=[24, 48], row_spacing_inches=[120, 120]))) == []
+# a string layout (the pre-promote form) and [] are skipped
+assert numeric_sanity_violations(with_layout(annual)) == []
+c = annual(); c["planting_layout"] = "block"
+assert numeric_sanity_violations(c) == []
+
+# in_row_inches: the spacing ceilings (72 non-tree, 360 tree)
+c = with_layout(annual, _e(in_row_inches=[60, 96]))
+assert any("planting_layout[0].in_row_inches" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+assert not any("in_row_inches" in v for v in numeric_sanity_violations(with_layout(tree, _e(in_row_inches=[144, 300], row_spacing_inches=[300, 400]))))
+assert any("in_row_inches" in v for v in numeric_sanity_violations(with_layout(tree, _e(in_row_inches=[144, 400], row_spacing_inches=[400, 400]))))
+# hill_spacing_inches: 120 non-tree ceiling (the 96-inch watermelon hill fits, 144 does not)
+c = with_layout(annual, _e(id="hill-none", arrangement="hill", hill_spacing_inches=[96, 144], plants_per_hill=[2, 2]))
+assert any("hill_spacing_inches" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+# row_spacing_inches: 144 non-tree, 480 tree; on the entry AND the crop-root mirror
+c = with_layout(annual, _e(row_spacing_inches=[150, 160]))
+assert any("planting_layout[0].row_spacing_inches" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+c = with_layout(annual, _e(), row_spacing_inches=[150, 160])
+assert any(v.startswith("row_spacing_inches") for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+assert not any("row_spacing" in v for v in numeric_sanity_violations(with_layout(tree, _e(in_row_inches=[144, 180], row_spacing_inches=[240, 480]))))
+assert any("row_spacing" in v for v in numeric_sanity_violations(with_layout(tree, _e(in_row_inches=[144, 180], row_spacing_inches=[240, 600]))))
+# plants_per_hill: a count in [1, 10]
+c = with_layout(annual, _e(id="hill-none", arrangement="hill", hill_spacing_inches=[30, 30], plants_per_hill=[4, 40]))
+assert any("plants_per_hill" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+# ordering on a ROW entry: rows can't be narrower than the plants in them
+c = with_layout(annual, _e(in_row_inches=[36, 48], row_spacing_inches=[18, 24]))
+assert any("ordering" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+# ... but a block or hill entry is not held to it, and a null row figure is skipped
+assert not any("ordering" in v for v in numeric_sanity_violations(with_layout(annual, _e(id="block-none", arrangement="block", in_row_inches=[36, 48], row_spacing_inches=[18, 24]))))
+assert not any("ordering" in v for v in numeric_sanity_violations(with_layout(annual, _e(row_spacing_inches=None))))
+# rootstock_options[].spacing_inches: the tree bound, null skipped
+c = tree(); c["rootstock_options"] = [{"name": "M9", "spacing_inches": [72, 96]}, {"name": "M26", "spacing_inches": None}]
+assert numeric_sanity_violations(c) == [], numeric_sanity_violations(c)
+c["rootstock_options"][0]["spacing_inches"] = [72, 400]
+assert any("rootstock_options[0].spacing_inches" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+print("PASS numeric_sanity planting_layout bounds (PLA-10)")

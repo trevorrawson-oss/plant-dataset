@@ -43,7 +43,8 @@ def clean_indoor():
     return {
         "slug": "microgreens-mix", "calendar_basis": "non_seasonal_indoor",
         "sunlight": "bright indirect", "water": "keep evenly moist",
-        "sunlight_hours": [], "ph": {"preferred_range": []}, "spacing_inches": [],
+        "sunlight_hours": [], "ph": {"preferred_range": []}, "spacing_inches": None,
+        "zone_independent": True,
         "container_notes": {"container_ok": True, "depth_inches_min": 1},
         "fertilizer": {"type": None, "timing": None, "frequency": None},
     }
@@ -140,5 +141,23 @@ assert display_readiness_violations(c) == [], display_readiness_violations(c)
 # and an indoor crop with an INVALID DTM is still flagged (DTM sanity is universal)
 c = clean_indoor(); c["days_to_maturity"] = [-1, -1]
 assert any("days_to_maturity" in x for x in display_readiness_violations(c)), display_readiness_violations(c)
+
+# ---- PLA-10 promote 1 (spec §2.4, §10.1): spacing_inches null is legal ONLY where A44 check 7
+# allows it, i.e. on a zone_independent crop. Proved OFF the indoor early return, where it would
+# otherwise be invisible (the 8 microgreens are also non_seasonal_indoor today).
+# 18. zone_independent + null spacing on the NON-indoor path -> clean
+c = clean_outdoor(); c["zone_independent"] = True; c["spacing_inches"] = None
+assert display_readiness_violations(c) == [], display_readiness_violations(c)
+# 19. null spacing on a crop that is NOT zone_independent -> still a violation (absent)
+c = clean_outdoor(); c["spacing_inches"] = None
+assert any("spacing_inches" in x and "absent" in x for x in display_readiness_violations(c)), display_readiness_violations(c)
+# 20. zone_independent does not excuse a MALFORMED pair, nor the pre-promote [] (null fails closed)
+c = clean_outdoor(); c["zone_independent"] = True; c["spacing_inches"] = [12, 6]
+assert any("spacing_inches" in x for x in display_readiness_violations(c)), display_readiness_violations(c)
+c = clean_outdoor(); c["zone_independent"] = True; c["spacing_inches"] = []
+assert any("spacing_inches" in x for x in display_readiness_violations(c)), display_readiness_violations(c)
+# 21. the flag must be the bool True
+c = clean_outdoor(); c["zone_independent"] = "True"; c["spacing_inches"] = None
+assert any("spacing_inches" in x for x in display_readiness_violations(c)), display_readiness_violations(c)
 
 print("display_readiness_gate: all tests passed")

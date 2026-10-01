@@ -669,13 +669,19 @@ print(f"  de-mux violations: {len(_dmx)}")
 for m in _dmx:
     fail(f"demux: {m}")
 
-# ---------------- A44. planting_layout conditional field (spec 2026-07-10) ----------------
-# Corn's block-planting fact, structured. No-op off scope (absent/null planting_layout). Enforces
-# enum membership + block<->pollination_block_min_rows coherence. Conditional field, NOT an A39
-# register requirement -- absence is never a violation (planner arc may promote it later).
-from planting_layout_gate import check_crop as _layout_violations
-print("A44. planting_layout conditional field (enum + block<->min_rows coherence; no-op off scope)")
-_layout = _layout_violations(crop)
+# ---------------- A44. planting_layout list + spacing mirrors (PLA-10 spec 2026-09-30, §1.6) ----------------
+# planting_layout is a LIST of (arrangement, support) entries, one default, each citing its own figures;
+# crop-root spacing_inches / row_spacing_inches / row_spacing_reason are GATED MIRRORS of it (D8 option (b):
+# the entry is the record). A crop already carrying a list is held to the full rule in either state.
+# PRESENCE (every certified crop carries a list; the 6 legacy strings and the retired
+# spacing_inches_anchoring_urls refused) is behind planting_layout_gate.PRESENCE_ARMED, kept in the gate
+# module because gate_all's roster half reads it too. It flips to True in the SAME commit that writes the
+# canonical carrying the lists, never before: armed early it would redden gate_all on live canonical
+# (gates arm off the data). The roster population + literal floors run in gate_all.
+import planting_layout_gate as _plg
+print(f"A44. planting_layout list + spacing mirrors (entry shape, one default, mirror equality, row reason; "
+      f"presence {'ARMED' if _plg.PRESENCE_ARMED else 'off'})")
+_layout = _plg.check_crop(crop)
 print(f"  planting_layout violations: {len(_layout)}")
 for m in _layout:
     fail(f"planting_layout: {m}")

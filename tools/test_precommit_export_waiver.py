@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Drivers for the pre-commit hook's EXPORT_WAIVERS (PLA-581, ruled 2026-09-24).
 
-The waiver is keyed on IDENTITY (the E1 app-provenance check, never E2) AND CHARACTER (the export
-stamped at exactly d7b33682f992). Every driver here goes through the REAL `export_currency_concerns`
+A waiver is keyed on IDENTITY (the E1 app-provenance check, never E2) AND CHARACTER (the export
+stamped at exactly d7b33682f992). The live table is EMPTY since 2026-10-01 (PLA-10: the PLA-465 waiver
+went stale when the app re-exported at c5fc3d13 and was removed), so every mechanism driver runs against
+FIXTURE_WAIVERS, the removed entry kept verbatim as a synthetic table. Every driver here goes through the REAL `export_currency_concerns`
 path against a SYNTHETIC plant-app stamp in a temp dir, so it never depends on the live app and does
 not move when the app is rebuilt. SHIPS MUTATION-TESTED via mutate_precommit_export_waiver.py.
 """
@@ -16,8 +18,21 @@ import unittest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+import re  # noqa: E402
 import precommit_release_verify as H  # noqa: E402
 import export_staleness_gate as esg  # noqa: E402
+
+# The PLA-465 entry as it stood in the live table until 2026-10-01, kept here as the mechanism's fixture.
+FIXTURE_WAIVERS = {
+    "E1 app-provenance": {
+        "ticket": "PLA-465",
+        "reason": "plant-app cannot rebuild from ANY canonical until 378c7b9f (the PLA-465 key "
+                  "classification, feat/pla-465-dimension-keys) is released; its shipped export is "
+                  "frozen at d7b33682",
+        "character": re.compile(r"^E1 app-provenance: export was built from canonical d7b33682f992 "
+                                r"but canonical is now [0-9a-f]{12}\."),
+    },
+}
 
 FROZEN = "d7b33682f9926e3aef176ef8a1bb1f3191143957ca40c94e36433abd883a2798"  # the waived stamp
 OTHER = "526788f2c34a7fe1c59e9427271c1d1738c6b6cce2c1d0524df715e4fc359659"
@@ -69,7 +84,7 @@ class Waiver(Base):
     def test_the_known_stale_export_is_waived(self):
         v = self.concerns(FROZEN)
         self.assertEqual(len(v), 1, v)
-        unwaived, waived, stale = H.apply_export_waivers(v)
+        unwaived, waived, stale = H.apply_export_waivers(v, FIXTURE_WAIVERS)
         self.assertEqual(unwaived, [])
         self.assertEqual([n for _, n in waived], ["E1 app-provenance"])
         self.assertEqual(stale, [])
@@ -77,7 +92,7 @@ class Waiver(Base):
     def test_a_different_stale_sha_is_not_waived(self):
         """An export rebuilt at another SHA and still stale is a DIFFERENT fact: it blocks."""
         v = self.concerns(OTHER)
-        unwaived, waived, _ = H.apply_export_waivers(v)
+        unwaived, waived, _ = H.apply_export_waivers(v, FIXTURE_WAIVERS)
         self.assertEqual(waived, [])
         self.assertEqual(len(unwaived), 1)
         self.assertIn("526788f2c34a", unwaived[0])
@@ -85,28 +100,38 @@ class Waiver(Base):
     def test_e2_is_never_waived(self):
         """The waiver covers E1 at the frozen stamp. An E2 integrity failure riding along blocks."""
         v = self.concerns(FROZEN, drop_artifact=True)
-        unwaived, waived, _ = H.apply_export_waivers(v)
+        unwaived, waived, _ = H.apply_export_waivers(v, FIXTURE_WAIVERS)
         self.assertEqual([n for _, n in waived], ["E1 app-provenance"])
         self.assertTrue(unwaived and all(u.startswith("E2 ") for u in unwaived), unwaived)
 
     def test_a_current_export_has_nothing_to_waive_and_the_waiver_reads_stale(self):
         v = self.concerns(NOW)
         self.assertEqual(v, [])
-        unwaived, waived, stale = H.apply_export_waivers(v)
+        unwaived, waived, stale = H.apply_export_waivers(v, FIXTURE_WAIVERS)
         self.assertEqual((unwaived, waived, stale), ([], [], ["E1 app-provenance"]))
 
     def test_the_character_needs_the_whole_frozen_prefix(self):
         """A stamp sharing only the first 8 hex of the frozen SHA is not the frozen export."""
         near = FROZEN[:8] + "0" * 56
-        unwaived, waived, _ = H.apply_export_waivers(self.concerns(near))
+        unwaived, waived, _ = H.apply_export_waivers(self.concerns(near), FIXTURE_WAIVERS)
         self.assertEqual(waived, [])
         self.assertEqual(len(unwaived), 1)
 
-    def test_the_waiver_carries_its_ticket_and_reason(self):
-        w = H.EXPORT_WAIVERS["E1 app-provenance"]
+    def test_the_fixture_waiver_carries_its_ticket_and_reason(self):
+        w = FIXTURE_WAIVERS["E1 app-provenance"]
         self.assertEqual(w["ticket"], "PLA-465")
         self.assertIn("378c7b9f", w["reason"])
-        self.assertEqual(sorted(H.EXPORT_WAIVERS), ["E1 app-provenance"])
+
+    def test_the_live_table_is_empty(self):
+        """PLA-10 (2026-10-01): the PLA-465 waiver was STALE and is removed. A new entry is a ruling
+        and must change this assertion in the same commit."""
+        self.assertEqual(H.EXPORT_WAIVERS, {})
+
+    def test_the_live_table_waives_nothing(self):
+        """With the table empty, the frozen-export violation that used to be waived now BLOCKS."""
+        v = self.concerns(FROZEN)
+        unwaived, waived, stale = H.apply_export_waivers(v)
+        self.assertEqual((len(unwaived), waived, stale), (1, [], []))
 
 
 class Wiring(Base):
@@ -121,6 +146,7 @@ class Wiring(Base):
              mock.patch.object(H, "_blob", return_value=os.path.join(self.tmp, "nope.json")), \
              mock.patch.object(H, "check", return_value=[]), \
              mock.patch.object(H, "export_currency_concerns", return_value=violations), \
+             mock.patch.object(H, "EXPORT_WAIVERS", FIXTURE_WAIVERS), \
              mock.patch.object(sys, "argv", ["hook"]):
             return H.main()
 

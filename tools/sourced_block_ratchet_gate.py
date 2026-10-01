@@ -80,6 +80,10 @@ ITEM_FAMILIES = {
     "container_notes.plants_per_pot.readings": (("container_notes", "plants_per_pot", "readings"),
                                                 None, "container_notes"),
     "verification_status.field_additions": (("verification_status", "field_additions"), None, None),
+    # PLA-10 promote 1 (spec §1.6, §10.1): each (arrangement, support) entry is the ONE citation of its
+    # spacing figures; the crop-root spacing_inches is a gated mirror with no sources of its own (A44).
+    # The pre-promote string form is not a list, so it is skipped, as it always was.
+    "planting_layout": (("planting_layout",), "id", None),
 }
 # tips_by_stage.<stage>[]: one block type whose stage key is open-ended per crop.
 TIPS = "tips_by_stage"
@@ -104,6 +108,39 @@ ANCHOR_ONLY = (
 )
 
 CITE_KEYS = ("sources", "anchoring_urls")
+
+# ---------------------------------------------------------------- PLA-10 R5 MIGRATION WAIVERS
+# The only way a planting_layout entry ships uncited: a crop on the R5 hunt list whose hunt found no page,
+# while the entry's in_row_inches byte-equals the pre-promote spacing_inches. See the module docstring.
+import planting_layout_migration_known as _M  # noqa: E402
+MIGRATION_ELIGIBLE = _M.ELIGIBLE
+MIGRATION_WAIVERS = _M.WAIVERS
+
+
+def _compact(v):
+    return json.dumps(v, separators=(",", ":"), ensure_ascii=False)
+
+
+def migration_verdict(crop, ident):
+    """None if `ident` is not a planting_layout entry identity under a migration waiver; otherwise
+    (waived: bool, why: str)."""
+    slug = crop.get("slug")
+    w = MIGRATION_WAIVERS.get(slug)
+    m = re.fullmatch(rf"{re.escape(str(slug))}\|planting_layout\[id=([^\]]+)\]\|sources", ident)
+    if w is None or m is None or m.group(1) != w.get("entry_id"):
+        return None
+    if slug not in MIGRATION_ELIGIBLE:
+        return False, (f"{ident}: a migration waiver on {slug}, which is not on the R5 hunt list "
+                       f"{list(MIGRATION_ELIGIBLE)}; only those crops may ship an uncited entry")
+    e = next((x for x in (crop.get("planting_layout") or []) if isinstance(x, dict)
+              and x.get("id") == w["entry_id"]), None)
+    have = _compact(e.get("in_row_inches")) if e is not None else None
+    if have != _compact(w.get("in_row_inches")):
+        return False, (f"{ident}: the R5 migration waiver holds only while in_row_inches is byte-equal to "
+                       f"the pre-promote spacing_inches {_compact(w.get('in_row_inches'))}; got {have}. "
+                       f"A changed figure is a new claim: cite it.")
+    return True, ""
+
 
 # ---------------------------------------------------------------- THE POPULATION FLOOR
 # MEASURED 2026-09-30 on 00dda31c: 7063 named blocks on 121 certified crops. The floor sits below
@@ -277,6 +314,11 @@ def crop_violations(crop):
         return []
     V = []
     for ident in uncited(crop):
+        mv = migration_verdict(crop, ident)
+        if mv is not None:
+            if not mv[0]:
+                V.append(mv[1])
+            continue
         if ident not in KNOWN:
             V.append(f"NEW uncited block {ident}: it carries authored content and its citation "
                      f"slot is missing, null or []. Cite it. The PLA-607 ratchet waives only the "

@@ -36,10 +36,15 @@ def dtm_empty(crop):
 
 
 def is_microgreen(crop):
-    """True for a surface-sown tray crop (empty spacing_inches) -> exempt from sow_depth_inches /
-    thin_to_inches (there is no planting depth or thinning for a broadcast tray)."""
-    spacing = crop.get("spacing_inches")
-    return isinstance(spacing, list) and len(spacing) == 0
+    """True for a surface-sown tray crop -> exempt from sow_depth_inches / thin_to_inches (there is
+    no planting depth or thinning for a broadcast tray).
+
+    Keys on `zone_independent is True` (PLA-10 promote 1, spec §2.4). It used to key on
+    `spacing_inches == []`, which promote 1 replaces with `null` on the 8 microgreens; on `null` the
+    old predicate returned False and all 8 went red for sow depth and thinning. zone_independent is
+    exactly those 8 on the certified roster (measured 2026-10-01 on c5fc3d13), and it does not move
+    with the spacing shape."""
+    return crop.get("zone_independent") is True
 
 
 def _is_pair(v):

@@ -95,7 +95,9 @@ class PinsAreTheMeasurement(unittest.TestCase):
         self.assertEqual(set(G.ITEM_FAMILIES), {
             "pests", "diseases", "growth_stages", "failure_diagnostics", "notifications",
             "weather_triggers", "rootstock_options", "varieties.recommended",
-            "container_notes.plants_per_pot.readings", "verification_status.field_additions"})
+            "container_notes.plants_per_pot.readings", "verification_status.field_additions",
+            "planting_layout"})
+        self.assertEqual(G.ITEM_FAMILIES["planting_layout"], (("planting_layout",), "id", None))
 
     def test_the_three_ruled_exclusions_and_only_those(self):
         """RULED 2026-09-30: out of the named list, each with its reason recorded."""
@@ -325,9 +327,11 @@ class TheRatchet(unittest.TestCase):
 # -------------------------------------------------------------------------- discovery
 class NamingIsPartOfAdding(unittest.TestCase):
     def test_a_new_sourced_block_is_UNNAMED_until_named(self):
+        """Re-homed 2026-10-01: PLA-10 promote 1 NAMED planting_layout (its first proof), so the
+        unnamed-list case now uses a list nobody has named."""
         d = fresh()
-        by(d)[VICTIM]["planting_layout"] = [{"method": "rows", "sources": ["umn_ext"]}]
-        self.assertTrue(any("UNNAMED sourced field planting_layout[].sources" in m
+        by(d)[VICTIM]["zz_layout"] = [{"method": "rows", "sources": ["umn_ext"]}]
+        self.assertTrue(any("UNNAMED sourced field zz_layout[].sources" in m
                             for m in violations(d)), violations(d))
 
     def test_a_new_crop_root_sources_sibling_is_UNNAMED(self):
@@ -356,6 +360,99 @@ class NamingIsPartOfAdding(unittest.TestCase):
         d = fresh()
         by(d)[VICTIM]["spacing_inches_anchoring_urls"] = {}
         self.assertEqual(violations(d), [])
+
+
+# ------------------------------------------------- PLA-10 promote 1: planting_layout entries
+LAYOUT_ENTRY = {"id": "row-none", "arrangement": "row", "support": "none", "default": True,
+                "in_row_inches": [12, 24], "row_spacing_inches": [24, 36], "row_spacing_reason": None,
+                "sources": ["umn_ext"], "anchoring_urls": {"umn_ext": {
+                    "url": "https://extension.umn.edu/vegetables/growing-cabbage", "verified": "2026-10-01"}}}
+# R5's eight plus W5's five (Trevor, 2026-10-01: "no CITABLE page after a recorded hunt").
+MIGRATION_ELIGIBLE = ("bee-balm", "bok-choy", "borage", "cherry-sour", "cherry-sweet", "cosmos", "echinacea",
+                      "mulberry", "pomegranate", "rosemary", "sweet-alyssum", "sweet-pea", "viola")
+
+
+class PlantingLayoutFamily(unittest.TestCase):
+    """Spec §1.6 / §10.1: ITEM_FAMILIES names planting_layout keyed by id, so promote 1's entries are
+    ratcheted the day they land; R5's migration waiver is the ONLY way an entry ships uncited."""
+
+    def put(self, slug, **over):
+        d = fresh()
+        e = copy.deepcopy(LAYOUT_ENTRY); e.update(over)
+        by(d)[slug]["planting_layout"] = [e]
+        return d, e
+
+    def test_the_live_legacy_strings_are_not_blocks(self):
+        self.assertEqual([m for m in violations(fresh()) if "planting_layout" in m], [])
+
+    def test_a_cited_entry_passes_and_is_named(self):
+        d, _ = self.put(VICTIM)
+        self.assertEqual(violations(d), [])
+
+    def test_an_uncited_entry_FAILS_by_its_id(self):
+        for slot in ([], None, "__absent__"):
+            d, e = self.put(VICTIM)
+            if slot == "__absent__":
+                del by(d)[VICTIM]["planting_layout"][0]["sources"]
+            else:
+                by(d)[VICTIM]["planting_layout"][0]["sources"] = slot
+            self.assertTrue(any(f"NEW uncited block {VICTIM}|planting_layout[id=row-none]|sources" in m
+                                for m in violations(d)), (slot, violations(d)))
+
+    def test_the_migration_set_is_the_R5_list_and_ships_empty(self):
+        self.assertEqual(tuple(sorted(G.MIGRATION_ELIGIBLE)), MIGRATION_ELIGIBLE)
+        self.assertEqual(G.MIGRATION_WAIVERS, {})
+
+    def _waive(self, slug, eid, in_row):
+        saved = dict(G.MIGRATION_WAIVERS)
+        G.MIGRATION_WAIVERS.clear()
+        G.MIGRATION_WAIVERS[slug] = {"entry_id": eid, "in_row_inches": in_row, "hunt": "test"}
+        self.addCleanup(lambda: (G.MIGRATION_WAIVERS.clear(), G.MIGRATION_WAIVERS.update(saved)))
+
+    def test_a_migration_waiver_holds_only_while_byte_equal(self):
+        slug = "bok-choy"
+        pre = by(_CANON)[slug]["spacing_inches"]
+        self._waive(slug, "row-none", list(pre))
+        d, _ = self.put(slug, sources=[], anchoring_urls={}, in_row_inches=list(pre))
+        self.assertEqual([m for m in violations(d) if slug in m], [])
+        d, _ = self.put(slug, sources=[], anchoring_urls={}, in_row_inches=[pre[0], pre[1] + 1])
+        self.assertTrue(any("migration waiver" in m and "byte" in m for m in violations(d)), violations(d))
+        d, _ = self.put(slug, sources=[], anchoring_urls={}, in_row_inches=[float(pre[0]), pre[1]])
+        self.assertTrue(any("migration waiver" in m and "byte" in m for m in violations(d)), violations(d))
+
+    def test_a_migration_waiver_names_its_entry(self):
+        slug = "bok-choy"
+        pre = by(_CANON)[slug]["spacing_inches"]
+        self._waive(slug, "row-stake", list(pre))
+        d, _ = self.put(slug, sources=[], anchoring_urls={}, in_row_inches=list(pre))
+        self.assertTrue(any(f"NEW uncited block {slug}|planting_layout[id=row-none]" in m
+                            for m in violations(d)), violations(d))
+
+    def test_a_migration_waiver_off_the_R5_list_is_REFUSED(self):
+        pre = by(_CANON)[VICTIM]["spacing_inches"]
+        self._waive(VICTIM, "row-none", list(pre))
+        d, _ = self.put(VICTIM, sources=[], anchoring_urls={}, in_row_inches=list(pre))
+        self.assertTrue(any("not on the R5 hunt list" in m for m in violations(d)), violations(d))
+
+    def test_a_migration_waiver_covers_only_the_entry_not_other_blocks(self):
+        slug = "bok-choy"
+        pre = by(_CANON)[slug]["spacing_inches"]
+        self._waive(slug, "row-none", list(pre))
+        d, _ = self.put(slug, sources=[], anchoring_urls={}, in_row_inches=list(pre))
+        e2 = copy.deepcopy(LAYOUT_ENTRY); e2.update(id="row-stake", support="stake", default=False,
+                                                    sources=[], anchoring_urls={})
+        by(d)[slug]["planting_layout"].append(e2)
+        self.assertTrue(any(f"{slug}|planting_layout[id=row-stake]" in m for m in violations(d)))
+
+    def test_A63_reaches_a_bare_sole_anchor_on_an_entry(self):
+        """Spec §10.1: A63 needs no code change; a scratch injection must redden it (proof, not trust)."""
+        import bare_host_gate as BH
+        d, _ = self.put(VICTIM, anchoring_urls={"umn_ext": {"url": "https://extension.umn.edu",
+                                                             "verified": "2026-10-01"}})
+        v = BH.roster(d)[4]
+        self.assertTrue(any(VICTIM in m and "planting_layout" in m for m in v), v)
+        d, _ = self.put(VICTIM)
+        self.assertEqual([m for m in BH.roster(d)[4] if "planting_layout" in m], [])
 
 
 # ----------------------------------------------------------------- the folded pot sub-rule

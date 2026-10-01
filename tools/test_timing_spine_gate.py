@@ -89,13 +89,15 @@ def perennial_empty_dtm():
 
 
 def microgreen_crop():
-    """radish-microgreens-like: seed but surface-broadcast -> spacing_inches [] marks the
-    exemption from BOTH sow_depth and thin_to_inches."""
+    """radish-microgreens-like: seed but surface-broadcast -> zone_independent marks the exemption
+    from BOTH sow_depth and thin_to_inches. PLA-10 promote 1 (spec §2.4): the microgreens carry
+    spacing_inches null (was []), so the predicate keys on zone_independent, never on the spacing."""
     return {
         "slug": "radish-microgreens",
         "verification_status": {"status": "verified_gs_arc", "field_additions": FA_TIMING},
         "days_to_maturity": [7, 12],
-        "spacing_inches": [],
+        "zone_independent": True,
+        "spacing_inches": None,
         "propagule": "seed",
         "start_method": {"start": "indoors", "notes_beginner": "Scatter seed thickly; do not bury."},
         "growth_stages": [
@@ -184,9 +186,23 @@ for prop in ("seed", "clove", "set", "tuber"):
         c["start_method"]["notes_beginner"] = "plant the cloves pointy side up"
     assert any("sow_depth" in v for v in timing_spine_violations(c, CATALOG)), (prop, timing_spine_violations(c, CATALOG))
 
-# 11. microgreen (spacing_inches []) is EXEMPT from sow_depth + thin_to requirements
+# 11. microgreen (zone_independent) is EXEMPT from sow_depth + thin_to requirements
 mg = microgreen_crop()
 assert timing_spine_violations(mg, CATALOG) == [], timing_spine_violations(mg, CATALOG)
+
+# 11b. PLA-10 promote 1: the predicate keys on zone_independent, in BOTH spacing shapes, and an empty
+# spacing on a crop that is NOT zone_independent (an uncertified shell's []) is no longer a microgreen.
+from timing_spine_gate import is_microgreen
+assert is_microgreen(microgreen_crop()), "zone_independent + spacing null is a microgreen"
+_mg = microgreen_crop(); _mg["spacing_inches"] = []
+assert is_microgreen(_mg), "zone_independent + the pre-promote [] is still a microgreen"
+_mg = microgreen_crop(); del _mg["zone_independent"]; _mg["spacing_inches"] = []
+assert not is_microgreen(_mg), "spacing [] alone no longer marks a microgreen"
+_mg = microgreen_crop(); _mg["zone_independent"] = "True"
+assert not is_microgreen(_mg), "zone_independent must be the bool True, not a truthy string"
+_mg = microgreen_crop(); _mg["zone_independent"] = None
+assert any("sow_depth" in v for v in timing_spine_violations(_mg, CATALOG)), \
+    "a seed crop that is not zone_independent owes sow_depth even with null spacing"
 
 # 12. non-seed-like propagule (transplant/division/slip) need NOT carry sow_depth
 c = perennial_empty_dtm()  # transplant, no sow_depth

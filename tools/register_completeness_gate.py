@@ -138,6 +138,14 @@ EXCLUDED_KEYS = {
     # is enforced by planting_layout_gate (whole_crop_gate A44); pollination_block_min_rows is an int,
     # out of this string check. Added when sweet-corn became the first crop to carry the field.
     "planting_layout",
+    # PLA-10 promote 1 (spec docs/specs/pla10-field-shape.md §1.1-§1.2, 2026-10-01): planting_layout
+    # became a LIST of entries. Its closed-enum tokens -- `arrangement` (row|hill|block), `support`
+    # (none|stake|cage|trellis) and `row_spacing_reason` (not_authored|not_applicable|see_layout, on an
+    # entry and at the crop root) -- are machine-read tokens consumers map to their own copy, NOT
+    # dual-register prose. Same class as tray_sowing. Their vocabulary is enforced by
+    # planting_layout_gate (A44); `id` was already ruled. Found by test_gate_planting_layout_a44, which
+    # ran the post-promote shape through every whole_crop_gate check before any promote did.
+    "arrangement", "support", "row_spacing_reason",
     # VARIETY LADDER-DELTA TRANSFORM VERB (PLA-8 Round 2, ruled by Trevor 2026-08-22): `op` is the
     # operation a variety's `ladder_delta` rung performs on its parent `control_ladder` rung --
     # drop|replace|add. A controlled-vocab backend token consumed by the delta RESOLVER when it

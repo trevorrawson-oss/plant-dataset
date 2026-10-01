@@ -100,6 +100,33 @@ def numeric_sanity_violations(crop):
     sp_hi = 360 if basis in _TREE_BASES else 72
     check(crop.get("spacing_inches"), f"spacing_inches (basis={basis})", 1, sp_hi)
 
+    # planting_layout entries (PLA-10 promote 1, spec §10.1), archetype-aware like spacing_inches:
+    # in_row_inches takes the spacing ceiling; hill_spacing_inches 120 non-tree (watermelon's hill is 96);
+    # row_spacing_inches 144 non-tree / 480 tree (blackberry rows reach 120), on every entry and the
+    # crop-root mirror; plants_per_hill a count in [1, 10]; and on a ROW entry the rows cannot be
+    # narrower than the plants in them. The pre-promote string form and [] carry no numbers.
+    tree = basis in _TREE_BASES
+    row_hi = 480 if tree else 144
+    check(crop.get("row_spacing_inches"), f"row_spacing_inches (basis={basis})", 1, row_hi)
+    pl = crop.get("planting_layout")
+    for i, e in enumerate(pl if isinstance(pl, list) else []):
+        if not isinstance(e, dict):
+            continue
+        tag = f"planting_layout[{i}]"
+        check(e.get("in_row_inches"), f"{tag}.in_row_inches (basis={basis})", 1, sp_hi)
+        check(e.get("hill_spacing_inches"), f"{tag}.hill_spacing_inches (basis={basis})", 1,
+              360 if tree else 120)
+        check(e.get("row_spacing_inches"), f"{tag}.row_spacing_inches (basis={basis})", 1, row_hi)
+        check(e.get("plants_per_hill"), f"{tag}.plants_per_hill", 1, 10)
+        ir, rs = _endpoints(e.get("in_row_inches")), _endpoints(e.get("row_spacing_inches"))
+        if e.get("arrangement") == "row" and ir and rs and rs[-1] < ir[0]:
+            V.append(f"{tag} row_spacing_inches {e.get('row_spacing_inches')!r} vs in_row_inches "
+                     f"{e.get('in_row_inches')!r}: ordering, the widest row is narrower than the "
+                     f"closest plant spacing in it")
+    for i, r in enumerate(crop.get("rootstock_options") or []):
+        if isinstance(r, dict):
+            check(r.get("spacing_inches"), f"rootstock_options[{i}].spacing_inches", 1, 360)
+
     # plant dimensions (PLA-465, register row 30) are ARCHETYPE-AWARE the same way: a tree base may
     # reach 120 ft tall / 80 ft wide (a standard mulberry is 30-60); anything else above 20 ft is absurd
     # (a rosemary at 6, a sunflower at 12, pole beans on a trellis at 10 all fit). footprint_inches is

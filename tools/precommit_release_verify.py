@@ -120,16 +120,14 @@ def export_currency_concerns(staged_names, app_root=None):
 # exactly d7b33682f992). An export rebuilt at ANY other SHA and still stale fails -- that is a
 # different fact from the one accepted. A waiver that no longer fires is reported STALE, loudly,
 # but does not block: failing there would punish whoever fixed it.
-EXPORT_WAIVERS = {
-    "E1 app-provenance": {
-        "ticket": "PLA-465",
-        "reason": "plant-app cannot rebuild from ANY canonical until 378c7b9f (the PLA-465 key "
-                  "classification, feat/pla-465-dimension-keys) is released; its shipped export is "
-                  "frozen at d7b33682",
-        "character": re.compile(r"^E1 app-provenance: export was built from canonical d7b33682f992 "
-                                r"but canonical is now [0-9a-f]{12}\."),
-    },
-}
+#
+# EMPTY since 2026-10-01 (PLA-10 promote 1's tools commit). The one waiver this table carried, PLA-465's
+# E1 at the export frozen at d7b33682f992, stopped firing when plant-app re-exported at c5fc3d13
+# (5976254c, PLA-532) and reported STALE from then on; a stale waiver is removed, not left as standing
+# permission. The mechanism stays, and its drivers run against a synthetic table
+# (test_precommit_export_waiver.FIXTURE_WAIVERS). Adding an entry here is a ruling: identity, character,
+# ticket and reason, exactly as that one carried.
+EXPORT_WAIVERS = {}
 
 
 def apply_export_waivers(violations, waivers=None):

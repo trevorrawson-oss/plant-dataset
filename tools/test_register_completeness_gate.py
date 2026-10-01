@@ -203,4 +203,15 @@ assert excluded_by_path("control_methods.insecticidal_soap.best_use")
 assert excluded_by_path("pesticide_safety_education.label_note_seasoned")
 print("pest-ipm register rulings: OK")
 
+# PLA-10 promote 1 (spec §1.1, §1.2): planting_layout entries and the crop-root row reason carry
+# closed-enum tokens (arrangement, support, row_spacing_reason), machine-read like tray_sowing. Every
+# value each can hold is driven here, on the entry and at the root, so none reads as unruled prose.
+for _rr in ("not_authored", "not_applicable", "see_layout"):
+    _c = {"slug": "x", "row_spacing_reason": _rr, "planting_layout": [
+        {"id": "hill-trellis-x", "arrangement": _a, "support": _s, "row_spacing_reason": "not_authored"}
+        for _a in ("row", "hill", "block") for _s in ("none", "stake", "cage", "trellis")]}
+    assert register_completeness_violations(_c) == [], (_rr, register_completeness_violations(_c))
+    assert backend_key_laundering_violations(_c) == [], (_rr, backend_key_laundering_violations(_c))
+print("PLA-10 planting_layout enums ruled: OK")
+
 print("PASS register_completeness_gate (per-crop function)")

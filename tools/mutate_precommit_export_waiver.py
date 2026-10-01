@@ -20,19 +20,21 @@ SCRIPT = "test_precommit_release_verify.py"
 MARKER = "# MUTATION-APPLIED"
 NOTHING_COLLECTED = 5
 
-CHAR = '        "character": re.compile(r"^E1 app-provenance: export was built from canonical d7b33682f992 "'
+LIVE = "EXPORT_WAIVERS = {}"
 MATCH = '        hit = next((name for name, w in waivers.items() if w["character"].search(v)), None)'
 STALE = '    return unwaived, waived, [n for n in waivers if n not in fired]'
 WIRE_BLOCK = '            stale_export = unwaived'
 WIRE_APPLY = '            unwaived, waived, stale_waivers = apply_export_waivers(export_currency_concerns(staged))'
 
 MUTATIONS = [
-    ("waiver_never_matches", CHAR, CHAR.replace("d7b33682f992", "NEVERMATCHES") + "  " + MARKER,
-     "test_the_known_stale_export_is_waived"),
-    ("character_dropped_any_stale_sha_waived", CHAR, CHAR.replace("d7b33682f992", "[0-9a-f]{12}") + "  " + MARKER,
-     "test_a_different_stale_sha_is_not_waived"),
-    ("frozen_prefix_shortened", CHAR, CHAR.replace("d7b33682f992", "d7b33682[0-9a-f]{4}") + "  " + MARKER,
-     "test_the_character_needs_the_whole_frozen_prefix"),
+    # 2026-10-01 (PLA-10): the live table is EMPTY (the PLA-465 entry went stale and was removed). The
+    # three mutations on that entry's character regex left with it; the regex now lives in the suite's
+    # FIXTURE_WAIVERS, so it is exercised as data, not guarded in the target. In their place: a live
+    # entry reinstated must redden the empty-table driver.
+    ("stale_waiver_reinstated", LIVE,
+     'EXPORT_WAIVERS = {"E1 app-provenance": {"ticket": "PLA-465", "reason": "x", "character": '
+     're.compile(r"^E1 app-provenance: export was built from canonical d7b33682f992")}}  ' + MARKER,
+     "test_the_live_table_is_empty or test_the_live_table_waives_nothing"),
     ("every_violation_waived_including_e2", MATCH,
      "        hit = next(iter(waivers), None)  " + MARKER, "test_e2_is_never_waived"),
     ("stale_waiver_never_reported", STALE, "    return unwaived, waived, []  " + MARKER,

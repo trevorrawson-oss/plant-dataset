@@ -80,13 +80,15 @@ def empty_dtm_perennial():
 
 
 def microgreen():
-    """microgreens-mix: INDOOR_SLUGS -> climate thresholds N-A; spacing==[] -> sow_depth N-A."""
+    """microgreens-mix: INDOOR_SLUGS -> climate thresholds N-A; zone_independent -> sow_depth N-A
+    (PLA-10 promote 1: spacing_inches null, was [])."""
     return {
         "slug": "microgreens-mix",
         "verification_status": {"status": "verified_gs_arc"},
         "propagule": "seed",
         "days_to_maturity": [10, 14],    # non-empty -> dtm_anchor required (present below)
-        "spacing_inches": [],            # microgreen -> sow_depth N-A
+        "zone_independent": True,        # microgreen -> sow_depth N-A
+        "spacing_inches": None,          # PLA-10 promote 1: null, never []
         "dtm_anchor": "from_sow",
         "watering": {"schedule_by_stage": [{"stage": "germination"}]},
         "germination_light": "neutral",

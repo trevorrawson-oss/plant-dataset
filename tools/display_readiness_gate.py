@@ -12,6 +12,8 @@ ARCHETYPE-AWARE -- it respects legitimate N/A:
   - indoor (non_seasonal_indoor): the surface is the IndoorCycleCard, so sunlight_hours / ph /
     spacing / container / fertilizer-grid are NOT demanded (microgreens carry [] / null for them).
   - in-ground trees: container_ok == False is a valid DECISION; no pot value is demanded.
+  - zone_independent: spacing_inches null is the PLA-10 promote 1 state (no ground layout, A44 check 7),
+    accepted on the non-indoor path too; null anywhere else is still "absent".
 
 The values themselves are SOURCED figures authored upstream -- this gate enforces PRESENCE,
 never correctness (the source-truth layer is sampled, not gated).
@@ -71,7 +73,9 @@ def display_readiness_violations(crop):
     if not _present((crop.get("ph") or {}).get("preferred_range")):
         V.append("ph.preferred_range: absent (Hero pH stat renders blank)")
     sp = crop.get("spacing_inches")
-    if not _present(sp):
+    if sp is None and crop.get("zone_independent") is True:
+        pass  # PLA-10 promote 1 (spec §2.4): null is the zone_independent state A44 check 7 allows
+    elif not _present(sp):
         V.append("spacing_inches: absent (spacing stat / planner placeability)")
     elif not _valid_range(sp):
         V.append(f"spacing_inches: present but not a [lo,hi] pair of positive inches "
