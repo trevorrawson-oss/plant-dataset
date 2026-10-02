@@ -77,6 +77,19 @@
       "path": "yield_expectations.per_plant_seasoned",
       "new": "One root per plant. Parsnips are not a cut-and-come-again crop, so yield is best thought of by row length: at a 3 inch final spacing, expect roughly 4 large roots per foot of row, each often 8 to 12 inches long.",
       "reason": "restates the moved in-row figure (Clemson: 3 in) and its per-foot arithmetic"
+    },
+    {
+      "path": "thin_to_inches",
+      "new": [
+        3,
+        3
+      ],
+      "reason": "PLA-10 session 3: thin_to_inches was authored as a mirror of spacing_inches (40 of 41 crops equal at c5fc3d13; here [3, 6]); it follows the moved in-row figure [3, 3]. plant-app renders it (crop-timing thinToInches)."
+    },
+    {
+      "path": "thinning.to_spacing",
+      "new": "3 inches",
+      "reason": "PLA-10 session 3: follows the thinning tips session 2 re-authored to 'a final 3 inches apart' (Clemson [3,3])"
     }
   ],
   "restatements": [

@@ -1,0 +1,30 @@
+{
+  "slug": "asparagus",
+  "decision": "STRING MIGRATION ('row' -> row-none, spec §1.5), AGREES. uga_b577 (the fieldreport HTML page): \"Place the crowns in the furrow 12 to 18 in. apart\" -> in_row [12,18] (today's spacing_inches); \"Make rows 4 to 5 ft apart.\" -> rows [48,60], the 2026-07-23 plan pair. The same source id's other URL, the B577 planting-chart PDF, reads 'Asparagus 2nd season ... 3-5 ft 1½ to 2 ft' (rows 36-60, plants 18-24): the two uga_b577 URLs disagree on in-row, so the entry anchors the fieldreport page only. Figure unchanged, so no restatement adjudication is owed.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        12,
+        18
+      ],
+      "row_spacing_inches": [
+        48,
+        60
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "uga_b577"
+      ],
+      "anchoring_urls": {
+        "uga_b577": {
+          "url": "https://fieldreport.caes.uga.edu/publications/B577/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "spaghetti-squash",
+  "decision": "umn_ext 'Growing pumpkins and winter squash': \"Plant pumpkin and winter squash seeds three-fourths of an inch deep, 24 to 36 inches apart. Use the closer spacing if the variety is a bush type. Spacing between rows should be 5 to 6 feet.\" -> row-none default, in_row [24,36], rows [60,72] (today [24,48]). DECISION ROW (not a D1 repair: worklist 56 §3). VCE 426-331 Table 5, cited, states 'Squash, winter 2-4 ft 3-10 ft' = today's [24,48] with rows [36,120]. CHOSEN: UMN 'Plant pumpkin and winter squash seeds ... 24 to 36 inches apart ... Spacing between rows should be 5 to 6 feet' -> [24,36]/[60,72], for two reasons: (1) acorn and butternut (same winter-squash group) take UMN in the ruled D1 repairs, so all three winter squash read one page and one figure; (2) the crop's own prose already says 2-3 ft in-row (VCE's 4 ft hi is on no spaghetti prose), and VCE's 3-10 ft row span is too wide to guide a gardener. Alternative (keep VCE [24,48], no move, no edits) is a one-line flip. Restatements: rows '3 to 5 feet' -> '5 to 6 feet'. No hill entry: the only hill figure on its cited pages is UGA C1206, a PUMPKIN page ('Plant pumpkins in hills, with at least 8 feet of space on all sides'), out of scope (worklist 56 §3).",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            24,
+            36
+          ],
+          "sid": "umn_ext",
+          "url": "https://extension.umn.edu/vegetables/pumpkins-and-winter-squash",
+          "quote": "Plant pumpkin and winter squash seeds three-fourths of an inch deep, 24 to 36 inches apart."
+        },
+        "row_spacing_inches": {
+          "value": [
+            60,
+            72
+          ],
+          "sid": "umn_ext",
+          "url": "https://extension.umn.edu/vegetables/pumpkins-and-winter-squash",
+          "quote": "Spacing between rows should be 5 to 6 feet."
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "soil_prep_beginner",
+      "replace": [
+        "about 2 to 3 feet apart in rows 3 to 5 feet apart",
+        "about 2 to 3 feet apart in rows 5 to 6 feet apart"
+      ],
+      "reason": "PLA-10 R3: rows follow the authored row_spacing_inches [60,72] (UMN)"
+    },
+    {
+      "path": "soil_prep_seasoned",
+      "replace": [
+        "with 3 to 5 feet between rows",
+        "with 5 to 6 feet between rows"
+      ],
+      "reason": "PLA-10 R3: rows follow the authored row_spacing_inches [60,72] (UMN)"
+    }
+  ],
+  "restatements": {
+    "growth_stages[0].user_action_beginner": "agrees: seeds sown per hill and seedlings kept, not a plant spacing",
+    "growth_stages[0].user_action_seasoned": "agrees: seeds sown per hill and seedlings kept, not a plant spacing",
+    "soil_prep_beginner": "edited: in-row 2-3 ft agrees; rows 3-5 ft -> 5-6 ft (UMN)",
+    "soil_prep_seasoned": "edited: in-row 24-36 agrees; rows 3-5 ft -> 5-6 ft (UMN)",
+    "start_method.notes_beginner": "agrees: seed depth, not a spacing",
+    "start_method.notes_seasoned": "agrees: seed depth and soil temperature, not a spacing",
+    "thinning.tip_seasoned": "agrees: 'one plant every 24 to 36 inches' equals in_row [24,36]",
+    "yield_expectations.factors_seasoned[2]": "agrees: vine run (6 to 8 ft), not a plant spacing"
+  }
+}

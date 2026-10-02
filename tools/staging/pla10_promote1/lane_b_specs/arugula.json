@@ -1,6 +1,6 @@
 {
   "slug": "arugula",
-  "decision": "DIFFERS -> W1: today's [1,3] is a SOWING density (Cornell: 'Plant ... 1 inch apart' then thin), never the in-row figure where a page states a thinned spacing. Two cited pages state a thinned figure: VH021 Table 1 'Arugula ... 3-4 | 10' (Florida; rows a minimum 10) and uwi_hort arugula \"Thin seedlings to 3 to 6 inches apart for individual plants, or leave denser plantings for cut-and-come-again treatment.\" The UW sentence is a crop-specific prose recommendation whose range contains the crop's own full-plant prose (4 to 6), so it authors -> in_row [3,6]; no row figure on UW (not_authored; VH021's minimum 10 is on a second page, not joined under W6). The prose keeps its two regimes (baby-leaf 1 to 3 dense, full plants 4 to 6): the full-plant figure sits inside the entry and the baby-leaf density is the cut-and-come-again regime the UW sentence names: agrees.",
+  "decision": "DIFFERS -> W1: today's [1,3] is a SOWING density (Cornell: 'Plant ... 1 inch apart' then thin), never the in-row figure where a page states a thinned spacing. Two cited pages state a thinned figure: VH021 Table 1 'Arugula ... 3-4 | 10' (Florida; rows a minimum 10) and uwi_hort arugula \"Thin seedlings to 3 to 6 inches apart for individual plants, or leave denser plantings for cut-and-come-again treatment.\" The UW sentence is a crop-specific prose recommendation whose range contains the crop's own full-plant prose (4 to 6), so it authors -> in_row [3,6]; no row figure on UW (not_authored; VH021's minimum 10 is on a second page, not joined under W6). The prose keeps its two regimes (baby-leaf 1 to 3 dense, full plants 4 to 6): the full-plant figure sits inside the entry and the baby-leaf density is the cut-and-come-again regime the UW sentence names: agrees. [RULED 2026-10-01 (Trevor, session 3 review): rows [10,10] from VH021 'unless another cited arugula page states a row range'. One does: clemson_hgic HGIC 1329 'Arugula, Kale, Mesclun, Mustard, and Swiss Chard', whose group text names arugula ('such as arugula, kale, mesclun, mustard, and Swiss chard'), states 'Plant transplants in rows that are 18 to 36 inches apart.' Under W2 as refined the range wins: rows [18,36] (W6 ruling 3: in-row UW, rows Clemson, one evidence row per (field, source)); VH021's 10 is noted as a minimum and not authored. No arugula prose states a row figure.]",
   "entries": [
     {
       "id": "row-none",
@@ -17,7 +17,15 @@
           "url": "https://hort.extension.wisc.edu/articles/arugula/",
           "quote": "Thin seedlings to 3 to 6 inches apart for individual plants, or leave denser plantings for cut-and-come-again treatment."
         },
-        "row_spacing_inches": null
+        "row_spacing_inches": {
+          "value": [
+            18,
+            36
+          ],
+          "sid": "clemson_hgic",
+          "url": "https://hgic.clemson.edu/factsheet/arugula-kale-mesclun-mustard-and-swiss-chard/",
+          "quote": "Plant transplants in rows that are 18 to 36 inches apart."
+        }
       }
     }
   ],
@@ -28,5 +36,15 @@
     "regions.rgv.plantings[0].plant_out[0].synthesis_note_seasoned": "agrees: a planting-date note, no spacing",
     "thinning.tip_beginner": "agrees: bigger plants 4 to 6 sits inside the entry's 3-6; an inch or two is the baby-leaf density",
     "thinning.tip_seasoned": "agrees: full plants 4 to 6 sits inside the entry's 3-6; 1 to 3 is the baby-leaf density"
-  }
+  },
+  "edits": [
+    {
+      "path": "thin_to_inches",
+      "new": [
+        3,
+        6
+      ],
+      "reason": "PLA-10 session 3: thin_to_inches was authored as a mirror of spacing_inches (40 of 41 crops equal at c5fc3d13; here [1, 3]); it follows the moved in-row figure [3, 6]. plant-app renders it (crop-timing thinToInches)."
+    }
+  ]
 }

@@ -1,0 +1,87 @@
+{
+  "slug": "strawberry",
+  "decision": "D1 BLEND REPAIR (ruled): today's [15,24] = OSU EC1307's matted-row lo ('about 15 inches') + the regions' 18-24 hi. umn_ext 'Growing strawberries in the home garden': \"the most common method is the matted row system: Space plants 18 to 24 inches apart.\" -> in_row [18,24]; \"Space rows 3 to 4 feet apart.\" -> rows [36,48]. The same page's Quick facts line ('Space plants 12 to 18 inches apart') carries no system or row figure; the matted-row sentence is the default the crop describes. Corroborating matted-row 18-24: USU, UMD, UADA FSA6103. OSU EC1307 (15 in) is unfetchable (open finding strawberry_step11_unfetchable_osu_ec1307). Restatements: growth_stages[0] '15 inches' -> '18 to 24 inches'; the region notes keep their attributed regional figures (inside the authored range) and the UC two-row bed notes describe a different layout.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            18,
+            24
+          ],
+          "sid": "umn_ext",
+          "url": "https://extension.umn.edu/fruit/growing-strawberries-home-garden",
+          "quote": "the most common method is the matted row system: Space plants 18 to 24 inches apart."
+        },
+        "row_spacing_inches": {
+          "value": [
+            36,
+            48
+          ],
+          "sid": "umn_ext",
+          "url": "https://extension.umn.edu/fruit/growing-strawberries-home-garden",
+          "quote": "Space rows 3 to 4 feet apart."
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[0].timing_beginner",
+      "replace": [
+        "In a wide row, leave about 15 inches between plants.",
+        "In a wide row, leave about 18 to 24 inches between plants."
+      ],
+      "reason": "PLA-10 R3 + D1: follows the authored in_row [18,24] (UMN matted row)"
+    },
+    {
+      "path": "growth_stages[0].timing_seasoned",
+      "replace": [
+        "In matted rows, space plants about 15 inches apart in rows 3 to 4 feet apart.",
+        "In matted rows, space plants 18 to 24 inches apart in rows 3 to 4 feet apart."
+      ],
+      "reason": "PLA-10 R3 + D1: follows the authored in_row [18,24] / rows [36,48] (UMN matted row)"
+    },
+    {
+      "path": "regions.northern_tier.plantings[0].plant_out[0].synthesis_note",
+      "replace": [
+        "in rows 3 to 4 feet apart (UMN, OSU EC1307).",
+        "in rows 3 to 4 feet apart (UMN)."
+      ],
+      "reason": "PLA-10 (ruled 2026-10-01): re-attributed to the page the entry cites; OSU EC1307 is unfetchable (open finding) and its matted-row figure is about 15 in, so it cannot carry 18-24"
+    }
+  ],
+  "restatements": {
+    "fertilizer.amount_seasoned": "agrees: a nitrogen rate per 10 feet of row, not a spacing",
+    "fertilizer.notes_seasoned": "agrees: a nitrogen rate per 10 feet of row, not a spacing",
+    "fertilizer.notify_message_seasoned": "agrees: a nitrogen rate per 10 feet of row, not a spacing",
+    "fertilizer.npk_hint_seasoned": "agrees: a fertilizer rate per 10-foot row, not a spacing",
+    "full_harvest_notes_beginner": "agrees: mowing height (2 in), not a spacing",
+    "full_harvest_notes_seasoned": "agrees: mowing height (2 in), not a spacing",
+    "growth_stages[0].timing_beginner": "edited: 'about 15 inches between plants' -> 'about 18 to 24 inches' (UMN)",
+    "growth_stages[0].timing_seasoned": "edited: 'about 15 inches apart in rows 3 to 4 feet' -> '18 to 24 inches apart in rows 3 to 4 feet' (UMN)",
+    "growth_stages[6].timing_beginner": "agrees: mowing height (2 in), not a spacing",
+    "growth_stages[6].timing_seasoned": "agrees: mowing height and narrowed row WIDTH (10 to 12 in), not a plant spacing",
+    "growth_stages[7].timing_seasoned": "agrees: mulch depth (2 to 3 in), not a spacing",
+    "notifications[4].body_beginner": "agrees: mowing height (2 in), not a spacing",
+    "notifications[4].body_seasoned": "agrees: mowing height (2 in), not a spacing",
+    "regions.ca_interior.plantings[0].plant_out[0].synthesis_note": "agrees: UC's two-row BED system (about 12 in), a different layout (promote 2's row-none-bed, spec §1.1), not the matted-row default",
+    "regions.ca_north_coast.plantings[0].plant_out[0].synthesis_note": "agrees: UC's two-row BED system (about 12 in), a different layout (promote 2's row-none-bed, spec §1.1), not the matted-row default",
+    "regions.ca_south_coast.plantings[0].plant_out[0].synthesis_note": "agrees: UC's two-row BED system (about 12 in), a different layout (promote 2's row-none-bed, spec §1.1), not the matted-row default",
+    "regions.northern_tier.plantings[0].plant_out[0].synthesis_note": "edited: 18-24 in, rows 3-4 ft = the authored figures; the credit '(UMN, OSU EC1307)' -> '(UMN)'",
+    "regions.utah_dixie.region_notes_seasoned": "agrees: an attributed regional matted-row figure (about 18 in, rows 36-42 in), inside the authored in_row [18,24] and rows [36,48]",
+    "regions.warm_arid.plantings[0].plant_out[0].synthesis_note": "agrees: an attributed regional matted-row figure (about 18 in, rows 36-42 in), inside the authored in_row [18,24] and rows [36,48]; the 12-18 in is the runner-filled row width",
+    "regions.warm_arid.region_notes_seasoned": "agrees: an attributed regional matted-row figure (about 18 in, rows 36-42 in), inside the authored in_row [18,24] and rows [36,48]",
+    "renovation_seasoned": "agrees: mowing height and narrowed row width (10 to 12 in), not a plant spacing",
+    "soil.preferred_description_beginner": "agrees: raised-bed height (12 in) and compost depth, not a spacing",
+    "soil.preferred_description_seasoned": "agrees: raised-bed height (12 in) and compost depth, not a spacing",
+    "soil_prep_seasoned": "agrees: raised-bed height (12 in) and compost depth, not a spacing",
+    "watering.amount_seasoned": "agrees: wetting depth (6 in to 1 ft), not a spacing",
+    "watering.method_seasoned": "agrees: drip emitter spacing (12 in), not a plant spacing",
+    "yield_expectations.per_plant_seasoned": "agrees: a yield per 10-foot row, not a spacing"
+  }
+}

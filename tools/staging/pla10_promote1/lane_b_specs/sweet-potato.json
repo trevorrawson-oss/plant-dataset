@@ -1,6 +1,6 @@
 {
   "slug": "sweet-potato",
-  "decision": "DIFFERS -> W1: author the page's figure. uf_ifas Gardening Solutions sweet-potatoes (a retired anchor, now the entry's source) states \"Plant your sweet potatoes in rows spaced 36 inches apart with 12 to 14 inches between each plant.\" -> in_row [12,14], row [36,36]. Today's [12,18] has no cited page for 18 (Clemson 8-12; NCSU organic 8-14 commercial; USU 12; VCE 9-12). Retired anchors: uf_ifas moved; clemson_hgic_1322_sweet_potato and ncsu_ext dropped with what each states. Four prose strings restating 12-18 (and rows 3-4 ft) are re-authored.",
+  "decision": "DIFFERS -> W1: author the page's figure. uf_ifas Gardening Solutions sweet-potatoes (a retired anchor, now the entry's source) states \"Plant your sweet potatoes in rows spaced 36 inches apart with 12 to 14 inches between each plant.\" -> in_row [12,14], row [36,36]. Today's [12,18] has no cited page for 18 (Clemson 8-12; NCSU organic 8-14 commercial; USU 12; VCE 9-12). Retired anchors: uf_ifas moved; clemson_hgic_1322_sweet_potato and ncsu_ext dropped with what each states. Four prose strings restating 12-18 (and rows 3-4 ft) are re-authored. [SESSION 3 REVIEW, 2026-10-01: the two soil_prep strings restated 12-18 in / rows 3-4 ft and were marked agrees in error; re-authored to the UF figures.]",
   "entries": [
     {
       "id": "row-none",
@@ -61,6 +61,22 @@
         "spacing them 12 to 14 inches apart on ridges or mounds in rows about 3 feet apart"
       ],
       "reason": "restates the moved in-row and row figures (UF: 12-14 in, rows 36 in)"
+    },
+    {
+      "path": "soil_prep_beginner",
+      "replace": [
+        "12 to 18 inches apart along the ridge, in rows about 3 to 4 feet apart",
+        "12 to 14 inches apart along the ridge, in rows about 3 feet apart"
+      ],
+      "reason": "PLA-10 R3 (session 3 review): follows the authored [12,14] / rows [36,36] (UF 'rows spaced 36 inches apart with 12 to 14 inches between each plant')"
+    },
+    {
+      "path": "soil_prep_seasoned",
+      "replace": [
+        "12 to 18 inches apart along the ridge in rows 3 to 4 feet apart",
+        "12 to 14 inches apart along the ridge in rows about 3 feet apart"
+      ],
+      "reason": "PLA-10 R3 (session 3 review): follows the authored [12,14] / rows [36,36] (UF)"
     }
   ],
   "restatements": {
@@ -70,8 +86,8 @@
     "start_method.notes_seasoned": "edited: 12-18 -> 12-14; rows -> about 3 ft",
     "fertilizer.amount_seasoned": "agrees: a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement",
     "fertilizer.notes_seasoned": "agrees: a quantity per foot of row (fertilizer or yield), not a plant-spacing restatement",
-    "soil_prep_beginner": "agrees: ridge height, no plant spacing",
-    "soil_prep_seasoned": "agrees: ridge height, no plant spacing"
+    "soil_prep_beginner": "edited: '12 to 18 inches ... rows 3 to 4 feet' -> '12 to 14 inches ... rows about 3 feet' (UF); session 2 had marked it agrees in error",
+    "soil_prep_seasoned": "edited: '12 to 18 inches ... rows 3 to 4 feet' -> '12 to 14 inches ... rows about 3 feet' (UF); session 2 had marked it agrees in error"
   },
   "retired_anchor": {
     "clemson_hgic_1322_sweet_potato": {

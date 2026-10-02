@@ -53,6 +53,14 @@
         "seedlings to 12 to 24 in"
       ],
       "reason": "restates the moved in-row figure (USU: 1-2 ft)"
+    },
+    {
+      "path": "thin_to_inches",
+      "new": [
+        12,
+        24
+      ],
+      "reason": "PLA-10 session 3: thin_to_inches was authored as a mirror of spacing_inches (40 of 41 crops equal at c5fc3d13; here [12, 18]); it follows the moved in-row figure [12, 24]. plant-app renders it (crop-timing thinToInches)."
     }
   ],
   "restatements": {

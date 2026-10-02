@@ -1,6 +1,6 @@
 {
   "slug": "sweet-potato",
-  "decision": "DIFFERS -> W1: author the page's figure. uf_ifas Gardening Solutions sweet-potatoes (a retired anchor, now the entry's source) states \"Plant your sweet potatoes in rows spaced 36 inches apart with 12 to 14 inches between each plant.\" -> in_row [12,14], row [36,36]. Today's [12,18] has no cited page for 18 (Clemson 8-12; NCSU organic 8-14 commercial; USU 12; VCE 9-12). Retired anchors: uf_ifas moved; clemson_hgic_1322_sweet_potato and ncsu_ext dropped with what each states. Four prose strings restating 12-18 (and rows 3-4 ft) are re-authored.",
+  "decision": "DIFFERS -> W1: author the page's figure. uf_ifas Gardening Solutions sweet-potatoes (a retired anchor, now the entry's source) states \"Plant your sweet potatoes in rows spaced 36 inches apart with 12 to 14 inches between each plant.\" -> in_row [12,14], row [36,36]. Today's [12,18] has no cited page for 18 (Clemson 8-12; NCSU organic 8-14 commercial; USU 12; VCE 9-12). Retired anchors: uf_ifas moved; clemson_hgic_1322_sweet_potato and ncsu_ext dropped with what each states. Four prose strings restating 12-18 (and rows 3-4 ft) are re-authored. [SESSION 3 REVIEW, 2026-10-01: the two soil_prep strings restated 12-18 in / rows 3-4 ft and were marked agrees in error; re-authored to the UF figures.]",
   "planting_layout": [
     {
       "id": "row-none",
@@ -56,6 +56,16 @@
       "path": "start_method.notes_seasoned",
       "new": "Sweet potatoes are grown from slips: rooted sprouts pulled from a bedded seed root, not from seed and not from seed-potato-style pieces. Buy certified, disease-free and weevil-free slips, or bed a healthy root in warm, moist medium about 6 weeks ahead and pull the sprouts once they have roots. Set slips 3 to 4 inches deep with two or more nodes buried, spacing them 12 to 14 inches apart on ridges or mounds in rows about 3 feet apart, once all frost danger has passed and the soil is above about 65°F (70 to 80°F is better). There is no indoor seed-starting step; the slip itself is the transplant. In short-season areas, planting through black plastic warms the soil and buys extra growing days.",
       "reason": "restates the moved in-row and row figures (UF: 12-14 in, rows 36 in)"
+    },
+    {
+      "path": "soil_prep_beginner",
+      "new": "Getting the soil right matters for sweet potatoes. Loosen the bed deep, mix in compost, and mound the soil up into ridges about 8 to 10 inches high, which drain well, warm up faster, and give the roots room to grow long and smooth. Heavy, cold, soggy clay rots the roots and makes them lumpy, so use ridges or a raised bed if your soil is clay. Keep the soil slightly acidic (pH about 5.8 to 6.5). Go easy on fertilizer and skip fresh manure, which grow leaves instead of roots; use a low-nitrogen fertilizer like 5-10-10 and a little compost. Plant the slips 3 to 4 inches deep and 12 to 14 inches apart along the ridge, in rows about 3 feet apart, once all frost is past and the soil has warmed to about 65°F. In cooler areas, lay down black plastic to warm the soil and buy extra time.",
+      "reason": "PLA-10 R3 (session 3 review): follows the authored [12,14] / rows [36,36] (UF 'rows spaced 36 inches apart with 12 to 14 inches between each plant')"
+    },
+    {
+      "path": "soil_prep_seasoned",
+      "new": "Sweet potato quality starts with loose, warm, well-drained soil built up into ridges or mounds. Work the bed deep, incorporate compost, and form ridges 8 to 10 inches high, which drain well, warm quickly, and give the storage roots room to expand smoothly; heavy clay stays cold and wet, rots roots, and forces short, knobby shapes, and is best improved with organic matter or grown in raised ridges. Aim for a slightly acidic pH, roughly 5.8 to 6.5. Keep nitrogen low and avoid fresh manure, which drive rampant vine at the expense of roots; use a low-nitrogen fertilizer such as 5-10-10 and modest compost. Set slips 3 to 4 inches deep, 12 to 14 inches apart along the ridge in rows about 3 feet apart, once all frost is past and the soil is above about 65°F. In short-season areas, lay black plastic to warm the soil and add growing days.",
+      "reason": "PLA-10 R3 (session 3 review): follows the authored [12,14] / rows [36,36] (UF)"
     }
   ],
   "restatements": [
@@ -91,13 +101,13 @@
     },
     {
       "path": "soil_prep_beginner",
-      "verdict": "agrees",
-      "note": "ridge height, no plant spacing"
+      "verdict": "edited",
+      "note": "'12 to 18 inches ... rows 3 to 4 feet' -> '12 to 14 inches ... rows about 3 feet' (UF); session 2 had marked it agrees in error"
     },
     {
       "path": "soil_prep_seasoned",
-      "verdict": "agrees",
-      "note": "ridge height, no plant spacing"
+      "verdict": "edited",
+      "note": "'12 to 18 inches ... rows 3 to 4 feet' -> '12 to 14 inches ... rows about 3 feet' (UF); session 2 had marked it agrees in error"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "slug": "zinnia",
-  "decision": "DIFFERS -> W1 + W6 (two clauses of ONE sentence). clemson_hgic_1149 states \"Dwarf cultivars should be planted or thinned 8 to 9 inches apart, whereas taller 2- to 3-foot zinnia cultivars should be spaced a foot apart.\" -> in_row [8,12] (dwarf 8-9, tall 12). Today's [9,12] has no page for 9 as a low; UF/IFAS FP623 'spaced 8 to 12 inches apart' agrees. Row: the live page states 'When planting multiple rows of zinnias, space the rows a foot apart.' (the worklist's '12 to 18 inches' sentence is no longer on the page); 'a foot' is read through the promote's IDIOMS table (ruled 2026-10-01) -> row [12,12]. Four prose strings restating 9-12 are re-authored to 8-12.",
+  "decision": "DIFFERS -> W1 + W6 (two clauses of ONE sentence). clemson_hgic_1149 states \"Dwarf cultivars should be planted or thinned 8 to 9 inches apart, whereas taller 2- to 3-foot zinnia cultivars should be spaced a foot apart.\" -> in_row [8,12] (dwarf 8-9, tall 12). Today's [9,12] has no page for 9 as a low; UF/IFAS FP623 'spaced 8 to 12 inches apart' agrees. Row: the live page states 'When planting multiple rows of zinnias, space the rows a foot apart.' (the worklist's '12 to 18 inches' sentence is no longer on the page); 'a foot' is read through the promote's IDIOMS table (ruled 2026-10-01) -> row [12,12]. Four prose strings restating 9-12 are re-authored to 8-12. [RULED 2026-10-01 (Trevor, session 3 review): the composite [8,12] stands (Clemson's cultivar sentence: dwarf 8-9 in, tall a foot; two clauses of one page, W6). The same page's direct-sowing line 'When the seedlings are 3 inches tall and, depending on the cultivar, thin them 8 to 24 inches apart' is a THINNING range and is not authored; plant_habit is unauthored this arc, so the composite is the honest crop-level figure.]",
   "planting_layout": [
     {
       "id": "row-none",
@@ -47,6 +47,14 @@
       "path": "tips_by_stage.seedling[0].text_seasoned",
       "new": "Thin or space seedlings to 8 to 12 in once they have a few true leaves; generous spacing for airflow is a primary cultural defense against powdery mildew later.",
       "reason": "restates the moved in-row figure (Clemson: dwarf 8-9, tall a foot)"
+    },
+    {
+      "path": "thin_to_inches",
+      "new": [
+        8,
+        12
+      ],
+      "reason": "PLA-10 session 3: thin_to_inches was authored as a mirror of spacing_inches (40 of 41 crops equal at c5fc3d13; here [9, 12]); it follows the moved in-row figure [8, 12]. plant-app renders it (crop-timing thinToInches)."
     }
   ],
   "restatements": [

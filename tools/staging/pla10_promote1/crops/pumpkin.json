@@ -1,0 +1,112 @@
+{
+  "slug": "pumpkin",
+  "decision": "DIFFERS -> HILL DEFAULT (spec §2.4; the crop's prose and UGA lead with hills). uga_c1206_homegrown_pumpkins: \"Plant pumpkins in hills, with at least 8 feet of space on all sides.\" -> hill-none, hills [96,96] and rows [96,96] ('on all sides', spec §1.1), a MINIMUM authored as the point (W2: the sentence is a recommendation); \"thin seedlings down to two to three plants per mound\" -> plants_per_hill [2,3] (PLANTS after thinning). The row-none entry behind it is from the SAME page's table, \"Spacing rows per plants 72 by 48 in.\" -> in_row [48,48], rows [72,72], so spacing_inches falls back to [48,48] (R2 as amended; today's [36,72] is a blend, on no page). Root row_spacing_inches = the hill's [96,96] (no see_layout). UMN's winter-squash sentence (24-36 in, rows 5-6 ft) is the alternative row entry; UGA's pumpkin-only table is preferred. Restatements: the two soil_prep hill figures '4 to 8 feet' -> 'at least 8 feet ... on all sides'.",
+  "planting_layout": [
+    {
+      "id": "hill-none",
+      "arrangement": "hill",
+      "support": "none",
+      "default": true,
+      "hill_spacing_inches": [
+        96,
+        96
+      ],
+      "row_spacing_inches": [
+        96,
+        96
+      ],
+      "row_spacing_reason": null,
+      "plants_per_hill": [
+        2,
+        3
+      ],
+      "sources": [
+        "uga_c1206_homegrown_pumpkins"
+      ],
+      "anchoring_urls": {
+        "uga_c1206_homegrown_pumpkins": {
+          "url": "https://fieldreport.caes.uga.edu/publications/C1206/homegrown-pumpkins/",
+          "verified": "2026-10-01"
+        }
+      }
+    },
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": false,
+      "in_row_inches": [
+        48,
+        48
+      ],
+      "row_spacing_inches": [
+        72,
+        72
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "uga_c1206_homegrown_pumpkins"
+      ],
+      "anchoring_urls": {
+        "uga_c1206_homegrown_pumpkins": {
+          "url": "https://fieldreport.caes.uga.edu/publications/C1206/homegrown-pumpkins/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "soil_prep_beginner",
+      "new": "Pick a sunny spot with rich, well-drained soil and mix in plenty of compost before planting, since pumpkins are large, hungry plants. Plant them on low hills or mounds, which warm up and drain better. Give them lots of room: space hills at least 8 feet apart on all sides for full-size pumpkins, since the vines can spread 10 to 20 feet (small and bush types need less). If your soil is heavy or wet, build the mounds up higher so water drains away from the roots and fruit.",
+      "reason": "PLA-10 R3: follows the authored hill entry [96,96] on all sides (UGA C1206)"
+    },
+    {
+      "path": "soil_prep_seasoned",
+      "new": "Prepare a deep, fertile, well-drained bed in full sun, working several inches of compost or rotted manure into the soil before planting, since pumpkins are big, hungry, long-season plants. Most growers plant in low hills or mounds about a foot across, which warm faster, drain better, and give the sprawling vines a starting point. Space hills generously: at least 8 feet apart on all sides for full-size vining types (closer for bush and miniature kinds), because a full-size vine can run 10 to 20 feet. On heavy or wet ground, build the mounds up for drainage to head off crown and Phytophthora fruit rot.",
+      "reason": "PLA-10 R3: follows the authored hill entry [96,96] on all sides (UGA C1206)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "growth_stages[0].user_action_beginner",
+      "verdict": "agrees",
+      "note": "seeds per hill and 'two or three' kept = plants_per_hill [2,3]"
+    },
+    {
+      "path": "growth_stages[0].user_action_seasoned",
+      "verdict": "agrees",
+      "note": "four to five seeds per hill, thin to two or three = UGA, plants_per_hill [2,3]"
+    },
+    {
+      "path": "soil_prep_beginner",
+      "verdict": "edited",
+      "note": "hills '4 to 8 feet' -> 'at least 8 feet ... on all sides' (UGA)"
+    },
+    {
+      "path": "soil_prep_seasoned",
+      "verdict": "edited",
+      "note": "hills '4 to 8 feet with 6 to 12 feet between rows' -> 'at least 8 feet apart on all sides' (UGA)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "verdict": "agrees",
+      "note": "seed depth, not a spacing"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "agrees",
+      "note": "seed depth and soil temperature, not a spacing"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "verdict": "agrees",
+      "note": "seeds per hill / two or three kept = [2,3]; the in-row clause ('24 to 36 inches for bush types and wider for the big vining kinds') is a habit split UGA's table does not make (its 72 by 48 in covers every cultivar on the page); not contradicted for vining (48 is wider), bush is D2 (not authored); reported"
+    },
+    {
+      "path": "yield_expectations.factors_seasoned[2]",
+      "verdict": "agrees",
+      "note": "vine run (10 to 20 ft), not a plant spacing"
+    }
+  ]
+}

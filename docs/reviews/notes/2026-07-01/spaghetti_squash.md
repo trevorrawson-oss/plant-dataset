@@ -106,3 +106,5 @@ butternut and pumpkin pilots.
 launch-ready: queued for the daily biology-fidelity review + a per-region source-truth sample to
 confirm the modeled regional windows and variety DTMs before any flip. Promotion to canonical is a
 separate Trevor-gated step.
+
+[CORRECTION 2026-10-01: `spacing_inches` [24,48] recorded here as 'in-row 24 in to ~4 ft row' is no longer the dataset's figure. PLA-10 promote 1 authors a cited `planting_layout` row entry on UMN's winter-squash page: in-row [24,36], rows [60,72] (VCE 426-331 Table 5 states 24-48; UMN chosen so the three winter squash read one page). The open finding `spaghetti_pilot_spacing_prose` is owed the same correction (promote-2 tools change). -- see PLA-10, docs/specs/pla10-field-shape.md §10.1 (D1a).]

@@ -1,0 +1,32 @@
+{
+  "slug": "field-corn",
+  "decision": "STRING MIGRATION ('block' -> block-none) + W3 (hunt first; field-corn's hunt result, HUNTS.md). The hunt found NO page giving a field/dent-corn spacing RANGE that names the crop: (a) Clemson 'Homegrown Grits' (clemson_hgic, names dent corn) gives one CONDITIONAL value, 'smaller plantings may blow over more easily in a storm unless spaced a little further apart (2 ft) and hilled with soil', and then defers: 'Otherwise ... very similar to sweet corn. For more information, see HGIC 1308, Sweet Corn'; it names this crop's own recommended heirloom dents (John Haulk, Cocke's Prolific) and is home-scale advice, but '2 ft' does not say whether it is in-row or between rows, so it cannot be filed as in_row_inches. (b) UGA B577's chart row is the unqualified 'Corn' (rows 3-3½ ft, plants 12-18 in), never naming field or dent corn (the same bulletin lists 'Corn, sweet' elsewhere, so it is a sweet-corn figure). Neither is accepted, so W3's fallback applies: the sweet-corn sibling page the crop already cites, same species (Zea mays), scope recorded here. umn_ext 'Growing sweet corn': \"Plant seeds one inch deep, and eight to 12 inches apart, with rows 30 to 36 inches apart.\" -> in_row [8,12] (today's), rows [30,36]; 'Always plant corn in blocks of at least four rows' = pollination_block_min_rows 4. field-corn is not on the R5 list, and a sibling page is citable (W3), so no waiver. Clemson's 2 ft caveat is a candidate for prose, not the figure (reported). No hill entry: plants_per_hill must be PLANTS after thinning, and the only corn hill sentence on a cited page (ISU sweet corn: 'Sow 4 to 5 seeds per hill ... Hills should be spaced 2½ feet apart') gives SEEDS per hill with no thin-to count (worklist 56 §5). Figure unchanged. [RULED 2026-10-01 (Trevor, session 3 review): NO HILL ENTRY, and promote 2 must not re-add one: 'Sow 4 to 5 seeds per hill' (ISU sweet corn) is a SOWING count, not plants_per_hill (plants after thinning); the spec's §1.4 corn example is illustrative and loses to the page. THINNING TEXT (recorded, not edited): thinning.to_spacing and its tips cite tamu_agrilife EHT-044, whose page says 'After the plants are up, thin them to 1 foot apart', while this entry's in-row figure is the ISU/UMN page's. Two cited pages, two fields: the thinning text stays as its own citation states.]",
+  "entries": [
+    {
+      "id": "block-none",
+      "arrangement": "block",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            8,
+            12
+          ],
+          "sid": "umn_ext",
+          "url": "https://extension.umn.edu/vegetables/growing-sweet-corn",
+          "quote": "Plant seeds one inch deep, and eight to 12 inches apart, with rows 30 to 36 inches apart."
+        },
+        "row_spacing_inches": {
+          "value": [
+            30,
+            36
+          ],
+          "sid": "umn_ext",
+          "url": "https://extension.umn.edu/vegetables/growing-sweet-corn",
+          "quote": "Plant seeds one inch deep, and eight to 12 inches apart, with rows 30 to 36 inches apart."
+        }
+      }
+    }
+  ]
+}

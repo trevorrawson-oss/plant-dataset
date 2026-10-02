@@ -1,0 +1,69 @@
+{
+  "slug": "artichoke",
+  "decision": "STRING MIGRATION ('row' -> row-none, spec §1.5) + PARTIAL, RULED 2026-10-01: Cornell. cornell_ext 'Globe Artichokes Growing Guide': \"Plant root divisions (basal stem pieces with attached roots) after last frost, 2 to 3 feet apart in rows 2.5 to 3 feet apart.\" -> in_row [24,36], rows [30,36]. The crop is perennial-culture (herbaceous_perennial; plants reach four feet across), so the perennial figure is the default. Today's [18,36] was a declared two-source blend ('18 to 36 inches apart depending on whose spacing you follow'). ALTERNATIVE, not authored: usu_ext_artichoke 'Space plants 18 inches apart in the row, with rows 2-3 feet apart', which is Utah annual culture (planted for chilling, 'Imperial Star works well as an annual'). Other cited pages agree with Cornell: TAMU EHT-065 2.5-3 ft in rows 3-4 ft; OSU 2-3 ft; UMaine 2 ft. Restatements: the beginner '1.5 ft between plants, 2-3 ft rows' and the seasoned blend sentence are re-authored to Cornell; LSU's attributed regional 'at least 3 feet' (se_gulf z8) now sits inside the default.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        24,
+        36
+      ],
+      "row_spacing_inches": [
+        30,
+        36
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "cornell_ext"
+      ],
+      "anchoring_urls": {
+        "cornell_ext": {
+          "url": "https://gardening.cals.cornell.edu/garden-guidance/foodgarden/vegetable-growing-guides/globe-artichokes-growing-guide/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "soil_prep_seasoned",
+      "new": "Site this crop the way you would site a small shrub, because that is the footprint. Plants reach four feet across and want deep, fertile, well-drained ground in full sun with a generous amount of organic matter worked in; University of California puts the target pH at 6.0 to 6.5 and suggests lime or gypsum where calcium is low. Clear perennial weeds before planting rather than after, and UC's pre-plant trick is worth the fortnight it costs: irrigate the cleared bed deeply, let a flush of weed seed germinate, then work the ground again to kill the seedlings. Space plants 2 to 3 feet apart with 2.5 to 3 feet between rows; crowded plants make smaller buds and are miserable to harvest from. Where the bed is permanent, take the time to loosen it deeply, because you will not get another chance for years.",
+      "reason": "PLA-10 R3 + D1 (ruled 2026-10-01): the declared two-source blend becomes the authored Cornell figure (in_row [24,36], rows [30,36])"
+    },
+    {
+      "path": "soil_prep_beginner",
+      "new": "Give artichoke more room than you think. A mature plant is about four feet wide, so allow two to three feet between plants and two and a half to three feet between rows. It wants full sun, deep soil that drains well, and plenty of compost dug in. Aim for a soil pH around 6.0 to 6.5. Get the perennial weeds out before you plant: water the bed, wait a couple of weeks for the weed seeds to sprout, then hoe them off and plant into clean ground. If the plants are going to stay put for years, it is worth digging the bed properly now.",
+      "reason": "PLA-10 R3 (ruled 2026-10-01): follows the authored Cornell figure; the scanner misses spacing written in words"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "fertilizer.amount_seasoned",
+      "verdict": "agrees",
+      "note": "a rate per 100 feet of row, not a spacing"
+    },
+    {
+      "path": "fertilizer.npk_hint_seasoned",
+      "verdict": "agrees",
+      "note": "a rate per 100 feet of row, not a spacing"
+    },
+    {
+      "path": "regions.se_gulf.resolved_by_zone.8.notes",
+      "verdict": "agrees",
+      "note": "LSU AgCenter's attributed regional 'at least 3 feet apart' sits inside the authored [24,36]"
+    },
+    {
+      "path": "soil_prep_seasoned",
+      "verdict": "edited",
+      "note": "blend sentence -> 'Space plants 2 to 3 feet apart with 2.5 to 3 feet between rows' (Cornell)"
+    },
+    {
+      "path": "soil_prep_beginner",
+      "verdict": "edited",
+      "note": "'a foot and a half between plants and two to three feet between rows' -> 'two to three feet between plants and two and a half to three feet between rows' (Cornell; words, not a scanner hit)"
+    }
+  ]
+}

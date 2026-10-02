@@ -28,7 +28,7 @@ TWO STATES (gates arm off the data):
     (4 corn "block", artichoke + asparagus "row") validate under the old enum + block<->min_rows rule;
     an absent layout is a no-op; but ANY crop that already carries a list is held to the full rule,
     so a crop cannot be half-migrated.
-  ARMED (flipped in promote 1's data commit, together with test_the_tools_commit_ships_unarmed). Every
+  ARMED (flipped in promote 1's data commit, with test_the_data_commit_ships_armed; LIVE). Every
     certified crop carries a list and the three mirror keys; the string form is refused; the retired
     spacing_inches_anchoring_urls is refused by name.
 The flag lives HERE, not in whole_crop_gate (where A59-A61 keep theirs), because gate_all's roster
@@ -48,7 +48,7 @@ import sys
 
 CERTIFIED = "verified_gs_arc"
 
-PRESENCE_ARMED = False
+PRESENCE_ARMED = True
 
 # Literal floors (measured 2026-10-01 on c5fc3d13). Minimums, not pins: the roster may grow.
 CERT_FLOOR = 121

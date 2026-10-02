@@ -87,6 +87,19 @@
       "path": "yield_expectations.factors_seasoned[4]",
       "new": "Spacing and succession: yield over the season comes from spacing at 6 to 8 inches and sowing in small batches every 2 to 3 weeks.",
       "reason": "restates the moved in-row figure (ISU: 6-8 in)"
+    },
+    {
+      "path": "thin_to_inches",
+      "new": [
+        6,
+        8
+      ],
+      "reason": "PLA-10 session 3: thin_to_inches was authored as a mirror of spacing_inches (40 of 41 crops equal at c5fc3d13; here [6, 9]); it follows the moved in-row figure [6, 8]. plant-app renders it (crop-timing thinToInches)."
+    },
+    {
+      "path": "thinning.to_spacing",
+      "new": "6 to 8 inches",
+      "reason": "PLA-10 session 3: follows the thinning tips session 2 re-authored to '6 to 8 inches apart' (ISU [6,8])"
     }
   ],
   "restatements": [

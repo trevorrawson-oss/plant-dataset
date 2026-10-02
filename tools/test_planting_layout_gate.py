@@ -147,27 +147,28 @@ class PositiveControls(unittest.TestCase):
 
 
 class Unarmed(unittest.TestCase):
-    """The tools-commit state: the live canonical's legacy strings stay green."""
+    """The UNARMED path (the tools-commit state; armed since promote 1's data commit, so armed=False is
+    passed explicitly): the legacy strings validate and their defects still bounce."""
 
     def test_legacy_strings_still_validate(self):
-        self.assertEqual(G.check_crop(legacy("block", pollination_block_min_rows=4)), [])
-        self.assertEqual(G.check_crop(legacy("row")), [])
-        self.assertEqual(G.check_crop({"slug": "x"}), [])
-        self.assertEqual(G.check_crop({"slug": "x", "planting_layout": None}), [])
+        self.assertEqual(G.check_crop(legacy("block", pollination_block_min_rows=4), armed=False), [])
+        self.assertEqual(G.check_crop(legacy("row"), armed=False), [])
+        self.assertEqual(G.check_crop({"slug": "x"}, armed=False), [])
+        self.assertEqual(G.check_crop({"slug": "x", "planting_layout": None}, armed=False), [])
 
     def test_legacy_defects_still_bounce(self):
-        self.assertTrue(has(G.check_crop(legacy("block")), "pollination_block_min_rows missing"))
-        self.assertTrue(has(G.check_crop(legacy("blocks")), "not in"))
-        self.assertTrue(has(G.check_crop(legacy("row", pollination_block_min_rows=4)), "not 'block'"))
-        self.assertTrue(has(G.check_crop(legacy("block", pollination_block_min_rows=1)), "int >= 2"))
-        self.assertTrue(has(G.check_crop(legacy("block", pollination_block_min_rows=True)), "int >= 2"))
-        self.assertTrue(has(G.check_crop({"slug": "x", "pollination_block_min_rows": 4}),
+        self.assertTrue(has(G.check_crop(legacy("block"), armed=False), "pollination_block_min_rows missing"))
+        self.assertTrue(has(G.check_crop(legacy("blocks"), armed=False), "not in"))
+        self.assertTrue(has(G.check_crop(legacy("row", pollination_block_min_rows=4), armed=False), "not 'block'"))
+        self.assertTrue(has(G.check_crop(legacy("block", pollination_block_min_rows=1), armed=False), "int >= 2"))
+        self.assertTrue(has(G.check_crop(legacy("block", pollination_block_min_rows=True), armed=False), "int >= 2"))
+        self.assertTrue(has(G.check_crop({"slug": "x", "pollination_block_min_rows": 4}, armed=False),
                             "planting_layout absent"))
 
     def test_grid_and_single_left_the_enum(self):
         """§ 'Decided in this spec': grid and single leave the arrangement enum (0 population)."""
-        self.assertTrue(has(G.check_crop(legacy("grid")), "not in"))
-        self.assertTrue(has(G.check_crop(legacy("single")), "not in"))
+        self.assertTrue(has(G.check_crop(legacy("grid"), armed=False), "not in"))
+        self.assertTrue(has(G.check_crop(legacy("single"), armed=False), "not in"))
 
     def test_a_list_is_held_to_the_full_rule_even_unarmed(self):
         c = potato(); c["spacing_inches"] = [10, 14]
@@ -488,10 +489,10 @@ class Roster(unittest.TestCase):
         """Never derived from the walk (memory computed-guard-expectations-are-vacuous)."""
         self.assertEqual((G.CERT_FLOOR, G.ENTRY_FLOOR), (121, 113))
 
-    def test_the_tools_commit_ships_unarmed(self):
-        """Arms in promote 1's data commit, never before (gates arm off the data). The data commit
-        flips PRESENCE_ARMED and this assertion together."""
-        self.assertIs(G.PRESENCE_ARMED, False)
+    def test_the_data_commit_ships_armed(self):
+        """Armed in promote 1's data commit (gates arm off the data), together with this assertion,
+        which read `PRESENCE_ARMED is False` in the tools commit (f6de39a)."""
+        self.assertIs(G.PRESENCE_ARMED, True)
 
 
 if __name__ == "__main__":

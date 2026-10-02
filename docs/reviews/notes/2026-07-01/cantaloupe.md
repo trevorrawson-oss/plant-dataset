@@ -105,3 +105,5 @@ not watermelon's niveum), gummy stem blight, Alternaria leaf blight.
 
 No fabricated sources or invented source IDs. Canonical `crops_data_final.json` untouched (read-only);
 work done on a scratch splice.
+
+[CORRECTION 2026-10-01: `spacing_inches` [24,36] is unchanged, but the row spacing is no longer carried only in prose: PLA-10 promote 1 authors `row_spacing_inches` [60,90] on the cited VCE 426-331 row entry and a non-default ISU hill entry (hills 18-24 in, rows 60-72 in, 2-3 plants). The open finding `cantaloupe_pilot_spacing_in_row` is owed the same correction (promote-2 tools change). -- see PLA-10, docs/specs/pla10-field-shape.md §10.1 (D1a).]

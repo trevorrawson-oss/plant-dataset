@@ -1,0 +1,32 @@
+{
+  "slug": "flint-corn",
+  "decision": "STRING MIGRATION ('block' -> block-none), AGREES. iastate_ext ornamental corn (ornamental/Indian corn = the flint type; scope accepted): \"Space seeds 8 to 10 inches apart within rows for small-eared cultivars and 10 to 12 inches apart for large-eared cultivars.\" -> in_row [8,12] (a span joined from two clauses of ONE sentence, W6); \"Rows should be spaced 30 to 36 inches apart.\" -> rows [30,36]; the page's 'plant in blocks of at least 4 rows' matches pollination_block_min_rows 4. No flint-scoped page gives hills. Figure unchanged. [RULED 2026-10-01 (Trevor, session 3 review): NO HILL ENTRY, and promote 2 must not re-add one: 'Sow 4 to 5 seeds per hill' (ISU sweet corn) is a SOWING count, not plants_per_hill (plants after thinning); the spec's §1.4 corn example is illustrative and loses to the page. THINNING TEXT (recorded, not edited): thinning.to_spacing and its tips cite tamu_agrilife EHT-044, whose page says 'After the plants are up, thin them to 1 foot apart', while this entry's in-row figure is the ISU/UMN page's. Two cited pages, two fields: the thinning text stays as its own citation states.]",
+  "entries": [
+    {
+      "id": "block-none",
+      "arrangement": "block",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            8,
+            12
+          ],
+          "sid": "iastate_ext",
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-and-harvesting-ornamental-corn",
+          "quote": "Space seeds 8 to 10 inches apart within rows for small-eared cultivars and 10 to 12 inches apart for large-eared cultivars."
+        },
+        "row_spacing_inches": {
+          "value": [
+            30,
+            36
+          ],
+          "sid": "iastate_ext",
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-and-harvesting-ornamental-corn",
+          "quote": "Rows should be spaced 30 to 36 inches apart."
+        }
+      }
+    }
+  ]
+}

@@ -52,6 +52,14 @@
       "path": "tips_by_stage.seedling[0].text_seasoned",
       "new": "Thin or transplant to about 12 to 24 inches apart for full-size plants, or closer (10 to 15 inches) if you will cut them young; harden transplants off over 7 to 10 days.",
       "reason": "restates the moved in-row figure (UMD: 12-24 in)"
+    },
+    {
+      "path": "thin_to_inches",
+      "new": [
+        12,
+        24
+      ],
+      "reason": "PLA-10 session 3: thin_to_inches was authored as a mirror of spacing_inches (40 of 41 crops equal at c5fc3d13; here [18, 24]); it follows the moved in-row figure [12, 24]. plant-app renders it (crop-timing thinToInches)."
     }
   ],
   "restatements": [

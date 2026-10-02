@@ -1,0 +1,79 @@
+{
+  "slug": "broad-beans-fava",
+  "decision": "D1 BLEND REPAIR (ruled) + W1: today's [4,8] is a sowing distance, not the final stand. ucanr_santa_clara_mg (UC Master Gardeners Santa Clara): \"For producing pods to eat, direct seed 3 to 5 inches apart ... Thin to 8 to 10 inches apart.\" -> in_row [8,10] (the thinned spacing governs, W1); row not_authored: the only cited row figure is UMass nevegetable.org '18-36\" between rows', a commercial-leaning guide, and pairing it with UC's thin-to would join two pages into one entry (W6); the prose's 'rows 18 to 30' is on no cached cited page (reported). NOTE: the page SOWS at 3-5 in; the crop's prose sows at 4-6 (UMass's figure). Both are sowing distances and stay as stated (agrees). thin_to_inches [4,6] -> [8,10] follows the repair (worklist §6).",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        8,
+        10
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "ucanr_santa_clara_mg"
+      ],
+      "anchoring_urls": {
+        "ucanr_santa_clara_mg": {
+          "url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/fava-beans",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "thin_to_inches",
+      "new": [
+        8,
+        10
+      ],
+      "reason": "PLA-10 D1: thin_to follows the repaired in-row figure (UC MG Santa Clara 'Thin to 8 to 10 inches apart')"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "growth_stages[0].user_action_beginner",
+      "verdict": "agrees",
+      "note": "a SOWING distance (4 to 6 in, UMass), not the thinned stand; the thin-to is stated in start_method"
+    },
+    {
+      "path": "growth_stages[0].user_action_seasoned",
+      "verdict": "agrees",
+      "note": "a SOWING distance (4 to 6 in), not the thinned stand"
+    },
+    {
+      "path": "notifications[0].body_beginner",
+      "verdict": "agrees",
+      "note": "a SOWING distance (4 to 6 in), not the thinned stand"
+    },
+    {
+      "path": "notifications[0].body_seasoned",
+      "verdict": "agrees",
+      "note": "a SOWING distance (4 to 6 in), not the thinned stand"
+    },
+    {
+      "path": "regions.rgv.plantings[0].plant_out[0].synthesis_note_seasoned",
+      "verdict": "agrees",
+      "note": "a planting window note; 'table row' is a document row, not a spacing"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "verdict": "agrees",
+      "note": "sow 4-6 then 'thin to about 8 to 10 inches apart' = in_row [8,10]"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "agrees",
+      "note": "'thinning to stand 8 to 10 inches apart' = in_row [8,10]; 'rows 18 to 30 inches' is unauthored (row not_authored) and on no cached cited page: reported, not edited"
+    },
+    {
+      "path": "tips_by_stage.vegetative[0].text_seasoned",
+      "verdict": "agrees",
+      "note": "plant height (2 to 4 ft), not a spacing"
+    }
+  ]
+}

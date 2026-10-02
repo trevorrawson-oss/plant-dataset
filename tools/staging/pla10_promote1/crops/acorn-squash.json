@@ -1,0 +1,89 @@
+{
+  "slug": "acorn-squash",
+  "decision": "umn_ext 'Growing pumpkins and winter squash': \"Plant pumpkin and winter squash seeds three-fourths of an inch deep, 24 to 36 inches apart. Use the closer spacing if the variety is a bush type. Spacing between rows should be 5 to 6 feet.\" -> row-none default, in_row [24,36], rows [60,72] (today [24,48]). D1 BLEND REPAIR (ruled): today's 48 is neither an in-row nor a row figure (the 2026-07-01 note: 'spans in-row plant spacing (24 in) to about a 4 ft row'). VCE 426-331 Table 5 ('Squash, winter 2-4 ft 3-10 ft'), also cited, would state 24-48, but the three winter squash take ONE page so the same species group reads the same figure, and UMN's sentence names winter squash and is the crop's own prose figure (vining 24-36, rows). Bush 18-24 is D2 (bush cucurbit spacings not authored this arc). Restatements: the two soil_prep rows '3 to 6 feet' -> '5 to 6 feet' (UMN), everything else agrees. No hill entry: the only hill figure on its cited pages is UGA C1206, a PUMPKIN page ('Plant pumpkins in hills, with at least 8 feet of space on all sides'), out of scope (worklist 56 §3).",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        24,
+        36
+      ],
+      "row_spacing_inches": [
+        60,
+        72
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "umn_ext"
+      ],
+      "anchoring_urls": {
+        "umn_ext": {
+          "url": "https://extension.umn.edu/vegetables/pumpkins-and-winter-squash",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "soil_prep_beginner",
+      "new": "Pick a sunny spot with rich, well-drained soil and mix in plenty of compost before planting, since acorn squash is a hungry plant. Plant it on low hills or mounds, which warm up and drain better. Space it to the type: bush kinds like Table King can go about a foot and a half to two feet apart, while vining kinds need more room, about 2 to 3 feet apart in rows 5 to 6 feet apart. If your soil is heavy or wet, build the mounds up higher so water drains away from the roots and fruit.",
+      "reason": "PLA-10 R3: rows follow the authored row_spacing_inches [60,72] (UMN 'Spacing between rows should be 5 to 6 feet')"
+    },
+    {
+      "path": "soil_prep_seasoned",
+      "new": "Prepare a fertile, well-drained bed in full sun, working several inches of compost or rotted manure into the soil before planting, since acorn squash is a hungry, warm-season plant. Many growers set plants in low hills or mounds about a foot across, which warm faster in spring, drain better, and give the plants a clear starting point. Space to the type: bush and semi-bush acorn squash can go about 18 to 24 inches apart, while vining types want 24 to 36 inches in the row with 5 to 6 feet between rows, since the vines run 4 to 8 feet. On heavy or wet ground, build the mounds up for drainage to head off crown and fruit rot.",
+      "reason": "PLA-10 R3: rows follow the authored row_spacing_inches [60,72] (UMN 'Spacing between rows should be 5 to 6 feet')"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "growth_stages[0].user_action_beginner",
+      "verdict": "agrees",
+      "note": "seeds sown per hill and seedlings kept, not a plant spacing"
+    },
+    {
+      "path": "growth_stages[0].user_action_seasoned",
+      "verdict": "agrees",
+      "note": "seeds sown per hill and seedlings kept, not a plant spacing"
+    },
+    {
+      "path": "soil_prep_beginner",
+      "verdict": "edited",
+      "note": "vining 2 to 3 ft in-row agrees; rows 3-6 ft -> 5-6 ft (UMN); bush 1.5-2 ft is the bush clause (D2, not authored)"
+    },
+    {
+      "path": "soil_prep_seasoned",
+      "verdict": "edited",
+      "note": "vining 24-36 in-row agrees; rows 3-6 ft -> 5-6 ft (UMN); bush 18-24 is the bush clause (D2)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "verdict": "agrees",
+      "note": "seed depth, not a spacing"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "agrees",
+      "note": "seed depth and soil temperature, not a spacing"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "verdict": "agrees",
+      "note": "'one plant every 24 to 36 inches' equals the authored in-row [24,36]"
+    },
+    {
+      "path": "tips_by_stage.vining[0].text_seasoned",
+      "verdict": "agrees",
+      "note": "vine run (4 to 8 ft), not a plant spacing"
+    },
+    {
+      "path": "yield_expectations.factors_seasoned[2]",
+      "verdict": "agrees",
+      "note": "vine run, not a plant spacing"
+    }
+  ]
+}

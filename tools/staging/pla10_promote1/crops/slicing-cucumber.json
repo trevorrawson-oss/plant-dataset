@@ -1,6 +1,6 @@
 {
   "slug": "slicing-cucumber",
-  "decision": "DIFFERS -> W1: author the page's figure. vce_426_331 Table 5 row \"Cucumbers 12-18 in 48-72 in\" -> in_row [12,18], row [48,72]. Today's [12,24] has no page for 24 (UMD 12 in; Clemson 8-10 non-trellised; NMSU CR457B 8-12; VH021 6-12). No hill entry: UMN's hills give seeds per hill, not plants after thinning, so plants_per_hill cannot be stated. The two scanner hits (a fertilizer rate per row; sow per station) are not plant-spacing restatements.",
+  "decision": "DIFFERS -> W1, RULED 2026-10-01: OSU's slicing row names the crop and wins the generic VCE 'Cucumbers' row. osu_ext (OSU table, column order rows then in-row; PDF read through pypdf): \"Cucumbers (slicing) ... 6 plants 48\" 24\"\" -> in_row [24,24], rows [48,48]. CORRECTION of the session-2 note, which said today's [12,24] had no page for 24: OSU's slicing row states 24. This matches pickling-cucumber, which takes OSU's pickling-specific row. ALTERNATIVE, not authored: vce_426_331 Table 5 'Cucumbers 12-18 in 48-72 in' (all cucumbers). No hill entry: UMN's hills give seeds per hill, not plants after thinning. The two scanner hits (a fertilizer rate per row; sow per station) are not plant-spacing restatements.",
   "planting_layout": [
     {
       "id": "row-none",
@@ -8,20 +8,20 @@
       "support": "none",
       "default": true,
       "in_row_inches": [
-        12,
-        18
+        24,
+        24
       ],
       "row_spacing_inches": [
         48,
-        72
+        48
       ],
       "row_spacing_reason": null,
       "sources": [
-        "vce_426_331"
+        "osu_ext"
       ],
       "anchoring_urls": {
-        "vce_426_331": {
-          "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+        "osu_ext": {
+          "url": "https://ir.library.oregonstate.edu/downloads/v979v342w",
           "verified": "2026-10-01"
         }
       }

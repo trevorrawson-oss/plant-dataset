@@ -1,0 +1,104 @@
+{
+  "slug": "blackberry",
+  "decision": "D1 BLEND REPAIR (ruled): today's [36,72] averages two cane types. ERECT is the default (spec §10.1): clemson_hgic blackberry \"Erect varieties should be planted 2 to 4 feet apart in the row and 10 feet between rows.\" -> in_row [24,48], rows [120,120]. The same page's semi-trailing sentence ('6 to 8 feet apart in the row, with rows 10 feet apart') waits on plant_habit (R4; not this promote). Corroborating: UC MG SLO 3-4 ft in-row, 8-10 ft rows; USU erect 5 ft. Trellis-post spacing excluded. Restatements: the two planting_method rows 'rows 8 to 10 feet apart' -> 'rows about 10 feet apart' (Clemson states 10 ft for both types); the per-type in-row clauses already match.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        24,
+        48
+      ],
+      "row_spacing_inches": [
+        120,
+        120
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "clemson_hgic"
+      ],
+      "anchoring_urls": {
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/blackberry/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "planting_method_notes_beginner",
+      "new": "Plant dormant bare-root canes so the roots are an inch or two deep, then cut the old cane back to a few inches. Plant in late winter or early spring in cold areas, or over winter where winters are mild. Space upright types about 2 to 4 feet apart, and the big arching or trailing types about 6 to 8 feet apart, in rows about 10 feet apart. Use a slightly raised, well-drained row in full sun, and put up the trellis before the canes grow.",
+      "reason": "PLA-10 R3: rows follow the authored row_spacing_inches [120,120] (Clemson, both cane types)"
+    },
+    {
+      "path": "planting_method_notes_seasoned",
+      "new": "Plant dormant bare-root canes, setting the crown so the roots sit 1 to 2 inches below the surface, then cut the old handle cane back to a few inches. Plant in late winter or early spring in the North, or from late fall through winter in mild regions. Space erect types about 2 to 4 feet apart, and the vigorous semi-erect and trailing types about 6 to 8 feet apart, in rows about 10 feet apart. Plant on a slightly raised, well-drained row in full sun and install the trellis before growth begins; only compact erect types can be grown without support.",
+      "reason": "PLA-10 R3: rows follow the authored row_spacing_inches [120,120] (Clemson, both cane types)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "cane_management_seasoned",
+      "verdict": "agrees",
+      "note": "tipping height and lateral length (12-18 in, 10-12 in) and cane density per foot, not a plant spacing"
+    },
+    {
+      "path": "fertilizer.amount_seasoned",
+      "verdict": "agrees",
+      "note": "a rate per 100 feet of row, not a spacing"
+    },
+    {
+      "path": "full_harvest_notes_beginner",
+      "verdict": "agrees",
+      "note": "lateral length (12 to 18 in), not a plant spacing"
+    },
+    {
+      "path": "full_harvest_notes_seasoned",
+      "verdict": "agrees",
+      "note": "lateral length (12 to 18 in), not a plant spacing"
+    },
+    {
+      "path": "growth_stages[0].user_action_beginner",
+      "verdict": "agrees",
+      "note": "planting depth (1 to 2 in), not a spacing"
+    },
+    {
+      "path": "growth_stages[0].user_action_seasoned",
+      "verdict": "agrees",
+      "note": "planting depth; 'space plants for the type (erect closer, semi-erect and trailing wider)' carries no figure and agrees"
+    },
+    {
+      "path": "growth_stages[8].user_action_seasoned",
+      "verdict": "agrees",
+      "note": "lateral length and canes per foot, not a plant spacing"
+    },
+    {
+      "path": "notifications[6].body_seasoned",
+      "verdict": "agrees",
+      "note": "lateral length (12 to 18 in), not a plant spacing"
+    },
+    {
+      "path": "planting_method_notes_beginner",
+      "verdict": "edited",
+      "note": "upright 2-4 ft agrees with in_row [24,48]; trailing 6-8 ft is the semi-trailing clause (same Clemson page); rows 8-10 ft -> about 10 ft"
+    },
+    {
+      "path": "planting_method_notes_seasoned",
+      "verdict": "edited",
+      "note": "erect 2-4 ft agrees; semi-erect/trailing 6-8 ft is the Clemson semi-trailing clause; rows 8-10 ft -> about 10 ft"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "agrees",
+      "note": "planting depth, not a spacing"
+    },
+    {
+      "path": "tips_by_stage.dormant_prune[0].text_seasoned",
+      "verdict": "agrees",
+      "note": "lateral length (12 to 18 in), not a plant spacing"
+    }
+  ]
+}

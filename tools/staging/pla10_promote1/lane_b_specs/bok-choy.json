@@ -30,5 +30,15 @@
     "tips_by_stage.established[0].text_seasoned": "agrees: 6 in is the entry's figure; 12 to 18 for full-size heads is UMN's regime",
     "yield_expectations.factors_seasoned[3]": "agrees: 6 in (entry) and 12 to 18 (UMN full-size regime)",
     "yield_expectations.per_plant_seasoned": "agrees: 'at about 6 inches' is the entry's figure"
-  }
+  },
+  "edits": [
+    {
+      "path": "thin_to_inches",
+      "new": [
+        6,
+        6
+      ],
+      "reason": "PLA-10 session 3: thin_to_inches was authored as a mirror of spacing_inches (40 of 41 crops equal at c5fc3d13; here [6, 12]); it follows the moved in-row figure [6, 6]. plant-app renders it (crop-timing thinToInches)."
+    }
+  ]
 }

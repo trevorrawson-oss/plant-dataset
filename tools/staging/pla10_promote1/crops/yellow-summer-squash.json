@@ -1,0 +1,58 @@
+{
+  "slug": "yellow-summer-squash",
+  "decision": "AGREES, ROW DEFAULT with a non-default hill. umd_ext 'Growing summer squash and zucchini' gives both layouts in ONE sentence: \"Spacing : Hills (two to three plants per hill) 3'- 4' in-row x 4'- 6' between rows; single plants 2'- 3' in-row x 3'- 5' between rows.\" -> row-none default in_row [24,36] (today's), rows [36,60]; hill-none hills [36,48], rows [48,72], plants_per_hill [2,3]. Row is the default because it keeps today's figure and the planners place rows (hill placement is PLA-636); the hill is a decision row Trevor can flip (a hill default here would carry its own row figure, so it would not be see_layout). Figure unchanged: no restatements owed.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        24,
+        36
+      ],
+      "row_spacing_inches": [
+        36,
+        60
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "umd_ext"
+      ],
+      "anchoring_urls": {
+        "umd_ext": {
+          "url": "https://extension.umd.edu/resource/growing-summer-squash-zucchini-home-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    },
+    {
+      "id": "hill-none",
+      "arrangement": "hill",
+      "support": "none",
+      "default": false,
+      "hill_spacing_inches": [
+        36,
+        48
+      ],
+      "row_spacing_inches": [
+        48,
+        72
+      ],
+      "row_spacing_reason": null,
+      "plants_per_hill": [
+        2,
+        3
+      ],
+      "sources": [
+        "umd_ext"
+      ],
+      "anchoring_urls": {
+        "umd_ext": {
+          "url": "https://extension.umd.edu/resource/growing-summer-squash-zucchini-home-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ]
+}

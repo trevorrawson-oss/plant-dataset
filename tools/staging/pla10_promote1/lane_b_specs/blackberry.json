@@ -1,0 +1,64 @@
+{
+  "slug": "blackberry",
+  "decision": "D1 BLEND REPAIR (ruled): today's [36,72] averages two cane types. ERECT is the default (spec §10.1): clemson_hgic blackberry \"Erect varieties should be planted 2 to 4 feet apart in the row and 10 feet between rows.\" -> in_row [24,48], rows [120,120]. The same page's semi-trailing sentence ('6 to 8 feet apart in the row, with rows 10 feet apart') waits on plant_habit (R4; not this promote). Corroborating: UC MG SLO 3-4 ft in-row, 8-10 ft rows; USU erect 5 ft. Trellis-post spacing excluded. Restatements: the two planting_method rows 'rows 8 to 10 feet apart' -> 'rows about 10 feet apart' (Clemson states 10 ft for both types); the per-type in-row clauses already match.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            24,
+            48
+          ],
+          "sid": "clemson_hgic",
+          "url": "https://hgic.clemson.edu/factsheet/blackberry/",
+          "quote": "Erect varieties should be planted 2 to 4 feet apart in the row and 10 feet between rows."
+        },
+        "row_spacing_inches": {
+          "value": [
+            120,
+            120
+          ],
+          "sid": "clemson_hgic",
+          "url": "https://hgic.clemson.edu/factsheet/blackberry/",
+          "quote": "Erect varieties should be planted 2 to 4 feet apart in the row and 10 feet between rows."
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "planting_method_notes_beginner",
+      "replace": [
+        "in rows 8 to 10 feet apart",
+        "in rows about 10 feet apart"
+      ],
+      "reason": "PLA-10 R3: rows follow the authored row_spacing_inches [120,120] (Clemson, both cane types)"
+    },
+    {
+      "path": "planting_method_notes_seasoned",
+      "replace": [
+        "in rows 8 to 10 feet apart",
+        "in rows about 10 feet apart"
+      ],
+      "reason": "PLA-10 R3: rows follow the authored row_spacing_inches [120,120] (Clemson, both cane types)"
+    }
+  ],
+  "restatements": {
+    "cane_management_seasoned": "agrees: tipping height and lateral length (12-18 in, 10-12 in) and cane density per foot, not a plant spacing",
+    "fertilizer.amount_seasoned": "agrees: a rate per 100 feet of row, not a spacing",
+    "full_harvest_notes_beginner": "agrees: lateral length (12 to 18 in), not a plant spacing",
+    "full_harvest_notes_seasoned": "agrees: lateral length (12 to 18 in), not a plant spacing",
+    "growth_stages[0].user_action_beginner": "agrees: planting depth (1 to 2 in), not a spacing",
+    "growth_stages[0].user_action_seasoned": "agrees: planting depth; 'space plants for the type (erect closer, semi-erect and trailing wider)' carries no figure and agrees",
+    "growth_stages[8].user_action_seasoned": "agrees: lateral length and canes per foot, not a plant spacing",
+    "notifications[6].body_seasoned": "agrees: lateral length (12 to 18 in), not a plant spacing",
+    "planting_method_notes_beginner": "edited: upright 2-4 ft agrees with in_row [24,48]; trailing 6-8 ft is the semi-trailing clause (same Clemson page); rows 8-10 ft -> about 10 ft",
+    "planting_method_notes_seasoned": "edited: erect 2-4 ft agrees; semi-erect/trailing 6-8 ft is the Clemson semi-trailing clause; rows 8-10 ft -> about 10 ft",
+    "start_method.notes_seasoned": "agrees: planting depth, not a spacing",
+    "tips_by_stage.dormant_prune[0].text_seasoned": "agrees: lateral length (12 to 18 in), not a plant spacing"
+  }
+}

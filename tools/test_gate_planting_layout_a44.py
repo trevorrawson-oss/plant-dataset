@@ -5,16 +5,18 @@ driven through the REAL ENTRY POINTS as subprocesses on scratch copies of canoni
 Run: python3 tools/test_gate_planting_layout_a44.py
 
 A driver that never reaches the guarded call site is vacuous, so every injection is read back out of
-the entry point's own output. The post-promote SHAPE is proved end to end on two crops: a microgreen
-in its promote-1 state (planting_layout [], spacing null, not_applicable) and cabbage with one cited
-row entry, each through EVERY whole_crop_gate check, so a gate this arc forgot to teach about the new
-shape fails here before it fails a promote. Script-style: a failure RAISES, never sys.exit.
+the entry point's own output. Re-measured for promote 1's DATA commit (A44 ARMED): the live canonical
+carries the post-promote shape, so a row crop, a block crop, a hill default, apple and a microgreen
+(planting_layout [], spacing null, not_applicable) each pass EVERY whole_crop_gate check, and the
+legacy string form, an absent layout and the retired anchor key each redden. Script-style: a failure
+RAISES, never sys.exit.
 """
 import copy, json, os, re, shutil, subprocess, sys, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 base = json.load(open(os.path.join(REPO, "crops_data_final.json"), encoding="utf-8"))
+base_idx = {c["slug"]: c for c in base["crops"]}
 TMP = os.path.join(HERE, "_tmp_a44_fixture.json")
 MG = "arugula-microgreens"
 ROW = "cabbage"
@@ -50,82 +52,81 @@ def tools_copy(edits):
     return td
 
 
-def microgreen_post(idx, _d):
-    c = idx[MG]
-    assert c.get("zone_independent") is True and c.get("spacing_inches") == []
-    c.update(planting_layout=[], spacing_inches=None, row_spacing_inches=None,
-             row_spacing_reason="not_applicable")
+def entry_of(idx, slug):
+    return idx[slug]["planting_layout"][0]
 
 
-def cabbage_post(idx, _d):
-    """One cited row entry, citing a source + url the crop ALREADY cites (so §F and A63 see a real,
-    document-pathed anchor), mirrors set by the rule."""
-    c = idx[ROW]
-    sid, anc = next((s, a) for s, a in c["storage"]["anchoring_urls"].items())
-    c.update(planting_layout=[{
-        "id": "row-none", "arrangement": "row", "support": "none", "default": True,
-        "in_row_inches": list(c["spacing_inches"]), "row_spacing_inches": [24, 36],
-        "row_spacing_reason": None, "sources": [sid], "anchoring_urls": {sid: dict(anc)}}],
-        row_spacing_inches=[24, 36], row_spacing_reason=None)
-
-
+# Re-measured 2026-10-01 for PLA-10 promote 1's DATA commit: canonical now carries the post-promote
+# shape on every certified crop and A44 is ARMED (planting_layout_gate.PRESENCE_ARMED = True). The
+# tools-commit version built that shape by hand on a pre-promote base; here the base IS the shape.
 try:
-    # ---- clean canonical: A44 announced unarmed, every crop it is run on passes ------------
-    rc, out = run("whole_crop_gate.py", "sweet-corn", scratch())
-    assert "A44. planting_layout list + spacing mirrors" in out and "presence off" in out, out[-800:]
-    assert rc == 0 and "GATE: PASS" in out, out[-800:]
+    # ---- clean canonical: A44 announced armed, the post-promote shape passes EVERY check --------
+    for slug in ("sweet-corn", MG, ROW, "watermelon", "apple"):
+        rc, out = run("whole_crop_gate.py", slug, scratch())
+        assert "A44. planting_layout list + spacing mirrors" in out and "presence ARMED" in out, (slug, out[-800:])
+        assert rc == 0 and "GATE: PASS" in out, (slug, out[-1500:])
+    assert base_idx[MG]["spacing_inches"] is None and base_idx[MG]["planting_layout"] == []
+    assert base_idx["watermelon"]["planting_layout"][0]["arrangement"] == "hill"  # a hill default, live
 
-    # ---- A44 reaches the entry point: a legacy enum defect, and a list mirror defect -------
+    # ---- A44 reaches the entry point: an entry enum defect, a mirror defect, the string form ----
     def bad_enum(idx, _d):
-        idx["sweet-corn"]["planting_layout"] = "blocks"
+        entry_of(idx, "sweet-corn")["arrangement"] = "blocks"
     rc, out = run("whole_crop_gate.py", "sweet-corn", scratch(bad_enum))
-    assert rc == 1 and "planting_layout: sweet-corn: planting_layout 'blocks' not in" in out, out[-800:]
+    assert rc == 1 and "arrangement 'blocks' not in" in out, out[-800:]
 
-    def bad_mirror(idx, d):
-        cabbage_post(idx, d)
+    def bad_mirror(idx, _d):
         idx[ROW]["spacing_inches"] = [idx[ROW]["spacing_inches"][0], idx[ROW]["spacing_inches"][1] + 6]
     rc, out = run("whole_crop_gate.py", ROW, scratch(bad_mirror))
     assert rc == 1 and re.search(rf"planting_layout: {ROW}: spacing_inches \[.*\] is not the mirror", out), out[-800:]
 
-    # ---- the post-promote SHAPE passes EVERY whole_crop_gate check --------------------------
-    rc, out = run("whole_crop_gate.py", MG, scratch(microgreen_post))
-    assert rc == 0 and "GATE: PASS" in out, ("microgreen post-shape", out[-1500:])
-    rc, out = run("whole_crop_gate.py", ROW, scratch(cabbage_post))
-    assert rc == 0 and "GATE: PASS" in out, ("cabbage post-shape", out[-1500:])
+    def legacy_string(idx, _d):
+        idx["sweet-corn"]["planting_layout"] = "block"
+    rc, out = run("whole_crop_gate.py", "sweet-corn", scratch(legacy_string))
+    assert rc == 1 and "the string form is retired" in out, out[-1200:]
 
-    # ... and the microgreen post-shape needs is_microgreen keyed on zone_independent: with the old
-    # predicate (spacing == []) restored in a scratch tools/, the same crop goes red for sow depth.
+    def lemon_absent(idx, _d):
+        del idx["lemon"]["planting_layout"]
+        idx["lemon"]["spacing_inches_anchoring_urls"] = {}
+    rc, out = run("whole_crop_gate.py", "lemon", scratch(lemon_absent))
+    assert rc == 1 and "lemon: planting_layout absent/null on a certified crop" in out, out[-1200:]
+    assert "spacing_inches_anchoring_urls is retired" in out, out[-1200:]
+
+    # ... and the microgreen's null spacing needs is_microgreen keyed on zone_independent: with the old
+    # predicate (spacing == []) restored in a scratch tools/, the live microgreen goes red for sow depth.
     td = tools_copy({"timing_spine_gate.py": ('    return crop.get("zone_independent") is True',
                                               '    return crop.get("spacing_inches") == []')})
     try:
-        rc, out = run("whole_crop_gate.py", MG, scratch(microgreen_post), tools=td)
+        rc, out = run("whole_crop_gate.py", MG, scratch(), tools=td)
         assert rc == 1 and "sow_depth" in out, ("old predicate must redden the null microgreen", out[-1200:])
     finally:
         shutil.rmtree(td, ignore_errors=True)
 
-    # ---- arming reaches whole_crop_gate: PRESENCE_ARMED True reddens a legacy crop ---------
-    td = tools_copy({"planting_layout_gate.py": ("PRESENCE_ARMED = False", "PRESENCE_ARMED = True")})
+    # ---- the arming is what refuses the string: DISARMED, the same legacy string passes -----------
+    td = tools_copy({"planting_layout_gate.py": ("PRESENCE_ARMED = True", "PRESENCE_ARMED = False")})
     try:
-        rc, out = run("whole_crop_gate.py", "sweet-corn", scratch(), tools=td)
-        assert rc == 1 and "presence ARMED" in out and "the string form is retired" in out, out[-1200:]
-        rc, out = run("whole_crop_gate.py", "lemon", scratch(), tools=td)
-        assert rc == 1 and "lemon: planting_layout absent/null on a certified crop" in out, out[-1200:]
-        assert "spacing_inches_anchoring_urls is retired" in out, out[-1200:]
+        rc, out = run("whole_crop_gate.py", "sweet-corn", scratch(legacy_string), tools=td)
+        assert rc == 0 and "presence off" in out, ("disarmed, a valid legacy string passes", out[-1200:])
     finally:
         shutil.rmtree(td, ignore_errors=True)
 
     # ---- gate_all: clean PASS reports A44's population --------------------------------------
     rc, out = run("gate_all.py", scratch())
     assert rc == 0 and "gate_all: PASS" in out, out[-1200:]
-    assert re.search(r"planting_layout \(PLA-10, A44\): inspected 121 certified crops, 0 entries; "
-                     r"0 list-shaped, 6 legacy string; null spacing on 0; presence off", out), out[-1200:]
+    assert re.search(r"planting_layout \(PLA-10, A44\): inspected 121 certified crops, 119 entries; "
+                     r"121 list-shaped, 0 legacy string; null spacing on 8; presence ARMED", out), out[-1200:]
 
-    # ---- gate_all: the ROSTER refusal, which no per-crop defect can reach ----------------------
+    # ---- gate_all: the ROSTER refusals, which no per-crop defect can reach ----------------------
     td = tools_copy({"planting_layout_gate.py": ("CERT_FLOOR = 121", "CERT_FLOOR = 122")})
     try:
         rc, out = run("gate_all.py", scratch(), tools=td)
         assert rc == 2 and ("REFUSED -- planting_layout_gate inspected 121 certified crops, below the "
                             "declared floor 122") in out, out[-1200:]
+    finally:
+        shutil.rmtree(td, ignore_errors=True)
+    td = tools_copy({"planting_layout_gate.py": ("ENTRY_FLOOR = 113", "ENTRY_FLOOR = 120")})
+    try:
+        rc, out = run("gate_all.py", scratch(), tools=td)
+        assert rc == 2 and "REFUSED" in out and "119" in out, ("armed entry floor", out[-1200:])
     finally:
         shutil.rmtree(td, ignore_errors=True)
 finally:

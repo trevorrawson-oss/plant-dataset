@@ -1,6 +1,6 @@
 {
   "slug": "dry-bean",
-  "decision": "SCOPE -> W3: hunt first. The hunt FOUND two dry-bean-naming pages: WSU FS135E 'Growing Dry Beans in Home Gardens' (a PDF on wpcdn.web.wsu.edu: 'Plant seeds 2–3 inches apart in rows spaced 2–3 feet apart') and usu_ext beans-in-the-garden (HTML; names dry beans: 'leave dry beans on the plant until pods yellow and dry') \"Plant seeds 1 inch deep, spaced 2-3 inches apart, in rows 18-24 inches wide.\" -> in_row [2,3], row [18,24]. The USU page is taken (HTML bytes; exact catalogued host); WSU corroborates 2-3. Clemson's snap-bean sentence (today's source) is not accepted since the hunt succeeded. Today's hi 4 rests on UMN's generic 'four inches apart'. The two scanner hits are yields per row: agrees.",
+  "decision": "SCOPE -> W3: hunt first. The hunt FOUND two dry-bean-naming pages: WSU FS135E 'Growing Dry Beans in Home Gardens' (a PDF on wpcdn.web.wsu.edu: 'Plant seeds 2–3 inches apart in rows spaced 2–3 feet apart') and usu_ext beans-in-the-garden (HTML; names dry beans: 'leave dry beans on the plant until pods yellow and dry') \"Plant seeds 1 inch deep, spaced 2-3 inches apart, in rows 18-24 inches wide.\" -> in_row [2,3], row [18,24]. The USU page is taken (HTML bytes; exact catalogued host); WSU corroborates 2-3. Clemson's snap-bean sentence (today's source) is not accepted since the hunt succeeded. Today's hi 4 rests on UMN's generic 'four inches apart'. The two scanner hits are yields per row: agrees. [SESSION 3 REVIEW, 2026-10-01: quote swapped from 'in rows 18-24 inches wide' (ambiguous: width or spacing) to the same page's 'All beans' paragraph: 'When soils are above 60ºF, space rows 18-24 inches apart and plant seeds 1 inch deep and 2-3 inches apart in the row.' Same figures.]",
   "planting_layout": [
     {
       "id": "row-none",
@@ -25,6 +25,16 @@
           "verified": "2026-10-01"
         }
       }
+    }
+  ],
+  "edits": [
+    {
+      "path": "thin_to_inches",
+      "new": [
+        2,
+        3
+      ],
+      "reason": "PLA-10 session 3: thin_to_inches was authored as a mirror of spacing_inches (40 of 41 crops equal at c5fc3d13; here [2, 4]); it follows the moved in-row figure [2, 3]. plant-app renders it (crop-timing thinToInches)."
     }
   ],
   "restatements": [

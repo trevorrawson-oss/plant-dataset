@@ -1,0 +1,49 @@
+{
+  "slug": "apple",
+  "decision": "R1 ROOTSTOCK BASIS. Today's [60,300] spans every rootstock class (D1/§5 blend; the live hero's '5 to 25 ft'). The crop-level figure moves to the RECOMMENDED rootstock (M26, the same basis PLA-465 used for mature_height_ft [10,14]). Page: ncsu_ext_handbook_tree_fruit (NCSU Extension Gardener Handbook ch. 15, already cited by apple) Table 15-4 'Recommended planting distances for apple trees grown on size-controlling rootstocks', Distance Between Trees (feet), NONSPUR column: Seedling 18-25, MM.111 14-18, MM.106 12-16, M.7a 10-14, M.26 8-12, Mark 4-8, M.9 4-8. -> in_row [96,144] (M.26), row not_authored: UGA C740 (uga_ext, cited) carries 'Table 2. Suggested Tree Spacing' with a Between Rows column per rootstock ('M 26 10 16 not recommended'), but its cached columns flatten ambiguously (non-spur / spur headers), so no row figure is read from it; per-rootstock row spacing is not modeled either (§5.1). WHY NCSU over UMN's class figures (standard 20-25 / semi-dwarf 12-15 / dwarf 6-8 ft, the spec's draft basis): (a) NCSU names each of apple's five rootstock rows, so no class-to-name mapping is needed; (b) UMN's own page calls M.26 'This dwarfing rootstock produces a tree 8-10 feet in height' (as do Clemson and UGA C740), so mapping M26 to UMN's SEMI-DWARF 12-15 ft would contradict the page it cites (UMN's own honest mapping would be its dwarf 6-8 ft class); (c) the MM106/MM111 decision row (§5.1) resolves itself: NCSU 12-16 and 14-18 ft sit around their 15/18 ft spreads. Nonspur is the column used because the rows describe rootstocks, not spur strains; spur strains make trees 60-70% as large (NCSU's Table 15-3 text; footnote a only lists spur cultivars). Overrides from the same table: M9 [48,96], M26 null (it is the basis), MM106 [144,192], MM111 [168,216], seedling [216,300]. The 4 scanner hits are pollinizer distance (50 ft) and fruit thinning (6 in): agrees. CITATION GAP (reported, not fixed): each rootstock row cites only umd_ext (UMD 'All About Apple Rootstocks', which states no spacing); the promote may not touch a row's sources (guard 5), so the override's citation is this decision row, not the row's own sources (§5.1 asks for the latter). [RULED 2026-10-01 (Trevor, session 3 review): crop default [96,144] on NCSU Table 15-4 TAKEN. The rootstock OVERRIDES are DEFERRED: no number lands uncited, and each rootstock row cites only umd_ext (no spacing). rootstock_options[].spacing_inches stays ABSENT on apple in this promote. OWED (hand-off): NCSU Table 15-4 nonspur M9 [48,96], MM106 [144,192], MM111 [168,216], seedling [216,300] (M26 null, the basis), after a small tools change letting the promote add a source to a rootstock row (TDD + harness), before promote 2. No consumer reads them yet (PLA-629 unbuilt).]",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        96,
+        144
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "anchoring_urls": {
+        "ncsu_ext_handbook_tree_fruit": {
+          "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "restatements": [
+    {
+      "path": "description_seasoned",
+      "verdict": "agrees",
+      "note": "pollinizer distance (within about 50 ft), not a tree spacing"
+    },
+    {
+      "path": "growth_stages[5].user_action_seasoned",
+      "verdict": "agrees",
+      "note": "fruit thinning (one fruit per cluster, roughly 6 in apart), not a tree spacing"
+    },
+    {
+      "path": "pollination.notes_seasoned",
+      "verdict": "agrees",
+      "note": "pollinizer distance (within about 50 ft), not a tree spacing"
+    },
+    {
+      "path": "pollinator_notes_seasoned",
+      "verdict": "agrees",
+      "note": "pollinizer distance (within about 50 ft), not a tree spacing"
+    }
+  ]
+}

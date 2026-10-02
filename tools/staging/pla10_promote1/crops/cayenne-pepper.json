@@ -1,0 +1,74 @@
+{
+  "slug": "cayenne-pepper",
+  "decision": "PARTIAL -> W1 + W3. Today's [18,24]: hi 24 is on no cited pepper page that also says 18. umd_ext 'Growing peppers in the home garden' names cayenne among its hot varieties ('Hot varieties, such as serrano, jalapeno, cayenne, habanero') and states \"Spacing: 12\"- 24\" in-rows x 30\"- 36\" between row\" -> in_row [12,24], rows [30,36]. Same page and figure as habanero (session 2), so the two hot peppers read alike. Alternative: UMN (the worklist row) '18 inches apart, in rows 30 to 36 inches apart' [18,18], a point the crop's prose already says. Restatements: growth_stages[2] '18 inches apart (in rows 24 to 36)' -> '12 to 24 inches apart (in rows 30 to 36)'.",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        12,
+        24
+      ],
+      "row_spacing_inches": [
+        30,
+        36
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "umd_ext"
+      ],
+      "anchoring_urls": {
+        "umd_ext": {
+          "url": "https://extension.umd.edu/resource/growing-peppers-home-garden",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "growth_stages[2].user_action_beginner",
+      "new": "Harden the plants off over about a week, then plant them 12 to 24 inches apart into warm soil. A sheet of black plastic mulch warms the soil and helps, and a collar around each plant keeps cutworms off.",
+      "reason": "PLA-10 R3: in-row follows the authored in_row_inches [12,24] (UMD)"
+    },
+    {
+      "path": "growth_stages[2].user_action_seasoned",
+      "new": "Harden off over 7 to 10 days, then transplant into warm soil, 12 to 24 inches apart in rows 30 to 36 inches apart. On heavy or cool soil, black plastic or fabric mulch warms the ground and gives the crop a head start. A cutworm collar protects each new transplant.",
+      "reason": "PLA-10 R3: in-row and rows follow the authored [12,24] / [30,36] (UMD)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "description_beginner",
+      "verdict": "agrees",
+      "note": "pod length (4 to 6 in), not a spacing"
+    },
+    {
+      "path": "description_seasoned",
+      "verdict": "agrees",
+      "note": "pod length (4 to 6 in), not a spacing"
+    },
+    {
+      "path": "growth_stages[2].user_action_beginner",
+      "verdict": "edited",
+      "note": "'about 18 inches apart' -> '12 to 24 inches apart' (UMD)"
+    },
+    {
+      "path": "growth_stages[2].user_action_seasoned",
+      "verdict": "edited",
+      "note": "'about 18 inches apart in rows 24 to 36' -> '12 to 24 inches apart in rows 30 to 36' (UMD)"
+    },
+    {
+      "path": "varieties.recommended[0].recommended_note",
+      "verdict": "agrees",
+      "note": "fruit length (4 to 6 in), not a spacing"
+    },
+    {
+      "path": "yield_expectations.per_plant_seasoned",
+      "verdict": "agrees",
+      "note": "a yield per 10-foot row, not a spacing"
+    }
+  ]
+}

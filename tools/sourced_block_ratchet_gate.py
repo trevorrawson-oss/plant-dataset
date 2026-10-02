@@ -95,14 +95,14 @@ EXCLUDED = {
     "regions": "region cells are modeled by design; not in the ratchet",
 }
 # Anchored claims with NO sources slot. Recorded, not ratcheted: §F cannot see them either, and
-# each needs a sources home before it can join the named list (PLA-10 spacing_inches is one).
+# each needs a sources home before it can join the named list. PLA-10 promote 1 gave spacing_inches
+# that home (planting_layout entries, named above) and retired spacing_inches_anchoring_urls.
 ANCHOR_ONLY = (
     "<crop>.anchoring_urls",
     "days_to_maturity_anchoring_urls",
     "days_to_maturity_mid_anchoring_urls",
     "det_indet.anchoring_urls",
     "germination_temp_f_anchoring_urls",
-    "spacing_inches_anchoring_urls",
     "sunlight_hours_anchoring_urls",
     "weeks_indoors_anchoring_urls",
 )

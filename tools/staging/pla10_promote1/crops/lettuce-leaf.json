@@ -27,6 +27,21 @@
       }
     }
   ],
+  "edits": [
+    {
+      "path": "thin_to_inches",
+      "new": [
+        6,
+        10
+      ],
+      "reason": "PLA-10 session 3: thin_to_inches was authored as a mirror of spacing_inches (40 of 41 crops equal at c5fc3d13; here [6, 8]); it follows the moved in-row figure [6, 10]. plant-app renders it (crop-timing thinToInches)."
+    },
+    {
+      "path": "thinning.to_spacing",
+      "new": "6-10 inches for leaf lettuce, 10-12 for heads",
+      "reason": "PLA-10 (ruled 2026-10-01): the leaf-lettuce thin-to follows the authored in-row [6,10] (Clemson leaf-specific); the heads clause is unchanged"
+    }
+  ],
   "restatements": [
     {
       "path": "fertilizer.amount_seasoned",

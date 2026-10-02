@@ -83,8 +83,7 @@ class Synthetic:
                         e["sources"].append(rs)
                         e["anchoring_urls"][rs] = {"url": ra["url"], "verified": ra["verified"]}
                 s["retired_anchor"] = {rs: "moved" for rs in c[P.RETIRED]}
-            if slug in P.ROOTSTOCK_CROPS:
-                s["rootstock_spacing"] = {r["name"]: None for r in c.get("rootstock_options") or []}
+            if slug == "apple":
                 s["restatements"] = [{"path": p, "verdict": "agrees", "note": "synthetic"}
                                      for p in P.spacing_strings(c)]
             self.crops[slug] = s
@@ -166,7 +165,8 @@ class Literals(unittest.TestCase):
         self.assertEqual(P.BASE_SHA, "c5fc3d13764f6d08b24574bbb07ecb15f5cfddeb7ba80f7439a72d8829813e28")
         self.assertEqual((P.EXPECTED_CERTIFIED, P.EXPECTED_STAGED), (121, 113))
         self.assertEqual(P.NULL_SPACING_EXPECTED, MICROGREENS)
-        self.assertEqual(P.ROOTSTOCK_CROPS, ("apple",))
+        self.assertNotIn("rootstock_spacing", P.STAGE_KEYS)  # R1 overrides DEFERRED, ruled 2026-10-01
+        self.assertFalse(hasattr(P, "ROOTSTOCK_CROPS"))
         self.assertEqual(len(P.RETIRED_ANCHOR_CROPS), 11)
 
 
@@ -436,21 +436,33 @@ class Edits(Base):
 
 
 class Rootstock(Base):
+    """R1's rootstock OVERRIDES are DEFERRED (Trevor, 2026-10-01): no number lands uncited, and apple's
+    rootstock rows cite only a page with no spacing. The promote carries no rootstock_spacing on any crop
+    (apple's crop-level basis move still lands, through its planting_layout entry). An owed tools change
+    lets a later promote add a source to a rootstock row, and re-adds the override machinery with it."""
+
+    def test_rootstock_spacing_on_apple_is_deferred_REFUSES(self):
+        self.s.crops["apple"]["rootstock_spacing"] = {"M9": [72, 96]}
+        self.refused("unknown keys ['rootstock_spacing']")
+
     def test_rootstock_spacing_off_apple_REFUSES(self):
         self.s.crops["pear-european"]["rootstock_spacing"] = {}
-        self.refused("rootstock_spacing is apple's alone")
+        self.refused("unknown keys ['rootstock_spacing']")
 
-    def test_every_apple_row_is_present_or_null(self):
-        rs = self.s.crops["apple"]["rootstock_spacing"]
-        rs.pop(next(iter(rs)))
-        self.refused("apple: rootstock_spacing names")
-
-    def test_apple_rows_land_as_staged(self):
-        rs = self.s.crops["apple"]["rootstock_spacing"]
-        first = next(iter(rs)); rs[first] = [72, 96]
+    def test_apple_rows_land_without_spacing(self):
         post = self.s.run()[0]
-        row = next(r for r in P.by_slug(post)["apple"]["rootstock_options"] if r["name"] == first)
-        self.assertEqual(row["spacing_inches"], [72, 96])
+        rows = P.by_slug(post)["apple"]["rootstock_options"]
+        self.assertTrue(rows)
+        self.assertFalse([r["name"] for r in rows if "spacing_inches" in r])
+
+    def test_a_rootstock_override_on_apple_in_the_post_REFUSES(self):
+        post = copy.deepcopy(clean_post()[0])
+        P.by_slug(post)["apple"]["rootstock_options"][0]["spacing_inches"] = [72, 96]
+        stage, ev = P.load_stage(self.s.stage)
+        with self.assertRaises(P.Refused) as cm:
+            P.check_post(BASE, post, stage, ev, self.s.ev_dir)
+        self.assertIn("apple: changed outside what the stage names: ['rootstock_options[0].spacing_inches']",
+                      str(cm.exception))
 
     def test_a_rootstock_override_off_apple_in_the_post_REFUSES(self):
         post = copy.deepcopy(clean_post()[0])

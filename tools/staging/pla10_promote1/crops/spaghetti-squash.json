@@ -1,0 +1,84 @@
+{
+  "slug": "spaghetti-squash",
+  "decision": "umn_ext 'Growing pumpkins and winter squash': \"Plant pumpkin and winter squash seeds three-fourths of an inch deep, 24 to 36 inches apart. Use the closer spacing if the variety is a bush type. Spacing between rows should be 5 to 6 feet.\" -> row-none default, in_row [24,36], rows [60,72] (today [24,48]). DECISION ROW (not a D1 repair: worklist 56 §3). VCE 426-331 Table 5, cited, states 'Squash, winter 2-4 ft 3-10 ft' = today's [24,48] with rows [36,120]. CHOSEN: UMN 'Plant pumpkin and winter squash seeds ... 24 to 36 inches apart ... Spacing between rows should be 5 to 6 feet' -> [24,36]/[60,72], for two reasons: (1) acorn and butternut (same winter-squash group) take UMN in the ruled D1 repairs, so all three winter squash read one page and one figure; (2) the crop's own prose already says 2-3 ft in-row (VCE's 4 ft hi is on no spaghetti prose), and VCE's 3-10 ft row span is too wide to guide a gardener. Alternative (keep VCE [24,48], no move, no edits) is a one-line flip. Restatements: rows '3 to 5 feet' -> '5 to 6 feet'. No hill entry: the only hill figure on its cited pages is UGA C1206, a PUMPKIN page ('Plant pumpkins in hills, with at least 8 feet of space on all sides'), out of scope (worklist 56 §3).",
+  "planting_layout": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "in_row_inches": [
+        24,
+        36
+      ],
+      "row_spacing_inches": [
+        60,
+        72
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "umn_ext"
+      ],
+      "anchoring_urls": {
+        "umn_ext": {
+          "url": "https://extension.umn.edu/vegetables/pumpkins-and-winter-squash",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "soil_prep_beginner",
+      "new": "Pick a sunny spot with rich, well-drained soil and mix in plenty of compost before planting, since spaghetti squash is a large, hungry plant. Plant it on low hills or mounds, which warm up and drain better. Give it room: space plants about 2 to 3 feet apart in rows 5 to 6 feet apart, since the vines can spread 6 to 8 feet (bush types like Tivoli need less). If your soil is heavy or wet, build the mounds up higher so water drains away from the roots and fruit.",
+      "reason": "PLA-10 R3: rows follow the authored row_spacing_inches [60,72] (UMN)"
+    },
+    {
+      "path": "soil_prep_seasoned",
+      "new": "Prepare a fertile, well-drained bed in full sun, working several inches of compost or rotted manure into the soil before planting, since spaghetti squash is a hungry, long-season plant. Many growers set plants in low hills or mounds about a foot across, which warm faster in spring, drain better, and give the vines a clear starting point. Space generously: roughly 24 to 36 inches between plants in the row with 5 to 6 feet between rows for vining types (closer for bush types like Tivoli), because the vines can run 6 to 8 feet. On heavy or wet ground, build the mounds up for drainage to head off crown and fruit rot.",
+      "reason": "PLA-10 R3: rows follow the authored row_spacing_inches [60,72] (UMN)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "growth_stages[0].user_action_beginner",
+      "verdict": "agrees",
+      "note": "seeds sown per hill and seedlings kept, not a plant spacing"
+    },
+    {
+      "path": "growth_stages[0].user_action_seasoned",
+      "verdict": "agrees",
+      "note": "seeds sown per hill and seedlings kept, not a plant spacing"
+    },
+    {
+      "path": "soil_prep_beginner",
+      "verdict": "edited",
+      "note": "in-row 2-3 ft agrees; rows 3-5 ft -> 5-6 ft (UMN)"
+    },
+    {
+      "path": "soil_prep_seasoned",
+      "verdict": "edited",
+      "note": "in-row 24-36 agrees; rows 3-5 ft -> 5-6 ft (UMN)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "verdict": "agrees",
+      "note": "seed depth, not a spacing"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "agrees",
+      "note": "seed depth and soil temperature, not a spacing"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "verdict": "agrees",
+      "note": "'one plant every 24 to 36 inches' equals in_row [24,36]"
+    },
+    {
+      "path": "yield_expectations.factors_seasoned[2]",
+      "verdict": "agrees",
+      "note": "vine run (6 to 8 ft), not a plant spacing"
+    }
+  ]
+}

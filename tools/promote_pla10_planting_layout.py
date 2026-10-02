@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """promote_pla10_planting_layout -- PLA-10 PROMOTE 1: planting_layout as a list of cited entries, the
 spacing mirrors, the six blend repairs, apple's rootstock basis, the microgreens to null.
+[RULED 2026-10-01: apple's rootstock_options[].spacing_inches OVERRIDES are DEFERRED (no number lands
+uncited); the stage key rootstock_spacing is withdrawn until a tools change lets a promote add a source to
+a rootstock row. apple's crop-level basis move still lands, through its planting_layout entry.]
 Spec docs/specs/pla10-field-shape.md (§1, §2, §3, §5, §9, §10.1); rulings D1-D12, R1-R5.
 Base c5fc3d13 (PLA-532). Built 2026-10-01 in the tools commit; the STAGE is authored in sessions 2-3
 (docs/kickoffs/56-pla10-promote1-authoring-worklist.md). Nothing here authors a value.
@@ -12,7 +15,6 @@ INPUT (the stage, default tools/staging/pla10_promote1/):
      "retired_anchor": {<source_id>: "moved" | {"dropped": "<reason>"}}   iff the crop carries
                         spacing_inches_anchoring_urls today (11 crops); "moved" means that exact
                         (source_id, url) is in some entry's anchoring_urls,
-     "rootstock_spacing": {<rootstock name>: [lo, hi] | null}            apple ONLY (R1),
      "edits": [{"path": "growth_stages[id=seedling].note_beginner", "new": <value>, "reason": "..."}],
      "restatements": [{"path": ..., "verdict": "agrees" | "edited", "note": "..."}]}
   EVIDENCE.tsv: crop, entry_id, field, value (compact JSON), source_id, url, sha256, quote
@@ -48,14 +50,15 @@ WHY EACH GUARD EXISTS.
  5. BLAST RADIUS, SET BEFORE VALUE. Roster and top-level key sets compared first; shells and every
     non-crop top-level key byte-identical; on each certified crop the changed LEAF paths (a two-sided
     walk: added and removed keys count) are a subset of what the stage names: the layout and the three
-    mirror keys, the retired anchor, apple's rootstock spacing, and the `edits` paths. Then values: each
+    mirror keys, the retired anchor, and the `edits` paths. Then values: each
     edited leaf equals its `new`, each layout equals its stage verbatim.
  6. THE GATES RUN ON THE POST-STATE, ARMED: planting_layout_gate (presence ON, floors), A62's ratchet
     (an uncited entry fails unless R5-waived), A63 bare-host, numeric_sanity, display_readiness.
- 7. APPLE ONLY on rootstock (R1): apple's rootstock_options gain spacing_inches on every row, as staged.
-    An override on any other crop is refused by guard 5 (it is a change the stage does not name); a
-    separate "off apple" check was written first and REMOVED (2026-10-01): the harness proved it could
-    never fire before guard 5 did, and an unreachable guard reads as coverage.
+ 7. NO ROOTSTOCK OVERRIDE (R1's overrides DEFERRED, ruled 2026-10-01): the stage carries no
+    rootstock_spacing (load_stage refuses the key as unknown), and a rootstock_options[].spacing_inches
+    appearing in the post-state on any crop, apple included, is refused by guard 5 (a change the stage
+    does not name). The apple-only override machinery was REMOVED with the ruling rather than left
+    unreachable; the owed tools change re-adds it together with the row's own citation.
 
 Usage:
   promote_pla10_planting_layout.py --check [--stage DIR] [--evidence DIR]
@@ -86,7 +89,6 @@ NULL_SPACING_EXPECTED = ("arugula-microgreens", "broccoli-microgreens", "cilantr
                          "wheatgrass")
 RETIRED_ANCHOR_CROPS = ("carrot", "celery", "cherry-tomato", "grape-tomato", "lemon", "lime", "potato",
                         "radish", "roma-tomato", "sweet-potato", "tomatillo")
-ROOTSTOCK_CROPS = ("apple",)
 LAYOUT_KEYS = ("planting_layout",) + PLG.MIRROR_KEYS
 RETIRED = "spacing_inches_anchoring_urls"
 NUMERIC_FIELDS = ("in_row_inches", "hill_spacing_inches", "row_spacing_inches", "plants_per_hill",
@@ -96,8 +98,7 @@ EVIDENCE_COLS = ("crop", "entry_id", "field", "value", "source_id", "url", "sha2
 PDF_TEXT_EXTRACTOR = ("pypdf", pypdf.__version__)
 # Ruled 2026-10-01: number idioms the quote check reads, in FEET ("a foot" -> 1.0); the test pins the table.
 IDIOMS = (("a foot", 1.0),)
-STAGE_KEYS = {"slug", "decision", "planting_layout", "retired_anchor", "rootstock_spacing", "edits",
-              "restatements"}
+STAGE_KEYS = {"slug", "decision", "planting_layout", "retired_anchor", "edits", "restatements"}
 # Restatement scanner (guard 4): a distance next to a spacing word, in any string leaf outside the
 # citation machinery. Deliberately wide; the author adjudicates every hit.
 DIST = re.compile(r"\d+(?:\.\d+)?(?:\s*(?:to|-|–|or)\s*\d+(?:\.\d+)?)?\s*(?:-\s*)?"
@@ -389,9 +390,6 @@ def apply_to(pre, stage):
         c["row_spacing_inches"] = d.get("row_spacing_inches") if d else None
         c["row_spacing_reason"] = PLG.expected_row_reason(c)
         c.pop(RETIRED, None)
-        for name, sp in (s.get("rootstock_spacing") or {}).items():
-            row = next(r for r in c.get("rootstock_options") or [] if r.get("name") == name)
-            row["spacing_inches"] = sp
         for ed in s.get("edits") or []:
             set_at(c, resolve(c, ed["path"]), ed["new"])
     return post
@@ -427,13 +425,6 @@ def check_pre(pre, stage):
         c = idx[slug]
         if (RETIRED in c) != ("retired_anchor" in s):
             refuse(f"{slug}: retired_anchor is required iff the crop carries {RETIRED}")
-        if ("rootstock_spacing" in s) != (slug in ROOTSTOCK_CROPS):
-            refuse(f"{slug}: rootstock_spacing is apple's alone (R1)")
-        if slug in ROOTSTOCK_CROPS:
-            names = [r.get("name") for r in c.get("rootstock_options") or []]
-            if sorted(s["rootstock_spacing"]) != sorted(names):
-                refuse(f"{slug}: rootstock_spacing names {sorted(s['rootstock_spacing'])} != the rows "
-                       f"{sorted(names)}; every row is present-or-null")
         for ed in s.get("edits") or []:
             if set(ed) != {"path", "new", "reason"} or not str(ed["reason"]).strip():
                 refuse(f"{slug}: an edit needs exactly path, new and a reason: {ed}")
@@ -471,9 +462,6 @@ def check_post(pre, post, stage, ev, evidence_dir):
         s = stage.get(slug, {})
         for ed in s.get("edits") or []:
             allowed.add(tuple(resolve(a, ed["path"])))
-        if slug in ROOTSTOCK_CROPS:
-            for i, _ in enumerate(a.get("rootstock_options") or []):
-                allowed.add(("rootstock_options", i, "spacing_inches"))
         changed = leaf_diff(a, b)
         stray = sorted(fmt(list(p)) for p in changed
                        if not any(p[:len(al)] == al for al in allowed))
@@ -488,11 +476,6 @@ def check_post(pre, post, stage, ev, evidence_dir):
                     node = node[seg]
                 if compact(node) != compact(ed["new"]):
                     refuse(f"{slug}: {ed['path']} is not the edit's new value")
-        if slug in ROOTSTOCK_CROPS:
-            for r in b.get("rootstock_options") or []:
-                if "spacing_inches" not in r or compact(r["spacing_inches"]) != compact(
-                        s["rootstock_spacing"][r["name"]]):
-                    refuse(f"{slug}: rootstock {r.get('name')} spacing_inches is not the stage's")
     # guard 1
     nulls = tuple(sorted(c["slug"] for c in post["crops"] if certified(c) and c.get("spacing_inches") is None))
     if nulls != NULL_SPACING_EXPECTED:
@@ -513,7 +496,7 @@ def check_post(pre, post, stage, ev, evidence_dir):
     # guard 4
     for slug, s in stage.items():
         a, b = pidx[slug], qidx[slug]
-        if compact(a.get("spacing_inches")) == compact(b.get("spacing_inches")) and slug not in ROOTSTOCK_CROPS:
+        if compact(a.get("spacing_inches")) == compact(b.get("spacing_inches")):
             continue
         adj = {}
         for r in s.get("restatements") or []:

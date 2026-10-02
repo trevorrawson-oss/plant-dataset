@@ -1,6 +1,6 @@
 {
   "slug": "celery",
-  "decision": "DIFFERS -> W1: author the page's figure. uf_ifas_vh021 Table 1 row (columns: planting dates N/C/S, yield per 10 ft, plants per 10 ft, days to harvest, Spacing Plants, Spacing Rows, seed depth) \"Celery Jan–Mar Sept–Mar Oct–Mar 15 10–20 75–90 6–12 18 On surface\" -> in_row [6,12]; Spacing Rows 18, a stated MINIMUM (footnote 4: 'Minimum distance between rows (when planting in rows)') in a planting-guide table -> row [18,18] with 'minimum' recorded (W2). Today's [6,10] is on no cited page (WSU EM051E Table 4 gives 8 in / rows 24-36 on a PDF; USU 12 in / rows 2 ft). The anchor keyed uf_ifas_vh021 at ask.ifas.ufl.edu/publication/VH021 moves into the entry (the edis url 301s to it; same bytes); the msu_ext anchor is dropped. Prose restating 6-10 is re-authored to 6-12.",
+  "decision": "DIFFERS -> W1: author the page's figure. uf_ifas_vh021 Table 1 row (columns: planting dates N/C/S, yield per 10 ft, plants per 10 ft, days to harvest, Spacing Plants, Spacing Rows, seed depth) \"Celery Jan–Mar Sept–Mar Oct–Mar 15 10–20 75–90 6–12 18 On surface\" -> in_row [6,12]; Spacing Rows 18, a stated MINIMUM (footnote 4: 'Minimum distance between rows (when planting in rows)') in a planting-guide table -> row [18,18] with 'minimum' recorded (W2). Today's [6,10] is on no cited page (WSU EM051E Table 4 gives 8 in / rows 24-36 on a PDF; USU 12 in / rows 2 ft). The anchor keyed uf_ifas_vh021 at ask.ifas.ufl.edu/publication/VH021 moves into the entry (the edis url 301s to it; same bytes); the msu_ext anchor is dropped. Prose restating 6-10 is re-authored to 6-12. [SESSION 3 REVIEW, 2026-10-01: row moves from VH021's MINIMUM [18,18] to WSU EM051E Table 4's RANGE [24,36] ('Celery ⅛ 8 24-36', rows 24-36), on a page celery cites: W2 as refined says a range on another cited page wins and the minimum is noted. The PDF was unreadable at session 2; the pypdf ruling made it citable. In-row stays VH021 [6,12] (W6 ruling 3: in-row and row may come from two pages, one evidence row per (field, source)). No celery prose states a row figure.]",
   "entries": [
     {
       "id": "row-none",
@@ -19,12 +19,12 @@
         },
         "row_spacing_inches": {
           "value": [
-            18,
-            18
+            24,
+            36
           ],
-          "sid": "uf_ifas_vh021",
-          "url": "https://ask.ifas.ufl.edu/publication/VH021",
-          "quote": "Celery Jan–Mar Sept–Mar Oct–Mar 15 10–20 75–90 6–12 18 On surface"
+          "sid": "wsu_ext",
+          "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+          "quote": "Celery ⅛ 8 24-36 9-21 60-70 45 10-12 120-140"
         }
       }
     }
@@ -61,6 +61,11 @@
         "final spacing of 6 to 12 inches"
       ],
       "reason": "restates the moved in-row figure (VH021: 6-12 in)"
+    },
+    {
+      "path": "thinning.to_spacing",
+      "new": "6 to 12 inches",
+      "reason": "PLA-10 session 3: follows the thinning tips session 2 re-authored to '6 to 12 inches' (VH021 [6,12])"
     }
   ],
   "restatements": {

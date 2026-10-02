@@ -114,6 +114,19 @@
         "at a 2 to 3 inch final spacing"
       ],
       "reason": "restates the moved in-row figure (Clemson: 2-3 in)"
+    },
+    {
+      "path": "thin_to_inches",
+      "new": [
+        2,
+        3
+      ],
+      "reason": "PLA-10 session 3: thin_to_inches was authored as a mirror of spacing_inches (40 of 41 crops equal at c5fc3d13; here [2, 4]); it follows the moved in-row figure [2, 3]. plant-app renders it (crop-timing thinToInches)."
+    },
+    {
+      "path": "thinning.to_spacing",
+      "new": "2 to 3 inches (toward 3 for full-size roots, closer for salad turnips and greens)",
+      "reason": "PLA-10 session 3: follows the thinning tips session 2 re-authored to '2 to 3 inches ... toward 3 inches for full-size roots' (Clemson [2,3])"
     }
   ],
   "restatements": {

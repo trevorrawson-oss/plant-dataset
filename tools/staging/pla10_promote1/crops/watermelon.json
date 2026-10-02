@@ -1,0 +1,122 @@
+{
+  "slug": "watermelon",
+  "decision": "D1 BLEND REPAIR (ruled) + HILL DEFAULT (spec §1.4 worked example). uga_ext (UGA C1035): \"Plant watermelon from seed in small hills with a spacing of 8 ft on all sides.\" -> hill-none, hills [96,96], rows [96,96]; \"thin the seedlings to two per hill\" -> plants_per_hill [2,2]. The row-none entry behind it: clemson_hgic \"Plants should be spaced 5 to 6 feet apart within the row.\" -> in_row [60,72]; \"Seeds or transplants should be planted in rows spaced 6 to 8 feet apart.\" -> rows [72,96]. spacing_inches falls back to [60,72] (R2 as amended); root row_spacing_inches = the hill's [96,96] (no see_layout). Today's [36,72] sits below the crop's own hill prose (Clemson's '3 feet apart in 8 foot row spacing' is the likely origin of 36; VCE 'Watermelon 3-4 ft 5-10 ft' also cited). Restatements: soil_prep hills '4 to 8 feet' -> 'about 8 feet ... on all sides'; thinning's 'wider for full-size vines' -> '5 to 6 feet' (Clemson); CONFLICT RECORDED (session 3 review): Clemson contradicts itself: 'Plants should be spaced 5 to 6 feet apart within the row' in rows 6-8 ft (30-48 sq ft per plant) vs 'Transplants or seed in 6 foot row spacing should be 4 feet apart and 3 feet apart in 8 foot row spacing. A rule of thumb is to allow 24 square feet per plant.' The row entry authors the first sentence; the prose's 24 sq ft is Clemson's rule of thumb, left as stated and reported, not claimed to agree.",
+  "planting_layout": [
+    {
+      "id": "hill-none",
+      "arrangement": "hill",
+      "support": "none",
+      "default": true,
+      "hill_spacing_inches": [
+        96,
+        96
+      ],
+      "row_spacing_inches": [
+        96,
+        96
+      ],
+      "row_spacing_reason": null,
+      "plants_per_hill": [
+        2,
+        2
+      ],
+      "sources": [
+        "uga_ext"
+      ],
+      "anchoring_urls": {
+        "uga_ext": {
+          "url": "https://fieldreport.caes.uga.edu/publications/C1035/",
+          "verified": "2026-10-01"
+        }
+      }
+    },
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": false,
+      "in_row_inches": [
+        60,
+        72
+      ],
+      "row_spacing_inches": [
+        72,
+        96
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "clemson_hgic"
+      ],
+      "anchoring_urls": {
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/watermelon/",
+          "verified": "2026-10-01"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "soil_prep_beginner",
+      "new": "Pick a sunny spot with light, well-drained soil and mix in some compost before planting, but do not overdo rich, high-nitrogen material, or you get more vine than melon. Plant watermelon on low hills or mounds, which warm up and drain better. Give it lots of room: space hills about 8 feet apart on all sides for full-size types, since the vines can spread 8 to 12 feet (icebox and bush types need less). In cooler or shorter-summer areas, laying down black plastic mulch warms the soil and gives the plants an earlier, faster start. If your soil is heavy or stays wet, build the mounds up higher so water drains away from the roots and fruit.",
+      "reason": "PLA-10 R3 + D1: follows the authored hill entry [96,96] on all sides (UGA C1035)"
+    },
+    {
+      "path": "soil_prep_seasoned",
+      "new": "Prepare a deep, light, well-drained bed in full sun and work a few inches of compost into the soil before planting, easing off heavy nitrogen so the plant builds fruit rather than runaway vine. Most growers plant on low, wide hills or raised mounds, which warm faster, drain better, and give the trailing vines a starting point. Space generously: hills run about 8 feet apart on all sides for full-size types (closer for icebox and bush kinds), because a full-size vine can run 8 to 12 feet and wants about 24 square feet to itself. Black plastic mulch is a real help in shorter or cooler-summer areas, warming the soil and speeding an early start. On heavy or wet ground, build the mounds up to improve drainage and head off wilt and fruit rot.",
+      "reason": "PLA-10 R3 + D1: follows the authored hill entry [96,96] on all sides (UGA C1035)"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "new": "Sow three to four seeds per hill and thin to the strongest two once they have a true leaf or two. Snip the extras off at soil line rather than pulling, so you do not disturb the roots of the keepers. In rows, thin to one plant every 24 to 36 inches for icebox types and 5 to 6 feet for full-size vines.",
+      "reason": "PLA-10 R3: the full-size in-row figure is the authored row entry [60,72] (Clemson); icebox is bush-type (D2, not authored)"
+    }
+  ],
+  "restatements": [
+    {
+      "path": "growth_stages[0].user_action_beginner",
+      "verdict": "agrees",
+      "note": "seeds per hill, 'strongest two' = plants_per_hill [2,2]"
+    },
+    {
+      "path": "growth_stages[0].user_action_seasoned",
+      "verdict": "agrees",
+      "note": "seeds per hill, thin to two = plants_per_hill [2,2]"
+    },
+    {
+      "path": "pollinator_notes_seasoned",
+      "verdict": "agrees",
+      "note": "pollinizer distance (seeded row within about 10 ft), not a plant spacing"
+    },
+    {
+      "path": "soil_prep_beginner",
+      "verdict": "edited",
+      "note": "hills '4 to 8 feet' -> 'about 8 feet ... on all sides' (UGA)"
+    },
+    {
+      "path": "soil_prep_seasoned",
+      "verdict": "edited",
+      "note": "hills '4 to 8 feet with 6 to 8 feet between rows' -> 'about 8 feet apart on all sides' (UGA); the 24 sq ft clause is Clemson's rule of thumb, which conflicts with Clemson's 5-6 ft in-row (decision row, reported)"
+    },
+    {
+      "path": "start_method.notes_beginner",
+      "verdict": "agrees",
+      "note": "seed depth, not a spacing"
+    },
+    {
+      "path": "start_method.notes_seasoned",
+      "verdict": "agrees",
+      "note": "seed depth and soil temperature, not a spacing"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "verdict": "edited",
+      "note": "full-size 'wider' -> '5 to 6 feet' (Clemson row entry); icebox 24-36 is the bush clause (D2)"
+    },
+    {
+      "path": "yield_expectations.factors_seasoned[2]",
+      "verdict": "agrees",
+      "note": "vine run (8 to 12 ft); its 24 sq ft is Clemson's rule of thumb, which conflicts with Clemson's own 5-6 ft in-row (decision row, reported)"
+    }
+  ]
+}

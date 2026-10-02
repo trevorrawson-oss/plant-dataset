@@ -1,6 +1,6 @@
 {
   "slug": "elderberry",
-  "decision": "DIFFERS -> W1: author the page's figure. psu_ext elderberry-in-the-garden-and-the-kitchen states \"Ensure spacing is 5 to 7 feet between plants\" -> in_row [60,84]; no between-rows figure on any cited page (not_authored, as spec §10.1 expects). Today's [48,96] matches neither end on any cited page (MU AF1017's cached copy carries no spacing text; MSU and the NCSU toolbox give size only). The planting prose's '6 to 8 feet apart for full-size bushes' is re-authored to 5 to 7; its 4-ft hedge figure is a different layout and is left.",
+  "decision": "DIFFERS -> W1: author the page's figure. psu_ext elderberry-in-the-garden-and-the-kitchen states \"Ensure spacing is 5 to 7 feet between plants\" -> in_row [60,84]; no between-rows figure on any cited page (not_authored, as spec §10.1 expects). Today's [48,96] matches neither end on any cited page (MU AF1017's cached copy carries no spacing text; MSU and the NCSU toolbox give size only). The planting prose's '6 to 8 feet apart for full-size bushes' is re-authored to 5 to 7; its 4-ft hedge figure is a different layout and is left. [RULED 2026-10-01 (Trevor, session 3 review): the '4 feet ... hedge' figure in planting_method_notes is on no cited page (PSU is the only cited spacing page: 'Ensure spacing is 5 to 7 feet between plants'); the number is struck and the hedge sentence kept.]",
   "planting_layout": [
     {
       "id": "row-none",
@@ -27,13 +27,13 @@
   "edits": [
     {
       "path": "planting_method_notes_beginner",
-      "new": "Plant elderberry in late winter or early spring, at the same depth it was growing, in moist rich soil, and water it in. Give each plant room: about 4 feet apart for a hedge, or 5 to 7 feet apart for full-size bushes. Plant at least two different varieties near each other, and expect it to grow fast and send up suckers.",
-      "reason": "restates the moved in-row figure (PSU: 5 to 7 ft)"
+      "new": "Plant elderberry in late winter or early spring, at the same depth it was growing, in moist rich soil, and water it in. Give each plant room: closer together for a hedge, or 5 to 7 feet apart for full-size bushes. Plant at least two different varieties near each other, and expect it to grow fast and send up suckers.",
+      "reason": "restates the moved in-row figure (PSU: 5 to 7 ft); (ruled 2026-10-01) the 4 ft hedge figure is on no cited page: number struck, sentence kept"
     },
     {
       "path": "planting_method_notes_seasoned",
-      "new": "Set dormant bare-root plants or rooted cuttings in late winter to early spring at the depth they grew, in moist, fertile soil, and water in well; container plants can go in spring or fall. Space plants about 4 feet apart in a hedge-style row, or 5 to 7 feet apart for full-size freestanding shrubs, with wider spacing between rows. Expect vigorous growth and suckering, and plan at least two cultivars for cross-pollination.",
-      "reason": "restates the moved in-row figure (PSU: 5 to 7 ft)"
+      "new": "Set dormant bare-root plants or rooted cuttings in late winter to early spring at the depth they grew, in moist, fertile soil, and water in well; container plants can go in spring or fall. Space plants closer together in a hedge-style row, or 5 to 7 feet apart for full-size freestanding shrubs, with wider spacing between rows. Expect vigorous growth and suckering, and plan at least two cultivars for cross-pollination.",
+      "reason": "restates the moved in-row figure (PSU: 5 to 7 ft); (ruled 2026-10-01) the 4 ft hedge figure is on no cited page: number struck, sentence kept"
     }
   ],
   "restatements": [

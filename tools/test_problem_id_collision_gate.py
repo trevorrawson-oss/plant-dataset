@@ -73,7 +73,10 @@ CANON = os.path.join(REPO, "crops_data_final.json")
 # RE-MEASURED 2026-09-30 (PLA-532), 00dda31c -> c5fc3d13. A catalog-only promote (8 source_catalog
 # ids, no crop touched). Every count test in this file was run on the post-state and passed (26 of
 # 27; only this preflight reddened), so 36 / 24 / 12 hold and only this SHA advanced.
-PINNED_SHA = "c5fc3d13764f6d08b24574bbb07ecb15f5cfddeb7ba80f7439a72d8829813e28"
+# RE-MEASURED 2026-10-01 (PLA-10 promote 1), c5fc3d13 -> cf1d480d. planting_layout on 113 crops, the
+# mirrors on 121; no problem id, pest or disease touched. Every count test in this file was run on the
+# post-state (scratch worktree) and passed; only this preflight reddened, so 36 / 24 / 12 hold.
+PINNED_SHA = "cf1d480dfc926b226f63fde2fbdbc548e9d06487ed749e7431a06710431f2e49"
 
 # ---------------------------------------------------------------------------------------------
 # The PLA-449 fixture, transcribed from the ticket. NEVER computed from a scan.

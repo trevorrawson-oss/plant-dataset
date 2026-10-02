@@ -107,3 +107,5 @@ are anchored to their extension melon/landing pages, modeled and flagged (not pe
 `verification_status.status` = **author_fresh_pilot**, launch_ready_core/seasoned = **false**,
 6 open_findings all `blocks_launch:false`. NOT launch-ready: pending the claude.ai biology-fidelity
 review + per-zone calendar source-verification. Canonical never touched (READ-ONLY honored).
+
+[CORRECTION 2026-10-01: `spacing_inches` [36,48], recorded here as capped with the true row/hill spacing in prose, is no longer the dataset's figure. PLA-10 promote 1 authors a cited row default on Clemson's cantaloupe-honeydew page (in-row [18,24], rows [72,96]) and a non-default hill entry on USU (mounds 4 ft, 2 plants). The open finding `honeydew_pilot_spacing_capped_48in` is owed the same correction (promote-2 tools change). -- see PLA-10, docs/specs/pla10-field-shape.md §10.1 (D1a).]

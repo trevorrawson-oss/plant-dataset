@@ -1,0 +1,96 @@
+{
+  "slug": "popcorn",
+  "decision": "STRING MIGRATION ('block' -> block-none) + PARTIAL -> W1. Popcorn's own pages: iastate_ext popcorn \"Thin as recommended on packet directions or to about one plant per 10 to 12 inches.\" -> in_row [10,12] (a THINNED spacing, which governs over a sowing distance, W1); \"Space the rows between 30 and 36 inches apart\" -> rows [30,36]; 'Plant them in several rows, laid out in a square or rectangle' = the block. UMN popcorn ('Space the seeds about 8 inches apart ... 18 to 24 inches between rows') is a sowing distance with no thin-to. Today's [8,12] is the SWEET-corn page's figure (ISU sweet corn, also cited): not used, since popcorn has its own page (W3 is for crops without one). Restatements: the four thin-to strings '8 to 12' -> '10 to 12'; thin_to_inches [8,12] -> [10,12] and thinning.to_spacing '8 to 12 inches' -> '10 to 12 inches' follow. SURFACED (not fixed): thinning's cited TAMU EHT-044 says 'thin them to 1 foot apart', not 8-12, on all four corn crops. [RULED 2026-10-01 (Trevor, session 3 review): NO HILL ENTRY, and promote 2 must not re-add one: 'Sow 4 to 5 seeds per hill' (ISU sweet corn) is a SOWING count, not plants_per_hill (plants after thinning); the spec's §1.4 corn example is illustrative and loses to the page. THINNING TEXT (recorded, not edited): thinning.to_spacing and its tips cite tamu_agrilife EHT-044, whose page says 'After the plants are up, thin them to 1 foot apart', while this entry's in-row figure is the ISU/UMN page's. Two cited pages, two fields: the thinning text stays as its own citation states.]",
+  "entries": [
+    {
+      "id": "block-none",
+      "arrangement": "block",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            10,
+            12
+          ],
+          "sid": "iastate_ext",
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-and-harvesting-popcorn-home-garden",
+          "quote": "Thin as recommended on packet directions or to about one plant per 10 to 12 inches."
+        },
+        "row_spacing_inches": {
+          "value": [
+            30,
+            36
+          ],
+          "sid": "iastate_ext",
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-and-harvesting-popcorn-home-garden",
+          "quote": "Space the rows between 30 and 36 inches apart"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "path": "thin_to_inches",
+      "new": [
+        10,
+        12
+      ],
+      "reason": "PLA-10 W1: thin_to follows the authored in-row [10,12] (ISU popcorn thin-to)"
+    },
+    {
+      "path": "thinning.to_spacing",
+      "new": "10 to 12 inches",
+      "reason": "PLA-10 W1: follows the authored in-row [10,12] (ISU popcorn); TAMU EHT-044 (thinning's cite) says 1 foot"
+    },
+    {
+      "path": "growth_stages[1].user_action_beginner",
+      "replace": [
+        "thin to about 8 to 12 inches apart now",
+        "thin to about 10 to 12 inches apart now"
+      ],
+      "reason": "PLA-10 R3: follows in_row [10,12] (ISU popcorn)"
+    },
+    {
+      "path": "growth_stages[1].user_action_seasoned",
+      "replace": [
+        "Thin now to a final 8 to 12 inches in the row",
+        "Thin now to a final 10 to 12 inches in the row"
+      ],
+      "reason": "PLA-10 R3: follows in_row [10,12] (ISU popcorn)"
+    },
+    {
+      "path": "thinning.tip_beginner",
+      "replace": [
+        "thin them to about 8 to 12 inches apart",
+        "thin them to about 10 to 12 inches apart"
+      ],
+      "reason": "PLA-10 R3: follows in_row [10,12] (ISU popcorn)"
+    },
+    {
+      "path": "thinning.tip_seasoned",
+      "replace": [
+        "final in-row spacing of 8 to 12 inches",
+        "final in-row spacing of 10 to 12 inches"
+      ],
+      "reason": "PLA-10 R3: follows in_row [10,12] (ISU popcorn)"
+    }
+  ],
+  "restatements": {
+    "description_beginner": "agrees: isolation distance (300 ft), not a plant spacing",
+    "failure_diagnostics[3].next_season_tip_beginner": "agrees: isolation distance (300 ft), not a plant spacing",
+    "growth_stages[0].user_action_beginner": "agrees: seed depth (1 to 2 in); 'a block of short rows' carries no figure",
+    "growth_stages[0].user_action_seasoned": "agrees: seed depth; block of short rows, no figure",
+    "growth_stages[1].user_action_beginner": "edited: thin to '8 to 12' -> '10 to 12' (ISU popcorn)",
+    "growth_stages[1].user_action_seasoned": "edited: thin to '8 to 12' -> '10 to 12' (ISU popcorn)",
+    "notifications[0].body_beginner": "agrees: seed depth; 'at least four short rows' = pollination_block_min_rows 4",
+    "notifications[0].body_seasoned": "agrees: seed depth; 'at least four short rows' = pollination_block_min_rows 4",
+    "regions.nevada.region_notes_seasoned": "agrees: isolation distance (300 ft) and block of four rows, not a plant spacing",
+    "regions.utah_dixie.region_notes_seasoned": "agrees: isolation distance (300 ft) and block of four rows, not a plant spacing",
+    "thinning.tip_beginner": "edited: thin to '8 to 12' -> '10 to 12' (ISU popcorn)",
+    "thinning.tip_seasoned": "edited: thin to '8 to 12' -> '10 to 12' (ISU popcorn)",
+    "tips_by_stage.seedling[0].text_beginner": "agrees: isolation distance (300 ft), not a plant spacing",
+    "yield_expectations.per_plant_beginner": "agrees: a yield per 10-foot row, not a spacing",
+    "yield_expectations.per_plant_seasoned": "agrees: a yield per 10-foot row, not a spacing"
+  }
+}

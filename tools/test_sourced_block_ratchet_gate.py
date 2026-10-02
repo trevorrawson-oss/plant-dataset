@@ -105,11 +105,13 @@ class PinsAreTheMeasurement(unittest.TestCase):
         for k, why in G.EXCLUDED.items():
             self.assertTrue(why.strip(), k)
 
-    def test_anchor_only_fields_are_the_measured_eight(self):
+    def test_anchor_only_fields_are_the_measured_seven(self):
+        """Eight in the tools commit; PLA-10 promote 1 retired spacing_inches_anchoring_urls (its
+        anchors moved into planting_layout entries, a named family)."""
         self.assertEqual(set(G.ANCHOR_ONLY), {
             "<crop>.anchoring_urls", "days_to_maturity_anchoring_urls",
             "days_to_maturity_mid_anchoring_urls", "det_indet.anchoring_urls",
-            "germination_temp_f_anchoring_urls", "spacing_inches_anchoring_urls",
+            "germination_temp_f_anchoring_urls",
             "sunlight_hours_anchoring_urls", "weeks_indoors_anchoring_urls"})
 
     def test_pot_sub_rule_pins_are_the_folded_four(self):
@@ -358,7 +360,7 @@ class NamingIsPartOfAdding(unittest.TestCase):
 
     def test_an_anchor_only_field_is_recorded_not_flagged(self):
         d = fresh()
-        by(d)[VICTIM]["spacing_inches_anchoring_urls"] = {}
+        by(d)[VICTIM]["weeks_indoors_anchoring_urls"] = {}  # spacing_inches_anchoring_urls retired (PLA-10)
         self.assertEqual(violations(d), [])
 
 

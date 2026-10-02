@@ -1,6 +1,6 @@
 {
   "slug": "bell-pepper",
-  "decision": "AGREES (lane A row held: the page is a PDF). wsu_ext EM051E Table 4 row (Depth to plant (inch) | Distance Between Plants (inch) | Distance Between Rows (inch)) \"Pepper ¼-½ 18-24 12-24\" -> in_row [18,24], row [12,24], today's value. No cited HTML page states 18-24 for bell peppers (Clemson's '18 to 24-inch spacing' is pimento-specific; ISU 18; UMD and UGA 12-24; Clemson 12), so the WSU PDF stays the page. Unchanged figure: no restatement adjudication. EVIDENCE NOTE: the page is a PDF; the manifest hashes the raw bytes and the quote is checked against pypdf's text extraction of those bytes (ruled 2026-10-01; PDF_TEXT_EXTRACTOR pins pypdf 6.14.2).",
+  "decision": "AGREES (lane A row held: the page is a PDF). wsu_ext EM051E Table 4 row (Depth to plant (inch) | Distance Between Plants (inch) | Distance Between Rows (inch)) \"Pepper ¼-½ 18-24 12-24\" -> in_row [18,24], row [12,24], today's value. No cited HTML page states 18-24 for bell peppers (Clemson's '18 to 24-inch spacing' is pimento-specific; ISU 18; UMD and UGA 12-24; Clemson 12), so the WSU PDF stays the page. Unchanged figure: no restatement adjudication. EVIDENCE NOTE: the page is a PDF; the manifest hashes the raw bytes and the quote is checked against pypdf's text extraction of those bytes (ruled 2026-10-01; PDF_TEXT_EXTRACTOR pins pypdf 6.14.2). [SESSION 3 REVIEW, 2026-10-01: WSU's printed row is 'Pepper ¼-½ 18-24 12-24' (verified in pypdf layout mode: rows 12-24, narrower than the plants, a source-table slip against every other cited page and the crop's own prose 'rows 30 to 36 inches apart'). Row is therefore taken from VCE 426-331 Table 5 'Peppers 12-24 in 30-36 in' -> [30,36] (W6 ruling 3); in-row stays WSU [18,24], today's figure.]",
   "planting_layout": [
     {
       "id": "row-none",
@@ -12,16 +12,21 @@
         24
       ],
       "row_spacing_inches": [
-        12,
-        24
+        30,
+        36
       ],
       "row_spacing_reason": null,
       "sources": [
-        "wsu_ext"
+        "wsu_ext",
+        "vce_426_331"
       ],
       "anchoring_urls": {
         "wsu_ext": {
           "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+          "verified": "2026-10-01"
+        },
+        "vce_426_331": {
+          "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
           "verified": "2026-10-01"
         }
       }

@@ -1,0 +1,67 @@
+{
+  "slug": "cantaloupe",
+  "decision": "ROW DEFAULT (worklist 56 §5), AGREES. vce_426_331 Table 5 'Muskmelon 24-36 in 60-90 in' -> in_row [24,36] (today's), rows [60,90]. NON-DEFAULT hill-none from iastate_ext (the melon page names cantaloupe and muskmelon): 'remove all but 2 or 3 healthy, well-spaced plants per hill ... Melon hills should be spaced 1.5 to 2 feet apart, with 5 to 6 feet between the rows' -> hills [18,24], rows [60,72], plants_per_hill [2,3] (PLANTS after thinning). Why row, not hill: a row default keeps today's figure, and USU's mound sentence ('mounds 4 feet apart') has no between-hill-rows figure; ISU's hill does have one, so a hill default would NOT be see_layout, but VCE's row default is the spec's table recommendation and keeps the planners placing in rows (hill placement is PLA-636). Promote 1 ships zero see_layout crops. Figure unchanged: no restatements owed.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            24,
+            36
+          ],
+          "sid": "vce_426_331",
+          "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+          "quote": "Muskmelon 24-36 in 60-90 in"
+        },
+        "row_spacing_inches": {
+          "value": [
+            60,
+            90
+          ],
+          "sid": "vce_426_331",
+          "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+          "quote": "Muskmelon 24-36 in 60-90 in"
+        }
+      }
+    },
+    {
+      "id": "hill-none",
+      "arrangement": "hill",
+      "support": "none",
+      "default": false,
+      "fields": {
+        "hill_spacing_inches": {
+          "value": [
+            18,
+            24
+          ],
+          "sid": "iastate_ext",
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cantaloupe-muskmelon-and-other-melons-home-garden",
+          "quote": "Melon hills should be spaced 1.5 to 2 feet apart, with 5 to 6 feet between the rows."
+        },
+        "row_spacing_inches": {
+          "value": [
+            60,
+            72
+          ],
+          "sid": "iastate_ext",
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cantaloupe-muskmelon-and-other-melons-home-garden",
+          "quote": "Melon hills should be spaced 1.5 to 2 feet apart, with 5 to 6 feet between the rows."
+        },
+        "plants_per_hill": {
+          "value": [
+            2,
+            3
+          ],
+          "sid": "iastate_ext",
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cantaloupe-muskmelon-and-other-melons-home-garden",
+          "quote": "remove all but 2 or 3 healthy, well-spaced plants per hill"
+        }
+      }
+    }
+  ]
+}

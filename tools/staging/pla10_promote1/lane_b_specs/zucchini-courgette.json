@@ -1,0 +1,67 @@
+{
+  "slug": "zucchini-courgette",
+  "decision": "AGREES, ROW DEFAULT with a non-default hill. umd_ext 'Growing summer squash and zucchini' gives both layouts in ONE sentence: \"Spacing : Hills (two to three plants per hill) 3'- 4' in-row x 4'- 6' between rows; single plants 2'- 3' in-row x 3'- 5' between rows.\" -> row-none default in_row [24,36] (today's), rows [36,60]; hill-none hills [36,48], rows [48,72], plants_per_hill [2,3]. Row is the default because it keeps today's figure and the planners place rows (hill placement is PLA-636); the hill is a decision row Trevor can flip (a hill default here would carry its own row figure, so it would not be see_layout). Figure unchanged: no restatements owed.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            24,
+            36
+          ],
+          "sid": "umd_ext",
+          "url": "https://extension.umd.edu/resource/growing-summer-squash-zucchini-home-garden",
+          "quote": "single plants 2'- 3' in-row x 3'- 5' between rows"
+        },
+        "row_spacing_inches": {
+          "value": [
+            36,
+            60
+          ],
+          "sid": "umd_ext",
+          "url": "https://extension.umd.edu/resource/growing-summer-squash-zucchini-home-garden",
+          "quote": "single plants 2'- 3' in-row x 3'- 5' between rows"
+        }
+      }
+    },
+    {
+      "id": "hill-none",
+      "arrangement": "hill",
+      "support": "none",
+      "default": false,
+      "fields": {
+        "hill_spacing_inches": {
+          "value": [
+            36,
+            48
+          ],
+          "sid": "umd_ext",
+          "url": "https://extension.umd.edu/resource/growing-summer-squash-zucchini-home-garden",
+          "quote": "Hills (two to three plants per hill) 3'- 4' in-row x 4'- 6' between rows"
+        },
+        "row_spacing_inches": {
+          "value": [
+            48,
+            72
+          ],
+          "sid": "umd_ext",
+          "url": "https://extension.umd.edu/resource/growing-summer-squash-zucchini-home-garden",
+          "quote": "Hills (two to three plants per hill) 3'- 4' in-row x 4'- 6' between rows"
+        },
+        "plants_per_hill": {
+          "value": [
+            2,
+            3
+          ],
+          "sid": "umd_ext",
+          "url": "https://extension.umd.edu/resource/growing-summer-squash-zucchini-home-garden",
+          "quote": "Hills (two to three plants per hill) 3'- 4' in-row x 4'- 6' between rows"
+        }
+      }
+    }
+  ]
+}

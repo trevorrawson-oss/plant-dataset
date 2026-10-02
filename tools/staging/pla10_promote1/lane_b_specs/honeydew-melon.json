@@ -1,0 +1,68 @@
+{
+  "slug": "honeydew-melon",
+  "decision": "DIFFERS -> W1, ROW DEFAULT (worklist 56 §5: no see_layout). Today's [36,48] is on no cited page (it matches only USU's MOUND spacing, 4 ft). clemson_hgic 'Cantaloupe & Honeydew Melons' (names honeydew): \"Transplants or seed should be planted in the rows 18 to 24 inches apart.\" -> in_row [18,24]; \"Plant the melons in rows 6 to 8 feet apart.\" -> rows [72,96]. CHOSEN over the worklist's USU row (\"Transplants should be planted 2 feet apart in row, with rows 4-6 feet apart\", [24,24]/[48,72]) because Clemson is a range, names honeydew in its title and sentence ('Cantaloupes and honeydews need a lot of space'), and is exactly the crop's own prose (soil_prep, thinning: 18-24 in, rows 6-8 ft), so no consumer string moves. NON-DEFAULT hill-none from usu_ext (winter melons incl. honeydew): \"Plant 4-6 seeds in mounds 4 feet apart. After they have two leaves, thin to two plants per mound.\" -> hills [48,48], plants_per_hill [2,2], rows not_authored (USU's mound sentence has no between-hill-rows figure; on a non-default entry that is only not_authored). A hill default here would have shipped see_layout. Every restatement already agrees.",
+  "entries": [
+    {
+      "id": "row-none",
+      "arrangement": "row",
+      "support": "none",
+      "default": true,
+      "fields": {
+        "in_row_inches": {
+          "value": [
+            18,
+            24
+          ],
+          "sid": "clemson_hgic",
+          "url": "https://hgic.clemson.edu/factsheet/cantaloupe-honeydew-melons/",
+          "quote": "Transplants or seed should be planted in the rows 18 to 24 inches apart."
+        },
+        "row_spacing_inches": {
+          "value": [
+            72,
+            96
+          ],
+          "sid": "clemson_hgic",
+          "url": "https://hgic.clemson.edu/factsheet/cantaloupe-honeydew-melons/",
+          "quote": "Plant the melons in rows 6 to 8 feet apart."
+        }
+      }
+    },
+    {
+      "id": "hill-none",
+      "arrangement": "hill",
+      "support": "none",
+      "default": false,
+      "fields": {
+        "hill_spacing_inches": {
+          "value": [
+            48,
+            48
+          ],
+          "sid": "usu_ext",
+          "url": "https://extension.usu.edu/yardandgarden/research/honeydew-and-other-melons-in-the-garden",
+          "quote": "Plant 4-6 seeds in mounds 4 feet apart."
+        },
+        "row_spacing_inches": null,
+        "plants_per_hill": {
+          "value": [
+            2,
+            2
+          ],
+          "sid": "usu_ext",
+          "url": "https://extension.usu.edu/yardandgarden/research/honeydew-and-other-melons-in-the-garden",
+          "quote": "After they have two leaves, thin to two plants per mound."
+        }
+      }
+    }
+  ],
+  "restatements": {
+    "growth_stages[0].user_action_beginner": "agrees: seeds sown per hill and seedlings kept, not a plant spacing",
+    "growth_stages[0].user_action_seasoned": "agrees: seeds sown per hill and seedlings kept, not a plant spacing",
+    "soil_prep_beginner": "agrees: rows 6-8 ft, plants 18-24 in = the authored row default; hills about 4 ft = the hill entry",
+    "soil_prep_seasoned": "agrees: rows 6-8 ft, plants 18-24 in = the row default; hills about 4 ft = the hill entry",
+    "start_method.notes_beginner": "agrees: seed depth, not a spacing",
+    "start_method.notes_seasoned": "agrees: seed depth and soil temperature, not a spacing",
+    "thinning.tip_seasoned": "agrees: 'one plant every 18 to 24 inches with rows 6 to 8 feet apart' = the row default"
+  }
+}
