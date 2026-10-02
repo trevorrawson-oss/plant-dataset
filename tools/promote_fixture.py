@@ -48,6 +48,9 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # PLA-10 promote 1 (2026-10-01). NEVER AMEND d021116. planting_layout as cited entries on 113 crops,
+    # the spacing mirrors on 121, the microgreens [] -> null, A44 presence armed.
+    'cf1d480dfc926b226f63fde2fbdbc548e9d06487ed749e7431a06710431f2e49': 'd021116',
     # PLA-532 container and vertical technique sources admitted (2026-09-30). NEVER AMEND a181270.
     # Catalog only: source_catalog 221 -> 229 (8 document-scoped ids), no crop, no existing entry moves.
     'c5fc3d13764f6d08b24574bbb07ecb15f5cfddeb7ba80f7439a72d8829813e28': 'a181270',
