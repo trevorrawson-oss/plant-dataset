@@ -1,0 +1,77 @@
+{
+  "slug": "grape-tomato",
+  "decision": "S1 TAKEN on its S3 condition: UNL G1650's cage row figure IS citable. Fetched 2026-10-02 into tools/.evidence_cache (b222f9ef, browser and plain user agents byte-identical; the cited url now redirects to extensionpubs.unl.edu, recorded as a second manifest row on the same bytes): 'caged tomatoes are best spaced 24 to 36 inches apart in rows 4 feet apart.' So row-cage is the DEFAULT. row-cage: in-row [24,36] (ISU 'if grown in wire cages, space plants 2-3 feet apart.'; UNL, the same sentence as its rows), rows [48,48] from UNL only (S3: ISU's 'rows should be spaced 4-5 feet apart' follows its sprawl sentence and is NOT applied to cages). row-stake: in-row [18,24] and rows [60,72] from PSU heat-stress 'for staked culture' (S6, PSU over UNL's 3 ft staked rows); ISU's 'indeterminate cultivars that are staked can be planted 1.5-2 feet apart within rows.' corroborates the in-row. row-none [24,36]/[60,72] is PSU's unstaked-indeterminate figure and stays, id pinned. Mirrors: spacing_inches [24,36] unchanged; row_spacing_inches [60,72] -> [48,48]. Every scanner restatement adjudicated. No height override (plan 58 §2.4).",
+  "planting_layout_add": [
+    {
+      "id": "row-stake",
+      "arrangement": "row",
+      "support": "stake",
+      "default": false,
+      "in_row_inches": [
+        18,
+        24
+      ],
+      "row_spacing_inches": [
+        60,
+        72
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "psu_ext",
+        "iastate_ext"
+      ],
+      "anchoring_urls": {
+        "psu_ext": {
+          "url": "https://extension.psu.edu/heat-stress-and-tomatoes",
+          "verified": "2026-10-02"
+        },
+        "iastate_ext": {
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-tomatoes-home-garden",
+          "verified": "2026-10-02"
+        }
+      }
+    },
+    {
+      "id": "row-cage",
+      "arrangement": "row",
+      "support": "cage",
+      "default": false,
+      "in_row_inches": [
+        24,
+        36
+      ],
+      "row_spacing_inches": [
+        48,
+        48
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "iastate_ext",
+        "unl_ext"
+      ],
+      "anchoring_urls": {
+        "iastate_ext": {
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-tomatoes-home-garden",
+          "verified": "2026-10-02"
+        },
+        "unl_ext": {
+          "url": "https://extensionpublications.unl.edu/assets/html/g1650/build/g1650.htm",
+          "verified": "2026-10-02"
+        }
+      }
+    }
+  ],
+  "default": "row-cage",
+  "restatements": [
+    {
+      "path": "failure_diagnostics[2].next_season_tip_beginner",
+      "verdict": "agrees",
+      "note": "a mulch depth and watering cadence, not a spacing; states no plant or row distance"
+    },
+    {
+      "path": "failure_diagnostics[2].next_season_tip_seasoned",
+      "verdict": "agrees",
+      "note": "watering depth and a mulch depth, not a spacing; states no plant or row distance"
+    }
+  ]
+}

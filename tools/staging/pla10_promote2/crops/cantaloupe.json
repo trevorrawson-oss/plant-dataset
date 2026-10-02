@@ -1,0 +1,43 @@
+{
+  "slug": "cantaloupe",
+  "decision": "C1-C4 (ruled 2026-10-02): the open finding still states a spacing figure promote 1 moved (finding_corrections.tsv); one dated correction appended to its summary, the original byte-for-byte. C3: mechanism-only, the figure is true. || row-trellis, NON-default, by ruling (M1): USU 'cantaloupe plants can be trained to a fence or trellis or grown in a large pot. after the fruits begin to enlarge they will need some support' is the citation. In-row [24,36] is the crop's ground figure (VCE 426-331 'Muskmelon 24-36 in 60-90 in', the row-none entry's own quote) by UMN's same-spacing rule (umn_ext_trellises_cages). Rows null, not_authored. The cultivar condition, stated here because cultivar is not an entry axis: UMN says 'varieties with fruit weighing up to three pounds ... work best', and ISU's listed cultivars are mostly 4-9 lb (only 'sarah's choice' 3 lb, 'sugar cube' 2 lb), so the trellis suits small-fruited cultivars or slings. Flag: UMD melons (doc-cache only) says a trellis 'allows closer spacing', against UMN; no figure. No mirror moves.",
+  "finding_corrections": [
+    {
+      "id": "cantaloupe_pilot_spacing_in_row",
+      "append": " [CORRECTION 2026-10-02: the 24-36 in figure stands, but the between-row spacing is no longer carried only in prose: row_spacing_inches is 60-90 in since PLA-10 promote 1 -- see PLA-10 promote 1, d021116.]"
+    }
+  ],
+  "planting_layout_add": [
+    {
+      "id": "row-trellis",
+      "arrangement": "row",
+      "support": "trellis",
+      "default": false,
+      "in_row_inches": [
+        24,
+        36
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "vce_426_331",
+        "usu_ext",
+        "umn_ext_trellises_cages"
+      ],
+      "anchoring_urls": {
+        "vce_426_331": {
+          "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+          "verified": "2026-10-02"
+        },
+        "usu_ext": {
+          "url": "https://extension.usu.edu/yardandgarden/research/cantaloupe-in-the-garden",
+          "verified": "2026-10-02"
+        },
+        "umn_ext_trellises_cages": {
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/trellises-and-cages",
+          "verified": "2026-10-02"
+        }
+      }
+    }
+  ]
+}

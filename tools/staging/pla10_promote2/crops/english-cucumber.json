@@ -1,0 +1,48 @@
+{
+  "slug": "english-cucumber",
+  "decision": "row-trellis from Clemson HGIC cucumber (clemson_hgic, cited, hashed 9d1eaeb1): 'if cucumbers are trellised, plant four to five seeds per foot in rows spaced 3 feet apart. when plants are 4 to 5 inches high, thin so they are 9 to 12 inches apart.' The thin-to sentence sits between the trellised sentence and the restated non-trellised one, so it is the trellised case: in-row [9,12], rows [36,36]. DEFAULT (S5): the crop's own text says to 'train the plants up a string or trellis to keep the long fruit straight', and Clemson names 'hybrid, burpless or european-type cucumbers'. row-none [12,18]/[48,72] (VCE 426-331) stays, id pinned, non-default. Mirrors: spacing_inches [12,18] -> [9,12] (the hero moves, X4); row_spacing_inches [48,72] -> [36,36]. The three scanner restatements are fruit lengths and agree. The greenhouse cordon figures (ACES, UF CV268) are commercial and doc-cache only: not used.",
+  "planting_layout_add": [
+    {
+      "id": "row-trellis",
+      "arrangement": "row",
+      "support": "trellis",
+      "default": false,
+      "in_row_inches": [
+        9,
+        12
+      ],
+      "row_spacing_inches": [
+        36,
+        36
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "clemson_hgic"
+      ],
+      "anchoring_urls": {
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/cucumber/",
+          "verified": "2026-10-02"
+        }
+      }
+    }
+  ],
+  "default": "row-trellis",
+  "restatements": [
+    {
+      "path": "harvest_ready_seasoned",
+      "verdict": "agrees",
+      "note": "fruit lengths at harvest (12 to 14 in, 11 in, 5 to 8 in), not a spacing"
+    },
+    {
+      "path": "varieties.recommended[1].recommended_note",
+      "verdict": "agrees",
+      "note": "a fruit length (7 to 8 inch fruit), not a spacing"
+    },
+    {
+      "path": "varieties.recommended[3].recommended_note",
+      "verdict": "agrees",
+      "note": "a fruit length (5 to 7 inch fruit), not a spacing"
+    }
+  ]
+}

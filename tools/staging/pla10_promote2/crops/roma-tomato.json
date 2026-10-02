@@ -1,0 +1,35 @@
+{
+  "slug": "roma-tomato",
+  "decision": "row-cage only, NON-default (S1 covers the four indeterminate tomatoes; roma is determinate and row-none stays its default). S7: no stake entry (the hashed staked figures are scoped to indeterminate cultivars; roma's own text says 'a sturdy cage instead of a tall stake'). row-cage in-row [24,36] (ISU's cage sentence, which carries no habit word; UNL's, which carries none either), rows [48,48] (UNL, S3). The PLA-532 UMN trellises page names roma for cages but gives no figure. Recorded, not reopened: roma's row-none ISU [18,24]/[48,48] vs PSU's determinate-without-stakes 24 in / 4-5 ft. No mirror moves.",
+  "planting_layout_add": [
+    {
+      "id": "row-cage",
+      "arrangement": "row",
+      "support": "cage",
+      "default": false,
+      "in_row_inches": [
+        24,
+        36
+      ],
+      "row_spacing_inches": [
+        48,
+        48
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "iastate_ext",
+        "unl_ext"
+      ],
+      "anchoring_urls": {
+        "iastate_ext": {
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-tomatoes-home-garden",
+          "verified": "2026-10-02"
+        },
+        "unl_ext": {
+          "url": "https://extensionpublications.unl.edu/assets/html/g1650/build/g1650.htm",
+          "verified": "2026-10-02"
+        }
+      }
+    }
+  ]
+}

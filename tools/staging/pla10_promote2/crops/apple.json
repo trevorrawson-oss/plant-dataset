@@ -1,0 +1,58 @@
+{
+  "slug": "apple",
+  "decision": "R1 (ruled 2026-09-30) + owed item 1: per-rootstock between-tree spacing from NC State Extension Gardener Handbook ch. 15, Table 15-4 (nonspur, feet), already cited by apple as ncsu_ext_handbook_tree_fruit, hashed 0e16d13e. Each override is the table row's first (in-row) column converted to inches, quoted as the full row string as promote 1 quoted M.26: M9 4-8 ft [48,96], MM106 12-16 ft [144,192], MM111 14-18 ft [168,216], seedling 18-25 ft [216,300]. M26 is null: it is the recommended row and the crop basis [96,144], cited on planting_layout row-none since promote 1. NCSU is appended to each non-null row's sources beside umd_ext (which states no spacing), with its document url, never the host.",
+  "rootstock_spacing": [
+    {
+      "name": "M9",
+      "spacing_inches": [
+        48,
+        96
+      ],
+      "add_source": {
+        "id": "ncsu_ext_handbook_tree_fruit",
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "verified": "2026-10-02"
+      }
+    },
+    {
+      "name": "M26",
+      "spacing_inches": null
+    },
+    {
+      "name": "MM106",
+      "spacing_inches": [
+        144,
+        192
+      ],
+      "add_source": {
+        "id": "ncsu_ext_handbook_tree_fruit",
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "verified": "2026-10-02"
+      }
+    },
+    {
+      "name": "MM111",
+      "spacing_inches": [
+        168,
+        216
+      ],
+      "add_source": {
+        "id": "ncsu_ext_handbook_tree_fruit",
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "verified": "2026-10-02"
+      }
+    },
+    {
+      "name": "seedling",
+      "spacing_inches": [
+        216,
+        300
+      ],
+      "add_source": {
+        "id": "ncsu_ext_handbook_tree_fruit",
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "verified": "2026-10-02"
+      }
+    }
+  ]
+}

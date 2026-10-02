@@ -1,0 +1,36 @@
+{
+  "slug": "slicing-cucumber",
+  "decision": "C1-C4 (ruled 2026-10-02): the open finding still states a spacing figure promote 1 moved (finding_corrections.tsv); one dated correction appended to its summary, the original byte-for-byte. || row-trellis from Clemson HGIC cucumber (clemson_hgic, cited, hashed 9d1eaeb1): 'if cucumbers are trellised, plant four to five seeds per foot in rows spaced 3 feet apart. when plants are 4 to 5 inches high, thin so they are 9 to 12 inches apart.' The thin-to sentence sits between the trellised sentence and the restated non-trellised one, so it is the trellised case: in-row [9,12], rows [36,36]. NON-default: every cited page presents the trellis as optional, so row-none stays the default, id pinned. No mirror moves. No height override (Clemson's 6 ft and UMN's 3-4 ft are trellis heights, §2.4).",
+  "finding_corrections": [
+    {
+      "id": "slicing-cucumber_pilot_finding_004_modeled_judgment_values",
+      "append": " [CORRECTION 2026-10-02: spacing_inches is 24 in since PLA-10 promote 1 (12-24 in was a span across trellised and ground spacing); rows, 48 in, are now in row_spacing_inches -- see PLA-10 promote 1, d021116.]"
+    }
+  ],
+  "planting_layout_add": [
+    {
+      "id": "row-trellis",
+      "arrangement": "row",
+      "support": "trellis",
+      "default": false,
+      "in_row_inches": [
+        9,
+        12
+      ],
+      "row_spacing_inches": [
+        36,
+        36
+      ],
+      "row_spacing_reason": null,
+      "sources": [
+        "clemson_hgic"
+      ],
+      "anchoring_urls": {
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/cucumber/",
+          "verified": "2026-10-02"
+        }
+      }
+    }
+  ]
+}

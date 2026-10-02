@@ -1,0 +1,38 @@
+{
+  "slug": "acorn-squash",
+  "decision": "C1-C4 (ruled 2026-10-02): the open finding still states a spacing figure promote 1 moved (finding_corrections.tsv); one dated correction appended to its summary, the original byte-for-byte. || row-trellis, NON-default, acorn by name (M2 note): its own UMN page, 'you can train small-fruited squash like delicata or acorn to a trellis to save space.' In-row [24,36] is the ground figure on the same page ('24 to 36 inches apart'), by UMN's trellis rule 'plant the vines at the foot of the trellis at the same spacing between the seeds or transplants as if they were going to grow on the ground' (umn_ext_trellises_cages, PLA-532). Rows null, not_authored: UMN gives no trellised row figure. Flag for review: the page ties the 24 end to bush types, so the trellised (vining) form reads toward 36. No mirror moves; no height override.",
+  "finding_corrections": [
+    {
+      "id": "acorn_pilot_spacing_prose",
+      "append": " [CORRECTION 2026-10-02: spacing_inches is 24-36 in since PLA-10 promote 1 (24-48 in spanned in-row spacing to a 4 ft row, a blend); rows, 60-72 in, are now in row_spacing_inches, not carried only in prose -- see PLA-10 promote 1, d021116.]"
+    }
+  ],
+  "planting_layout_add": [
+    {
+      "id": "row-trellis",
+      "arrangement": "row",
+      "support": "trellis",
+      "default": false,
+      "in_row_inches": [
+        24,
+        36
+      ],
+      "row_spacing_inches": null,
+      "row_spacing_reason": "not_authored",
+      "sources": [
+        "umn_ext",
+        "umn_ext_trellises_cages"
+      ],
+      "anchoring_urls": {
+        "umn_ext": {
+          "url": "https://extension.umn.edu/vegetables/pumpkins-and-winter-squash",
+          "verified": "2026-10-02"
+        },
+        "umn_ext_trellises_cages": {
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/trellises-and-cages",
+          "verified": "2026-10-02"
+        }
+      }
+    }
+  ]
+}
