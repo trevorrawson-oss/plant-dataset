@@ -775,6 +775,24 @@ Appended, never rewritten; each verified against the cached page by the worklist
   Clemson and UGA C740 call M26 dwarfing; the dataset records it `semi_dwarf` (recorded, not reopened here).
 - **R5** widened by W5 (the R5 row above).
 
+### Corrections appended 2026-10-02 (PLA-10 promote 2 plan, `docs/kickoffs/58-pla10-promote2-plan.md`; ruled by Trevor)
+
+Appended, never rewritten; each measured against cached bytes (`docs/kickoffs/58-pla10-promote2-measurements/`).
+- **§1.1, `rows_per_bed`:** on an entry carrying `rows_per_bed`, `row_spacing_inches` is the row gap **inside the
+  bed**, not the gap between beds (strawberry `row-none-bed`: UC IPM "space plants about 12 inches apart in each row
+  with rows about 12 inches apart in two-row beds" -> [12,12]). No home-garden page gives a between-bed figure.
+- **§1.4, cherry-tomato:** its `row-none` [24,36] is PSU's figure for "indeterminate tomatoes **without stakes**",
+  not the caged figure. The value is right for `row-none`; only the label in §1.4 was wrong.
+- **§4.4:** okra states a height: UF Gardening Solutions (cited, cached) "most fall within the 3-6 foot range" ->
+  [3,6]. pole-beans' hit is not only a trellis height: UMN "pole beans are twining vines growing up to six feet and
+  sometimes taller" (an open bound; it still authors null, the recorded reason changes). zucchini cites 39 distinct
+  URLs, all cached (the "3/60 uncached" counted occurrences).
+- **§10.2, peas:** sweet-pea is **not** support-required: OSU (its spacing source) "bush or dwarf types ... make
+  colorful hedges", with NCSU, UC IPM and its own description agreeing; only Cornell's commercial high-tunnel page says
+  "plants must be provided with a trellis". No pea entry is replaced (snow-peas, sugar-snap-peas, sweet-pea keep
+  `row-none`), so the PLA-629 ordering constraint does not bind. No sweet-pea trellis entry (ruled: Cornell gives rows
+  [48,72] but no in-row figure; rows alone do not make an entry).
+
 ---
 
 ## Surfaced, not fixed here
