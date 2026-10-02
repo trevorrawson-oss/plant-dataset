@@ -1,7 +1,8 @@
 # PLA-10 promote 1, session 3 hand-off (2026-10-01)
 
-Canonical `c5fc3d13` -> `cf1d480d` (promote 1 LANDED in the data commit; push on Trevor's go). HEAD at session start
-`769bac6`, pushed at the start of the session (`cd1a96b..769bac6`), so HEAD == origin/main before any session-3 work.
+**PROMOTE 1 PUSHED (2026-10-01).** Canonical `c5fc3d13` -> `cf1d480d`. plant-dataset `769bac6..73b01aa` on `main` (`d021116` data + arming + state trio; `73b01aa` the `promote_fixture.COMMIT_FOR` pin). plant-app `58bac0f1..f6fa8c8b` on `feat/community-foundation` (re-export at cf1d480d + the 12 re-measured suites); no OTA from this session. The astro submodule bump is the astro session's. Close-out posted on PLA-10. HEAD at session start `769bac6`, pushed at the start (`cd1a96b..769bac6`).
+
+**Promote 2 opens from this hand-off after OWED item 1** (the rootstock-row source tools change).
 
 ## What landed
 - All 113 certified non-zone-independent crops carry a cited `planting_layout` (119 entries: 113 defaults, plus
