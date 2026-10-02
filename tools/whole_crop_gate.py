@@ -680,7 +680,8 @@ for m in _dmx:
 # (gates arm off the data). The roster population + literal floors run in gate_all.
 import planting_layout_gate as _plg
 print(f"A44. planting_layout list + spacing mirrors (entry shape, one default, mirror equality, row reason; "
-      f"presence {'ARMED' if _plg.PRESENCE_ARMED else 'off'})")
+      f"presence {'ARMED' if _plg.PRESENCE_ARMED else 'off'}; rootstock override key "
+      f"{'ARMED' if _plg.ROOTSTOCK_OVERRIDE_ARMED else 'off'})")
 _layout = _plg.check_crop(crop)
 print(f"  planting_layout violations: {len(_layout)}")
 for m in _layout:

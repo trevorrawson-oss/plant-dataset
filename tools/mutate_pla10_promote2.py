@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """mutate_pla10_promote2 -- mutation harness for PLA-10 promote 2's session-1 TOOLS commit (2026-10-02): the
 two record allowances (a rootstock row gains a source only while its spacing override is authored; an open
-finding's summary gains an APPENDED correction line) and every guard that keeps them that narrow.
+finding's summary gains an APPENDED correction line) and every guard that keeps them that narrow. Extended in
+session 2's tools commit (2026-10-02) for T1 (layout entries appended verbatim, the default move, the mirrors
+recomputed through planting_layout_gate, restatements on a moved mirror) and T2 (A44's rootstock override key,
+driven both as unit tests and through the real whole_crop_gate entry point).
 
 PLA-215 bar: one defect per guard family injected into a SCRATCH COPY of tools/; its named driver must go
 RED. Liveness: an anchor preflight (every anchor matches exactly once, or HARNESS DEAD), a MUTATION-APPLIED
@@ -19,9 +22,12 @@ MARKER = "# MUTATION-APPLIED"
 NOTHING_COLLECTED = 5
 
 PRT = "test_promote_pla10_promote2.py"
-SCRIPTS = set()
+A44T = "test_planting_layout_gate.py"
+A44I = "test_gate_planting_layout_a44.py"   # script: the real whole_crop_gate / gate_all entry points
+SCRIPTS = {A44I}
 PRM = "promote_pla10_promote2.py"
 COM = "pla10_promote_common.py"
+PLG = "planting_layout_gate.py"
 
 # (name, target, old, new, driver file, pytest -k selector)
 MUTATIONS = [
@@ -70,13 +76,13 @@ MUTATIONS = [
     # ---- E: evidence ------------------------------------------------------------------------------
     ("e_coverage_unchecked", PRM, "            if row.get(\"spacing_inches\") is not None and (slug, eid) not in covered:",
      "            if False:", PRT, "test_an_override_without_evidence_REFUSES"),
-    ("e_value_unchecked", PRM, "        if compact(row[\"spacing_inches\"]) != r[\"value\"]:", "        if False:",
+    ("e_value_unchecked", PRM, "        if compact(holder[r[\"field\"]]) != r[\"value\"]:", "        if False:",
      PRT, "test_a_value_mismatch_REFUSES"),
-    ("e_null_row_evidence_passes", PRM, "        if r[\"field\"] != \"spacing_inches\" or row.get(\"spacing_inches\") is None:",
-     "        if r[\"field\"] != \"spacing_inches\":", PRT, "test_evidence_for_a_null_override_REFUSES"),
-    ("e_source_not_the_rows", PRM, "        if r[\"source_id\"] not in (row.get(\"sources\") or []):", "        if False:",
+    ("e_null_row_evidence_passes", PRM, "            if r[\"field\"] != \"spacing_inches\" or holder.get(\"spacing_inches\") is None:",
+     "            if r[\"field\"] != \"spacing_inches\":", PRT, "test_evidence_for_a_null_override_REFUSES"),
+    ("e_source_not_the_rows", PRM, "        if r[\"source_id\"] not in (holder.get(\"sources\") or []):", "        if False:",
      PRT, "test_the_source_must_be_the_rows"),
-    ("e_url_not_the_anchor", PRM, "        if (row.get(\"anchoring_urls\") or {}).get(r[\"source_id\"], {}).get(\"url\") != r[\"url\"]:",
+    ("e_url_not_the_anchor", PRM, "        if (holder.get(\"anchoring_urls\") or {}).get(r[\"source_id\"], {}).get(\"url\") != r[\"url\"]:",
      "        if False:", PRT, "test_the_url_must_be_the_rows_anchor"),
     ("e_manifest_unchecked", PRM, "        if r[\"url\"] not in man.get(r[\"sha256\"], set()):", "        if False:",
      PRT, "test_a_url_not_in_the_manifest_REFUSES"),
@@ -86,7 +92,8 @@ MUTATIONS = [
      "        if False:", PRT, "test_a_quote_that_states_no_endpoint_REFUSES"),
     ("e_hash_unchecked", PRM, "            if sha256_bytes(raw) != r[\"sha256\"]:", "            if False:",
      PRT, "test_tampered_bytes_REFUSE"),
-    ("e_catalog_unchecked", PRM, "                if sid not in catalog:", "                if False:",
+    ("e_catalog_unchecked", PRM, "            for sid in row.get(\"sources\") or []:\n                if sid not in catalog:",
+     "            for sid in row.get(\"sources\") or []:\n                if False:",
      PRT, "test_a_row_source_off_the_catalog_REFUSES"),
     ("e_common_feet_dropped", COM, "    return bool(ends & nums) or bool({x / 12 for x in ends} & nums)",
      "    return bool(ends & nums)", PRT, "test_apples_owed_overrides_pass_against_the_REAL_hashed_ncsu_bytes"),
@@ -143,6 +150,96 @@ MUTATIONS = [
      "    if False:\n        refuse(f\"planting_layout_gate (armed)", PRT, "test_A44_runs_on_the_post_state"),
     ("g_rootstock_list_widened", PRM, "ROOTSTOCK_CROPS = (\"apple\",)", "ROOTSTOCK_CROPS = (\"apple\", \"pear-asian\")",
      PRT, "test_the_rootstock_crop_list_is_the_literal"),
+    # ---- L (T1, session 2): layout entries appended verbatim, the default move, the mirrors -------------
+    # the named defect: an entry id re-derived from (arrangement, support) by the transform ...
+    ("l_id_rederived_in_transform", PRM, "            entries.extend(copy.deepcopy(s.get(\"planting_layout_add\") or []))",
+     "            entries.extend([dict(e, id=f\"{e['arrangement']}-{e['support']}\") for e in s.get(\"planting_layout_add\") or []])",
+     PRT, "test_the_clean_layout_stage_passes_and_changes_exactly_what_it_names"),
+    # ... and the guard that sees it in the post
+    ("l_added_unchecked", PRM, "        if compact(got[k]) != compact(want):", "        if False:",
+     PRT, "test_an_entry_id_RE_DERIVED_in_the_post_REFUSES"),
+    # the named defect: an existing entry altered
+    ("l_existing_unchecked", PRM, "        if compact(got[i]) != compact(want):", "        if False:",
+     PRT, "test_an_EXISTING_entry_altered_REFUSES"),
+    # the named defect: two defaults (the old one left true; the guard stops comparing the flag)
+    ("l_existing_default_flag_ignored", PRM, "        if compact(got[i]) != compact(want):",
+     "        if compact({x: y for x, y in got[i].items() if x != 'default'}) != compact({x: y for x, y in want.items() if x != 'default'}):",
+     PRT, "test_TWO_DEFAULTS_the_old_default_left_true_REFUSES"),
+    ("l_staged_default_true_passes", PRM, "            if e.get(\"default\") is not False:", "            if False:",
+     PRT, "test_TWO_DEFAULTS_a_staged_entry_marked_default_REFUSES"),
+    ("l_length_unchecked", PRM, "    if not isinstance(got, list) or len(got) != len(base) + len(add):",
+     "    if not isinstance(got, list):", PRT, "test_an_existing_entry_dropped_REFUSES"),
+    ("l_staged_twice_passes", PRM, "            if eid in staged_ids:", "            if False:",
+     PRT, "test_a_staged_id_twice_REFUSES"),
+    ("l_existing_id_reused", PRM, "            if eid in base_ids:", "            if False:",
+     PRT, "test_a_staged_id_already_on_the_crop_REFUSES"),
+    ("l_entry_shape_open", PRM, "        if not (isinstance(add, list) and add and all(isinstance(e, dict) for e in add)):",
+     "        if not isinstance(add, list):", PRT, "test_a_staged_entry_that_is_not_an_object_REFUSES"),
+    ("l_support_crops_open", PRM, "        if slug not in SUPPORT_CROPS:", "        if False:",
+     PRT, "test_an_entry_on_a_crop_off_the_ruled_list_REFUSES"),
+    ("l_default_crops_open", PRM, "        if slug not in DEFAULT_MOVE_CROPS:", "        if False:",
+     PRT, "test_a_default_move_off_the_ruled_list_REFUSES"),
+    ("l_default_names_nothing", PRM, "        if dflt not in base_ids + staged_ids:", "        if False:",
+     PRT, "test_a_default_naming_no_entry_REFUSES"),
+    ("l_default_already_default", PRM, "        if d is not None and d.get(\"id\") == dflt:", "        if False:",
+     PRT, "test_a_default_naming_the_current_default_REFUSES"),
+    # the named defect: a default move whose mirror is not recomputed -- the transform, and the guard
+    ("l_mirror_not_recomputed", PRM, "            c[\"spacing_inches\"] = PLG.expected_spacing(entries)", "            pass",
+     PRT, "test_the_clean_layout_stage_passes_and_changes_exactly_what_it_names"),
+    ("l_mirror_unchecked", PRM, "        if k not in b or compact(b[k]) != compact(exp):", "        if False:",
+     PRT, "test_a_DEFAULT_MOVE_WHOSE_MIRROR_IS_NOT_RECOMPUTED_REFUSES"),
+    ("l_mirrors_writable_unstaged", PRM, "    if _layout_staged(s):\n        allowed |=", "    if True:\n        allowed |=",
+     PRT, "test_a_mirror_moved_on_a_crop_with_no_layout_stage_REFUSES"),
+    # ---- S (T1): restatements on a moved mirror -------------------------------------------------------
+    ("s_unadjudicated_passes", PRM, "        if p not in adj:\n            refuse(f\"{slug}: a mirror moves",
+     "        if False:\n            refuse(f\"{slug}: a mirror moves", PRT,
+     "test_an_unadjudicated_restatement_on_a_moved_mirror_REFUSES"),
+    ("s_row_mirror_not_a_trigger", PRM, "for k in (\"spacing_inches\", \"row_spacing_inches\")\n",
+     "for k in (\"spacing_inches\",)\n", PRT, "test_an_unadjudicated_restatement_on_a_moved_mirror_REFUSES"),
+    ("s_edited_without_edit", PRM, "        if adj[p] == \"edited\" and p not in edited:", "        if False:",
+     PRT, "test_edited_without_an_edit_REFUSES"),
+    ("s_note_unchecked", PRM, "                and r[\"verdict\"] in (\"agrees\", \"edited\") and str(r[\"note\"]).strip()):",
+     "                and r[\"verdict\"] in (\"agrees\", \"edited\")):", PRT, "test_a_restatement_with_no_note_REFUSES"),
+    ("s_stale_restatements_pass", PRM, "        if adj:\n            refuse(f\"{slug}: restatements staged",
+     "        if False:\n            refuse(f\"{slug}: restatements staged", PRT,
+     "test_restatements_on_a_crop_whose_mirrors_do_not_move_REFUSE"),
+    ("s_edit_on_owned_key", PRM, "        if parse_path(ed[\"path\"])[0] in OWNED_HEADS:", "        if False:",
+     PRT, "test_an_edit_lands_and_an_edit_on_an_owned_key_REFUSES"),
+    ("s_edit_value_unchecked", PRM, "        if compact(node) != compact(ed[\"new\"]):", "        if False:",
+     PRT, "test_an_edit_value_not_the_stages_in_the_post_REFUSES"),
+    # ---- E (T1): evidence on every added entry ---------------------------------------------------------
+    ("e_layout_coverage_unchecked", PRM, "                if e.get(f) is not None and (slug, e[\"id\"], f) not in covered_l:",
+     "                if False:", PRT, "test_an_added_entry_without_evidence_REFUSES"),
+    ("e_layout_unstaged_entry_passes", PRM, "            if r[\"entry_id\"] not in added:", "            if False:",
+     PRT, "test_evidence_for_an_entry_the_stage_does_not_add_REFUSES"),
+    ("e_duplicate_row_passes", PRM, "        if key in seen:", "        if False:",
+     PRT, "test_a_duplicate_evidence_row_REFUSES"),
+    ("e_layout_source_not_the_entrys", PRM, "            holder, what = next(e for e in c[\"planting_layout\"] if e.get(\"id\") == r[\"entry_id\"]), \"entry\"",
+     "            holder, what = next(e for e in c[\"planting_layout\"] if e.get(\"id\") == r[\"entry_id\"]), \"entry\"\n            holder = dict(holder, sources=holder.get(\"sources\", []) + [r[\"source_id\"]], anchoring_urls=dict(holder.get(\"anchoring_urls\", {}), **{r[\"source_id\"]: {\"url\": r[\"url\"]}}))",
+     PRT, "test_layout_evidence_source_not_the_entrys_REFUSES"),
+    # ---- T2: A44's rootstock override key (planting_layout_gate) ---------------------------------------
+    ("t2_all_or_none_passes", PLG, "    if len(carriers) != len(rows):", "    if False:", A44T, "test_all_or_none_on_a_crop"),
+    ("t2_pair_unchecked", PLG, "        if not is_pair(val):\n            v.append(f\"{tag}: spacing_inches {val!r} is not null",
+     "        if False:\n            v.append(f\"{tag}: spacing_inches {val!r} is not null", A44T,
+     "test_each_value_is_null_or_a_pair"),
+    # the named defect: an override with no source
+    ("t2_no_source_passes", PLG, "        if not (isinstance(src, list) and src):", "        if False:",
+     A44T, "test_a_non_null_override_with_no_source"),
+    ("t2_anchor_unchecked", PLG, "                v.append(f\"{tag}: spacing_inches {val!r}: source {s!r} has no http(s) anchoring url \"\n                         f\"on the row\")",
+     "                pass", A44T, "test_a_non_null_override_whose_source_is_not_anchored"),
+    ("t2_presence_never_armed", PLG, "        if armed and slug in ROOTSTOCK_OVERRIDE_CROPS and certified(crop):", "        if False:",
+     A44T, "test_armed_the_literal_list_must_carry_it"),
+    ("t2_off_the_layout_paths", PLG, "    return _layout_check(crop, armed) + _rootstock_violations(slug, crop, rootstock_armed)",
+     "    return _layout_check(crop, armed)", A44T, "test_violations_reach_every_layout_path"),
+    ("t2_floor_unchecked", PLG, "    if rootstock_armed and r[\"rootstock_rows\"] < ROOTSTOCK_ROW_FLOOR:", "    if False:",
+     A44T, "test_armed_refuses_below_the_row_floor"),
+    ("t2_rows_unreported", PLG, "        \"rootstock_rows\": sum(len(x) for x in rs),", "        \"rootstock_rows\": sum(len(x) for x in rs[:0]),",
+     A44T, "test_roster_reports_the_rows_it_inspected"),
+    ("t2_shipped_armed", PLG, "ROOTSTOCK_OVERRIDE_ARMED = False", "ROOTSTOCK_OVERRIDE_ARMED = True",
+     A44T, "test_the_tools_commit_ships_unarmed"),
+    # ... and the arming reaches the REAL entry point: whole_crop_gate never passes the armed state on
+    ("t2_entry_point_never_armed", PLG, "    rootstock_armed = ROOTSTOCK_OVERRIDE_ARMED if rootstock_armed is None else rootstock_armed\n    slug",
+     "    rootstock_armed = False\n    slug", A44I, None),
 ]
 SENTINEL = (PRT, '        self.assertEqual(P.ROOTSTOCK_CROPS, ("apple",))',
             '        self.assertEqual(P.ROOTSTOCK_CROPS, ("apple", "x"))', "test_the_rootstock_crop_list_is_the_literal")

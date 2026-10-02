@@ -4,7 +4,8 @@ Promotes must not import promotes (a cross-import kills the mutation harness's s
 copied from promote_pla10_planting_layout.py (landed, replay-pinned at c5fc3d13) rather than imported, and
 test_promote_pla10_promote2.py pins every copied function byte-identical to its promote-1 original: a change
 to how evidence is read is a change to BOTH promotes, made deliberately, never a silent fork.
-Copied 2026-10-02 (PLA-10 promote 2, session 1).
+Copied 2026-10-02 (PLA-10 promote 2, session 1); the restatement scanner and path helpers (with Refused /
+refuse, which they raise) added in session 2 for T1.
 """
 import csv, hashlib, html, io, json, os, re, unicodedata
 
@@ -101,3 +102,93 @@ def manifest(evidence_dir):
         for r in csv.DictReader(f, delimiter="\t"):
             rows.setdefault(r["sha256"], set()).add(r["url"])
     return rows
+
+
+# ---------------------------------------------------------------- copied 2026-10-02, session 2 (T1)
+# promote 1's restatement scanner (its guard 4) and path helpers, for promote 2's moved mirrors. Pinned
+# byte-identical to promote 1 by test_promote_pla10_promote2 (the functions, and the patterns below).
+class Refused(Exception):
+    pass
+
+
+def refuse(msg):
+    raise Refused(msg)
+
+
+DIST = re.compile(r"\d+(?:\.\d+)?(?:\s*(?:to|-|–|or)\s*\d+(?:\.\d+)?)?\s*(?:-\s*)?"
+                  r"(?:inch(?:es)?|in\b|in\.|\"|”|feet|foot|ft\b|ft\.)", re.I)
+SPACING_WORD = re.compile(r"\b(apart|spac\w*|between|rows?|hills?|thin(?:ned|ning)?)\b", re.I)
+SKIP_SUBTREES = ("verification_status", "sources", "anchoring_urls")
+SEG = re.compile(r"([^.\[\]]+)|\[(\d+)\]|\[([a-z_]+)=([^\]]+)\]")
+
+
+def parse_path(path):
+    out, pos = [], 0
+    for m in SEG.finditer(path):
+        if m.start() != pos and path[pos:m.start()] != ".":
+            refuse(f"unparseable path {path!r}")
+        pos = m.end()
+        if m.group(1) is not None:
+            out.append(m.group(1))
+        elif m.group(2) is not None:
+            out.append(int(m.group(2)))
+        else:
+            out.append((m.group(3), m.group(4)))
+    if pos != len(path) or not out:
+        refuse(f"unparseable path {path!r}")
+    return out
+
+
+def resolve(crop, path):
+    """Path -> concrete index-form path (list of str/int), against `crop`. Refuses if it names nothing."""
+    node, concrete = crop, []
+    segs = parse_path(path)
+    for i, s in enumerate(segs):
+        if isinstance(s, tuple):
+            k, v = s
+            if not isinstance(node, list):
+                refuse(f"path {path!r}: [{k}={v}] on a non-list")
+            hits = [j for j, x in enumerate(node) if isinstance(x, dict) and str(x.get(k)) == v]
+            if len(hits) != 1:
+                refuse(f"path {path!r}: [{k}={v}] matches {len(hits)} items")
+            s = hits[0]
+        if isinstance(s, int):
+            if not isinstance(node, list) or s >= len(node):
+                refuse(f"path {path!r}: index {s} out of range")
+        elif not isinstance(node, dict) or (s not in node and i < len(segs) - 1):
+            refuse(f"path {path!r}: {s!r} not found")
+        concrete.append(s)
+        node = node[s] if isinstance(s, int) or s in node else None
+    return concrete
+
+
+def fmt(concrete):
+    return "".join(f"[{s}]" if isinstance(s, int) else (f".{s}" if i else s) for i, s in enumerate(concrete))
+
+
+def set_at(crop, concrete, value):
+    node = crop
+    for s in concrete[:-1]:
+        node = node[s]
+    node[concrete[-1]] = value
+
+
+def spacing_strings(crop):
+    hits = []
+
+    def walk(o, path):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                if k in SKIP_SUBTREES or k.endswith(("_sources", "_anchoring_urls")):
+                    continue
+                walk(v, path + (k,))
+        elif isinstance(o, list):
+            for i, v in enumerate(o):
+                walk(v, path + (i,))
+        elif isinstance(o, str):
+            for sent in re.split(r"(?<=[.;!?])\s+", o):
+                if DIST.search(sent) and SPACING_WORD.search(sent):
+                    hits.append(fmt(list(path)))
+                    return
+    walk(crop, ())
+    return sorted(set(hits))

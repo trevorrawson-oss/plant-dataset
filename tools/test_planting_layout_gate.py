@@ -495,6 +495,118 @@ class Roster(unittest.TestCase):
         self.assertIs(G.PRESENCE_ARMED, True)
 
 
+U = {"url": "https://extension.umd.edu/sites/extension.umd.edu/files/publications/AllAboutAppleRootStocks.pdf",
+     "verified": "2026-06-11"}
+N = {"url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+     "verified": "2026-10-02"}
+
+
+def rs_row(name, override="absent", cited=True):
+    """A rootstock_options row as apple carries it; `override` "absent" leaves the key off."""
+    r = {"name": name, "size_class": "dwarf", "mature_height_ft": [8, 12], "spread_ft": 8,
+         "sources": ["umd_ext"], "anchoring_urls": {"umd_ext": dict(U)}}
+    if override != "absent":
+        r["spacing_inches"] = override
+        if override is not None and cited:
+            r["sources"] = ["umd_ext", "ncsu_ext_handbook_tree_fruit"]
+            r["anchoring_urls"]["ncsu_ext_handbook_tree_fruit"] = dict(N)
+    return r
+
+
+def apple_overrides():
+    """Promote 2's apple: every row carries the key (M26 null = the crop basis), each override cited."""
+    c = apple_not_authored()
+    c["rootstock_options"] = [rs_row("M9", [48, 96]), rs_row("M26", None), rs_row("MM106", [144, 192]),
+                              rs_row("MM111", [168, 216]), rs_row("seedling", [216, 300])]
+    return c
+
+
+def apple_no_overrides():
+    c = apple_not_authored()
+    c["rootstock_options"] = [rs_row("M9"), rs_row("M26")]
+    return c
+
+
+class RootstockOverride(unittest.TestCase):
+    """PLA-10 promote 2, T2 (plan 58 §4): rootstock_options[].spacing_inches is all-or-none on a crop,
+    each null or [lo, hi], and a non-null override is cited AND anchored on its own row. Unarmed until
+    the data; armed, the literal crop list must carry it."""
+
+    def test_clean_overrides_and_no_overrides_pass_in_every_state(self):
+        for f in (apple_overrides, apple_no_overrides, potato):
+            for armed in (False, True):
+                self.assertEqual(G.check_crop(f(), armed=armed, rootstock_armed=False), [], f.__name__)
+        self.assertEqual(G.check_crop(apple_overrides(), rootstock_armed=True), [])
+
+    def test_all_or_none_on_a_crop(self):
+        c = apple_overrides(); del c["rootstock_options"][3]["spacing_inches"]
+        self.assertTrue(has(G.check_crop(c), "apple: rootstock_options spacing_inches is on 4 of 5 rows",
+                            "all-or-none", "missing on ['MM111']"))
+
+    def test_a_single_carrier_is_held_too(self):
+        c = apple_no_overrides(); c["rootstock_options"][0]["spacing_inches"] = None
+        self.assertTrue(has(G.check_crop(c), "spacing_inches is on 1 of 2 rows", "missing on ['M26']"))
+
+    def test_each_value_is_null_or_a_pair(self):
+        for bad in ([96, 48], [48], "4-8 ft", 48, [0, 48], [True, 48]):
+            c = apple_overrides(); c["rootstock_options"][0]["spacing_inches"] = bad
+            self.assertTrue(has(G.check_crop(c), "apple: rootstock_options[0] (M9): spacing_inches",
+                                "is not null or a [lo, hi] pair"), bad)
+
+    def test_a_non_null_override_with_no_source(self):
+        c = apple_overrides(); r = c["rootstock_options"][2]
+        r["sources"], r["anchoring_urls"] = [], {}
+        self.assertTrue(has(G.check_crop(c), "apple: rootstock_options[2] (MM106): spacing_inches [144, 192]",
+                            "the row cites no source"))
+
+    def test_a_non_null_override_whose_source_is_not_anchored(self):
+        c = apple_overrides(); del c["rootstock_options"][2]["anchoring_urls"]["ncsu_ext_handbook_tree_fruit"]
+        self.assertTrue(has(G.check_crop(c), "rootstock_options[2] (MM106)",
+                            "source 'ncsu_ext_handbook_tree_fruit' has no http(s) anchoring url"))
+        c = apple_overrides(); c["rootstock_options"][2]["anchoring_urls"]["ncsu_ext_handbook_tree_fruit"]["url"] = "n/a"
+        self.assertTrue(has(G.check_crop(c), "source 'ncsu_ext_handbook_tree_fruit' has no http(s) anchoring url"))
+
+    def test_a_null_override_needs_no_new_source(self):
+        c = apple_overrides()
+        self.assertEqual(c["rootstock_options"][1]["sources"], ["umd_ext"])
+        self.assertEqual(G.check_crop(c, rootstock_armed=True), [])
+
+    def test_armed_the_literal_list_must_carry_it(self):
+        self.assertTrue(has(G.check_crop(apple_no_overrides(), rootstock_armed=True),
+                            "apple: no rootstock_options[].spacing_inches", "armed for ['apple']"))
+        self.assertEqual(G.check_crop(apple_no_overrides(), rootstock_armed=False), [])
+        c = apple_no_overrides(); c["verification_status"] = {"status": "shell"}
+        self.assertEqual(G.check_crop(c, rootstock_armed=True), [])
+
+    def test_violations_reach_every_layout_path(self):
+        """The rootstock check is not behind the list path's early returns: a legacy string, an absent
+        layout and a list each carry it."""
+        for pl in ("row", None):
+            c = apple_overrides(); c["planting_layout"] = pl
+            c["rootstock_options"][0]["spacing_inches"] = [96, 48]
+            self.assertTrue(has(G.check_crop(c, armed=False), "rootstock_options[0] (M9)"), pl)
+
+    def test_roster_reports_the_rows_it_inspected(self):
+        r = G.roster({"crops": [apple_overrides(), potato()]}, armed=True)
+        self.assertEqual((r["rootstock_crops"], r["rootstock_rows"]), (1, 5))
+        self.assertIn("rootstock overrides on 1 crop(s), 5 row(s)", G.summary(r, armed=True))
+
+    def test_armed_refuses_below_the_row_floor(self):
+        r = G.roster({"crops": [apple_overrides()] + [potato() for _ in range(G.CERT_FLOOR)]}, armed=True)
+        r = dict(r, entries=G.ENTRY_FLOOR)
+        self.assertIsNone(G.refusal(r, armed=True, rootstock_armed=True))
+        self.assertIn("rootstock override row", G.refusal(dict(r, rootstock_rows=4), armed=True,
+                                                           rootstock_armed=True))
+        self.assertIsNone(G.refusal(dict(r, rootstock_rows=0), armed=True, rootstock_armed=False))
+
+    def test_the_literals(self):
+        self.assertEqual((G.ROOTSTOCK_OVERRIDE_CROPS, G.ROOTSTOCK_ROW_FLOOR), (("apple",), 5))
+
+    def test_the_tools_commit_ships_unarmed(self):
+        """Arms in promote 2's DATA commit with the overrides (gates arm off the data)."""
+        self.assertIs(G.ROOTSTOCK_OVERRIDE_ARMED, False)
+
+
 if __name__ == "__main__":
     import io
     stream = io.StringIO()

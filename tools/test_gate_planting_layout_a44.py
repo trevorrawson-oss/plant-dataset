@@ -129,6 +129,45 @@ try:
         assert rc == 2 and "REFUSED" in out and "119" in out, ("armed entry floor", out[-1200:])
     finally:
         shutil.rmtree(td, ignore_errors=True)
+
+    # ---- T2 (PLA-10 promote 2, 2026-10-02): the rootstock override key reaches the entry points ----
+    # Unarmed in the tools commit: the shape rules hold on any crop carrying the key; arming (promote 2's
+    # data commit) adds presence on apple and the 5-row floor. apple's owed NCSU overrides, cited per row.
+    NC = "ncsu_ext_handbook_tree_fruit"
+    NC_A = {"url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+            "verified": "2026-10-02"}
+    OWED = {"M9": [48, 96], "M26": None, "MM106": [144, 192], "MM111": [168, 216], "seedling": [216, 300]}
+
+    def overrides(drop=None, uncite=None):
+        def m(idx, _d):
+            for r in idx["apple"]["rootstock_options"]:
+                if r["name"] == drop:
+                    continue
+                r["spacing_inches"] = OWED[r["name"]]
+                if OWED[r["name"]] is not None and r["name"] != uncite:
+                    r["sources"] = r["sources"] + [NC]
+                    r["anchoring_urls"][NC] = dict(NC_A)
+                if r["name"] == uncite:
+                    r["sources"], r["anchoring_urls"] = [], {}
+        return m
+
+    rc, out = run("whole_crop_gate.py", "apple", scratch(overrides()))
+    assert rc == 0 and "GATE: PASS" in out, ("clean overrides pass unarmed", out[-1500:])
+    rc, out = run("whole_crop_gate.py", "apple", scratch(overrides(drop="MM111")))
+    assert rc == 1 and "apple: rootstock_options spacing_inches is on 4 of 5 rows; all-or-none" in out, out[-1200:]
+    rc, out = run("whole_crop_gate.py", "apple", scratch(overrides(uncite="MM106")))
+    assert rc == 1 and "rootstock_options[2] (MM106): spacing_inches [144, 192] but the row cites no source" in out, \
+        out[-1200:]
+    td = tools_copy({"planting_layout_gate.py": ("ROOTSTOCK_OVERRIDE_ARMED = False", "ROOTSTOCK_OVERRIDE_ARMED = True")})
+    try:
+        rc, out = run("whole_crop_gate.py", "apple", scratch(), tools=td)
+        assert rc == 1 and "apple: no rootstock_options[].spacing_inches; the override key is armed" in out, \
+            ("armed, live apple (no overrides) reddens", out[-1200:])
+        rc, out = run("gate_all.py", scratch(overrides()), tools=td)
+        assert rc == 0 and "gate_all: PASS" in out and "rootstock overrides on 1 crop(s), 5 row(s), ARMED" in out, \
+            ("armed, apple's 5 rows pass gate_all and are reported", out[-1500:])
+    finally:
+        shutil.rmtree(td, ignore_errors=True)
 finally:
     if os.path.exists(TMP):
         os.remove(TMP)

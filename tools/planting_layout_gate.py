@@ -34,6 +34,16 @@ TWO STATES (gates arm off the data):
 The flag lives HERE, not in whole_crop_gate (where A59-A61 keep theirs), because gate_all's roster
 half needs it too and whole_crop_gate is a script that runs on import.
 
+ROOTSTOCK OVERRIDES (T2, PLA-10 promote 2, plan docs/kickoffs/58-pla10-promote2-plan.md §4). A
+rootstock_options[] row may carry spacing_inches, the between-trees figure for THAT rootstock (R1).
+On a crop carrying it on any row, EVERY row carries it (all-or-none, so a null is an authored claim:
+"the crop basis", never an omission); each value is null or [lo, hi]; and a non-null override is
+cited on its own row: sources non-empty, each source anchored with an http(s) url (astro's
+pot-figure isSourced reads exactly that anchor). The check runs on every layout path, string and
+absent included. ROOTSTOCK_OVERRIDE_ARMED (False in the tools commit) adds presence: a certified crop
+on ROOTSTOCK_OVERRIDE_CROPS must carry it, and the roster refuses fewer than ROOTSTOCK_ROW_FLOOR rows.
+It flips in promote 2's data commit, with the overrides.
+
 POPULATION. roster() reports certified crops, entries, list-shaped and legacy crops; refusal() refuses
 an empty roster, a roster below CERT_FLOOR, and (armed) fewer entries than ENTRY_FLOOR. The floors are
 literals measured on c5fc3d13 (121 certified; 113 carry a spacing pair, so >= 113 entries once armed),
@@ -49,6 +59,10 @@ import sys
 CERTIFIED = "verified_gs_arc"
 
 PRESENCE_ARMED = True
+# T2 (plan 58 §4): flips to True in promote 2's DATA commit, never before (gates arm off the data).
+ROOTSTOCK_OVERRIDE_ARMED = False
+ROOTSTOCK_OVERRIDE_CROPS = ("apple",)  # R1, a literal
+ROOTSTOCK_ROW_FLOOR = 5                # apple's 5 rows (measured on cf1d480d), a literal
 
 # Literal floors (measured 2026-10-01 on c5fc3d13). Minimums, not pins: the roster may grow.
 CERT_FLOOR = 121
@@ -252,9 +266,61 @@ def _entry_violations(slug, i, e):
     return v
 
 
+# ---------------------------------------------------------------- rootstock overrides (T2)
+def _rootstock_rows(crop):
+    ro = crop.get("rootstock_options")
+    return [r for r in ro if isinstance(r, dict)] if isinstance(ro, list) else []
+
+
+def _rootstock_violations(slug, crop, armed):
+    rows = _rootstock_rows(crop)
+    carriers = [r for r in rows if "spacing_inches" in r]
+    if not carriers:
+        if armed and slug in ROOTSTOCK_OVERRIDE_CROPS and certified(crop):
+            return [f"{slug}: no rootstock_options[].spacing_inches; the override key is armed for "
+                    f"{list(ROOTSTOCK_OVERRIDE_CROPS)} (every row, null being the crop basis)"]
+        return []
+    v = []
+    if len(carriers) != len(rows):
+        v.append(f"{slug}: rootstock_options spacing_inches is on {len(carriers)} of {len(rows)} rows; "
+                 f"all-or-none, so a null is explicit: missing on "
+                 f"{[r.get('name') for r in rows if 'spacing_inches' not in r]}")
+    for i, r in enumerate(rows):
+        if "spacing_inches" not in r:
+            continue
+        tag = f"{slug}: rootstock_options[{i}] ({r.get('name')})"
+        val = r["spacing_inches"]
+        if val is None:
+            continue
+        if not is_pair(val):
+            v.append(f"{tag}: spacing_inches {val!r} is not null or a [lo, hi] pair of positive numbers, "
+                     f"lo <= hi")
+            continue
+        src, anc = r.get("sources"), r.get("anchoring_urls")
+        anc = anc if isinstance(anc, dict) else {}
+        if not (isinstance(src, list) and src):
+            v.append(f"{tag}: spacing_inches {val!r} but the row cites no source; an override is cited "
+                     f"on its own row")
+            continue
+        for s in src:
+            a = anc.get(s)
+            if not (isinstance(a, dict) and isinstance(a.get("url"), str)
+                    and a["url"].startswith(("http://", "https://"))):
+                v.append(f"{tag}: spacing_inches {val!r}: source {s!r} has no http(s) anchoring url "
+                         f"on the row")
+    return v
+
+
 # ---------------------------------------------------------------- one crop
-def check_crop(crop, armed=None):
-    """Violation strings for one crop ([] == clean). `armed` defaults to PRESENCE_ARMED."""
+def check_crop(crop, armed=None, rootstock_armed=None):
+    """Violation strings for one crop ([] == clean). `armed` defaults to PRESENCE_ARMED,
+    `rootstock_armed` to ROOTSTOCK_OVERRIDE_ARMED."""
+    rootstock_armed = ROOTSTOCK_OVERRIDE_ARMED if rootstock_armed is None else rootstock_armed
+    slug = crop.get("slug") or crop.get("id")
+    return _layout_check(crop, armed) + _rootstock_violations(slug, crop, rootstock_armed)
+
+
+def _layout_check(crop, armed=None):
     armed = PRESENCE_ARMED if armed is None else armed
     slug = crop.get("slug") or crop.get("id")
     pl = crop.get("planting_layout")
@@ -373,14 +439,17 @@ def _retired_key_violations(slug, crop, armed):
 
 
 # ---------------------------------------------------------------- roster (§1.6 check 9)
-def roster(data, armed=None):
+def roster(data, armed=None, rootstock_armed=None):
     armed = PRESENCE_ARMED if armed is None else armed
     crops = data.get("crops", []) if isinstance(data, dict) else data
     cert = [c for c in crops if certified(c)]
     V = []
     for c in crops:
-        V += check_crop(c, armed=armed)
+        V += check_crop(c, armed=armed, rootstock_armed=rootstock_armed)
+    rs = [[r for r in _rootstock_rows(c) if "spacing_inches" in r] for c in cert]
     return {
+        "rootstock_crops": sum(1 for x in rs if x),
+        "rootstock_rows": sum(len(x) for x in rs),
         "certified": len(cert),
         "entries": sum(len(_entries(c)) for c in cert),
         "list_shaped": sum(1 for c in cert if isinstance(c.get("planting_layout"), list)),
@@ -391,14 +460,18 @@ def roster(data, armed=None):
     }
 
 
-def refusal(r, armed=None):
+def refusal(r, armed=None, rootstock_armed=None):
     armed = PRESENCE_ARMED if armed is None else armed
+    rootstock_armed = ROOTSTOCK_OVERRIDE_ARMED if rootstock_armed is None else rootstock_armed
     if r["certified"] == 0:
         return "inspected 0 certified crops"
     if r["certified"] < CERT_FLOOR:
         return f"inspected {r['certified']} certified crops, below the declared floor {CERT_FLOOR}"
     if armed and r["entries"] < ENTRY_FLOOR:
         return f"inspected {r['entries']} planting_layout entries, below the declared floor {ENTRY_FLOOR}"
+    if rootstock_armed and r["rootstock_rows"] < ROOTSTOCK_ROW_FLOOR:
+        return (f"inspected {r['rootstock_rows']} rootstock override row(s), below the declared floor "
+                f"{ROOTSTOCK_ROW_FLOOR}")
     return None
 
 
@@ -406,7 +479,8 @@ def summary(r, armed=None):
     armed = PRESENCE_ARMED if armed is None else armed
     return (f"inspected {r['certified']} certified crops, {r['entries']} entries; {r['list_shaped']} "
             f"list-shaped, {r['legacy']} legacy string; null spacing on {len(r['null_spacing'])}; "
-            f"presence {'ARMED' if armed else 'off'}")
+            f"presence {'ARMED' if armed else 'off'}; rootstock overrides on {r['rootstock_crops']} crop(s), "
+            f"{r['rootstock_rows']} row(s), {'ARMED' if ROOTSTOCK_OVERRIDE_ARMED else 'off'}")
 
 
 def main(argv):

@@ -99,6 +99,33 @@ class Synthetic:
         self.write()
         return P.load_stage(self.stage)
 
+    # ---- T1: layout entries (synthetic quotes; the real pages are the stage's business)
+    def add_layout(self, slug, entries, default=None, restatements=None, edits=None, decision="synthetic"):
+        s = self.crops.setdefault(slug, {"slug": slug, "decision": decision})
+        s["planting_layout_add"] = entries
+        if default is not None:
+            s["default"] = default
+        if restatements is not None:
+            s["restatements"] = restatements
+        if edits is not None:
+            s["edits"] = edits
+        for e in entries:
+            for f in P.NUMERIC_FIELDS:
+                if e.get(f) is not None:
+                    sid = e["sources"][0]
+                    lo, hi = e[f]
+                    unit = "" if f == "plants_per_hill" else " inches"
+                    self.add_ev(slug, e["id"], f, e[f], sid, e["anchoring_urls"][sid]["url"],
+                                f"synthetic {slug} {e['id']} {f}: {lo} to {hi}{unit} apart")
+
+    def layout_fixture(self):
+        """english-cucumber gains row-trellis AS THE DEFAULT (both mirrors move, every scanner hit
+        adjudicated 'agrees'); strawberry gains a NON-default row-none-bed (no mirror moves)."""
+        self.add_layout("english-cucumber", [trellis()], default="row-trellis",
+                        restatements=[{"path": p, "verdict": "agrees", "note": "synthetic"}
+                                      for p in P.spacing_strings(IDX["english-cucumber"])])
+        self.add_layout("strawberry", [bed()])
+
     def run(self):
         stage, ev = self.load()
         return P.run(copy.deepcopy(BASE), stage, ev, self.ev_dir)
@@ -112,6 +139,34 @@ class Synthetic:
 
     def close(self):
         shutil.rmtree(self.root, ignore_errors=True)
+
+
+CLEM = {"url": "https://hgic.clemson.edu/factsheet/cucumber/", "verified": "2026-10-02"}
+UCIPM = {"url": "https://ucanr.edu/sites/default/files/2018-03/281247.pdf", "verified": "2026-10-02"}
+
+
+def trellis(**kw):
+    e = {"id": "row-trellis", "arrangement": "row", "support": "trellis", "default": False,
+         "in_row_inches": [9, 12], "row_spacing_inches": [36, 36], "row_spacing_reason": None,
+         "sources": ["clemson_hgic"], "anchoring_urls": {"clemson_hgic": dict(CLEM)}}
+    e.update(kw)
+    return e
+
+
+def bed(**kw):
+    e = {"id": "row-none-bed", "arrangement": "row", "support": "none", "default": False,
+         "in_row_inches": [12, 12], "rows_per_bed": 2, "row_spacing_inches": [12, 12],
+         "row_spacing_reason": None, "sources": ["uc_ipm"], "anchoring_urls": {"uc_ipm": dict(UCIPM)}}
+    e.update(kw)
+    return e
+
+
+def crop(data, slug):
+    return next(c for c in data["crops"] if c["slug"] == slug)
+
+
+def entry(data, slug, eid):
+    return next(e for e in crop(data, slug)["planting_layout"] if e["id"] == eid)
 
 
 def row(data, name, slug="apple"):
@@ -150,7 +205,8 @@ class Base(unittest.TestCase):
 class Clean(Base):
     def test_the_clean_stage_passes_and_changes_exactly_the_named_leaves(self):
         post, n = self.s.run()
-        self.assertEqual(n, {"crops": 8, "overrides": 4, "nulls": 1, "sources_added": 4, "corrections": 7})
+        self.assertEqual(n, {"crops": 8, "overrides": 4, "nulls": 1, "sources_added": 4, "corrections": 7,
+                             "entries_added": 0, "default_moves": 0, "mirror_moves": 0, "restatements": 0})
         for name, (val, _) in OWED.items():
             r, b = row(post, name), row(BASE, name)
             self.assertEqual(r["spacing_inches"], val)
@@ -196,17 +252,23 @@ class Clean(Base):
     def test_the_copied_helpers_are_byte_identical_to_promote_1(self):
         import promote_pla10_planting_layout as P1
         for name in ("sha256_bytes", "serialize", "compact", "leaf_diff", "norm_text", "_numbers",
-                     "quote_states", "pdf_text", "manifest"):
+                     "quote_states", "pdf_text", "manifest",
+                     # T1 (session 2): promote 1's restatement scanner and path helpers (guard 4)
+                     "spacing_strings", "parse_path", "resolve", "fmt", "set_at", "refuse"):
             self.assertEqual(inspect.getsource(getattr(C, name)), inspect.getsource(getattr(P1, name)), name)
         self.assertEqual((C.IDIOMS, C.PDF_TEXT_EXTRACTOR, C.EVIDENCE_COLS),
                          (P1.IDIOMS, P1.PDF_TEXT_EXTRACTOR, P1.EVIDENCE_COLS))
+        self.assertEqual((C.DIST.pattern, C.DIST.flags, C.SPACING_WORD.pattern, C.SPACING_WORD.flags,
+                          C.SKIP_SUBTREES, C.SEG.pattern, P.NUMERIC_FIELDS),
+                         (P1.DIST.pattern, P1.DIST.flags, P1.SPACING_WORD.pattern, P1.SPACING_WORD.flags,
+                          P1.SKIP_SUBTREES, P1.SEG.pattern, P1.NUMERIC_FIELDS))
 
 
 # ------------------------------------------------------------------ stage shape
 class StageShape(Base):
     def test_an_unknown_stage_key_REFUSES(self):
-        self.s.crops["apple"]["edits"] = []
-        self.refuses(self.s.load, "unknown keys ['edits']")
+        self.s.crops["apple"]["retired_anchor"] = {}
+        self.refuses(self.s.load, "unknown keys ['retired_anchor']")
 
     def test_a_stage_needs_a_decision_row(self):
         self.s.crops["apple"]["decision"] = "  "
@@ -533,6 +595,231 @@ class Gates(Base):
             r["url"] = "https://content.ces.ncsu.edu/"
         self.s.manifest = [{"sha256": r["sha256"], "url": "https://content.ces.ncsu.edu/"} for r in self.s.ev]
         self.refuses_run("apple M9: add_source url 'https://content.ces.ncsu.edu/' is a bare host")
+
+
+# ------------------------------------------------------------------ T1: layout entries + the default move
+class Layout(Base):
+    """T1 (plan 58 §8): planting_layout_add appends entries VERBATIM (ids pinned, never re-derived),
+    `default` moves the default, the mirrors are recomputed through planting_layout_gate's own
+    functions, every restatement a moved mirror touches is adjudicated, existing entries byte-identical."""
+
+    def setUp(self):
+        super().setUp()
+        self.s.layout_fixture()
+
+    def test_the_clean_layout_stage_passes_and_changes_exactly_what_it_names(self):
+        post, n = self.s.run()
+        self.assertEqual((n["entries_added"], n["default_moves"], n["mirror_moves"]), (2, 1, 1))
+        self.assertGreater(n["restatements"], 0)
+        ec, st = crop(post, "english-cucumber"), crop(post, "strawberry")
+        b_ec, b_st = IDX["english-cucumber"], IDX["strawberry"]
+        self.assertEqual([e["id"] for e in ec["planting_layout"]], ["row-none", "row-trellis"])
+        self.assertEqual(ec["planting_layout"][1], dict(trellis(), default=True))
+        self.assertEqual(ec["planting_layout"][0], dict(b_ec["planting_layout"][0], default=False))
+        self.assertEqual((ec["spacing_inches"], ec["row_spacing_inches"], ec["row_spacing_reason"]),
+                         ([9, 12], [36, 36], None))
+        self.assertEqual(st["planting_layout"], b_st["planting_layout"] + [bed()])
+        for k in ("spacing_inches", "row_spacing_inches", "row_spacing_reason"):
+            self.assertEqual(st[k], b_st[k], k)
+        for slug in ("english-cucumber", "strawberry"):
+            self.assertEqual({p[0] for p in C.leaf_diff(IDX[slug], crop(post, slug))} - {"planting_layout"},
+                             {"spacing_inches", "row_spacing_inches"} if slug == "english-cucumber" else set())
+
+    def test_layout_crops_are_the_ruled_literals(self):
+        self.assertEqual(P.SUPPORT_CROPS, ("acorn-squash", "beefsteak-tomato", "cantaloupe", "cherry-tomato",
+                                           "cucumber", "english-cucumber", "grape-tomato", "heirloom-tomato",
+                                           "pickling-cucumber", "roma-tomato", "slicing-cucumber", "strawberry"))
+        self.assertEqual(P.DEFAULT_MOVE_CROPS, ("beefsteak-tomato", "cherry-tomato", "english-cucumber",
+                                                "grape-tomato", "heirloom-tomato"))
+
+    # -- the stage
+    def test_an_entry_on_a_crop_off_the_ruled_list_REFUSES(self):
+        self.s.add_layout("honeydew-melon", [trellis(sources=["clemson_hgic"])])
+        self.refuses_run("honeydew-melon: planting_layout_add is ruled for")
+
+    def test_a_default_move_off_the_ruled_list_REFUSES(self):
+        self.s.crops["strawberry"]["default"] = "row-none-bed"
+        self.refuses_run("strawberry: a default move is ruled for")
+
+    def test_a_staged_id_already_on_the_crop_REFUSES(self):
+        self.s.crops["strawberry"]["planting_layout_add"] = [bed(id="row-none")]
+        self.refuses_run("strawberry: staged entry id 'row-none' is already on the crop")
+
+    def test_a_staged_id_twice_REFUSES(self):
+        self.s.crops["strawberry"]["planting_layout_add"] = [bed(), bed()]
+        self.refuses_run("strawberry: staged entry id 'row-none-bed' is staged twice")
+
+    def test_a_staged_entry_that_is_not_an_object_REFUSES(self):
+        self.s.crops["strawberry"]["planting_layout_add"] = ["row-none-bed"]
+        self.refuses_run("strawberry: planting_layout_add must be a non-empty list of entry objects")
+
+    def test_TWO_DEFAULTS_a_staged_entry_marked_default_REFUSES(self):
+        self.s.crops["english-cucumber"]["planting_layout_add"] = [trellis(default=True)]
+        self.refuses_run("english-cucumber row-trellis: a staged entry must carry default false; "
+                         "the default moves only by the stage's `default` key")
+
+    def test_a_default_naming_no_entry_REFUSES(self):
+        self.s.crops["english-cucumber"]["default"] = "row-cage"
+        self.refuses_run("english-cucumber: default 'row-cage' names no entry")
+
+    def test_a_default_naming_the_current_default_REFUSES(self):
+        self.s.crops["english-cucumber"]["default"] = "row-none"
+        self.refuses_run("english-cucumber: default 'row-none' is already the default")
+
+    def test_an_added_entry_without_evidence_REFUSES(self):
+        self.s.ev = [r for r in self.s.ev if not (r["crop"] == "strawberry" and r["field"] == "rows_per_bed")
+                     and not (r["crop"] == "strawberry" and r["field"] == "row_spacing_inches")]
+        self.refuses_run("strawberry row-none-bed: row_spacing_inches [12,12] has no EVIDENCE row")
+
+    def test_evidence_for_an_entry_the_stage_does_not_add_REFUSES(self):
+        self.s.add_ev("strawberry", "row-none", "in_row_inches", [18, 24], "umn_ext",
+                      IDX["strawberry"]["planting_layout"][0]["anchoring_urls"]["umn_ext"]["url"],
+                      "synthetic strawberry 18 to 24 inches apart")
+        self.refuses_run("strawberry row-none: the stage does not add this entry")
+
+    def test_a_duplicate_evidence_row_REFUSES(self):
+        dup = next(r for r in self.s.ev if r["crop"] == "strawberry")
+        self.s.ev.append(dict(dup))
+        self.refuses_run("one EVIDENCE row per (crop, entry, field, source)")
+
+    def test_layout_evidence_quote_not_in_the_bytes_REFUSES(self):
+        r = next(r for r in self.s.ev if r["crop"] == "strawberry")
+        r["quote"] = "synthetic strawberry not on the page at all"
+        self.refuses_run("the quote is not in the cached bytes")
+
+    def test_layout_evidence_source_not_the_entrys_REFUSES(self):
+        r = next(r for r in self.s.ev if r["crop"] == "strawberry")
+        r["source_id"] = "umn_ext"
+        self.refuses_run("source 'umn_ext' is not in the entry's sources")
+
+    # -- restatements (promote 1's guard 4, on a moved mirror)
+    def test_an_unadjudicated_restatement_on_a_moved_mirror_REFUSES(self):
+        self.s.crops["english-cucumber"]["restatements"] = self.s.crops["english-cucumber"]["restatements"][1:]
+        self.refuses_run("english-cucumber: a mirror moves (spacing_inches [12,18] -> [9,12]; "
+                         "row_spacing_inches [48,72] -> [36,36]) and the restatement at")
+
+    def test_edited_without_an_edit_REFUSES(self):
+        self.s.crops["english-cucumber"]["restatements"][0]["verdict"] = "edited"
+        self.refuses_run("is adjudicated 'edited' but no edit touches it")
+
+    def test_a_restatement_with_no_note_REFUSES(self):
+        self.s.crops["english-cucumber"]["restatements"][0]["note"] = " "
+        self.refuses_run("english-cucumber: a restatement needs path, verdict agrees|edited, and a note")
+
+    def test_restatements_on_a_crop_whose_mirrors_do_not_move_REFUSE(self):
+        self.s.crops["strawberry"]["restatements"] = [{"path": "description_beginner", "verdict": "agrees",
+                                                       "note": "x"}]
+        self.refuses_run("strawberry: restatements staged but no mirror moves")
+
+    def test_an_edit_lands_and_an_edit_on_an_owned_key_REFUSES(self):
+        ec = self.s.crops["english-cucumber"]
+        p0 = ec["restatements"][0]["path"]
+        ec["restatements"][0]["verdict"] = "edited"
+        ec["edits"] = [{"path": p0, "new": "synthetic edited restatement", "reason": "synthetic"}]
+        post, _ = self.s.run()
+        node = crop(post, "english-cucumber")
+        for seg in C.resolve(IDX["english-cucumber"], p0):
+            node = node[seg]
+        self.assertEqual(node, "synthetic edited restatement")
+        for owned in ("spacing_inches", "planting_layout[0].in_row_inches", "verification_status.status",
+                      "rootstock_options[0].spread_ft"):
+            ec["edits"] = [{"path": owned, "new": 1, "reason": "x"}]
+            self.refuses_run("touches a key the promote owns or a record")
+
+    def test_an_edit_value_not_the_stages_in_the_post_REFUSES(self):
+        ec = self.s.crops["english-cucumber"]
+        p0 = ec["restatements"][0]["path"]
+        ec["restatements"][0]["verdict"] = "edited"
+        ec["edits"] = [{"path": p0, "new": "synthetic edited restatement", "reason": "synthetic"}]
+
+        def m(post):
+            C.set_at(crop(post, "english-cucumber"), C.resolve(IDX["english-cucumber"], p0), "tampered")
+        self.refuses_post(m, f"english-cucumber: {p0} is not the edit's new value")
+
+    # -- post-state tampering (the transform is not trusted)
+    def test_an_entry_id_RE_DERIVED_in_the_post_REFUSES(self):
+        def m(post):
+            e = entry(post, "strawberry", "row-none-bed")
+            e["id"] = f"{e['arrangement']}-{e['support']}"
+        self.refuses_post(m, "strawberry: planting_layout[1] is not the stage's entry 'row-none-bed', verbatim")
+
+    def test_an_added_entry_altered_in_the_post_REFUSES(self):
+        def m(post):
+            entry(post, "strawberry", "row-none-bed")["in_row_inches"] = [12, 15]
+        self.refuses_post(m, "strawberry: planting_layout[1] is not the stage's entry 'row-none-bed', verbatim")
+
+    def test_an_EXISTING_entry_altered_REFUSES(self):
+        def m(post):
+            entry(post, "strawberry", "row-none")["row_spacing_inches"] = [36, 36]
+        self.refuses_post(m, "strawberry: existing entry planting_layout[0] ('row-none') changed")
+
+    def test_an_existing_entry_id_renamed_REFUSES(self):
+        def m(post):
+            entry(post, "strawberry", "row-none")["id"] = "row-none-matted"
+        self.refuses_post(m, "strawberry: existing entry planting_layout[0] ('row-none') changed")
+
+    def test_an_existing_entry_dropped_REFUSES(self):
+        def m(post):
+            c = crop(post, "strawberry")
+            c["planting_layout"] = c["planting_layout"][1:]
+        self.refuses_post(m, "strawberry: planting_layout must be the base's 1 entr(y/ies) plus the stage's 1")
+
+    def test_entries_reordered_REFUSES(self):
+        def m(post):
+            c = crop(post, "strawberry")
+            c["planting_layout"].reverse()
+        self.refuses_post(m, "strawberry: existing entry planting_layout[0] ('row-none') changed")
+
+    def test_TWO_DEFAULTS_the_old_default_left_true_REFUSES(self):
+        def m(post):
+            entry(post, "english-cucumber", "row-none")["default"] = True
+        self.refuses_post(m, "english-cucumber: existing entry planting_layout[0] ('row-none') changed")
+
+    def test_the_new_default_not_flagged_REFUSES(self):
+        def m(post):
+            entry(post, "english-cucumber", "row-trellis")["default"] = False
+        self.refuses_post(m, "english-cucumber: planting_layout[1] is not the stage's entry 'row-trellis'")
+
+    def test_a_DEFAULT_MOVE_WHOSE_MIRROR_IS_NOT_RECOMPUTED_REFUSES(self):
+        def m(post):
+            crop(post, "english-cucumber")["spacing_inches"] = [12, 18]
+        self.refuses_post(m, "english-cucumber: spacing_inches [12,18] is not planting_layout_gate's mirror [9,12]")
+
+    def test_the_row_mirror_not_recomputed_REFUSES(self):
+        def m(post):
+            crop(post, "english-cucumber")["row_spacing_inches"] = [48, 72]
+        self.refuses_post(m, "english-cucumber: row_spacing_inches [48,72] is not planting_layout_gate's mirror [36,36]")
+
+    def test_a_mirror_moved_on_a_crop_with_no_layout_stage_REFUSES(self):
+        def m(post):
+            crop(post, "cucumber")["spacing_inches"] = [9, 12]
+        self.refuses_post(m, "cucumber: changed outside what the stage names: ['spacing_inches[0]', 'spacing_inches[1]']")
+
+    def test_an_entry_appended_to_an_unstaged_crop_REFUSES(self):
+        def m(post):
+            crop(post, "cucumber")["planting_layout"].append(trellis())
+        self.refuses_post(m, "cucumber: changed outside what the stage names: ['planting_layout']")
+
+
+class LayoutGates(Base):
+    """X1 (plan 58 §5): optional entry fields absent, never null; the armed gate runs on the post."""
+
+    def test_a_null_optional_field_REFUSES_through_A44(self):
+        self.s.add_layout("strawberry", [bed(mature_height_ft=None)])
+        self.refuses_run("planting_layout_gate (armed)")
+
+    def test_a_drop_name_inside_an_entry_REFUSES_through_A44(self):
+        self.s.add_layout("strawberry", [bed(source_quote="space plants about 12 inches apart")])
+        self.refuses_run("unknown key 'source_quote'")
+
+    def test_T2_a_partial_override_REFUSES_through_A44(self):
+        # the stage cannot express it (every row named), so seed the base: A44 must see it in the post
+        base = copy.deepcopy(BASE)
+        c = next(c for c in base["crops"] if c["slug"] == "cherry-sweet")
+        c["rootstock_options"][0]["spacing_inches"] = None
+        stage, ev = self.s.load()
+        post = P.apply_to(base, stage)
+        self.refuses(lambda: P.check_post(base, post, stage, ev, self.s.ev_dir), "all-or-none")
 
 
 if __name__ == "__main__":
