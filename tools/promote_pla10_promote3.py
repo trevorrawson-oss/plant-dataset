@@ -71,7 +71,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 from bare_host_gate import is_bare  # noqa: E402  -- A63's predicate, imported, never retyped
-from cited_promote_common import (DIST, EVIDENCE_COLS, SKIP_SUBTREES, Refused, cached_quote, compact, fmt,  # noqa: E402
+from cited_promote_common import (EVIDENCE_COLS, Refused, cached_quote, compact, fmt, height_strings,  # noqa: E402
                                   ft_endpoints_stated, leaf_diff, manifest, norm_text, parse_path, pdf_text,
                                   quote_states_ft, refuse, resolve, serialize, set_at, sha256_bytes)
 
@@ -111,8 +111,6 @@ OWNED_HEADS = (H, S, SIB_S, SIB_A, "footprint_inches", "verification_status")
 STAGE_KEYS = {"slug", "decision", H, S, "sources", "anchoring_urls", "field_addition", "restatements", "edits"}
 RECORD_KEYS = {"field", "date", "sources", "note"}
 ANCHOR_KEYS = {"url", "verified"}
-HEIGHT_WORD = re.compile(r"\b(tall|taller|height|heights|high)\b", re.I)
-WIDTH_WORD = re.compile(r"\b(wide|width|spread)\b", re.I)
 
 
 def by_slug(data):
@@ -192,29 +190,6 @@ def _k2_taken(slug, s, base):
 
 def _moves(slug, s, base):
     return compact(s.get(H)) != compact(base.get(H)) or compact(s.get(S)) != compact(base.get(S))
-
-
-def height_strings(crop, spread_too):
-    """Prose leaves stating a distance beside a height word (and a width word when a spread is authored)."""
-    hits = []
-    words = (HEIGHT_WORD, WIDTH_WORD) if spread_too else (HEIGHT_WORD,)
-
-    def walk(o, path):
-        if isinstance(o, dict):
-            for k, v in o.items():
-                if k in SKIP_SUBTREES or k.endswith(("_sources", "_anchoring_urls")):
-                    continue
-                walk(v, path + (k,))
-        elif isinstance(o, list):
-            for i, v in enumerate(o):
-                walk(v, path + (i,))
-        elif isinstance(o, str):
-            for sent in re.split(r"(?<=[.;!?])\s+", o):
-                if DIST.search(sent) and any(w.search(sent) for w in words):
-                    hits.append(fmt(list(path)))
-                    return
-    walk(crop, ())
-    return sorted(set(hits))
 
 
 # ---------------------------------------------------------------- the transform

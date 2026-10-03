@@ -177,10 +177,10 @@ MUTATIONS = [
      PRT, "test_an_edit_value_not_the_stages_in_the_post_REFUSES"),
     ("s_note_unchecked", PRM, "                and r[\"verdict\"] in (\"agrees\", \"edited\") and str(r[\"note\"]).strip()):",
      "                and r[\"verdict\"] in (\"agrees\", \"edited\")):", PRT, "test_a_restatement_with_no_note_REFUSES"),
-    ("s_scanner_blind", PRM, "                if DIST.search(sent) and any(w.search(sent) for w in words):", "                if False:",
+    ("s_scanner_blind", COM, "                if DIST.search(sent) and any(w.search(sent) for w in words):", "                if False:",
      PRT, "test_the_scanner_finds_dills_5_ft_prose"),
-    ("s_width_always", PRM, "    words = (HEIGHT_WORD, WIDTH_WORD) if spread_too else (HEIGHT_WORD,)",
-     "    words = (HEIGHT_WORD, WIDTH_WORD)", PRT, "test_width_words_scan_only_when_a_spread_is_authored"),
+    ("s_width_always", COM, "    return distance_restatements(crop, (HEIGHT_WORD, WIDTH_WORD) if spread_too else (HEIGHT_WORD,))",
+     "    return distance_restatements(crop, (HEIGHT_WORD, WIDTH_WORD))", PRT, "test_width_words_scan_only_when_a_spread_is_authored"),
     # ---- B: blast radius -------------------------------------------------------------------------------
     ("b_roster_unchecked", PRM, "    if [c[\"slug\"] for c in pre[\"crops\"]] != [c[\"slug\"] for c in post[\"crops\"]]:",
      "    if False:", PRT, "test_a_roster_reorder_REFUSES"),

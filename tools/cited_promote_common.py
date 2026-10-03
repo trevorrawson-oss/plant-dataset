@@ -179,7 +179,18 @@ def set_at(crop, concrete, value):
     node[concrete[-1]] = value
 
 
-def spacing_strings(crop):
+# ---------------------------------------------------------------- the restatement scanner (unified 2026-10-03)
+# ONE walker for every cited promote (kickoff 60, ruling 5): a prose leaf outside the citation machinery that
+# states a distance (DIST) in a sentence that also carries one of `words` is a restatement candidate the author
+# must adjudicate. spacing_strings (promotes 1 and 2) and height_strings (promote 3) were two copies of this
+# walker differing only in the word test; both are now wrappers, proven byte-identical to the originals on
+# promote 1's and promote 3's fixed lists. Deliberately wide; the author adjudicates every hit.
+HEIGHT_WORD = re.compile(r"\b(tall|taller|height|heights|high)\b", re.I)
+WIDTH_WORD = re.compile(r"\b(wide|width|spread)\b", re.I)
+
+
+def distance_restatements(crop, words):
+    """Sorted paths of the string leaves where some sentence matches DIST and any regex in `words`."""
     hits = []
 
     def walk(o, path):
@@ -193,11 +204,21 @@ def spacing_strings(crop):
                 walk(v, path + (i,))
         elif isinstance(o, str):
             for sent in re.split(r"(?<=[.;!?])\s+", o):
-                if DIST.search(sent) and SPACING_WORD.search(sent):
+                if DIST.search(sent) and any(w.search(sent) for w in words):
                     hits.append(fmt(list(path)))
                     return
     walk(crop, ())
     return sorted(set(hits))
+
+
+def spacing_strings(crop):
+    """Prose leaves stating a distance beside a spacing word (promotes 1 and 2, guard 4)."""
+    return distance_restatements(crop, (SPACING_WORD,))
+
+
+def height_strings(crop, spread_too):
+    """Prose leaves stating a distance beside a height word (and a width word when a spread is authored)."""
+    return distance_restatements(crop, (HEIGHT_WORD, WIDTH_WORD) if spread_too else (HEIGHT_WORD,))
 
 
 # ---------------------------------------------------------------- the cached-quote check (extracted 2026-10-03)

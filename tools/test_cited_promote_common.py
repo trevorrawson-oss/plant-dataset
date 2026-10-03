@@ -36,7 +36,7 @@ SHARED = (
     "fmt", "set_at", "spacing_strings",
     "TOL_FT", "_NUMWORDS", "_NUM", "_FT", "_IN", "_QTY", "_JOIN", "_POSTFIX", "_LABEL", "_VERB",
     "_num_val", "_ft_groups", "ft_endpoints_stated", "quote_states_ft",
-    "cached_quote",
+    "cached_quote", "HEIGHT_WORD", "WIDTH_WORD", "distance_restatements", "height_strings",
 )
 IMPORT_RE = re.compile(r"(?m)^from cited_promote_common import \(")
 PIN_RE = re.compile(r"assertEqual\(\s*inspect\.getsource\(")
