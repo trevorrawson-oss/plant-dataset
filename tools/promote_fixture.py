@@ -48,6 +48,9 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # PLA-10 promote 3 (2026-10-03). NEVER AMEND 9cea239. Crop-level heights on 43 crops + the mature_dimensions
+    # sibling (16 PLA-465 backfills), 18 prose leaves, A62 mature_dimensions + A59 sibling armed.
+    'b331e5f2c99378526c3ac8f2f870232953b318c994b7dc3d8c54938f2b62c38d': '9cea239',
     # PLA-10 promote 2 (2026-10-02). NEVER AMEND 7177af3. 16 support/bed layout entries on 12 crops, 5 default
     # moves, apple's rootstock_options[].spacing_inches, 24 finding corrections, A44 rootstock key armed.
     '31b766e86a01377c88898568171bcb372d3da1d3146fa50f6cbd6288dd8b6369': '7177af3',
