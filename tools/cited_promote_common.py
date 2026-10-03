@@ -13,7 +13,7 @@ and requires its landed canonical byte for byte (cf1d480d, 31b766e8, b331e5f2). 
 pins the module's surface (SHARED, a typed literal) and the shim's identity re-export.
 SHIPS MUTATION-TESTED via mutate_cited_promote_common.py.
 """
-import csv, hashlib, html, io, json, os, re, unicodedata
+import csv, glob, hashlib, html, io, json, os, re, unicodedata
 
 import pypdf
 
@@ -198,6 +198,34 @@ def spacing_strings(crop):
                     return
     walk(crop, ())
     return sorted(set(hits))
+
+
+# ---------------------------------------------------------------- the cached-quote check (extracted 2026-10-03)
+# Was 16 lines inlined, byte-identically, in each PLA-10 promote's check_evidence (kickoff 60, ruling 5). Every
+# refusal message is the text those promotes refused with; the suites assert it.
+def cached_quote(r, man, evidence_dir, text_cache, tag):
+    """An EVIDENCE row's quote in norm_text form, once proven to sit in the hashed bytes it names.
+
+    Refuses unless (sha256, url) is a MANIFEST row, exactly one cache file carries that digest, the file's bytes
+    hash to their name, and the normalized quote (12+ characters) is a substring of the normalized page text
+    (PDFs through the pinned extractor). `text_cache` memoizes page text by digest across rows."""
+    if r["url"] not in man.get(r["sha256"], set()):
+        refuse(f"{tag}: ({r['sha256'][:12]}, url) is not in {evidence_dir}/MANIFEST.tsv")
+    files = glob.glob(os.path.join(evidence_dir, r["sha256"] + ".*"))
+    if len(files) != 1:
+        refuse(f"{tag}: {len(files)} cache files for {r['sha256'][:12]}")
+    if r["sha256"] not in text_cache:
+        raw = open(files[0], "rb").read()
+        if sha256_bytes(raw) != r["sha256"]:
+            refuse(f"{tag}: the cached bytes hash to {sha256_bytes(raw)[:12]}, not their name")
+        if files[0].endswith(".pdf"):
+            text_cache[r["sha256"]] = norm_text(pdf_text(raw))
+        else:
+            text_cache[r["sha256"]] = norm_text(raw.decode("utf-8", "replace"))
+    q = norm_text(r["quote"])
+    if len(q) < 12 or q not in text_cache[r["sha256"]]:
+        refuse(f"{tag}: the quote is not in the cached bytes: {r['quote'][:80]!r}")
+    return q
 
 
 # ---------------------------------------------------------------- added 2026-10-02, promote 3 session 1 (T4)

@@ -88,7 +88,7 @@ REPO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 import planting_layout_gate as PLG  # noqa: E402
 from bare_host_gate import is_bare  # noqa: E402  -- A63's predicate, imported, never retyped
-from cited_promote_common import (EVIDENCE_COLS, Refused, compact, fmt, leaf_diff, manifest,  # noqa: E402
+from cited_promote_common import (EVIDENCE_COLS, Refused, cached_quote, compact, fmt, leaf_diff, manifest,  # noqa: E402
                                   norm_text, parse_path, pdf_text, quote_states, refuse, resolve, serialize,
                                   set_at, sha256_bytes, spacing_strings)
 
@@ -526,22 +526,7 @@ def check_evidence(post_idx, stage, ev, catalog, evidence_dir):
             refuse(f"{tag}: source {r['source_id']!r} is not in the {what}'s sources")
         if (holder.get("anchoring_urls") or {}).get(r["source_id"], {}).get("url") != r["url"]:
             refuse(f"{tag}: url is not the {what}'s anchoring url for {r['source_id']!r}")
-        if r["url"] not in man.get(r["sha256"], set()):
-            refuse(f"{tag}: ({r['sha256'][:12]}, url) is not in {evidence_dir}/MANIFEST.tsv")
-        files = glob.glob(os.path.join(evidence_dir, r["sha256"] + ".*"))
-        if len(files) != 1:
-            refuse(f"{tag}: {len(files)} cache files for {r['sha256'][:12]}")
-        if r["sha256"] not in text_cache:
-            raw = open(files[0], "rb").read()
-            if sha256_bytes(raw) != r["sha256"]:
-                refuse(f"{tag}: the cached bytes hash to {sha256_bytes(raw)[:12]}, not their name")
-            if files[0].endswith(".pdf"):
-                text_cache[r["sha256"]] = norm_text(pdf_text(raw))
-            else:
-                text_cache[r["sha256"]] = norm_text(raw.decode("utf-8", "replace"))
-        q = norm_text(r["quote"])
-        if len(q) < 12 or q not in text_cache[r["sha256"]]:
-            refuse(f"{tag}: the quote is not in the cached bytes: {r['quote'][:80]!r}")
+        q = cached_quote(r, man, evidence_dir, text_cache, tag)
         if not quote_states(r["field"], json.loads(r["value"]), r["quote"]):
             refuse(f"{tag}: the quote states neither endpoint of {r['value']} (inches or feet)")
         covered.add((r["crop"], r["entry_id"]))

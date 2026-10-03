@@ -72,7 +72,7 @@ MUTATIONS = [
     ("s_promote_redefines_a_helper", P2, "\n\ndef load_canonical(", "\n\ndef compact(v):\n    return repr(v)\n\n\ndef load_canonical(",
      CT, "test_no_promote_redefines_a_shared_name"),
     ("s_shim_drops_a_name", SHIM, "    quote_states_ft,", "", CT, "test_the_shim_reexports_every_name_by_identity"),
-    ("s_shim_defines_its_own", SHIM, "    quote_states_ft,\n)\n", "    quote_states_ft,\n)\n\n\ndef norm_text(s):\n    return s\n",
+    ("s_shim_defines_its_own", SHIM, "    cached_quote,\n)\n", "    cached_quote,\n)\n\n\ndef norm_text(s):\n    return s\n",
      CT, "test_the_shim_defines_nothing_of_its_own"),
     ("s_module_helper_not_in_shared", CPC, "\n\ndef fmt(concrete):", "\n\ndef _stray():\n    pass\n\n\ndef fmt(concrete):",
      CT, "test_shared_is_the_whole_module_surface"),

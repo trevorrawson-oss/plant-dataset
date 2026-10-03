@@ -99,6 +99,7 @@ from cited_promote_common import (  # noqa: E402  -- the shared readers, moved h
     fmt,
     set_at,
     spacing_strings,
+    cached_quote,
 )
 
 CANON = os.path.join(REPO, "crops_data_final.json")
@@ -187,22 +188,7 @@ def check_evidence(post_idx, stage, ev, catalog, evidence_dir):
             refuse(f"{tag}: source {r['source_id']!r} is not in the entry's sources")
         if (e.get("anchoring_urls") or {}).get(r["source_id"], {}).get("url") != r["url"]:
             refuse(f"{tag}: url is not the entry's anchoring url for {r['source_id']!r}")
-        if r["url"] not in man.get(r["sha256"], set()):
-            refuse(f"{tag}: ({r['sha256'][:12]}, url) is not in {evidence_dir}/MANIFEST.tsv")
-        files = glob.glob(os.path.join(evidence_dir, r["sha256"] + ".*"))
-        if len(files) != 1:
-            refuse(f"{tag}: {len(files)} cache files for {r['sha256'][:12]}")
-        if r["sha256"] not in text_cache:
-            raw = open(files[0], "rb").read()
-            if sha256_bytes(raw) != r["sha256"]:
-                refuse(f"{tag}: the cached bytes hash to {sha256_bytes(raw)[:12]}, not their name")
-            if files[0].endswith(".pdf"):
-                text_cache[r["sha256"]] = norm_text(pdf_text(raw))
-            else:
-                text_cache[r["sha256"]] = norm_text(raw.decode("utf-8", "replace"))
-        q = norm_text(r["quote"])
-        if len(q) < 12 or q not in text_cache[r["sha256"]]:
-            refuse(f"{tag}: the quote is not in the cached bytes: {r['quote'][:80]!r}")
+        q = cached_quote(r, man, evidence_dir, text_cache, tag)
         if not quote_states(r["field"], json.loads(r["value"]), r["quote"]):
             refuse(f"{tag}: the quote states neither endpoint of {r['value']} (inches or feet)")
         covered.add((r["crop"], r["entry_id"], r["field"]))

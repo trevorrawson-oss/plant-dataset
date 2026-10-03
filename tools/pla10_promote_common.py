@@ -46,4 +46,5 @@ from cited_promote_common import (  # noqa: F401
     _ft_groups,
     ft_endpoints_stated,
     quote_states_ft,
+    cached_quote,
 )

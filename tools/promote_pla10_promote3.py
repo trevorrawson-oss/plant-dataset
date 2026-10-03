@@ -71,7 +71,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 from bare_host_gate import is_bare  # noqa: E402  -- A63's predicate, imported, never retyped
-from cited_promote_common import (DIST, EVIDENCE_COLS, SKIP_SUBTREES, Refused, compact, fmt,  # noqa: E402
+from cited_promote_common import (DIST, EVIDENCE_COLS, SKIP_SUBTREES, Refused, cached_quote, compact, fmt,  # noqa: E402
                                   ft_endpoints_stated, leaf_diff, manifest, norm_text, parse_path, pdf_text,
                                   quote_states_ft, refuse, resolve, serialize, set_at, sha256_bytes)
 
@@ -505,22 +505,7 @@ def check_evidence(post_idx, stage, ev, evidence_dir):
             refuse(f"{tag}: source {r['source_id']!r} is not in {SIB_S}")
         if (c.get(SIB_A) or {}).get(r["source_id"], {}).get("url") != r["url"]:
             refuse(f"{tag}: url is not the sibling's anchoring url for {r['source_id']!r}")
-        if r["url"] not in man.get(r["sha256"], set()):
-            refuse(f"{tag}: ({r['sha256'][:12]}, url) is not in {evidence_dir}/MANIFEST.tsv")
-        files = glob.glob(os.path.join(evidence_dir, r["sha256"] + ".*"))
-        if len(files) != 1:
-            refuse(f"{tag}: {len(files)} cache files for {r['sha256'][:12]}")
-        if r["sha256"] not in text_cache:
-            raw = open(files[0], "rb").read()
-            if sha256_bytes(raw) != r["sha256"]:
-                refuse(f"{tag}: the cached bytes hash to {sha256_bytes(raw)[:12]}, not their name")
-            if files[0].endswith(".pdf"):
-                text_cache[r["sha256"]] = norm_text(pdf_text(raw))
-            else:
-                text_cache[r["sha256"]] = norm_text(raw.decode("utf-8", "replace"))
-        q = norm_text(r["quote"])
-        if len(q) < 12 or q not in text_cache[r["sha256"]]:
-            refuse(f"{tag}: the quote is not in the cached bytes: {r['quote'][:80]!r}")
+        q = cached_quote(r, man, evidence_dir, text_cache, tag)
         value = json.loads(r["value"])
         if not quote_states_ft(r["field"], value, q):
             refuse(f"{tag}: the quote states neither endpoint of {r['value']} as a {r['field']} (TOL_FT)")
