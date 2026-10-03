@@ -9,6 +9,7 @@ import unittest
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from plant_dimensions_gate import shape_violations, presence_violations, coverage_violations, all_violations, FIELDS  # noqa: E402
+from plant_dimensions_gate import sibling_violations, SIBLING_SOURCES, SIBLING_ANCHORS  # noqa: E402
 
 FA = {"field": "plant_dimensions", "date": "2026-09-16", "sources": ["ucanr_ext"], "note": "x"}
 
@@ -99,6 +100,66 @@ class Presence(unittest.TestCase):
         v = presence_violations(c)
         self.assertEqual(len(v), 1, v)
         self.assertIn("footprint_inches", v[0])
+
+
+URL = "https://plants.ces.ncsu.edu/plants/solanum-melongena/"
+
+
+def cited(c, sources=("ncsu_ext",), anchors=None):
+    c["mature_dimensions_sources"] = list(sources)
+    c["mature_dimensions_anchoring_urls"] = (anchors if anchors is not None
+                                             else {s: {"url": URL, "verified": "2026-10-02"} for s in sources})
+    return c
+
+
+class Sibling(unittest.TestCase):
+    """PLA-10 promote 3 (spec §4.3, plan 58 §8 T5): an authored height or spread on a certified crop is CITED
+    by the crop-root pair, a source each with an anchor. The field_additions record rule stays beside it
+    (the record is amend-not-recert provenance; the sibling is the per-claim citation)."""
+
+    def test_the_pair_is_the_ruled_names(self):
+        self.assertEqual((SIBLING_SOURCES, SIBLING_ANCHORS),
+                         ("mature_dimensions_sources", "mature_dimensions_anchoring_urls"))
+
+    def test_a_cited_height_is_clean(self):
+        self.assertEqual(sibling_violations(cited(crop(height=[2, 4]))), [])
+
+    def test_a_height_with_no_sibling_FAILS(self):
+        v = sibling_violations(crop(height=[2, 4]))
+        self.assertTrue(any("mature_dimensions_sources" in x for x in v), v)
+
+    def test_a_spread_alone_with_no_sibling_FAILS(self):
+        v = sibling_violations(crop(spread=[1, 2]))
+        self.assertTrue(any("mature_dimensions_sources" in x for x in v), v)
+
+    def test_an_empty_or_blank_sibling_FAILS(self):
+        for bad in ([], [""], None):
+            c = crop(height=[2, 4]); c["mature_dimensions_sources"] = bad
+            c["mature_dimensions_anchoring_urls"] = {}
+            self.assertTrue(sibling_violations(c), bad)
+
+    def test_a_source_with_no_anchor_FAILS(self):
+        c = cited(crop(height=[2, 4]), sources=("ncsu_ext", "uf_ifas"),
+                  anchors={"ncsu_ext": {"url": URL, "verified": "2026-10-02"}})
+        v = sibling_violations(c)
+        self.assertTrue(any("uf_ifas" in x and "anchor" in x for x in v), v)
+
+    def test_an_anchor_with_no_http_url_FAILS(self):
+        for a in ({"verified": "2026-10-02"}, {"url": "plants.ces.ncsu.edu/x"}, {"url": ""}, "https://x.edu/y"):
+            c = cited(crop(height=[2, 4]), anchors={"ncsu_ext": a})
+            self.assertTrue(sibling_violations(c), a)
+
+    def test_the_record_rule_still_fires_beside_the_sibling(self):
+        c = cited(crop(height=[2, 4], fa=False))
+        self.assertTrue(any("field_additions" in x for x in shape_violations(c)))
+
+    def test_a_null_row_needs_no_sibling_and_a_shell_is_exempt(self):
+        self.assertEqual(sibling_violations(crop()), [])
+        self.assertEqual(sibling_violations(crop(height=[2, 4], certified=False)), [])
+
+    def test_sibling_is_off_by_default_in_all_violations(self):
+        self.assertEqual(all_violations({"crops": [crop(height=[2, 4])]}), [])
+        self.assertEqual(len(all_violations({"crops": [crop(height=[2, 4])]}, sibling=True)), 1)
 
 
 class AllViolations(unittest.TestCase):

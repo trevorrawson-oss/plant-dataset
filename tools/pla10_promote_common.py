@@ -192,3 +192,98 @@ def spacing_strings(crop):
                     return
     walk(crop, ())
     return sorted(set(hits))
+
+
+# ---------------------------------------------------------------- added 2026-10-02, promote 3 session 1 (T4)
+# The height/spread quote check (plan 58 §8 T4, ruling H4). PROMOTE 3 ONLY: promote 1's quote_states above is
+# untouched (it matches mature_height_ft exactly, so a rounded 47/12 fails, and it has no mature_spread_ft
+# branch). Not a copy of anything, so it carries no byte-identity pin; test_promote_pla10_promote3 pins
+# quote_states and _numbers unchanged instead.
+#
+# THE STATED TOLERANCE. Heights store the quotient to 4 places (H4: 47 in -> 3.9167). A stored endpoint e is
+# STATED by a figure f (in feet; an inches figure is f/12, "1 ft. 7 in." is 1 + 7/12) iff |e - f| <= TOL_FT,
+# half a unit in the 4th decimal: 3.9167 and 47/12 pass against "47 inches", 3.9 and 3.917 do not.
+# THE DIMENSION. A figure counts only for the dimension its clause names: a postfix word right after the
+# figure (tall / high / in height -> height; wide / across / in width / spread -> width; "tall and wide",
+# "in height and width" -> both; apart / between / long / in length -> NEITHER), else the nearest label to its
+# left (height(s) / width / spread / "height & spread"), else a growth verb just before it (reach, grow,
+# get up to -> height). So a spread can never be read off a height sentence, nor vine run off anything.
+TOL_FT = 0.00005
+_NUMWORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9,
+             "ten": 10, "eleven": 11, "twelve": 12, "fifteen": 15, "eighteen": 18, "twenty": 20}
+_NUM = r"(?:\d+(?:\.\d+)?|" + "|".join(_NUMWORDS) + r"|a(?=\s+foot\b))"
+_FT = r"(?:feet\b|foot\b|ft\b\.?|'|′)"
+_IN = r"(?:inches\b|inch\b|in\.|in\b(?!\s+(?:height|width|length|diameter|spread|the|a|an)\b)|\"|″)"
+_QTY = re.compile(rf"(?P<cf>{_NUM})\s*{_FT}\s*(?P<ci>{_NUM})\s*{_IN}"
+                  rf"|(?P<n>{_NUM})(?:\s*-?\s*(?:(?P<ft>{_FT})|(?P<inch>{_IN})))?")
+_JOIN = re.compile(r"\s*(?:-\s*)?(?:to|-|–|or)\s*")
+_POSTFIX = (
+    (re.compile(r"(?:tall|high)\s*,?\s*(?:and|&)\s*(?:wide|across)\b"), "HW"),
+    (re.compile(r"in\s+height\s*(?:and|&)\s*(?:width|spread)\b"), "HW"),
+    (re.compile(r"(?:tall|high|in\s+height)\b"), "H"),
+    (re.compile(r"(?:wide|across|in\s+width|in\s+diameter|in\s+spread|spread\b(?!\s*:))"), "W"),
+    (re.compile(r"(?:apart|between|deep|long|away|in\s+length|of\s+vine)\b"), ""),
+)
+_LABEL = re.compile(r"(?P<hw>height\s*(?:&|and)\s*(?:spread|width))|(?P<h>\bheights?\b)|(?P<w>\bwidth\b|\bspread\b)")
+_VERB = re.compile(r"\b(?:reach(?:es|ing)?|grow(?:s|ing)?|get)\b[^.;]{0,24}$")
+
+
+def _num_val(tok):
+    return float(_NUMWORDS[tok]) if tok in _NUMWORDS else (1.0 if tok == "a" else float(tok))
+
+
+def _ft_groups(q):
+    """[(dimension class 'H' / 'W' / 'HW' / '', [figures in feet])] for each measurement in a norm_text quote."""
+    qty = []
+    for m in _QTY.finditer(q):
+        if m.group("cf") is not None:
+            qty.append([m.start(), m.end(), _num_val(m.group("cf")) + _num_val(m.group("ci")) / 12, "ft"])
+        else:
+            unit = "ft" if m.group("ft") else ("in" if m.group("inch") else None)
+            qty.append([m.start(), m.end(), _num_val(m.group("n")), unit])
+    groups = []
+    for x in qty:
+        # one range: figures joined by an explicit "to" / "-" / "or" ("2 to10 feet", "18 inches to 4 feet",
+        # "1 ft. 0 in. - 2 ft. 0 in."); a unitless figure takes the next unit to its right
+        if groups and _JOIN.fullmatch(q[groups[-1][-1][1]:x[0]]):
+            groups[-1].append(x)
+        else:
+            groups.append([x])
+    out = []
+    for g in groups:
+        units = [x[3] for x in g]
+        if not any(units):
+            continue
+        vals, nxt = [], None
+        for x in reversed(g):
+            nxt = x[3] or nxt
+            vals.append(x[2] / 12 if nxt == "in" else x[2])
+        start, end = g[0][0], g[-1][1]
+        after = re.sub(r"^(?:\s*\([^)]*\))*\s*", "", q[end:])
+        cls = None
+        for rx, c in _POSTFIX:
+            if rx.match(after):
+                cls = c
+                break
+        if cls is None:
+            labels = list(_LABEL.finditer(q[:start]))
+            if labels:
+                lm = labels[-1]
+                cls = "HW" if lm.group("hw") else ("H" if lm.group("h") else "W")
+            elif _VERB.search(q[:start]):
+                cls = "H"
+            else:
+                cls = ""
+        out.append((cls, sorted(vals)))
+    return out
+
+
+def ft_endpoints_stated(field, value, quote):
+    """The endpoints of `value` that the quote STATES for this field's dimension, within TOL_FT."""
+    want = {"mature_height_ft": "H", "mature_spread_ft": "W"}[field]
+    figs = [v for cls, vals in _ft_groups(quote) if want in cls for v in vals]
+    return {e for e in value if any(abs(float(e) - f) <= TOL_FT for f in figs)}
+
+
+def quote_states_ft(field, value, quote):
+    return bool(ft_endpoints_stated(field, value, quote))

@@ -78,4 +78,19 @@ if "A59_COVERAGE_ARMED = True" in src:
     # a cane fruit is exempt by the predicate even with its record de-named (the branch, in isolation)
     out = gate("raspberry", de_name)
     assert "plant-dimensions:" not in out, out
+# PLA-10 promote 3 (T5): the SIBLING rule arms in the data commit that writes the siblings, never before
+# (armed on today's canonical, the 16 PLA-465 heights carry no sibling and would each fail).
+assert ("A59_SIBLING_ARMED = True" in src) == any("mature_dimensions_sources" in c for c in base["crops"]), \
+    "the sibling rule must arm in the same commit that writes mature_dimensions_sources, never before"
+assert "A59_SIBLING_ARMED" in src, "whole_crop_gate carries no A59_SIBLING_ARMED flag"
+if "A59_SIBLING_ARMED = True" in src:
+    def strip_sibling(c):
+        c.pop("mature_dimensions_sources", None)
+        c.pop("mature_dimensions_anchoring_urls", None)
+    out = gate("apple", strip_sibling)
+    assert "plant-dimensions:" in out and "mature_dimensions_sources" in out, out
+else:
+    # Unarmed, the block announces it and an uncited height is NOT failed for its sibling here.
+    out = gate(NULL_CROP, lambda c: (c.__setitem__("mature_height_ft", [1, 2]), with_fa(c)))
+    assert "sibling off" in out and "plant-dimensions:" not in out, out
 print("PASS gate A59 plant dimensions")

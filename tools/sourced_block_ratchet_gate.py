@@ -66,7 +66,14 @@ SIBLING_BLOCKS = {
     "description": ("description_beginner", "description_seasoned"),
     "harvest_ready": ("harvest_ready_beginner", "harvest_ready_seasoned"),
     "harvest_urgency": ("harvest_urgency",),
+    # PLA-10 promote 3 (spec §4.3, plan 58 §8 T5): one crop-root pair cites BOTH height fields.
+    "mature_dimensions": ("mature_height_ft", "mature_spread_ft"),
 }
+# A named sibling block whose ratchet is behind a flag. NAMED from the tools commit (so its keys are never
+# UNNAMED), RATCHETED only once its flag flips, in the data commit that writes the siblings: armed on a
+# canonical whose PLA-465 heights carry no sibling yet, each of the 16 would fail as a NEW uncited block.
+# test_sourced_block_ratchet_gate pins the flag to the data (armed iff a certified crop carries the key).
+MATURE_DIMENSIONS_ARMED = False
 # List families: name -> (locator, identity key or None for index, parent block covering it or None)
 ITEM_FAMILIES = {
     "pests": (("pests",), "id", None),
@@ -209,8 +216,10 @@ def _item_label(item, i, key):
     return f"[{i}]"
 
 
-def blocks(crop):
+def blocks(crop, mature_dimensions_armed=None):
     """Every NAMED block on this crop that carries authored content: [(identity, cited)]."""
+    if mature_dimensions_armed is None:
+        mature_dimensions_armed = MATURE_DIMENSIONS_ARMED
     slug = crop.get("slug")
     out = []
 
@@ -222,6 +231,8 @@ def blocks(crop):
         if isinstance(b, dict) and carries_content(b):
             add(name, "sources", is_cited(b.get("sources")))
     for name, carriers in SIBLING_BLOCKS.items():
+        if name == "mature_dimensions" and not mature_dimensions_armed:
+            continue
         if any(has_content(crop.get(k)) for k in carriers):
             add(name, f"{name}_sources", is_cited(crop.get(f"{name}_sources")))
     for name, (loc, key, parent) in ITEM_FAMILIES.items():
@@ -246,8 +257,8 @@ def blocks(crop):
     return out
 
 
-def uncited(crop):
-    return sorted(ident for ident, cited in blocks(crop) if not cited)
+def uncited(crop, mature_dimensions_armed=None):
+    return sorted(ident for ident, cited in blocks(crop, mature_dimensions_armed) if not cited)
 
 
 # ---------------------------------------------------------------- DISCOVERY
@@ -308,12 +319,12 @@ def pot_uncited(crop):
 
 
 # ---------------------------------------------------------------- VERDICTS
-def crop_violations(crop):
+def crop_violations(crop, mature_dimensions_armed=None):
     """Per-crop half (whole_crop_gate A62). No-op off certified: the waivers cover certified only."""
     if not certified(crop):
         return []
     V = []
-    for ident in uncited(crop):
+    for ident in uncited(crop, mature_dimensions_armed):
         mv = migration_verdict(crop, ident)
         if mv is not None:
             if not mv[0]:
@@ -334,15 +345,15 @@ def crop_violations(crop):
     return V
 
 
-def roster(data):
+def roster(data, mature_dimensions_armed=None):
     """(certified_count, inspected, live_uncited, violations, stale, pot_live)."""
     cert = [c for c in data.get("crops", []) if certified(c)]
     inspected, live, V = 0, [], []
     for c in cert:
-        bl = blocks(c)
+        bl = blocks(c, mature_dimensions_armed)
         inspected += len(bl)
         live.extend(i for i, ok in bl if not ok)
-        V.extend(crop_violations(c))
+        V.extend(crop_violations(c, mature_dimensions_armed))
     pot_live = sorted(c["slug"] for c in cert if pot_uncited(c))
     if len(pot_live) > POT_CEILING:
         V.append(f"uncited {POT_FIELD} population is {len(pot_live)}, ratchet ceiling is "

@@ -91,7 +91,10 @@ class PinsAreTheMeasurement(unittest.TestCase):
             "heat_threshold_temp_f", "indoor_cycle", "pet_safe", "ph", "photoperiod",
             "pollination", "rotation", "soil", "start_method", "storage", "succession_policy",
             "thinning", "varieties", "watering", "winter_hardiness", "yield_expectations"})
-        self.assertEqual(set(G.SIBLING_BLOCKS), {"description", "harvest_ready", "harvest_urgency"})
+        self.assertEqual(set(G.SIBLING_BLOCKS), {"description", "harvest_ready", "harvest_urgency",
+                                                 "mature_dimensions"})
+        # PLA-10 promote 3 (spec §4.3, plan 58 §8 T5): one crop-root pair cites both height fields.
+        self.assertEqual(G.SIBLING_BLOCKS["mature_dimensions"], ("mature_height_ft", "mature_spread_ft"))
         self.assertEqual(set(G.ITEM_FAMILIES), {
             "pests", "diseases", "growth_stages", "failure_diagnostics", "notifications",
             "weather_triggers", "rootstock_options", "varieties.recommended",
@@ -123,6 +126,86 @@ class PinsAreTheMeasurement(unittest.TestCase):
     def test_floor_is_below_the_measured_population(self):
         """Measured 7063 on 00dda31c. The floor is a literal, never derived from the run it bounds."""
         self.assertEqual(G.MIN_INSPECTED, 6500)
+
+
+# ------------------------------------------------------- PLA-10 promote 3: the mature_dimensions sibling (T5)
+def _sib(c, sid="ncsu_ext", url="https://plants.ces.ncsu.edu/plants/solanum-melongena/"):
+    c["mature_dimensions_sources"] = [sid]
+    c["mature_dimensions_anchoring_urls"] = {sid: {"url": url, "verified": "2026-10-02"}}
+
+
+class MatureDimensionsSibling(unittest.TestCase):
+    """spec §4.3: `mature_dimensions_sources` / `_anchoring_urls` cite mature_height_ft + mature_spread_ft.
+    NAMED now (so the keys are not UNNAMED), RATCHETED only once MATURE_DIMENSIONS_ARMED flips, in the data
+    commit that writes the siblings: armed on today's canonical, the 16 PLA-465 heights (no sibling yet)
+    would each fail as a NEW uncited block and redden gate_all (gates arm off the data)."""
+
+    def test_the_flag_matches_the_data(self):
+        carrying = any("mature_dimensions_sources" in c for c in _CANON["crops"] if G.certified(c))
+        self.assertEqual(G.MATURE_DIMENSIONS_ARMED, carrying,
+                         "MATURE_DIMENSIONS_ARMED flips in the SAME commit that writes the siblings, never before")
+
+    def test_the_sibling_keys_are_not_UNNAMED(self):
+        d = fresh()
+        _sib(by(d)["eggplant"])
+        by(d)["eggplant"]["mature_height_ft"] = [2, 4]
+        self.assertEqual(G.unnamed_fields(by(d)["eggplant"]), [])
+
+    def test_an_UNNAMED_height_citation_key_FAILS(self):
+        """A key spelled per field (or misspelled) is not the ruled pair: naming is part of adding."""
+        for k in ("mature_height_ft_sources", "mature_dimension_sources", "mature_spread_ft_anchoring_urls"):
+            d = fresh()
+            by(d)["eggplant"][k] = ["ncsu_ext"] if k.endswith("_sources") else {}
+            v = violations(d)
+            self.assertTrue(any(f"UNNAMED sourced field {k}" in m for m in v), (k, v))
+
+    def test_armed_a_height_with_no_sibling_FAILS_by_name(self):
+        d = fresh()
+        by(d)["eggplant"]["mature_height_ft"] = [2, 4]
+        v = G.roster(d, mature_dimensions_armed=True)[3]
+        self.assertTrue(any("eggplant|mature_dimensions|mature_dimensions_sources" in m for m in v), v)
+
+    def test_armed_a_spread_alone_with_no_sibling_FAILS(self):
+        d = fresh()
+        by(d)["eggplant"]["mature_spread_ft"] = [1, 2]
+        v = G.roster(d, mature_dimensions_armed=True)[3]
+        self.assertTrue(any("eggplant|mature_dimensions|" in m for m in v), v)
+
+    def test_armed_an_EMPTY_sibling_FAILS(self):
+        d = fresh()
+        by(d)["eggplant"]["mature_height_ft"] = [2, 4]
+        by(d)["eggplant"]["mature_dimensions_sources"] = []
+        v = G.roster(d, mature_dimensions_armed=True)[3]
+        self.assertTrue(any("eggplant|mature_dimensions|" in m for m in v), v)
+
+    def test_armed_a_cited_height_passes(self):
+        d = fresh()
+        for c in d["crops"]:
+            if G.certified(c) and (c.get("mature_height_ft") or c.get("mature_spread_ft")):
+                _sib(c)
+        by(d)["eggplant"]["mature_height_ft"] = [2, 4]
+        _sib(by(d)["eggplant"])
+        n, insp, live, V, stale, pot = G.roster(d, mature_dimensions_armed=True)
+        self.assertEqual(V, [])
+
+    def test_armed_the_live_PLA465_heights_are_what_the_backfill_must_cite(self):
+        """Positive control on the population: armed against today's canonical, exactly the crops with an
+        authored height or spread fail, so arming before the backfill WOULD flood (and the flag is off)."""
+        V = G.roster(_CANON, mature_dimensions_armed=True)[3]
+        hit = {m.split("NEW uncited block ")[1].split("|")[0] for m in V if "|mature_dimensions|" in m}
+        want = {c["slug"] for c in _CANON["crops"] if G.certified(c)
+                and (c.get("mature_height_ft") is not None or c.get("mature_spread_ft") is not None)}
+        self.assertEqual(len(want), 16)
+        self.assertEqual(hit, want)
+
+    def test_unarmed_the_live_canonical_is_clean(self):
+        self.assertEqual(G.roster(_CANON, mature_dimensions_armed=False)[3], [])
+
+    def test_unarmed_the_block_is_not_counted(self):
+        d = fresh()
+        by(d)["eggplant"]["mature_height_ft"] = [2, 4]
+        self.assertFalse(any("|mature_dimensions|" in i for i, _ in G.blocks(by(d)["eggplant"], False)))
+        self.assertTrue(any("|mature_dimensions|" in i for i, _ in G.blocks(by(d)["eggplant"], True)))
 
 
 # ----------------------------------------------------------------------- the live canonical

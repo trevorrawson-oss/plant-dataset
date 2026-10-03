@@ -938,11 +938,15 @@ for m in _cpv:
 # NAMES the field. This makes the twelve recorded null-rulings load-bearing: a thirteenth null cannot appear
 # silently. ARMED at birth because it is GREEN on the canonical that carries the rulings (16 authored,
 # 2 cane-exempt, 10 recorded, 0 unexplained) -- the rollout it floors is complete, so arming does not flood.
-from plant_dimensions_gate import shape_violations as _pd_shape, presence_violations as _pd_presence, coverage_violations as _pd_coverage
+# SIBLING (PLA-10 promote 3, plan 58 §8 T5): an authored height or spread is cited by the crop-root pair
+# mature_dimensions_sources + _anchoring_urls, an anchor per source. Unarmed until the data commit writes the
+# siblings (the 16 PLA-465 heights carry none before it); test_gate_plant_dimensions_a59 pins flag == data.
+from plant_dimensions_gate import shape_violations as _pd_shape, presence_violations as _pd_presence, coverage_violations as _pd_coverage, sibling_violations as _pd_sibling
 A59_PRESENCE_ARMED = True
 A59_COVERAGE_ARMED = True
-print(f"A59. plant dimensions (height/spread pairs, footprint below spacing, provenance; presence {'ARMED' if A59_PRESENCE_ARMED else 'off'}, coverage {'ARMED' if A59_COVERAGE_ARMED else 'off'})")
-_pdv = _pd_shape(crop) + (_pd_presence(crop) if A59_PRESENCE_ARMED else []) + (_pd_coverage(crop) if A59_COVERAGE_ARMED else [])
+A59_SIBLING_ARMED = False
+print(f"A59. plant dimensions (height/spread pairs, footprint below spacing, provenance; presence {'ARMED' if A59_PRESENCE_ARMED else 'off'}, coverage {'ARMED' if A59_COVERAGE_ARMED else 'off'}, sibling {'ARMED' if A59_SIBLING_ARMED else 'off'})")
+_pdv = _pd_shape(crop) + (_pd_presence(crop) if A59_PRESENCE_ARMED else []) + (_pd_coverage(crop) if A59_COVERAGE_ARMED else []) + (_pd_sibling(crop) if A59_SIBLING_ARMED else [])
 print(f"  plant-dimension violations: {len(_pdv)}")
 for m in _pdv:
     fail(f"plant-dimensions: {m}")

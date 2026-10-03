@@ -18,8 +18,15 @@ carrying the keys, never before (gates arm off the data).
 COVERAGE (a woody crop's null must be cane-fruit N/A or explained by a record naming the field) is behind
 --presence's sibling --coverage here and behind A59_COVERAGE_ARMED in whole_crop_gate.
 
+SIBLING (PLA-10 promote 3, spec §4.3, plan 58 §8 T5): a non-null height or spread on a certified crop is
+CITED by the crop-root pair mature_dimensions_sources (non-empty, non-blank ids) + mature_dimensions_
+anchoring_urls (an http(s) url for EVERY listed source). The record rule above STAYS: the record is the
+amend-not-recert provenance, the sibling the per-claim citation; different jobs. Behind --sibling here and
+A59_SIBLING_ARMED in whole_crop_gate, flipped in the data commit that writes the siblings (the 16 PLA-465
+heights carry none before it).
+
 Usage:
-  plant_dimensions_gate.py [PATH] [--presence] [--coverage]
+  plant_dimensions_gate.py [PATH] [--presence] [--coverage] [--sibling]
 """
 import json
 import sys
@@ -32,6 +39,8 @@ FIELDS = ("mature_height_ft", "mature_spread_ft", "footprint_inches")
 RANGE_FIELDS = ("mature_height_ft", "mature_spread_ft")
 CERTIFIED = "verified_gs_arc"
 PROVENANCE_FIELD = "plant_dimensions"
+SIBLING_SOURCES = "mature_dimensions_sources"
+SIBLING_ANCHORS = "mature_dimensions_anchoring_urls"
 
 
 def _num(v):
@@ -74,6 +83,25 @@ def shape_violations(crop):
                 V.append(f"{slug}: footprint_inches {fp!r} must be strictly below spacing_inches[0] {sp[0]!r}")
     if authored and _certified(crop) and not _has_provenance(crop):
         V.append(f"{slug}: authored plant dimensions on a certified crop with no field_additions entry for {PROVENANCE_FIELD!r}")
+    return V
+
+
+def sibling_violations(crop):
+    if not _certified(crop) or all(crop.get(f) is None for f in RANGE_FIELDS):
+        return []
+    slug = crop.get("slug") or "?"
+    src = crop.get(SIBLING_SOURCES)
+    if not (isinstance(src, list) and src and all(isinstance(s, str) and s.strip() for s in src)):
+        return [f"{slug}: authored plant dimensions with no {SIBLING_SOURCES} (a non-empty list of source ids); "
+                f"got {src!r}"]
+    anchors = crop.get(SIBLING_ANCHORS)
+    anchors = anchors if isinstance(anchors, dict) else {}
+    V = []
+    for s in src:
+        a = anchors.get(s)
+        url = a.get("url") if isinstance(a, dict) else None
+        if not (isinstance(url, str) and url.startswith(("http://", "https://"))):
+            V.append(f"{slug}: {SIBLING_SOURCES} source {s!r} has no http(s) anchor in {SIBLING_ANCHORS}")
     return V
 
 
@@ -126,10 +154,12 @@ def coverage_violations(crop):
             f"(author it, or record why it stays null)"]
 
 
-def all_violations(data, presence=False, coverage=False):
+def all_violations(data, presence=False, coverage=False, sibling=False):
     V = []
     for c in data.get("crops", []):
         V += shape_violations(c)
+        if sibling:
+            V += sibling_violations(c)
         if presence:
             V += presence_violations(c)
         if coverage:
@@ -142,15 +172,17 @@ def main(argv):
     path = args[0] if args else "crops_data_final.json"
     presence = "--presence" in argv
     coverage = "--coverage" in argv
+    sibling = "--sibling" in argv
     with open(path) as fh:
         data = json.load(fh)
-    V = all_violations(data, presence=presence, coverage=coverage)
+    V = all_violations(data, presence=presence, coverage=coverage, sibling=sibling)
     for v in V:
         print("VIOLATION:", v)
     carrying = sum(1 for c in data["crops"] if all(f in c for f in FIELDS))
     authored = sum(1 for c in data["crops"] if any(c.get(f) is not None for f in FIELDS))
     print(f"plant_dimensions_gate: {len(V)} violation(s); {carrying}/{len(data['crops'])} crops carry the keys, "
-          f"{authored} authored; presence {'ARMED' if presence else 'off'}; coverage {'ARMED' if coverage else 'off'}")
+          f"{authored} authored; presence {'ARMED' if presence else 'off'}; coverage {'ARMED' if coverage else 'off'}; "
+          f"sibling {'ARMED' if sibling else 'off'}")
     return 1 if V else 0
 
 
