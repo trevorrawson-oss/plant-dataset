@@ -1,5 +1,9 @@
 # MORNING REPORT -- PLA-10 promote 3, session 1 (unattended run, 2026-10-02/03)
 
+**RULED 2026-10-03:** Trevor's rulings on every row below are folded into docs/kickoffs/59-pla10-promote3-worklist.md
+as TAKEN (commit `docs(pla10): promote 3 rulings`). Session 2 authors from the ruled worklist; the "Needs Trevor's
+ruling" list below is historical. The three data-commit items further down still stand.
+
 Nothing broke; no stop condition hit. Nothing pushed. Canonical 31b766e8 untouched (== LATEST.txt); no crop record
 edited; no stage file under this directory except this file.
 

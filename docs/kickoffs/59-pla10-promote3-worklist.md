@@ -8,6 +8,13 @@ session start HEAD `3475fae` == origin/main; this session's tools commit `ac06c1
 dimension), T5 (A62 / A59 sibling, both unarmed). Owed in the data commit: `tools/staging/pla10_promote3/HANDOFF.md`.
 **Plan:** `docs/kickoffs/58-pla10-promote2-plan.md` §3 (rulings H1-H4, K1-K4 TAKEN), measurements C and D.
 
+**RULED (Trevor, 2026-10-03): every decision row below is TAKEN as recorded in its row** (§1 tie-break, §3, §4).
+Two rulings were conditional and were resolved against the data in the rulings commit: **roma** (OSU EC1333 is cited
+on roma but NOT hashed; the hashed OSU document is the planting-dates table `ir.library.oregonstate.edu/downloads/
+v979v342w`, which states no height, so the fallback applies: Cornell [2,6]) and **mint** (the crop's description is
+genus-level "Mint (Mentha)" garden mint and names spearmint "the mild, sweet everyday mint": authored from the
+spearmint page with scope recorded; the session-3 reviewer confirms).
+
 Session 2 authors from this file: one stage file per row, `crops/<slug>.json`, every figure cited to the hashed bytes
 named here (`tools/.evidence_cache`, MANIFEST rows appended this session, saved_by "PLA-10 promote 3 session 1").
 
@@ -49,12 +56,13 @@ Promote 1's W2 (refined) + W6, carried over unchanged in substance:
 1. **A closed range beats an open bound or a point** ("up to 4 feet", "3 feet") from another cited page (W2).
 2. **One page per value; never a span joined across two pages** (W6). Two clauses of ONE page are fine. Height and
    spread are separate values: each comes from one page, and the two may come from different pages.
-3. Between two **closed ranges from different pages** (W2 does not decide this), the recommendation picks: the page
-   whose subject is the crop as grown on its default entry (scope first); then the page the crop's own prose already
-   agrees with (fewest restatement edits); then the NC State Toolbox dimensions record (the convention K4 already
-   uses on the backfill). **Never the union.**
-4. A figure tied explicitly to a habit or support choice (climb vs bush, det vs indet) authors null (spec §4.4's peas
-   precedent: which habit is grown is a `plant_habit` fact, PLA-12), unless the page states one figure for the crop.
+3. **TAKEN (2026-10-03): the tie-break between two closed ranges from different pages** (W2 applies first: a closed
+   range beats a single figure or a minimum): **(1) scope** (the page names the crop or its habit), **(2) the range the
+   crop's own prose already agrees with**, **(3) the NC State Toolbox record**. **Never the union, and never choose a
+   range for being narrower.**
+4. **TAKEN:** a figure the page ties to a habit (trailing / climbing vs bush) authors null (spec §4.4's peas precedent:
+   which habit is grown is a `plant_habit` fact, PLA-12). A single closed range stated for the crop that SPANS habits
+   (the tomatoes' det + indet) is authored, recorded as habit-spanning.
 
 ---
 
@@ -86,7 +94,7 @@ Columns: **page** (hashed; sha prefix), **quote** (norm_text form, verbatim subs
 | -- | -- | -- | -- | -- | -- | -- | -- |
 | 12 | cherry-tomato | Cornell tomato-growing-guide | "height: 2 to 6 feet staked and pruned plants can grow to well over 6 feet tall ... spread: 2 to 6 feet" | H 2-6 (+ open 6); W 2-6 | DISAGREEMENT + habit-spanning | [2,6] / [2,6] | §3 row 2 |
 | 13 | beefsteak-tomato | same | same | same | DISAGREEMENT + habit | [2,6] / [2,6] | prose "5 to 6 feet", "6 feet tall or more": agrees (note) |
-| 14 | roma-tomato | same | same | same | DISAGREEMENT + habit | [2,6] / [2,6] | §3 row 2 (roma is mostly determinate; alt below) |
+| 14 | roma-tomato | same | same | same | DISAGREEMENT + habit | **[2,6] / [2,6] (TAKEN, fallback)** | §3 row 2: OSU EC1333 det [3,4] would win on scope, but it is not hashed |
 | 15 | grape-tomato | same | same | same | DISAGREEMENT + habit | [2,6] / [2,6] | |
 | 16 | heirloom-tomato | same | same | same | DISAGREEMENT + habit | [2,6] / [2,6] | prose "5 to 6 feet tall or more": agrees (note) |
 | 17 | tomatillo | NCSU physalis-philadelphica; USU tomatillos (hashed) | "...grow to 3 to 4 feet in height and width"; "tomatillos grow 3-4 feet tall and wide" | HW 3-4 (both) | CLOSED | [3,4] / [3,4] | pages agree; prose "3 to 4 feet tall and wide" agrees |
@@ -103,22 +111,22 @@ Columns: **page** (hashed; sha prefix), **quote** (norm_text form, verbatim subs
 | 28 | asparagus | OSU news asparagus | "asparagus foliage can reach 5 to 6 feet in height" | H 5-6 | CLOSED | [5,6] / null | fern height; spear heights in prose are harvest-stage |
 | 29 | leek | UMN growing-leeks (redirected) | "plants grow two to three feet tall, and can have a width of two inches." | H 2-3 (W 0.1667 = shaft) | CLOSED | [2,3] / **null** | the "width" is shaft diameter: never a spread |
 | 30 | basil | UC Santa Clara MG basil | "size: 8 to 24 inches high, 8 to 12 inches wide, depending on variety" | H 0.6667-2; W 0.6667-1 | DISAGREEMENT | [0.6667,2] / [0.6667,1] | §3 row 5 |
-| 31 | cilantro-coriander | USU cilantro (hashed) | "plants grow to 1-3 feet tall" | H 1-3 | DISAGREEMENT | [1,3] / null | §3 row 6; D-CIL (UW page changed) |
+| 31 | cilantro-coriander | USU cilantro (hashed) | "plants grow to 1-3 feet tall" | H 1-3 | DISAGREEMENT | **[1,3] / null (TAKEN)** | §3 row 6; D-CIL: UW `1 1⁄2` is a known T4 reader gap |
 | 32 | chives | NCSU Toolbox allium-schoenoprasum | "height: 1 ft. 0 in. - 1 ft. 6 in. width: 1 ft. 0 in. - 1 ft. 5 in." | H 1-1.5; W 1-1.4167 | DISAGREEMENT | [1,1.5] / [1,1.4167] | §3 row 7 |
-| 33 | mint | NCSU Toolbox mentha-spicata | "growing quickly 1 to 2 feet high and wide" | HW 1-2 | SCOPE-DOUBT | [1,2] / [1,2] | D-MINT: spearmint page; attrs agree H 1-2 |
+| 33 | mint | NCSU Toolbox mentha-spicata | "growing quickly 1 to 2 feet high and wide" | HW 1-2 | SCOPE-DOUBT | **[1,2] / [1,2] (TAKEN, conditional met)** | D-MINT: spearmint page, scope recorded; session-3 reviewer confirms |
 | 34 | lemongrass | NCSU Toolbox cymbopogon-citratus (hashed) | "height: 2 ft. 0 in. - 4 ft. 0 in. width: 2 ft. 0 in. - 3 ft. 0 in." | H 2-4; W 2-3 | DISAGREEMENT | [2,4] / [2,3] | §3 row 8; prose "3 to 6 feet" x2 must be edited |
 | 35 | marigold | NCSU Toolbox tagetes | "height: 1 ft. 0 in. - 4 ft. 0 in. width: 0 ft. 6 in. - 1 ft. 0 in." | H 1-4; W 0.5-1 | DISAGREEMENT | [1,4] / [0.5,1] | §3 row 9 |
-| 36 | nasturtium | NCSU Toolbox tropaeolum-majus | "height: 1 ft. 0 in. - 10 ft. 0 in. width: 1 ft. 0 in. - 3 ft. 0 in." | H 1-10; W 1-3 | CONDITIONAL (habit-spanning) | **null / null (stage null)** | D-NAST |
+| 36 | nasturtium | NCSU Toolbox tropaeolum-majus | "height: 1 ft. 0 in. - 10 ft. 0 in. width: 1 ft. 0 in. - 3 ft. 0 in." | H 1-10; W 1-3 | CONDITIONAL (habit-tied) | **null / null (TAKEN: stage null)** | D-NAST |
 | 37 | sunflower | NCSU Toolbox helianthus-annuus | "height: 1 ft. 6 in. - 10 ft. 0 in. width: 1 ft. 6 in. - 3 ft. 0 in." | H 1.5-10; W 1.5-3 | DISAGREEMENT | [1.5,10] / [1.5,3] | §3 row 10 |
 | 38 | borage | UC Marin MG borage (hashed) + NCSU borago-officinalis | "borage is an exuberant annual that grows two to three feet tall"; NCSU "width: 1 ft. 0 in. - 1 ft. 4 in." | H 2-3; W 1-1.3333 | DISAGREEMENT | [2,3] / [1,1.3333] | §3 row 11 |
 | 39 | calendula | UF/IFAS FP087 | "height: 1 to 2 feet spread: 1 to 2 feet" | H 1-2; W 1-2 | DISAGREEMENT | [1,2] / [1,2] | §3 row 12 |
 | 40 | zinnia | UF/IFAS FP623 (redirected) | "height: 1 to 3 feet spread: 1 to 2 feet" | H 1-3; W 1-2 | DISAGREEMENT | [1,3] / [1,2] | §3 row 13 |
-| 41 | chamomile | UC Santa Clara MG chamomile: **403, NOT HASHED** | (doc cache only) "size: 1 to 2 feet tall, 12 to 14 inches wide" | (H 1-2; W 1-1.1667) | DISAGREEMENT + UNFETCHABLE | **null / null (stage null) unless session 2 hashes a page** | §3 row 14 |
+| 41 | chamomile | UC Santa Clara MG chamomile: **403, NOT HASHED** | (doc cache only) "size: 1 to 2 feet tall, 12 to 14 inches wide" | (H 1-2; W 1-1.1667) | DISAGREEMENT + UNFETCHABLE | **TAKEN: hunt first, then null** | §3 row 14 |
 | 42 | sweet-alyssum | UW-Madison sweet-alyssum + NCSU lobularia-maritima | "sweet alyssum grows 3-9 inches tall with a wider spread."; NCSU "width: 0 ft. 6 in. - 1 ft. 0 in." | H 0.25-0.75; W 0.5-1 | DISAGREEMENT | [0.25,0.75] / [0.5,1] | §3 row 15 |
 | 43 | echinacea | NCSU Toolbox echinacea-purpurea | "it may grow 3 to 4 feet tall" | H 3-4 | DISAGREEMENT | [3,4] / null | §3 row 16 |
 | 44 | bee-balm | NCSU Toolbox monarda-didyma (hashed) | "height: 2 ft. 0 in. - 4 ft. 0 in. width: 2 ft. 0 in. - 3 ft. 0 in." | H 2-4; W 2-3 | CLOSED | [2,4] / [2,3] | same page prose "can reach a height of 4 feet" agrees |
 | 45 | viola | NCSU Toolbox viola-x-wittrockiana (hashed) | "it grows 6 to 9 inches in height and 9 to 12 inches in width." | H 0.5-0.75; W 0.75-1 | DISAGREEMENT + SCOPE-DOUBT | [0.5,0.75] / [0.75,1] | §3 row 17 |
-| 46 | sweet-pea | NCSU Toolbox lathyrus-odoratus | "height: 3 ft. 0 in. - 8 ft. 0 in. width: 2 ft. 0 in. - 3 ft. 0 in." | H 3-8; W 2-3 | CONDITIONAL (habit / support) | **null / null (stage null)** | D-SPEA |
+| 46 | sweet-pea | NCSU Toolbox lathyrus-odoratus | "height: 3 ft. 0 in. - 8 ft. 0 in. width: 2 ft. 0 in. - 3 ft. 0 in." | H 3-8; W 2-3 | CONDITIONAL (habit-tied) | **null / null (TAKEN: stage null)** | D-SPEA |
 
 ### 2.3 PLA-465's 16: the backfill (values unchanged; K3 re-hash; the record keeps its historical sha)
 
@@ -152,52 +160,54 @@ on 23 new crops.
 
 ---
 
-## 3. The 21 disagreement decision rows (W2 range rule, §1)
+## 3. The 21 disagreement decision rows (W2 range rule, §1) -- ALL TAKEN 2026-10-03
 
 | # | crop(s) | the pages | recommendation | why |
 | -- | -- | -- | -- | -- |
-| 1 | cosmos | UF [3,6]; NCSU prose "up to 4 feet" (open); **NCSU attrs "height: 2 ft. 0 in. - 4 ft. 0 in." (closed)** | **Keep H1: UF [3,6].** | H1 was ruled on "NCSU has no lower bound"; the fresh bytes show NCSU's attributes line does state a closed [2,4]. Rule 3: the crop's prose ("roughly 3 to 6 ft"; Sensation 3 to 4 ft) agrees with UF, so UF still wins on fewest edits. **Trevor: H1's premise was incomplete; confirm it stands.** |
-| 2 | cherry, beefsteak, roma, grape, heirloom tomato | NCSU [1,10] / [1,4] (prose + attrs); Cornell "height: 2 to 6 feet ... spread: 2 to 6 feet" | **Cornell [2,6] / [2,6] on all five.** | Both closed; NCSU's 1-10 spans dwarf to unpruned indeterminate, wider than any tomato as grown on its default (rule 3, scope). Cornell's is one unconditional statement for the garden tomato (rule 4 does not force null). Prose ("5 to 6 feet", "6 feet or more") sits at Cornell's high end and its "well over 6 feet" clause: `agrees`. **Alt for roma:** OSU EC1333 "determinate cultivars tend to be fairly short (3 to 4 feet tall)" if Trevor wants roma on its habit (needs that page hashed). |
-| 3 | onion | NCSU [1,1.5] / [0.5,1]; Cornell scene4983 [1,3] / [0.5,1] | **NCSU [1,1.5] / [0.5,1].** | The bulb crop's foliage height; Cornell's 3 ft high end reaches seed-stalk height. Spreads agree. NCSU species record (rule 3). |
-| 4 | artichoke | Cornell [3,6] / [2,4]; TAMU EHT-065 "plants can reach 3 feet in height and w idth" (point; PDF spacing) | **Cornell [3,6] / [2,4].** | Rule 1: a closed range beats a point. (UMaine/VT 4-5 ft and EDIS "more than 4 feet" are other pages, not in this promote's evidence.) |
-| 5 | basil | UC Santa Clara [0.6667,2] / [0.6667,1] ("depending on variety"); UC Sonoma sweet basil "2-21⁄2 ft" (type-specific) | **Santa Clara [0.6667,2] / [0.6667,1].** | Scope: the crop covers many basils; Sonoma's is sweet basil only, and its `21⁄2` is unreadable by T4 anyway. |
-| 6 | cilantro-coriander | UW foliage "1 to 1⁄2 feet" / flower stems 2-3 ft (**changed page**, D-CIL); USU "plants grow to 1-3 feet tall" | **USU [1,3] / null.** | Both are closed; UW's foliage figure is the better meaning for a leaf crop but its hashed text uses U+2044 (`1 1⁄2`), which T4 cannot read without a tools change. USU's is one whole-plant statement, hashed and readable. **Alt:** UW foliage [1,1.5] after a T4 fraction extension (TDD + harness) in session 2. |
-| 7 | chives | NCSU [1,1.5] / [1,1.4167]; Illinois "about 10-12 inches tall" | **NCSU [1,1.5] / [1,1.4167].** | Both closed; NCSU is the species record and gives both dims (rule 3). Variety prose 8-14 in / 18-20 in: `agrees` (variety-level). |
-| 8 | lemongrass | NCSU [2,4] / [2,3]; UC Santa Clara "size: 3 to 4 feet tall, 2 to 3 feet wide" (fetched on retry) | **NCSU [2,4] / [2,3]**, and **edit** the prose "3 to 6 feet" (description_seasoned, growth_stages[2]) to the cited figure. | Both closed; spreads agree; prose "3 to 6" exceeds both pages' 4 ft (the H3 pattern), so an edit is owed either way (one edit each); tie goes to the Toolbox record (rule 3). **Alt:** Santa Clara [3,4] keeps the prose's 3 ft floor. |
-| 9 | marigold | NCSU tagetes (genus) prose + attrs [1,4] / [0.5,1]; Clemson 6 in - 3 ft; UF 1-2 ft | **NCSU [1,4] / [0.5,1].** | One page, two clauses agreeing; genus page matches the crop's scope (erecta + patula). |
-| 10 | sunflower | NCSU prose "grow 2 to10 feet tall"; NCSU attrs [1.5,10] / [1.5,3] (one page, two figures) | **NCSU attrs [1.5,10] / [1.5,3].** | W6 allows either clause of one page; the attributes line carries both dims in one statement (the K4 convention). Prose "giants over 10 feet" is variety-level: `agrees`. **Alt:** prose [2,10] for height. |
-| 11 | borage | NCSU attrs [1.5833,3.1667] / [1,1.3333]; UC Marin "grows two to three feet tall" | **Height UC Marin [2,3]; spread NCSU [1,1.3333].** | Rule 3: the crop's prose ("about 2 to 3 ft tall") agrees with UC Marin; spread from the one page that states it. Prose "1 to 2 ft wide" vs NCSU 1-1.33: adjudicate (`agrees` at the low end, or edit). **Alt:** NCSU for both. |
-| 12 | calendula | UF FP087 [1,2] / [1,2]; NCSU [1,2] / [1,2]; USU "8 to 24 inches" | **FP087 [1,2] / [1,2].** | FP087 and NCSU agree exactly; USU's low end is the only dissent. |
-| 13 | zinnia | UF FP623 dims [1,3] / [1,2] (same page also "as short as 6 inches or as tall as 3 feet"); Clemson 6 in - 4 ft | **FP623 dims [1,3] / [1,2].** | One page's dimension statement; prose "cut-flower types reaching 3 to 4 ft" is type-level: adjudicate (`agrees` as a type note, or edit to 3). |
-| 14 | chamomile | UC Santa Clara "size: 1 to 2 feet tall, 12 to 14 inches wide" (**403, unhashed**); UW "up to 2 feet tall" (open); NCSU matricaria dims (malformed width; not hashed) | **Stage null this promote unless session 2 hashes the Santa Clara page** (then [1,2] / [1,1.1667]). | Never cite unhashed text; the only hashed statement is open (UW). Hunt first (memory: hunt before downgrading): session 2 retries Santa Clara and fetches NCSU matricaria (height 1'1"-2'6" per plan 58 D). |
-| 15 | sweet-alyssum | NCSU attrs [0.25,0.8333] / [0.5,1]; UW "grows 3-9 inches tall with a wider spread" | **Height UW [0.25,0.75]; spread NCSU [0.5,1].** | Rule 3: the crop's prose says "just 3 to 9 inches tall" (UW, no edit). Spread from the one page with a figure. |
-| 16 | echinacea | NCSU prose + attrs [3,4]; PSU "24-36 inches in height"; (UF 1-3, Clemson 2-3.5 not in evidence) | **NCSU [3,4] / null**, prose "2 to 4 feet" adjudicated. | Species record, internally consistent. Neither page matches the prose's 2-4; under NCSU the "2" is below the cited floor: recommend `edited` to "3 to 4 feet" (H3 pattern). **Alt:** PSU [2,3] conflicts with prose's 4. |
-| 17 | viola | NCSU pansy page: prose "6 to 9 inches in height and 9 to 12 inches in width"; attrs "height: 0 ft. 4 in. - 0 ft. 9 in." | **NCSU prose [0.5,0.75] / [0.75,1]**, scope recorded. | One statement covering both dims; W6 allows either clause. SCOPE: every statement is pansy (*V. x wittrockiana*); the crop covers cornuta / tricolor too (W3: accept with scope recorded, or null). |
+| 1 | cosmos | UF [3,6]; NCSU prose "up to 4 feet" (open); **NCSU attrs "height: 2 ft. 0 in. - 4 ft. 0 in." (closed)** | **TAKEN: UF [3,6] stands, now by tie-break (2)**: the crop's own description says 3 to 6 ft. **Corrected premise recorded:** NCSU states a closed [2,4], so H1's "no lower bound" was wrong; the outcome holds. | H1 was ruled on "NCSU has no lower bound"; the fresh bytes show NCSU's attributes line does state a closed [2,4]. Rule 3: the crop's prose ("roughly 3 to 6 ft"; Sensation 3 to 4 ft) agrees with UF, so UF still wins on fewest edits. **Trevor: H1's premise was incomplete; confirm it stands.** |
+| 2 | cherry, beefsteak, roma, grape, heirloom tomato | NCSU [1,10] / [1,4] (prose + attrs); Cornell "height: 2 to 6 feet ... spread: 2 to 6 feet" | **TAKEN: cherry, grape, heirloom, beefsteak: Cornell [2,6] / [2,6], recorded as HABIT-SPANNING (det and indet in one range)**: closed, stated for tomatoes; NCSU's [1,10] is wider than useful. **No support-entry height override** (plan 58 §2.4: no page ties a height to a support form). **roma: OSU determinate [3,4] by tie-break (1) if cited AND hashed; EC1333 is cited but not hashed, so Cornell [2,6] / [2,6].** | Both closed; NCSU's 1-10 spans dwarf to unpruned indeterminate, wider than any tomato as grown on its default (rule 3, scope). Cornell's is one unconditional statement for the garden tomato (rule 4 does not force null). Prose ("5 to 6 feet", "6 feet or more") sits at Cornell's high end and its "well over 6 feet" clause: `agrees`. **Alt for roma:** OSU EC1333 "determinate cultivars tend to be fairly short (3 to 4 feet tall)" if Trevor wants roma on its habit (needs that page hashed). |
+| 3 | onion | NCSU [1,1.5] / [0.5,1]; Cornell scene4983 [1,3] / [0.5,1] | **TAKEN: NCSU [1,1.5] / [0.5,1].** | The bulb crop's foliage height; Cornell's 3 ft high end reaches seed-stalk height. Spreads agree. NCSU species record (rule 3). |
+| 4 | artichoke | Cornell [3,6] / [2,4]; TAMU EHT-065 "plants can reach 3 feet in height and w idth" (point; PDF spacing) | **TAKEN: Cornell [3,6] / [2,4].** | Rule 1: a closed range beats a point. (UMaine/VT 4-5 ft and EDIS "more than 4 feet" are other pages, not in this promote's evidence.) |
+| 5 | basil | UC Santa Clara [0.6667,2] / [0.6667,1] ("depending on variety"); UC Sonoma sweet basil "2-21⁄2 ft" (type-specific) | **TAKEN: Santa Clara [0.6667,2] / [0.6667,1].** | Scope: the crop covers many basils; Sonoma's is sweet basil only, and its `21⁄2` is unreadable by T4 anyway. |
+| 6 | cilantro-coriander | UW foliage "1 to 1⁄2 feet" / flower stems 2-3 ft (**changed page**, D-CIL); USU "plants grow to 1-3 feet tall" | **TAKEN: USU [1,3] / null.** Do not extend T4 for one fraction-slash character: UW's "1 to 1⁄2 feet" (U+2044) is recorded as a **known reader gap**; it becomes a T4 change only if a second page needs it. | Both are closed; UW's foliage figure is the better meaning for a leaf crop but its hashed text uses U+2044 (`1 1⁄2`), which T4 cannot read without a tools change. USU's is one whole-plant statement, hashed and readable. **Alt:** UW foliage [1,1.5] after a T4 fraction extension (TDD + harness) in session 2. |
+| 7 | chives | NCSU [1,1.5] / [1,1.4167]; Illinois "about 10-12 inches tall" | **TAKEN: NCSU [1,1.5] / [1,1.4167].** | Both closed; NCSU is the species record and gives both dims (rule 3). Variety prose 8-14 in / 18-20 in: `agrees` (variety-level). |
+| 8 | lemongrass | NCSU [2,4] / [2,3]; UC Santa Clara "size: 3 to 4 feet tall, 2 to 3 feet wide" (fetched on retry) | **TAKEN: NCSU [2,4] / [2,3]; the prose "3 to 6 feet" (description_seasoned, growth_stages[2]) is `edited` to the authored figure.** | Both closed; spreads agree; prose "3 to 6" exceeds both pages' 4 ft (the H3 pattern), so an edit is owed either way (one edit each); tie goes to the Toolbox record (rule 3). **Alt:** Santa Clara [3,4] keeps the prose's 3 ft floor. |
+| 9 | marigold | NCSU tagetes (genus) prose + attrs [1,4] / [0.5,1]; Clemson 6 in - 3 ft; UF 1-2 ft | **TAKEN: NCSU [1,4] / [0.5,1], recorded "cultivar-spanning (dwarf to giant)".** | One page, two clauses agreeing; genus page matches the crop's scope (erecta + patula). |
+| 10 | sunflower | NCSU prose "grow 2 to10 feet tall"; NCSU attrs [1.5,10] / [1.5,3] (one page, two figures) | **TAKEN: NCSU attrs [1.5,10] / [1.5,3], recorded "cultivar-spanning (dwarf to giant)".** | W6 allows either clause of one page; the attributes line carries both dims in one statement (the K4 convention). Prose "giants over 10 feet" is variety-level: `agrees`. **Alt:** prose [2,10] for height. |
+| 11 | borage | NCSU attrs [1.5833,3.1667] / [1,1.3333]; UC Marin "grows two to three feet tall" | **TAKEN: height UC Marin [2,3]; spread NCSU [1,1.3333]** (two values on two pages: W6 permissive allows it). | Rule 3: the crop's prose ("about 2 to 3 ft tall") agrees with UC Marin; spread from the one page that states it. Prose "1 to 2 ft wide" vs NCSU 1-1.33: adjudicate (`agrees` at the low end, or edit). **Alt:** NCSU for both. |
+| 12 | calendula | UF FP087 [1,2] / [1,2]; NCSU [1,2] / [1,2]; USU "8 to 24 inches" | **TAKEN: FP087 [1,2] / [1,2].** | FP087 and NCSU agree exactly; USU's low end is the only dissent. |
+| 13 | zinnia | UF FP623 dims [1,3] / [1,2] (same page also "as short as 6 inches or as tall as 3 feet"); Clemson 6 in - 4 ft | **TAKEN: FP623 dims [1,3] / [1,2].** | One page's dimension statement; prose "cut-flower types reaching 3 to 4 ft" is type-level: adjudicate (`agrees` as a type note, or edit to 3). |
+| 14 | chamomile | UC Santa Clara "size: 1 to 2 feet tall, 12 to 14 inches wide" (**403, unhashed**); UW "up to 2 feet tall" (open); NCSU matricaria dims (malformed width; not hashed) | **TAKEN: hunt first** (retry UC Santa Clara with a back-off; fetch NCSU's matricaria page), **then null if nothing hashes.** A hashed Santa Clara page gives [1,2] / [1,1.1667]. | Never cite unhashed text; the only hashed statement is open (UW). Hunt first (memory: hunt before downgrading): session 2 retries Santa Clara and fetches NCSU matricaria (height 1'1"-2'6" per plan 58 D). |
+| 15 | sweet-alyssum | NCSU attrs [0.25,0.8333] / [0.5,1]; UW "grows 3-9 inches tall with a wider spread" | **TAKEN: Height UW [0.25,0.75]; spread NCSU [0.5,1].** | Rule 3: the crop's prose says "just 3 to 9 inches tall" (UW, no edit). Spread from the one page with a figure. |
+| 16 | echinacea | NCSU prose + attrs [3,4]; PSU "24-36 inches in height"; (UF 1-3, Clemson 2-3.5 not in evidence) | **TAKEN: NCSU [3,4] / null; the prose "2 to 4 feet" is `edited` to the authored figure.** | Species record, internally consistent. Neither page matches the prose's 2-4; under NCSU the "2" is below the cited floor: recommend `edited` to "3 to 4 feet" (H3 pattern). **Alt:** PSU [2,3] conflicts with prose's 4. |
+| 17 | viola | NCSU pansy page: prose "6 to 9 inches in height and 9 to 12 inches in width"; attrs "height: 0 ft. 4 in. - 0 ft. 9 in." | **TAKEN: NCSU prose [0.5,0.75] / [0.75,1]**, scope recorded. | One statement covering both dims; W6 allows either clause. SCOPE: every statement is pansy (*V. x wittrockiana*); the crop covers cornuta / tricolor too (W3: accept with scope recorded, or null). |
 
 Count: row 1 (cosmos) + row 2 (five tomatoes) + rows 3-17 (fifteen crops) = **21**, plan 58's list with apricot
 excluded (woody; PLA-465 not reopened) and cosmos added (its H1 row is ruled but its premise moved, row 1).
 
 ## 4. Other decision rows (not disagreements)
 
-| id | crop | question | recommendation |
+| id | crop | question | ruling (TAKEN 2026-10-03 unless marked) |
 | -- | -- | -- | -- |
-| D-K2 | blueberry | Which K2 branch applied? | **Branch 1: kept [5,8] / [5,8], re-hashed** on the record's PSU page ("5 to 8 feet tall and wide at maturity or even larger"). No value correction. |
-| D-CIL | cilantro | UW page changed since the doc cache (`12-18"` -> `1 to 1⁄2 feet`). | Recorded as changed, not gone. Recommendation in §3 row 6 (USU). If Trevor prefers UW, T4 needs a U+2044 fraction reading first. |
-| D-CHA | chamomile | Santa Clara page 403 under every agent, 3 passes. | Stage null unless hashed in session 2 (§3 row 14). |
-| D-FAVA | broad-beans-fava | 7 prose leaves say 2-4 ft (beginner) against cited 2-6. | `agrees` with note: the narrower figure is the common tall type and the seasoned leaves already name 5 to 6 ft types. No edit. |
-| D-OKRA | okra | "most fall within the 3-6 foot range" is a typical range, not a bound. | Author [3,6]: a typical range is what a `[lo, hi]` height means everywhere else. |
-| D-NAST | nasturtium | NCSU 1-10 ft spans bush and climbing forms; the crop's default is unsupported. | **Stage null** (rule 4; spec §4.4 peas precedent; habit is PLA-12). Alt: [1,10] / [1,3]. |
-| D-SPEA | sweet-pea | NCSU "if allowed to climb ... up to 8 feet. if grown as a bush ... 3 foot" (attrs 3-8). | **Stage null** (rule 4: the page ties each figure to a habit). Alt: [3,3] bush point (the default entry is unsupported). |
-| D-MINT | mint | NCSU page is spearmint; the crop covers spearmint + peppermint. | Author [1,2] / [1,2] with scope recorded (W3: *M. spicata* is one of the crop's species). |
-| D-LEEK | leek | "a width of two inches" reads as W 0.1667 under T4. | Spread **null**: shaft diameter is not canopy spread. |
+| D-K2 | blueberry | Which K2 branch applied? | **Branch 1 applied: kept [5,8] / [5,8], re-hashed** on the record's PSU page ("5 to 8 feet tall and wide at maturity or even larger"). No value correction. |
+| D-CIL | cilantro | UW page changed since the doc cache (`12-18"` -> `1 to 1⁄2 feet`). | Recorded as changed, not gone. **TAKEN: USU; UW's U+2044 is a known T4 reader gap, no T4 change unless a second page needs it.** |
+| D-CHA | chamomile | Santa Clara page 403 under every agent, 3 passes. | **TAKEN: hunt first (back-off retry; NCSU matricaria), then null** (§3 row 14). |
+| D-FAVA | broad-beans-fava | 7 prose leaves say 2-4 ft (beginner) against cited 2-6. | **TAKEN: `agrees`**: "2 to 4" is narrower than [2,6] and does not contradict it. No edit. |
+| D-OKRA | okra | "most fall within the 3-6 foot range" is a typical range, not a bound. | **TAKEN (as recommended): author [3,6]**: a typical range is what a `[lo, hi]` height means everywhere else. |
+| D-NAST | nasturtium | NCSU 1-10 ft spans bush and climbing forms; the crop's default is unsupported. | **TAKEN: null** (both habits in one figure: trailing / bush; the peas precedent). |
+| D-SPEA | sweet-pea | NCSU "if allowed to climb ... up to 8 feet. if grown as a bush ... 3 foot" (attrs 3-8). | **TAKEN: null** (the page ties each figure to a habit: climbing / bush; the peas precedent). |
+| D-MINT | mint | NCSU page is spearmint; the crop covers spearmint + peppermint. | **TAKEN, conditional:** author from the spearmint page with scope recorded IF the crop's description centers on spearmint or garden mint, else null. **Condition met** (description is genus-level garden mint, spearmint named the everyday mint): author [1,2] / [1,2]; the session-3 reviewer confirms. HABANERO: in scope by H2, as already ruled. |
+| D-LEEK | leek | "a width of two inches" reads as W 0.1667 under T4. | **TAKEN (as recommended): spread null**: shaft diameter is not canopy spread. |
 | D-H3 | dill | prose "3 to 5 feet" x4 above the cited 4 ft. | H3 TAKEN: `edited` to the cited figure. |
-| D-T4 | (tooling) | T4 cannot read U+2044 fractions (`1 1⁄2`, `2-21⁄2`). | No row needs it under these recommendations; extend only if D-CIL's alt is taken. |
+| D-T4 | (tooling) | T4 cannot read U+2044 fractions (`1 1⁄2`, `2-21⁄2`). | **TAKEN: no T4 change.** A second page needing U+2044 is the trigger. |
 
-## 5. What session 2 does
+## 5. What session 2 does (Trevor, 2026-10-03: session 2's prompt is this worklist)
 
-1. Re-read §3 and §4 rulings (Trevor's), then stage one `crops/<slug>.json` per row (62), EVIDENCE.tsv rows per value
-   against the hashed shas, field_addition records on every authored new crop, restatement adjudication on every
-   scanner hit (the clean synthetic run found 89 hits across the fixed list).
+1. Stage the 62 per the ruled rows: one `crops/<slug>.json` per row, **one EVIDENCE row per (field, source)** against the
+   hashed shas, a field_addition record on every authored new crop, every restatement adjudicated (the clean synthetic
+   run found 89 scanner hits across the fixed list; the TAKEN edits are dill x4 (H3), lemongrass x2, echinacea x1;
+   fava `agrees`).
 2. Hunt for chamomile (Santa Clara retry, NCSU matricaria fetch) before staging it null.
-3. `promote_pla10_promote3.py --check` (it refuses until all 62 are staged).
+3. `promote_pla10_promote3.py --check` clean (it refuses until all 62 are staged); staging commit, **report before
+   committing**.
 4. Session 3: independent source-truth review, gauntlet, the HANDOFF.md items, data commit, state trio.
