@@ -40,7 +40,7 @@ On a crop carrying it on any row, EVERY row carries it (all-or-none, so a null i
 "the crop basis", never an omission); each value is null or [lo, hi]; and a non-null override is
 cited on its own row: sources non-empty, each source anchored with an http(s) url (astro's
 pot-figure isSourced reads exactly that anchor). The check runs on every layout path, string and
-absent included. ROOTSTOCK_OVERRIDE_ARMED (False in the tools commit) adds presence: a certified crop
+absent included. ROOTSTOCK_OVERRIDE_ARMED (False in the tools commit, ARMED in promote 2's data commit) adds presence: a certified crop
 on ROOTSTOCK_OVERRIDE_CROPS must carry it, and the roster refuses fewer than ROOTSTOCK_ROW_FLOOR rows.
 It flips in promote 2's data commit, with the overrides.
 
@@ -59,8 +59,8 @@ import sys
 CERTIFIED = "verified_gs_arc"
 
 PRESENCE_ARMED = True
-# T2 (plan 58 §4): flips to True in promote 2's DATA commit, never before (gates arm off the data).
-ROOTSTOCK_OVERRIDE_ARMED = False
+# T2 (plan 58 §4): ARMED in promote 2's DATA commit with apple's overrides (gates arm off the data; False in 0bdd37b).
+ROOTSTOCK_OVERRIDE_ARMED = True
 ROOTSTOCK_OVERRIDE_CROPS = ("apple",)  # R1, a literal
 ROOTSTOCK_ROW_FLOOR = 5                # apple's 5 rows (measured on cf1d480d), a literal
 

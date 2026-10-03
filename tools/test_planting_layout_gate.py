@@ -95,10 +95,14 @@ def cherry_tomato():
 
 
 def apple_not_authored():
+    # Re-measured 2026-10-02 for promote 2's DATA commit: ROOTSTOCK_OVERRIDE_ARMED is True, so apple (on
+    # ROOTSTOCK_OVERRIDE_CROPS) is clean only carrying its overrides; the fixture takes live apple's 5 rows.
     return {"slug": "apple", "verification_status": dict(CERT),
             "planting_layout": [entry(in_row_inches=[144, 180], row_spacing_inches=None,
                                       row_spacing_reason="not_authored")],
-            "spacing_inches": [144, 180], "row_spacing_inches": None, "row_spacing_reason": "not_authored"}
+            "spacing_inches": [144, 180], "row_spacing_inches": None, "row_spacing_reason": "not_authored",
+            "rootstock_options": [rs_row("M9", [48, 96]), rs_row("M26", None), rs_row("MM106", [144, 192]),
+                                  rs_row("MM111", [168, 216]), rs_row("seedling", [216, 300])]}
 
 
 def microgreen():
@@ -602,9 +606,10 @@ class RootstockOverride(unittest.TestCase):
     def test_the_literals(self):
         self.assertEqual((G.ROOTSTOCK_OVERRIDE_CROPS, G.ROOTSTOCK_ROW_FLOOR), (("apple",), 5))
 
-    def test_the_tools_commit_ships_unarmed(self):
-        """Arms in promote 2's DATA commit with the overrides (gates arm off the data)."""
-        self.assertIs(G.ROOTSTOCK_OVERRIDE_ARMED, False)
+    def test_the_data_commit_ships_rootstock_armed(self):
+        """Armed in promote 2's DATA commit with apple's overrides (gates arm off the data), together with
+        this assertion, which read `ROOTSTOCK_OVERRIDE_ARMED is False` in the tools commit (0bdd37b)."""
+        self.assertIs(G.ROOTSTOCK_OVERRIDE_ARMED, True)
 
 
 if __name__ == "__main__":

@@ -119,7 +119,7 @@ for name, val, quote in OWED:
 stage("apple",
       "R1 (ruled 2026-09-30) + owed item 1: per-rootstock between-tree spacing from NC State Extension Gardener "
       "Handbook ch. 15, Table 15-4 (nonspur, feet), already cited by apple as ncsu_ext_handbook_tree_fruit, hashed "
-      "0e16d13e. Each override is the table row's first (in-row) column converted to inches, quoted as the full row "
+      "0e16d13e. Each override is the table row's Nonspur Cultivars column (the first of three scion-habit columns under 'Distance Between Trees (feet)'; the spur and very-vigorous columns are not used) converted to inches, quoted as the full row "
       "string as promote 1 quoted M.26: M9 4-8 ft [48,96], MM106 12-16 ft [144,192], MM111 14-18 ft [168,216], "
       "seedling 18-25 ft [216,300]. M26 is null: it is the recommended row and the crop basis [96,144], cited on "
       "planting_layout row-none since promote 1. NCSU is appended to each non-null row's sources beside umd_ext "
@@ -139,7 +139,7 @@ CORR = {
     "acorn-squash": ("acorn_pilot_spacing_prose",
                      "spacing_inches is 24-36 in since PLA-10 promote 1 (24-48 in spanned in-row spacing to a 4 ft row, a blend); rows, 60-72 in, are now in row_spacing_inches, not carried only in prose"),
     "spaghetti-squash": ("spaghetti_pilot_spacing_prose",
-                         "spacing_inches is 24-36 in since PLA-10 promote 1 (24-48 in spanned in-row spacing to a 4 ft row, a blend); rows, 60-72 in, are now in row_spacing_inches, not carried only in prose"),
+                         "spacing_inches is 24-36 in since PLA-10 promote 1, on UMN's winter-squash page; 24-48 in was not a span to a row figure, it was VCE 426-331 Table 5's winter-squash in-row 2-4 ft; rows, 60-72 in, are now in row_spacing_inches, not carried only in prose"),
     "broad-beans-fava": ("broad_beans_fava_pilot_finding_001",
                          "spacing_inches is 8-10 in, the thin-to figure, since PLA-10 promote 1 (4-8 in was a modeled span); no row figure is authored, row_spacing_reason not_authored"),
     "arugula": ("arugula_pilot_spacing_babyleaf",
@@ -157,15 +157,15 @@ CORR = {
     "rosemary": ("rosemary_pilot_finding_004",
                  "spacing_inches is 24 in since PLA-10 promote 1 (24-36 in was 2 ft plus a modeled allowance for large upright plants); no row figure is authored, row_spacing_reason not_authored"),
     "watermelon": ("watermelon_pilot_spacing_capped_72in",
-                   "spacing_inches is 60-72 in, the between-plants figure from the row entry, since PLA-10 promote 1 (36-72 in was a blend capped at 72 in); the hill default, 96 in hills, and its 96 in rows are now in planting_layout and row_spacing_inches, not carried only in prose"),
+                   "spacing_inches is 60-72 in, the between-plants figure from the row entry, since PLA-10 promote 1 (36-72 in, which the basis gives as 3-6 ft in-row plant-to-hill spacing, was a blend capped at 72 in); the hill default, 96 in hills, and its 96 in rows are now in planting_layout and row_spacing_inches, not carried only in prose"),
     "cantaloupe": ("cantaloupe_pilot_spacing_in_row",
-                   "the 24-36 in figure stands, but the between-row spacing is no longer carried only in prose: row_spacing_inches is 60-90 in since PLA-10 promote 1"),
+                   "the 24-36 in figure stands, but the between-row spacing is no longer carried only in prose: row_spacing_inches is 60-90 in since PLA-10 promote 1, and the hills are a non-default planting_layout entry"),
     "pumpkin": ("pumpkin_pilot_spacing_capped_72in",
-                "spacing_inches is 48 in, the between-plants figure from the row entry, since PLA-10 promote 1 (36-72 in was a blend capped at 72 in); the hill default, 96 in hills, and its 96 in rows are now in planting_layout and row_spacing_inches, not carried only in prose"),
+                "spacing_inches is 48 in, the between-plants figure from the row entry, since PLA-10 promote 1 (36-72 in, which the basis gives as 3-6 ft in-row plant-to-hill spacing, was a blend capped at 72 in); the hill default, 96 in hills, and its 96 in rows are now in planting_layout and row_spacing_inches, not carried only in prose"),
     "mandarin-clementine": ("mandarin-clementine_pilot_finding_004",
                             "spacing_inches is 180 in, the UF/IFAS HS132 minimum, since PLA-10 promote 1 (120-216 in was modeled from small-tree size, not a spacing table); no row figure is authored, row_spacing_reason not_authored"),
     "honeydew-melon": ("honeydew_pilot_spacing_capped_48in",
-                       "spacing_inches is 18-24 in since PLA-10 promote 1 (36-48 in was a blend); rows, 72-96 in, are now in row_spacing_inches and the 48 in hills are a planting_layout entry, not carried only in prose"),
+                       "spacing_inches is 18-24 in since PLA-10 promote 1 (36-48 in was a gate-capped figure that no cited page states between plants); rows, 72-96 in, are now in row_spacing_inches and the 48 in hills are a planting_layout entry, not carried only in prose"),
     "shallot": ("shallot_spacing_upper_8in_modeled",
                 "spacing_inches is 3-6 in since PLA-10 promote 1 (6-8 in carried a modeled 8 in upper end); rows, 12-18 in, are now in row_spacing_inches"),
     "cosmos": ("cosmos_pilot_finding_003",
@@ -198,8 +198,9 @@ CAGE_DECISION = ("S1 TAKEN on its S3 condition: UNL G1650's cage row figure IS c
                  "DEFAULT. row-cage: in-row [24,36] (ISU 'if grown in wire cages, space plants 2-3 feet apart.'; "
                  "UNL, the same sentence as its rows), rows [48,48] from UNL only (S3: ISU's 'rows should be "
                  "spaced 4-5 feet apart' follows its sprawl sentence and is NOT applied to cages). ")
-STAKE_PSU = ("row-stake: in-row [18,24] and rows [60,72] from PSU heat-stress 'for staked culture' (S6, PSU over "
-             "UNL's 3 ft staked rows); ISU's 'indeterminate cultivars that are staked can be planted 1.5-2 feet "
+STAKE_PSU = ("row-stake: in-row [18,24] and rows [60,72] from PSU heat-stress 'a minimum of 5-6 feet between rows "
+             "for staked culture' (a range minimum, authored as the range per the promote-1 cherry/grape/roma "
+             "precedent; S6, PSU over UNL's 3 ft staked rows); ISU's 'indeterminate cultivars that are staked can be planted 1.5-2 feet "
              "apart within rows.' corroborates the in-row. ")
 for slug, row_none_note, rows_before in (
         ("cherry-tomato", "row-none [24,36]/[60,72] is PSU's unstaked-indeterminate figure (S2) and stays, id pinned.", [60, 72]),
@@ -229,7 +230,8 @@ stage("beefsteak-tomato", CAGE_DECISION +
       "no row figure for the same page-stated reason). The entry is non-default, so no mirror moves on it. "
       "ISU's 4-5 ft sentence follows its sprawl sentence and is not used. row-none [36,48]/[48,60] (ISU sprawl) stays, id pinned. "
       "Mirrors: spacing_inches [36,48] -> [24,36] (the hero moves, X4); row_spacing_inches [48,60] -> [48,48]. "
-      "The two scanner restatements already said 'cage footprint (24-36 inch spacing)', which contradicted the old "
+      "The two scanner restatements already said '24-36 inch spacing' (one 'cage footprint', one 'large plant "
+      "footprint ... 6-foot cages'), which contradicted the old "
       "[36,48] and now agree. No height override.",
       planting_layout_add=[entry("row-stake", "stake", [18, 24], [60, 72], ("psu", "isu_tom")),
                            entry("row-cage", "cage", [24, 36], [48, 48], ("isu_tom", "unl"))],
@@ -255,8 +257,9 @@ ev("roma-tomato", "row-cage", "row_spacing_inches", [48, 48], "unl", Q["unl_cage
 
 CUKE = ("row-trellis from Clemson HGIC cucumber (clemson_hgic, cited, hashed 9d1eaeb1): 'if cucumbers are "
         "trellised, plant four to five seeds per foot in rows spaced 3 feet apart. when plants are 4 to 5 inches "
-        "high, thin so they are 9 to 12 inches apart.' The thin-to sentence sits between the trellised sentence "
-        "and the restated non-trellised one, so it is the trellised case: in-row [9,12], rows [36,36]. ")
+        "high, thin so they are 9 to 12 inches apart.' The thin-to sentence closes the paragraph directly after "
+        "the trellised sentence (a seeding rate that needs a thin-to figure); the non-trellised case already states "
+        "its own final 8-10 in spacing, and the later non-trellised repeat is an image caption. So it is the trellised case: in-row [9,12], rows [36,36]. ")
 for slug in ("slicing-cucumber", "pickling-cucumber", "cucumber"):
     stage(slug, CUKE + "NON-default: every cited page presents the trellis as optional, so row-none stays the "
                        "default, id pinned. No mirror moves. No height override (Clemson's 6 ft and UMN's 3-4 ft "
@@ -296,7 +299,7 @@ stage("cantaloupe",
       "entry's own quote) by UMN's same-spacing rule (umn_ext_trellises_cages). Rows null, not_authored. The "
       "cultivar condition, stated here because cultivar is not an entry axis: UMN says 'varieties with fruit "
       "weighing up to three pounds ... work best', and ISU's listed cultivars are mostly 4-9 lb (only 'sarah's "
-      "choice' 3 lb, 'sugar cube' 2 lb), so the trellis suits small-fruited cultivars or slings. Flag: UMD "
+      "choice' 3 lb, 'sugar cube' 2 lb), so the trellis suits small-fruited cultivars, and the fruit needs slings (UMN: melons 'slip' from the vine when ripe, 'make hammocks or slings to support the developing fruit'; USU: 'after the fruits begin to enlarge they will need some support'). Flag: UMD "
       "melons (doc-cache only) says a trellis 'allows closer spacing', against UMN; no figure. No mirror moves.",
       planting_layout_add=[entry("row-trellis", "trellis", [24, 36], None, ("vce", "usu_cant", "umn_tr"))])
 ev("cantaloupe", "row-trellis", "in_row_inches", [24, 36], "vce", Q["vce_musk"])
@@ -308,7 +311,10 @@ stage("strawberry",
       "(ucanr_mg_monterey_santacruz, e7677756, fetched 2026-10-02, read through pinned pypdf). There is NO UC IPM "
       "PDF: plan 58's B2 note calls 281247.pdf 'the UC IPM PDF', but it is the MG handout. Quote: 'space plants about 12 inches apart in each row with rows about "
       "12 inches apart in two-row beds'; beds '18 inches wide if you are planting two rows'. rows_per_bed 2, in-row "
-      "[12,12], row_spacing_inches [12,12] = the IN-BED row gap (spec §1.1 as appended 2026-10-02). No home page "
+      "[12,12], row_spacing_inches [12,12] = the IN-BED row gap (spec §1.1 as appended 2026-10-02). The same sentence continues 'and stagger the plants in the two rows to give them maximum growing room': the "
+      "planting is offset, and staggering is not an entry axis. UC IPM's single-row figure ('in single-row beds, space "
+      "plants about 10 inches apart') is not authored. ucanr_mg_monterey_santacruz reproduces UC IPM's text: a second "
+      "copy, not independent corroboration. No home page "
       "gives a between-bed figure. Scope: statewide California home garden, stated here because the entry has no "
       "region axis. row-none [18,24]/[36,48] (UMN matted row) stays the default, id pinned. No mirror moves.",
       planting_layout_add=[entry("row-none-bed", "none", [12, 12], [12, 12], ("ucipm", "mg_pdf"), rows_per_bed=2)])

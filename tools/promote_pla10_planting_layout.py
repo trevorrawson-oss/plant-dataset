@@ -513,11 +513,13 @@ def check_post(pre, post, stage, ev, evidence_dir):
                 refuse(f"{slug}: {p} is adjudicated 'edited' but no edit touches it")
     # guard 2
     n_ev = check_evidence(qidx, stage, ev, post.get("source_catalog") or {}, evidence_dir)
-    # guard 6
-    r = PLG.roster(post, armed=True)
+    # guard 6. rootstock_armed=False, explicitly (2026-10-02, promote 2's data commit): the rootstock override
+    # key is promote 2's (T2), armed with apple's overrides; this promote's post (cf1d480d) predates it and
+    # carries none, so the module default would redden this promote's own historical moment.
+    r = PLG.roster(post, armed=True, rootstock_armed=False)
     if r["violations"]:
         refuse(f"planting_layout_gate (armed): {r['violations'][:5]}")
-    why = PLG.refusal(r, armed=True)
+    why = PLG.refusal(r, armed=True, rootstock_armed=False)
     if why:
         refuse(f"planting_layout_gate (armed) REFUSED: {why}")
     import sourced_block_ratchet_gate as SBR

@@ -235,8 +235,8 @@ MUTATIONS = [
      A44T, "test_armed_refuses_below_the_row_floor"),
     ("t2_rows_unreported", PLG, "        \"rootstock_rows\": sum(len(x) for x in rs),", "        \"rootstock_rows\": sum(len(x) for x in rs[:0]),",
      A44T, "test_roster_reports_the_rows_it_inspected"),
-    ("t2_shipped_armed", PLG, "ROOTSTOCK_OVERRIDE_ARMED = False", "ROOTSTOCK_OVERRIDE_ARMED = True",
-     A44T, "test_the_tools_commit_ships_unarmed"),
+    ("t2_shipped_unarmed", PLG, "ROOTSTOCK_OVERRIDE_ARMED = True", "ROOTSTOCK_OVERRIDE_ARMED = False",
+     A44T, "test_the_data_commit_ships_rootstock_armed"),
     # ... and the arming reaches the REAL entry point: whole_crop_gate never passes the armed state on
     ("t2_entry_point_never_armed", PLG, "    rootstock_armed = ROOTSTOCK_OVERRIDE_ARMED if rootstock_armed is None else rootstock_armed\n    slug",
      "    rootstock_armed = False\n    slug", A44I, None),
