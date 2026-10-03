@@ -14,7 +14,7 @@ apple's owed overrides against the REAL hashed NCSU bytes in tools/.evidence_cac
 driver that injects its defect and asserts the REFUSAL TEXT.
 SHIPS MUTATION-TESTED via mutate_pla10_promote2.py.
 """
-import copy, csv, hashlib, inspect, json, os, shutil, sys, tempfile, unittest
+import copy, csv, hashlib, json, os, shutil, sys, tempfile, unittest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -249,19 +249,12 @@ class Clean(Base):
     def test_the_rootstock_crop_list_is_the_literal(self):
         self.assertEqual(P.ROOTSTOCK_CROPS, ("apple",))
 
-    def test_the_copied_helpers_are_byte_identical_to_promote_1(self):
-        import promote_pla10_planting_layout as P1
-        for name in ("sha256_bytes", "serialize", "compact", "leaf_diff", "norm_text", "_numbers",
-                     "quote_states", "pdf_text", "manifest",
-                     # T1 (session 2): promote 1's restatement scanner and path helpers (guard 4)
-                     "spacing_strings", "parse_path", "resolve", "fmt", "set_at", "refuse"):
-            self.assertEqual(inspect.getsource(getattr(C, name)), inspect.getsource(getattr(P1, name)), name)
-        self.assertEqual((C.IDIOMS, C.PDF_TEXT_EXTRACTOR, C.EVIDENCE_COLS),
-                         (P1.IDIOMS, P1.PDF_TEXT_EXTRACTOR, P1.EVIDENCE_COLS))
-        self.assertEqual((C.DIST.pattern, C.DIST.flags, C.SPACING_WORD.pattern, C.SPACING_WORD.flags,
-                          C.SKIP_SUBTREES, C.SEG.pattern, P.NUMERIC_FIELDS),
-                         (P1.DIST.pattern, P1.DIST.flags, P1.SPACING_WORD.pattern, P1.SPACING_WORD.flags,
-                          P1.SKIP_SUBTREES, P1.SEG.pattern, P1.NUMERIC_FIELDS))
+    def test_numeric_fields_are_the_literal(self):
+        # Was half of a getsource identity pin against promote 1 (retired 2026-10-03, kickoff 60 ruling 5: the
+        # shared readers are one object now, and test_pla10_promote_replays.py is the guard). NUMERIC_FIELDS is
+        # promote 2's OWN constant, so its value is pinned here as a typed literal (promote 1's, measured).
+        self.assertEqual(P.NUMERIC_FIELDS, ("in_row_inches", "hill_spacing_inches", "row_spacing_inches",
+                                            "plants_per_hill", "mature_height_ft"))
 
 
 # ------------------------------------------------------------------ stage shape

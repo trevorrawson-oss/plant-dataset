@@ -6,7 +6,11 @@ Before: promote 1 (promote_pla10_planting_layout) held the originals inline, pla
 byte-identical second copy, and promotes 2 and 3 imported the copy; four inspect.getsource tests pinned the copy
 to the original. A frozen copy is a fork waiting to happen and a getsource pin tests text, not behavior.
 
-After (this suite; items 1-2 arrive with promote 1's switch, B1-2):
+After (this suite):
+  1. every PLA-10 promote imports the shared helpers from cited_promote_common, and none redefines any SHARED
+     name (function, class or constant) itself;
+  2. no promote suite carries an inspect.getsource identity pin (the real-stage replays in
+     test_pla10_promote_replays.py are the guard);
   3. pla10_promote_common is a pure re-export shim: every name in SHARED is the SAME object in both modules,
      and the shim defines nothing of its own;
   4. SHARED is the whole public surface: every top-level name cited_promote_common defines is in SHARED, so a
@@ -56,6 +60,24 @@ class Consolidated(unittest.TestCase):
     def test_the_module_is_a_flat_non_promote_file(self):
         self.assertTrue(os.path.isfile(os.path.join(HERE, "cited_promote_common.py")))
         self.assertFalse("cited_promote_common".startswith(("promote_", "test_", "mutate_")))
+
+    def test_every_promote_imports_the_shared_module(self):
+        for p in PROMOTES:
+            with self.subTest(promote=p):
+                self.assertRegex(_src(p), IMPORT_RE)
+                self.assertNotRegex(_src(p), r"(?m)^\s*(?:import|from)\s+pla10_promote_common\b")
+
+    def test_no_promote_redefines_a_shared_name(self):
+        for p in PROMOTES:
+            with self.subTest(promote=p):
+                self.assertEqual(sorted(_top_level_defs(_src(p)) & set(SHARED)), [])
+
+    def test_no_suite_carries_a_getsource_pin(self):
+        # An identity pin is an EQUALITY between two source texts; reading one function's source to assert
+        # what it contains (promote 3's test_the_post_state_gates_run_armed) is not a pin and stays legal.
+        for s in SUITES:
+            with self.subTest(suite=s):
+                self.assertNotRegex(_src(s), PIN_RE)
 
     def test_shared_is_the_whole_module_surface(self):
         defined = _top_level_defs(_src("cited_promote_common.py"))

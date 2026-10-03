@@ -29,6 +29,7 @@ PRT = "test_promote_pla10_planting_layout.py"
 SCRIPTS = {A44E, TST, DRT, NST, RCT}
 
 PLG, SBR, PRM = "planting_layout_gate.py", "sourced_block_ratchet_gate.py", "promote_pla10_planting_layout.py"
+COM = "cited_promote_common.py"   # promote 1's helpers live here since 2026-10-03 (kickoff 60, ruling 5)
 
 # (name, target, old, new, driver file, pytest -k selector or None for a script)
 MUTATIONS = [
@@ -154,8 +155,8 @@ MUTATIONS = [
     ("p_pdf_read_as_raw_bytes", PRM, "            if files[0].endswith(\".pdf\"):\n                text_cache[r[\"sha256\"]] = norm_text(pdf_text(raw))",
      "            if False:\n                text_cache[r[\"sha256\"]] = norm_text(pdf_text(raw))",
      PRT, "test_a_quote_inside_a_compressed_pdf_passes"),
-    ("p_foot_idiom_dropped", PRM, "IDIOMS = ((\"a foot\", 1.0),)", "IDIOMS = ()", PRT, "test_a_foot_states_12_inches"),
-    ("p_feet_not_converted", PRM, "    return bool(ends & nums) or bool({x / 12 for x in ends} & nums)",
+    ("p_foot_idiom_dropped", COM, "IDIOMS = ((\"a foot\", 1.0),)", "IDIOMS = ()", PRT, "test_a_foot_states_12_inches"),
+    ("p_feet_not_converted", COM, "    return bool(ends & nums) or bool({x / 12 for x in ends} & nums)",
      "    return bool(ends & nums)", PRT, "test_feet_on_the_page_states_inches"),
     ("p_manifest_unchecked", PRM, "        if r[\"url\"] not in man.get(r[\"sha256\"], set()):", "        if False:",
      PRT, "test_a_url_not_in_the_manifest_REFUSES"),
@@ -177,7 +178,7 @@ MUTATIONS = [
     ("p_edited_without_edit", PRM, "            if adj[p] == \"edited\" and p not in edited:",
      "            if False:", PRT, "test_edited_without_an_edit_REFUSES"),
     ("p_stray_field_allowed", PRM, "        if stray:", "        if False:", PRT, "test_a_stray_crop_field_REFUSES"),
-    ("p_diff_one_sided", PRM, "            if k not in a or k not in b:\n                out.add(path + (k,))",
+    ("p_diff_one_sided", COM, "            if k not in a or k not in b:\n                out.add(path + (k,))",
      "            if k not in a or k not in b:\n                pass", PRT, "test_a_removed_crop_key_REFUSES"),
     ("p_shell_unchecked", PRM, "                refuse(f\"shell {slug} changed\")", "                pass",
      PRT, "test_a_shell_change_REFUSES"),

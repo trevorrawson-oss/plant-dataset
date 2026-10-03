@@ -153,11 +153,6 @@ class QuoteStatesFt(unittest.TestCase):
                 n += 1
         self.assertGreaterEqual(n, 25, "the swapped-field control inspected too few rows")
 
-    def test_promote_1s_quote_states_is_untouched(self):
-        import promote_pla10_planting_layout as P1
-        self.assertEqual(inspect.getsource(C.quote_states), inspect.getsource(P1.quote_states))
-        self.assertEqual(inspect.getsource(C._numbers), inspect.getsource(P1._numbers))
-
 
 # ================================================================== the promote
 UMD = "https://extension.umd.edu/resource/growing-peppers-home-garden"
@@ -377,14 +372,6 @@ class Clean(unittest.TestCase):
                                                           "2109/2019/12/fruit_handbook_western_wa.pdf")})
         self.assertEqual(P.K2, {"blueberry": {"height": [4, 8], "source": "psu_ext",
                                               "url": "https://extension.psu.edu/highbush-blueberry-production"}})
-
-    def test_the_shared_helpers_are_promote_1s(self):
-        import promote_pla10_planting_layout as P1
-        for name in ("compact", "leaf_diff", "norm_text", "pdf_text", "manifest", "parse_path", "resolve", "fmt",
-                     "set_at", "refuse"):
-            self.assertEqual(inspect.getsource(getattr(C, name)), inspect.getsource(getattr(P1, name)), name)
-        self.assertEqual((C.DIST.pattern, C.SKIP_SUBTREES, C.EVIDENCE_COLS), (P1.DIST.pattern, P1.SKIP_SUBTREES,
-                                                                              P1.EVIDENCE_COLS))
 
     def test_promotes_do_not_import_promotes(self):
         src = open(P.__file__, encoding="utf-8").read()
