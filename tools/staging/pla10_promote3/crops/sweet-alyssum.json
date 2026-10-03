@@ -1,0 +1,42 @@
+{
+ "slug": "sweet-alyssum",
+ "decision": "Worklist 59 row 42 / section 3 row 15 (DISAGREEMENT, TAKEN): height UW-Madison 'sweet alyssum' ('grows 3-9 inches tall'; the crop's prose says just 3 to 9 inches tall); spread NCSU Toolbox lobularia-maritima 'width: 0 ft. 6 in. - 1 ft. 0 in.', the one page with a figure.",
+ "mature_height_ft": [
+  0.25,
+  0.75
+ ],
+ "mature_spread_ft": [
+  0.5,
+  1
+ ],
+ "sources": [
+  "uwi_hort",
+  "ncsu_ext"
+ ],
+ "anchoring_urls": {
+  "uwi_hort": {
+   "url": "https://hort.extension.wisc.edu/articles/sweet-alyssum-lobularia-maritima/",
+   "verified": "2026-10-02"
+  },
+  "ncsu_ext": {
+   "url": "https://plants.ces.ncsu.edu/plants/lobularia-maritima/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "uwi_hort",
+   "ncsu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [0.25, 0.75] ft, mature_spread_ft [0.5, 1] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. Wisconsin Horticulture Extension, https://hort.extension.wisc.edu/articles/sweet-alyssum-lobularia-maritima/ (raw read 2026-10-02, 142578 bytes, sha256 6c77b5d543c8a7a5f1f6d7f3521a0a75ff13edde0188f9fd126733a9a05fd6b7); verbatim: \"sweet alyssum grows 3-9 inches tall with a wider spread.\" | NC State Extension, https://plants.ces.ncsu.edu/plants/lobularia-maritima/ (raw read 2026-10-02, 86217 bytes, sha256 7e6c28b39959a8e375e26ca0ad47d3bbc5c95e9d3a90481d10ca26dc164d13d8); verbatim: \"height: 0 ft. 3 in. - 0 ft. 10 in. width: 0 ft. 6 in. - 1 ft. 0 in.\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "description_seasoned",
+   "verdict": "agrees",
+   "note": "'just 3 to 9 inches tall with a wider spread' is UW's figure exactly: agrees."
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "slug": "leek",
+ "decision": "Worklist 59 row 29 (CLOSED; D-LEEK TAKEN): UMN 'growing leeks' (redirected) states 'plants grow two to three feet tall, and can have a width of two inches.' The 'width' is shaft diameter, never a canopy spread: spread null.",
+ "mature_height_ft": [
+  2,
+  3
+ ],
+ "mature_spread_ft": null,
+ "sources": [
+  "umn_ext"
+ ],
+ "anchoring_urls": {
+  "umn_ext": {
+   "url": "https://extension.umn.edu/vegetables/growing-leeks",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "umn_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [2, 3] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. University of Minnesota Extension, https://extension.umn.edu/vegetables/growing-leeks (raw read 2026-10-02, 104533 bytes, sha256 153697ad9e43f7f5e3e320d7d394d1c19d88a21f56645c579a734bdbfefc22ef); verbatim: \"plants grow two to three feet tall, and can have a width of two inches.\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "growth_stages[1].what_to_look_for_beginner",
+   "verdict": "agrees",
+   "note": "A transplant-seedling height (about 8 inches), not the mature height: agrees."
+  },
+  {
+   "path": "growth_stages[1].what_to_look_for_seasoned",
+   "verdict": "agrees",
+   "note": "A transplant-seedling height (about 8 inches), not the mature height: agrees."
+  },
+  {
+   "path": "start_method.hardening_off_beginner",
+   "verdict": "agrees",
+   "note": "A transplant-seedling height (about 8 inches), not the mature height: agrees."
+  },
+  {
+   "path": "start_method.hardening_off_seasoned",
+   "verdict": "agrees",
+   "note": "A transplant-seedling height (about 8 inches), not the mature height: agrees."
+  },
+  {
+   "path": "tips_by_stage.seedling_growth[0].text_beginner",
+   "verdict": "agrees",
+   "note": "A transplant-seedling height (about 8 inches), not the mature height: agrees."
+  },
+  {
+   "path": "tips_by_stage.seedling_growth[0].text_seasoned",
+   "verdict": "agrees",
+   "note": "A transplant-seedling height (about 8 inches), not the mature height: agrees."
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "slug": "marigold",
+ "decision": "Worklist 59 row 35 / section 3 row 9 (DISAGREEMENT, TAKEN): NCSU Toolbox tagetes (genus page, matching the crop's erecta + patula scope) attributes [1,4] / [0.5,1]; the same page's prose 'typically 1 to 4 feet tall' agrees. Recorded cultivar-spanning (dwarf to giant).",
+ "mature_height_ft": [
+  1,
+  4
+ ],
+ "mature_spread_ft": [
+  0.5,
+  1
+ ],
+ "sources": [
+  "ncsu_ext"
+ ],
+ "anchoring_urls": {
+  "ncsu_ext": {
+   "url": "https://plants.ces.ncsu.edu/plants/tagetes/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ncsu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [1, 4] ft, mature_spread_ft [0.5, 1] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/tagetes/ (raw read 2026-10-02, 86624 bytes, sha256 d225c9a152c509d6eeb77c0ac1f340424439bbd90c7e24cfa2c4da94ae04fcd6); verbatim: \"height: 1 ft. 0 in. - 4 ft. 0 in. width: 0 ft. 6 in. - 1 ft. 0 in.\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "growth_stages[1].user_action_beginner",
+   "verdict": "agrees",
+   "note": "Not a plant-height restatement: a spacing / thinning distance."
+  },
+  {
+   "path": "tips_by_stage.seedling[0].text_beginner",
+   "verdict": "agrees",
+   "note": "Not a plant-height restatement: a spacing / thinning distance."
+  },
+  {
+   "path": "tips_by_stage.seedling[0].text_seasoned",
+   "verdict": "agrees",
+   "note": "Not a plant-height restatement: a spacing / thinning distance."
+  }
+ ]
+}

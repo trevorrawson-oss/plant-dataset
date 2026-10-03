@@ -1,0 +1,29 @@
+{
+ "slug": "artichoke",
+ "decision": "Worklist 59 row 27 / section 3 row 4 (DISAGREEMENT, TAKEN): Cornell 'globe artichokes growing guide' 'height: 3 to 6 feet spread: 2 to 4 feet'. W2: a closed range beats TAMU EHT-065's point ('3 feet in height and width').",
+ "mature_height_ft": [
+  3,
+  6
+ ],
+ "mature_spread_ft": [
+  2,
+  4
+ ],
+ "sources": [
+  "cornell_ext"
+ ],
+ "anchoring_urls": {
+  "cornell_ext": {
+   "url": "https://gardening.cals.cornell.edu/garden-guidance/foodgarden/vegetable-growing-guides/globe-artichokes-growing-guide/",
+   "verified": "2026-10-01"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "cornell_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [3, 6] ft, mature_spread_ft [2, 4] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. Cornell Cooperative Extension, https://gardening.cals.cornell.edu/garden-guidance/foodgarden/vegetable-growing-guides/globe-artichokes-growing-guide/ (raw read 2026-10-01, 83012 bytes, sha256 1fbfd885f099b4042569093f1b542837cb78144e912fdcafacc0433b894c2117); verbatim: \"height: 3 to 6 feet spread: 2 to 4 feet\". amend-not-recert."
+ }
+}

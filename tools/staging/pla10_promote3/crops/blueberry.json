@@ -1,0 +1,21 @@
+{
+ "slug": "blueberry",
+ "decision": "Worklist 59 row 51 (CLOSED, backfill): values kept byte-identical ([5, 8] ft / [5, 8] ft). K2 branch 1: the record's own PSU page fetched and states the [5,8] figure; kept and re-hashed, no re-anchor, no PLA-465 value correction. 'or even larger' is an open tail on a closed range: recorded. Penn State Extension, https://extension.psu.edu/blueberries-in-the-garden-and-the-kitchen (raw read 2026-10-02, 386836 bytes, sha256 da40138a81d8c0fc272900061f4dc23183c3bb5185062ec7de415b81d2be169a); verbatim: \"this shrub can be 5 to 8 feet tall and wide at maturity or even larger\"",
+ "mature_height_ft": [
+  5,
+  8
+ ],
+ "mature_spread_ft": [
+  5,
+  8
+ ],
+ "sources": [
+  "psu_ext"
+ ],
+ "anchoring_urls": {
+  "psu_ext": {
+   "url": "https://extension.psu.edu/blueberries-in-the-garden-and-the-kitchen",
+   "verified": "2026-10-02"
+  }
+ }
+}

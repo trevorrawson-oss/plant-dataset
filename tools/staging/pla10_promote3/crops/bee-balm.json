@@ -1,0 +1,36 @@
+{
+ "slug": "bee-balm",
+ "decision": "Worklist 59 row 44 (CLOSED): NCSU Toolbox monarda-didyma attributes [2,4] / [2,3]; the same page's prose 'can reach a height of 4 feet' agrees.",
+ "mature_height_ft": [
+  2,
+  4
+ ],
+ "mature_spread_ft": [
+  2,
+  3
+ ],
+ "sources": [
+  "ncsu_ext"
+ ],
+ "anchoring_urls": {
+  "ncsu_ext": {
+   "url": "https://plants.ces.ncsu.edu/plants/monarda-didyma/",
+   "verified": "2026-10-01"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ncsu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [2, 4] ft, mature_spread_ft [2, 3] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/monarda-didyma/ (raw read 2026-10-01, 108333 bytes, sha256 bec26f7dd1b781bab08ee9dc5153ee736667a93e9ef57b3952e56b7a11de29dd); verbatim: \"height: 2 ft. 0 in. - 4 ft. 0 in. width: 2 ft. 0 in. - 3 ft. 0 in.\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "description_seasoned[0]",
+   "verdict": "agrees",
+   "note": "'2 to 4 foot ... stems' is the cited height: agrees."
+  }
+ ]
+}

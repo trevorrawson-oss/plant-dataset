@@ -1,0 +1,41 @@
+{
+ "slug": "mint",
+ "decision": "Worklist 59 row 33 (SCOPE-DOUBT; D-MINT TAKEN, condition met): NCSU Toolbox mentha-spicata 'growing quickly 1 to 2 feet high and wide'. SCOPE RECORDED: the page is spearmint; the crop is genus-level garden mint and names spearmint the everyday mint. The session-3 reviewer confirms.",
+ "mature_height_ft": [
+  1,
+  2
+ ],
+ "mature_spread_ft": [
+  1,
+  2
+ ],
+ "sources": [
+  "ncsu_ext"
+ ],
+ "anchoring_urls": {
+  "ncsu_ext": {
+   "url": "https://plants.ces.ncsu.edu/plants/mentha-spicata/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ncsu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [1, 2] ft, mature_spread_ft [1, 2] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/mentha-spicata/ (raw read 2026-10-02, 67369 bytes, sha256 b3b0182651f1a681e4ef1fc19bd391d163c85ef8e3f05dbc3c721c813e998925); verbatim: \"growing quickly 1 to 2 feet high and wide\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "diseases[2].control_ladder[3].note_seasoned",
+   "verdict": "agrees",
+   "note": "A spray-timing trigger (plants 4 to 6 inches tall), not the mature height: agrees."
+  },
+  {
+   "path": "diseases[2].organic_treatment_seasoned",
+   "verdict": "agrees",
+   "note": "A spray-timing trigger (plants 4 to 6 inches tall), not the mature height: agrees."
+  }
+ ]
+}

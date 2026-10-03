@@ -1,0 +1,33 @@
+{
+ "slug": "eggplant",
+ "decision": "Worklist 59 row 10 (CLOSED): NCSU Toolbox solanum-melongena states 'the plant may grow 2 to 4 feet tall'; the attributes line agrees. No spread stated.",
+ "mature_height_ft": [
+  2,
+  4
+ ],
+ "mature_spread_ft": null,
+ "sources": [
+  "ncsu_ext"
+ ],
+ "anchoring_urls": {
+  "ncsu_ext": {
+   "url": "https://plants.ces.ncsu.edu/plants/solanum-melongena/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ncsu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [2, 4] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/solanum-melongena/ (raw read 2026-10-02, 93488 bytes, sha256 1b4f38949eaee005a240cb656da863d660710bcc6eea6aeae72bb1ec912ca72a); verbatim: \"the plant may grow 2 to 4 feet tall and is multi-branched.\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "growth_stages[5].what_to_look_for_seasoned",
+   "verdict": "agrees",
+   "note": "A fruit size (2 inches across), not the plant: agrees."
+  }
+ ]
+}

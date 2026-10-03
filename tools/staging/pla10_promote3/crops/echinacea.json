@@ -1,0 +1,65 @@
+{
+ "slug": "echinacea",
+ "decision": "Worklist 59 row 43 / section 3 row 16 (DISAGREEMENT, TAKEN): NCSU Toolbox echinacea-purpurea 'it may grow 3 to 4 feet tall' (attributes agree); PSU 24-36 in not taken. The prose '2 to 4 feet' is edited to the authored figure. No spread.",
+ "mature_height_ft": [
+  3,
+  4
+ ],
+ "mature_spread_ft": null,
+ "sources": [
+  "ncsu_ext"
+ ],
+ "anchoring_urls": {
+  "ncsu_ext": {
+   "url": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ncsu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [3, 4] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/echinacea-purpurea/ (raw read 2026-10-02, 198557 bytes, sha256 c05ad09c387f546b592d53a807c8b2670b4373e0af916a625f8e8b2a35eb4bd7); verbatim: \"it may grow 3 to 4 feet tall\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "description_beginner",
+   "verdict": "edited",
+   "note": "Section 3 row 16 TAKEN: '2 to 4 feet' falls below NCSU's cited 3 ft floor; edited to the authored figure."
+  },
+  {
+   "path": "growth_stages[1].what_to_look_for_seasoned",
+   "verdict": "edited",
+   "note": "Section 3 row 16, same figure: 'flower stems 2 to 4 feet tall' edited to the authored figure."
+  },
+  {
+   "path": "varieties.recommended[4]",
+   "verdict": "agrees",
+   "note": "A variety- or type-level figure, not the crop-level range; the authored range is the crop's: agrees. Kim's Knee High is a dwarf cultivar."
+  },
+  {
+   "path": "description_seasoned",
+   "verdict": "edited",
+   "note": "Section 3 row 16, same figure (scanner-invisible leaf): '2 to 4 foot stems' edited to the authored figure."
+  }
+ ],
+ "edits": [
+  {
+   "path": "description_beginner",
+   "new": "Purple coneflower, also called echinacea, is a tough, easy-care perennial flower that comes back year after year from the same roots. It grows about 3 to 4 feet tall, with big daisy-like flowers: pinkish-purple petals that often droop a little around a raised, spiky orange-brown center cone. It blooms from summer into fall and is hardy in most of the country (roughly zones 3 to 9). Once it settles in, its deep root makes it very drought tolerant and happy in poor, even rocky soil, as long as the ground drains well; soggy or overly rich soil makes it short-lived and floppy. Bees and butterflies love the flowers, and later the seed heads feed goldfinches and other birds, so many people leave the dried cones standing through winter. You plant it once and it spreads a little on its own from dropped seed. This is the same plant used to make herbal echinacea, traditionally from the roots and flowers.",
+   "reason": "Section 3 row 16: the authored NCSU height [3,4]."
+  },
+  {
+   "path": "description_seasoned",
+   "new": "Purple coneflower (Echinacea purpurea) is a tough, clump-forming herbaceous perennial in the Asteraceae family, native to the central and eastern United States and hardy across roughly USDA zones 3 through 9 (best 3 to 8). It sends up sturdy 3 to 4 foot stems topped by large daisy flowers: rose-purple, often slightly drooping ray petals surrounding a raised, bristly coppery-orange cone, blooming from early or mid summer well into fall. A deep taproot makes an established plant notably drought, heat, and humidity tolerant and content in lean, even rocky soil, though it wants good drainage; wet, rich ground shortens its life and makes it flop. It is a premier pollinator plant, drawing bees and butterflies over a long bloom, and its ripening seed cones are a magnet for goldfinches and other songbirds, so many gardeners leave the spent cones standing into winter. It self-sows freely and is easily raised from divisions or from seed, which germinates best after a cold, moist chill. The genus is the source of the herbal echinacea preparations, traditionally made from the roots and tops.",
+   "reason": "Section 3 row 16: the authored NCSU height [3,4]."
+  },
+  {
+   "path": "growth_stages[1].what_to_look_for_seasoned",
+   "new": "The clump builds a mound of coarse foliage and begins to send up flower stems 3 to 4 feet tall through late spring and early summer.",
+   "reason": "Section 3 row 16: the authored NCSU height [3,4]."
+  }
+ ]
+}

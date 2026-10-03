@@ -1,0 +1,46 @@
+{
+ "slug": "chamomile",
+ "decision": "Worklist 59 row 41 / section 3 row 14 (DISAGREEMENT + UNFETCHABLE; D-CHA TAKEN: hunt first). HUNT RESULT: the cited UC Santa Clara MG URL (ucanr.edu/sites/mgscc2016/...) still 403s, but the same page lives at the site's current path ucanr.edu/site/uc-master-gardeners-santa-clara-county/chamomile (the move basil and lemongrass already made), fetched and hashed this session (browser UA; plain 403). Its bytes state 'size: 1 to 2 feet tall, 12 to 14 inches wide', the doc-cache text verbatim. Per the ruled row, a hashed Santa Clara page gives [1,2] / [1,1.1667] (14/12). NCSU matricaria-chamomilla was also hashed: 'height: 0 ft. 6 in. - 2 ft. 0 in. width: 0 ft. 6 in. - 2 ft. 0 in.' (NOT plan 58 D's 1'1\"-2'6\"; the page has changed), not taken.",
+ "mature_height_ft": [
+  1,
+  2
+ ],
+ "mature_spread_ft": [
+  1,
+  1.1667
+ ],
+ "sources": [
+  "ucanr_santa_clara_mg"
+ ],
+ "anchoring_urls": {
+  "ucanr_santa_clara_mg": {
+   "url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/chamomile",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ucanr_santa_clara_mg"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [1, 2] ft, mature_spread_ft [1, 1.1667] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. UC Master Gardeners Santa Clara County (UC ANR), https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/chamomile (raw read 2026-10-02, 63236 bytes, sha256 e103e400b8e71ed9de13852e169368468fb339361b021d1b6bc0c4b81d867a47); verbatim: \"size: 1 to 2 feet tall, 12 to 14 inches wide\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "description_beginner",
+   "verdict": "agrees",
+   "note": "'grows about 2 ft tall' is the cited high end: agrees."
+  },
+  {
+   "path": "description_seasoned",
+   "verdict": "agrees",
+   "note": "'erect, branching stems to about 2 ft' is the cited high end: agrees."
+  },
+  {
+   "path": "growth_stages[2].what_to_look_for_seasoned",
+   "verdict": "agrees",
+   "note": "'erect stems to about 2 ft' is the cited high end: agrees."
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "slug": "roma-tomato",
+ "decision": "Worklist 59 row 14 / section 3 row 2, DECISION-ROW CHANGE from the rulings commit's Cornell fallback (Trevor, session 2): OSU EC1333 'grow your own tomatoes and tomatillos' was fetched and hashed this session (browser UA; plain UA 403) and states 'determinate cultivars tend to be fairly short (3 to 4 feet tall) and bushy.' roma is determinate (its own description), so the height is OSU [3,4] by tie-break (1), scope. SPREAD NULL (Trevor, stage review): the height is now scoped to determinate types; Cornell's 'spread: 2 to 6 feet' spans habits and reaches 6 ft, which is indeterminate sprawl, so pairing it with a determinate height would make the record contradict itself. No cited page gives a determinate spread. The other four tomatoes keep Cornell [2,6] / [2,6].",
+ "mature_height_ft": [
+  3,
+  4
+ ],
+ "mature_spread_ft": null,
+ "sources": [
+  "osu_ext"
+ ],
+ "anchoring_urls": {
+  "osu_ext": {
+   "url": "https://extension.oregonstate.edu/catalog/ec-1333-grow-your-own-tomatoes-tomatillos",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "osu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [3, 4] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. Oregon State University Extension, https://extension.oregonstate.edu/catalog/ec-1333-grow-your-own-tomatoes-tomatillos (raw read 2026-10-02, 128592 bytes, sha256 d64ebde35a3e3859a96520238ccec7fa31e985517b65d970eaf4bae632b18550); verbatim: \"because of their branching and flowering characteristics, determinate cultivars tend to be fairly short (3 to 4 feet tall) and bushy.\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "det_indet.detail_beginner",
+   "verdict": "agrees",
+   "note": "'about 3 to 4 feet' is OSU EC1333's determinate figure exactly: agrees."
+  },
+  {
+   "path": "det_indet.detail_seasoned",
+   "verdict": "agrees",
+   "note": "'typically 3 to 4 feet' is OSU EC1333's determinate figure exactly: agrees."
+  }
+ ]
+}

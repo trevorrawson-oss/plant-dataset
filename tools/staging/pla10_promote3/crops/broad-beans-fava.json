@@ -1,0 +1,68 @@
+{
+ "slug": "broad-beans-fava",
+ "decision": "Worklist 59 row 8 (CLOSED): NCSU Toolbox vicia-faba states 'a stiffly erect plant that grows 2-6 feet tall'. No spread stated. D-FAVA TAKEN: the prose '2 to 4 feet' (beginner) and 'some to 5 or 6' (seasoned) sit inside [2,6] and agree; no edit.",
+ "mature_height_ft": [
+  2,
+  6
+ ],
+ "mature_spread_ft": null,
+ "sources": [
+  "ncsu_ext_toolbox_vicia_faba"
+ ],
+ "anchoring_urls": {
+  "ncsu_ext_toolbox_vicia_faba": {
+   "url": "https://plants.ces.ncsu.edu/plants/vicia-faba/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ncsu_ext_toolbox_vicia_faba"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [2, 6] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension Gardener Plant Toolbox -- Vicia faba, https://plants.ces.ncsu.edu/plants/vicia-faba/ (raw read 2026-10-02, 79014 bytes, sha256 225a0f5e032acf36224fef31fb7f51f9c2c8374e182070df54002b4930ff0260); verbatim: \"it is a stiffly erect plant that grows 2-6 feet tall\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "container_notes.notes_beginner",
+   "verdict": "agrees",
+   "note": "D-FAVA TAKEN: '2 to 4 feet' (and 'some to 5 or 6') sits inside the cited [2,6] and does not contradict it: agrees, no edit."
+  },
+  {
+   "path": "container_notes.notes_seasoned",
+   "verdict": "agrees",
+   "note": "D-FAVA TAKEN: '2 to 4 feet' (and 'some to 5 or 6') sits inside the cited [2,6] and does not contradict it: agrees, no edit."
+  },
+  {
+   "path": "description_beginner",
+   "verdict": "agrees",
+   "note": "D-FAVA TAKEN: '2 to 4 feet' (and 'some to 5 or 6') sits inside the cited [2,6] and does not contradict it: agrees, no edit."
+  },
+  {
+   "path": "description_seasoned",
+   "verdict": "agrees",
+   "note": "D-FAVA TAKEN: '2 to 4 feet' (and 'some to 5 or 6') sits inside the cited [2,6] and does not contradict it: agrees, no edit."
+  },
+  {
+   "path": "growth_stages[2].what_to_look_for_seasoned",
+   "verdict": "agrees",
+   "note": "D-FAVA TAKEN: '2 to 4 feet' (and 'some to 5 or 6') sits inside the cited [2,6] and does not contradict it: agrees, no edit."
+  },
+  {
+   "path": "tips_by_stage.vegetative[0].text_seasoned",
+   "verdict": "agrees",
+   "note": "D-FAVA TAKEN: '2 to 4 feet' (and 'some to 5 or 6') sits inside the cited [2,6] and does not contradict it: agrees, no edit."
+  },
+  {
+   "path": "varieties.note_seasoned",
+   "verdict": "agrees",
+   "note": "D-FAVA TAKEN: '2 to 4 feet' (and 'some to 5 or 6') sits inside the cited [2,6] and does not contradict it: agrees, no edit."
+  },
+  {
+   "path": "growth_stages[2].what_to_look_for_beginner",
+   "verdict": "agrees",
+   "note": "D-FAVA TAKEN: '2 to 4 feet' (and 'some to 5 or 6') sits inside the cited [2,6] and does not contradict it: agrees, no edit."
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "slug": "cilantro-coriander",
+ "decision": "Worklist 59 row 31 / section 3 row 6 (DISAGREEMENT, TAKEN; D-CIL): USU 'cilantro/coriander in the garden' states 'plants grow to 1-3 feet tall'. UW's changed page ('1 to 1⁄2 feet', U+2044) is a known T4 reader gap; no T4 change. No spread.",
+ "mature_height_ft": [
+  1,
+  3
+ ],
+ "mature_spread_ft": null,
+ "sources": [
+  "usu_ext"
+ ],
+ "anchoring_urls": {
+  "usu_ext": {
+   "url": "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden",
+   "verified": "2026-10-01"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "usu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [1, 3] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. Utah State University Extension, https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden (raw read 2026-10-01, 50197 bytes, sha256 e39bf448bda796b66703bceac2e33e59ca4f12079a738f340293d9514f616189); verbatim: \"plants grow to 1-3 feet tall\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "growth_stages[2].what_to_look_for_seasoned",
+   "verdict": "agrees",
+   "note": "A stage or harvest-time height (seedling, cutting, hilling), not the mature height: agrees."
+  },
+  {
+   "path": "harvest_ready_beginner",
+   "verdict": "agrees",
+   "note": "A stage or harvest-time height (seedling, cutting, hilling), not the mature height: agrees."
+  },
+  {
+   "path": "harvest_ready_seasoned",
+   "verdict": "agrees",
+   "note": "A stage or harvest-time height (seedling, cutting, hilling), not the mature height: agrees."
+  }
+ ]
+}

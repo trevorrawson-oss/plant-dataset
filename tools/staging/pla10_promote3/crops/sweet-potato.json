@@ -1,0 +1,38 @@
+{
+ "slug": "sweet-potato",
+ "decision": "Worklist 59 row 23 (CLOSED, point): UF/IFAS gardening solutions 'sweet potatoes' states 'about 12 inches in height when situated on the ground.' The page's 15 ft vine run is not a spread (spec 4.5): spread null.",
+ "mature_height_ft": [
+  1,
+  1
+ ],
+ "mature_spread_ft": null,
+ "sources": [
+  "uf_ifas"
+ ],
+ "anchoring_urls": {
+  "uf_ifas": {
+   "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/sweet-potatoes/",
+   "verified": "2026-10-01"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "uf_ifas"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [1, 1] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. University of Florida IFAS Extension, https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/sweet-potatoes/ (raw read 2026-10-01, 112309 bytes, sha256 6e7387591ad2c9f421513017147f261a772010c68387937977d7a8b9b15e574f); verbatim: \"about 12 inches in height when situated on the ground.\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "soil_prep_beginner",
+   "verdict": "agrees",
+   "note": "A ridge height (8 to 10 inches), not the plant: agrees."
+  },
+  {
+   "path": "soil_prep_seasoned",
+   "verdict": "agrees",
+   "note": "A ridge height (8 to 10 inches), not the plant: agrees."
+  }
+ ]
+}

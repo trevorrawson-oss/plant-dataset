@@ -1,0 +1,26 @@
+{
+ "slug": "cayenne-pepper",
+ "decision": "Worklist 59 row 4 (CLOSED; H2: the page names cayenne): UMD 'growing peppers in the home garden' states 'peppers are produced on bushy plants that can reach 3-4 ft. in height.' Height [3,4]; the page states no spread: spread null.",
+ "mature_height_ft": [
+  3,
+  4
+ ],
+ "mature_spread_ft": null,
+ "sources": [
+  "umd_ext"
+ ],
+ "anchoring_urls": {
+  "umd_ext": {
+   "url": "https://extension.umd.edu/resource/growing-peppers-home-garden",
+   "verified": "2026-10-01"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "umd_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [3, 4] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. University of Maryland Extension, https://extension.umd.edu/resource/growing-peppers-home-garden (raw read 2026-10-01, 40737 bytes, sha256 4fe5a4ddae5c61744f5919ac66105662c70483d16207334fe7d5221db9612c6f); verbatim: \"peppers are produced on bushy plants that can reach 3-4 ft. in height.\". amend-not-recert."
+ }
+}

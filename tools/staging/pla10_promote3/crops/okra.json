@@ -1,0 +1,80 @@
+{
+ "slug": "okra",
+ "decision": "Worklist 59 row 25 (CLOSED; D-OKRA TAKEN): UF/IFAS gardening solutions 'okra' states 'plant heights vary by cultivar and pruning practices. most fall within the 3-6 foot range': a typical range authors [3,6]. No spread.",
+ "mature_height_ft": [
+  3,
+  6
+ ],
+ "mature_spread_ft": null,
+ "sources": [
+  "ufifas_ext"
+ ],
+ "anchoring_urls": {
+  "ufifas_ext": {
+   "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/okra/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ufifas_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [3, 6] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. University of Florida IFAS Extension, https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/okra/ (raw read 2026-10-02, 109377 bytes, sha256 e0e67496c250f358ee3202e20aff81a29713268ac53db4f936b2b7b26276d33c); verbatim: \"plant heights vary by cultivar and pruning practices. most fall within the 3-6 foot range\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "container_notes.shape_requirements_seasoned",
+   "verdict": "agrees",
+   "note": "Not a plant-height restatement: a container depth / pot size beside a 'tall' or 'deep' word."
+  },
+  {
+   "path": "description_beginner",
+   "verdict": "agrees",
+   "note": "'often 4 to 6 feet' sits inside UF's [3,6]: agrees (worklist row 25)."
+  },
+  {
+   "path": "description_seasoned",
+   "verdict": "agrees",
+   "note": "ABOVE THE CEILING as a claim, no figure ('4 to 6 feet and more' vs [3,6]), SUPPORTED: UF 'plant heights vary by cultivar ... most fall within the 3-6 foot range but check your seed source' (restatement-support row): agrees."
+  },
+  {
+   "path": "thinning.tip_beginner",
+   "verdict": "agrees",
+   "note": "Not a plant-height restatement: a spacing / thinning distance."
+  },
+  {
+   "path": "thinning.tip_seasoned",
+   "verdict": "agrees",
+   "note": "Not a plant-height restatement: a spacing / thinning distance."
+  },
+  {
+   "path": "varieties.recommended[0].recommended_note",
+   "verdict": "agrees",
+   "note": "A variety- or type-level figure, not the crop-level range; the authored range is the crop's: agrees."
+  },
+  {
+   "path": "varieties.recommended[7].recommended_note",
+   "verdict": "edited",
+   "note": "ABOVE THE CEILING (Cow Horn '6 to 8 feet' vs [3,6]), NO cited hashed page states it: the number is dropped and the claim ('tall heirloom') kept."
+  },
+  {
+   "path": "varieties.recommended[1].recommended_note",
+   "verdict": "agrees",
+   "note": "A variety- or type-level figure, not the crop-level range; the authored range is the crop's: agrees."
+  },
+  {
+   "path": "varieties.recommended[6].recommended_note",
+   "verdict": "agrees",
+   "note": "A variety- or type-level figure, not the crop-level range; the authored range is the crop's: agrees."
+  }
+ ],
+ "edits": [
+  {
+   "path": "varieties.recommended[7].recommended_note",
+   "new": "Tall heirloom with long pods that stay tender even when large; an old Southern type for big gardens.",
+   "reason": "Trevor's ceiling rule: no cited hashed page states 6 to 8 ft."
+  }
+ ]
+}

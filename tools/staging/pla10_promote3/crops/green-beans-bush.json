@@ -1,0 +1,26 @@
+{
+ "slug": "green-beans-bush",
+ "decision": "Worklist 59 row 20 (CLOSED, point): UMN 'growing beans' (redirected; sentence intact) states 'bush beans are upright plants that do not need support, growing about two feet tall.' No spread.",
+ "mature_height_ft": [
+  2,
+  2
+ ],
+ "mature_spread_ft": null,
+ "sources": [
+  "umn_ext"
+ ],
+ "anchoring_urls": {
+  "umn_ext": {
+   "url": "https://extension.umn.edu/vegetables/growing-beans",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "umn_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [2, 2] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. University of Minnesota Extension, https://extension.umn.edu/vegetables/growing-beans (raw read 2026-10-02, 131996 bytes, sha256 d5fed4deeabd1ddf240422f585eb79df4ffbc13a2973996f1c8ce05b8a5e9ad9); verbatim: \"bush beans are upright plants that do not need support, growing about two feet tall.\". amend-not-recert."
+ }
+}

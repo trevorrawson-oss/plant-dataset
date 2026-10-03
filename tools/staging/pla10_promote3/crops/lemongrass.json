@@ -1,0 +1,88 @@
+{
+ "slug": "lemongrass",
+ "decision": "Worklist 59 row 34 / section 3 row 8 (DISAGREEMENT, TAKEN): NCSU Toolbox cymbopogon-citratus attributes [2,4] / [2,3] (tie to the Toolbox record, rule 3; UC Santa Clara [3,4] / [2,3] not taken). The prose '3 to 6 feet' exceeds both pages: edited to the authored figure.",
+ "mature_height_ft": [
+  2,
+  4
+ ],
+ "mature_spread_ft": [
+  2,
+  3
+ ],
+ "sources": [
+  "ncsu_ext"
+ ],
+ "anchoring_urls": {
+  "ncsu_ext": {
+   "url": "https://plants.ces.ncsu.edu/plants/cymbopogon-citratus/",
+   "verified": "2026-10-01"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ncsu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [2, 4] ft, mature_spread_ft [2, 3] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/cymbopogon-citratus/ (raw read 2026-10-01, 48160 bytes, sha256 d0f1583855a391f59d93d7f31c06ce77aafe40a8aa8a0ddb393c5b2fa8f6f295); verbatim: \"height: 2 ft. 0 in. - 4 ft. 0 in. width: 2 ft. 0 in. - 3 ft. 0 in.\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "description_seasoned",
+   "verdict": "edited",
+   "note": "Section 3 row 8 TAKEN: '3 to 6 feet' exceeds both pages' 4 ft; edited to the authored figure."
+  },
+  {
+   "path": "growth_stages[2].what_to_look_for_seasoned",
+   "verdict": "edited",
+   "note": "Section 3 row 8 TAKEN: '3 to 6 feet' edited to the authored figure."
+  },
+  {
+   "path": "companions.note_seasoned",
+   "verdict": "edited",
+   "note": "Section 3 row 8, same phrase (scanner-invisible leaf: no height word): 'reaches 3 to 6 feet' edited to the authored figure."
+  },
+  {
+   "path": "notifications[1].body_beginner",
+   "verdict": "agrees",
+   "note": "'room to grow (2 to 3 feet)' is a spacing; it matches the cited spread: agrees."
+  },
+  {
+   "path": "regions.northern_tier.region_notes_seasoned",
+   "verdict": "edited",
+   "note": "Section 3 row 8, same phrase (scanner-invisible leaf): '3-to-6-foot clump' edited to the authored figure."
+  },
+  {
+   "path": "tips_by_stage.vegetative[0].text_seasoned",
+   "verdict": "edited",
+   "note": "Section 3 row 8, same phrase (scanner-invisible leaf): '3-to-6-foot clump' edited to the authored figure."
+  }
+ ],
+ "edits": [
+  {
+   "path": "description_seasoned",
+   "new": "Lemongrass (Cymbopogon citratus) is a tender tropical grass, a member of the true grass family (Poaceae), grown for the aromatic swollen white bases of its stalks and its lemon-scented leaves. Everything about its care follows from two facts: it is a warm-season grass that thrives on heat, full sun, rich soil, and abundant water, and it is frost-tender, damaged when temperatures drop toward 40 °F and killed outright by frost. It grows as a dense, non-running clump 2 to 4 feet tall, not a spreading runner like mint, so it stays where you put it and is increased by dividing the clump or by rooting a fresh stalk in water. In the tropics and frost-free zones it is a true perennial that can be harvested year round; across most of the country it is grown as a warm-season annual set out after the last frost, then either lifted and potted indoors before fall frost or replaced each spring. Because its own essential oils repel many insects, it is notably free of pest problems; rust and leaf blight are the diseases to watch in warm, humid, crowded plantings. Harvest by cutting whole stalks at ground level once they thicken to about half an inch; the tender inner stalk base flavors soups and curries, and the leaves make a fragrant tea.",
+   "reason": "Section 3 row 8: the authored NCSU height [2,4]."
+  },
+  {
+   "path": "growth_stages[2].what_to_look_for_seasoned",
+   "new": "Individual stalks swelling to about half an inch thick at the base, the signal that they are ready to harvest. The clump stands 2 to 4 feet tall in good conditions, with dense, aromatic foliage.",
+   "reason": "Section 3 row 8: the authored NCSU height [2,4]."
+  },
+  {
+   "path": "companions.note_seasoned",
+   "new": "Lemongrass has little formal companion-planting research behind it, but two practical points hold up. First, its essential oils (rich in citral) are documented insect repellents, which is the basis for the tradition of planting it near warm-season vegetables such as tomatoes and peppers; treat the pest-deterrent benefit as traditional rather than proven at garden scale. Second, its cultural needs are the deciding factor in placement: it demands rich soil, heavy feeding, full sun, and abundant water, so it pairs naturally with other heat-loving, well-watered crops and conflicts with lean, dry-soil Mediterranean herbs. Give a mature clump ample room, since it reaches 2 to 4 feet.",
+   "reason": "Section 3 row 8: the authored NCSU height [2,4]."
+  },
+  {
+   "path": "tips_by_stage.vegetative[0].text_seasoned",
+   "new": "Lemongrass is a grass, and like a lawn it is a heavy nitrogen feeder that rewards generous water. Feed a nitrogen-forward soluble fertilizer at half strength every week or two through summer and water deeply and often. The combination of heat, food, and water is what turns a small start into a 2-to-4-foot clump in a single season.",
+   "reason": "Section 3 row 8: the authored NCSU height [2,4]."
+  },
+  {
+   "path": "regions.northern_tier.region_notes_seasoned",
+   "new": "Across the northern tier, lemongrass is a warm-season annual bounded by frost. Start a division, nursery plant, or rooted grocery stalk indoors about 8 weeks before the last frost, then set it out a week or so after frost once the soil has warmed; it will sulk in cold ground. It grows slowly until summer heat arrives, then bulks up fast into a 2-to-4-foot clump. Feed it hard with a nitrogen-forward fertilizer and water deeply and often. Harvest stalks once they reach about half an inch thick, from midsummer into fall. Because frost kills the top growth, do a heavy final harvest before the first fall frost, and to keep the plant from year to year, cut it back, dig and pot a division, and overwinter it in a bright indoor window.",
+   "reason": "Section 3 row 8: the authored NCSU height [2,4]."
+  }
+ ]
+}

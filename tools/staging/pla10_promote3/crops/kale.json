@@ -1,0 +1,26 @@
+{
+ "slug": "kale",
+ "decision": "Worklist 59 row 18 (CLOSED): UMaine bulletin 4311e states 'kale is a large plant, often growing to 2.5-3 feet tall.' No spread stated.",
+ "mature_height_ft": [
+  2.5,
+  3
+ ],
+ "mature_spread_ft": null,
+ "sources": [
+  "umaine_ext"
+ ],
+ "anchoring_urls": {
+  "umaine_ext": {
+   "url": "https://extension.umaine.edu/publications/4311e/15-stage-1/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "umaine_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [2.5, 3] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. University of Maine Cooperative Extension, https://extension.umaine.edu/publications/4311e/15-stage-1/ (raw read 2026-10-02, 131488 bytes, sha256 42285ee921b8f539f31be203dd6e2143d93492d2ffb7e0a5b2be98078f8ee961); verbatim: \"kale is a large plant, often growing to 2.5-3 feet tall.\". amend-not-recert."
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "slug": "apple",
+ "decision": "Worklist 59 row 49 (CLOSED, backfill): values kept byte-identical ([10, 14] ft / not authored (null)). K1: the record names the s3.wp.wsu.edu URL (neither cited nor cached); the sibling re-points to the cited, cached wpcdn copy of the same WSU handbook, which carries the sentence (same sha256 as the record's read). Washington State University Extension, https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf (raw read 2026-10-02, 1120177 bytes, sha256 2ce35f98484a84bac1223a7e75b845167367c34cacbbcc884e83d7a9b15fe665); verbatim: \"m 26-semi-dwarf habit, 10'-14' tall\"",
+ "mature_height_ft": [
+  10,
+  14
+ ],
+ "mature_spread_ft": null,
+ "sources": [
+  "wsu_ext"
+ ],
+ "anchoring_urls": {
+  "wsu_ext": {
+   "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+   "verified": "2026-10-02"
+  }
+ }
+}

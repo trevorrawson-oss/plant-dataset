@@ -1,0 +1,51 @@
+{
+ "slug": "potato",
+ "decision": "Worklist 59 row 22 (CLOSED): NCSU Toolbox solanum-tuberosum attributes 'height: 1 ft. 0 in. - 2 ft. 0 in. width: 1 ft. 0 in. - 1 ft. 6 in.' The crop's prose distances are hilling heights.",
+ "mature_height_ft": [
+  1,
+  2
+ ],
+ "mature_spread_ft": [
+  1,
+  1.5
+ ],
+ "sources": [
+  "ncsu_ext"
+ ],
+ "anchoring_urls": {
+  "ncsu_ext": {
+   "url": "https://plants.ces.ncsu.edu/plants/solanum-tuberosum/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ncsu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [1, 2] ft, mature_spread_ft [1, 1.5] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/solanum-tuberosum/ (raw read 2026-10-02, 102937 bytes, sha256 5c6394068e5c16e8bf5328f4f2d95c7d2263275089b1bcb106e9080838652a4a); verbatim: \"height: 1 ft. 0 in. - 2 ft. 0 in. width: 1 ft. 0 in. - 1 ft. 6 in.\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "growth_stages[1].user_action_beginner",
+   "verdict": "agrees",
+   "note": "A hilling height (6 to 12 inches), not the mature height: agrees."
+  },
+  {
+   "path": "growth_stages[1].what_to_look_for_beginner",
+   "verdict": "agrees",
+   "note": "A hilling height (6 to 12 inches), not the mature height: agrees."
+  },
+  {
+   "path": "notifications[2].body_beginner",
+   "verdict": "agrees",
+   "note": "A hilling height (6 to 12 inches), not the mature height: agrees."
+  },
+  {
+   "path": "tips_by_stage.vegetative[0].text_beginner",
+   "verdict": "agrees",
+   "note": "A hilling height (6 to 12 inches), not the mature height: agrees."
+  }
+ ]
+}

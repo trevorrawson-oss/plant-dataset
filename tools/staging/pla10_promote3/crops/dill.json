@@ -1,0 +1,105 @@
+{
+ "slug": "dill",
+ "decision": "Worklist 59 row 9 (CLOSED): UW-Madison 'dill, anethum graveolens' states 'dill plants grow 18 inches to 4 feet tall'. Height [1.5,4]; no spread stated. H3 TAKEN: the uncited prose '3 to 5 feet' is edited to the cited figure.",
+ "mature_height_ft": [
+  1.5,
+  4
+ ],
+ "mature_spread_ft": null,
+ "sources": [
+  "uwi_hort"
+ ],
+ "anchoring_urls": {
+  "uwi_hort": {
+   "url": "https://hort.extension.wisc.edu/articles/dill-anethum-graveolens/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "uwi_hort"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [1.5, 4] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. Wisconsin Horticulture Extension, https://hort.extension.wisc.edu/articles/dill-anethum-graveolens/ (raw read 2026-10-02, 144388 bytes, sha256 fff936cfea76894cd92775d442c2eee4351d5807de23bdf6d6ddb4ed313a7b9e); verbatim: \"dill plants grow 18 inches to 4 feet tall\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "container_notes.notes_beginner",
+   "verdict": "agrees",
+   "note": "Not a plant-height restatement: a container depth / pot size beside a 'tall' or 'deep' word."
+  },
+  {
+   "path": "container_notes.shape_requirements_beginner",
+   "verdict": "agrees",
+   "note": "Not a plant-height restatement: a container depth / pot size beside a 'tall' or 'deep' word."
+  },
+  {
+   "path": "container_notes.shape_requirements_seasoned",
+   "verdict": "agrees",
+   "note": "Not a plant-height restatement: a container depth / pot size beside a 'tall' or 'deep' word."
+  },
+  {
+   "path": "description_beginner",
+   "verdict": "edited",
+   "note": "H3 TAKEN: the uncited '3 to 5 feet' exceeds UW's cited 4 ft; edited to the cited figure."
+  },
+  {
+   "path": "description_seasoned",
+   "verdict": "edited",
+   "note": "H3 TAKEN: the uncited '3 to 5 feet' exceeds UW's cited 4 ft; edited to the cited figure."
+  },
+  {
+   "path": "growth_stages[2].what_to_look_for_seasoned",
+   "verdict": "agrees",
+   "note": "A stage or harvest-time height (seedling, cutting, hilling), not the mature height: agrees."
+  },
+  {
+   "path": "harvest_ready_beginner",
+   "verdict": "agrees",
+   "note": "A stage or harvest-time height (seedling, cutting, hilling), not the mature height: agrees."
+  },
+  {
+   "path": "harvest_ready_seasoned",
+   "verdict": "agrees",
+   "note": "A stage or harvest-time height (seedling, cutting, hilling), not the mature height: agrees."
+  },
+  {
+   "path": "varieties.recommended[1].note",
+   "verdict": "edited",
+   "note": "H3 TAKEN: the Long Island Mammoth note's '3 to 5 feet' edited to the cited figure."
+  },
+  {
+   "path": "container_notes.notes_seasoned",
+   "verdict": "edited",
+   "note": "H3 TAKEN (scanner-invisible leaf: no height word): 'Standard dill reaches 3 to 5 feet' edited to the cited figure."
+  },
+  {
+   "path": "varieties.recommended[0].note",
+   "verdict": "agrees",
+   "note": "'reaches about 2 to 3 feet' sits inside [1.5,4]: agrees."
+  }
+ ],
+ "edits": [
+  {
+   "path": "description_beginner",
+   "new": "Dill gives you two things from one plant: the soft feathery leaves are dill weed, and the flower heads and seeds are what you use for pickling and as a spice. Like cilantro, and unlike warm-season herbs such as basil, dill is a cool-leaning plant. Young plants handle a light frost, but once summer heat and long days arrive it bolts, sending up a tall flower stalk that can reach up to 4 feet, and leaf growth slows. So the trick is to grow it for leaves in the cooler parts of the year, spring and again in late summer for fall, and to let the summer plants flower for seed heads. Sow a little every 2 to 3 weeks, since each plant bolts after a while, and plant the seeds right in the garden because dill does not like being moved. It is fast, easy, and reseeds itself, so once you grow it you often get volunteers the next year. And when it bolts, you get dill heads for pickling and dried dill seed.",
+   "reason": "H3: the cited UW figure is 18 inches to 4 feet."
+  },
+  {
+   "path": "description_seasoned",
+   "new": "Dill (Anethum graveolens) is an annual herb in the carrot family (Apiaceae) grown for two products from one plant: the feathery leaves are the herb dill weed, and the flower heads and dried seed are used for pickling and as the spice dill seed. Like cilantro, and unlike warm-season herbs such as basil, dill is a cool-leaning crop that bolts once summer heat and long days arrive, sending up a tall flower stalk (the plant reaches up to 4 feet in flower) above roughly 75 to 80°F. That shapes how it is grown: the leaf crop favors the cool shoulders of the year, spring and especially a late-summer-into-fall sowing, while the heat of summer is when growers let it run to seed and pickling heads rather than leaves. Because the bolt is fast and inevitable in warmth, dill is a succession crop, sown in small batches every 2 to 3 weeks so fresh, pre-bolt plants keep coming. It is direct-sown (a slender taproot resents transplanting), young plants tolerate light frost, and it self-sows so readily that a patch often returns on its own. It is easy and largely trouble-free, with the black swallowtail caterpillar a welcome visitor as much as a pest. The grower's real skill is timing the leaf crop into the cool seasons and treating the summer bolt as the start of the seed-and-pickling harvest rather than a failure.",
+   "reason": "H3: the cited UW figure is 18 inches to 4 feet."
+  },
+  {
+   "path": "container_notes.notes_seasoned",
+   "new": "Dill grows well in a container at least 10 inches deep to fit its taproot. Standard dill reaches up to 4 feet and gets top-heavy, so choose a dwarf, slow-bolting variety such as Fernleaf for pots. Keep moisture even, since pots dry fast and drought triggers bolting, grow it in the cool seasons, and give afternoon shade in warm spells. A pot is also the easiest way to move the crop into shade or shelter as the weather turns.",
+   "reason": "H3: the cited UW figure is 18 inches to 4 feet."
+  },
+  {
+   "path": "varieties.recommended[1].note",
+   "new": "A tall heirloom, up to 4 feet, grown above all for big seed heads and pickling; the classic dill for putting up cucumbers. Bolts sooner, so less suited to long leaf harvest.",
+   "reason": "H3: the cited UW figure is 18 inches to 4 feet."
+  }
+ ]
+}

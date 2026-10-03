@@ -1,0 +1,46 @@
+{
+ "slug": "brussels-sprouts",
+ "decision": "Worklist 59 row 7 (CLOSED): NCSU Toolbox brussels sprouts group states 'the plants can grow 2-4 feet tall and wide'; the attributes line agrees (height 2-4).",
+ "mature_height_ft": [
+  2,
+  4
+ ],
+ "mature_spread_ft": [
+  2,
+  4
+ ],
+ "sources": [
+  "ncsu_ext"
+ ],
+ "anchoring_urls": {
+  "ncsu_ext": {
+   "url": "https://plants.ces.ncsu.edu/plants/brassica-oleracea-brussels-sprouts-group/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ncsu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [2, 4] ft, mature_spread_ft [2, 4] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/brassica-oleracea-brussels-sprouts-group/ (raw read 2026-10-02, 55957 bytes, sha256 029af02725d2129d51a60a193a9fce47f090c8895a4b24a5ca720a7793f24318); verbatim: \"the plants can grow 2-4 feet tall and wide on a thick stalk.\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "container_notes.shape_requirements_beginner",
+   "verdict": "agrees",
+   "note": "Not a plant-height restatement: a container depth / pot size beside a 'tall' or 'deep' word."
+  },
+  {
+   "path": "container_notes.shape_requirements_seasoned",
+   "verdict": "agrees",
+   "note": "Not a plant-height restatement: a container depth / pot size beside a 'tall' or 'deep' word."
+  },
+  {
+   "path": "tips_by_stage.seedling[0].text_beginner",
+   "verdict": "agrees",
+   "note": "Not a plant-height restatement: a spacing / thinning distance."
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "slug": "chives",
+ "decision": "Worklist 59 row 32 / section 3 row 7 (DISAGREEMENT, TAKEN): NCSU Toolbox allium-schoenoprasum attributes, the species record giving both dimensions (17/12 = 1.4167); Illinois 'about 10-12 inches tall' not taken.",
+ "mature_height_ft": [
+  1,
+  1.5
+ ],
+ "mature_spread_ft": [
+  1,
+  1.4167
+ ],
+ "sources": [
+  "ncsu_ext"
+ ],
+ "anchoring_urls": {
+  "ncsu_ext": {
+   "url": "https://plants.ces.ncsu.edu/plants/allium-schoenoprasum/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ncsu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [1, 1.5] ft, mature_spread_ft [1, 1.4167] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/allium-schoenoprasum/ (raw read 2026-10-02, 77105 bytes, sha256 933eb2c446e453666776892b124b97708e749999ee8f01c3aab6dceb553a4f6e); verbatim: \"height: 1 ft. 0 in. - 1 ft. 6 in. width: 1 ft. 0 in. - 1 ft. 5 in.\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "container_notes.shape_requirements_seasoned",
+   "verdict": "agrees",
+   "note": "Not a plant-height restatement: a container depth / pot size beside a 'tall' or 'deep' word."
+  },
+  {
+   "path": "growth_stages[2].what_to_look_for_beginner",
+   "verdict": "agrees",
+   "note": "A stage or harvest-time height (seedling, cutting, hilling), not the mature height: agrees."
+  },
+  {
+   "path": "growth_stages[2].what_to_look_for_seasoned",
+   "verdict": "agrees",
+   "note": "A stage or harvest-time height (seedling, cutting, hilling), not the mature height: agrees."
+  },
+  {
+   "path": "harvest_ready_beginner",
+   "verdict": "agrees",
+   "note": "A stage or harvest-time height (seedling, cutting, hilling), not the mature height: agrees."
+  },
+  {
+   "path": "harvest_ready_seasoned",
+   "verdict": "agrees",
+   "note": "A stage or harvest-time height (seedling, cutting, hilling), not the mature height: agrees."
+  },
+  {
+   "path": "varieties.recommended[0].note",
+   "verdict": "agrees",
+   "note": "A variety- or type-level figure, not the crop-level range; the authored range is the crop's: agrees. (worklist section 3 row 7)"
+  },
+  {
+   "path": "varieties.recommended[3].note",
+   "verdict": "agrees",
+   "note": "ABOVE THE CEILING (Forescate '18 to 20 inches' vs [1,1.5]), SUPPORTED: UW-Madison ''forescate' is larger than the species, growing 18 to 20 inches tall' (restatement-support row): agrees."
+  }
+ ]
+}

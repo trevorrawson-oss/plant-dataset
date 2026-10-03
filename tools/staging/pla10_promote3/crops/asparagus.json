@@ -1,0 +1,48 @@
+{
+ "slug": "asparagus",
+ "decision": "Worklist 59 row 28 (CLOSED): OSU 'growing asparagus takes patience' states 'asparagus foliage can reach 5 to 6 feet in height' (the fern). Spear heights in the prose are harvest-stage. No spread.",
+ "mature_height_ft": [
+  5,
+  6
+ ],
+ "mature_spread_ft": null,
+ "sources": [
+  "osu_ext"
+ ],
+ "anchoring_urls": {
+  "osu_ext": {
+   "url": "https://extension.oregonstate.edu/news/growing-asparagus-takes-patience-rewards-gardeners-years",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "osu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [5, 6] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. Oregon State University Extension, https://extension.oregonstate.edu/news/growing-asparagus-takes-patience-rewards-gardeners-years (raw read 2026-10-02, 91299 bytes, sha256 0a4e2c9f78894bfef69c81bf970aef493c6aee0fbbdf47655a1b116560d62314); verbatim: \"asparagus foliage can reach 5 to 6 feet in height\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "first_harvest_notes_beginner",
+   "verdict": "agrees",
+   "note": "A spear cutting height (6 to 8 inches), not the fern height: agrees."
+  },
+  {
+   "path": "growth_stages[1].what_to_look_for_beginner",
+   "verdict": "agrees",
+   "note": "A spear cutting height (6 to 8 inches), not the fern height: agrees."
+  },
+  {
+   "path": "harvest_ready_beginner",
+   "verdict": "agrees",
+   "note": "A spear cutting height (6 to 8 inches), not the fern height: agrees."
+  },
+  {
+   "path": "tips_by_stage.spear_emergence[0].text_beginner",
+   "verdict": "agrees",
+   "note": "A spear cutting height (6 to 8 inches), not the fern height: agrees."
+  }
+ ]
+}

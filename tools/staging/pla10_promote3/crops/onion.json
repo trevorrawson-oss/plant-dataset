@@ -1,0 +1,41 @@
+{
+ "slug": "onion",
+ "decision": "Worklist 59 row 24 / section 3 row 3 (DISAGREEMENT, TAKEN): NCSU Toolbox allium-cepa [1,1.5] / [0.5,1], the bulb crop's foliage height; Cornell scene4983's 3 ft high end reaches seed-stalk height. Spreads agree.",
+ "mature_height_ft": [
+  1,
+  1.5
+ ],
+ "mature_spread_ft": [
+  0.5,
+  1
+ ],
+ "sources": [
+  "ncsu_ext"
+ ],
+ "anchoring_urls": {
+  "ncsu_ext": {
+   "url": "https://plants.ces.ncsu.edu/plants/allium-cepa/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ncsu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [1, 1.5] ft, mature_spread_ft [0.5, 1] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/allium-cepa/ (raw read 2026-10-02, 79560 bytes, sha256 867088a8cf648c43e9d2257d62800de2f66f89a7cf79766734ffe049bbc7a149); verbatim: \"height: 1 ft. 0 in. - 1 ft. 6 in. width: 0 ft. 6 in. - 1 ft. 0 in.\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "container_notes.notes_beginner",
+   "verdict": "agrees",
+   "note": "Not a plant-height restatement: a container depth / pot size beside a 'tall' or 'deep' word."
+  },
+  {
+   "path": "container_notes.notes_seasoned",
+   "verdict": "agrees",
+   "note": "Not a plant-height restatement: a container depth / pot size beside a 'tall' or 'deep' word."
+  }
+ ]
+}

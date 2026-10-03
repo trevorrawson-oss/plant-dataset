@@ -1,0 +1,63 @@
+{
+ "slug": "sunflower",
+ "decision": "Worklist 59 row 37 / section 3 row 10 (DISAGREEMENT, TAKEN): NCSU Toolbox helianthus-annuus attributes [1.5,10] / [1.5,3] (one statement, both dimensions; the K4 convention). Recorded cultivar-spanning (dwarf to giant).",
+ "mature_height_ft": [
+  1.5,
+  10
+ ],
+ "mature_spread_ft": [
+  1.5,
+  3
+ ],
+ "sources": [
+  "ncsu_ext"
+ ],
+ "anchoring_urls": {
+  "ncsu_ext": {
+   "url": "https://plants.ces.ncsu.edu/plants/helianthus-annuus/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ncsu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [1.5, 10] ft, mature_spread_ft [1.5, 3] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/helianthus-annuus/ (raw read 2026-10-02, 133999 bytes, sha256 6708bd2ae99ed404d82e6b32ef58e006e7aed3cfbc661d887617d0face4aa3bc); verbatim: \"height: 1 ft. 6 in. - 10 ft. 0 in. width: 1 ft. 6 in. - 3 ft. 0 in.\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "description_beginner",
+   "verdict": "edited",
+   "note": "ABOVE THE CEILING ('giants over 10 feet' vs [1.5,10]), NO cited hashed page states it (NCSU: 'grow 2 to10 feet tall'): edited into range."
+  },
+  {
+   "path": "description_seasoned",
+   "verdict": "edited",
+   "note": "ABOVE THE CEILING ('giants that top 10 feet' vs [1.5,10]), NO cited hashed page states it: edited into range."
+  },
+  {
+   "path": "varieties.recommended[0]",
+   "verdict": "edited",
+   "note": "ABOVE THE CEILING (Mammoth '9 to 12 ft' vs [1.5,10]), NO cited hashed page states it: the number is dropped and the claim ('giant single-stem') kept."
+  }
+ ],
+ "edits": [
+  {
+   "path": "description_beginner",
+   "new": "Sunflowers are easy, fast, cheerful flowers grown both for their blooms and for edible seeds that people and birds love. They come in a huge range: towering giants up to 10 feet tall with one big head, bushy branching types with lots of smaller flowers, and little dwarf kinds under 2 feet for pots. Plant the large seeds straight into warm soil after your last frost, because sunflowers have a deep taproot and do not like being moved. They love heat and full sun and handle dry spells well. Young plants turn to follow the sun across the sky, and the open flowers bring in bees and butterflies. Watch out: birds and squirrels will raid the ripening seed heads, so cover them if you want to save the seeds. One thing to know is that sunflowers can hold back a few nearby plants with natural chemicals from their roots and old stalks, so it is smart to plant them along an edge.",
+   "reason": "Trevor's ceiling rule: NCSU, the cited page, states 2 to 10 feet."
+  },
+  {
+   "path": "description_seasoned",
+   "new": "Sunflower (Helianthus annuus) is a fast, warm-season, frost-tender annual in the Asteraceae family, native to North America and grown both as an ornamental and for its edible, wildlife-valuable seed. Cultivars range enormously: from single-stem giants that reach 10 feet with one massive head, to multi-branching types that carry many smaller blooms, to dwarf forms under 2 feet for pots and edging, in oilseed, confection, and pollen-free cut-flower classes. It is direct-sown into warm soil after frost (the big taproot resents transplanting), thrives in heat, full sun, and even lean soil, and is notably drought-tolerant once established. Young plants are heliotropic, tracking the sun east to west by day, while mature heads settle facing east. The flowers are a major pollinator and beneficial-insect draw, and the ripening seed heads are a magnet for birds and squirrels. Note its mild allelopathy: roots and decomposing residue release compounds that can suppress some neighboring plants, so it is best sited at a bed edge.",
+   "reason": "Trevor's ceiling rule: NCSU, the cited page, states 2 to 10 feet."
+  },
+  {
+   "path": "varieties.recommended[0]",
+   "new": "'Mammoth' / 'Mammoth Russian' (giant single-stem, one huge head, classic edible seed type)",
+   "reason": "Trevor's ceiling rule: no cited hashed page states 9 to 12 ft."
+  }
+ ]
+}

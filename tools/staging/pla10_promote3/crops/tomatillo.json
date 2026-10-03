@@ -1,0 +1,67 @@
+{
+ "slug": "tomatillo",
+ "decision": "Worklist 59 row 17 (CLOSED): NCSU Toolbox physalis-philadelphica ('grow to 3 to 4 feet in height and width') and USU 'tomatillos in the garden' ('tomatillos grow 3-4 feet tall and wide') agree on [3,4] / [3,4]; the crop's prose '3 to 4 feet tall and wide' agrees.",
+ "mature_height_ft": [
+  3,
+  4
+ ],
+ "mature_spread_ft": [
+  3,
+  4
+ ],
+ "sources": [
+  "ncsu_ext",
+  "usu_ext"
+ ],
+ "anchoring_urls": {
+  "ncsu_ext": {
+   "url": "https://plants.ces.ncsu.edu/plants/physalis-philadelphica/",
+   "verified": "2026-10-02"
+  },
+  "usu_ext": {
+   "url": "https://extension.usu.edu/yardandgarden/research/tomatillos-in-the-garden",
+   "verified": "2026-10-01"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ncsu_ext",
+   "usu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [3, 4] ft, mature_spread_ft [3, 4] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/physalis-philadelphica/ (raw read 2026-10-02, 70451 bytes, sha256 d310d62c22f9a1f7957bb55a184bd74efb03a0e42b3f9db94a7005b3a349438e); verbatim: \"grow to 3 to 4 feet in height and width\" | Utah State University Extension, https://extension.usu.edu/yardandgarden/research/tomatillos-in-the-garden (raw read 2026-10-01, 56467 bytes, sha256 506d9e776881071f7b26324b9c614d025bac5d3acfc8390ec2d6c1c7465f3996); verbatim: \"tomatillos grow 3-4 feet tall and wide\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "description_seasoned",
+   "verdict": "agrees",
+   "note": "'3 to 4 feet tall and wide' is the cited figure: agrees."
+  },
+  {
+   "path": "description_beginner",
+   "verdict": "agrees",
+   "note": "'3 to 4 feet across' is the cited spread: agrees."
+  },
+  {
+   "path": "growth_stages[2].user_action_beginner",
+   "verdict": "agrees",
+   "note": "'sprawl to 3 to 4 feet' is the cited figure: agrees."
+  },
+  {
+   "path": "growth_stages[2].user_action_seasoned",
+   "verdict": "agrees",
+   "note": "'reach 3 to 4 ft' is the cited figure: agrees."
+  },
+  {
+   "path": "tips_by_stage.established[0].text_beginner",
+   "verdict": "agrees",
+   "note": "'sprawl to 3 to 4 feet' is the cited figure: agrees."
+  },
+  {
+   "path": "tips_by_stage.established[0].text_seasoned",
+   "verdict": "agrees",
+   "note": "'sprawl to 3 to 4 feet' is the cited figure: agrees."
+  }
+ ]
+}

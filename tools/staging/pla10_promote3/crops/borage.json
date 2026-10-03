@@ -1,0 +1,49 @@
+{
+ "slug": "borage",
+ "decision": "Worklist 59 row 38 / section 3 row 11 (DISAGREEMENT, TAKEN): height UC Marin Master Gardeners 'borage' ('grows two to three feet tall', agreeing with the crop's prose: rule 3); spread NCSU Toolbox borago-officinalis 'width: 1 ft. 0 in. - 1 ft. 4 in.' (16/12 = 1.3333), the one page stating it (W6).",
+ "mature_height_ft": [
+  2,
+  3
+ ],
+ "mature_spread_ft": [
+  1,
+  1.3333
+ ],
+ "sources": [
+  "ucanr_marin_mg",
+  "ncsu_ext"
+ ],
+ "anchoring_urls": {
+  "ucanr_marin_mg": {
+   "url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/borage",
+   "verified": "2026-10-01"
+  },
+  "ncsu_ext": {
+   "url": "https://plants.ces.ncsu.edu/plants/borago-officinalis/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "ucanr_marin_mg",
+   "ncsu_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [2, 3] ft, mature_spread_ft [1, 1.3333] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. UC Master Gardeners Marin (UC ANR), https://ucanr.edu/site/uc-marin-master-gardeners/document/borage (raw read 2026-10-01, 62792 bytes, sha256 14450c0ae0a402411e752307af579504812c7ed4662eaffa3d7e71168de0ba62); verbatim: \"borage is an exuberant annual that grows two to three feet tall\" | NC State Extension, https://plants.ces.ncsu.edu/plants/borago-officinalis/ (raw read 2026-10-02, 67787 bytes, sha256 90eb9be01aa10a67a1bf9112ca644ecaca3a025d7e3a1d04c6d8c3f6443be13b); verbatim: \"height: 1 ft. 7 in. - 3 ft. 2 in. width: 1 ft. 0 in. - 1 ft. 4 in.\". amend-not-recert."
+ },
+ "restatements": [
+  {
+   "path": "description_seasoned",
+   "verdict": "edited",
+   "note": "Section 3 row 11 (adjudicate: agrees at the low end, or edit): EDITED. The height '2 to 3 ft tall' is UC Marin's and stays; the width '1 to 2 ft wide' exceeds NCSU's cited 'width: 1 ft. 0 in. - 1 ft. 4 in.', so it is edited to 12 to 16 in (the H3 pattern: prose above the cited high end is edited)."
+  }
+ ],
+ "edits": [
+  {
+   "path": "description_seasoned",
+   "new": "Borage (Borago officinalis), also called starflower, is a large, fast-growing, frost-tender annual herb in the borage family (Boraginaceae), native to the Mediterranean. It builds a bushy, sprawling plant about 2 to 3 ft tall and 12 to 16 in wide, clothed in coarse, bristly, gray-green leaves, and carries loose clusters of nodding, star-shaped, sky-blue flowers from late spring into fall. Borage is one of the best bee and pollinator plants a garden can grow, a traditional companion set near tomatoes, squash, and strawberries, and a vigorous self-seeder that naturalizes readily once established. Both the cucumber-flavored young leaves and the blue flowers are edible, used fresh as a garnish and in drinks and salads, though borage is best eaten in moderation. It grows through the warm months in cool and temperate regions and is killed by hard frost; in hot, humid climates it is grown instead as a cool-season plant.",
+   "reason": "Section 3 row 11: NCSU 'width: 1 ft. 0 in. - 1 ft. 4 in.', the authored spread [1,1.3333]."
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "slug": "spinach",
+ "decision": "Worklist 59 row 19 (CLOSED): UMD 'growing spinach' states 'it grows to a height of 8-12 inches.' H4: 8/12 = 0.6667. No spread stated.",
+ "mature_height_ft": [
+  0.6667,
+  1
+ ],
+ "mature_spread_ft": null,
+ "sources": [
+  "umd_ext"
+ ],
+ "anchoring_urls": {
+  "umd_ext": {
+   "url": "https://extension.umd.edu/resource/growing-spinach-home-garden",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "umd_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [0.6667, 1] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. University of Maryland Extension, https://extension.umd.edu/resource/growing-spinach-home-garden (raw read 2026-10-02, 36443 bytes, sha256 83b4405669e6bacdbd73a316dce7f9c2d47f126105cb2ffb655c10167f146842); verbatim: \"it grows to a height of 8-12 inches.\". amend-not-recert."
+ }
+}

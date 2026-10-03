@@ -1,0 +1,29 @@
+{
+ "slug": "cherry-tomato",
+ "decision": "Worklist 59 row 12 / section 3 row 2 (DISAGREEMENT, TAKEN): Cornell 'tomato growing guide' states 'height: 2 to 6 feet' and 'spread: 2 to 6 feet'. Recorded HABIT-SPANNING: one closed range for the garden tomato covering determinate and indeterminate. NCSU Toolbox [1,10] is wider than any tomato grown on its default (scope). No support-entry height override (plan 58 section 2.4).",
+ "mature_height_ft": [
+  2,
+  6
+ ],
+ "mature_spread_ft": [
+  2,
+  6
+ ],
+ "sources": [
+  "cornell_ext"
+ ],
+ "anchoring_urls": {
+  "cornell_ext": {
+   "url": "https://gardening.cals.cornell.edu/garden-guidance/foodgarden/vegetable-growing-guides/tomato-growing-guide/",
+   "verified": "2026-10-02"
+  }
+ },
+ "field_addition": {
+  "field": "plant_dimensions",
+  "date": "2026-10-02",
+  "sources": [
+   "cornell_ext"
+  ],
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [2, 6] ft, mature_spread_ft [2, 6] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. Cornell Cooperative Extension, https://gardening.cals.cornell.edu/garden-guidance/foodgarden/vegetable-growing-guides/tomato-growing-guide/ (raw read 2026-10-02, 95421 bytes, sha256 08b7d1dcdd516b579d1760968d476bce90ac9ebbb84f923ce96533ad4c06a880); verbatim: \"height: 2 to 6 feet staked and pruned plants can grow to well over 6 feet tall in favorable growing seasons. spread: 2 to 6 feet\". amend-not-recert."
+ }
+}
