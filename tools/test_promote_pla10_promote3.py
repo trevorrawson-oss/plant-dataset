@@ -3,7 +3,7 @@
 backfill), built in the promote-3 session-1 tools commit (2026-10-02) BEFORE any stage exists.
 Run: python3 -m pytest tools/test_promote_pla10_promote3.py -q
 
-T4 first: pla10_promote_common.quote_states_ft, the height/spread quote check, run against REAL quotes from the
+T4 first: cited_promote_common.quote_states_ft, the height/spread quote check, run against REAL quotes from the
 plan-58 measurements (C_tipover_heights_pla465_backfill.md, D_heights_remaining.tsv) as its positive control,
 so the check is measured against the page types the stage will cite before anything is authored to it.
 Then the promote: the fixed list (46 + 16 = 62), the T3 record allowance, the sibling pair, the backfill
@@ -17,7 +17,7 @@ import copy, csv, hashlib, inspect, json, os, shutil, sys, tempfile, unittest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-import pla10_promote_common as C  # noqa: E402
+import cited_promote_common as C  # noqa: E402
 import promote_fixture  # noqa: E402
 import promote_pla10_promote3 as P  # noqa: E402
 

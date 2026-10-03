@@ -26,7 +26,7 @@ A44T = "test_planting_layout_gate.py"
 A44I = "test_gate_planting_layout_a44.py"   # script: the real whole_crop_gate / gate_all entry points
 SCRIPTS = {A44I}
 PRM = "promote_pla10_promote2.py"
-COM = "pla10_promote_common.py"
+COM = "cited_promote_common.py"
 PLG = "planting_layout_gate.py"
 
 # (name, target, old, new, driver file, pytest -k selector)

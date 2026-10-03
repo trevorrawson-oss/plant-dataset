@@ -20,7 +20,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import promote_fixture  # noqa: E402
 import promote_pla10_promote2 as P  # noqa: E402
-import pla10_promote_common as C  # noqa: E402
+import cited_promote_common as C  # noqa: E402
 
 BASE = json.loads(promote_fixture.pre_state(P.BASE_SHA))
 IDX = {c["slug"]: c for c in BASE["crops"]}

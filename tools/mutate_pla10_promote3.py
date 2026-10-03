@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """mutate_pla10_promote3 -- mutation harness for PLA-10 promote 3's session-1 TOOLS commit (2026-10-02): T3 (the
 third record allowance: one plant_dimensions field_additions record per newly authored crop), T4
-(pla10_promote_common.quote_states_ft and its stated tolerance), T5 (A62's mature_dimensions sibling block and
+(cited_promote_common.quote_states_ft and its stated tolerance), T5 (A62's mature_dimensions sibling block and
 its arming flag; A59's sibling rule and its flag), and every guard of promote_pla10_promote3 (the fixed list,
 values, the sibling, the backfill rulings K1/K2/K3, evidence, restatements, blast radius, the post-state gates
 through REACHABILITY drivers that corrupt the stage past check_pre).
@@ -27,7 +27,7 @@ PDT = "test_plant_dimensions_gate.py"
 A59I = "test_gate_plant_dimensions_a59.py"   # script: the real whole_crop_gate entry point
 SCRIPTS = {A59I}
 PRM = "promote_pla10_promote3.py"
-COM = "pla10_promote_common.py"
+COM = "cited_promote_common.py"
 SBR = "sourced_block_ratchet_gate.py"
 PDG = "plant_dimensions_gate.py"
 WCG = "whole_crop_gate.py"

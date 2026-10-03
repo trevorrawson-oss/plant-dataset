@@ -3,7 +3,7 @@
 mature_dimensions sibling backfill on PLA-465's 16 (§3.3). Spec docs/specs/pla10-field-shape.md §4; plan
 docs/kickoffs/58-pla10-promote2-plan.md §3, §4, §8 (T3-T5); rulings H1-H4, K1-K4 (all TAKEN). Base 31b766e8
 (promote 2, 7177af3). Built 2026-10-02 in promote 3's session-1 tools commit, BEFORE any stage exists.
-Nothing here authors a value. Promotes do not import promotes; shared reading comes from pla10_promote_common.
+Nothing here authors a value. Promotes do not import promotes; shared reading comes from cited_promote_common.
 
 WHAT IT WRITES, and nothing wider:
   (V) mature_height_ft / mature_spread_ft ([lo, hi] feet, at most 4 decimals, or null) on a NEW crop, as staged.
@@ -71,7 +71,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 from bare_host_gate import is_bare  # noqa: E402  -- A63's predicate, imported, never retyped
-from pla10_promote_common import (DIST, EVIDENCE_COLS, SKIP_SUBTREES, Refused, compact, fmt,  # noqa: E402
+from cited_promote_common import (DIST, EVIDENCE_COLS, SKIP_SUBTREES, Refused, compact, fmt,  # noqa: E402
                                   ft_endpoints_stated, leaf_diff, manifest, norm_text, parse_path, pdf_text,
                                   quote_states_ft, refuse, resolve, serialize, set_at, sha256_bytes)
 

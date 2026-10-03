@@ -49,7 +49,7 @@ WHY EACH GUARD EXISTS.
  E. EVERY OVERRIDE IS CITED TO BYTES. A non-null override has an EVIDENCE row naming the same value, a
     source the row cites and the row's own anchoring url; the bytes exist, hash to their name, are in
     MANIFEST.tsv under that url, contain the quote, and the quote states an endpoint (inches or feet).
-    The reading is pla10_promote_common's, byte-identical to promote 1's (the suite pins it).
+    The reading is cited_promote_common's (moved there byte-identically 2026-10-03; the replays pin it).
  F. A CORRECTION APPENDS, IT NEVER REWRITES. `append` is exactly one correction line with a real date and a
     "-- see <ref>." pointer, nothing before or after it; the finding id matches exactly one finding; one
     correction per finding per stage; a summary already ending with it refuses (no double-apply). After
@@ -88,7 +88,7 @@ REPO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 import planting_layout_gate as PLG  # noqa: E402
 from bare_host_gate import is_bare  # noqa: E402  -- A63's predicate, imported, never retyped
-from pla10_promote_common import (EVIDENCE_COLS, Refused, compact, fmt, leaf_diff, manifest,  # noqa: E402
+from cited_promote_common import (EVIDENCE_COLS, Refused, compact, fmt, leaf_diff, manifest,  # noqa: E402
                                   norm_text, parse_path, pdf_text, quote_states, refuse, resolve, serialize,
                                   set_at, sha256_bytes, spacing_strings)
 
