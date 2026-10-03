@@ -73,7 +73,8 @@ SIBLING_BLOCKS = {
 # UNNAMED), RATCHETED only once its flag flips, in the data commit that writes the siblings: armed on a
 # canonical whose PLA-465 heights carry no sibling yet, each of the 16 would fail as a NEW uncited block.
 # test_sourced_block_ratchet_gate pins the flag to the data (armed iff a certified crop carries the key).
-MATURE_DIMENSIONS_ARMED = False
+# ARMED 2026-10-03 in the commit that wrote b331e5f2 (PLA-10 promote 3: 59 certified crops carry the pair).
+MATURE_DIMENSIONS_ARMED = True
 # List families: name -> (locator, identity key or None for index, parent block covering it or None)
 ITEM_FAMILIES = {
     "pests": (("pests",), "id", None),

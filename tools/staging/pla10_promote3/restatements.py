@@ -12,11 +12,6 @@ STAGE = "A stage or harvest-time height (seedling, cutting, hilling), not the ma
 VARIETY = "A variety- or type-level figure, not the crop-level range; the authored range is the crop's: agrees."
 
 RESTATE = {
- "broccoli": {
-  "container_notes.shape_requirements_beginner": (A, POT),
-  "container_notes.shape_requirements_seasoned": (A, POT),
-  "yield_expectations.per_plant_beginner": (A, "A head diameter (4 to 8 inches wide), not the plant's spread: agrees."),
- },
  "brussels-sprouts": {
   "container_notes.shape_requirements_beginner": (A, POT),
   "container_notes.shape_requirements_seasoned": (A, POT),
@@ -42,6 +37,21 @@ RESTATE = {
   "harvest_ready_seasoned": (A, STAGE),
   "varieties.recommended[0].note": (A, "'reaches about 2 to 3 feet' sits inside [1.5,4]: agrees."),
  },
+ "edamame": {
+  "growth_stages[2].what_to_look_for_beginner": ("edited", "BELOW THE FLOOR ('two to three feet' vs the point [3,3]; ISU "
+                                                 "'approximately 3 feet tall'): the H3 pattern, edited to the cited figure. "
+                                                 "Scanner-invisible (word numbers, PLA-655 class); found by the session-3 review."),
+  "growth_stages[2].what_to_look_for_seasoned": ("edited", "BELOW THE FLOOR ('its full two to three feet' vs [3,3]): the H3 "
+                                                 "pattern, edited to the cited figure. Scanner-invisible (PLA-655 class)."),
+ },
+ "green-beans-bush": {
+  "growth_stages[2].what_to_look_for_beginner": ("edited", "BELOW THE FLOOR ('one to two feet' vs the point [2,2]; UMN "
+                                                 "'growing about two feet tall'): the H3 pattern, edited to the cited "
+                                                 "figure. Scanner-invisible (word numbers, PLA-655 class); found by the "
+                                                 "session-3 review."),
+  "growth_stages[2].what_to_look_for_seasoned": ("edited", "BELOW THE FLOOR ('one-to-two-foot height' vs [2,2]): the H3 "
+                                                 "pattern, edited to the cited figure. Scanner-invisible (PLA-655 class)."),
+ },
  "eggplant": {"growth_stages[5].what_to_look_for_seasoned": (A, "A fruit size (2 inches across), not the plant: agrees.")},
  "cosmos": {
   "deadheading_beginner": (A, "A cut-back height (12 to 18 inches), not the mature height: agrees."),
@@ -49,7 +59,10 @@ RESTATE = {
   "tips_by_stage.flowering[1].text_beginner": (A, "A cut-back height, not the mature height: agrees."),
   "tips_by_stage.flowering[1].text_seasoned": (A, "A cut-back height, not the mature height: agrees."),
   "varieties.recommended[0]": (A, "Sensation 3 to 4 ft sits inside UF's [3,6]: agrees."),
-  "description_seasoned": (A, "'reaches roughly 3 to 6 ft' is UF's figure exactly: agrees."),
+  "description_seasoned": (A, "'Garden cosmos (C. bipinnatus) reaches roughly 3 to 6 ft' is UF's figure exactly; the "
+                              "same leaf's 'C. sulphureus ... 1 to 3 ft' is BELOW the floor but type-level and stated by "
+                              "the authoring page itself ('orange cosmos ... is shorter, usually between 1-3 feet tall'): "
+                              "agrees (session-3 review corrected this note)."),
  },
  "beefsteak-tomato": {
   "container_notes.shape_requirements_beginner": (A, POT),
@@ -94,9 +107,9 @@ RESTATE = {
  "okra": {
   "container_notes.shape_requirements_seasoned": (A, POT),
   "description_beginner": (A, "'often 4 to 6 feet' sits inside UF's [3,6]: agrees (worklist row 25)."),
-  "description_seasoned": (A, "ABOVE THE CEILING as a claim, no figure ('4 to 6 feet and more' vs [3,6]), SUPPORTED: "
-                              "UF 'plant heights vary by cultivar ... most fall within the 3-6 foot range but check your "
-                              "seed source' (restatement-support row): agrees."),
+  "description_seasoned": ("edited", "ABOVE THE CEILING as a claim ('4 to 6 feet and more' vs [3,6]): UF's 'most fall "
+                                     "within the 3-6 foot range' says nothing above 6 ft (session-3 review: the support "
+                                     "row did not support 'and more'), so 'and more' is dropped and '4 to 6 feet' kept."),
   "thinning.tip_beginner": (A, SPACING),
   "thinning.tip_seasoned": (A, SPACING),
   "varieties.recommended[0].recommended_note": (A, VARIETY),
@@ -128,7 +141,10 @@ RESTATE = {
   "growth_stages[2].what_to_look_for_seasoned": (A, STAGE),
   "harvest_ready_beginner": (A, STAGE),
   "harvest_ready_seasoned": (A, STAGE),
-  "varieties.recommended[0].note": (A, VARIETY + " (worklist section 3 row 7)"),
+  "varieties.recommended[0].note": (A, VARIETY + " (worklist section 3 row 7). Session-3 review: this entry is 'the "
+                                       "standard Allium schoenoprasum', and its '8 to 14 inches' sits BELOW the 1 ft floor; "
+                                       "kept as ruled (section 3 row 7 named the 8-14 in variety prose agrees), raised to "
+                                       "Trevor."),
   "varieties.recommended[3].note": (A, "ABOVE THE CEILING (Forescate '18 to 20 inches' vs [1,1.5]), SUPPORTED: UW-Madison "
                                        "''forescate' is larger than the species, growing 18 to 20 inches tall' "
                                        "(restatement-support row): agrees."),
@@ -136,14 +152,12 @@ RESTATE = {
  "mint": {p: (A, "A spray-timing trigger (plants 4 to 6 inches tall), not the mature height: agrees.")
           for p in ("diseases[2].control_ladder[3].note_seasoned", "diseases[2].organic_treatment_seasoned")},
  "lemongrass": {
-  "description_seasoned": ("edited", "Section 3 row 8 TAKEN: '3 to 6 feet' exceeds both pages' 4 ft; edited to the authored figure."),
-  "growth_stages[2].what_to_look_for_seasoned": ("edited", "Section 3 row 8 TAKEN: '3 to 6 feet' edited to the authored figure."),
-  "companions.note_seasoned": ("edited", "Section 3 row 8, same phrase (scanner-invisible leaf: no height word): "
-                                         "'reaches 3 to 6 feet' edited to the authored figure."),
-  "tips_by_stage.vegetative[0].text_seasoned": ("edited", "Section 3 row 8, same phrase (scanner-invisible leaf): "
-                                                          "'3-to-6-foot clump' edited to the authored figure."),
-  "regions.northern_tier.region_notes_seasoned": ("edited", "Section 3 row 8, same phrase (scanner-invisible leaf): "
-                                                            "'3-to-6-foot clump' edited to the authored figure."),
+  "description_seasoned": (A, "'3 to 6 feet tall' is USU's cited figure exactly (section 3 row 8, re-ruled session 3): agrees."),
+  "growth_stages[2].what_to_look_for_seasoned": (A, "'3 to 6 feet tall' is USU's cited figure: agrees."),
+  "companions.note_seasoned": (A, "'reaches 3 to 6 feet' is USU's cited figure (scanner-invisible leaf): agrees."),
+  "tips_by_stage.vegetative[0].text_seasoned": (A, "'3-to-6-foot clump' is USU's cited figure (scanner-invisible leaf): agrees."),
+  "regions.northern_tier.region_notes_seasoned": (A, "'3-to-6-foot clump' is USU's cited figure (scanner-invisible leaf): "
+                                                     "agrees."),
   "notifications[1].body_beginner": (A, "'room to grow (2 to 3 feet)' is a spacing; it matches the cited spread: agrees."),
  },
  "marigold": {p: (A, SPACING) for p in ("growth_stages[1].user_action_beginner", "tips_by_stage.seedling[0].text_beginner",
@@ -155,6 +169,9 @@ RESTATE = {
                                      "states it: edited into range."),
   "varieties.recommended[0]": ("edited", "ABOVE THE CEILING (Mammoth '9 to 12 ft' vs [1.5,10]), NO cited hashed page states "
                                          "it: the number is dropped and the claim ('giant single-stem') kept."),
+  "varieties.recommended[1]": ("edited", "ABOVE THE CEILING (Sunzilla / American Giant '12+ ft' vs [1.5,10]), NO cited "
+                                         "hashed page states it (scanner-invisible, PLA-655 class; found by the session-3 "
+                                         "review): the number is dropped and the claim ('giant single-stem') kept."),
  },
  "borage": {
   "description_seasoned": ("edited", "Section 3 row 11 (adjudicate: agrees at the low end, or edit): EDITED. The height "
@@ -166,7 +183,9 @@ RESTATE = {
   "description_seasoned": (A, "ABOVE THE CEILING ('cut-flower types reaching 3 to 4 ft' vs [1,3]), SUPPORTED: FP623 "
                               "stops at 3 ft, but Clemson HGIC (cited on the crop, hashed) states zinnias 'range in height "
                               "from 6 inches to 4 feet tall' and Benary's Giant (a cut-flower series) 'plants are 2 to 3 "
-                              "feet wide and 3 to 4 feet tall' (restatement-support rows): agrees."),
+                              "feet wide and 3 to 4 feet tall' (restatement-support rows): agrees. The same leaf's "
+                              "'dwarf bedding types near 6 in' is BELOW the floor, type-level, and inside Clemson's "
+                              "'6 inches to 4 feet' (session-3 review)."),
  },
  "chamomile": {
   "description_beginner": (A, "'grows about 2 ft tall' is the cited high end: agrees."),
@@ -182,6 +201,13 @@ RESTATE = {
   "growth_stages[1].what_to_look_for_seasoned": ("edited", "Section 3 row 16, same figure: 'flower stems 2 to 4 feet tall' "
                                                            "edited to the authored figure."),
   "varieties.recommended[4]": (A, VARIETY + " Kim's Knee High is a dwarf cultivar."),
+  "varieties.recommended[0]": (A, "BELOW THE FLOOR, variety-level (Magnus 'about 30 to 36 in' vs [3,4]), SUPPORTED: Clemson "
+                                  "HGIC echinacea (cited on the crop, hashed session 3) states \"'magnus' reaches 30 to 36 "
+                                  "inches tall\" (restatement-support row; scanner-invisible, found by the session-3 "
+                                  "review): agrees."),
+  "varieties.recommended[3]": (A, "BELOW THE FLOOR, variety-level (Ruby Star 'about 30 to 36 in' vs [3,4]), SUPPORTED: "
+                                  "Clemson HGIC echinacea states \"'ruby star' reaches 30 to 36 inches tall\" "
+                                  "(restatement-support row): agrees."),
  },
  "bee-balm": {"description_seasoned[0]": (A, "'2 to 4 foot ... stems' is the cited height: agrees.")},
 }
@@ -197,18 +223,6 @@ EDITS = {
   "varieties.recommended[1].note": ("A tall heirloom, 3 to 5 feet,", "A tall heirloom, up to 4 feet,",
                                     "H3: the cited UW figure is 18 inches to 4 feet."),
  },
- "lemongrass": {
-  "description_seasoned": ("non-running clump 3 to 6 feet tall", "non-running clump 2 to 4 feet tall",
-                           "Section 3 row 8: the authored NCSU height [2,4]."),
-  "growth_stages[2].what_to_look_for_seasoned": ("The clump stands 3 to 6 feet tall", "The clump stands 2 to 4 feet tall",
-                                                 "Section 3 row 8: the authored NCSU height [2,4]."),
-  "companions.note_seasoned": ("since it reaches 3 to 6 feet.", "since it reaches 2 to 4 feet.",
-                               "Section 3 row 8: the authored NCSU height [2,4]."),
-  "tips_by_stage.vegetative[0].text_seasoned": ("a 3-to-6-foot clump", "a 2-to-4-foot clump",
-                                                "Section 3 row 8: the authored NCSU height [2,4]."),
-  "regions.northern_tier.region_notes_seasoned": ("a 3-to-6-foot clump", "a 2-to-4-foot clump",
-                                                  "Section 3 row 8: the authored NCSU height [2,4]."),
- },
  "echinacea": {
   "description_beginner": ("It grows about 2 to 4 feet tall", "It grows about 3 to 4 feet tall",
                            "Section 3 row 16: the authored NCSU height [3,4]."),
@@ -217,9 +231,23 @@ EDITS = {
   "growth_stages[1].what_to_look_for_seasoned": ("flower stems 2 to 4 feet tall", "flower stems 3 to 4 feet tall",
                                                  "Section 3 row 16: the authored NCSU height [3,4]."),
  },
+ "edamame": {
+  "growth_stages[2].what_to_look_for_beginner": ("usually two to three feet tall", "usually about three feet tall",
+                                                 "H3: ISU, the cited page, states 'approximately 3 feet tall'."),
+  "growth_stages[2].what_to_look_for_seasoned": ("its full two to three feet,", "its full height of about three feet,",
+                                                 "H3: ISU, the cited page, states 'approximately 3 feet tall'."),
+ },
+ "green-beans-bush": {
+  "growth_stages[2].what_to_look_for_beginner": ("usually one to two feet tall", "usually about two feet tall",
+                                                 "H3: UMN, the cited page, states 'growing about two feet tall'."),
+  "growth_stages[2].what_to_look_for_seasoned": ("its full one-to-two-foot height", "its full height of about two feet",
+                                                 "H3: UMN, the cited page, states 'growing about two feet tall'."),
+ },
  "okra": {
   "varieties.recommended[7].recommended_note": ("Tall heirloom (6 to 8 feet) with long pods", "Tall heirloom with long pods",
                                                 "Trevor's ceiling rule: no cited hashed page states 6 to 8 ft."),
+  "description_seasoned": ("commonly 4 to 6 feet and more,", "commonly 4 to 6 feet,",
+                           "Trevor's ceiling rule: UF states 'most fall within the 3-6 foot range', nothing above it."),
  },
  "sunflower": {
   "description_beginner": ("towering giants over 10 feet tall", "towering giants up to 10 feet tall",
@@ -228,6 +256,8 @@ EDITS = {
                            "Trevor's ceiling rule: NCSU, the cited page, states 2 to 10 feet."),
   "varieties.recommended[0]": ("(giant single-stem, 9 to 12 ft, one huge head,", "(giant single-stem, one huge head,",
                                "Trevor's ceiling rule: no cited hashed page states 9 to 12 ft."),
+  "varieties.recommended[1]": ("(giant single-stem, 12+ ft, large heads", "(giant single-stem, large heads",
+                               "Trevor's ceiling rule: no cited hashed page states 12 ft."),
  },
  "borage": {
   "description_seasoned": ("about 2 to 3 ft tall and 1 to 2 ft wide", "about 2 to 3 ft tall and 12 to 16 in wide",
@@ -251,13 +281,15 @@ SUPPORT = {
  "heirloom-tomato": {"description_beginner": ("5 to 6 feet tall or more", [(CORNELL_TOM, CORNELL_Q)]),
                      "det_indet.detail_beginner": ("6 feet or more", [(CORNELL_TOM, CORNELL_Q)]),
                      "det_indet.detail_seasoned": ("6 to 8 feet", [(OSU_TOM, OSU_Q), (CORNELL_TOM, CORNELL_Q)])},
- "okra": {"description_seasoned": ("4 to 6 feet and more",
-                                   [("https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/okra/",
-                                     "plant heights vary by cultivar and pruning practices. most fall within the 3-6 foot "
-                                     "range but check your seed source for more information.")])},
  "chives": {"varieties.recommended[3].note": ("roughly 18 to 20 inches",
                                               [("https://hort.extension.wisc.edu/articles/chives-allium-schoenoprasum",
                                                 "'forescate' is larger than the species, growing 18 to 20 inches tall")])},
+ "echinacea": {"varieties.recommended[0]": ("about 30 to 36 in",
+                                            [("https://hgic.clemson.edu/factsheet/echinacea/",
+                                              "'magnus' reaches 30 to 36 inches tall.")]),
+               "varieties.recommended[3]": ("about 30 to 36 in",
+                                            [("https://hgic.clemson.edu/factsheet/echinacea/",
+                                              "'ruby star' reaches 30 to 36 inches tall")])},
  "zinnia": {"description_seasoned": ("cut-flower types reaching 3 to 4 ft",
                                      [(CLEMSON_Z, "range in height from 6 inches to 4 feet tall."),
                                       (CLEMSON_Z, "benary's giant series has large, double flowers 4 to 5 inches in "

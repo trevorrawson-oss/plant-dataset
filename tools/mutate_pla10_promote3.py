@@ -56,8 +56,9 @@ MUTATIONS = [
     ("t5_a62_flag_ignored", SBR, "        if name == \"mature_dimensions\" and not mature_dimensions_armed:",
      "        if name == \"mature_dimensions\":", SBT, "test_armed_a_height_with_no_sibling_FAILS_by_name"),
     ("t5_a62_always_armed", SBR, "        if name == \"mature_dimensions\" and not mature_dimensions_armed:",
-     "        if False:", SBT, "test_unarmed_the_live_canonical_is_clean"),
-    ("t5_a62_armed_early", SBR, "MATURE_DIMENSIONS_ARMED = False", "MATURE_DIMENSIONS_ARMED = True",
+     "        if False:", SBT, "test_unarmed_an_uncited_height_is_not_failed"),
+    # armed in the data commit (2026-10-03): the flag mutation is now armed LATE (was armed early, pre-data)
+    ("t5_a62_armed_late", SBR, "MATURE_DIMENSIONS_ARMED = True", "MATURE_DIMENSIONS_ARMED = False",
      SBT, "test_the_flag_matches_the_data"),
     # ---- T5: A59's sibling rule ----------------------------------------------------------------------
     # the named injection: a height with no sibling
@@ -68,7 +69,10 @@ MUTATIONS = [
     # the named injection: a sibling with no anchor
     ("t5_a59_anchor_unchecked", PDG, "        if not (isinstance(url, str) and url.startswith((\"http://\", \"https://\"))):",
      "        if False:", PDT, "test_a_source_with_no_anchor_FAILS"),
-    ("t5_a59_armed_early", WCG, "A59_SIBLING_ARMED = False", "A59_SIBLING_ARMED = True", A59I, None),
+    ("t5_a59_armed_late", WCG, "A59_SIBLING_ARMED = True", "A59_SIBLING_ARMED = False", A59I, None),
+    # the entry-point call itself (data commit, 2026-10-03): the flag stays True but whole_crop_gate never calls
+    # the sibling rule, so only a test driving the real entry point on an uncited pair can see it
+    ("t5_a59_entry_call_dropped", WCG, " + (_pd_sibling(crop) if A59_SIBLING_ARMED else [])", "", A59I, None),
     # ---- X / V: the fixed list, values ---------------------------------------------------------------
     ("x_fixed_list_open", PRM, "    if set(stage) != want:", "    if False:", PRT, "test_FIXED_LIST_a_missing_crop_REFUSES"),
     ("x_empty_stage_passes", PRM, "    if not stage:\n        refuse(\"the stage names no crop",

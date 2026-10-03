@@ -211,3 +211,37 @@ excluded (woody; PLA-465 not reopened) and cosmos added (its H1 row is ruled but
 3. `promote_pla10_promote3.py --check` clean (it refuses until all 62 are staged); staging commit, **report before
    committing**.
 4. Session 3: independent source-truth review, gauntlet, the HANDOFF.md items, data commit, state trio.
+
+## 6. Session 3: the independent source-truth review, and what it moved (2026-10-03)
+
+Four reviewers who did not write the stage, against the hashed bytes: new veg + peppers (28), new herbs + flowers (18),
+the 16 backfills, and the prose pass (every edited leaf, every `agrees`, all restatement-support rows, a completeness
+scan). Backfill: 16/16 clean, 30 evidence rows verified, apple K1 (wpcdn bytes == the record's s3 read, sha 2ce35f98)
+and blueberry K2 branch 1 confirmed. Every finding below was re-verified against the bytes before it was acted on.
+**Output moved 659a9df7 -> b331e5f2** (43 authored, 3 null by decision, 16 backfilled; 98 evidence rows; 123
+restatements; 12 restatement-support rows; 59 crops changed, not 60).
+
+**Re-ruled (Trevor, session 3):**
+
+| row | was | now | why |
+| -- | -- | -- | -- |
+| 6 broccoli | NCSU point [3.9167] / [1.6667] | **null / null** | NCSU's "full-grown plants reach about 47 inches tall and 20 inches wide" sits in the Botany paragraph between the inflorescence and "relying on bees for cross-pollination ... seed pods": the flowering / seed plant, the seed-stalk reasoning of section 3 row 3. Hunt: UMN, UMD, UF-GS, Clemson, ISU, USU, Ohioline broccoli pages hashed this session; none states a mature plant height. |
+| 34 / section 3 row 8 lemongrass | NCSU [2,4] / [2,3], 5 prose edits | **USU [3,6] / NCSU [2,3], no edits** | The row's premise ("3 to 6 exceeds both pages") missed USU "lemongrass in the garden" (cited 63x, hashed e76666f1): "it can grow 3 to 6 feet tall and 3 feet wide". Tie-break (2). |
+| 43 / section 3 row 16 echinacea | NCSU [3,4] / null | **NCSU [3,4] / [1,2]**, 3 edits kept | Spread: the same attributes line states "width: 1 ft. 0 in. - 2 ft. 0 in.". Height: Trevor chose FP192 "flowers stand 2 to 4 feet tall", but its bytes read `2 to 4feettall` (publisher's text) which T4 cannot read; Clemson HGIC (hashed this session) states E. purpurea "2 to 31⁄2 feet" (U+2044). No T4-readable page states 2-4: the ruled fallback stands. **Clemson is the second page needing U+2044 (D-T4's trigger), recorded, no T4 change in this promote.** |
+
+**Fixed under rules already TAKEN (no ruling needed):** okra "4 to 6 feet and more" edited to "4 to 6 feet" and its
+support row dropped (UF "most fall within the 3-6 foot range" does not support "and more"); sunflower Sunzilla /
+American Giant "12+ ft" edited (ceiling rule; scanner-invisible); edamame "two to three feet" x2 and green-beans-bush
+"one to two feet" x2 edited to the cited point (H3; word numbers are scanner-invisible, PLA-655 class); echinacea
+Magnus / Ruby Star "about 30 to 36 in" `agrees` with Clemson support rows ("'magnus' reaches 30 to 36 inches tall");
+the scope the rulings require "recorded" now reaches canonical (appended to the field_addition note on habanero, the
+five tomatoes, mint, viola, marigold, sunflower, cosmos, basil; the stage `decision` string never lands); notes
+corrected on cosmos (C. sulphureus 1-3 ft is type-level, stated by UF on the authoring page), zinnia (dwarf "near
+6 in"), chives var[0].
+
+**Raised, not changed (filed 2026-10-03: PLA-656 chives, PLA-657 chamomile re-point, PLA-658 blueberry, PLA-655 support file + word numbers, PLA-659 T4 U+2044):** chives `varieties.recommended[0]` ("the standard Allium schoenoprasum ... 8 to 14 inches")
+sits below the authored 1 ft floor and was ruled `agrees` as variety prose in section 3 row 7; chamomile's 63 existing
+anchors keep the 403ing `/sites/mgscc2016/` URL (one id, two URLs; follow-up); `uc_mg` and `ucanr_santa_clara_mg`
+name one site; blueberry's [5,8] is a highbush figure while four recommended varieties are rabbiteye; mulberry's
+NCSU page disagrees with itself; viola's page prose (6-9 in) and attributes (4-9 in) disagree; nothing machine-checks
+EVIDENCE_RESTATEMENT_SUPPORT.tsv.

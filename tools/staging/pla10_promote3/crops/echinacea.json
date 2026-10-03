@@ -1,11 +1,14 @@
 {
  "slug": "echinacea",
- "decision": "Worklist 59 row 43 / section 3 row 16 (DISAGREEMENT, TAKEN): NCSU Toolbox echinacea-purpurea 'it may grow 3 to 4 feet tall' (attributes agree); PSU 24-36 in not taken. The prose '2 to 4 feet' is edited to the authored figure. No spread.",
+ "decision": "Worklist 59 row 43 / section 3 row 16 (DISAGREEMENT, TAKEN; session 3 re-examined): NCSU Toolbox echinacea-purpurea attributes [3,4] / [1,2] (its prose 'it may grow 3 to 4 feet tall' agrees). SPREAD now authored (Trevor, session 3): the same attributes line's closed 'width: 1 ft. 0 in. - 2 ft. 0 in.'. Session-3 hunt for the prose's '2 to 4': UF EDIS FP192 (cited, hashed) states 'flowers stand 2 to 4feettall' (the publisher's glued text, which T4 cannot read; its own dimensions block says 'height: 1 to 3 feet'); Clemson HGIC echinacea (cited, hashed this session) states E. purpurea 'grows up to 2 to 3 1/2 feet tall' with U+2044 fractions (the D-T4 reader gap; the second page needing it, recorded) and the genus-level open 'up to 4 feet'; PSU 24-36 in. No T4-readable page states 2-4, so the ruled fallback stands: NCSU [3,4], the prose '2 to 4 feet' edited to the authored figure.",
  "mature_height_ft": [
   3,
   4
  ],
- "mature_spread_ft": null,
+ "mature_spread_ft": [
+  1,
+  2
+ ],
  "sources": [
   "ncsu_ext"
  ],
@@ -21,7 +24,7 @@
   "sources": [
    "ncsu_ext"
   ],
-  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [3, 4] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/echinacea-purpurea/ (raw read 2026-10-02, 198557 bytes, sha256 c05ad09c387f546b592d53a807c8b2670b4373e0af916a625f8e8b2a35eb4bd7); verbatim: \"it may grow 3 to 4 feet tall\". amend-not-recert."
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [3, 4] ft, mature_spread_ft [1, 2] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/echinacea-purpurea/ (raw read 2026-10-02, 198557 bytes, sha256 c05ad09c387f546b592d53a807c8b2670b4373e0af916a625f8e8b2a35eb4bd7); verbatim: \"dimensions: height: 3 ft. 0 in. - 4 ft. 0 in. width: 1 ft. 0 in. - 2 ft. 0 in.\". amend-not-recert."
  },
  "restatements": [
   {
@@ -43,6 +46,16 @@
    "path": "description_seasoned",
    "verdict": "edited",
    "note": "Section 3 row 16, same figure (scanner-invisible leaf): '2 to 4 foot stems' edited to the authored figure."
+  },
+  {
+   "path": "varieties.recommended[0]",
+   "verdict": "agrees",
+   "note": "BELOW THE FLOOR, variety-level (Magnus 'about 30 to 36 in' vs [3,4]), SUPPORTED: Clemson HGIC echinacea (cited on the crop, hashed session 3) states \"'magnus' reaches 30 to 36 inches tall\" (restatement-support row; scanner-invisible, found by the session-3 review): agrees."
+  },
+  {
+   "path": "varieties.recommended[3]",
+   "verdict": "agrees",
+   "note": "BELOW THE FLOOR, variety-level (Ruby Star 'about 30 to 36 in' vs [3,4]), SUPPORTED: Clemson HGIC echinacea states \"'ruby star' reaches 30 to 36 inches tall\" (restatement-support row): agrees."
   }
  ],
  "edits": [

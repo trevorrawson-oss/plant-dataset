@@ -22,5 +22,29 @@
    "iastate_ext"
   ],
   "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [3, 3] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. Iowa State University Extension, https://yardandgarden.extension.iastate.edu/article/2022/07/all-about-beans (raw read 2026-10-02, 56745 bytes, sha256 3fb9098487647b084ada7360e140a74e91d1d68713335d864422e43773423f25); verbatim: \"plants are approximately 3 feet tall and do not require support.\". amend-not-recert."
- }
+ },
+ "restatements": [
+  {
+   "path": "growth_stages[2].what_to_look_for_beginner",
+   "verdict": "edited",
+   "note": "BELOW THE FLOOR ('two to three feet' vs the point [3,3]; ISU 'approximately 3 feet tall'): the H3 pattern, edited to the cited figure. Scanner-invisible (word numbers, PLA-655 class); found by the session-3 review."
+  },
+  {
+   "path": "growth_stages[2].what_to_look_for_seasoned",
+   "verdict": "edited",
+   "note": "BELOW THE FLOOR ('its full two to three feet' vs [3,3]): the H3 pattern, edited to the cited figure. Scanner-invisible (PLA-655 class)."
+  }
+ ],
+ "edits": [
+  {
+   "path": "growth_stages[2].what_to_look_for_beginner",
+   "new": "The plant grows bushy and fills out to its full size, usually about three feet tall and standing on its own without support. Edamame makes much of its own food (nitrogen) at this stage, so you want healthy green growth, not huge dark leafy plants, which usually mean too much fertilizer and fewer pods.",
+   "reason": "H3: ISU, the cited page, states 'approximately 3 feet tall'."
+  },
+  {
+   "path": "growth_stages[2].what_to_look_for_seasoned",
+   "new": "Steady, bushy growth as the plant fills out to its full height of about three feet, sturdy and upright with no need for support, building the canopy that will carry the pods. The plant is fixing much of its own nitrogen now through root nodules, so vigorous green growth, not dark, overfed lushness, is the goal.",
+   "reason": "H3: ISU, the cited page, states 'approximately 3 feet tall'."
+  }
+ ]
 }

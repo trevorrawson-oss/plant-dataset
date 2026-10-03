@@ -24,7 +24,7 @@
   "sources": [
    "ncsu_ext"
   ],
-  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [1.5, 10] ft, mature_spread_ft [1.5, 3] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/helianthus-annuus/ (raw read 2026-10-02, 133999 bytes, sha256 6708bd2ae99ed404d82e6b32ef58e006e7aed3cfbc661d887617d0face4aa3bc); verbatim: \"height: 1 ft. 6 in. - 10 ft. 0 in. width: 1 ft. 6 in. - 3 ft. 0 in.\". amend-not-recert."
+  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [1.5, 10] ft, mature_spread_ft [1.5, 3] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://plants.ces.ncsu.edu/plants/helianthus-annuus/ (raw read 2026-10-02, 133999 bytes, sha256 6708bd2ae99ed404d82e6b32ef58e006e7aed3cfbc661d887617d0face4aa3bc); verbatim: \"height: 1 ft. 6 in. - 10 ft. 0 in. width: 1 ft. 6 in. - 3 ft. 0 in.\". Scope: cultivar-spanning (dwarf to giant). amend-not-recert."
  },
  "restatements": [
   {
@@ -41,6 +41,11 @@
    "path": "varieties.recommended[0]",
    "verdict": "edited",
    "note": "ABOVE THE CEILING (Mammoth '9 to 12 ft' vs [1.5,10]), NO cited hashed page states it: the number is dropped and the claim ('giant single-stem') kept."
+  },
+  {
+   "path": "varieties.recommended[1]",
+   "verdict": "edited",
+   "note": "ABOVE THE CEILING (Sunzilla / American Giant '12+ ft' vs [1.5,10]), NO cited hashed page states it (scanner-invisible, PLA-655 class; found by the session-3 review): the number is dropped and the claim ('giant single-stem') kept."
   }
  ],
  "edits": [
@@ -58,6 +63,11 @@
    "path": "varieties.recommended[0]",
    "new": "'Mammoth' / 'Mammoth Russian' (giant single-stem, one huge head, classic edible seed type)",
    "reason": "Trevor's ceiling rule: no cited hashed page states 9 to 12 ft."
+  },
+  {
+   "path": "varieties.recommended[1]",
+   "new": "'Sunzilla' / 'American Giant' (giant single-stem, large heads for seed and show)",
+   "reason": "Trevor's ceiling rule: no cited hashed page states 12 ft."
   }
  ]
 }

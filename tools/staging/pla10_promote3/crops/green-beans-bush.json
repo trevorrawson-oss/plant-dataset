@@ -22,5 +22,29 @@
    "umn_ext"
   ],
   "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [2, 2] ft, mature_spread_ft not authored (null); decision: docs/kickoffs/59-pla10-promote3-worklist.md. University of Minnesota Extension, https://extension.umn.edu/vegetables/growing-beans (raw read 2026-10-02, 131996 bytes, sha256 d5fed4deeabd1ddf240422f585eb79df4ffbc13a2973996f1c8ce05b8a5e9ad9); verbatim: \"bush beans are upright plants that do not need support, growing about two feet tall.\". amend-not-recert."
- }
+ },
+ "restatements": [
+  {
+   "path": "growth_stages[2].what_to_look_for_beginner",
+   "verdict": "edited",
+   "note": "BELOW THE FLOOR ('one to two feet' vs the point [2,2]; UMN 'growing about two feet tall'): the H3 pattern, edited to the cited figure. Scanner-invisible (word numbers, PLA-655 class); found by the session-3 review."
+  },
+  {
+   "path": "growth_stages[2].what_to_look_for_seasoned",
+   "verdict": "edited",
+   "note": "BELOW THE FLOOR ('one-to-two-foot height' vs [2,2]): the H3 pattern, edited to the cited figure. Scanner-invisible (PLA-655 class)."
+  }
+ ],
+ "edits": [
+  {
+   "path": "growth_stages[2].what_to_look_for_beginner",
+   "new": "The plant grows leafier and fills out to its full size, usually about two feet tall, building up before it flowers. Beans make much of their own food (nitrogen) at this stage. You want healthy green growth, not huge dark leafy plants, which often mean too much fertilizer and fewer beans later.",
+   "reason": "H3: UMN, the cited page, states 'growing about two feet tall'."
+  },
+  {
+   "path": "growth_stages[2].what_to_look_for_seasoned",
+   "new": "Steady leafy growth as the bush fills out to its full height of about two feet and builds the canopy that will support flowering. The plant is fixing much of its own nitrogen now through root nodules, so vigorous but not lush, overfed growth is the goal. Overly dark, leafy plants with little branching signal excess nitrogen and forecast a poor pod set.",
+   "reason": "H3: UMN, the cited page, states 'growing about two feet tall'."
+  }
+ ]
 }

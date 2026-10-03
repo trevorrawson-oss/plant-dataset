@@ -1,46 +1,6 @@
 {
  "slug": "broccoli",
- "decision": "Worklist 59 row 6 (CLOSED, point): NCSU 'basics of broccoli production' states 'full-grown plants reach about 47 inches tall and 20 inches wide'. H4: the quotients to 4 places, 47/12 = 3.9167 and 20/12 = 1.6667.",
- "mature_height_ft": [
-  3.9167,
-  3.9167
- ],
- "mature_spread_ft": [
-  1.6667,
-  1.6667
- ],
- "sources": [
-  "ncsu_ext"
- ],
- "anchoring_urls": {
-  "ncsu_ext": {
-   "url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
-   "verified": "2026-10-02"
-  }
- },
- "field_addition": {
-  "field": "plant_dimensions",
-  "date": "2026-10-02",
-  "sources": [
-   "ncsu_ext"
-  ],
-  "note": "PLA-10 promote 3 plant dimensions: mature_height_ft [3.9167, 3.9167] ft, mature_spread_ft [1.6667, 1.6667] ft; decision: docs/kickoffs/59-pla10-promote3-worklist.md. NC State Extension, https://content.ces.ncsu.edu/basics-of-broccoli-production (raw read 2026-10-02, 42794 bytes, sha256 277fe715aedbf499a1a384190da432138c12ecce442638ababda6699ec4a2bb1); verbatim: \"full-grown plants reach about 47 inches tall and 20 inches wide\". amend-not-recert."
- },
- "restatements": [
-  {
-   "path": "container_notes.shape_requirements_beginner",
-   "verdict": "agrees",
-   "note": "Not a plant-height restatement: a container depth / pot size beside a 'tall' or 'deep' word."
-  },
-  {
-   "path": "container_notes.shape_requirements_seasoned",
-   "verdict": "agrees",
-   "note": "Not a plant-height restatement: a container depth / pot size beside a 'tall' or 'deep' word."
-  },
-  {
-   "path": "yield_expectations.per_plant_beginner",
-   "verdict": "agrees",
-   "note": "A head diameter (4 to 8 inches wide), not the plant's spread: agrees."
-  }
- ]
+ "decision": "Worklist 59 row 6, RE-RULED (Trevor, session 3, on the source-truth review): NULL. NCSU 'basics of broccoli production' states 'full-grown plants reach about 47 inches tall and 20 inches wide' in its Botany paragraph, between the inflorescence and 'relying on bees for cross-pollination ... seed pods': the flowering / seed plant, not the plant at harvest (the seed-stalk reasoning of section 3 row 3, onion). Hunt (session 3): UMN, UMD, UF Gardening Solutions, Clemson HGIC, Iowa State, USU and Ohioline broccoli pages fetched and hashed; none states a mature plant height (head diameters and side-dress heights only). Staged null, nothing written.",
+ "mature_height_ft": null,
+ "mature_spread_ft": null
 }

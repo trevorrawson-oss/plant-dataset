@@ -20,12 +20,14 @@ ROWS = {
  "habanero": ([3, 4], None, [("H", UMD_PEP, PEP_Q)],
               PEPPER_DEC.format(n=5, extra="; SCOPE-DOUBT ruled in by H2: the page names habanero, never C. chinense; "
                                           "the session-3 reviewer confirms")),
- "broccoli": ([3.9167, 3.9167], [1.6667, 1.6667],
-              [("HS", "https://content.ces.ncsu.edu/basics-of-broccoli-production",
-                "full-grown plants reach about 47 inches tall and 20 inches wide")],
-              "Worklist 59 row 6 (CLOSED, point): NCSU 'basics of broccoli production' states 'full-grown plants reach "
-              "about 47 inches tall and 20 inches wide'. H4: the quotients to 4 places, 47/12 = 3.9167 and 20/12 = "
-              "1.6667."),
+ "broccoli": (None, None, [],
+              "Worklist 59 row 6, RE-RULED (Trevor, session 3, on the source-truth review): NULL. NCSU 'basics of "
+              "broccoli production' states 'full-grown plants reach about 47 inches tall and 20 inches wide' in its "
+              "Botany paragraph, between the inflorescence and 'relying on bees for cross-pollination ... seed pods': "
+              "the flowering / seed plant, not the plant at harvest (the seed-stalk reasoning of section 3 row 3, onion). "
+              "Hunt (session 3): UMN, UMD, UF Gardening Solutions, Clemson HGIC, Iowa State, USU and Ohioline broccoli "
+              "pages fetched and hashed; none states a mature plant height (head diameters and side-dress heights "
+              "only). Staged null, nothing written."),
  "brussels-sprouts": ([2, 4], [2, 4],
                       [("HS", NC + "brassica-oleracea-brussels-sprouts-group/",
                         "the plants can grow 2-4 feet tall and wide on a thick stalk.")],
@@ -143,11 +145,17 @@ ROWS = {
           "Worklist 59 row 33 (SCOPE-DOUBT; D-MINT TAKEN, condition met): NCSU Toolbox mentha-spicata 'growing quickly 1 "
           "to 2 feet high and wide'. SCOPE RECORDED: the page is spearmint; the crop is genus-level garden mint and names "
           "spearmint the everyday mint. The session-3 reviewer confirms."),
- "lemongrass": ([2, 4], [2, 3], [("HS", NC + "cymbopogon-citratus/",
+ "lemongrass": ([3, 6], [2, 3], [("H", "https://extension.usu.edu/yardandgarden/research/lemongrass-in-the-garden",
+                                  "it can grow 3 to 6 feet tall and 3 feet wide, when water, fertilizer and growing "
+                                  "conditions are optimal."),
+                                 ("S", NC + "cymbopogon-citratus/",
                                   "height: 2 ft. 0 in. - 4 ft. 0 in. width: 2 ft. 0 in. - 3 ft. 0 in.")],
-                "Worklist 59 row 34 / section 3 row 8 (DISAGREEMENT, TAKEN): NCSU Toolbox cymbopogon-citratus attributes "
-                "[2,4] / [2,3] (tie to the Toolbox record, rule 3; UC Santa Clara [3,4] / [2,3] not taken). The prose "
-                "'3 to 6 feet' exceeds both pages: edited to the authored figure."),
+                "Worklist 59 row 34 / section 3 row 8, RE-RULED (Trevor, session 3, on the source-truth review): the row's "
+                "premise ('the prose 3 to 6 feet exceeds both pages') missed USU 'lemongrass in the garden', cited on the "
+                "crop and hashed (e76666f1), which states 'it can grow 3 to 6 feet tall and 3 feet wide'. Three closed "
+                "height ranges (NCSU [2,4], UC Santa Clara [3,4], USU [3,6]), all in scope; tie-break (2): USU's is the "
+                "range the crop's prose already states. HEIGHT USU [3,6]; SPREAD NCSU attributes [2,3] (a closed range "
+                "beats USU's '3 feet wide' point, W2; two values on two pages, W6). No prose edit."),
  "marigold": ([1, 4], [0.5, 1], [("HS", NC + "tagetes/",
                                   "height: 1 ft. 0 in. - 4 ft. 0 in. width: 0 ft. 6 in. - 1 ft. 0 in.")],
               "Worklist 59 row 35 / section 3 row 9 (DISAGREEMENT, TAKEN): NCSU Toolbox tagetes (genus page, matching "
@@ -193,10 +201,17 @@ ROWS = {
                    "Worklist 59 row 42 / section 3 row 15 (DISAGREEMENT, TAKEN): height UW-Madison 'sweet alyssum' "
                    "('grows 3-9 inches tall'; the crop's prose says just 3 to 9 inches tall); spread NCSU Toolbox "
                    "lobularia-maritima 'width: 0 ft. 6 in. - 1 ft. 0 in.', the one page with a figure."),
- "echinacea": ([3, 4], None, [("H", NC + "echinacea-purpurea/", "it may grow 3 to 4 feet tall")],
-               "Worklist 59 row 43 / section 3 row 16 (DISAGREEMENT, TAKEN): NCSU Toolbox echinacea-purpurea 'it may grow "
-               "3 to 4 feet tall' (attributes agree); PSU 24-36 in not taken. The prose '2 to 4 feet' is edited to the "
-               "authored figure. No spread."),
+ "echinacea": ([3, 4], [1, 2], [("HS", NC + "echinacea-purpurea/",
+                                 "dimensions: height: 3 ft. 0 in. - 4 ft. 0 in. width: 1 ft. 0 in. - 2 ft. 0 in.")],
+               "Worklist 59 row 43 / section 3 row 16 (DISAGREEMENT, TAKEN; session 3 re-examined): NCSU Toolbox "
+               "echinacea-purpurea attributes [3,4] / [1,2] (its prose 'it may grow 3 to 4 feet tall' agrees). SPREAD "
+               "now authored (Trevor, session 3): the same attributes line's closed 'width: 1 ft. 0 in. - 2 ft. 0 in.'. "
+               "Session-3 hunt for the prose's '2 to 4': UF EDIS FP192 (cited, hashed) states 'flowers stand 2 to "
+               "4feettall' (the publisher's glued text, which T4 cannot read; its own dimensions block says 'height: 1 to "
+               "3 feet'); Clemson HGIC echinacea (cited, hashed this session) states E. purpurea 'grows up to 2 to "
+               "3 1/2 feet tall' with U+2044 fractions (the D-T4 reader gap; the second page needing it, recorded) and "
+               "the genus-level open 'up to 4 feet'; PSU 24-36 in. No T4-readable page states 2-4, so the ruled "
+               "fallback stands: NCSU [3,4], the prose '2 to 4 feet' edited to the authored figure."),
  "bee-balm": ([2, 4], [2, 3], [("HS", NC + "monarda-didyma/",
                                 "height: 2 ft. 0 in. - 4 ft. 0 in. width: 2 ft. 0 in. - 3 ft. 0 in.")],
               "Worklist 59 row 44 (CLOSED): NCSU Toolbox monarda-didyma attributes [2,4] / [2,3]; the same page's prose "

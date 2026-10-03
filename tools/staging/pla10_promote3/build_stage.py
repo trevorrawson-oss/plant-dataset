@@ -20,6 +20,22 @@ EV_DIR = os.path.join(REPO, "tools", ".evidence_cache")
 SID = {("broad-beans-fava", rows.NC + "vicia-faba/"): "ncsu_ext_toolbox_vicia_faba",
        ("chamomile", "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/chamomile"): "ucanr_santa_clara_mg"}
 
+# Scope the rulings require RECORDED (session-3 review: the stage `decision` never reaches canonical, so a scope
+# kept only there is lost at the promote). Appended to the field_addition note, the record that does land.
+TOM_SPAN = ("habit-spanning: Cornell's one range covers determinate and indeterminate tomatoes (worklist 59 section 3 "
+            "row 2)")
+SCOPE = {
+ "habanero": "the page's figure is a general pepper statement; it names habanero (C. chinense) in its variety lists (H2)",
+ "cherry-tomato": TOM_SPAN, "beefsteak-tomato": TOM_SPAN, "grape-tomato": TOM_SPAN, "heirloom-tomato": TOM_SPAN,
+ "roma-tomato": "determinate: OSU's figure is stated for determinate cultivars, and the crop is determinate",
+ "mint": "the page is spearmint (Mentha spicata); the crop is genus-level garden mint and names spearmint the everyday mint",
+ "viola": "the page is pansy (Viola x wittrockiana); the crop also covers V. cornuta and V. tricolor",
+ "marigold": "cultivar-spanning (dwarf to giant), the genus page for the crop's erecta + patula scope",
+ "sunflower": "cultivar-spanning (dwarf to giant)",
+ "cosmos": "garden cosmos (C. bipinnatus); the same page states orange cosmos (C. sulphureus) usually 1-3 feet",
+ "basil": "the page's range is 'depending on variety', across the basils the crop covers",
+}
+
 man = {}
 for r in csv.DictReader(open(os.path.join(EV_DIR, "MANIFEST.tsv"), encoding="utf-8"), delimiter="\t"):
     man.setdefault(r["url"], []).append(r)
@@ -121,7 +137,8 @@ def main():
                     "field": "plant_dimensions", "date": TODAY, "sources": list(sources),
                     "note": (f"PLA-10 promote 3 plant dimensions: mature_height_ft {fmtv(h)}, mature_spread_ft "
                              f"{fmtv(s)}; decision: docs/kickoffs/59-pla10-promote3-worklist.md. "
-                             + " | ".join(notes) + ". amend-not-recert.")}
+                             + " | ".join(notes) + (f". Scope: {SCOPE[slug]}" if slug in SCOPE else "")
+                             + ". amend-not-recert.")}
         hits = P.height_strings(idx[slug], s is not None) if P._moves(slug, st, idx[slug]) else []
         if dump and hits:
             print(f"=== {slug} H={h} S={s}")

@@ -26,11 +26,18 @@ def with_fa(c):
     c["verification_status"]["field_additions"] = list(c["verification_status"].get("field_additions") or []) + [FA]
 
 
+def with_sibling(c):
+    c["mature_dimensions_sources"] = ["umd_ext"]
+    c["mature_dimensions_anchoring_urls"] = {"umd_ext": {"url": "https://extension.umd.edu/resource/growing-peppers-home-garden",
+                                                         "verified": "2026-10-02"}}
+
+
 # The fixture crop is a CERTIFIED crop carrying no authored value and no plant_dimensions record on the
 # canonical (a null row after the 2026-09-16 write), so every injection below is the ONLY value on it.
 # apple is authored on the live canonical and would carry its own record, which answered for the
-# "no provenance" case once the write landed.
-NULL_CROP = "basil"
+# "no provenance" case once the write landed. Re-homed basil -> carrot 2026-10-03 (PLA-10 promote 3 gives
+# basil a height; carrot is a NONE row in docs/kickoffs/59 and stays null).
+NULL_CROP = "carrot"
 nc = next(c for c in base["crops"] if c["slug"] == NULL_CROP)
 assert nc.get("mature_height_ft") is None and not any(x.get("field") == "plant_dimensions" for x in nc["verification_status"].get("field_additions") or []), \
     f"{NULL_CROP} is no longer a clean fixture for this test; pick a certified crop with no plant_dimensions value or record"
@@ -47,11 +54,12 @@ assert "plant-dimensions:" in out and "below spacing_inches[0]" in out, out
 # An authored value with no provenance record bounces.
 out = gate(NULL_CROP, lambda c: c.__setitem__("mature_height_ft", [1, 2]))
 assert "plant-dimensions:" in out and "field_additions" in out, out
-# A good pair with its record is clean, and A33 accepts it on a non-tree base.
-out = gate(NULL_CROP, lambda c: (c.__setitem__("mature_height_ft", [1, 2]), c.__setitem__("mature_spread_ft", [1, 2]), with_fa(c)))
+# A good pair with its record (and, once the sibling rule arms, its sibling) is clean, and A33 accepts it on a
+# non-tree base.
+out = gate(NULL_CROP, lambda c: (c.__setitem__("mature_height_ft", [1, 2]), c.__setitem__("mature_spread_ft", [1, 2]), with_fa(c), with_sibling(c)))
 assert "plant-dimensions:" not in out and "mature_height_ft" not in out, out
-# A33 bounds: a 60 ft basil is absurd on a non-tree base.
-out = gate(NULL_CROP, lambda c: (c.__setitem__("mature_height_ft", [1, 60]), with_fa(c)))
+# A33 bounds: a 60 ft carrot is absurd on a non-tree base.
+out = gate(NULL_CROP, lambda c: (c.__setitem__("mature_height_ft", [1, 60]), with_fa(c), with_sibling(c)))
 assert "mature_height_ft" in out, out
 # An authored crop on the live canonical carries its record and is clean.
 out = gate("apple", lambda c: None)
@@ -89,6 +97,30 @@ if "A59_SIBLING_ARMED = True" in src:
         c.pop("mature_dimensions_anchoring_urls", None)
     out = gate("apple", strip_sibling)
     assert "plant-dimensions:" in out and "mature_dimensions_sources" in out, out
+    # (2026-10-03, the data commit: the armed branch's first run.) Proved at the whole_crop_gate entry point
+    # on a NEW authored crop, not only a backfilled one: an uncited pair with its record bounces ...
+    out = gate(NULL_CROP, lambda c: (c.__setitem__("mature_height_ft", [1, 2]), with_fa(c)))
+    assert "plant-dimensions:" in out and "no mature_dimensions_sources" in out, out
+    # ... a blank source id bounces ...
+    out = gate(NULL_CROP, lambda c: (c.__setitem__("mature_height_ft", [1, 2]), with_fa(c), with_sibling(c),
+                                     c.__setitem__("mature_dimensions_sources", [" "])))
+    assert "plant-dimensions:" in out and "no mature_dimensions_sources" in out, out
+    # ... a listed source with no http(s) anchor bounces, naming the source ...
+    out = gate(NULL_CROP, lambda c: (c.__setitem__("mature_height_ft", [1, 2]), with_fa(c), with_sibling(c),
+                                     c.__setitem__("mature_dimensions_anchoring_urls", {})))
+    assert "plant-dimensions:" in out and "source 'umd_ext' has no http(s) anchor" in out, out
+    # ... a spread alone (height null) is cited too ...
+    out = gate(NULL_CROP, lambda c: (c.__setitem__("mature_spread_ft", [1, 2]), with_fa(c)))
+    assert "plant-dimensions:" in out and "no mature_dimensions_sources" in out, out
+    # ... and every certified crop carrying a value on the live canonical is clean (positive control on the
+    # real data, so a sibling the promote mis-wrote on any of them reddens here).
+    authored = [c["slug"] for c in base["crops"] if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"
+                and (c.get("mature_height_ft") is not None or c.get("mature_spread_ft") is not None)]
+    assert len(authored) >= 59, f"positive-control population {len(authored)} < 59 (43 promote-3 + 16 PLA-465)"
+    for slug in authored:
+        out = gate(slug, lambda c: None)
+        assert "plant-dimensions:" not in out, (slug, out)
+    print(f"  A59 sibling armed: 4 refusals at the entry point; {len(authored)} authored certified crops clean")
 else:
     # Unarmed, the block announces it and an uncited height is NOT failed for its sibling here.
     out = gate(NULL_CROP, lambda c: (c.__setitem__("mature_height_ft", [1, 2]), with_fa(c)))

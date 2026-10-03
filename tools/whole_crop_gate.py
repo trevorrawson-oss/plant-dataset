@@ -941,10 +941,11 @@ for m in _cpv:
 # SIBLING (PLA-10 promote 3, plan 58 §8 T5): an authored height or spread is cited by the crop-root pair
 # mature_dimensions_sources + _anchoring_urls, an anchor per source. Unarmed until the data commit writes the
 # siblings (the 16 PLA-465 heights carry none before it); test_gate_plant_dimensions_a59 pins flag == data.
+# ARMED 2026-10-03 in the commit that wrote b331e5f2 (PLA-10 promote 3: 59 certified crops carry the pair).
 from plant_dimensions_gate import shape_violations as _pd_shape, presence_violations as _pd_presence, coverage_violations as _pd_coverage, sibling_violations as _pd_sibling
 A59_PRESENCE_ARMED = True
 A59_COVERAGE_ARMED = True
-A59_SIBLING_ARMED = False
+A59_SIBLING_ARMED = True
 print(f"A59. plant dimensions (height/spread pairs, footprint below spacing, provenance; presence {'ARMED' if A59_PRESENCE_ARMED else 'off'}, coverage {'ARMED' if A59_COVERAGE_ARMED else 'off'}, sibling {'ARMED' if A59_SIBLING_ARMED else 'off'})")
 _pdv = _pd_shape(crop) + (_pd_presence(crop) if A59_PRESENCE_ARMED else []) + (_pd_coverage(crop) if A59_COVERAGE_ARMED else []) + (_pd_sibling(crop) if A59_SIBLING_ARMED else [])
 print(f"  plant-dimension violations: {len(_pdv)}")

@@ -80,7 +80,10 @@ CANON = os.path.join(REPO, "crops_data_final.json")
 # rootstock overrides, 24 finding-summary corrections; no problem id, pest or disease touched. Every count
 # test in this file was run on the post-state (scratch worktree) and passed (26 of 27; only this preflight
 # reddened), so 36 / 24 / 12 hold.
-PINNED_SHA = "31b766e86a01377c88898568171bcb372d3da1d3146fa50f6cbd6288dd8b6369"
+# RE-MEASURED 2026-10-03 (PLA-10 promote 3), 31b766e8 -> b331e5f2. Crop-level heights + the mature_dimensions
+# sibling on 59 crops, 18 prose leaves; no problem id, pest or disease touched. Every count test in this file was
+# run on the post-state and passed (only this preflight reddened), so 36 / 24 / 12 hold.
+PINNED_SHA = "b331e5f2c99378526c3ac8f2f870232953b318c994b7dc3d8c54938f2b62c38d"
 
 # ---------------------------------------------------------------------------------------------
 # The PLA-449 fixture, transcribed from the ticket. NEVER computed from a scan.
