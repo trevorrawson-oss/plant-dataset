@@ -413,7 +413,14 @@ def check_restatement_support(stage, post_idx, adjudicated, man, evidence_dir):
 TOL_FT = 0.00005
 _NUMWORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9,
              "ten": 10, "eleven": 11, "twelve": 12, "fifteen": 15, "eighteen": 18, "twenty": 20}
-_NUM = r"(?:\d+(?:\.\d+)?|" + "|".join(_NUMWORDS) + r"|a(?=\s+foot\b))"
+# FRACTIONS (PLA-659, 2026-10-03). norm_text's NFKC turns a vulgar fraction into <n>U+2044<d> and GLUES it to a
+# preceding whole number ("3½" -> "31⁄2"), so a single-digit numerator over 2, 3, 4 or 8 is read as whole +
+# fraction, glued ("31⁄2") or spaced ("3 1⁄2"), or alone ("1⁄2"). Listed BEFORE the plain number, whose \d+ would
+# otherwise take "31" and leave "⁄2" to be read as a bare 2 (measured: "2 to 31⁄2 feet tall and 11⁄2 feet wide"
+# read as 2 ft tall and 2 ft wide).
+_FRAC = r"\d⁄[2348](?!\d)"
+_NUM = (r"(?:\d+?\s?" + _FRAC + r"|" + _FRAC + r"|\d+(?:\.\d+)?|" + "|".join(_NUMWORDS)
+        + r"|a(?=\s+foot\b))")
 _FT = r"(?:feet\b|foot\b|ft\b\.?|'|′)"
 _IN = r"(?:inches\b|inch\b|in\.|in\b(?!\s+(?:height|width|length|diameter|spread|the|a|an)\b)|\"|″)"
 _QTY = re.compile(rf"(?P<cf>{_NUM})\s*{_FT}\s*(?P<ci>{_NUM})\s*{_IN}"
@@ -431,6 +438,9 @@ _VERB = re.compile(r"\b(?:reach(?:es|ing)?|grow(?:s|ing)?|get)\b[^.;]{0,24}$")
 
 
 def _num_val(tok):
+    if "⁄" in tok:
+        m = re.fullmatch(r"(\d*?)\s?(\d)⁄(\d)", tok)
+        return (float(m.group(1)) if m.group(1) else 0.0) + int(m.group(2)) / int(m.group(3))
     return float(_NUMWORDS[tok]) if tok in _NUMWORDS else (1.0 if tok == "a" else float(tok))
 
 

@@ -40,6 +40,7 @@ SHARED = (
     "DIST_WIDE", "DIST_WIDE_FT", "GROWTH_WORD", "NOT_HEIGHT", "VARIETY_NOT", "VARIETY_LEAVES", "_WNUM", "_WFIG",
     "_IN_U", "_FT_U", "SUPPORT_FILE", "SUPPORT_ENTRY", "Stage", "load_support", "cited_urls", "check_restatement_support",
     "_IN_NOT_UNIT", "ELEVATION_WORD", "_HeightFeet", "HEIGHT_FEET",
+    "_FRAC",
 )
 IMPORT_RE = re.compile(r"(?m)^from cited_promote_common import \(")
 PIN_RE = re.compile(r"assertEqual\(\s*inspect\.getsource\(")

@@ -29,6 +29,7 @@ NOTHING_COLLECTED = 5
 
 RT = "test_pla10_promote_replays.py"
 WT = "test_restatement_scanner_wide.py"
+FT = "test_t4_fractions.py"
 CT = "test_cited_promote_common.py"
 SCRIPTS = set()
 CPC = "cited_promote_common.py"
@@ -117,6 +118,15 @@ MUTATIONS = [
      "            if False:", WT, "comma_thousands_figure"),
     ("x_at_excluded", CPC, "        for m in DIST_WIDE_FT.finditer(sent):",
      "        for m in ([] if re.search(r\"\\bat\\b\", sent) else DIST_WIDE_FT.finditer(sent)):", WT, "at_2_feet_is_a_height"),
+    # ---- T4 FRACTIONS (PLA-659, B4) -------------------------------------------------------------------
+    ("f_glued_fraction_unread", CPC, '_NUM = (r"(?:\\d+?\\s?" + _FRAC + r"|" + _FRAC + r"|\\d+(?:\\.\\d+)?|" + "|".join(_NUMWORDS)',
+     '_NUM = (r"(?:" + _FRAC + r"|\\d+(?:\\.\\d+)?|" + "|".join(_NUMWORDS)', FT, "clemson_height_2_to_3_and_a_half"),
+    ("f_bare_fraction_unread", CPC, '_NUM = (r"(?:\\d+?\\s?" + _FRAC + r"|" + _FRAC + r"|\\d+(?:\\.\\d+)?|" + "|".join(_NUMWORDS)',
+     '_NUM = (r"(?:\\d+?\\s?" + _FRAC + r"|\\d+(?:\\.\\d+)?|" + "|".join(_NUMWORDS)', FT, "bare_fraction_is_the_fraction"),
+    ("f_plain_number_first", CPC, '_NUM = (r"(?:\\d+?\\s?" + _FRAC + r"|" + _FRAC + r"|\\d+(?:\\.\\d+)?|" + "|".join(_NUMWORDS)',
+     '_NUM = (r"(?:\\d+(?:\\.\\d+)?|\\d+?\\s?" + _FRAC + r"|" + _FRAC + r"|" + "|".join(_NUMWORDS)', FT, "false_read_is_gone"),
+    ("f_whole_number_dropped", CPC, "        return (float(m.group(1)) if m.group(1) else 0.0) + int(m.group(2)) / int(m.group(3))",
+     "        return 0.0 + int(m.group(2)) / int(m.group(3))", FT, "spaced_whole_and_fraction"),
     # ---- SUPPORT: the restatement-support guard, one per mechanical check (B3) -----------------------
     ("g_stage_type_unchecked", CPC, "    if not isinstance(stage, Stage):", "    if False:", WT,
      "plain_dict_stage_is_refused"),
@@ -141,7 +151,7 @@ MUTATIONS = [
     ("s_promote_redefines_a_helper", P2, "\n\ndef load_canonical(", "\n\ndef compact(v):\n    return repr(v)\n\n\ndef load_canonical(",
      CT, "test_no_promote_redefines_a_shared_name"),
     ("s_shim_drops_a_name", SHIM, "    quote_states_ft,", "", CT, "test_the_shim_reexports_every_name_by_identity"),
-    ("s_shim_defines_its_own", SHIM, "    HEIGHT_FEET,\n)\n", "    HEIGHT_FEET,\n)\n\n\ndef norm_text(s):\n    return s\n",
+    ("s_shim_defines_its_own", SHIM, "    _FRAC,\n)\n", "    _FRAC,\n)\n\n\ndef norm_text(s):\n    return s\n",
      CT, "test_the_shim_defines_nothing_of_its_own"),
     ("s_module_helper_not_in_shared", CPC, "\n\ndef fmt(concrete):", "\n\ndef _stray():\n    pass\n\n\ndef fmt(concrete):",
      CT, "test_shared_is_the_whole_module_surface"),

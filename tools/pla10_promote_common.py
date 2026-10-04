@@ -71,4 +71,5 @@ from cited_promote_common import (  # noqa: F401
     ELEVATION_WORD,
     _HeightFeet,
     HEIGHT_FEET,
+    _FRAC,
 )
