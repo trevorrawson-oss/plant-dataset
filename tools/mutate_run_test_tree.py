@@ -14,6 +14,11 @@ docs/promote_suite_mutation_convention.md:
       shown to produce INTERNALERROR under pytest, which is the defect the three
       converted files no longer have.
 
+  (5) M8-M12 (kickoff 60, 2026-10-03) mutate the RUNNER itself and drive
+      test_run_test_tree_reporting.py: PLA-653's population check, STALE on an
+      rc-0 run, ERROR lines read as failures, pytest skips counted (Fix 0), and
+      the -rfEs report flags.
+
 Run: python3 tools/mutate_run_test_tree.py
 """
 import os
@@ -180,6 +185,62 @@ def main():
         assert read(W7) == orig7, "FAILED TO RESTORE"
     ok7 = rc != 0 and "changed character" in out
     results.append(("M7 a WAIVED test failing DIFFERENTLY fails (character, not just id)", ok7, rc))
+
+    # ---- M8-M12: the RUNNER's own reporting (kickoff 60, 2026-10-03) --------
+    # These mutate run_test_tree.py ITSELF and drive test_run_test_tree_reporting.py, which runs the real
+    # main() over throwaway probe files. Positive control first: that suite is GREEN on the clean runner.
+    REP = "tools/test_run_test_tree_reporting.py"
+
+    def run_reporting(sel):
+        r = subprocess.run([sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider", REP, "-k", sel],
+                           cwd=ROOT, capture_output=True, text=True)
+        return r.returncode, r.stdout + r.stderr
+
+    rc, out = subprocess.run([sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider", REP],
+                             cwd=ROOT, capture_output=True, text=True).returncode, ""
+    if rc != 0:
+        print("HARNESS DEAD: the reporting suite is already red on the clean runner"); sys.exit(3)
+    print("reporting positive control: test_run_test_tree_reporting GREEN on the clean runner\n")
+
+    def mutate_runner(old, new, label, sel):
+        original = read(RUNNER)
+        if original.count(old) != 1:
+            print(f"  HARNESS DEAD: anchor for {label!r} matched {original.count(old)} times in {RUNNER}")
+            sys.exit(3)
+        try:
+            write(RUNNER, original.replace(old, new + "  # MUTATION-APPLIED", 1))
+            if "# MUTATION-APPLIED" not in read(RUNNER):
+                print(f"  HARNESS DEAD: mutation {label!r} did not reach disk"); sys.exit(3)
+            rc_, out_ = run_reporting(sel)
+        finally:
+            write(RUNNER, original)
+            assert read(RUNNER) == original, f"FAILED TO RESTORE {RUNNER}"
+        return rc_ not in (0, 5), rc_
+
+    ok, rc = mutate_runner(
+        '        (stale if tid.split("::", 1)[0] in collectable else not_run).append(f"{tid} [{w[\'ticket\']}]")',
+        '        (stale if True else not_run).append(f"{tid} [{w[\'ticket\']}]")',
+        "M8 population check dropped", "not_collected_is_not_STALE_when_another_test_fails")
+    results.append(("M8 PLA-653: a waived test NOT collected reported STALE (population check dropped)", ok, rc))
+    ok, rc = mutate_runner(
+        "        stale, not_run = waiver_states(failed_ids, collectable, fired)",
+        "        stale, not_run = waiver_states(failed_ids, collectable, fired) if failed_ids else ([], [])",
+        "M9 STALE only when something failed", "now_passes_is_STALE_on_an_rc0_run")
+    results.append(("M9 the `if failed_ids:` gate restored: a stale waiver on a green run goes silent", ok, rc))
+    ok, rc = mutate_runner(
+        '                     for l in r.stdout.splitlines() if l.startswith("ERROR ")]',
+        '                     for l in r.stdout.splitlines() if l.startswith("ERROR-NEVER ")]',
+        "M10 ERROR lines unread", "ERRORS_fails_the_tree")
+    results.append(("M10 ERROR lines unread: a setup error must still fail the tree", ok, rc))
+    ok, rc = mutate_runner(
+        "        for n, path, why in PYTEST_SKIP_RE.findall(r.stdout):",
+        "        for n, path, why in []:",
+        "M11 pytest skips unread", "pytest_skip_is_counted_in_the_verdict")
+    results.append(("M11 Fix 0: pytest skips unread, the VERDICT no longer counts them", ok, rc))
+    ok, rc = mutate_runner(
+        '"-q", "-rfEs", "-p"', '"-q", "-rs", "-p"',
+        "M12 -r restated without fE", "ERRORS_fails_the_tree")
+    results.append(("M12 -rs alone REPLACES pytest's default fE: FAILED/ERROR lines vanish", ok, rc))
 
     # ---- SENTINEL: a mutation that MUST redden, or the harness is dead ----
     rc, out = mutate(SHAPE_A, 'print("chill_gate: all tests passed")',

@@ -79,6 +79,26 @@ WAIVERS = {
 # pass: measured 2026-09-22, tools/test_build_berry_pilot_patch.py exits 0 having run
 # ZERO of its assertions, and its own message says "NOT COVERED".
 SKIP_RE = re.compile(r"^SKIP\b", re.M)
+# A pytest-collectable file skips honestly through pytest.skip, which pytest prints as a skip and exits 0 on.
+# Until 2026-10-03 the runner never read those, so a suite that skipped every test still read as a plain
+# PASS in the VERDICT (kickoff 60, ruling 4, "Fix 0"). The pytest run carries -rfEs (-r REPLACES the default fE, so f and E are restated), and each summary line
+# `SKIPPED [n] <file>:<line>: <reason>` is counted and listed, so the verdict states what was skipped.
+PYTEST_SKIP_RE = re.compile(r"^SKIPPED \[(\d+)\] (\S+?):\d+: (.*)$", re.M)
+
+
+def waiver_states(failed_ids, collectable, fired):
+    """(stale, not_run): the waivers that did not fire, split by POPULATION.
+
+    PLA-653 (2026-10-03): a waived test whose FILE was not collected this run did not run, so it says nothing
+    about whether its failure is gone; it is reported "not in population (not run)", never STALE. A waived
+    test that WAS collected and did not fail now passes: STALE. This runs on EVERY pytest exit, not only when
+    something failed (until 2026-10-03 a fully green run never reported a stale waiver at all)."""
+    stale, not_run = [], []
+    for tid, w in WAIVERS.items():
+        if tid in fired or tid in failed_ids:
+            continue
+        (stale if tid.split("::", 1)[0] in collectable else not_run).append(f"{tid} [{w['ticket']}]")
+    return stale, not_run
 
 
 def classify():
@@ -160,6 +180,7 @@ def main():
 
     failures = []
     waived_ok, skipped, ran_ok = [], [], 0
+    stale, not_run, pytest_skips = [], [], []
 
     # 1. Per-file collection: rc 5 at file granularity.
     print("\n[1/3] per-file collection (a file yielding 0 tests is rc-5 in miniature)")
@@ -173,15 +194,28 @@ def main():
 
     # 2. The pytest population.
     print(f"\n[2/3] pytest over {len(collectable)} files")
-    r = run([sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider", *collectable])
+    r = run([sys.executable, "-m", "pytest", "-q", "-rfEs", "-p", "no:cacheprovider", *collectable])
     tail = [l for l in r.stdout.splitlines() if l.strip()][-1:] or ["<no summary>"]
     print(f"  rc={r.returncode} | {tail[0][:160]}")
     if r.returncode == 5:
         print("  BROKEN: pytest exited 5 -- NOTHING WAS COLLECTED. Graded BROKEN, not green.")
         failures.append("pytest rc=5 (nothing collected)")
-    elif r.returncode != 0:
+    elif r.returncode in (0, 1):
         failed_ids = [l.split(" ", 1)[1].split(" ")[0]
                       for l in r.stdout.splitlines() if l.startswith("FAILED ")]
+        # A test that ERRORS (a fixture / setup / teardown error, or a file that fails to import) is printed
+        # `ERROR <id>`, not `FAILED <id>`. Until 2026-10-03 only FAILED lines were read, so pytest rc 1 with
+        # nothing but errors recorded NO failure and the tree read PASS (measured: a one-test file whose
+        # fixture raises gave "rc=1 | 1 error" and "VERDICT: PASS"). An error is never waivable: a waiver is
+        # keyed on a FAILURE CHARACTER, and an error is a test that did not get to assert anything.
+        error_ids = [l.split(" ", 1)[1].split(" ")[0]
+                     for l in r.stdout.splitlines() if l.startswith("ERROR ")]
+        for tid in error_ids:
+            print(f"  ERROR (the test did not run to its assertions; never waivable): {tid}")
+            failures.append(f"test error: {tid}")
+        if r.returncode == 1 and not failed_ids and not error_ids:
+            print("  BROKEN: pytest exited 1 and named no FAILED or ERROR test -- nothing attributable")
+            failures.append("pytest rc=1 with nothing attributable")
         blocks = failure_blocks(r.stdout)
         fired = set()
         for tid in failed_ids:
@@ -201,13 +235,23 @@ def main():
             print(f"  WAIVED: {t}")
         # A waiver that no longer fires is a standing permission nobody revisits.
         # Reported loudly, but NOT failed: failing here would punish whoever fixed it.
-        # Only meaningful when pytest actually RAN and reported failures. On a
-        # collection error (rc 2) there are no FAILED lines at all, so "the test now
-        # passes" would be a false reading of a tree that never ran.
-        if failed_ids:
-            for tid, w in WAIVERS.items():
-                if tid not in fired and tid not in failed_ids:
-                    print(f"  STALE WAIVER (the test now passes -- remove it): {tid} [{w['ticket']}]")
+        # Only meaningful when pytest actually RAN (rc 0 or 1). On a collection error
+        # (rc 2) there are no FAILED lines at all, so "the test now passes" would be a
+        # false reading of a tree that never ran. Population-checked (PLA-653).
+        stale, not_run = waiver_states(failed_ids, collectable, fired)
+        for t in stale:
+            print(f"  STALE WAIVER (the test ran and now passes -- remove it): {t}")
+        for t in not_run:
+            print(f"  waived test not in population (not run): {t}")
+        for n, path, why in PYTEST_SKIP_RE.findall(r.stdout):
+            pytest_skips.append((int(n), path, why))
+            print(f"  SKIPPED (pytest.skip, ran nothing -- NOT a pass): {n} x {path} | {why[:110]}")
+    else:
+        # rc 2 (interrupted / collection error), 3 (internal error), 4 (usage error): the tree did not run.
+        # (rc 5, nothing collected, is graded BROKEN above.)
+        print(f"  BROKEN: pytest exited {r.returncode} (interrupted, internal or usage error) -- the tree did "
+              f"not run")
+        failures.append(f"pytest rc={r.returncode} (did not run)")
 
     # 3. The script-style population, run as scripts.
     print(f"\n[3/3] {len(script)} script-style files, each as `python3 <file>`")
@@ -236,10 +280,13 @@ def main():
     # The verdict states what was INSPECTED, waived and skipped, never a bare PASS:
     # a summary that cannot distinguish "ran and was clean" from "ran nothing" is the
     # defect this runner exists to refuse, and that applies to its own output.
+    n_pskip = sum(n for n, _p, _w in pytest_skips)
     print(f"VERDICT: PASS -- {len(collectable)} collectable files (all yielding tests); "
           f"{ran_ok} of {len(script)} script-style files RAN"
           + (f", {len(skipped)} SKIPPED (ran nothing)" if skipped else "")
-          + (f"; {len(waived_ok)} waived failure(s)" if waived_ok else ""))
+          + (f"; {n_pskip} pytest test(s) SKIPPED (ran nothing)" if n_pskip else "")
+          + (f"; {len(waived_ok)} waived failure(s)" if waived_ok else "")
+          + (f"; {len(stale)} STALE WAIVER(S) -- remove" if stale else ""))
     return 0
 
 
