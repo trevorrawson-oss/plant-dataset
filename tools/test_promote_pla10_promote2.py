@@ -123,7 +123,7 @@ class Synthetic:
         adjudicated 'agrees'); strawberry gains a NON-default row-none-bed (no mirror moves)."""
         self.add_layout("english-cucumber", [trellis()], default="row-trellis",
                         restatements=[{"path": p, "verdict": "agrees", "note": "synthetic"}
-                                      for p in P.spacing_strings(IDX["english-cucumber"])])
+                                      for p in P.spacing_strings(IDX["english-cucumber"], wide=False)])
         self.add_layout("strawberry", [bed()])
 
     def run(self):

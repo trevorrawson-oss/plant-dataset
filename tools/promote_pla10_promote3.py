@@ -71,7 +71,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 from bare_host_gate import is_bare  # noqa: E402  -- A63's predicate, imported, never retyped
-from cited_promote_common import (EVIDENCE_COLS, Refused, cached_quote, compact, fmt, height_strings,  # noqa: E402
+from cited_promote_common import (EVIDENCE_COLS, Refused, Stage, cached_quote, check_restatement_support,  # noqa: E402
+                                  compact, fmt, height_strings, load_support,
                                   ft_endpoints_stated, leaf_diff, manifest, norm_text, parse_path, pdf_text,
                                   quote_states_ft, refuse, resolve, serialize, set_at, sha256_bytes)
 
@@ -172,7 +173,7 @@ def load_stage(stage_dir):
             if tuple(r.fieldnames or ()) != EVIDENCE_COLS:
                 refuse(f"EVIDENCE.tsv columns {r.fieldnames} != {list(EVIDENCE_COLS)}")
             ev = [dict(row) for row in r]
-    return crops, ev
+    return Stage(crops, load_support(stage_dir)), ev
 
 
 def _pair(v):
@@ -409,6 +410,10 @@ def check_post(pre, post, stage, ev, evidence_dir):
         _check_post_restatements(slug, a, b, s, n)
     # guard E
     n["evidence_rows"] = check_evidence(qidx, stage, ev, evidence_dir)
+    # guard E2 (2026-10-03, PLA-655): the restatement-support rows, mechanically (meaning stays with review)
+    adjudicated = {slug: {fmt(resolve(pidx[slug], r["path"])): r["verdict"] for r in s.get("restatements") or []}
+                   for slug, s in stage.items()}
+    n["support_rows"] = check_restatement_support(stage, qidx, adjudicated, manifest(evidence_dir), evidence_dir)
     # guard G
     import plant_dimensions_gate as PDG
     import sourced_block_ratchet_gate as SBR
@@ -442,7 +447,7 @@ def _check_post_restatements(slug, a, b, s, n):
         if adj:
             refuse(f"{slug}: restatements staged but no value moves")
         return
-    for p in height_strings(a, s.get(S) is not None):
+    for p in height_strings(a, s.get(S) is not None, wide=False):  # landed: the narrow scanner (B3)
         if p not in adj:
             refuse(f"{slug}: a height moves ({compact(a.get(H))} -> {compact(s.get(H))}) and the restatement "
                    f"at {p} is not adjudicated")

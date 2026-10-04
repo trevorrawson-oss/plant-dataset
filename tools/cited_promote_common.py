@@ -189,8 +189,10 @@ HEIGHT_WORD = re.compile(r"\b(tall|taller|height|heights|high)\b", re.I)
 WIDTH_WORD = re.compile(r"\b(wide|width|spread)\b", re.I)
 
 
-def distance_restatements(crop, words):
-    """Sorted paths of the string leaves where some sentence matches DIST and any regex in `words`."""
+def distance_restatements(crop, words, dist=DIST, exclude=None, under=None):
+    """Sorted paths of the string leaves where some sentence matches `dist` and any regex in `words` (an empty
+    `words` asks for the figure alone) and not `exclude`; `under`, when given, keeps only leaves whose path starts
+    with that tuple of keys. The defaults are the narrow scanner exactly (proven in B1-4)."""
     hits = []
 
     def walk(o, path):
@@ -203,22 +205,90 @@ def distance_restatements(crop, words):
             for i, v in enumerate(o):
                 walk(v, path + (i,))
         elif isinstance(o, str):
+            if under is not None and tuple(path[:len(under)]) != tuple(under):
+                return
             for sent in re.split(r"(?<=[.;!?])\s+", o):
-                if DIST.search(sent) and any(w.search(sent) for w in words):
+                if dist.search(sent) and (not words or any(w.search(sent) for w in words)) and \
+                        (exclude is None or not exclude.search(sent)):
                     hits.append(fmt(list(path)))
                     return
     walk(crop, ())
     return sorted(set(hits))
 
 
-def spacing_strings(crop):
-    """Prose leaves stating a distance beside a spacing word (promotes 1 and 2, guard 4)."""
-    return distance_restatements(crop, (SPACING_WORD,))
+# ---------------------------------------------------------------- the WIDE arms (PLA-655, 2026-10-03)
+# Ruled (kickoff 60, B3): the wide scanner is the DEFAULT. The three landed PLA-10 promotes pass wide=False
+# explicitly so their replays stay byte-identical (test_cited_promote_common pins exactly those three); every new
+# promote gets the wide scanner without having to remember it. Measured on promote 3's fixed list (pre-state
+# 31b766e8) before arming: narrow 113 hits; the arms below cover PLA-655's named misses and cut the staged
+# adjudications the scanner cannot see from 35 to 6. The arms ADD to the narrow scanner, never replace it:
+#   word numbers and "+" (DIST_WIDE): "two to three feet", "one-to-two-foot", "12+ ft", "a foot and a half";
+#   a FEET figure beside a growth word, outside a spacing / depth sentence (FEET-ONLY by ruling: an inch figure
+#     beside "grow" was watering, soil depth or pod size in 88 of 89 sampled hits);
+#   any bare distance figure inside a varieties.recommended leaf (a variety's size is stated bare: "'Magnus'
+#     (...; about 30 to 36 in)", the one real inch height in the sample), outside pot / fruit / spacing words.
+_WNUM = r"(?:one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|fifteen|eighteen|twenty)"
+_WFIG = rf"(?:\d+(?:\.\d+)?|{_WNUM})\+?"
+# "in" is a unit only when no sentence word follows it (the lookahead T4's _IN uses, widened by the live read of
+# 2026-10-03: "zone 5 in good years", "Nov 15 in the Rio Grande Valley", "one in spring", "six in a season").
+_IN_NOT_UNIT = (r"(?!\s+(?:height|width|length|diameter|spread|the|a|an|good|bad|early|late|mid|spring|summer|fall|"
+                r"autumn|winter|warm|hot|cold|cool|wet|dry|humid|mild|most|many|some|each|every|this|that|these|those|"
+                r"its|their|your|our|zones?|areas?|regions?|years?|seasons?|weeks?|days?|months?)\b)")
+_IN_U = rf"(?:inch(?:es)?|in\b{_IN_NOT_UNIT}|in\.|\"|”)"
+_FT_U = r"(?:feet|foot|ft\b|ft\.)"
+DIST_WIDE = re.compile(rf"\b{_WFIG}(?:\s*(?:to|-|–|or)\s*{_WFIG})?\s*(?:-\s*)?(?:{_IN_U}|{_FT_U})|\ba\s+foot\b", re.I)
+DIST_WIDE_FT = re.compile(rf"\b{_WFIG}(?:\s*(?:to|-|–|or)\s*{_WFIG})?\s*(?:-\s*)?{_FT_U}|\ba\s+foot\b", re.I)
+ELEVATION_WORD = re.compile(r"\b(?:elevations?|altitudes?|above\s+sea\s+level)\b", re.I)
 
 
-def height_strings(crop, spread_too):
-    """Prose leaves stating a distance beside a height word (and a width word when a spread is authored)."""
-    return distance_restatements(crop, (HEIGHT_WORD, WIDTH_WORD) if spread_too else (HEIGHT_WORD,))
+class _HeightFeet:
+    """DIST_WIDE_FT for the growth-word arm, minus ELEVATIONS, keyed on the figure itself (ruled 2026-10-03): a
+    feet figure of 1,000 or more (including the "000 feet" tail of "3,000 feet"), or one within 40 characters of
+    elevation / altitude / "above sea level". Never on "at", "below" or "above" alone: "pinch back the stems at 2
+    feet" is a plant height and stays flagged."""
+
+    @staticmethod
+    def search(sent):
+        for m in DIST_WIDE_FT.finditer(sent):
+            i = m.start()
+            if i >= 2 and sent[i - 1] == "," and sent[i - 2].isdigit():
+                continue
+            lead = re.match(r"\d+", m.group())
+            if lead and int(lead.group()) >= 1000:
+                continue
+            if ELEVATION_WORD.search(sent[max(0, i - 40):m.end() + 40]):
+                continue
+            return m
+        return None
+
+
+HEIGHT_FEET = _HeightFeet()
+GROWTH_WORD = re.compile(r"\b(reach\w*|grow\w*|stand\w*|stems?|stalks?|clumps?|vines?|sprawl\w*|tops?|tall\w*|"
+                         r"heights?|high|wide|width|spread\w*)\b", re.I)
+NOT_HEIGHT = re.compile(r"\b(apart|rows?|spac\w*|between|deep)\b", re.I)
+VARIETY_NOT = re.compile(r"\b(apart|rows?|spac\w*|between|deep|pots?|containers?|gallons?|long|across|diameter|"
+                         r"fruits?|pods?|heads?|bulbs?|roots?)\b", re.I)
+VARIETY_LEAVES = ("varieties", "recommended")
+
+
+def spacing_strings(crop, wide=True):
+    """Prose leaves stating a distance beside a spacing word (promotes 1 and 2, guard 4; wide by default)."""
+    hits = set(distance_restatements(crop, (SPACING_WORD,)))
+    if wide:
+        hits |= set(distance_restatements(crop, (SPACING_WORD,), dist=DIST_WIDE))
+    return sorted(hits)
+
+
+def height_strings(crop, spread_too, wide=True):
+    """Prose leaves stating a distance beside a height word (and a width word when a spread is authored); wide by
+    default (word numbers, feet beside a growth word, bare variety figures)."""
+    words = (HEIGHT_WORD, WIDTH_WORD) if spread_too else (HEIGHT_WORD,)
+    hits = set(distance_restatements(crop, words))
+    if wide:
+        hits |= set(distance_restatements(crop, words, dist=DIST_WIDE))
+        hits |= set(distance_restatements(crop, (GROWTH_WORD,), dist=HEIGHT_FEET, exclude=NOT_HEIGHT))
+        hits |= set(distance_restatements(crop, (), dist=DIST_WIDE, exclude=VARIETY_NOT, under=VARIETY_LEAVES))
+    return sorted(hits)
 
 
 # ---------------------------------------------------------------- the cached-quote check (extracted 2026-10-03)
@@ -247,6 +317,83 @@ def cached_quote(r, man, evidence_dir, text_cache, tag):
     if len(q) < 12 or q not in text_cache[r["sha256"]]:
         refuse(f"{tag}: the quote is not in the cached bytes: {r['quote'][:80]!r}")
     return q
+
+
+# ---------------------------------------------------------------- the restatement-support guard (PLA-655, 2026-10-03)
+# An `agrees` restatement whose figure lies OUTSIDE the authored range (Trevor's ceiling rule; below-floor variety
+# rows since promote 3 session 3) must be supported by a hashed page cited on the crop, recorded as a row of
+# EVIDENCE_RESTATEMENT_SUPPORT.tsv (EVIDENCE_COLS, entry_id "restatement-support", field = the leaf path). Until
+# 2026-10-03 those rows were checked by hand only; the review found one that did not hold (okra). This guard checks
+# the MECHANICS, never the meaning: whether the quote supports the restated figure stays the reviewer's call.
+SUPPORT_FILE = "EVIDENCE_RESTATEMENT_SUPPORT.tsv"
+SUPPORT_ENTRY = "restatement-support"
+
+
+class Stage(dict):
+    """A loaded stage: {slug: stage record}, carrying `.support`, its EVIDENCE_RESTATEMENT_SUPPORT.tsv rows. A stage
+    that did not come through a promote's load_stage has no `.support`, and the guard refuses it rather than
+    reading "no support rows" (inspected nothing is not clean)."""
+
+    def __init__(self, crops, support):
+        super().__init__(crops)
+        self.support = support
+
+
+def load_support(stage_dir):
+    """The support rows of a stage directory ([] when the file is absent), columns refused unless EVIDENCE_COLS."""
+    p = os.path.join(stage_dir, SUPPORT_FILE)
+    if not os.path.exists(p):
+        return []
+    with open(p, encoding="utf-8", newline="") as f:
+        r = csv.DictReader(f, delimiter="\t")
+        if tuple(r.fieldnames or ()) != EVIDENCE_COLS:
+            refuse(f"{SUPPORT_FILE} columns {r.fieldnames} != {list(EVIDENCE_COLS)}")
+        return [dict(row) for row in r]
+
+
+def cited_urls(crop):
+    """Every url the crop anchors: any `anchoring_urls` dict, and the crop-root `<field>_anchoring_urls` siblings."""
+    out = set()
+
+    def walk(o):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                if (k == "anchoring_urls" or k.endswith("_anchoring_urls")) and isinstance(v, dict):
+                    out.update(a["url"] for a in v.values() if isinstance(a, dict) and a.get("url"))
+                else:
+                    walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+    walk(crop)
+    return out
+
+
+def check_restatement_support(stage, post_idx, adjudicated, man, evidence_dir):
+    """Refuses unless every support row: is unique; names entry "restatement-support"; sits on a staged crop whose
+    stage adjudicates that leaf `agrees`; carries a url the crop cites (post-state); and quotes text present in the
+    hashed bytes at its sha256, with (sha256, url) a MANIFEST row (cached_quote). Returns the rows checked.
+    `adjudicated` is {slug: {leaf path: verdict}} in the promote's own path form."""
+    if not isinstance(stage, Stage):
+        refuse("the stage carries no support rows (not read through load_stage); refusing to read that as none")
+    seen, text_cache = set(), {}
+    for i, r in enumerate(stage.support):
+        tag = f"{SUPPORT_FILE} row {i + 2} ({r['crop']} {r['field']})"
+        key = (r["crop"], r["field"], r["source_id"], r["sha256"], r["quote"])
+        if key in seen:
+            refuse(f"{tag}: a duplicate row")
+        seen.add(key)
+        if r["entry_id"] != SUPPORT_ENTRY:
+            refuse(f"{tag}: entry_id {r['entry_id']!r} is not {SUPPORT_ENTRY!r}")
+        if r["crop"] not in adjudicated or r["crop"] not in post_idx:
+            refuse(f"{tag}: {r['crop']} is not a staged crop")
+        if adjudicated[r["crop"]].get(r["field"]) != "agrees":
+            refuse(f"{tag}: the stage does not adjudicate {r['field']} 'agrees' "
+                   f"(it says {adjudicated[r['crop']].get(r['field'])!r})")
+        if r["url"] not in cited_urls(post_idx[r["crop"]]):
+            refuse(f"{tag}: url is not cited anywhere on {r['crop']}")
+        cached_quote(r, man, evidence_dir, text_cache, tag)
+    return len(stage.support)
 
 
 # ---------------------------------------------------------------- added 2026-10-02, promote 3 session 1 (T4)

@@ -54,7 +54,8 @@ def run(spacing, height):
 
 
 old = run(old_ns["spacing_strings"], old_ns["height_strings"])
-new = run(NEW.spacing_strings, NEW.height_strings)
+# B3 (2026-10-03) made the WIDE scanner the default; B1-4's claim is about the NARROW one, so compare wide=False.
+new = run(lambda c: NEW.spacing_strings(c, wide=False), lambda c, sp: NEW.height_strings(c, sp, wide=False))
 ob, nb = json.dumps(old).encode(), json.dumps(new).encode()
 hits = sum(len(r[3]) + len(r[4]) + len(r[5]) for r in old)
 print(f"rows {len(old)} (crop x state), scanner hits {hits}")

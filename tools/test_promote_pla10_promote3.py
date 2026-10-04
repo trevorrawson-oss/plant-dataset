@@ -198,7 +198,7 @@ class Synthetic:
               "field_addition": {"field": "plant_dimensions", "date": "2026-10-02", "sources": [sid],
                                  "note": FA_NOTE},
               "restatements": [{"path": x, "verdict": "agrees", "note": "synthetic"}
-                               for x in P.height_strings(IDX[slug], sp is not None)]}
+                               for x in P.height_strings(IDX[slug], sp is not None, wide=False)]}
         self.crops[slug] = st
         if real:
             self.add_ev(slug, P.H, h, sid, url, UMD_QUOTE, sha=UMD_SHA)
@@ -448,7 +448,7 @@ class Refusals(Base):
         b[P.H], b[P.S] = [4, 8], None
         b["anchoring_urls"] = {"psu_ext": self.s.anchor(url)}
         b["restatements"] = [{"path": x, "verdict": "agrees", "note": "synthetic"}
-                             for x in P.height_strings(IDX["blueberry"], False)]
+                             for x in P.height_strings(IDX["blueberry"], False, wide=False)]
         self.s.drop_ev("blueberry")
         self.s.add_ev("blueberry", P.H, [4, 8], "psu_ext", url, "highbush blueberries are usually 4 to 8 feet tall "
                                                                 "at maturity")
@@ -654,7 +654,7 @@ class Refusals(Base):
 
     def test_H3_dills_5_ft_edited_lands(self):
         d = self.s.crops["dill"]
-        hits = P.height_strings(IDX["dill"], False)
+        hits = P.height_strings(IDX["dill"], False, wide=False)
         target = next(p for p in hits if "5 feet" in C.compact(self._at(IDX["dill"], p)))
         old = self._at(IDX["dill"], target)
         new = old.replace("3 to 5 feet", "18 inches to 4 feet").replace("5 feet", "4 feet")
@@ -827,18 +827,18 @@ class Gates(Base):
 
 class HeightScanner(unittest.TestCase):
     def test_the_scanner_finds_dills_5_ft_prose(self):
-        hits = P.height_strings(IDX["dill"], False)
+        hits = P.height_strings(IDX["dill"], False, wide=False)
         self.assertGreaterEqual(len(hits), 4, hits)
 
     def test_width_words_scan_only_when_a_spread_is_authored(self):
         c = {"slug": "t", "tips": ["rows sit 3 feet wide."]}
-        self.assertEqual(P.height_strings(c, False), [])
-        self.assertEqual(P.height_strings(c, True), ["tips[0]"])
+        self.assertEqual(P.height_strings(c, False, wide=False), [])
+        self.assertEqual(P.height_strings(c, True, wide=False), ["tips[0]"])
 
     def test_the_scanner_skips_records_and_citations(self):
         c = {"slug": "t", "verification_status": {"note": "grows 3 feet tall"},
              "mature_dimensions_anchoring_urls": {"x": {"url": "grows 3 feet tall"}}}
-        self.assertEqual(P.height_strings(c, True), [])
+        self.assertEqual(P.height_strings(c, True, wide=False), [])
 
 
 if __name__ == "__main__":

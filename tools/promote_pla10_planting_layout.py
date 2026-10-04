@@ -343,7 +343,7 @@ def check_post(pre, post, stage, ev, evidence_dir):
                 refuse(f"{slug}: a restatement needs path, verdict agrees|edited, and a note: {r}")
             adj[fmt(resolve(a, r["path"]))] = r["verdict"]
         edited = {fmt(resolve(a, ed["path"])) for ed in s.get("edits") or []}
-        for p in spacing_strings(a):
+        for p in spacing_strings(a, wide=False):  # landed: the narrow scanner (B3)
             if p not in adj:
                 refuse(f"{slug}: spacing_inches moves {compact(a.get('spacing_inches'))} -> "
                        f"{compact(b.get('spacing_inches'))} and the restatement at {p} is not adjudicated")

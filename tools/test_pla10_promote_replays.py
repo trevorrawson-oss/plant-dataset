@@ -80,7 +80,7 @@ class Replays(unittest.TestCase):
         self.assertEqual((n, len(stage), len(ev), n_ev), (113, 113, 203, 203),
                          "promote 1 replay population moved (staged crops, evidence rows, figures)")
         self.assertEqual(P1.sha256_bytes(P1.serialize(post)), POST["P1"])
-        self.assertEqual(_scanner_population(P1, lambda a, s: P1.spacing_strings(a)), (762, 1),
+        self.assertEqual(_scanner_population(P1, lambda a, s: P1.spacing_strings(a, wide=False)), (762, 1),
                          "promote 1 scanner population moved (hits, adjudicated-but-not-flagged)")
 
     def test_promote_2_reproduces_31b766e8(self):
@@ -88,15 +88,16 @@ class Replays(unittest.TestCase):
         self.assertEqual((n["crops"], len(stage), len(ev)), (33, 33, 45),
                          "promote 2 replay population moved (staged crops, evidence rows)")
         self.assertEqual(P2.sha256_bytes(P2.serialize(post)), POST["P2"])
-        self.assertEqual(_scanner_population(P2, lambda a, s: P2.spacing_strings(a)), (202, 0),
+        self.assertEqual(_scanner_population(P2, lambda a, s: P2.spacing_strings(a, wide=False)), (202, 0),
                          "promote 2 scanner population moved (hits, adjudicated-but-not-flagged)")
 
     def test_promote_3_reproduces_b331e5f2(self):
         (post, n), stage, ev = _replay(P3)
-        self.assertEqual((n["crops"], len(stage), len(ev), n["evidence_rows"]), (62, 62, 98, 98),
-                         "promote 3 replay population moved (staged crops, evidence rows)")
+        self.assertEqual((n["crops"], len(stage), len(ev), n["evidence_rows"], n["support_rows"]),
+                         (62, 62, 98, 98, 12),
+                         "promote 3 replay population moved (staged crops, evidence rows, support rows)")
         self.assertEqual(P3.sha256_bytes(P3.serialize(post)), POST["P3"])
-        self.assertEqual(_scanner_population(P3, lambda a, s: P3.height_strings(a, s.get(P3.S) is not None)),
+        self.assertEqual(_scanner_population(P3, lambda a, s: P3.height_strings(a, s.get(P3.S) is not None, wide=False)),
                          (113, 35), "promote 3 scanner population moved (hits, adjudicated-but-not-flagged)")
 
 

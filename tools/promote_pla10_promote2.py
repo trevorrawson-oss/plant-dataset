@@ -477,7 +477,7 @@ def _check_post_restatements(slug, a, b, s, moved):
             refuse(f"{slug}: restatements staged but no mirror moves")
         return
     moved["mirror_moves"] += 1
-    for p in spacing_strings(a):
+    for p in spacing_strings(a, wide=False):  # landed: the narrow scanner (B3)
         if p not in adj:
             refuse(f"{slug}: a mirror moves ({'; '.join(moves)}) and the restatement at {p} is not adjudicated")
         if adj[p] == "edited" and p not in edited:

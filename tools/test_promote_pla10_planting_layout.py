@@ -85,7 +85,7 @@ class Synthetic:
                 s["retired_anchor"] = {rs: "moved" for rs in c[P.RETIRED]}
             if slug == "apple":
                 s["restatements"] = [{"path": p, "verdict": "agrees", "note": "synthetic"}
-                                     for p in P.spacing_strings(c)]
+                                     for p in P.spacing_strings(c, wide=False)]
             self.crops[slug] = s
             self.add_evidence(slug, e["id"], "in_row_inches", sp, sid, anc["url"],
                               f"Space plants {sp[0]:g} to {sp[1]:g} inches apart in the row.")
@@ -259,7 +259,7 @@ class Evidence(Base):
         self.s.add_evidence("cabbage", "row-none", "in_row_inches", [24, 24], r["source_id"], r["url"],
                             "Set transplants 2 feet apart in the row.")
         self.s.crops["cabbage"]["restatements"] = [{"path": p, "verdict": "agrees", "note": "t"}
-                                                   for p in P.spacing_strings(IDX["cabbage"])]
+                                                   for p in P.spacing_strings(IDX["cabbage"], wide=False)]
         self.s.write(); self.s.run()
 
     def test_a_url_not_in_the_manifest_REFUSES(self):
@@ -330,11 +330,11 @@ class Restatements(Base):
         r = next(x for x in self.s.ev if x["crop"] == slug); self.s.ev.remove(r)
         self.s.add_evidence(slug, "row-none", "in_row_inches", new, r["source_id"], r["url"],
                             f"Space plants {new[0]:g} to {new[1]:g} inches apart in the row.")
-        return P.spacing_strings(IDX[slug])
+        return P.spacing_strings(IDX[slug], wide=False)
 
     def test_the_scanner_finds_cabbage_restatements(self):
         """Positive control: the drivers below are vacuous if cabbage restates no spacing."""
-        self.assertGreater(len(P.spacing_strings(IDX["cabbage"])), 0)
+        self.assertGreater(len(P.spacing_strings(IDX["cabbage"], wide=False)), 0)
 
     def test_an_unadjudicated_restatement_REFUSES(self):
         hits = self.move()

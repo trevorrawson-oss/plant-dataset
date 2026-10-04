@@ -37,6 +37,9 @@ SHARED = (
     "TOL_FT", "_NUMWORDS", "_NUM", "_FT", "_IN", "_QTY", "_JOIN", "_POSTFIX", "_LABEL", "_VERB",
     "_num_val", "_ft_groups", "ft_endpoints_stated", "quote_states_ft",
     "cached_quote", "HEIGHT_WORD", "WIDTH_WORD", "distance_restatements", "height_strings",
+    "DIST_WIDE", "DIST_WIDE_FT", "GROWTH_WORD", "NOT_HEIGHT", "VARIETY_NOT", "VARIETY_LEAVES", "_WNUM", "_WFIG",
+    "_IN_U", "_FT_U", "SUPPORT_FILE", "SUPPORT_ENTRY", "Stage", "load_support", "cited_urls", "check_restatement_support",
+    "_IN_NOT_UNIT", "ELEVATION_WORD", "_HeightFeet", "HEIGHT_FEET",
 )
 IMPORT_RE = re.compile(r"(?m)^from cited_promote_common import \(")
 PIN_RE = re.compile(r"assertEqual\(\s*inspect\.getsource\(")
