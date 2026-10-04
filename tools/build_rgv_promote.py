@@ -29,8 +29,10 @@ OUT = os.path.join(HERE, "batches", "rgv_region_promote.json")
 EXPECTED_CELL_COUNT = 108
 
 
-def build():
-    raw = open(CANON, "rb").read()
+def build(base_raw=None, write=True):
+    """The batch, built against `base_raw` (the live canonical when None). `write=False` returns it without
+    writing OUT, so a replay (test_build_rgv_promote, against the pre-RGV canonical) has no side effect."""
+    raw = open(CANON, "rb").read() if base_raw is None else base_raw
     base_sha = hashlib.sha256(raw).hexdigest()
     data = json.loads(raw)
     canon_slugs = {c["slug"] for c in data["crops"]}
@@ -61,10 +63,11 @@ def build():
                     "value": band["region_chill_delivered_provenance"]})
 
     batch = {"base_sha": base_sha, "patches": patches}
-    with open(OUT, "w", encoding="utf-8") as f:
-        json.dump(batch, f, ensure_ascii=False, indent=1)
-    print(f"emitted {len(patches)} patches ({len(seen)} rgv cells + 2 top-level) -> {OUT}")
-    print(f"base_sha {base_sha}")
+    if write:
+        with open(OUT, "w", encoding="utf-8") as f:
+            json.dump(batch, f, ensure_ascii=False, indent=1)
+        print(f"emitted {len(patches)} patches ({len(seen)} rgv cells + 2 top-level) -> {OUT}")
+        print(f"base_sha {base_sha}")
     return batch
 
 

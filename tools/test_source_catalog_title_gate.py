@@ -19,20 +19,23 @@ sys.path.insert(0, HERE)
 REPO = os.path.dirname(HERE)
 CANONICAL = os.path.join(REPO, 'crops_data_final.json')
 
+import promote_fixture  # noqa: E402
 import promote_pla199_titles as promote  # noqa: E402
 from source_catalog_title_gate import LEGACY_UNFILLED, title_violations  # noqa: E402
+
+
+# The PLA-199 pre-backfill canonical, REPLAYED (pinned in promote_fixture.COMMIT_FOR -> 596cd65). Until
+# 2026-10-03 PRE was read from the live file and set to None once PLA-199 landed, and the two pre-state tests
+# below returned early and PASSED having inspected nothing (PLA-544 side finding; kickoff 60 B5).
+PRE_SHA = '060b91b807f7988d3d22ebbae77e90d285ee5f7dfe6a18a11c4de37cf6debbbd'
+PRE_RAW = promote_fixture.pre_state(PRE_SHA)
 
 
 def _load_states():
     raw = open(CANONICAL, 'rb').read()
     d = json.loads(raw)
-    if 'title' in d['source_catalog']['vce_426_331']:
-        post = d
-        pre = None  # promote already landed; pre-state only via fixture, not needed here
-    else:
-        pre = d
-        post = promote.apply(json.loads(raw))
-    return pre, post
+    post = d if 'title' in d['source_catalog']['vce_426_331'] else promote.apply(json.loads(raw))
+    return json.loads(PRE_RAW), post
 
 
 PRE, POST = _load_states()
@@ -63,9 +66,7 @@ def test_post_state_is_clean():
 
 def test_pre_state_floods_at_exactly_101():
     # RED evidence at the data level: without the backfill, every non-exempt document-scoped
-    # id (101, hand-counted) violates. Run only while the pre-state is on hand.
-    if PRE is None:
-        return
+    # id (101, hand-counted) violates. The pre-state is replayed, so this always runs.
     v = title_violations(PRE['source_catalog'])
     assert len(v) == 101, f'expected 101 pre-backfill violations, got {len(v)}'
     assert all('A54' in m for m in v)
@@ -132,11 +133,16 @@ def test_a54_dormant_on_prebackfill_canonical():
     # D3 is two-phase: hard gate AFTER the backfill, convention until then. The wiring arms
     # off the DATA (any title present), so a pre-backfill canonical -- the live tree while
     # PLA-160 runs in parallel -- must not red 121 crops on PLA-199's unpromoted work.
-    if PRE is None:
-        return  # promote landed; dormancy no longer reachable from the live file
-    out = subprocess.run(
-        [sys.executable, os.path.join(HERE, 'whole_crop_gate.py'), 'cherry-tomato', CANONICAL],
-        capture_output=True, text=True).stdout
+    # The replayed pre-backfill canonical, through the REAL runner (was: the live file, skipped once landed).
+    scratch = os.path.join(HERE, '.a54_dormancy_scratch.json')
+    try:
+        open(scratch, 'wb').write(PRE_RAW)
+        out = subprocess.run(
+            [sys.executable, os.path.join(HERE, 'whole_crop_gate.py'), 'cherry-tomato', scratch],
+            capture_output=True, text=True).stdout
+    finally:
+        if os.path.exists(scratch):
+            os.remove(scratch)
     assert 'A54' in out, 'A54 section missing entirely'
     assert 'DORMANT' in out, 'A54 not marked dormant on a pre-backfill catalog'
     assert not any('catalog-title' in l and 'VIOLATION' in l for l in out.splitlines()), \

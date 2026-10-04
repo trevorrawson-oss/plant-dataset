@@ -48,6 +48,10 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # The pre-RGV canonical (2026-07-13): the base_sha of the committed tools/batches/rgv_region_promote.json
+    # (8d2e2b0), last written by 7aaba61. Pinned 2026-10-03 (kickoff 60 B5) so test_build_rgv_promote replays the
+    # one-shot batch instead of returning early. A data commit, but NEVER AMEND 7aaba61 all the same.
+    '7e29f4f49f5d416315f81b72d7164e3228dea3e5834edaf09673bc5c58f56204': '7aaba61',
     # PLA-10 promote 3 (2026-10-03). NEVER AMEND 9cea239. Crop-level heights on 43 crops + the mature_dimensions
     # sibling (16 PLA-465 backfills), 18 prose leaves, A62 mature_dimensions + A59 sibling armed.
     'b331e5f2c99378526c3ac8f2f870232953b318c994b7dc3d8c54938f2b62c38d': '9cea239',

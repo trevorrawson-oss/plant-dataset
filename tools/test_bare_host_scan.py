@@ -136,12 +136,18 @@ def test_self_pathed_population_at_this_canonical(data):
               + '; '.join('|'.join(r) for r in closed))
 
 
-def test_self_pathed_live_sole_count_matches_the_pin(data):
-    """The SOLE split is part of the population's identity: 161 of the 321 at the pin."""
-    _doc, known = _self_pathed_known()
-    rows = [r for r in B.self_pathed(data) if (r['crop'], r['path'], r['source_id']) in known]
-    if len(rows) == len(known):
-        assert sum(1 for r in rows if r['is_sole']) == 161
+def test_self_pathed_sole_split_is_pinned_by_identity(data):
+    """The SOLE split is part of the population's identity, pinned BY ROW (kickoff 60 B5, 2026-10-03): 161 of the
+    321 at the pin. Every pinned row still present must keep its SOLE status, and a flip prints itself by name.
+    (Was a count asserted only while no pinned row had closed: the first closure would have silenced it.)"""
+    doc, known = _self_pathed_known()
+    sole_known = {tuple(i.split('|')) for i in doc['sole_identities']}
+    assert (len(sole_known), doc['sole_count']) == (161, 161) and sole_known <= known
+    present = {(r['crop'], r['path'], r['source_id']): r['is_sole'] for r in B.self_pathed(data)
+               if (r['crop'], r['path'], r['source_id']) in known}
+    assert present, 'no pinned self-pathed row is present: the pin inspected nothing'
+    flipped = sorted('|'.join(k) for k, sole in present.items() if sole != (k in sole_known))
+    assert not flipped, 'SOLE status changed on pinned rows: ' + '; '.join(flipped)
 
 
 def test_MUTATION_a_new_self_pathed_row_fails_by_name(data):

@@ -23,13 +23,6 @@ import rgv_harness
 BASE = json.load(open(os.path.join(ROOT, "crops_data_final.json"), encoding="utf-8"))
 BROC = next(c for c in BASE["crops"] if c["slug"] == "broccoli")
 
-# The RGV region has been PROMOTED to the live canonical (2026-07-13, d0832254). Once real, every
-# certified crop (broccoli included) already carries a real regions.rgv cell, so
-# test_missing_rgv_fails_a31's "canonical has no rgv yet" premise no longer holds: merging an EMPTY
-# staged_cells dict onto broccoli's already-rgv-carrying regions no longer reproduces a missing-rgv
-# A31 failure. Detected below so that test can skip gracefully instead of red-flagging a healthy
-# harness; rgv_harness itself (and this fixture machinery) stays reusable for the next region arc.
-_RGV_ALREADY_PROMOTED = "rgv" in (BROC.get("regions") or {})
 
 
 def _valid_rgv_cell():
@@ -65,15 +58,26 @@ def test_span_key_mismatch_fails():
 
 
 def test_missing_rgv_fails_a31():
-    if _RGV_ALREADY_PROMOTED:
-        print("  skipped: rgv already promoted to the live canonical (broccoli already carries a "
-              "real regions.rgv cell, so an empty staged_cells no longer reproduces a missing-rgv "
-              "A31 failure)")
-        return
-    ok, out = rgv_harness.gate_crop("broccoli", {})   # no rgv cell added
-    assert not ok and "rgv" in out, out
-    print("  ok: missing rgv cell bounces (A31 region roster floor)")
-
+    # INJECTION (kickoff 60 B5, 2026-10-03). Since the RGV promote every crop carries a real rgv cell, so an
+    # empty staged_cells no longer removes one and this test returned early, PASSING having inspected nothing.
+    # Now it builds the harness's own scratch canonical and DELETES broccoli's regions.rgv before gating, so the
+    # A31 region-roster floor must fire through the REAL whole_crop_gate on a scratch tools/ copy.
+    import subprocess
+    import tempfile
+    with tempfile.TemporaryDirectory() as tmp:
+        tools = rgv_harness.build_scratch_tools(os.path.join(tmp, "tools"))
+        canon = rgv_harness.scratch_canonical({}, os.path.join(tmp, "canon.json"))
+        data = json.load(open(canon, encoding="utf-8"))
+        broc = next(c for c in data["crops"] if c["slug"] == "broccoli")
+        assert "rgv" in broc.get("regions", {}), "the injection needs a real rgv cell to remove"
+        del broc["regions"]["rgv"]
+        with open(canon, "w", encoding="utf-8") as f:
+            json.dump(data, f, separators=(",", ":"), ensure_ascii=False)
+        r = subprocess.run([sys.executable, os.path.join(tools, "whole_crop_gate.py"), "broccoli", canon],
+                           capture_output=True, text=True, timeout=120)
+        out = r.stdout + r.stderr
+    assert r.returncode != 0 and "A31" in out and "rgv" in out, out[-1500:]
+    print("  ok: a crop with its rgv cell removed bounces (A31 region roster floor)")
 
 if __name__ == "__main__":
     test_valid_cell_passes()
