@@ -127,20 +127,10 @@ def export_currency_concerns(staged_names, app_root=None):
 # permission. The mechanism stays, and its drivers run against a synthetic table
 # (test_precommit_export_waiver.FIXTURE_WAIVERS). Adding an entry here is a ruling: identity, character,
 # ticket and reason, exactly as that one carried.
-#
-# 2026-10-05 (PLA-666, ruled by Trevor via claude.ai): ONE entry. foundation's export is held at b331e5f2 (origin
-# feat/community-foundation cced88fb, the OTA of 2026-10-05, group e20245fb) while the PLA-666 release ships from
-# fix/pla-666-woody-floor. Fails on any other stale export; reads STALE once foundation re-exports; REMOVED when the
-# PLA-666 release merges to foundation.
-EXPORT_WAIVERS = {
-    "E1 app-provenance": {
-        "ticket": "PLA-666",
-        "reason": "foundation's export is deliberately held at b331e5f2 while the PLA-666 release ships from "
-                  "fix/pla-666-woody-floor; removed when that release merges to feat/community-foundation",
-        "character": re.compile(r"^E1 app-provenance: export was built from canonical b331e5f2c993 "
-                                r"but canonical is now [0-9a-f]{12}\."),
-    },
-}
+# 2026-10-05: PLA-666's entry (foundation's export held at b331e5f2 while the PLA-666 release shipped from its branch;
+# added dca5931) went STALE when that release merged to feat/community-foundation (371a0f4a, OTA 16cf0b1f) and is
+# removed, as ruled. The table is EMPTY again.
+EXPORT_WAIVERS = {}
 
 
 def apply_export_waivers(violations, waivers=None):
