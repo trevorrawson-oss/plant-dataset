@@ -35,9 +35,9 @@ POT_KNOWN = ("dry-bean", "grapefruit", "green-beans-bush", "orange-navel")
 
 # Per-family uncited counts on 00dda31c, enumerated as literals, never computed from the gate.
 FAMILY_COUNTS = {
-    "growth_stages[]": 615, "notifications[]": 458, "tips_by_stage.*[]": 313,
+    "growth_stages[]": 613, "notifications[]": 458, "tips_by_stage.*[]": 312,
     "weather_triggers[]": 289, "failure_diagnostics[]": 251, "description": 108,
-    "harvest_urgency": 108, "start_method": 103, "succession_policy": 86,
+    "harvest_urgency": 108, "start_method": 102, "succession_policy": 86,
     "varieties.recommended[]": 77, "pests[]": 54, "diseases[]": 50, "harvest_ready": 26,
     "watering": 17, "bolting": 13, "container_notes": 12, "varieties": 12, "fertilizer": 11,
     "pollination": 9, "rotation": 8, "verification_status.field_additions[]": 3, "thinning": 3,
@@ -81,9 +81,10 @@ def cite(block):
 class PinsAreTheMeasurement(unittest.TestCase):
     def test_waiver_file_is_the_measured_population(self):
         self.assertEqual(G._KNOWN_DOC["measured_on"], SHA)
-        self.assertEqual(G._KNOWN_DOC["count"], 2634)
-        self.assertEqual(len(G.KNOWN), 2634)
-        self.assertEqual(len(G._KNOWN_DOC["identities"]), 2634, "duplicate identities")
+        # 2634 at arming (00dda31c); 2630 after housekeeping 60 Phase C cited 4 waived blocks (afbd4113)
+        self.assertEqual(G._KNOWN_DOC["count"], 2630)
+        self.assertEqual(len(G.KNOWN), 2630)
+        self.assertEqual(len(G._KNOWN_DOC["identities"]), 2630, "duplicate identities")
 
     def test_the_named_list_is_what_was_ruled(self):
         self.assertEqual(set(G.DICT_BLOCKS), {

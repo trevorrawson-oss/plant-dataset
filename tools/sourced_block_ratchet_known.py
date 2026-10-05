@@ -3,6 +3,10 @@
 Measured 2026-09-30 on canonical 00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e.
 Uncited named blocks on certified crops at arming, by identity crop|path|field. May shrink, never grow. Remove an identity in the commit that cites it.
 
+SHRUNK 2026-10-04 (housekeeping 60 Phase C, b331e5f2 -> afbd4113): 2634 -> 2630. Closed by citation in that promote:
+broad-beans-fava|start_method, sweet-corn|growth_stages[id=seedling], watermelon|growth_stages[id=vining],
+watermelon|tips_by_stage.vining[0] (all |sources). MEASURED_ON stays the arming canonical; COUNT is the live waiver count.
+
 Kept as a .py module, not JSON, because every harness that copies tools/*.py into a scratch
 dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_gate at import
 (measured 2026-09-30: both harnesses' test_valid_cell_passes went red on a .json version).
@@ -10,7 +14,7 @@ dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_g
 TICKET = 'PLA-607'
 MEASURED_ON = '00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e'
 MEASURED_DATE = '2026-09-30'
-COUNT = 2634
+COUNT = 2630
 IDENTITIES = (
     "acorn-squash|description|description_sources",
     "acorn-squash|failure_diagnostics[0]|sources",
@@ -382,7 +386,6 @@ IDENTITIES = (
     "broad-beans-fava|notifications[0]|sources",
     "broad-beans-fava|notifications[1]|sources",
     "broad-beans-fava|notifications[2]|sources",
-    "broad-beans-fava|start_method|sources",
     "broad-beans-fava|weather_triggers[0]|sources",
     "broad-beans-fava|weather_triggers[1]|sources",
     "broccoli-microgreens|failure_diagnostics[0]|sources",
@@ -2374,7 +2377,6 @@ IDENTITIES = (
     "sweet-corn|growth_stages[id=germination]|sources",
     "sweet-corn|growth_stages[id=harvest]|sources",
     "sweet-corn|growth_stages[id=kernel_fill]|sources",
-    "sweet-corn|growth_stages[id=seedling]|sources",
     "sweet-corn|growth_stages[id=silking]|sources",
     "sweet-corn|growth_stages[id=tasseling]|sources",
     "sweet-corn|growth_stages[id=vegetative]|sources",
@@ -2548,7 +2550,6 @@ IDENTITIES = (
     "watermelon|growth_stages[id=germination]|sources",
     "watermelon|growth_stages[id=harvest]|sources",
     "watermelon|growth_stages[id=seedling]|sources",
-    "watermelon|growth_stages[id=vining]|sources",
     "watermelon|harvest_urgency|harvest_urgency_sources",
     "watermelon|notifications[0]|sources",
     "watermelon|notifications[1]|sources",
@@ -2561,7 +2562,6 @@ IDENTITIES = (
     "watermelon|tips_by_stage.germination[0]|sources",
     "watermelon|tips_by_stage.harvest[0]|sources",
     "watermelon|tips_by_stage.seedling[0]|sources",
-    "watermelon|tips_by_stage.vining[0]|sources",
     "watermelon|tips_by_stage.vining[1]|sources",
     "watermelon|weather_triggers[0]|sources",
     "watermelon|weather_triggers[1]|sources",

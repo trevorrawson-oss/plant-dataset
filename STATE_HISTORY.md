@@ -4,6 +4,37 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-10-04 -- HOUSEKEEPING 60 PHASE C LANDED (`b331e5f2` -> `afbd4113`)
+
+ONE promote (`tools/promote_housekeeping60_phase_c.py`, new; stage `tools/staging/housekeeping60/phase_c/`), the data half of
+kickoff 60 after Phase B's tooling (B1-B6). **Every edited leaf obeys the touched-leaf rule:** each claim maps to a hashed page
+cited on the crop, or is cut. Prose authored by Trevor in claude.ai from three Linear packet documents ("Housekeeping 60:
+Phase C quote packets" and parts 2 and 3); Claude Code applied it verbatim.
+
+**WHAT MOVED (8 crops, 77 ops: 39 prose, 3 value, 15 anchors + 13 sources, 1 append, 1 delete, 1 catalog, 4 orthography; 211 evidence rows, 32 decision rows):** chives Common Chives note (NCSU height, the Illinois
+mid-summer bloom and NCSU leaf-length/bloom divergences recorded); sweet-corn thinning (TAMU EHT-044 hashed this session:
+thin_to_inches [12,12], when/to_spacing/tips, method null, growth_stages[1]); fava start_method both registers (rows 18-30 and
+the 4-6 seed spacing cut; 4-6 stays with PLA-625 elsewhere); watermelon 9 leaves (8-12 ft vine run and 24 sq ft cut; WSU row
+table; soil_prep RECORD-ONLY pending PLA-674); tomatillo PLA-652 (det_indet + days_to_maturity re-anchored from cherry-tomato
+pages to tomatillo pages, days_to_maturity_mid 80 -> null with its anchors deleted, failure_diagnostics[5] re-authored with
+all four tomato anchors dropped, verification_log_ref [CORRECTION 2026-10-04 ...] appended); lavender (prose to the field's
+18-24 in, the unhashed "(OSU)" attribution gone, pnw z8/z9); basil (downy-mildew tip, seedling tips to UMN's two-to-three
+pairs); oregano (diseases[2] note; rgv: TAMU's oregano row is 8-10 in, the 10-12 credited to TAMU was its THYME row).
+Four "Tomatilloes" -> "Tomatillos" spelling-only edits (guard O; decision rows say claims were NOT reviewed; PLA-625).
+source_catalog 229 -> 230 (clemson_hgic_cucurbit_insects, HGIC 2207).
+
+**REVIEW:** six independent source-truth rounds against the hashed bytes moved the stage through three wording rounds by
+Trevor (attribution plurals, "direct" sunlight, Santa Clara "mild-winter", lavender "common" / overwatering placement, the
+vining timing, UMN's "can"); the last (scoped to the final changes) CLEAN. Lavender leaf-spot placement on the rung
+airflow_spacing ruled acceptable (decision row; rung structure -> PLA-625).
+
+**GAUNTLET:** 31-mutation harness 31/31 caught (anchor preflight, marker, sentinel, positive control); suite 36/36 (replays
+the pre-state from 9cea239); gate_all PASS 121/121, launch-ready 114; whole_crop_gate 8/8; release_verify clean with exactly
+the 8 declared crops. Live pins re-verified at afbd4113 (the 25 registry files + the affected set via run_test_tree --files; 4 waivers closed by citation, sourced_block_ratchet_known 2634 -> 2630; problem-id collision PINNED_SHA re-measured, 36/24/12 hold; LATEST.txt bumped).
+
+**DEVIATION (R7, accepted):** the promote was written before its suite (no RED-first phase); the mutation harness at 0
+survivors stands in. Consumers: no new key; plant-app re-export + the plant-astro bump pick up the prose (not this session).
+
 ## 2026-10-03 -- PLA-10 PROMOTE 3 LANDED (`31b766e8` -> `b331e5f2`)
 
 ONE promote, three sessions (session 1 tools `ac06c11` -- T3 field_additions allowance, T4 `quote_states_ft`, T5 A62 + A59 sibling rules, both unarmed -- + worklist `22ff6b0` + rulings `cc1f9ac`; session 2 stage `17824ad`; session 3 the review, the hunt, the gauntlet, the arming and this data commit). **Heights:** 43 new crops carry `mature_height_ft` (23 also `mature_spread_ft`) from hashed T1 pages under the W2 range rule and the ruled tie-break (scope, then the crop's own prose, then the NCSU Toolbox record), each cited by the crop-root `mature_dimensions_sources` / `_anchoring_urls` and recorded by one appended `plant_dimensions` field_additions entry whose note carries the url, sha256, verbatim quote and, where the rulings required it, the scope (12 crops: habanero, five tomatoes habit-spanning / roma determinate, mint spearmint page, viola pansy page, marigold + sunflower cultivar-spanning, cosmos garden cosmos, basil). **Null by decision (3):** nasturtium and sweet-pea (habit-tied, the peas precedent), broccoli (re-ruled at the review). **Backfill:** the 16 PLA-465 heights gain the sibling, values byte-identical (K3 re-hash; apple K1 on the cited wpcdn copy of the WSU handbook, byte-identical to the record's s3 read; blueberry K2 branch 1, kept [5,8]). 98 evidence rows, both endpoints of every value stated by T4 in its own dimension's clause; 123 restatements adjudicated; 12 restatement-support rows; **18 prose leaves edited** (dill 4 to "up to 4 feet", H3; sunflower 4, the ceiling rule; echinacea 3 to "3 to 4"; okra 2; edamame 2 and bush beans 2 to the cited point; borage width 1). 59 crops changed.
