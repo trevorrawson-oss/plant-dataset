@@ -37,6 +37,8 @@ FIXTURE_WAIVERS = {
 FROZEN = "d7b33682f9926e3aef176ef8a1bb1f3191143957ca40c94e36433abd883a2798"  # the waived stamp
 OTHER = "526788f2c34a7fe1c59e9427271c1d1738c6b6cce2c1d0524df715e4fc359659"
 NOW = "83384c85d9daccc71b3d4a0da795872a761538b0e4d8e94b0d401a674a8a6cd6"
+HELD = "b331e5f2c99378526c3ac8f2f870232953b318c994b7dc3d8c54938f2b62c38d"  # foundation's stamp at cced88fb (PLA-666)
+AFBD = "afbd4113e94b8fc41776178c31e8e3743ec7eef1c11ed0f57e6cf6dfdd7dcd3e"  # the superseded 57b562a0 export
 
 
 def make_app(root, stamped, drop_artifact=False):
@@ -122,16 +124,37 @@ class Waiver(Base):
         self.assertEqual(w["ticket"], "PLA-465")
         self.assertIn("378c7b9f", w["reason"])
 
-    def test_the_live_table_is_empty(self):
-        """PLA-10 (2026-10-01): the PLA-465 waiver was STALE and is removed. A new entry is a ruling
-        and must change this assertion in the same commit."""
-        self.assertEqual(H.EXPORT_WAIVERS, {})
+    # ---------------------------------------------------------------- the LIVE table (PLA-666, 2026-10-05)
+    # Ruled by Trevor (claude.ai): foundation's export is deliberately held at b331e5f2 (origin
+    # feat/community-foundation cced88fb, the OTA of 2026-10-05) while the PLA-666 release ships from
+    # fix/pla-666-woody-floor. Removed when that release merges to foundation.
+    def test_the_live_table_is_exactly_the_pla666_entry(self):
+        self.assertEqual(set(H.EXPORT_WAIVERS), {"E1 app-provenance"})
+        w = H.EXPORT_WAIVERS["E1 app-provenance"]
+        self.assertEqual(w["ticket"], "PLA-666")
+        self.assertIn("fix/pla-666-woody-floor", w["reason"])
+        self.assertIn("removed when", w["reason"])
 
-    def test_the_live_table_waives_nothing(self):
-        """With the table empty, the frozen-export violation that used to be waived now BLOCKS."""
-        v = self.concerns(FROZEN)
+    def test_the_live_waiver_waives_the_held_foundation_export(self):
+        v = self.concerns(HELD)
         unwaived, waived, stale = H.apply_export_waivers(v)
-        self.assertEqual((len(unwaived), waived, stale), (1, [], []))
+        self.assertEqual((unwaived, [n for _, n in waived], stale), ([], ["E1 app-provenance"], []))
+
+    def test_the_live_waiver_does_not_waive_any_other_stale_export(self):
+        # the E1 message carries 12 hex of the stamp, so the character can key on no more than that: a near-miss
+        # sharing the first 8 (as the fixture's test) is the strongest distinguishable case.
+        for stamped in (FROZEN, OTHER, AFBD, HELD[:8] + "0" * 56):
+            unwaived, waived, _ = H.apply_export_waivers(self.concerns(stamped))
+            self.assertEqual((len(unwaived), waived), (1, []), stamped)
+
+    def test_the_live_waiver_never_covers_e2(self):
+        unwaived, waived, _ = H.apply_export_waivers(self.concerns(HELD, drop_artifact=True))
+        self.assertEqual([n for _, n in waived], ["E1 app-provenance"])
+        self.assertTrue(unwaived and all(u.startswith("E2 ") for u in unwaived), unwaived)
+
+    def test_the_live_waiver_reads_stale_once_foundation_re_exports(self):
+        unwaived, waived, stale = H.apply_export_waivers(self.concerns(NOW))
+        self.assertEqual((unwaived, waived, stale), ([], [], ["E1 app-provenance"]))
 
 
 class Wiring(Base):

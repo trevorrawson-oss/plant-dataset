@@ -20,21 +20,22 @@ SCRIPT = "test_precommit_release_verify.py"
 MARKER = "# MUTATION-APPLIED"
 NOTHING_COLLECTED = 5
 
-LIVE = "EXPORT_WAIVERS = {}"
+LIVE_CHAR = 'r"^E1 app-provenance: export was built from canonical b331e5f2c993 "'
+LIVE_KEY = '    "E1 app-provenance": {'
 MATCH = '        hit = next((name for name, w in waivers.items() if w["character"].search(v)), None)'
 STALE = '    return unwaived, waived, [n for n in waivers if n not in fired]'
 WIRE_BLOCK = '            stale_export = unwaived'
 WIRE_APPLY = '            unwaived, waived, stale_waivers = apply_export_waivers(export_currency_concerns(staged))'
 
 MUTATIONS = [
-    # 2026-10-01 (PLA-10): the live table is EMPTY (the PLA-465 entry went stale and was removed). The
-    # three mutations on that entry's character regex left with it; the regex now lives in the suite's
-    # FIXTURE_WAIVERS, so it is exercised as data, not guarded in the target. In their place: a live
-    # entry reinstated must redden the empty-table driver.
-    ("stale_waiver_reinstated", LIVE,
-     'EXPORT_WAIVERS = {"E1 app-provenance": {"ticket": "PLA-465", "reason": "x", "character": '
-     're.compile(r"^E1 app-provenance: export was built from canonical d7b33682f992")}}  ' + MARKER,
-     "test_the_live_table_is_empty or test_the_live_table_waives_nothing"),
+    # 2026-10-05 (PLA-666): the live table carries ONE entry again (foundation's export held at b331e5f2 while the
+    # PLA-666 release ships from fix/pla-666-woody-floor). Two mutations on it: its character widened to any stamp
+    # must redden the any-other-stale driver; its key renamed must redden the exact-entry driver.
+    ("live_character_widened", LIVE_CHAR,
+     'r"^E1 app-provenance: export was built from canonical [0-9a-f]{12} "  ' + MARKER,
+     "test_the_live_waiver_does_not_waive_any_other_stale_export"),
+    ("live_entry_renamed", LIVE_KEY, '    "E1 app-provenance (renamed)": {  ' + MARKER,
+     "test_the_live_table_is_exactly_the_pla666_entry"),
     ("every_violation_waived_including_e2", MATCH,
      "        hit = next(iter(waivers), None)  " + MARKER, "test_e2_is_never_waived"),
     ("stale_waiver_never_reported", STALE, "    return unwaived, waived, []  " + MARKER,
