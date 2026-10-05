@@ -1,0 +1,1163 @@
+[
+ {
+  "crop": "chives",
+  "path": "varieties.recommended[0].note",
+  "kind": "prose",
+  "old": "The standard Allium schoenoprasum: fine, hollow, grass-like leaves in tidy clumps 8 to 14 inches tall, with edible pink to pale purple pom-pom flowers in late spring. Mild onion flavor, extremely hardy, and the workhorse kitchen chive.",
+  "new": "The standard Allium schoenoprasum. It grows in clumps of fine, hollow, grass-like leaves about 1 to 1.5 feet tall. Its edible flowers are round, pink to pale purple globes that bloom in late spring to early summer. The leaves have a mild onion flavor, and the plant is hardy.",
+  "cited_at": "varieties.recommended[0]",
+  "reason": "ruling 7: the species-type note follows NCSU's height; cut tidy / 8 to 14 / pom-pom / extremely / workhorse"
+ },
+ {
+  "crop": "chives",
+  "path": "varieties.recommended[0].anchoring_urls",
+  "kind": "anchors",
+  "old": "<absent>",
+  "new": {
+   "ncsu_ext": {
+    "url": "https://plants.ces.ncsu.edu/plants/allium-schoenoprasum/",
+    "verified": "2026-10-04"
+   },
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-chives",
+    "verified": "2026-10-04"
+   },
+   "uwi_hort": {
+    "url": "https://hort.extension.wisc.edu/articles/chives-allium-schoenoprasum/",
+    "verified": "2026-10-04"
+   },
+   "uiuc_ext": {
+    "url": "https://extension.illinois.edu/herbs/chives",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "the note's citations, in place on the variety entry (53 of 623 certified entries carry sources)"
+ },
+ {
+  "crop": "chives",
+  "path": "varieties.recommended[0].sources",
+  "kind": "sources",
+  "old": "<absent>",
+  "new": [
+   "ncsu_ext",
+   "umn_ext",
+   "uwi_hort",
+   "uiuc_ext"
+  ],
+  "cited_at": null,
+  "reason": "the note's citations, in place on the variety entry (53 of 623 certified entries carry sources)"
+ },
+ {
+  "crop": "sweet-corn",
+  "path": "thinning.when",
+  "kind": "prose",
+  "old": "when seedlings are 3 to 4 inches tall",
+  "new": "after the plants are up",
+  "cited_at": "thinning",
+  "reason": "R5 / ruling 8: TAMU EHT-044's thinning sentence"
+ },
+ {
+  "crop": "sweet-corn",
+  "path": "thinning.to_spacing",
+  "kind": "prose",
+  "old": "8 to 12 inches",
+  "new": "1 foot",
+  "cited_at": "thinning",
+  "reason": "R5 / ruling 8: TAMU EHT-044's thinning sentence"
+ },
+ {
+  "crop": "sweet-corn",
+  "path": "thin_to_inches",
+  "kind": "value",
+  "old": [
+   8,
+   12
+  ],
+  "new": [
+   12,
+   12
+  ],
+  "cited_at": "thinning",
+  "reason": "R5: thin_to_inches [12,12] (TAMU EHT-044, 1 foot)"
+ },
+ {
+  "crop": "sweet-corn",
+  "path": "thinning.method",
+  "kind": "value",
+  "old": "snip extra seedlings at the soil line",
+  "new": null,
+  "cited_at": null,
+  "reason": "R5: no hashed page states a thinning method"
+ },
+ {
+  "crop": "sweet-corn",
+  "path": "thinning.tip_seasoned",
+  "kind": "prose",
+  "old": "If you sow thickly to insure a stand, thin within the block to a final in-row spacing of 8 to 12 inches once seedlings are a few inches tall. Snip the extras at the soil line rather than pulling, to spare the shallow roots of the plants you keep.",
+  "new": "In-row seed spacing is 8 to 12 inches. Sowing large seed like corn at the recommended spacing avoids thinning the stand later. If you sow at 3 to 4 inches instead, thin to 1 foot once the plants are up. Closer stands produce small, poorly filled ears.",
+  "cited_at": "thinning",
+  "reason": "R5: Trevor's tip; ISU/UMN seed spacing, WSU, EHT-044"
+ },
+ {
+  "crop": "sweet-corn",
+  "path": "thinning.tip_beginner",
+  "kind": "prose",
+  "old": "If you plant the seeds close together to be sure they come up, thin them to about 8 to 12 inches apart within the block when they are a few inches tall. Cut the extra seedlings off at the ground instead of pulling them, so you do not disturb the roots of the ones you are keeping.",
+  "new": "Plant corn seeds 8 to 12 inches apart in the row. Big seeds like corn can go in at their final spacing, so you won't need to thin them later. If you planted them closer, about 3 to 4 inches apart, thin them to 1 foot apart once the plants are up. Corn left too close together makes small ears that don't fill out well.",
+  "cited_at": "thinning",
+  "reason": "R5: Trevor's tip; ISU/UMN seed spacing, WSU, EHT-044"
+ },
+ {
+  "crop": "sweet-corn",
+  "path": "thinning.anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/10/2013/09/EHT-044.pdf",
+    "verified": "2026-07-10"
+   }
+  },
+  "new": {
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/10/2013/09/EHT-044.pdf",
+    "verified": "2026-07-10"
+   },
+   "wsu_ext": {
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "verified": "2026-10-04"
+   },
+   "iastate_ext": {
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-sweet-corn-home-garden",
+    "verified": "2026-10-04"
+   },
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-sweet-corn",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "R5: thinning.sources cover EHT-044, WSU, ISU and UMN"
+ },
+ {
+  "crop": "sweet-corn",
+  "path": "thinning.sources",
+  "kind": "sources",
+  "old": [
+   "tamu_agrilife"
+  ],
+  "new": [
+   "tamu_agrilife",
+   "wsu_ext",
+   "iastate_ext",
+   "umn_ext"
+  ],
+  "cited_at": null,
+  "reason": "R5: thinning.sources cover EHT-044, WSU, ISU and UMN"
+ },
+ {
+  "crop": "sweet-corn",
+  "path": "growth_stages[1].user_action_seasoned",
+  "kind": "prose",
+  "old": "Keep the block evenly moist and weed-free; young corn competes poorly with weeds. Cultivate shallowly to spare the surface roots. Thin now to a final 8 to 12 inches in the row if you sowed thickly.",
+  "new": "Keep the block weed-free with frequent, shallow cultivation. Hoe only deep enough to cut weeds below the surface, since corn roots run close to the top of the soil. Water as needed to keep plants from wilting. If you sowed closer than the final spacing, thin to 1 foot apart now.",
+  "cited_at": "growth_stages[1]",
+  "reason": "ruling 8: Trevor's string"
+ },
+ {
+  "crop": "sweet-corn",
+  "path": "growth_stages[1].user_action_beginner",
+  "kind": "prose",
+  "old": "Keep the soil evenly moist and pull weeds early, since small corn does not compete well with them. Weed shallowly to protect the roots near the surface. If you planted thickly, thin to about 8 to 12 inches apart now.",
+  "new": "Keep weeds down by hoeing often and lightly. Only hoe deep enough to cut the weeds off just under the soil, because corn roots grow close to the surface. Water often enough that the plants don't wilt. If you planted the seeds closer together, thin the plants to 1 foot apart now.",
+  "cited_at": "growth_stages[1]",
+  "reason": "ruling 8: Trevor's string"
+ },
+ {
+  "crop": "sweet-corn",
+  "path": "growth_stages[1].anchoring_urls",
+  "kind": "anchors",
+  "old": "<absent>",
+  "new": {
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/10/2013/09/EHT-044.pdf",
+    "verified": "2026-10-04"
+   },
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-sweet-corn",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "the stage's citations, in place (113 of 728 certified growth_stages entries carry sources)"
+ },
+ {
+  "crop": "sweet-corn",
+  "path": "growth_stages[1].sources",
+  "kind": "sources",
+  "old": "<absent>",
+  "new": [
+   "tamu_agrilife",
+   "umn_ext"
+  ],
+  "cited_at": null,
+  "reason": "the stage's citations, in place (113 of 728 certified growth_stages entries carry sources)"
+ },
+ {
+  "crop": "broad-beans-fava",
+  "path": "start_method.notes_seasoned",
+  "kind": "prose",
+  "old": "Direct-sow the large flat seed about 1 to 2 inches deep and 4 to 6 inches apart, thinning to stand 8 to 10 inches apart, in rows 18 to 30 inches apart. In mild-winter regions sow in fall (roughly October to November) to overwinter; in cold regions sow as early as the soil can be worked in late winter or early spring. Germination is slow in cool soil and can take up to three weeks; there is no benefit to starting favas indoors.",
+  "new": "Direct-sow the large, flattened seed, and thin seedlings to stand 8 to 10 inches apart. Santa Clara County's UC Master Gardeners grow fava as a cool-season crop, sowing in February or from August to September, possibly into October. Fall-planted beans typically begin producing in early spring. University of Minnesota Extension advises growing fava as you would peas, planting early in the spring. Fava needs cool weather, with highs only into the low 80s °F.",
+  "cited_at": "start_method",
+  "reason": "ruling 9: rows 18 to 30 cut; seed-spacing clause cut (4 to 6 vs 3 to 5 stays with PLA-625)"
+ },
+ {
+  "crop": "broad-beans-fava",
+  "path": "start_method.anchoring_urls",
+  "kind": "anchors",
+  "old": "<absent>",
+  "new": {
+   "ucanr_santa_clara_mg": {
+    "url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/fava-beans",
+    "verified": "2026-10-04"
+   },
+   "ncsu_ext_toolbox_vicia_faba": {
+    "url": "https://plants.ces.ncsu.edu/plants/vicia-faba/",
+    "verified": "2026-10-04"
+   },
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-beans",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "the note's citations, in place (18 of 121 certified start_method blocks carry sources)"
+ },
+ {
+  "crop": "broad-beans-fava",
+  "path": "start_method.sources",
+  "kind": "sources",
+  "old": "<absent>",
+  "new": [
+   "ucanr_santa_clara_mg",
+   "ncsu_ext_toolbox_vicia_faba",
+   "umn_ext"
+  ],
+  "cited_at": null,
+  "reason": "the note's citations, in place (18 of 121 certified start_method blocks carry sources)"
+ },
+ {
+  "crop": "watermelon",
+  "path": "yield_expectations.per_plant_seasoned",
+  "kind": "prose",
+  "old": "A healthy full-size watermelon vine typically yields 2 to 4 marketable melons, while icebox and bush types set more, smaller fruit. Limiting fruit to two or three per vine on full-size types channels energy into larger, better-filled melons. Plants need plenty of room, roughly 24 square feet each for full-size types, and even moisture and modest feeding through sizing build sweet fruit.",
+  "new": "Washington State's planning table gives 6 to 12 melons from 3 plants in a 10-foot row. Watermelons need a lot of room. Keep irrigation consistent through fruit set and development. Side-dress a second time after bloom, while fruit is developing, but avoid excess nitrogen, which encourages vine growth and reduces fruit growth.",
+  "cited_at": "yield_expectations",
+  "reason": "ruling 10: 24 sq ft clause dropped; per-plant yield replaced by WSU's row table"
+ },
+ {
+  "crop": "watermelon",
+  "path": "yield_expectations.factors_seasoned[2]",
+  "kind": "prose",
+  "old": "Space and vine vigor: full-size vines sprawl 8 to 12 feet and need about 24 square feet each; crowding cuts yield and worsens disease.",
+  "new": "Space: watermelons need a lot of room. Planting too close, like overfeeding with nitrogen, leads to excessive vine growth and few fruit.",
+  "cited_at": "yield_expectations",
+  "reason": "ruling 10: 8 to 12 ft and 24 sq ft cut"
+ },
+ {
+  "crop": "watermelon",
+  "path": "yield_expectations.first_year_note_seasoned",
+  "kind": "prose",
+  "old": "The usual first-year surprises are how much room the vines take (8 to 12 feet for full-size types), how pollinator-dependent fruit set is, and how much ripeness judgment matters, since the melon does not finish off the vine. Give plants far more space than seems necessary, grow flowers nearby for bees, and learn the tendril-and-ground-spot check before you cut.",
+  "new": "Plan for three things. Watermelons need a lot of room. Fruit set depends on insects such as honeybees and bumblebees to carry pollen, so consider a honeybee colony nearby. And ripeness takes judgment: check that the fruit has reached its expected size, the tendril closest to the fruit has turned brown, the rind has gone from glossy to dull, and the underside shows a large white to cream spot.",
+  "cited_at": "yield_expectations",
+  "reason": "scope ruling: 8 to 12 ft cut"
+ },
+ {
+  "crop": "watermelon",
+  "path": "yield_expectations.anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "uga_ext": {
+    "url": "https://fieldreport.caes.uga.edu/publications/C1035/",
+    "verified": "2026-06-29"
+   },
+   "usu_ext": {
+    "url": "https://extension.usu.edu/yardandgarden/research/watermelon-in-the-garden",
+    "verified": "2026-06-29"
+   }
+  },
+  "new": {
+   "uga_ext": {
+    "url": "https://fieldreport.caes.uga.edu/publications/C1035/",
+    "verified": "2026-06-29"
+   },
+   "usu_ext": {
+    "url": "https://extension.usu.edu/yardandgarden/research/watermelon-in-the-garden",
+    "verified": "2026-06-29"
+   },
+   "wsu_ext": {
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "verified": "2026-10-04"
+   },
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/factsheet/watermelon/",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "the three re-authored leaves cite WSU and Clemson"
+ },
+ {
+  "crop": "watermelon",
+  "path": "yield_expectations.sources",
+  "kind": "sources",
+  "old": [
+   "uga_ext",
+   "usu_ext"
+  ],
+  "new": [
+   "uga_ext",
+   "usu_ext",
+   "wsu_ext",
+   "clemson_hgic"
+  ],
+  "cited_at": null,
+  "reason": "the three re-authored leaves cite WSU and Clemson"
+ },
+ {
+  "crop": "watermelon",
+  "path": "soil_prep_seasoned",
+  "kind": "prose",
+  "old": "Prepare a deep, light, well-drained bed in full sun and work a few inches of compost into the soil before planting, easing off heavy nitrogen so the plant builds fruit rather than runaway vine. Most growers plant on low, wide hills or raised mounds, which warm faster, drain better, and give the trailing vines a starting point. Space generously: hills run about 8 feet apart on all sides for full-size types (closer for icebox and bush kinds), because a full-size vine can run 8 to 12 feet and wants about 24 square feet to itself. Black plastic mulch is a real help in shorter or cooler-summer areas, warming the soil and speeding an early start. On heavy or wet ground, build the mounds up to improve drainage and head off wilt and fruit rot.",
+  "new": "Choose a well-drained site with 8 to 10 hours of sun a day. Incorporate organic matter such as compost into the native soil before planting. Go light on nitrogen, since too much encourages excess vine growth and reduces fruit growth. Plant in small hills spaced 8 feet apart on all sides. Black plastic mulch warms the soil faster in spring, conserves moisture, and gives watermelons an early start. It also helps control weeds and reduces fruit rot.",
+  "cited_at": null,
+  "reason": "scope ruling: 8 to 12 ft, 24 sq ft and unsourced mound claims cut"
+ },
+ {
+  "crop": "watermelon",
+  "path": "soil_prep_beginner",
+  "kind": "prose",
+  "old": "Pick a sunny spot with light, well-drained soil and mix in some compost before planting, but do not overdo rich, high-nitrogen material, or you get more vine than melon. Plant watermelon on low hills or mounds, which warm up and drain better. Give it lots of room: space hills about 8 feet apart on all sides for full-size types, since the vines can spread 8 to 12 feet (icebox and bush types need less). In cooler or shorter-summer areas, laying down black plastic mulch warms the soil and gives the plants an earlier, faster start. If your soil is heavy or stays wet, build the mounds up higher so water drains away from the roots and fruit.",
+  "new": "Pick a spot that drains well and gets 8 to 10 hours of sun. Mix compost into your soil before planting. Don't overdo nitrogen-rich fertilizer, or you'll get lots of vine and less fruit. Plant seeds in small hills 8 feet apart in every direction. Black plastic laid over the soil warms it faster in spring and gives the plants an early start. The plastic also holds in moisture, keeps weeds down, and cuts down on rotten fruit.",
+  "cited_at": null,
+  "reason": "scope ruling: 8 to 12 ft, 24 sq ft and unsourced mound claims cut"
+ },
+ {
+  "crop": "watermelon",
+  "path": "growth_stages[2].user_action_seasoned",
+  "kind": "prose",
+  "old": "Side-dress with a little nitrogen as the vines run, then ease off, mulch to hold moisture, and give the runners room to spread, 8 to 12 feet for full-size types. Scout for spider mites and aphids on leaf undersides.",
+  "new": "The first side-dressing goes on before the vines start to run; give a second after bloom while fruit develops. Mulch with dried grass clippings, straw, or wood chips to conserve water and hold down weeds. Give the runners plenty of room. Scout leaf undersides for aphids, which usually arrive once vines form runners. In hot, dry weather, watch the upper leaf surfaces for spider mite damage, pale yellow to reddish-brown spots.",
+  "cited_at": "growth_stages[2]",
+  "reason": "scope ruling: 8 to 12 ft cut"
+ },
+ {
+  "crop": "watermelon",
+  "path": "growth_stages[2].anchoring_urls",
+  "kind": "anchors",
+  "old": "<absent>",
+  "new": {
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/factsheet/watermelon/",
+    "verified": "2026-10-04"
+   },
+   "uga_ext": {
+    "url": "https://fieldreport.caes.uga.edu/publications/C1035/",
+    "verified": "2026-10-04"
+   },
+   "clemson_hgic_cucurbit_insects": {
+    "url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "the stage's citations, in place; the insect page needs its own id (decision 36)"
+ },
+ {
+  "crop": "watermelon",
+  "path": "growth_stages[2].sources",
+  "kind": "sources",
+  "old": "<absent>",
+  "new": [
+   "clemson_hgic",
+   "uga_ext",
+   "clemson_hgic_cucurbit_insects"
+  ],
+  "cited_at": null,
+  "reason": "the stage's citations, in place; the insect page needs its own id (decision 36)"
+ },
+ {
+  "crop": "watermelon",
+  "path": "tips_by_stage.vining[0].text_seasoned",
+  "kind": "prose",
+  "old": "Go easy on nitrogen once the vines run. Too much gives lush vine at the expense of fruit and sugar, which is the classic watermelon mistake. Give full-size types 8 to 12 feet to sprawl.",
+  "new": "Hold back on extra nitrogen. Too much encourages excess vine growth and reduces fruit, and so does planting too close.",
+  "cited_at": "tips_by_stage.vining[0]",
+  "reason": "scope ruling: 8 to 12 ft cut"
+ },
+ {
+  "crop": "watermelon",
+  "path": "tips_by_stage.vining[0].anchoring_urls",
+  "kind": "anchors",
+  "old": "<absent>",
+  "new": {
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/factsheet/watermelon/",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "the tip's citation, in place (834 of 1147 certified tips carry sources)"
+ },
+ {
+  "crop": "watermelon",
+  "path": "tips_by_stage.vining[0].sources",
+  "kind": "sources",
+  "old": "<absent>",
+  "new": [
+   "clemson_hgic"
+  ],
+  "cited_at": null,
+  "reason": "the tip's citation, in place (834 of 1147 certified tips carry sources)"
+ },
+ {
+  "crop": "<catalog>",
+  "path": "clemson_hgic_cucurbit_insects",
+  "kind": "catalog",
+  "old": "<absent>",
+  "new": {
+   "id": "clemson_hgic_cucurbit_insects",
+   "name": "Clemson HGIC 2207 -- Cucumber, Squash, Melon & Other Cucurbit Insect Pests",
+   "title": "Cucumber, Squash, Melon & Other Cucurbit Insect Pests",
+   "publisher": "Clemson University",
+   "url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+   "source_class": "university_extension",
+   "trust_tier": "high",
+   "accessed": "2026-10",
+   "tier": "T1",
+   "citable_for": "Clemson HGIC 2207 factsheet: cucurbit insect pests (melon aphids, two-spotted spider mites) and where and when they appear on watermelon vines."
+  },
+  "cited_at": null,
+  "reason": "decision 36: a document-scoped id for the insect page (the portal id clemson_hgic anchors the watermelon factsheet on the same block); title read off the hashed page's <title> (535e3615)"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "det_indet.detail_seasoned",
+  "kind": "prose",
+  "old": "Cherry tomatoes are almost always indeterminate: they grow, flower, and fruit all season until frost kills them. No stopping needed, but they need strong staking or caging. Some compact varieties (Tumbling Tom, Patio Choice) are technically determinate.",
+  "new": "Tomatillos are indeterminate: they keep flowering and fruiting until frost, which allows multiple harvests through the season. Unlike tomatoes, which have both determinate and indeterminate varieties, all tomatillo varieties are indeterminate. Plants grow 3 to 4 feet tall and wide with a bushy, sprawling habit, and stems root where they touch the ground. Stake, cage, or trellis each plant to keep fruit off the ground and improve air circulation. Tomatillos weigh less than tomato plants, so they are easier to support. Habit varies by variety: Rendidora grows upright, while Gigante, Tamayo, Toma Verde, and Gulliver Hybrid sprawl more.",
+  "cited_at": "det_indet",
+  "reason": "PLA-652 / R4: re-authored from the tomatillo pages"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "det_indet.detail_beginner",
+  "kind": "prose",
+  "old": "Indeterminate (as explained earlier in this guide) means the plant keeps growing and producing fruit all season long, rather than ripening everything at once and stopping. Almost all cherry tomato varieties work this way, which is part of why they're productive over such a long window. Because they keep growing, they need a sturdy cage or stake to stay upright. A few compact varieties like Tumbling Tom are determinate (they set fruit and stop), which makes them better choices for small containers or hanging baskets.",
+  "new": "Tomatillos keep growing, flowering, and making fruit until frost, so you can pick them many times over the season. Every tomatillo variety grows this way. Tomatoes are different: some tomato varieties grow this way and others don't. The plants get big, about 3 to 4 feet tall and just as wide. Give each one a cage, stake, or trellis to keep the fruit off the ground and let air move through the leaves. Tomatillo plants are lighter than tomato plants, so they are easier to hold up.",
+  "cited_at": "det_indet",
+  "reason": "PLA-652 / R4: re-authored from the tomatillo pages"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "det_indet.anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/mild-peppers-unique-cherry-tomatoes/",
+    "verified": "2026-05-22"
+   },
+   "cornell_ext": {
+    "url": "https://gardening.cals.cornell.edu/garden-guidance/foodgarden/vegetable-growing-guides/tomato-growing-guide/",
+    "verified": "2026-05-22"
+   },
+   "umd_ext": {
+    "url": "https://extension.umd.edu/resource/growing-tomatoes-home-garden",
+    "verified": "2026-05-22"
+   }
+  },
+  "new": {
+   "usu_ext": {
+    "url": "https://extension.usu.edu/yardandgarden/research/tomatillos-in-the-garden",
+    "verified": "2026-10-04"
+   },
+   "sdsu_ext": {
+    "url": "https://extension.sdstate.edu/tomatillo-how-grow-it",
+    "verified": "2026-10-04"
+   },
+   "ncsu_ext": {
+    "url": "https://plants.ces.ncsu.edu/plants/physalis-philadelphica/",
+    "verified": "2026-10-04"
+   },
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-tomatillos-and-ground-cherries",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "R4: det_indet anchors = USU, SDSU, NCSU, UMN (the pages the strings use); the three cherry-tomato anchors (clemson blog, cornell tomato guide, umd tomatoes) drop"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "days_to_maturity_anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/mild-peppers-unique-cherry-tomatoes/",
+    "verified": "2026-05-22"
+   },
+   "mu_ext": {
+    "url": "https://extension.missouri.edu/publications/g6461",
+    "verified": "2026-05-22"
+   },
+   "umd_ext": {
+    "url": "https://extension.umd.edu/resource/growing-tomatoes-home-garden",
+    "verified": "2026-05-22"
+   },
+   "cornell_ext": {
+    "url": "https://gardening.cals.cornell.edu/garden-guidance/foodgarden/vegetable-growing-guides/tomato-growing-guide/",
+    "verified": "2026-05-22"
+   }
+  },
+  "new": {
+   "sdsu_ext": {
+    "url": "https://extension.sdstate.edu/tomatillo-how-grow-it",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "R3: re-anchor days_to_maturity [65,100] to SDSU; the four tomato anchors drop"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "days_to_maturity_mid",
+  "kind": "value",
+  "old": 80,
+  "new": null,
+  "cited_at": null,
+  "reason": "R2: TAMU's 90-day basis is unclear -> null"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "days_to_maturity_mid_anchoring_urls",
+  "kind": "delete",
+  "old": {
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/mild-peppers-unique-cherry-tomatoes/",
+    "verified": "2026-05-22"
+   },
+   "mu_ext": {
+    "url": "https://extension.missouri.edu/publications/g6461",
+    "verified": "2026-05-22"
+   },
+   "umd_ext": {
+    "url": "https://extension.umd.edu/resource/growing-tomatoes-home-garden",
+    "verified": "2026-05-22"
+   },
+   "cornell_ext": {
+    "url": "https://gardening.cals.cornell.edu/garden-guidance/foodgarden/vegetable-growing-guides/tomato-growing-guide/",
+    "verified": "2026-05-22"
+   }
+  },
+  "new": null,
+  "cited_at": null,
+  "reason": "R2: the mid is null; no null-mid crop carries a mid-anchoring key (decision 39)"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "failure_diagnostics[5].next_season_tip_beginner",
+  "kind": "prose",
+  "old": "Tomatilloes need at least 6 hours of direct sun per day, and this is not negotiable. If your current spot is borderline, walk your garden at different times of day and look for a spot a few feet over that gets more morning sun before something shades it. Compact cherry tomatillo varieties like dwarf or patio types tolerate slightly less sun than full-size plants.",
+  "new": "Tomatillos need at least 6 hours of direct sun a day, and South Dakota State Extension recommends 8. If your spot gets less than that, choose a sunnier spot next season.",
+  "cited_at": "failure_diagnostics[5]",
+  "reason": "ruling 11: 'cherry tomatillo' and other unsourced claims cut"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "failure_diagnostics[5].what_happened_beginner",
+  "kind": "prose",
+  "old": "If your plant grows tall and leafy but produces very little fruit, or pale, flavorless tomatillos, sun is probably the problem. Tomatilloes need at least 6 hours of direct sun per day; below that, the plant puts its energy into growing stems and leaves instead of fruit. What fruit does form tends to be bland because sugar development depends on sunlight. A secondary sign: shaded plants tend to stay wet longer and get more disease, because leaves don't dry out well in low light. If your spot gets 4-5 hours, you'll get some fruit, but manage expectations: fewer tomatillos, smaller, and less sweet than a full-sun plant.",
+  "new": "Tomatillos need full sun, at least 6 hours of direct sunlight a day, and South Dakota State Extension recommends 8. If your plants got less than that, the spot was too shady for them. If your plants were very leafy and slow to make fruit, also check your fertilizer: too much nitrogen makes tomatillos bushy, leafy, and slow to bear fruit. Wet leaves get diseases more easily, so if you water with a sprinkler, do it in the morning so the leaves dry before night.",
+  "cited_at": "failure_diagnostics[5]",
+  "reason": "R9: live-data finding; the leafy / slow-to-fruit cause is nitrogen on UMN and USU, not shade"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "failure_diagnostics[5].what_happened_seasoned",
+  "kind": "prose",
+  "old": "Tomatilloes are among the most light-demanding vegetables: photosynthesis is the energy source for both vegetative growth and fruit sugar development, and fruit quality is directly proportional to the plant's photosynthetic output. Below 6 hours of direct sun, the plant redirects what energy it has toward survival, stem elongation and leaf area, rather than reproduction. Fruit set drops sharply, and what fruit does form is typically thin-skinned, pale, and bland. A secondary effect is increased disease: shaded plants stay wetter longer after rain or irrigation, and poor airflow through dense, etiolated growth creates the humid microclimate that blight and leaf mold need to establish.",
+  "new": "Tomatillos need full sun: NC State calls for 6 or more hours of direct sunlight a day, UC Master Gardeners (Alameda) at least six hours of sunlight, and South Dakota State 8. A bushy, leafy plant that is slow to bear may also point to excess nitrogen, which produces exactly that growth. Foliar disease is a separate risk: wet leaves are more disease-prone, rainy periods or humid, windless days can encourage foliar diseases, and early blight, anthracnose, late blight, and tobacco mosaic virus can all affect tomatillos.",
+  "cited_at": "failure_diagnostics[5]",
+  "reason": "R9: as the beginner register"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "failure_diagnostics[5].next_season_tip_seasoned",
+  "kind": "prose",
+  "old": "Tomatilloes are not negotiable on sun requirements. Below 6 hours of direct sun, expect significantly reduced yields and higher disease pressure regardless of everything else done correctly. If the current spot is marginal (6-7 hours), it is worth mapping sun across the garden before committing the bed again, as a spot that gets shade from a fence or tree in the afternoon may have 2-3 more hours of morning sun available just a few feet away. Dwarf or patio-type cherry tomatillos tolerate slightly less sun than full-size plants.",
+  "new": "Tomatillos need full sun. NC State calls for 6 or more hours of direct sunlight a day and UC Master Gardeners (Alameda) at least six hours of sunlight; South Dakota State recommends 8. If the bed fell short, move the planting to a sunnier site next season.",
+  "cited_at": "failure_diagnostics[5]",
+  "reason": "Part 2: 'cherry tomatillo' and every unsourced claim cut (ruling 11)"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "failure_diagnostics[5].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-tomatoes",
+    "verified": "2026-05-22"
+   },
+   "umd_ext": {
+    "url": "https://extension.umd.edu/resource/growing-tomatoes-home-garden",
+    "verified": "2026-05-22"
+   },
+   "iastate_ext": {
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-tomatoes-home-garden",
+    "verified": "2026-05-22"
+   },
+   "cornell_ext": {
+    "url": "https://gardening.cals.cornell.edu/garden-guidance/foodgarden/vegetable-growing-guides/tomato-growing-guide/",
+    "verified": "2026-05-22"
+   }
+  },
+  "new": {
+   "ucanr_ext": {
+    "url": "https://ucanr.edu/site/uc-master-gardener-program-alameda-county/article/guide-growing-tomatillos",
+    "verified": "2026-10-04"
+   },
+   "ncsu_ext": {
+    "url": "https://plants.ces.ncsu.edu/plants/physalis-philadelphica/",
+    "verified": "2026-10-04"
+   },
+   "sdsu_ext": {
+    "url": "https://extension.sdstate.edu/tomatillo-how-grow-it",
+    "verified": "2026-10-04"
+   },
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-tomatillos-and-ground-cherries",
+    "verified": "2026-10-04"
+   },
+   "usu_ext": {
+    "url": "https://extension.usu.edu/yardandgarden/research/tomatillos-in-the-garden",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "R8: the entry is authored entirely from tomatillo pages; all four tomato anchors drop"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "failure_diagnostics[5].sources",
+  "kind": "sources",
+  "old": [
+   "umn_ext",
+   "umd_ext",
+   "iastate_ext",
+   "cornell_ext"
+  ],
+  "new": [
+   "ucanr_ext",
+   "ncsu_ext",
+   "sdsu_ext",
+   "umn_ext",
+   "usu_ext"
+  ],
+  "cited_at": null,
+  "reason": "R8: the entry is authored entirely from tomatillo pages; all four tomato anchors drop"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "weather_triggers[0].body_beginner",
+  "kind": "orthography",
+  "old": "Freezing temperatures are forecast tonight. Tomatilloes are frost-tender and one hard freeze can kill the plant. Cover them with an old bedsheet, a bucket, or frost cloth before dark, and uncover in the morning once temperatures are back above freezing. Container plants can be moved inside.",
+  "new": "Freezing temperatures are forecast tonight. Tomatillos are frost-tender and one hard freeze can kill the plant. Cover them with an old bedsheet, a bucket, or frost cloth before dark, and uncover in the morning once temperatures are back above freezing. Container plants can be moved inside.",
+  "cited_at": null,
+  "reason": "spelling only: 'Tomatilloes' -> 'Tomatillos' (Trevor, 2026-10-04)"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "weather_triggers[0].body_seasoned",
+  "kind": "orthography",
+  "old": "Temperatures are dropping close to freezing tonight. Cover plants with fleece or old bedsheets, or bring containers inside. Tomatilloes are frost-tender and one cold night can end your season early.",
+  "new": "Temperatures are dropping close to freezing tonight. Cover plants with fleece or old bedsheets, or bring containers inside. Tomatillos are frost-tender and one cold night can end your season early.",
+  "cited_at": null,
+  "reason": "spelling only: 'Tomatilloes' -> 'Tomatillos' (Trevor, 2026-10-04)"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "failure_diagnostics[1].what_happened_beginner",
+  "kind": "orthography",
+  "old": "You'll see the leaves turn black or dark brown and go limp, sometimes overnight after a cold night. Tomatilloes have no cold tolerance at all. Even without a hard freeze, temperatures below 50°F cause what's called chilling injury: the plant's cells start to break down, and young transplants are especially vulnerable because they haven't built up a protective waxy coating yet. It's tempting to think the plant just needs time to recover, but if it was hit by frost, it usually won't come back. For next time: wait until both your nighttime lows and your soil temperature are reliably above 60°F before transplanting.",
+  "new": "You'll see the leaves turn black or dark brown and go limp, sometimes overnight after a cold night. Tomatillos have no cold tolerance at all. Even without a hard freeze, temperatures below 50°F cause what's called chilling injury: the plant's cells start to break down, and young transplants are especially vulnerable because they haven't built up a protective waxy coating yet. It's tempting to think the plant just needs time to recover, but if it was hit by frost, it usually won't come back. For next time: wait until both your nighttime lows and your soil temperature are reliably above 60°F before transplanting.",
+  "cited_at": null,
+  "reason": "spelling only: 'Tomatilloes' -> 'Tomatillos' (Trevor, 2026-10-04)"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "failure_diagnostics[1].what_happened_seasoned",
+  "kind": "orthography",
+  "old": "Tomatilloes are warm-season crops with tropical origin and have no cold tolerance mechanism, unlike brassicas or root vegetables, they cannot harden or acclimate to cold. Chilling injury begins below 50°F and cell damage accelerates near freezing; a single frost event at the transplant stage usually kills the plant outright because young transplants have not yet developed the protective waxy cuticle layer that provides some buffer in established plants. Soil temperature is as important as air temperature: roots in cold soil (below 60°F) cannot take up water or nutrients efficiently even when air temperatures are acceptable, which causes transplant shock that looks like cold damage but persists for weeks after the weather improves.",
+  "new": "Tomatillos are warm-season crops with tropical origin and have no cold tolerance mechanism, unlike brassicas or root vegetables, they cannot harden or acclimate to cold. Chilling injury begins below 50°F and cell damage accelerates near freezing; a single frost event at the transplant stage usually kills the plant outright because young transplants have not yet developed the protective waxy cuticle layer that provides some buffer in established plants. Soil temperature is as important as air temperature: roots in cold soil (below 60°F) cannot take up water or nutrients efficiently even when air temperatures are acceptable, which causes transplant shock that looks like cold damage but persists for weeks after the weather improves.",
+  "cited_at": null,
+  "reason": "spelling only: 'Tomatilloes' -> 'Tomatillos' (Trevor, 2026-10-04)"
+ },
+ {
+  "crop": "tomatillo",
+  "path": "verification_status.verification_log_ref",
+  "kind": "append",
+  "old": "tomatillo_author_fresh_pilot 2026-06-29 (Claude Code lane, web access). Structurally mirrored on certified cherry-tomato (warm_season_fruiting, Solanaceae); every value re-derived for tomatillo. Core biology source-verified by live WebFetch: Utah State University Extension (DTM 60-75, spacing 24-36 in/rows 36 in, germ 80F/soil >60F, full sun, 1-2 in/wk water, 3-4 ft plant, indeterminate, self-incompatible -> 2+ plants, 21-0-0 side-dress at 4 & 8 wk, powdery mildew/viruses/root rot/aphids/flea beetles, 2-3 lb/plant, harvest at husk-fill); SDSU Extension (DTM 65-100, 3 ft spacing, 8 hr sun, 4-5 wk indoors, 2 varieties ideal, flowers drop >90F/<55F, more drought/heat tolerant, 1-1.5 in/wk, frost-tender, storage husk-on, varieties Toma Verde/Purple De Milpa/Pineapple, pests three-lined potato beetle/flea beetle/cutworm/hornworm); UMN Extension (start 4-5 wk before set-out ~1-2 wk after tomato, 3 ft, trellis/cage, varieties Purple/Green/De Milpa/Tamayo, self-seeds, storage 50-60F); NCSU plant toolbox (3-4 ft tall/wide, full sun, Solanaceae, few pest/disease problems, 1-2 in fruit, 2-3 lb/plant); UC Master Gardener (2+ plants for pollination, cage/stake, powdery mildew, no nightshade rotation, husk-split harvest); TAMU AgriLife (plant after frost, ~90 day, identical to tomato culture). Calendars MODELED on the tomato frost anchors + tomatillo culture; per-zone dates flagged. Self-incompatibility (the 2+ plant requirement), sprawling 3-4 ft habit, husk-fill harvest, and heat tolerance are the load-bearing refits vs tomato.",
+  "new": "tomatillo_author_fresh_pilot 2026-06-29 (Claude Code lane, web access). Structurally mirrored on certified cherry-tomato (warm_season_fruiting, Solanaceae); every value re-derived for tomatillo. Core biology source-verified by live WebFetch: Utah State University Extension (DTM 60-75, spacing 24-36 in/rows 36 in, germ 80F/soil >60F, full sun, 1-2 in/wk water, 3-4 ft plant, indeterminate, self-incompatible -> 2+ plants, 21-0-0 side-dress at 4 & 8 wk, powdery mildew/viruses/root rot/aphids/flea beetles, 2-3 lb/plant, harvest at husk-fill); SDSU Extension (DTM 65-100, 3 ft spacing, 8 hr sun, 4-5 wk indoors, 2 varieties ideal, flowers drop >90F/<55F, more drought/heat tolerant, 1-1.5 in/wk, frost-tender, storage husk-on, varieties Toma Verde/Purple De Milpa/Pineapple, pests three-lined potato beetle/flea beetle/cutworm/hornworm); UMN Extension (start 4-5 wk before set-out ~1-2 wk after tomato, 3 ft, trellis/cage, varieties Purple/Green/De Milpa/Tamayo, self-seeds, storage 50-60F); NCSU plant toolbox (3-4 ft tall/wide, full sun, Solanaceae, few pest/disease problems, 1-2 in fruit, 2-3 lb/plant); UC Master Gardener (2+ plants for pollination, cage/stake, powdery mildew, no nightshade rotation, husk-split harvest); TAMU AgriLife (plant after frost, ~90 day, identical to tomato culture). Calendars MODELED on the tomato frost anchors + tomatillo culture; per-zone dates flagged. Self-incompatibility (the 2+ plant requirement), sprawling 3-4 ft habit, husk-fill harvest, and heat tolerance are the load-bearing refits vs tomato. [CORRECTION 2026-10-04: det_indet and days_to_maturity anchors were carried over from cherry-tomato, not re-derived for tomatillo. Re-anchored to tomatillo pages in housekeeping 60 Phase C (PLA-652). The four tomato anchors on failure_diagnostics[5] were dropped in the same pass.]",
+  "cited_at": null,
+  "reason": "R6: append-only cert-log correction, original untouched"
+ },
+ {
+  "crop": "lavender",
+  "path": "diseases[1].control_ladder[0].note_beginner",
+  "kind": "prose",
+  "old": "Set lavender 2 to 3 feet apart in a dry, open, sunny spot. Air moving freely through the planting is the main defense against leaf spot, and it is decided when you space the plants rather than later.",
+  "new": "Plant lavender 18 to 24 inches apart in full sun, in soil that drains well and stays on the dry side. Good airflow around the plants helps prevent leaf spot.",
+  "cited_at": "diseases[1]",
+  "reason": "finding (a): prose moves to the field's 18 to 24 inches (USU)"
+ },
+ {
+  "crop": "lavender",
+  "path": "diseases[1].control_ladder[0].note_seasoned",
+  "kind": "prose",
+  "old": "Spacing at 2 to 3 feet on an open, sunny site is the published measure here, and NC State gives it for exactly this reason, to discourage fungal pathogens. Trimming the lower branches through the growing season is the in-season half of the same job: the base of a maturing bush is where the canopy closes over first.",
+  "new": "Space plants 18 to 24 inches apart in full sun, on perfectly drained soil that stays on the dry side. NC State reports no significant problems for English lavender, though it is susceptible to leaf spot and root rot. Good air circulation helps prevent leaf spot, and root rot is caused by overwatering.",
+  "cited_at": "diseases[1]",
+  "reason": "finding (a): prose moves to the field's 18 to 24 inches (USU)"
+ },
+ {
+  "crop": "lavender",
+  "path": "diseases[1].prevention_seasoned",
+  "kind": "prose",
+  "old": "Space plants at least 2 to 3 feet apart for air circulation, site in full sun, and avoid overhead watering. Good airflow is the main defense.",
+  "new": "Space plants 18 to 24 inches apart in full sun, with good air circulation to help prevent leaf spot.",
+  "cited_at": "diseases[1]",
+  "reason": "finding (a): prose moves to the field's 18 to 24 inches (USU)"
+ },
+ {
+  "crop": "lavender",
+  "path": "diseases[1].prevention_beginner",
+  "kind": "prose",
+  "old": "Leave 2 to 3 feet between plants for airflow, plant in full sun, and avoid watering over the leaves. Good air movement is the main thing.",
+  "new": "Leave 18 to 24 inches between plants, give them full sun, and keep air moving around them to help prevent leaf spot.",
+  "cited_at": "diseases[1]",
+  "reason": "finding (a): prose moves to the field's 18 to 24 inches (USU)"
+ },
+ {
+  "crop": "lavender",
+  "path": "diseases[1].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "ncsu_ext_lavandula_angustifolia": {
+    "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+    "verified": "2026-09-04"
+   },
+   "ncsu_ext": {
+    "url": "https://newcropsorganics.ces.ncsu.edu/herb/lavender-history-taxonomy-and-production/",
+    "verified": "2026-09-04"
+   },
+   "rhs": {
+    "url": "https://www.rhs.org.uk/plants/282089/lavandula-angustifolia-hidcote-group/details",
+    "verified": "2026-09-04"
+   }
+  },
+  "new": {
+   "ncsu_ext_lavandula_angustifolia": {
+    "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+    "verified": "2026-09-04"
+   },
+   "ncsu_ext": {
+    "url": "https://newcropsorganics.ces.ncsu.edu/herb/lavender-history-taxonomy-and-production/",
+    "verified": "2026-09-04"
+   },
+   "rhs": {
+    "url": "https://www.rhs.org.uk/plants/282089/lavandula-angustifolia-hidcote-group/details",
+    "verified": "2026-09-04"
+   },
+   "usu_ext_english_lavender": {
+    "url": "https://extension.usu.edu/yardandgarden/research/english-lavender-in-the-garden",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "the 18 to 24 inch figure is USU's"
+ },
+ {
+  "crop": "lavender",
+  "path": "diseases[1].sources",
+  "kind": "sources",
+  "old": [
+   "ncsu_ext_lavandula_angustifolia",
+   "ncsu_ext",
+   "rhs"
+  ],
+  "new": [
+   "ncsu_ext_lavandula_angustifolia",
+   "ncsu_ext",
+   "rhs",
+   "usu_ext_english_lavender"
+  ],
+  "cited_at": null,
+  "reason": "the 18 to 24 inch figure is USU's"
+ },
+ {
+  "crop": "lavender",
+  "path": "regions.pnw.resolved_by_zone.8.frost_risk_note_seasoned",
+  "kind": "prose",
+  "old": "Frost is not a concern for established lavender here; a wet, poorly drained winter is the real threat and can bring on root and crown rot. Prune hard once the chance of frost has passed and again after the main summer bloom fades, always leaving some green growth, and space plants 2 to 3 feet apart for airflow to limit fungal disease (OSU).",
+  "new": "NC State lists English lavender as hardy in zones 5a through 9b. It does not like wet feet and will die out in heavy clay, and overwatering causes root rot. Prune every year after flowering. Space plants 18 to 24 inches apart; good air circulation helps prevent leaf spot.",
+  "cited_at": "regions.pnw.resolved_by_zone.8",
+  "reason": "finding (a): 2 to 3 feet and the unhashed (OSU) attribution go"
+ },
+ {
+  "crop": "lavender",
+  "path": "regions.pnw.resolved_by_zone.8.anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "osu_ext_prune_lavender": {
+    "url": "https://extension.oregonstate.edu/ask-extension/featured/when-best-time-prune-lavender",
+    "verified": "2026-07-14"
+   },
+   "wsu_ext_lavender_prcr": {
+    "url": "https://ppo.puyallup.wsu.edu/lavender/",
+    "verified": "2026-07-14"
+   },
+   "usu_ext_english_lavender": {
+    "url": "https://extension.usu.edu/yardandgarden/research/english-lavender-in-the-garden",
+    "verified": "2026-07-14"
+   },
+   "ucanr_marin_mg": {
+    "url": "https://ucanr.edu/site/uc-marin-master-gardeners/article/lovely-lavender",
+    "verified": "2026-07-14"
+   }
+  },
+  "new": {
+   "osu_ext_prune_lavender": {
+    "url": "https://extension.oregonstate.edu/ask-extension/featured/when-best-time-prune-lavender",
+    "verified": "2026-07-14"
+   },
+   "wsu_ext_lavender_prcr": {
+    "url": "https://ppo.puyallup.wsu.edu/lavender/",
+    "verified": "2026-07-14"
+   },
+   "usu_ext_english_lavender": {
+    "url": "https://extension.usu.edu/yardandgarden/research/english-lavender-in-the-garden",
+    "verified": "2026-07-14"
+   },
+   "ucanr_marin_mg": {
+    "url": "https://ucanr.edu/site/uc-marin-master-gardeners/article/lovely-lavender",
+    "verified": "2026-07-14"
+   },
+   "ncsu_ext_lavandula_angustifolia": {
+    "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "Trevor, Part 1: add USU and NCSU to the entry's sources"
+ },
+ {
+  "crop": "lavender",
+  "path": "regions.pnw.resolved_by_zone.8.sources",
+  "kind": "sources",
+  "old": [
+   "osu_ext_prune_lavender",
+   "wsu_ext_lavender_prcr",
+   "usu_ext_english_lavender",
+   "ucanr_marin_mg"
+  ],
+  "new": [
+   "osu_ext_prune_lavender",
+   "wsu_ext_lavender_prcr",
+   "usu_ext_english_lavender",
+   "ucanr_marin_mg",
+   "ncsu_ext_lavandula_angustifolia"
+  ],
+  "cited_at": null,
+  "reason": "Trevor, Part 1: add USU and NCSU to the entry's sources"
+ },
+ {
+  "crop": "lavender",
+  "path": "regions.pnw.resolved_by_zone.9.frost_risk_note_seasoned",
+  "kind": "prose",
+  "old": "Frost is not a concern for established lavender here; a wet, poorly drained winter is the real threat and can bring on root and crown rot. Prune hard once the chance of frost has passed and again after the main summer bloom fades, always leaving some green growth, and space plants 2 to 3 feet apart for airflow to limit fungal disease (OSU).",
+  "new": "NC State lists English lavender as hardy in zones 5a through 9b. It does not like wet feet and will die out in heavy clay, and overwatering causes root rot. Prune every year after flowering. Space plants 18 to 24 inches apart; good air circulation helps prevent leaf spot.",
+  "cited_at": "regions.pnw.resolved_by_zone.9",
+  "reason": "finding (a): 2 to 3 feet and the unhashed (OSU) attribution go"
+ },
+ {
+  "crop": "lavender",
+  "path": "regions.pnw.resolved_by_zone.9.anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "osu_ext_prune_lavender": {
+    "url": "https://extension.oregonstate.edu/ask-extension/featured/when-best-time-prune-lavender",
+    "verified": "2026-07-14"
+   },
+   "wsu_ext_lavender_prcr": {
+    "url": "https://ppo.puyallup.wsu.edu/lavender/",
+    "verified": "2026-07-14"
+   },
+   "usu_ext_english_lavender": {
+    "url": "https://extension.usu.edu/yardandgarden/research/english-lavender-in-the-garden",
+    "verified": "2026-07-14"
+   },
+   "ucanr_marin_mg": {
+    "url": "https://ucanr.edu/site/uc-marin-master-gardeners/article/lovely-lavender",
+    "verified": "2026-07-14"
+   }
+  },
+  "new": {
+   "osu_ext_prune_lavender": {
+    "url": "https://extension.oregonstate.edu/ask-extension/featured/when-best-time-prune-lavender",
+    "verified": "2026-07-14"
+   },
+   "wsu_ext_lavender_prcr": {
+    "url": "https://ppo.puyallup.wsu.edu/lavender/",
+    "verified": "2026-07-14"
+   },
+   "usu_ext_english_lavender": {
+    "url": "https://extension.usu.edu/yardandgarden/research/english-lavender-in-the-garden",
+    "verified": "2026-07-14"
+   },
+   "ucanr_marin_mg": {
+    "url": "https://ucanr.edu/site/uc-marin-master-gardeners/article/lovely-lavender",
+    "verified": "2026-07-14"
+   },
+   "ncsu_ext_lavandula_angustifolia": {
+    "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "Trevor, Part 1: add USU and NCSU to the entry's sources"
+ },
+ {
+  "crop": "lavender",
+  "path": "regions.pnw.resolved_by_zone.9.sources",
+  "kind": "sources",
+  "old": [
+   "osu_ext_prune_lavender",
+   "wsu_ext_lavender_prcr",
+   "usu_ext_english_lavender",
+   "ucanr_marin_mg"
+  ],
+  "new": [
+   "osu_ext_prune_lavender",
+   "wsu_ext_lavender_prcr",
+   "usu_ext_english_lavender",
+   "ucanr_marin_mg",
+   "ncsu_ext_lavandula_angustifolia"
+  ],
+  "cited_at": null,
+  "reason": "Trevor, Part 1: add USU and NCSU to the entry's sources"
+ },
+ {
+  "crop": "basil",
+  "path": "failure_diagnostics[2].next_season_tip_seasoned",
+  "kind": "prose",
+  "old": "Plant downy-mildew-resistant varieties (labeled DMR): Devotion, Obsession, Prospera, Thunderstruck, or Amazel. Never water overhead; use drip or base watering. Ensure good air circulation through correct plant spacing (12-18 inches). In high-humidity regions, siting basil in a spot with afternoon airflow materially reduces risk.",
+  "new": "Plant a variety resistant to basil downy mildew. UMN Extension names downy mildew the most common basil problem in Minnesota and recommends choosing a resistant variety.",
+  "cited_at": "failure_diagnostics[2]",
+  "reason": "finding (a): 12-18 in and unsourced claims cut"
+ },
+ {
+  "crop": "basil",
+  "path": "failure_diagnostics[2].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "umd_ext": {
+    "url": "https://extension.umd.edu/resource/downy-mildew-basil-home-garden",
+    "verified": "2026-06-12"
+   },
+   "umass_ext": {
+    "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/basil-downy-mildew",
+    "verified": "2026-06-12"
+   },
+   "cornell_ext": {
+    "url": "https://www.vegetables.cornell.edu/pest-management/disease-factsheets/basil-downy-mildew/",
+    "verified": "2026-06-12"
+   }
+  },
+  "new": {
+   "umd_ext": {
+    "url": "https://extension.umd.edu/resource/downy-mildew-basil-home-garden",
+    "verified": "2026-06-12"
+   },
+   "umass_ext": {
+    "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/basil-downy-mildew",
+    "verified": "2026-06-12"
+   },
+   "cornell_ext": {
+    "url": "https://www.vegetables.cornell.edu/pest-management/disease-factsheets/basil-downy-mildew/",
+    "verified": "2026-06-12"
+   },
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-basil",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "Trevor, Part 1: add UMN to the entry's sources"
+ },
+ {
+  "crop": "basil",
+  "path": "failure_diagnostics[2].sources",
+  "kind": "sources",
+  "old": [
+   "umd_ext",
+   "umass_ext",
+   "cornell_ext"
+  ],
+  "new": [
+   "umd_ext",
+   "umass_ext",
+   "cornell_ext",
+   "umn_ext"
+  ],
+  "cited_at": null,
+  "reason": "Trevor, Part 1: add UMN to the entry's sources"
+ },
+ {
+  "crop": "basil",
+  "path": "tips_by_stage.seedling[0].text_seasoned",
+  "kind": "prose",
+  "old": "Thin seedlings to one plant per 12-18 inches once they have their first true leaves. Crowded basil seedlings compete for light and air circulation, accelerating the damping-off conditions that kill seedlings at the base. The thinnings are edible; add them to salads or use as a first harvest.",
+  "new": "Thin or transplant seedlings to stand 6 to 12 inches apart once they have two to three pairs of true leaves.",
+  "cited_at": "tips_by_stage.seedling[0]",
+  "reason": "finding (a): UMN's 6-12 and its timing"
+ },
+ {
+  "crop": "basil",
+  "path": "tips_by_stage.seedling[0].text_beginner",
+  "kind": "prose",
+  "old": "Once basil seedlings have their first real leaves (not the rounded seed leaves), thin them to one plant every 12 inches. Crowded seedlings are weaker. The ones you pull are edible and taste great in salads.",
+  "new": "Wait until your basil seedlings have two or three pairs of true leaves, not counting the two broad seed leaves. Then thin them so the plants stand 6 to 12 inches apart.",
+  "cited_at": "tips_by_stage.seedling[0]",
+  "reason": "Part 2: timing now matches the seasoned register (UMN)"
+ },
+ {
+  "crop": "basil",
+  "path": "tips_by_stage.seedling[0].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-basil",
+    "verified": "2026-06-12"
+   },
+   "usu_ext": {
+    "url": "https://extension.usu.edu/yardandgarden/research/basil-in-the-garden",
+    "verified": "2026-06-12"
+   }
+  },
+  "new": {
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-basil",
+    "verified": "2026-06-12"
+   }
+  },
+  "cited_at": null,
+  "reason": "Part 2: both texts are UMN's; the unhashed USU anchor drops (nothing in the tip uses it)"
+ },
+ {
+  "crop": "basil",
+  "path": "tips_by_stage.seedling[0].sources",
+  "kind": "sources",
+  "old": [
+   "umn_ext",
+   "usu_ext"
+  ],
+  "new": [
+   "umn_ext"
+  ],
+  "cited_at": null,
+  "reason": "Part 2: both texts are UMN's; the unhashed USU anchor drops (nothing in the tip uses it)"
+ },
+ {
+  "crop": "oregano",
+  "path": "diseases[2].control_ladder[0].note_seasoned",
+  "kind": "prose",
+  "old": "UF/IFAS ties spacing to the humidity inside the canopy rather than to water on the leaf, and that distinction is the whole point: powdery mildew infects without free water on the surface, so keeping the foliage dry is not the lever it is on most leaf diseases. Published spacing for oregano runs from 10 inches up to 18 inches depending on which extension source you read, so take the wider end in a humid summer, and thin an established clump rather than letting it close over. Site matters for the same reason: shade is a favoring condition for this fungus, so an open position is doing real work and not just growing better oregano.",
+  "new": "UF/IFAS recommends spacing plants 10 to 12 inches apart to improve air circulation and prevent the extra humidity that attracts pests and diseases. To prevent powdery mildew, UF/IFAS pairs good air circulation with avoiding overhead watering. Oregano generally resists disease but can occasionally get powdery mildew or root rot, especially in humid conditions.",
+  "cited_at": "diseases[2]",
+  "reason": "finding (a): 'up to 18 inches' and unsourced claims cut"
+ },
+ {
+  "crop": "oregano",
+  "path": "regions.rgv.resolved_by_zone.9.grown_as_note_seasoned",
+  "kind": "prose",
+  "old": "Oregano is a durable perennial in the Rio Grande Valley's frost-free winters. Texas A&M AgriLife's herb-growing guidance for the state calls for full sun and well-drained soil, spaced about 10 to 12 inches apart, and notes it is a perennial that becomes woody after a few years and is best dug and replanted at that point. Give it a raised bed or mound with sharp drainage and open airflow; the Valley's summer humidity, more than its heat, is what brings on root and stem rot in a low, poorly drained spot.",
+  "new": "Oregano is a hardy perennial. Texas A&M AgriLife's herb guide recommends full sun after a protected start and spacing of 8 to 10 inches; UF/IFAS gives 10 to 12 inches for air circulation. Texas A&M advises dividing perennial herbs every 3 or 4 years in early spring. Humid conditions can bring on root rot, so plant in well-drained soil with good air circulation. UF/IFAS recommends raised beds in humid central Florida to control moisture.",
+  "cited_at": "regions.rgv.resolved_by_zone.9",
+  "reason": "Part 2: TAMU's oregano row (8 to 10) restored; 10-12 attributed to UF"
+ },
+ {
+  "crop": "oregano",
+  "path": "regions.rgv.resolved_by_zone.10.grown_as_note_seasoned",
+  "kind": "prose",
+  "old": "Oregano is a durable perennial in the Rio Grande Valley's frost-free winters. Texas A&M AgriLife's herb-growing guidance for the state calls for full sun and well-drained soil, spaced about 10 to 12 inches apart, and notes it is a perennial that becomes woody after a few years and is best dug and replanted at that point. Give it a raised bed or mound with sharp drainage and open airflow; the Valley's summer humidity, more than its heat, is what brings on root and stem rot in a low, poorly drained spot.",
+  "new": "Oregano is a hardy perennial. Texas A&M AgriLife's herb guide recommends full sun after a protected start and spacing of 8 to 10 inches; UF/IFAS gives 10 to 12 inches for air circulation. Texas A&M advises dividing perennial herbs every 3 or 4 years in early spring. Humid conditions can bring on root rot, so plant in well-drained soil with good air circulation. UF/IFAS recommends raised beds in humid central Florida to control moisture.",
+  "cited_at": "regions.rgv.resolved_by_zone.10",
+  "reason": "Part 2: TAMU's oregano row (8 to 10) restored; 10-12 attributed to UF"
+ },
+ {
+  "crop": "oregano",
+  "path": "regions.rgv.plantings[0].synthesis_note_seasoned",
+  "kind": "prose",
+  "old": "grown_as=perennial (frost-free): oregano overwinters as a low woody sub-shrub through the Valley's mild winters with no dieback. Bloom (May - Jul) is reused from this crop's own se_gulf zone 9/10 rows, frost/phenology-modeled rather than read from a Valley-specific chart. Texas A&M AgriLife's statewide herb guidance recommends full sun, 10 to 12 inch spacing, and dividing/replanting every 3 to 4 years as the plant becomes woody. plant_out follows the general cool-season, avoid-peak-heat convention. Flagged blocks_launch:false: no oregano-specific RGV chart exists.",
+  "new": "grown_as=perennial: oregano is a woody, branching perennial (NCSU). Bloom (May to July) is reused from this crop's own se_gulf zone 9/10 rows, frost/phenology-modeled rather than read from a Valley-specific chart. Texas A&M AgriLife's statewide herb guide recommends full sun and 8 to 10 inch spacing for oregano, and dividing perennial herbs every 3 or 4 years in early spring. plant_out follows the general cool-season, avoid-peak-heat convention. Flagged blocks_launch:false: no oregano-specific RGV chart exists.",
+  "cited_at": "regions.rgv.plantings[0]",
+  "reason": "Part 2: TAMU's oregano row (8 to 10) restored; woodiness credited to NCSU"
+ },
+ {
+  "crop": "oregano",
+  "path": "regions.rgv.resolved_by_zone.9.synthesis_note_seasoned",
+  "kind": "prose",
+  "old": "grown_as=perennial (frost-free): oregano overwinters as a low woody sub-shrub through the Valley's mild winters with no dieback. Bloom (May - Jul) is reused from this crop's own se_gulf zone 9/10 rows, frost/phenology-modeled rather than read from a Valley-specific chart. Texas A&M AgriLife's statewide herb guidance recommends full sun, 10 to 12 inch spacing, and dividing/replanting every 3 to 4 years as the plant becomes woody. plant_out follows the general cool-season, avoid-peak-heat convention. Flagged blocks_launch:false: no oregano-specific RGV chart exists.",
+  "new": "grown_as=perennial: oregano is a woody, branching perennial (NCSU). Bloom (May to July) is reused from this crop's own se_gulf zone 9/10 rows, frost/phenology-modeled rather than read from a Valley-specific chart. Texas A&M AgriLife's statewide herb guide recommends full sun and 8 to 10 inch spacing for oregano, and dividing perennial herbs every 3 or 4 years in early spring. plant_out follows the general cool-season, avoid-peak-heat convention. Flagged blocks_launch:false: no oregano-specific RGV chart exists.",
+  "cited_at": "regions.rgv.resolved_by_zone.9",
+  "reason": "Part 2: TAMU's oregano row (8 to 10) restored; woodiness credited to NCSU"
+ },
+ {
+  "crop": "oregano",
+  "path": "regions.rgv.resolved_by_zone.10.synthesis_note_seasoned",
+  "kind": "prose",
+  "old": "grown_as=perennial (frost-free): oregano overwinters as a low woody sub-shrub through the Valley's mild winters with no dieback. Bloom (May - Jul) is reused from this crop's own se_gulf zone 9/10 rows, frost/phenology-modeled rather than read from a Valley-specific chart. Texas A&M AgriLife's statewide herb guidance recommends full sun, 10 to 12 inch spacing, and dividing/replanting every 3 to 4 years as the plant becomes woody. plant_out follows the general cool-season, avoid-peak-heat convention. Flagged blocks_launch:false: no oregano-specific RGV chart exists.",
+  "new": "grown_as=perennial: oregano is a woody, branching perennial (NCSU). Bloom (May to July) is reused from this crop's own se_gulf zone 9/10 rows, frost/phenology-modeled rather than read from a Valley-specific chart. Texas A&M AgriLife's statewide herb guide recommends full sun and 8 to 10 inch spacing for oregano, and dividing perennial herbs every 3 or 4 years in early spring. plant_out follows the general cool-season, avoid-peak-heat convention. Flagged blocks_launch:false: no oregano-specific RGV chart exists.",
+  "cited_at": "regions.rgv.resolved_by_zone.10",
+  "reason": "Part 2: TAMU's oregano row (8 to 10) restored; woodiness credited to NCSU"
+ },
+ {
+  "crop": "watermelon",
+  "path": "yield_expectations.per_plant_beginner",
+  "kind": "prose",
+  "old": "A full-size watermelon plant usually gives you 2 to 4 melons, while small icebox types make more, smaller ones. Each plant needs a lot of room. If you want bigger melons, keep just two or three fruit per vine so the plant can size them up.",
+  "new": "Washington State's planning table expects about 6 to 12 melons from 3 plants in a 10-foot row. Watermelons need a lot of room. Water steadily while the fruit sets and grows. Feed them a second time after they bloom, while the fruit is growing, but don't overdo nitrogen: too much gives you more vine and less fruit.",
+  "cited_at": "yield_expectations",
+  "reason": "Part 3: per-plant count, full-size, icebox and fruit-thinning claims cut"
+ },
+ {
+  "crop": "watermelon",
+  "path": "growth_stages[2].user_action_beginner",
+  "kind": "prose",
+  "old": "Feed the vines a little as they start to run, then go easy on nitrogen, add mulch to keep the soil moist, and give them plenty of room to spread. Check under the leaves for tiny pests.",
+  "new": "Plants get their first feeding before the vines start to run and a second one after they bloom, while fruit is growing. Spread mulch, such as dried grass clippings, straw, or wood chips, to save water and keep weeds down. Give the vines plenty of room to spread. Check under the leaves for aphids, which usually show up once the vines start running. In hot, dry weather, also watch for spider mites: these tiny mites leave pale yellow to reddish-brown specks on the tops of the leaves.",
+  "cited_at": "growth_stages[2]",
+  "reason": "Part 3: timing and pest surfaces follow Clemson"
+ },
+ {
+  "crop": "broad-beans-fava",
+  "path": "start_method.notes_beginner",
+  "kind": "prose",
+  "old": "Plant the big flat fava seeds right where they will grow, about 1 to 2 inches deep and 4 to 6 inches apart, then thin to about 8 to 10 inches apart. Where winters are mild, plant in fall so the crop grows over winter; where winters are cold, plant as early as you can work the soil in late winter or spring. The seeds are slow to sprout, sometimes taking up to three weeks, and there is no need to start them indoors.",
+  "new": "Plant the big, flat fava seeds right where they will grow, then thin the seedlings to about 8 to 10 inches apart. Favas are a cool-season crop and like highs no warmer than the low 80s °F. In Santa Clara County, California, UC Master Gardeners sow them in February or from August to September, sometimes into October, and fall-planted beans usually start producing in early spring. University of Minnesota Extension says to plant them early in spring, the way you would peas.",
+  "cited_at": "start_method",
+  "reason": "Part 3: 4 to 6 (PLA-625), depth, slow sprouting, three weeks, no indoor start and late-winter planting cut"
+ }
+]
