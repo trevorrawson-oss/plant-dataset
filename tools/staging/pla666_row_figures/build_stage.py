@@ -383,9 +383,11 @@ def main():
             "non-null (spec §1.6 item 5).")
         dec(slug, "row_spacing_reason", "null by rule", "The crop-root reason is null iff row_spacing_inches is "
             "non-null (spec §1.6 item 7).")
-    dec("pawpaw", f"{ENTRY}.row_spacing_inches", "orchard scope admitted", "Methodology rule (PROPOSED, 2026-10-05): "
-        "no hashed cited page gives a home-garden pawpaw row figure, so an orchard T1 figure is admissible with its "
-        "scope recorded. KSU PBI-004 is an organic ORCHARD production guide. Also orchard-scoped and not used: ACES "
+    dec("pawpaw", f"{ENTRY}.row_spacing_inches", "orchard scope admitted", "Methodology rule, RULED for TREES (Trevor, "
+        "2026-10-05; proposed earlier the same day without the scope): rows between trees follow canopy and light rather "
+        "than equipment, so an orchard T1 tree-row figure is admissible when no home-garden page gives one; for canes "
+        "and row crops home-garden scope still wins (the raspberry ruling stands). No hashed cited page gives a "
+        "home-garden pawpaw row figure. KSU PBI-004 is an organic ORCHARD production guide. Also orchard-scoped and not used: ACES "
         "\"for commercial planting, place trees 6 to 10 feet apart within a row, with rows 15 to 20 feet apart.\" "
         "and MU AF1021 \"space tree rows 15 to 20 feet apart, with trees spaced 6 to 10 feet apart in the planting "
         "row.\" [180,240].")
