@@ -4,6 +4,43 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-10-05 -- PLA-666 ROW FIGURES LANDED (`afbd4113` -> `350eda38`)
+
+ONE promote (`tools/promote_pla666_row_figures.py`, new, tools `2d28e63`; stage `tools/staging/pla666_row_figures/`, built by its
+`build_stage.py`). Unblocks the PLA-666 consumer release: with the planner's 12 ft woody floor removed, raspberry rows had fallen
+back to plant spacing (18 in, 169 plants in a 20x20 plot).
+
+**WHAT MOVED (2 crops + catalog, 49 ops: 7 prose, 8 value, 4 anchors + 4 sources, 1 catalog, 25 orthography; 72 evidence rows, 58 decision rows):**
+raspberry `planting_layout[id=row-none].row_spacing_inches` + root mirror null -> [60,120] (UADA FSA-6107 "5 to 10 feet between rows",
+red; yellow via UMN), reasons -> null, UADA joins the entry; pawpaw null -> [144,216] (KSU PBI-004 "12 to 18 feet between rows",
+orchard scope admitted under the PROPOSED methodology rule; ACES / MU AF1021 [180,240] recorded), PBI-004 minted as
+`ksu_pawpaw_pbi004` and anchored beside the planting-guide page; elderberry DECISION-ONLY (not_authored after hunt: PSU in-row only,
+NCSU none, MU AF1017 a landing page, MSU Incapsula-blocked). Raspberry prose by Trevor (claude.ai), touched-leaf rule:
+planting_method_notes x2 (rows 6-8 ft on no page -> UADA 5-10; black/purple 4 ft UMN; Dormanred spaced per UGA C766; depth, handle,
+trellis timing, late winter, larger/slightly cut), start_method notes x2 (+ a citation block, the fava precedent), growth_stages[id=planting]
+user_action x2 + what_to_look_for_seasoned (PSU rotation attributed; the support conflict stated with attribution); 25 "Dorman Red" ->
+"Dormanred" spelling-only edits (claims NOT reviewed; the variety name stays: a lookup key).
+
+**THE BAR:** suite written FIRST (RED on the missing module, then on guard O), 44/44; harness 33/33, 0 survivors; post-state
+re-derived by an independent minimal apply at every re-pin (d2fd6e70 -> 3f009ea3 -> 350eda38 as rulings moved the text); independent
+source-truth review x3 (full; changed text; changed sentences + spelling) to CLEAN. Its round-1 findings corrected two of this session's
+own records (UGA C766 is home-garden, not commercial; the Cornell offsets came from CSS mentions) and moved the text (rulings A-F, 1-3).
+gate_all 121/121, launch-ready 114; whole_crop_gate 2/2; release_verify: exactly raspberry + pawpaw changed, the one section E concern
+byte-identical at base and post (accepted, PLA-680).
+
+**PINS MOVED:** sourced_block_ratchet_known 2630 -> 2629 (raspberry|start_method|sources cited; kept in CLOSED for era replays);
+test_problem_id_collision_gate PINNED_SHA -> 350eda38 (gate output byte-identical on both states, 36/24/12 hold); promote_fixture
+COMMIT_FOR afbd4113 -> 367c702; live_pin_registry +1 REPLAY exemption (62/25/60/44).
+
+**E1 WAIVER (`dca5931`, ruled):** plant-app foundation was published at cced88fb (OTA e20245fb) with its export at b331e5f2 and
+57b562a0 (the afbd4113 re-export) left out (kept as plant-app branch keep/57b562a0-housekeeping-60); the PLA-666 release
+ships from fix/pla-666-woody-floor with the 350eda38 re-export. EXPORT_WAIVERS keys exactly that held stamp; REMOVE it when
+the PLA-666 release merges to foundation.
+
+**FILED / ROUTED:** PLA-678, PLA-679, PLA-680 filed; PLA-625 (depth conflict, Dormanred everbearing vs summer bearing, AF1017 lead,
+Cornell comment spam), PLA-534 (raspberry support default), PLA-12 (type-scoped row figure, Dormanred rename via an id), PLA-673
+(black-raspberry "hill" exclusion). Decisions: Linear "PLA-666 row figures: DECISIONS"; packets on PLA-666.
+
 ## 2026-10-04 -- HOUSEKEEPING 60 PHASE C LANDED (`b331e5f2` -> `afbd4113`)
 
 ONE promote (`tools/promote_housekeeping60_phase_c.py`, new; stage `tools/staging/housekeeping60/phase_c/`), the data half of

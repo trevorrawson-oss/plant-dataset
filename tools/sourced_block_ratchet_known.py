@@ -7,6 +7,9 @@ SHRUNK 2026-10-04 (housekeeping 60 Phase C, b331e5f2 -> afbd4113): 2634 -> 2630.
 broad-beans-fava|start_method, sweet-corn|growth_stages[id=seedling], watermelon|growth_stages[id=vining],
 watermelon|tips_by_stage.vining[0] (all |sources). MEASURED_ON stays the arming canonical; COUNT is the live waiver count.
 
+SHRUNK 2026-10-05 (PLA-666 row figures, afbd4113 -> 350eda38): 2630 -> 2629. Closed by citation in that promote:
+raspberry|start_method|sources (start_method gained umn_ext + uada_ext_fsa6107, the fava precedent).
+
 Kept as a .py module, not JSON, because every harness that copies tools/*.py into a scratch
 dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_gate at import
 (measured 2026-09-30: both harnesses' test_valid_cell_passes went red on a .json version).
@@ -14,7 +17,7 @@ dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_g
 TICKET = 'PLA-607'
 MEASURED_ON = '00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e'
 MEASURED_DATE = '2026-09-30'
-COUNT = 2630
+COUNT = 2629
 # Closed by citation, kept by identity so a LANDED promote can replay against the set live in its era
 # (sourced_block_ratchet_gate.KNOWN_AT_ARMING). Never re-waived: a closed identity going uncited again fails A62.
 CLOSED = (
@@ -22,6 +25,7 @@ CLOSED = (
     "sweet-corn|growth_stages[id=seedling]|sources",    # housekeeping 60 Phase C
     "watermelon|growth_stages[id=vining]|sources",      # housekeeping 60 Phase C
     "watermelon|tips_by_stage.vining[0]|sources",       # housekeeping 60 Phase C
+    "raspberry|start_method|sources",                   # PLA-666 row figures, afbd4113 -> 350eda38
 )
 IDENTITIES = (
     "acorn-squash|description|description_sources",
@@ -2085,7 +2089,6 @@ IDENTITIES = (
     "radish|weather_triggers[4]|sources",
     "raspberry|description|description_sources",
     "raspberry|harvest_ready|harvest_ready_sources",
-    "raspberry|start_method|sources",
     "raspberry|succession_policy|sources",
     "roma-tomato|growth_stages[id=end_of_season]|sources",
     "roma-tomato|growth_stages[id=established]|sources",

@@ -37,7 +37,7 @@ POT_KNOWN = ("dry-bean", "grapefruit", "green-beans-bush", "orange-navel")
 FAMILY_COUNTS = {
     "growth_stages[]": 613, "notifications[]": 458, "tips_by_stage.*[]": 312,
     "weather_triggers[]": 289, "failure_diagnostics[]": 251, "description": 108,
-    "harvest_urgency": 108, "start_method": 102, "succession_policy": 86,
+    "harvest_urgency": 108, "start_method": 101, "succession_policy": 86,
     "varieties.recommended[]": 77, "pests[]": 54, "diseases[]": 50, "harvest_ready": 26,
     "watering": 17, "bolting": 13, "container_notes": 12, "varieties": 12, "fertilizer": 11,
     "pollination": 9, "rotation": 8, "verification_status.field_additions[]": 3, "thinning": 3,
@@ -81,10 +81,11 @@ def cite(block):
 class PinsAreTheMeasurement(unittest.TestCase):
     def test_waiver_file_is_the_measured_population(self):
         self.assertEqual(G._KNOWN_DOC["measured_on"], SHA)
-        # 2634 at arming (00dda31c); 2630 after housekeeping 60 Phase C cited 4 waived blocks (afbd4113)
-        self.assertEqual(G._KNOWN_DOC["count"], 2630)
-        self.assertEqual(len(G.KNOWN), 2630)
-        self.assertEqual(len(G._KNOWN_DOC["identities"]), 2630, "duplicate identities")
+        # 2634 at arming (00dda31c); 2630 after housekeeping 60 Phase C cited 4 waived blocks (afbd4113);
+        # 2629 after PLA-666 cited raspberry|start_method (350eda38)
+        self.assertEqual(G._KNOWN_DOC["count"], 2629)
+        self.assertEqual(len(G.KNOWN), 2629)
+        self.assertEqual(len(G._KNOWN_DOC["identities"]), 2629, "duplicate identities")
 
     def test_the_named_list_is_what_was_ruled(self):
         self.assertEqual(set(G.DICT_BLOCKS), {
@@ -233,6 +234,7 @@ class MatureDimensionsSibling(unittest.TestCase):
 CLOSED_2026_10_04 = {  # cited by housekeeping 60 Phase C (b331e5f2 -> afbd4113), dropped from the live waiver set
     "broad-beans-fava|start_method|sources", "sweet-corn|growth_stages[id=seedling]|sources",
     "watermelon|growth_stages[id=vining]|sources", "watermelon|tips_by_stage.vining[0]|sources"}
+CLOSED_2026_10_05 = {"raspberry|start_method|sources"}  # cited by PLA-666 row figures (afbd4113 -> 350eda38)
 
 
 class ClosedWaivers(unittest.TestCase):
@@ -241,7 +243,7 @@ class ClosedWaivers(unittest.TestCase):
     tests when the live set shrank). Each landed promote checks against the set live in its era, KNOWN_AT_ARMING."""
 
     def test_arming_set_is_the_live_set_plus_the_closed(self):
-        self.assertEqual(set(G.CLOSED), CLOSED_2026_10_04)
+        self.assertEqual(set(G.CLOSED), CLOSED_2026_10_04 | CLOSED_2026_10_05)
         self.assertEqual(G.KNOWN & set(G.CLOSED), frozenset())
         self.assertEqual(G.KNOWN_AT_ARMING, G.KNOWN | set(G.CLOSED))
         self.assertEqual(len(G.KNOWN_AT_ARMING), 2634)
@@ -251,7 +253,8 @@ class ClosedWaivers(unittest.TestCase):
         pre = json.loads(promote_fixture.pre_state(
             "b331e5f2c99378526c3ac8f2f870232953b318c994b7dc3d8c54938f2b62c38d"))
         live_v = G.roster(pre, mature_dimensions_armed=True)[3]
-        self.assertEqual({v.split()[3].rstrip(":") for v in live_v}, CLOSED_2026_10_04)
+        # b331e5f2 predates both closures, so the live set flags all five closed identities there
+        self.assertEqual({v.split()[3].rstrip(":") for v in live_v}, CLOSED_2026_10_04 | CLOSED_2026_10_05)
         self.assertEqual(G.roster(pre, mature_dimensions_armed=True, known=G.KNOWN_AT_ARMING)[3], [])
 
     def test_the_live_canonical_needs_no_era_set(self):
