@@ -145,7 +145,7 @@ MUTATIONS = [
     ("g_numeric_not_run", PRM, "            v = NS.numeric_sanity_violations(c) + DR.display_readiness_violations(c)",
      "            v = []", PRT, "test_an_override_over_numeric_sanity_REFUSES"),
     ("g_a63_not_run", PRM, "    v = BH.roster(post)[4]", "    v = []", PRT, "test_A63_runs_on_the_post_state"),
-    ("g_a62_not_run", PRM, "    v = SBR.roster(post, mature_dimensions_armed=False)[3]", "    v = []", PRT, "test_A62_runs_on_the_post_state"),
+    ("g_a62_not_run", PRM, "    v = SBR.roster(post, mature_dimensions_armed=False, known=SBR.KNOWN_AT_ARMING)[3]", "    v = []", PRT, "test_A62_runs_on_the_post_state"),
     ("g_a44_not_run", PRM, "    if r[\"violations\"]:\n        refuse(f\"planting_layout_gate (armed)",
      "    if False:\n        refuse(f\"planting_layout_gate (armed)", PRT, "test_A44_runs_on_the_post_state"),
     ("g_rootstock_list_widened", PRM, "ROOTSTOCK_CROPS = (\"apple\",)", "ROOTSTOCK_CROPS = (\"apple\", \"pear-asian\")",

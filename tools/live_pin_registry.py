@@ -208,6 +208,7 @@ LIVE_PINS = {
 
 # file -> why it is not a live pin (REPLAY / DOC_ONLY / SYNTHETIC / HISTORICAL / SCRATCH_DERIVED / CONTENT)
 EXEMPT = {
+    'test_promote_housekeeping60_phase_c.py': 'REPLAY: its POST_SHA and populations are this promote\'s own output over promote_fixture.pre_state(b331e5f2), never the live canonical (housekeeping 60 Phase C, 2026-10-04)',
     'test_live_pin_registry.py': 'DOC_ONLY: the registry\'s own test; its SHA prefix and counts are expectations about the detector and this registry, not about the live canonical',
     'test_apply_patch.py': 'HISTORICAL',
     'test_build_berry_pilot_patch.py': 'HISTORICAL',

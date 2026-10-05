@@ -229,6 +229,35 @@ class MatureDimensionsSibling(unittest.TestCase):
         self.assertTrue(any("|mature_dimensions|" in i for i, _ in G.blocks(by(d)[NULL_CROP], True)))
 
 
+# ------------------------------------------------------- closures keep landed replays reproducible
+CLOSED_2026_10_04 = {  # cited by housekeeping 60 Phase C (b331e5f2 -> afbd4113), dropped from the live waiver set
+    "broad-beans-fava|start_method|sources", "sweet-corn|growth_stages[id=seedling]|sources",
+    "watermelon|growth_stages[id=vining]|sources", "watermelon|tips_by_stage.vining[0]|sources"}
+
+
+class ClosedWaivers(unittest.TestCase):
+    """A waiver closed by a later promote must not redden an EARLIER promote's replay: PLA-10 promotes 1-3 replay
+    post-states in which these blocks are still uncited (measured 2026-10-04: the full tree went red on 41 replay
+    tests when the live set shrank). Each landed promote checks against the set live in its era, KNOWN_AT_ARMING."""
+
+    def test_arming_set_is_the_live_set_plus_the_closed(self):
+        self.assertEqual(set(G.CLOSED), CLOSED_2026_10_04)
+        self.assertEqual(G.KNOWN & set(G.CLOSED), frozenset())
+        self.assertEqual(G.KNOWN_AT_ARMING, G.KNOWN | set(G.CLOSED))
+        self.assertEqual(len(G.KNOWN_AT_ARMING), 2634)
+
+    def test_an_era_post_state_flags_exactly_the_closed_under_the_live_set(self):
+        import promote_fixture
+        pre = json.loads(promote_fixture.pre_state(
+            "b331e5f2c99378526c3ac8f2f870232953b318c994b7dc3d8c54938f2b62c38d"))
+        live_v = G.roster(pre, mature_dimensions_armed=True)[3]
+        self.assertEqual({v.split()[3].rstrip(":") for v in live_v}, CLOSED_2026_10_04)
+        self.assertEqual(G.roster(pre, mature_dimensions_armed=True, known=G.KNOWN_AT_ARMING)[3], [])
+
+    def test_the_live_canonical_needs_no_era_set(self):
+        self.assertEqual(G.roster(_CANON)[3], [])
+
+
 # ----------------------------------------------------------------------- the live canonical
 class LiveCanonical(unittest.TestCase):
     def test_inspected_population_and_verdict(self):

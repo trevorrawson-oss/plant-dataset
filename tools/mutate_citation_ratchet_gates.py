@@ -51,6 +51,15 @@ RATCHET = {
          "    return isinstance(slot, list) and any(isinstance(s, str) and s.strip() for s in slot)",
          "    return isinstance(slot, list) and any(isinstance(s, str) for s in slot)" + M,
          "test_a_list_of_blank_strings_is_not_cited"),
+        # --- era waiver set (2026-10-04): a landed promote replays against KNOWN_AT_ARMING -----------
+        ("era", "era_set_ignored",
+         "    known = KNOWN if known is None else known",
+         "    known = KNOWN" + M,
+         "test_an_era_post_state_flags_exactly_the_closed_under_the_live_set"),
+        ("era", "closed_rejoin_the_live_set",
+         "KNOWN = frozenset(_K.IDENTITIES)\n",
+         "KNOWN = frozenset(_K.IDENTITIES) | frozenset(_K.CLOSED)" + M + "\n",
+         "test_arming_set_is_the_live_set_plus_the_closed"),
         # --- scope: what is a carrier -----------------------------------------------------------
         ("scope", "citation_only_block_counted",
          "        return any(has_content(v) for k, v in block.items() if k not in CITE_KEYS)",
@@ -88,12 +97,12 @@ RATCHET = {
          "test_keyed_identity_survives_a_reorder"),
         # --- THE RATCHET ------------------------------------------------------------------------
         ("ratchet", "growth_invisible",
-         "        if ident not in KNOWN:",
+         "        if ident not in known:",
          "        if False:" + M,
          "test_c1_storage_sources_empty_list_FAILS or test_substitution_FAILS"),
         ("ratchet", "inverted",
-         "        if ident not in KNOWN:",
-         "        if ident in KNOWN:" + M,
+         "        if ident not in known:",
+         "        if ident in known:" + M,
          "test_inspected_population_and_verdict"),
         # --- discovery: naming is part of adding ------------------------------------------------
         ("discovery", "unnamed_never_reported",

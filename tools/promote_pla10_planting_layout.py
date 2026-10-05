@@ -367,7 +367,7 @@ def check_post(pre, post, stage, ev, evidence_dir):
     # mature_dimensions_armed=False, explicitly (2026-10-03, promote 3's data commit): A62's mature_dimensions
     # block is promote 3's (T5), armed with the siblings it writes; this promote's post (cf1d480d) predates
     # it and its heights carry no sibling, so the module default would redden this promote's own moment.
-    v = SBR.roster(post, mature_dimensions_armed=False)[3]
+    v = SBR.roster(post, mature_dimensions_armed=False, known=SBR.KNOWN_AT_ARMING)[3]
     if v:
         refuse(f"A62 on the post-state: {v[:5]}")
     v = BH.roster(post)[4]

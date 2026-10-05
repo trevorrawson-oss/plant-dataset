@@ -15,6 +15,14 @@ TICKET = 'PLA-607'
 MEASURED_ON = '00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e'
 MEASURED_DATE = '2026-09-30'
 COUNT = 2630
+# Closed by citation, kept by identity so a LANDED promote can replay against the set live in its era
+# (sourced_block_ratchet_gate.KNOWN_AT_ARMING). Never re-waived: a closed identity going uncited again fails A62.
+CLOSED = (
+    "broad-beans-fava|start_method|sources",            # housekeeping 60 Phase C, b331e5f2 -> afbd4113
+    "sweet-corn|growth_stages[id=seedling]|sources",    # housekeeping 60 Phase C
+    "watermelon|growth_stages[id=vining]|sources",      # housekeeping 60 Phase C
+    "watermelon|tips_by_stage.vining[0]|sources",       # housekeeping 60 Phase C
+)
 IDENTITIES = (
     "acorn-squash|description|description_sources",
     "acorn-squash|failure_diagnostics[0]|sources",

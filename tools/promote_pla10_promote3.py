@@ -423,7 +423,7 @@ def check_post(pre, post, stage, ev, evidence_dir):
     v = PDG.all_violations(post, presence=True, coverage=True, sibling=True)
     if v:
         refuse(f"A59 (armed: presence, coverage, sibling) on the post-state: {v[:5]}")
-    v = SBR.roster(post, mature_dimensions_armed=True)[3]
+    v = SBR.roster(post, mature_dimensions_armed=True, known=SBR.KNOWN_AT_ARMING)[3]
     if v:
         refuse(f"A62 (mature_dimensions armed) on the post-state: {v[:5]}")
     v = BH.roster(post)[4]

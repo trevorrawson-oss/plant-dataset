@@ -173,6 +173,10 @@ import sourced_block_ratchet_known as _K  # noqa: E402  -- the measured waiver s
 _KNOWN_DOC = {"ticket": _K.TICKET, "measured_on": _K.MEASURED_ON, "count": _K.COUNT,
               "identities": list(_K.IDENTITIES)}
 KNOWN = frozenset(_K.IDENTITIES)
+CLOSED = tuple(_K.CLOSED)
+# The waiver set as it stood at arming (00dda31c), before any closure: what a LANDED promote replays against, because
+# its post-state predates the citations that closed CLOSED (PLA-10 promotes 1-3). Live gating always uses KNOWN.
+KNOWN_AT_ARMING = KNOWN | frozenset(CLOSED)
 
 
 def certified(crop):
@@ -320,18 +324,19 @@ def pot_uncited(crop):
 
 
 # ---------------------------------------------------------------- VERDICTS
-def crop_violations(crop, mature_dimensions_armed=None):
+def crop_violations(crop, mature_dimensions_armed=None, known=None):
     """Per-crop half (whole_crop_gate A62). No-op off certified: the waivers cover certified only."""
     if not certified(crop):
         return []
     V = []
+    known = KNOWN if known is None else known
     for ident in uncited(crop, mature_dimensions_armed):
         mv = migration_verdict(crop, ident)
         if mv is not None:
             if not mv[0]:
                 V.append(mv[1])
             continue
-        if ident not in KNOWN:
+        if ident not in known:
             V.append(f"NEW uncited block {ident}: it carries authored content and its citation "
                      f"slot is missing, null or []. Cite it. The PLA-607 ratchet waives only the "
                      f"blocks uncited on {_KNOWN_DOC['measured_on'][:8]}, by identity.")
@@ -346,7 +351,7 @@ def crop_violations(crop, mature_dimensions_armed=None):
     return V
 
 
-def roster(data, mature_dimensions_armed=None):
+def roster(data, mature_dimensions_armed=None, known=None):
     """(certified_count, inspected, live_uncited, violations, stale, pot_live)."""
     cert = [c for c in data.get("crops", []) if certified(c)]
     inspected, live, V = 0, [], []
@@ -354,12 +359,12 @@ def roster(data, mature_dimensions_armed=None):
         bl = blocks(c, mature_dimensions_armed)
         inspected += len(bl)
         live.extend(i for i, ok in bl if not ok)
-        V.extend(crop_violations(c, mature_dimensions_armed))
+        V.extend(crop_violations(c, mature_dimensions_armed, known))
     pot_live = sorted(c["slug"] for c in cert if pot_uncited(c))
     if len(pot_live) > POT_CEILING:
         V.append(f"uncited {POT_FIELD} population is {len(pot_live)}, ratchet ceiling is "
                  f"{POT_CEILING}: {pot_live}")
-    stale = sorted(KNOWN - set(live))
+    stale = sorted((KNOWN if known is None else known) - set(live))
     return len(cert), inspected, sorted(live), V, stale, pot_live
 
 

@@ -65,7 +65,7 @@ class PositiveControl(unittest.TestCase):
 
 class Population(unittest.TestCase):
     def test_the_registry_population(self):
-        self.assertEqual((len(DETECTED), len(R.LIVE_PINS), len(R.reverify_list()), len(R.EXEMPT)), (60, 25, 60, 42))
+        self.assertEqual((len(DETECTED), len(R.LIVE_PINS), len(R.reverify_list()), len(R.EXEMPT)), (61, 25, 60, 43))
 
 
 if __name__ == "__main__":
