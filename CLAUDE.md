@@ -117,8 +117,12 @@ armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered gates) +
   `whole_crop_gate` / `gate_all`); **(b)** the harnesses that copy `tools/` into a scratch dir
   (`test_region_harness.py`, `test_rgv_harness.py`, and any test the grep finds calling `shutil.copy` on
   `tools/`); **(c)** the mutation harness of every changed gate or promote. Name the set that ran in the
-  commit message. **A commit that ONLY updates a pin (a `COMMIT_FOR` entry, a `PINNED_SHA`), a waiver
-  identity, or a measured population** runs only the adjacent suites plus the test that reads the value. A
+  commit message. **A commit that ONLY updates a pin (a `COMMIT_FOR` entry, a `PINNED_SHA`) or a measured
+  population** runs only the adjacent suites plus the test that reads the value. **A waiver or known-set change
+  (adding, removing or closing an identity in a `*_known` file or a `WAIVERS` table) is NOT pin-only: also run
+  every landed promote suite and replay that imports the gate (`grep -l <gate module> tools/*.py`).** (Ruled
+  2026-10-04 after `367c702` shrank `sourced_block_ratchet_known` as pin-only and the full tree failed 41
+  landed-replay tests; fixed in `e47e58a`.) A
   pure data promote with no tool change runs release verification (below) plus the promote's own suite and
   mutation harness. **The full tree** (`python3 tools/run_test_tree.py`, ~1 hour single-process, 6,369
   pytest tests on 2026-10-01; speed-up PLA-630) runs only when a change touches SHARED test infrastructure
