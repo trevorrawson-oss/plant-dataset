@@ -1,0 +1,545 @@
+[
+ {
+  "crop": "raspberry",
+  "path": "planting_method_notes_seasoned",
+  "kind": "prose",
+  "old": "Plant dormant bare-root canes in late winter or early spring, setting the crown so the roots sit 1 to 2 inches below the surface, then cut the old handle cane back to a few inches. Space red and yellow raspberries about 18 to 24 inches apart in rows 6 to 8 feet apart; space the larger black and purple raspberries 30 to 48 inches apart. Plant on a slightly raised, well-drained row and install the trellis before growth begins.",
+  "new": "Plant dormant bare-root canes in spring, as soon as the soil can be worked. Space red and yellow raspberries about 18 to 24 inches apart. Rows of red and yellow raspberries can be 5 to 10 feet apart, depending on how the row middles are managed: cultivated middles need wider rows than mowed or mulched ones. UGA Extension spaces Dormanred, a trailing red, like a trailing blackberry: plants 10 feet apart in rows 12 feet apart. Set black and purple raspberries 4 feet apart. Plant in well-drained soil. On heavier soils, make raised rows or raised beds before planting to improve drainage.",
+  "cited_at": null,
+  "reason": "Trevor's string (2026-10-05): rows 6-8 ft (on no page) -> UADA 5-10 ft; black/purple 4 ft (UMN); depth, handle, trellis, late winter, 'larger', 'slightly' cut (rulings 1-3)"
+ },
+ {
+  "crop": "raspberry",
+  "path": "planting_method_notes_beginner",
+  "kind": "prose",
+  "old": "Plant dormant bare-root canes in late winter or early spring. Set them so the roots are an inch or two deep, then cut the old cane back to a few inches. Space red and yellow raspberries about 18 to 24 inches apart, and the bigger black and purple types 30 to 48 inches apart. Use a slightly raised, well-drained row and put up the support before the canes grow.",
+  "new": "Plant bare-root raspberry plants in spring, as soon as the soil can be worked. Space red and yellow raspberries about 18 to 24 inches apart, in rows 5 to 10 feet apart. Leave more room between rows if you plan to cultivate there, meaning lightly loosen the soil, than if you'll mow or mulch. Georgia Extension spaces Dormanred, a trailing red raspberry, the way it spaces trailing blackberries: plants 10 feet apart, in rows 12 feet apart. Set black and purple raspberries 4 feet apart. Choose a spot where the soil drains well. If your soil is heavy, build raised rows or beds before planting so water drains away.",
+  "cited_at": null,
+  "reason": "Trevor's string (2026-10-05): the registers agree (ruling 4)"
+ },
+ {
+  "crop": "raspberry",
+  "path": "planting_layout[id=row-none].row_spacing_inches",
+  "kind": "value",
+  "old": null,
+  "new": [
+   60,
+   120
+  ],
+  "cited_at": "planting_layout[id=row-none]",
+  "reason": "ruling 1 (PLA-666 measurement): UADA FSA-6107 home-garden red raspberry, 5 to 10 feet between rows"
+ },
+ {
+  "crop": "raspberry",
+  "path": "planting_layout[id=row-none].row_spacing_reason",
+  "kind": "value",
+  "old": "not_authored",
+  "new": null,
+  "cited_at": "planting_layout[id=row-none]",
+  "reason": "null iff the entry carries a row figure (spec §1.6 item 5)"
+ },
+ {
+  "crop": "raspberry",
+  "path": "planting_layout[id=row-none].sources",
+  "kind": "sources",
+  "old": [
+   "umn_ext"
+  ],
+  "new": [
+   "umn_ext",
+   "uada_ext_fsa6107"
+  ],
+  "cited_at": null,
+  "reason": "the row figure's page joins the entry (two-page reading, ruled)"
+ },
+ {
+  "crop": "raspberry",
+  "path": "planting_layout[id=row-none].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "umn_ext": {
+    "url": "https://extension.umn.edu/fruit/growing-raspberries-home-garden",
+    "verified": "2026-10-01"
+   }
+  },
+  "new": {
+   "umn_ext": {
+    "url": "https://extension.umn.edu/fruit/growing-raspberries-home-garden",
+    "verified": "2026-10-01"
+   },
+   "uada_ext_fsa6107": {
+    "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6107.pdf",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "UADA FSA-6107 anchors the row figure; umn_ext keeps the in-row"
+ },
+ {
+  "crop": "raspberry",
+  "path": "row_spacing_inches",
+  "kind": "value",
+  "old": null,
+  "new": [
+   60,
+   120
+  ],
+  "cited_at": "planting_layout[id=row-none]",
+  "reason": "the crop-root mirror of the default entry's row figure (spec §1.6 item 7)"
+ },
+ {
+  "crop": "raspberry",
+  "path": "row_spacing_reason",
+  "kind": "value",
+  "old": "not_authored",
+  "new": null,
+  "cited_at": "planting_layout[id=row-none]",
+  "reason": "the crop-root reason is null iff row_spacing_inches is non-null (spec §1.6 item 7)"
+ },
+ {
+  "crop": "pawpaw",
+  "path": "planting_layout[id=row-none].row_spacing_inches",
+  "kind": "value",
+  "old": null,
+  "new": [
+   144,
+   216
+  ],
+  "cited_at": "planting_layout[id=row-none]",
+  "reason": "ruling 5: KSU PBI-004, 12 to 18 feet between rows (orchard scope, admitted: no home-garden figure)"
+ },
+ {
+  "crop": "pawpaw",
+  "path": "planting_layout[id=row-none].row_spacing_reason",
+  "kind": "value",
+  "old": "not_authored",
+  "new": null,
+  "cited_at": "planting_layout[id=row-none]",
+  "reason": "null iff the entry carries a row figure (spec §1.6 item 5)"
+ },
+ {
+  "crop": "pawpaw",
+  "path": "planting_layout[id=row-none].sources",
+  "kind": "sources",
+  "old": [
+   "ksu_pawpaw"
+  ],
+  "new": [
+   "ksu_pawpaw",
+   "ksu_pawpaw_pbi004"
+  ],
+  "cited_at": null,
+  "reason": "PBI-004 joins the entry under its own id; the planting guide (ksu_pawpaw) keeps the in-row"
+ },
+ {
+  "crop": "pawpaw",
+  "path": "planting_layout[id=row-none].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "ksu_pawpaw": {
+    "url": "https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/pawpaw-planting-guide.php",
+    "verified": "2026-10-01"
+   }
+  },
+  "new": {
+   "ksu_pawpaw": {
+    "url": "https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/pawpaw-planting-guide.php",
+    "verified": "2026-10-01"
+   },
+   "ksu_pawpaw_pbi004": {
+    "url": "https://www.kysu.edu/brand-identity-approved-images/pawpaw/OrganicPawpawPBI-004.pdf",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "both KSU pages on the entry (Trevor, 2026-10-05)"
+ },
+ {
+  "crop": "pawpaw",
+  "path": "row_spacing_inches",
+  "kind": "value",
+  "old": null,
+  "new": [
+   144,
+   216
+  ],
+  "cited_at": "planting_layout[id=row-none]",
+  "reason": "the crop-root mirror of the default entry's row figure (spec §1.6 item 7)"
+ },
+ {
+  "crop": "pawpaw",
+  "path": "row_spacing_reason",
+  "kind": "value",
+  "old": "not_authored",
+  "new": null,
+  "cited_at": "planting_layout[id=row-none]",
+  "reason": "the crop-root reason is null iff row_spacing_inches is non-null (spec §1.6 item 7)"
+ },
+ {
+  "crop": "<catalog>",
+  "path": "ksu_pawpaw_pbi004",
+  "kind": "catalog",
+  "old": "<absent>",
+  "new": {
+   "id": "ksu_pawpaw_pbi004",
+   "name": "Kentucky State University PBI-004, Organic Production of Pawpaw (Kirk W. Pomper, Sheri B. Crabtree, Jeremy D. Lowe)",
+   "title": "Organic Production of Pawpaw",
+   "publisher": "Kentucky State University Cooperative Extension Program",
+   "url": "https://www.kysu.edu/brand-identity-approved-images/pawpaw/OrganicPawpawPBI-004.pdf",
+   "source_class": "university_extension",
+   "trust_tier": "high",
+   "accessed": "2026-10",
+   "tier": "T1",
+   "citable_for": "KSU Pawpaw Research Program publication PBI-004 (July 2010): organic pawpaw orchard establishment, including the recommended tree spacing of 8 feet within rows and 12 to 18 feet between rows (orchard scope). A document-scoped child of ksu_pawpaw."
+  },
+  "cited_at": null,
+  "reason": "a document-scoped child of ksu_pawpaw: anchoring_urls is keyed by source id, so the entry cannot carry two KSU pages under one id"
+ },
+ {
+  "crop": "raspberry",
+  "path": "start_method.notes_seasoned",
+  "kind": "prose",
+  "old": "Start from dormant bare-root canes or a potted nursery plant, not from seed. Bare-root canes are the common, economical choice and go in while dormant in late winter or early spring; potted plants can be set out a little later. Buy certified virus-free stock, set the crown so the roots are 1 to 2 inches below the surface, cut the handle cane back to a few inches after planting, and space plants along a prepared row with support in place. Raspberries are own-root plants that sucker freely, so there is no rootstock or grafting.",
+  "new": "Start from dormant bare-root plants or potted plants from an established nursery that sells certified virus-free stock. Plant bare-root plants in early spring, as soon as the soil can be worked, and potted plants after the threat of frost has passed. Space plants along the row. Red and yellow raspberries send up suckers from their roots; black and purple raspberries do not.",
+  "cited_at": "start_method",
+  "reason": "ruling E string: depth, handle, 'not from seed', 'common, economical', own-root/no rootstock, support timing and 'late winter' cut"
+ },
+ {
+  "crop": "raspberry",
+  "path": "start_method.notes_beginner",
+  "kind": "prose",
+  "old": "Buy raspberries as dormant bare-root canes or young potted plants from a nursery rather than growing from seed. Plant bare-root canes in late winter or early spring while they are still dormant. Buy certified virus-free plants, set them so the roots are an inch or two deep, and cut the old cane back to a few inches after planting. Put your support or trellis in before or right after planting.",
+  "new": "Buy raspberries as dormant bare-root plants or as potted plants, from a nursery that sells certified virus-free plants. Plant bare-root plants in early spring, as soon as the soil can be worked. Wait to plant potted ones until the danger of frost has passed.",
+  "cited_at": "start_method",
+  "reason": "ruling E string: depth, handle, 'rather than growing from seed', support timing and 'late winter' cut"
+ },
+ {
+  "crop": "raspberry",
+  "path": "start_method.anchoring_urls",
+  "kind": "anchors",
+  "old": "<absent>",
+  "new": {
+   "umn_ext": {
+    "url": "https://extension.umn.edu/fruit/growing-raspberries-home-garden",
+    "verified": "2026-10-04"
+   },
+   "uada_ext_fsa6107": {
+    "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6107.pdf",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "start_method gains a citation block (the broad-beans-fava precedent, Housekeeping 60 Phase C)"
+ },
+ {
+  "crop": "raspberry",
+  "path": "start_method.sources",
+  "kind": "sources",
+  "old": "<absent>",
+  "new": [
+   "umn_ext",
+   "uada_ext_fsa6107"
+  ],
+  "cited_at": null,
+  "reason": "start_method gains a citation block (the broad-beans-fava precedent)"
+ },
+ {
+  "crop": "raspberry",
+  "path": "growth_stages[id=planting].user_action_seasoned",
+  "kind": "prose",
+  "old": "Set the crown so the roots are 1 to 2 inches deep, space plants along the row, cut the old handle cane back to a few inches, water in, and mulch. Put the trellis or support up now. Use certified virus-free stock on ground with no recent nightshade, strawberry, or bramble history.",
+  "new": "Space plants along the row, water thoroughly after planting, and apply woodchip or straw mulch to hold in moisture and keep weeds out. Use certified virus-free stock. Penn State advises against following verticillium-susceptible crops such as peppers, eggplant, tomatoes, potatoes, or strawberries, and recommends five to eight years of non-susceptible crops first. On support, sources differ: Minnesota Extension says all types need it, while Arkansas Extension says black raspberries need no trellis and that Dormanred must be trellised.",
+  "cited_at": "growth_stages[id=planting]",
+  "reason": "ruling E string: depth, handle, bramble history, support timing cut; PSU rotation and the support conflict stated with attribution"
+ },
+ {
+  "crop": "raspberry",
+  "path": "growth_stages[id=planting].user_action_beginner",
+  "kind": "prose",
+  "old": "Plant the canes 1 to 2 inches deep along your row, cut the old cane back to a few inches, water well, and mulch. Set up a stake or trellis. Buy certified virus-free plants.",
+  "new": "Plant along your row, water well right after planting, and spread woodchip or straw mulch to keep moisture in and weeds out. Buy certified virus-free plants. Minnesota Extension recommends a trellis or other support for all raspberries, to protect the canes from wind damage, bending over, and cracking.",
+  "cited_at": "growth_stages[id=planting]",
+  "reason": "ruling E string: depth, handle, support timing cut"
+ },
+ {
+  "crop": "raspberry",
+  "path": "growth_stages[id=planting].what_to_look_for_seasoned",
+  "kind": "prose",
+  "old": "Dormant bare-root canes or a potted nursery plant going into a prepared, well-drained row with support in place. In most regions this is late winter to early spring, while the plant is dormant.",
+  "new": "Dormant bare-root plants or potted nursery plants going into a well-drained row. Bare-root plants are planted in early spring, as soon as the soil can be worked; potted plants are planted after the threat of frost has passed.",
+  "cited_at": "growth_stages[id=planting]",
+  "reason": "ruling E string: 'late winter' and 'support in place' cut"
+ },
+ {
+  "crop": "raspberry",
+  "path": "growth_stages[id=planting].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "umn_ext": {
+    "url": "https://extension.umn.edu/fruit/growing-raspberries-home-garden",
+    "verified": "2026-06-30"
+   },
+   "psu_ext": {
+    "url": "https://extension.psu.edu/raspberry-production",
+    "verified": "2026-06-30"
+   }
+  },
+  "new": {
+   "umn_ext": {
+    "url": "https://extension.umn.edu/fruit/growing-raspberries-home-garden",
+    "verified": "2026-06-30"
+   },
+   "psu_ext": {
+    "url": "https://extension.psu.edu/raspberry-production",
+    "verified": "2026-06-30"
+   },
+   "uada_ext_fsa6107": {
+    "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6107.pdf",
+    "verified": "2026-10-04"
+   }
+  },
+  "cited_at": null,
+  "reason": "UADA joins growth_stages[0] (the support sentence uses it)"
+ },
+ {
+  "crop": "raspberry",
+  "path": "growth_stages[id=planting].sources",
+  "kind": "sources",
+  "old": [
+   "umn_ext",
+   "psu_ext"
+  ],
+  "new": [
+   "umn_ext",
+   "psu_ext",
+   "uada_ext_fsa6107"
+  ],
+  "cited_at": null,
+  "reason": "UADA joins growth_stages[0]"
+ },
+ {
+  "crop": "raspberry",
+  "path": "varieties.note_seasoned",
+  "kind": "orthography",
+  "old": "Choose first by cane type, then by hardiness and season. Summer-bearing (floricane) reds give one big early-summer crop on second-year canes and include the hardiest varieties for cold regions; everbearing (primocane) types fruit on first-year canes in late summer or fall and can be mowed to the ground each winter for the simplest pruning and a clean, single fall crop. Black and purple raspberries are summer-bearing, do not sucker, and are less hardy and more disease-prone than reds. In the hot, humid South, standard raspberries fail, and only heat-tolerant low-chill types such as Dorman Red are worth trying. Always start with certified virus-free stock.",
+  "new": "Choose first by cane type, then by hardiness and season. Summer-bearing (floricane) reds give one big early-summer crop on second-year canes and include the hardiest varieties for cold regions; everbearing (primocane) types fruit on first-year canes in late summer or fall and can be mowed to the ground each winter for the simplest pruning and a clean, single fall crop. Black and purple raspberries are summer-bearing, do not sucker, and are less hardy and more disease-prone than reds. In the hot, humid South, standard raspberries fail, and only heat-tolerant low-chill types such as Dormanred are worth trying. Always start with certified virus-free stock.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "varieties.note_beginner",
+  "kind": "orthography",
+  "old": "Pick by type first. Summer-bearing red raspberries give one big crop in early summer and include the toughest, most cold-hardy varieties. Everbearing (fall-bearing) types fruit in late summer or fall on new canes, and you can just mow all the canes down each winter, which makes pruning easy. Black and purple raspberries are sweeter and grown a bit differently but are less hardy. In the hot South, only special heat-tolerant kinds like Dorman Red will grow. Whatever you pick, buy certified virus-free plants.",
+  "new": "Pick by type first. Summer-bearing red raspberries give one big crop in early summer and include the toughest, most cold-hardy varieties. Everbearing (fall-bearing) types fruit in late summer or fall on new canes, and you can just mow all the canes down each winter, which makes pruning easy. Black and purple raspberries are sweeter and grown a bit differently but are less hardy. In the hot South, only special heat-tolerant kinds like Dormanred will grow. Whatever you pick, buy certified virus-free plants.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "chill_hours_note_seasoned",
+  "kind": "orthography",
+  "old": "Most raspberries need a stretch of winter chill (hours below about 45°F) to break dormancy and fruit normally. Standard red raspberries are high-chill, often needing 800 or more hours, which is why they fail in mild-winter regions; medium-chill types want 400 to 600, and a few heat-bred types such as Dorman Red need only about 300. Too little chill for the type gives weak, erratic budbreak and little fruit, so chill, alongside summer heat tolerance, is the main thing that limits where raspberries grow.",
+  "new": "Most raspberries need a stretch of winter chill (hours below about 45°F) to break dormancy and fruit normally. Standard red raspberries are high-chill, often needing 800 or more hours, which is why they fail in mild-winter regions; medium-chill types want 400 to 600, and a few heat-bred types such as Dormanred need only about 300. Too little chill for the type gives weak, erratic budbreak and little fruit, so chill, alongside summer heat tolerance, is the main thing that limits where raspberries grow.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.se_gulf.resolved_by_zone.8.type_note_seasoned",
+  "kind": "orthography",
+  "old": "Standard raspberries fail in the hot, humid Southeast; the one type worth growing is a heat-tolerant, low-chill trailing raspberry such as Dorman Red, which fruits in early summer and tolerates the heat and disease pressure that defeat northern reds. It is trained on a trellis like a trailing blackberry.",
+  "new": "Standard raspberries fail in the hot, humid Southeast; the one type worth growing is a heat-tolerant, low-chill trailing raspberry such as Dormanred, which fruits in early summer and tolerates the heat and disease pressure that defeat northern reds. It is trained on a trellis like a trailing blackberry.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.se_gulf.resolved_by_zone.8.type_note_beginner",
+  "kind": "orthography",
+  "old": "Most raspberries cannot take the hot, humid Southeast. The one that works is a heat-tolerant, low-chill type like Dorman Red, which fruits in early summer and is grown on a trellis like a trailing blackberry.",
+  "new": "Most raspberries cannot take the hot, humid Southeast. The one that works is a heat-tolerant, low-chill type like Dormanred, which fruits in early summer and is grown on a trellis like a trailing blackberry.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.se_gulf.resolved_by_zone.9.type_note_seasoned",
+  "kind": "orthography",
+  "old": "Standard raspberries fail in the hot, humid Southeast; the one type worth growing is a heat-tolerant, low-chill trailing raspberry such as Dorman Red, which fruits in early summer and tolerates the heat and disease pressure that defeat northern reds. It is trained on a trellis like a trailing blackberry.",
+  "new": "Standard raspberries fail in the hot, humid Southeast; the one type worth growing is a heat-tolerant, low-chill trailing raspberry such as Dormanred, which fruits in early summer and tolerates the heat and disease pressure that defeat northern reds. It is trained on a trellis like a trailing blackberry.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.se_gulf.resolved_by_zone.9.type_note_beginner",
+  "kind": "orthography",
+  "old": "Most raspberries cannot take the hot, humid Southeast. The one that works is a heat-tolerant, low-chill type like Dorman Red, which fruits in early summer and is grown on a trellis like a trailing blackberry.",
+  "new": "Most raspberries cannot take the hot, humid Southeast. The one that works is a heat-tolerant, low-chill type like Dormanred, which fruits in early summer and is grown on a trellis like a trailing blackberry.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.se_gulf.resolved_by_zone.10.type_note_seasoned",
+  "kind": "orthography",
+  "old": "Standard raspberries fail in the hot, humid Southeast; the one type worth growing is a heat-tolerant, low-chill trailing raspberry such as Dorman Red, which fruits in early summer and tolerates the heat and disease pressure that defeat northern reds. It is trained on a trellis like a trailing blackberry.",
+  "new": "Standard raspberries fail in the hot, humid Southeast; the one type worth growing is a heat-tolerant, low-chill trailing raspberry such as Dormanred, which fruits in early summer and tolerates the heat and disease pressure that defeat northern reds. It is trained on a trellis like a trailing blackberry.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.se_gulf.resolved_by_zone.10.type_note_beginner",
+  "kind": "orthography",
+  "old": "Most raspberries cannot take the hot, humid Southeast. The one that works is a heat-tolerant, low-chill type like Dorman Red, which fruits in early summer and is grown on a trellis like a trailing blackberry.",
+  "new": "Most raspberries cannot take the hot, humid Southeast. The one that works is a heat-tolerant, low-chill type like Dormanred, which fruits in early summer and is grown on a trellis like a trailing blackberry.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.se_gulf.region_notes_seasoned",
+  "kind": "orthography",
+  "old": "The Gulf South is marginal raspberry country. Standard reds get too little chill and too much heat and disease, so the only dependable option is a heat-tolerant, low-chill trailing raspberry such as Dorman Red, which fruits in early summer with fair, mostly cooking-quality flavor. Plant dormant in winter, trellis like a trailing blackberry, and keep expectations modest.",
+  "new": "The Gulf South is marginal raspberry country. Standard reds get too little chill and too much heat and disease, so the only dependable option is a heat-tolerant, low-chill trailing raspberry such as Dormanred, which fruits in early summer with fair, mostly cooking-quality flavor. Plant dormant in winter, trellis like a trailing blackberry, and keep expectations modest.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.se_gulf.region_notes_beginner",
+  "kind": "orthography",
+  "old": "Raspberries are a tough sell in the hot, humid Southeast. Most types simply will not grow, and the heat-tolerant trailing type Dorman Red is the only reliable choice; expect fair, cooking-quality fruit in early summer, not a heavy fresh crop. Plant in winter, train on a trellis, and treat it as a fun experiment rather than a staple.",
+  "new": "Raspberries are a tough sell in the hot, humid Southeast. Most types simply will not grow, and the heat-tolerant trailing type Dormanred is the only reliable choice; expect fair, cooking-quality fruit in early summer, not a heavy fresh crop. Plant in winter, train on a trellis, and treat it as a fun experiment rather than a staple.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.fl_peninsula.resolved_by_zone.10.type_note_seasoned",
+  "kind": "orthography",
+  "old": "The Florida peninsula is essentially unsuitable for standard raspberries: too little chill, too much heat and humidity, and heavy disease pressure. Only a heat-tolerant, low-chill trailing type such as Dorman Red can be attempted, and chiefly in the cooler northern peninsula, with fair, cooking-quality fruit at best.",
+  "new": "The Florida peninsula is essentially unsuitable for standard raspberries: too little chill, too much heat and humidity, and heavy disease pressure. Only a heat-tolerant, low-chill trailing type such as Dormanred can be attempted, and chiefly in the cooler northern peninsula, with fair, cooking-quality fruit at best.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.fl_peninsula.resolved_by_zone.10.type_note_beginner",
+  "kind": "orthography",
+  "old": "Most of Florida is too warm and humid for raspberries. The only one worth trying is a heat-tolerant trailing type like Dorman Red, mostly in cooler north Florida, and even then the fruit is fair and best for cooking.",
+  "new": "Most of Florida is too warm and humid for raspberries. The only one worth trying is a heat-tolerant trailing type like Dormanred, mostly in cooler north Florida, and even then the fruit is fair and best for cooking.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.fl_peninsula.resolved_by_zone.11.type_note_seasoned",
+  "kind": "orthography",
+  "old": "The Florida peninsula is essentially unsuitable for standard raspberries: too little chill, too much heat and humidity, and heavy disease pressure. Only a heat-tolerant, low-chill trailing type such as Dorman Red can be attempted, and chiefly in the cooler northern peninsula, with fair, cooking-quality fruit at best.",
+  "new": "The Florida peninsula is essentially unsuitable for standard raspberries: too little chill, too much heat and humidity, and heavy disease pressure. Only a heat-tolerant, low-chill trailing type such as Dormanred can be attempted, and chiefly in the cooler northern peninsula, with fair, cooking-quality fruit at best.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.fl_peninsula.resolved_by_zone.11.type_note_beginner",
+  "kind": "orthography",
+  "old": "Most of Florida is too warm and humid for raspberries. The only one worth trying is a heat-tolerant trailing type like Dorman Red, mostly in cooler north Florida, and even then the fruit is fair and best for cooking.",
+  "new": "Most of Florida is too warm and humid for raspberries. The only one worth trying is a heat-tolerant trailing type like Dormanred, mostly in cooler north Florida, and even then the fruit is fair and best for cooking.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.fl_peninsula.region_notes_seasoned",
+  "kind": "orthography",
+  "old": "The peninsula is at or beyond the limit for raspberries: insufficient chill, high heat and humidity, and severe disease pressure. Only a low-chill, heat-tolerant trailing type such as Dorman Red can be attempted, mainly in the cooler upper peninsula, for a small early-spring crop of fair, cooking-quality fruit on short-lived plants. Blackberries are the far better caneberry choice here.",
+  "new": "The peninsula is at or beyond the limit for raspberries: insufficient chill, high heat and humidity, and severe disease pressure. Only a low-chill, heat-tolerant trailing type such as Dormanred can be attempted, mainly in the cooler upper peninsula, for a small early-spring crop of fair, cooking-quality fruit on short-lived plants. Blackberries are the far better caneberry choice here.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.fl_peninsula.region_notes_beginner",
+  "kind": "orthography",
+  "old": "Florida is one of the toughest places for raspberries. The heat, humidity, and lack of winter chill defeat almost all types. Only a heat-tolerant trailing type like Dorman Red is worth a try, mostly in cooler north Florida, for a small early-spring crop best used in jam. Most Florida gardeners should grow blackberries or other fruit instead.",
+  "new": "Florida is one of the toughest places for raspberries. The heat, humidity, and lack of winter chill defeat almost all types. Only a heat-tolerant trailing type like Dormanred is worth a try, mostly in cooler north Florida, for a small early-spring crop best used in jam. Most Florida gardeners should grow blackberries or other fruit instead.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.rgv.resolved_by_zone.9.type_note_seasoned",
+  "kind": "orthography",
+  "old": "The Rio Grande Valley is at or beyond the limit for raspberries: insufficient winter chill and intense summer heat defeat standard reds. Only a heat-tolerant, low-chill trailing type such as Dorman Red, a Texas-bred selection recommended by Texas A&M AgriLife's Master Gardener plant library, can be attempted, and only for a small early-spring crop of fair, mostly cooking-quality fruit. Treat it as a novelty, not a staple; blackberry is the far better caneberry choice here.",
+  "new": "The Rio Grande Valley is at or beyond the limit for raspberries: insufficient winter chill and intense summer heat defeat standard reds. Only a heat-tolerant, low-chill trailing type such as Dormanred, a Texas-bred selection recommended by Texas A&M AgriLife's Master Gardener plant library, can be attempted, and only for a small early-spring crop of fair, mostly cooking-quality fruit. Treat it as a novelty, not a staple; blackberry is the far better caneberry choice here.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.rgv.resolved_by_zone.9.type_note_beginner",
+  "kind": "orthography",
+  "old": "Raspberries are a tough sell in the Rio Grande Valley. Most types will not grow here at all, since the Valley does not get enough winter chill and gets too hot in summer. The one worth trying is a heat-tolerant, low-chill type called Dorman Red, and even then expect a small crop, best used for cooking, not a heavy fresh harvest. Grow blackberries instead if you want a reliable caneberry.",
+  "new": "Raspberries are a tough sell in the Rio Grande Valley. Most types will not grow here at all, since the Valley does not get enough winter chill and gets too hot in summer. The one worth trying is a heat-tolerant, low-chill type called Dormanred, and even then expect a small crop, best used for cooking, not a heavy fresh harvest. Grow blackberries instead if you want a reliable caneberry.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.rgv.resolved_by_zone.10.type_note_seasoned",
+  "kind": "orthography",
+  "old": "The Rio Grande Valley is at or beyond the limit for raspberries: insufficient winter chill and intense summer heat defeat standard reds. Only a heat-tolerant, low-chill trailing type such as Dorman Red, a Texas-bred selection recommended by Texas A&M AgriLife's Master Gardener plant library, can be attempted, and only for a small early-spring crop of fair, mostly cooking-quality fruit. Treat it as a novelty, not a staple; blackberry is the far better caneberry choice here.",
+  "new": "The Rio Grande Valley is at or beyond the limit for raspberries: insufficient winter chill and intense summer heat defeat standard reds. Only a heat-tolerant, low-chill trailing type such as Dormanred, a Texas-bred selection recommended by Texas A&M AgriLife's Master Gardener plant library, can be attempted, and only for a small early-spring crop of fair, mostly cooking-quality fruit. Treat it as a novelty, not a staple; blackberry is the far better caneberry choice here.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.rgv.resolved_by_zone.10.type_note_beginner",
+  "kind": "orthography",
+  "old": "Raspberries are a tough sell in the Rio Grande Valley. Most types will not grow here at all, since the Valley does not get enough winter chill and gets too hot in summer. The one worth trying is a heat-tolerant, low-chill type called Dorman Red, and even then expect a small crop, best used for cooking, not a heavy fresh harvest. Grow blackberries instead if you want a reliable caneberry.",
+  "new": "Raspberries are a tough sell in the Rio Grande Valley. Most types will not grow here at all, since the Valley does not get enough winter chill and gets too hot in summer. The one worth trying is a heat-tolerant, low-chill type called Dormanred, and even then expect a small crop, best used for cooking, not a heavy fresh harvest. Grow blackberries instead if you want a reliable caneberry.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.rgv.region_notes_seasoned",
+  "kind": "orthography",
+  "old": "The Rio Grande Valley is marginal raspberry country: standard reds get nowhere near enough chill and cannot handle the Valley's heat and disease pressure, so the only dependable option is a heat-tolerant, low-chill trailing raspberry such as Dorman Red. Expect a small early-spring crop of fair, mostly cooking-quality fruit on a short-lived planting, trained on a trellis like a trailing blackberry. Blackberry remains the far better caneberry choice for the Valley.",
+  "new": "The Rio Grande Valley is marginal raspberry country: standard reds get nowhere near enough chill and cannot handle the Valley's heat and disease pressure, so the only dependable option is a heat-tolerant, low-chill trailing raspberry such as Dormanred. Expect a small early-spring crop of fair, mostly cooking-quality fruit on a short-lived planting, trained on a trellis like a trailing blackberry. Blackberry remains the far better caneberry choice for the Valley.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.rgv.region_notes_beginner",
+  "kind": "orthography",
+  "old": "Raspberries are marginal in the Rio Grande Valley: it is too warm in winter and too hot in summer for most types. The one that has a chance is a heat-tolerant kind called Dorman Red, grown on a trellis like a trailing blackberry, for a small early-spring crop best used in cooking. If you want a reliable caneberry here, grow blackberries instead.",
+  "new": "Raspberries are marginal in the Rio Grande Valley: it is too warm in winter and too hot in summer for most types. The one that has a chance is a heat-tolerant kind called Dormanred, grown on a trellis like a trailing blackberry, for a small early-spring crop best used in cooking. If you want a reliable caneberry here, grow blackberries instead.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.utah_dixie.resolved_by_zone.8.type_note_seasoned",
+  "kind": "orthography",
+  "old": "Raspberry is marginal in the St. George Dixie: the hot, low, alkaline core is the ground Utah State University Extension flags as difficult, and the county's dependable raspberry ground is its higher-elevation towns instead. The best bet here is a heat-tolerant, low-chill, fall-bearing (primocane) type, because its fall crop ripens after the peak summer heat and avoids fruit sunburn (USU Extension); good choices are Caroline, Josephine, Polana, Joan J, and Polka, or the low-chill desert canes Bababerry and Dorman Red. Give it afternoon shade, mulch heavily, correct the alkaline-soil iron chlorosis with a chelated iron, and water steadily.",
+  "new": "Raspberry is marginal in the St. George Dixie: the hot, low, alkaline core is the ground Utah State University Extension flags as difficult, and the county's dependable raspberry ground is its higher-elevation towns instead. The best bet here is a heat-tolerant, low-chill, fall-bearing (primocane) type, because its fall crop ripens after the peak summer heat and avoids fruit sunburn (USU Extension); good choices are Caroline, Josephine, Polana, Joan J, and Polka, or the low-chill desert canes Bababerry and Dormanred. Give it afternoon shade, mulch heavily, correct the alkaline-soil iron chlorosis with a chelated iron, and water steadily.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ },
+ {
+  "crop": "raspberry",
+  "path": "regions.utah_dixie.region_notes_seasoned",
+  "kind": "orthography",
+  "old": "Raspberry is marginal in the St. George Dixie core: this is a hot, low, alkaline-soil site, the kind Utah State University Extension flags as difficult for the crop, while the county's dependable raspberry ground is its higher-elevation towns above the valley. The steer here is toward heat-tolerant, low-chill, fall-bearing (primocane) types, and USU Extension's reasoning is a timing one: a primocane crop comes in on the far side of the summer peak, late enough that the fruit is not sitting through the worst of the desert sun, which is what scorches a summer-bearing crop. Look to the fall-bearing varieties Caroline, Josephine, Polana, Joan J, and Polka, or the low-chill desert canes Bababerry and Dorman Red. Plant dormant canes in late winter, and expect the alkaline soil to drive iron chlorosis, so treat yellowing leaves with a chelated iron. Give the planting afternoon shade to cut sunburn, mulch the shallow roots, use raised beds in heavy soil, and water steadily through the dry heat. Even managed well, treat this as a hard-won, shorter-lived planting than a cooler climate would give.",
+  "new": "Raspberry is marginal in the St. George Dixie core: this is a hot, low, alkaline-soil site, the kind Utah State University Extension flags as difficult for the crop, while the county's dependable raspberry ground is its higher-elevation towns above the valley. The steer here is toward heat-tolerant, low-chill, fall-bearing (primocane) types, and USU Extension's reasoning is a timing one: a primocane crop comes in on the far side of the summer peak, late enough that the fruit is not sitting through the worst of the desert sun, which is what scorches a summer-bearing crop. Look to the fall-bearing varieties Caroline, Josephine, Polana, Joan J, and Polka, or the low-chill desert canes Bababerry and Dormanred. Plant dormant canes in late winter, and expect the alkaline soil to drive iron chlorosis, so treat yellowing leaves with a chelated iron. Give the planting afternoon shade to cut sunburn, mulch the shallow roots, use raised beds in heavy soil, and water steadily through the dry heat. Even managed well, treat this as a hard-won, shorter-lived planting than a cooler climate would give.",
+  "cited_at": null,
+  "reason": "ruling 1: 'Dorman Red' -> 'Dormanred' (the sources' spelling), spelling only"
+ }
+]

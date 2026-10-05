@@ -37,7 +37,7 @@ MUTATIONS = [
     ("ruled_entry_exempted", T, '    "test_annual_calendar.py", "test_perennial_year_gate.py",',
      '    "test_annual_calendar_GONE.py", "test_perennial_year_gate.py",', T, "ruled_files_are_live_pins"),
 ]
-SENTINEL = (T, "(61, 25, 60, 43)", "(61, 25, 60, 44)", "the_registry_population")
+SENTINEL = (T, "(62, 25, 60, 44)", "(62, 25, 60, 45)", "the_registry_population")
 
 def run_driver(tools, f, sel):
     shutil.rmtree(os.path.join(tools, "__pycache__"), ignore_errors=True)

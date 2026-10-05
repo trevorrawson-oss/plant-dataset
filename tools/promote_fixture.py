@@ -48,6 +48,9 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # Housekeeping 60 Phase C (2026-10-04). NEVER AMEND 367c702. Source-truth repair of 8 crops; the base of the
+    # PLA-666 row-figures promote.
+    'afbd4113e94b8fc41776178c31e8e3743ec7eef1c11ed0f57e6cf6dfdd7dcd3e': '367c702',
     # The pre-RGV canonical (2026-07-13): the base_sha of the committed tools/batches/rgv_region_promote.json
     # (8d2e2b0), last written by 7aaba61. Pinned 2026-10-03 (kickoff 60 B5) so test_build_rgv_promote replays the
     # one-shot batch instead of returning early. A data commit, but NEVER AMEND 7aaba61 all the same.
