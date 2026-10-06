@@ -94,7 +94,9 @@ class PinsAreTheMeasurement(unittest.TestCase):
             "pollination", "rotation", "soil", "start_method", "storage", "succession_policy",
             "thinning", "varieties", "watering", "winter_hardiness", "yield_expectations"})
         self.assertEqual(set(G.SIBLING_BLOCKS), {"description", "harvest_ready", "harvest_urgency",
-                                                 "mature_dimensions"})
+                                                 "mature_dimensions", "soil_prep"})
+        # PLA-674 (2026-10-05): the soil_prep citation pair, named in the glossary promote's tools commit.
+        self.assertEqual(G.SIBLING_BLOCKS["soil_prep"], ("soil_prep_beginner", "soil_prep_seasoned"))
         # PLA-10 promote 3 (spec §4.3, plan 58 §8 T5): one crop-root pair cites both height fields.
         self.assertEqual(G.SIBLING_BLOCKS["mature_dimensions"], ("mature_height_ft", "mature_spread_ft"))
         self.assertEqual(set(G.ITEM_FAMILIES), {
@@ -694,3 +696,46 @@ class CLI(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+# ------------------------------------------------------- PLA-674: the soil_prep sibling (2026-10-05)
+class SoilPrepSibling(unittest.TestCase):
+    """PLA-674 writes soil_prep_sources / soil_prep_anchoring_urls on every crop record, null where not assessed
+    (D13), watermelon backfilled. NAMED here so the keys are not UNNAMED (A62 discovery); NOT ARMED: arming would
+    make the ~39 certified crops whose soil_prep prose carries a null sibling NEW uncited blocks, and waiving
+    them grows the known set, which is a ruling (open on PLA-674). Unarmed = the status quo (soil_prep was never
+    ratcheted)."""
+
+    def _with_siblings(self, value=None):
+        d = fresh()
+        for c in d["crops"]:
+            c["soil_prep_sources"] = value
+            c["soil_prep_anchoring_urls"] = None if value is None else {value[0]: {"url": "https://x.edu/a", "verified": "2026-10-05"}}
+        return d
+
+    def test_the_flag_is_unarmed_until_ruled(self):
+        self.assertIs(G.SOIL_PREP_ARMED, False)
+
+    def test_the_sibling_keys_are_not_UNNAMED(self):
+        d = self._with_siblings()
+        for c in d["crops"]:
+            if G.certified(c):
+                self.assertEqual([f for f in G.unnamed_fields(c) if "soil_prep" in f], [], c["slug"])
+
+    def test_unarmed_null_siblings_add_no_uncited_block(self):
+        """ABSOLUTE, not relative: a before/after comparison passes when the skip is gone (the base, carrying the prose
+        and no sibling, would count the block too). Unarmed, no soil_prep identity exists at all, with or without
+        the siblings, on a population that does carry the prose."""
+        d = self._with_siblings()
+        prose = [c for c in d["crops"] if G.certified(c) and c.get("soil_prep_beginner")]
+        self.assertGreaterEqual(len(prose), 30, "the prose population this test inspects")
+        for crop in (d, fresh()):
+            for c in crop["crops"]:
+                if G.certified(c):
+                    self.assertEqual([i for i in G.uncited(c) if "|soil_prep|" in i], [], c["slug"])
+
+    def test_armed_null_siblings_on_prose_crops_are_uncited(self):
+        """Positive control for the flag: armed, a prose-carrying crop with a null sibling IS an uncited block."""
+        d = self._with_siblings()
+        crop = next(c for c in d["crops"] if G.certified(c) and c.get("soil_prep_beginner"))
+        self.assertIn(f"{crop['slug']}|soil_prep|soil_prep_sources", G.uncited(crop, soil_prep_armed=True))

@@ -1,0 +1,330 @@
+"""PLA-673: the glossary sense guard (tools/glossary_sense.py) over the staged match spec.
+
+Pins the live population (232 consumer leaves on 350eda38), proves every exclusion family both on its LIVE leaves and on a
+SYNTHETIC leaf injected into a scratch copy, and proves the refusal spec: a hill-word the spec does not classify fails
+loud rather than taking a gloss. Run under pytest (def test_ functions), via tools/run_test_tree.py --files.
+"""
+import copy, json, os, sys
+
+import pytest
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import glossary_sense as gs  # noqa: E402
+
+ROOT = os.path.dirname(HERE)
+SPEC = gs.load_spec(os.path.join(HERE, "staging", "pla673_674_prep", "glossary_match.json"))
+DATA = json.load(open(os.path.join(ROOT, "crops_data_final.json"), encoding="utf-8"))
+# Classified WITHOUT refusing, so a defect reddens the test that names it instead of aborting collection (rc 2,
+# nothing run): the refusal and the floor are each asserted in their own test below.
+LIVE = gs.classify_dataset(DATA, SPEC, floor=0, refuse=False)
+
+HILL_CROPS = SPEC["terms"]["hill"]["crops"]
+HILLING_CROPS = SPEC["terms"]["hilling"]["crops"]
+RAW_SPEC = json.load(open(os.path.join(HERE, "staging", "pla673_674_prep", "glossary_match.json"), encoding="utf-8"))
+
+
+def crop(slug):
+    return next(c for c in DATA["crops"] if c["slug"] == slug)
+
+
+def inject(slug, path, text):
+    """A scratch copy of the dataset with `text` written at `path` (a list of keys) on crop `slug`."""
+    d = copy.deepcopy(DATA)
+    c = next(c for c in d["crops"] if c["slug"] == slug)
+    o = c
+    for k in path[:-1]:
+        o = o.setdefault(k, {}) if isinstance(k, str) else o[k]
+    o[path[-1]] = text
+    return d
+
+
+def leaf(slug, field, text):
+    return gs.classify_leaf(slug, field, text, SPEC)
+
+
+# ------------------------------------------------------------------ population (inspected-nothing is not clean)
+def test_population_is_232_consumer_leaves():
+    assert LIVE.inspected == 232
+    assert len(LIVE.rows) == 232
+
+
+def test_population_floor_refuses_an_empty_roster():
+    empty = copy.deepcopy(DATA)
+    empty["crops"] = []
+    with pytest.raises(gs.Refused, match="inspected 0"):
+        gs.classify_dataset(empty, SPEC, floor=1)
+
+
+def test_live_roster_is_fully_classified():
+    assert LIVE.unclassified == []
+
+
+def test_the_default_call_accepts_the_live_roster():
+    """The refusing entry point (default floor, refuse=True) passes on canonical."""
+    assert gs.classify_dataset(DATA, SPEC).inspected == 232
+
+
+def test_live_term_counts():
+    by = {}
+    for r in LIVE.rows:
+        by.setdefault(r.term_ids, 0)
+        by[r.term_ids] += 1
+    # D8 (2026-10-05): the 3 pepper/eggplant "beds or hills" leaves moved hill -> none pending the part B2 re-author.
+    assert by == {("hill",): 108, ("hilling",): 60, ("none",): 64}
+
+
+def test_non_consumer_and_structural_paths_are_not_inspected():
+    paths = {(r.crop, r.path) for r in LIVE.rows}
+    assert not any(p.startswith("verification_status") for _, p in paths)
+    assert not any(".sources" in p or "anchoring_urls" in p or "provenance" in p for _, p in paths)
+    assert not any(p.endswith((".id", ".arrangement", ".tip_id", ".stage_id", ".action")) for _, p in paths)
+
+
+@pytest.mark.parametrize("path", [
+    ["regions", "warm_arid", "sources", 0], ["planting_layout", 0, "sources", 0], ["soil_prep_sources", 0],
+    ["planting_layout", 0, "anchoring_urls", "x", "note"], ["regions", "warm_arid", "plantings_provenance"],
+    ["verification_status", "note"],
+])
+def test_injected_non_consumer_leaf_is_not_inspected(path):
+    """Positive control for the consumer filter: no live non-consumer leaf carries a core hill-word, so inject one."""
+    d = copy.deepcopy(DATA)
+    o = next(c for c in d["crops"] if c["slug"] == "peach")
+    for k in path[:-1]:
+        nxt = path[path.index(k) + 1]
+        if isinstance(o, dict):
+            o = o.setdefault(k, [] if isinstance(nxt, int) else {})
+        else:
+            o = o[k]
+    if isinstance(o, list):
+        o.append("Plant in hills (an unscoped crop: inspecting this leaf would refuse).")
+    else:
+        o[path[-1]] = "Plant in hills (an unscoped crop: inspecting this leaf would refuse)."
+    assert gs.classify_dataset(d, SPEC).inspected == 232
+
+
+# ------------------------------------------------------------------ positive controls
+def test_positive_control_planting_hill_on_watermelon():
+    assert leaf("watermelon", "soil_prep_beginner", "Plant seeds in small hills 8 feet apart.") == ("hill",)
+
+
+def test_positive_control_mounded_hills_on_zucchini():
+    assert leaf("zucchini-courgette", "x", "Raised beds or mounded hills improve drainage.") == ("hill",)
+
+
+PEPPER_LEAVES = [("bell-pepper", "diseases.1.prevention_seasoned"), ("banana-pepper", "diseases.1.prevention_seasoned"),
+                 ("eggplant", "diseases.3.prevention_seasoned")]
+
+
+def test_d8_pepper_eggplant_beds_or_hills_live_leaves_are_none_pending_b2():
+    """D8 (2026-10-05): an unsupported claim is tagged none with its reason until part B2 re-authors it."""
+    rows = {(r.crop, r.path): r for r in LIVE.rows if r.crop in ("bell-pepper", "banana-pepper", "eggplant")}
+    assert sorted(rows) == sorted(PEPPER_LEAVES)
+    for k in PEPPER_LEAVES:
+        assert rows[k].term_ids == ("none",)
+        assert [m.exclusion for m in rows[k].matches] == ["pepper-eggplant-beds-or-hills"]
+    ex = next(e for e in SPEC["exclusions"] if e["id"] == "pepper-eggplant-beds-or-hills")
+    assert ex["why"] == "unsupported claim, re-author pending (part B2)"
+
+
+def test_d8_other_hill_text_on_pepper_refuses():
+    """Pepper and eggplant are in NO term's scope, so any other hill-word there fails loud."""
+    for slug in ("bell-pepper", "banana-pepper", "eggplant"):
+        with pytest.raises(gs.Refused, match="UNCLASSIFIED"):
+            gs.classify_dataset(inject(slug, ["description_beginner"], "Plant in hills."), SPEC)
+
+
+def test_d8_beds_or_hills_on_a_hill_crop_is_not_excluded():
+    """The D8 exclusion is crop-scoped: the same words on a cucurbit stay `hill`."""
+    assert leaf("pumpkin", "x", "Plant on raised beds or hills.") == ("hill",)
+
+
+# ------------------------------------------------------------------ exclusion 1: potato, incl. its noun "hill"
+POTATO_NOUN = [
+    "growth_stages.3.user_action_seasoned", "growth_stages.4.user_action_seasoned",
+    "tips_by_stage.bulking.1.text_seasoned", "tips_by_stage.harvest.0.text_seasoned", "harvest_ready_seasoned",
+]
+
+
+def test_potato_noun_hill_live_leaves_are_hilling_never_hill():
+    rows = {r.path: r for r in LIVE.rows if r.crop == "potato"}
+    noun = [p for p, r in rows.items() if any(m.form == "hill" and m.noun for m in r.matches)]
+    assert sorted(noun) == sorted(POTATO_NOUN)
+    for p in POTATO_NOUN:
+        assert rows[p].term_ids == ("hilling",)
+
+
+def test_potato_all_44_live_leaves_are_hilling():
+    rows = [r for r in LIVE.rows if r.crop == "potato"]
+    assert len(rows) == 44
+    assert {r.term_ids for r in rows} == {("hilling",)}
+
+
+def test_potato_noun_hill_synthetic():
+    d = inject("potato", ["harvest_ready_beginner"], "Dig at the edge of a hill and re-cover.")
+    rows = [r for r in gs.classify_dataset(d, SPEC).rows if r.crop == "potato" and r.path == "harvest_ready_beginner"]
+    assert [r.term_ids for r in rows] == [("hilling",)]
+
+
+# ------------------------------------------------------------------ exclusion 2: every hilling crop
+@pytest.mark.parametrize("slug", HILLING_CROPS)
+def test_every_hilling_crop_live_leaves_are_hilling(slug):
+    rows = [r for r in LIVE.rows if r.crop == slug]
+    assert rows, f"{slug}: no live hill-word leaf (the parametrization would be vacuous)"
+    assert {r.term_ids for r in rows} == {("hilling",)}
+
+
+@pytest.mark.parametrize("slug", HILLING_CROPS)
+def test_every_hilling_crop_synthetic_hilling_text(slug):
+    assert leaf(slug, "x", "Hill a little soil around the base, and keep hilling.") == ("hilling",)
+
+
+@pytest.mark.parametrize("text", [
+    "Sow 4 to 5 seeds per hill.", "Corn may also be planted in hills.", "Hills spaced 2.5 feet apart.",
+    "Plant seeds to each hill.",
+])
+def test_planting_group_sense_on_a_hilling_crop_refuses(text):
+    """Iowa State's sweet-corn page (cited on all four corns) uses the PLANTING sense; it must not take the hilling gloss."""
+    with pytest.raises(gs.Refused, match="UNCLASSIFIED"):
+        gs.classify_dataset(inject("sweet-corn", ["description_beginner"], text), SPEC)
+
+
+@pytest.mark.parametrize("text", ["Hill soil up around the vines.", "Keep hilling.", "Hilled plants."])
+def test_hilling_sense_on_a_hill_crop_refuses(text):
+    with pytest.raises(gs.Refused, match="UNCLASSIFIED"):
+        gs.classify_dataset(inject("pumpkin", ["description_beginner"], text), SPEC)
+
+
+# ------------------------------------------------------------------ exclusion 3: strawberry "hill system"
+def test_strawberry_hill_system_live_leaves_are_none():
+    rows = [r for r in LIVE.rows if r.crop == "strawberry"]
+    assert len(rows) == 7
+    assert {r.term_ids for r in rows} == {("none",)}
+    assert {m.exclusion for r in rows for m in r.matches} == {"strawberry-hill-system"}
+
+
+@pytest.mark.parametrize("text", ["Use a hill system.", "the plasticulture (annual-hill) system", "an annual-hill bed"])
+def test_strawberry_hill_system_synthetic(text):
+    assert leaf("strawberry", "x", text) == ("none",)
+
+
+def test_strawberry_other_hill_word_refuses():
+    with pytest.raises(gs.Refused, match="UNCLASSIFIED"):
+        gs.classify_dataset(inject("strawberry", ["description_beginner"], "Plant in hills."), SPEC)
+
+
+# ------------------------------------------------------------------ exclusion 4: black/purple raspberry "hill"
+UMN_RASPBERRY = ("Set black and purple raspberries 4 feet apart because these types do not produce root suckers, "
+                 "they will create what is commonly called a hill.")
+
+
+def test_raspberry_has_no_live_hill_leaf():
+    assert [r for r in LIVE.rows if r.crop == "raspberry"] == []
+
+
+def test_raspberry_cane_hill_synthetic_is_none_never_hill():
+    d = inject("raspberry", ["planting_method_notes"], UMN_RASPBERRY)
+    rows = [r for r in gs.classify_dataset(d, SPEC).rows if r.crop == "raspberry"]
+    assert [r.term_ids for r in rows] == [("none",)]
+    assert rows[0].matches[0].exclusion == "raspberry-cane-hill"
+
+
+# ------------------------------------------------------------------ exclusion 5: place and variety names
+NAMES = [
+    ("rosemary", "rosemary-hill-hardy", 31),
+    ("rosemary", "rosemary-madalene-hill", 1),
+    ("peach", "texas-hill-country", 1), ("nectarine", "texas-hill-country", 1),
+    ("cherry-sweet", "texas-hill-country", 2), ("persimmon", "texas-hill-country", 2),
+    ("lemongrass", "texas-hill-country", 1),
+    ("apple", "beverly-hills-apple", 2),
+    ("oregano", "mediterranean-hills", 1), ("lavender", "mediterranean-hills", 1),
+    ("orange-navel", "hawaii-hills", 5), ("mandarin-clementine", "hawaii-hills", 5), ("snow-peas", "hawaii-hills", 1),
+]
+
+
+@pytest.mark.parametrize("slug,exclusion,n", NAMES)
+def test_name_exclusions_live(slug, exclusion, n):
+    rows = [r for r in LIVE.rows if r.crop == slug and any(m.exclusion == exclusion for m in r.matches)]
+    assert len(rows) == n
+    assert {r.term_ids for r in rows} == {("none",)}
+
+
+@pytest.mark.parametrize("slug,text", [
+    ("watermelon", "Grown commercially in the Texas Hill Country."),
+    ("pumpkin", "the texas hill country"),
+    ("pumpkin", "a pumpkin named for Beverly Hills"),
+    ("cantaloupe", "native to Mediterranean hills"),
+    ("watermelon", "It does better up in the cooler hills."),
+    ("cucumber", "a strain like Hill Hardy"),
+])
+def test_name_exclusions_hold_on_a_hill_crop(slug, text):
+    """The exclusion is applied BEFORE the term, so a place name on a hill crop is `none`, not `hill`."""
+    assert leaf(slug, "x", text) == ("none",)
+
+
+def test_unlisted_place_name_on_an_unscoped_crop_refuses():
+    with pytest.raises(gs.Refused, match="UNCLASSIFIED"):
+        gs.classify_dataset(inject("peach", ["description_beginner"], "Grown in the Ozark hills."), SPEC)
+
+
+# ------------------------------------------------------------------ the spec itself
+def test_term_crop_scopes_are_disjoint_and_exist():
+    slugs = {c["slug"] for c in DATA["crops"]}
+    assert not set(HILL_CROPS) & set(HILLING_CROPS)
+    assert set(HILL_CROPS) <= slugs and set(HILLING_CROPS) <= slugs
+    assert len(HILL_CROPS) == 12 and len(HILLING_CROPS) == 11
+
+
+def test_every_exclusion_fires_on_live_or_is_a_declared_future_guard():
+    fired = {m.exclusion for r in LIVE.rows for m in r.matches if m.exclusion}
+    declared = {e["id"] for e in SPEC["exclusions"]}
+    assert declared - fired == {"raspberry-cane-hill"}
+
+
+# ------------------------------------------------------------------ the ruled glossary shape (2026-10-05)
+def test_spec_is_the_ruled_glossary_match_shape():
+    """Each term carries exactly one matcher in `match`, with exactly the ruled matcher keys."""
+    terms = {k: v for k, v in RAW_SPEC.items() if not k.startswith("_")}
+    assert set(terms) == {"hill", "hilling"}
+    for tid, entry in terms.items():
+        assert set(entry) == {"match"}
+        assert isinstance(entry["match"], list) and len(entry["match"]) == 1
+        assert set(entry["match"][0]) == {"sense", "forms", "crops", "refuse_on", "exclusions"}
+
+
+def test_exclusions_are_identical_across_terms():
+    assert RAW_SPEC["hill"]["match"][0]["exclusions"] == RAW_SPEC["hilling"]["match"][0]["exclusions"]
+
+
+def test_diverging_exclusions_refuse():
+    bad = copy.deepcopy(RAW_SPEC)
+    bad["hilling"]["match"][0]["exclusions"] = bad["hilling"]["match"][0]["exclusions"][:-1]
+    with pytest.raises(gs.Refused, match="exclusions differ"):
+        gs.build_spec(bad)
+
+
+def test_glossary_entries_with_the_seven_keys_load():
+    """The guard reads the dataset's glossary entries directly (the seven ruled keys, match among them)."""
+    entries = {tid: {"term": tid, "definition_beginner": "x", "definition_seasoned": "x", "sources": None,
+                     "anchoring_urls": None, "field_additions": [], "match": RAW_SPEC[tid]["match"]}
+               for tid in ("hill", "hilling")}
+    spec = gs.build_spec(entries)
+    assert gs.classify_dataset(DATA, spec).inspected == 232
+
+
+@pytest.mark.parametrize("mutate", [
+    lambda m: m.update(id="hill"),                     # an inner id: the app projection throws on it
+    lambda m: m.pop("refuse_on"),                      # a missing matcher key
+], ids=["extra-inner-id", "missing-refuse_on"])
+def test_malformed_matcher_refuses(mutate):
+    bad = copy.deepcopy(RAW_SPEC)
+    mutate(bad["hill"]["match"][0])
+    with pytest.raises(gs.Refused, match="must be one matcher"):
+        gs.build_spec(bad)
+
+
+def test_two_matchers_refuse():
+    bad = copy.deepcopy(RAW_SPEC)
+    bad["hill"]["match"].append(copy.deepcopy(bad["hill"]["match"][0]))
+    with pytest.raises(gs.Refused, match="must be one matcher"):
+        gs.build_spec(bad)

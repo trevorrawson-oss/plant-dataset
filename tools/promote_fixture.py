@@ -48,6 +48,8 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # PLA-666 row figures (2026-10-05). NEVER AMEND ffbbc35. The base of the PLA-673 glossary promote.
+    '350eda387fbed55464b16688a3bdc3263214b7c20631da98c7bbcb79f1d487c7': 'ffbbc35',
     # Housekeeping 60 Phase C (2026-10-04). NEVER AMEND 367c702. Source-truth repair of 8 crops; the base of the
     # PLA-666 row-figures promote.
     'afbd4113e94b8fc41776178c31e8e3743ec7eef1c11ed0f57e6cf6dfdd7dcd3e': '367c702',

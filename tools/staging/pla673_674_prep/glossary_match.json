@@ -1,0 +1,45 @@
+{
+  "_note": "PLA-673 sense-guard match spec in the RULED glossary shape (2026-10-05): each term's `match` is a list holding one matcher object with sense, forms, crops, refuse_on and exclusions. These `match` lists land verbatim as glossary.<term>.match; the entry keeps only its seven ruled keys. Read by tools/glossary_sense.py. Semantics: (1) exclusions consume their span first and tag it `none` (both terms carry the IDENTICAL exclusion list, so exclusion-first holds whichever term a reader starts from; the guard refuses if they differ); (2) a remaining hill-word is tagged by the ONE term whose `crops` holds the crop, if its form is in `forms` and no `refuse_on` pattern matches its sentence; (3) anything else is UNCLASSIFIED and the guard refuses.",
+  "hill": {
+    "match": [
+      {
+        "sense": "planting in hills: a small group of seeds sown together in one spot (some guides raise it into a low mound)",
+        "forms": ["hill", "hills"],
+        "crops": ["pumpkin", "butternut-squash", "acorn-squash", "spaghetti-squash", "watermelon", "honeydew-melon", "cantaloupe", "slicing-cucumber", "pickling-cucumber", "cucumber", "zucchini-courgette", "yellow-summer-squash"],
+        "refuse_on": ["\\bhill(ed|ing)?\\s+(a\\s+little\\s+)?(soil|up|mulch)\\b", "\\bhilled\\b", "\\bhilling\\b"],
+        "exclusions": [
+          {"id": "rosemary-hill-hardy", "pattern": "\\bHill\\s+Hardy\\b", "why": "rosemary cultivar 'Hill Hardy'"},
+          {"id": "rosemary-madalene-hill", "pattern": "\\bMadalene\\s+Hill\\b", "why": "cultivar synonym named for Madalene Hill"},
+          {"id": "texas-hill-country", "pattern": "\\bhill\\s+country\\b", "why": "place: Texas Hill Country (both cases occur)"},
+          {"id": "beverly-hills-apple", "pattern": "\\bBeverly\\s+Hills\\b", "why": "apple cultivar 'Beverly Hills'"},
+          {"id": "mediterranean-hills", "pattern": "\\bMediterranean\\s+hills\\b", "why": "landform: native habitat (oregano, lavender)"},
+          {"id": "hawaii-hills", "pattern": "\\b(cooler|up\\s+in\\s+the)\\s+hills\\b|\\bup\\s+in\\s+the\\s+cooler\\s+hills\\b", "why": "landform: Hawaii upland elevation (citrus, snow peas)"},
+          {"id": "strawberry-hill-system", "pattern": "\\b(annual-hill|hill)\\s+system\\b|\\bannual-hill\\b", "why": "strawberry planting system (matted row vs hill system / plasticulture annual-hill)"},
+          {"id": "raspberry-cane-hill", "pattern": "\\bhills?\\b", "crops": ["raspberry"], "why": "black/purple raspberry 'hill' = the cane clump from one crown (UMN 2e413287: 'the \"hill\" is not made by mounding the soil')"},
+          {"id": "pepper-eggplant-beds-or-hills", "pattern": "\\bbeds\\s+or\\s+hills\\b", "crops": ["bell-pepper", "banana-pepper", "eggplant"], "why": "unsupported claim, re-author pending (part B2)"}
+        ]
+      }
+    ]
+  },
+  "hilling": {
+    "match": [
+      {
+        "sense": "hilling: drawing soil or compost up around growing plants (potato, root crops, alliums, corn, brussels sprouts); includes potato's noun `hill` for the hilled mound",
+        "forms": ["hill", "hills", "hilled", "hilling"],
+        "crops": ["potato", "carrot", "parsnip", "leek", "brussels-sprouts", "sweet-corn", "field-corn", "popcorn", "flint-corn", "onion", "shallot"],
+        "refuse_on": ["\\bper\\s+hill\\b", "\\bin\\s+hills\\b", "\\bhills?\\s+(spaced|apart)\\b", "\\bseeds?\\s+(in|to)\\s+(a|each)\\s+hill\\b"],
+        "exclusions": [
+          {"id": "rosemary-hill-hardy", "pattern": "\\bHill\\s+Hardy\\b", "why": "rosemary cultivar 'Hill Hardy'"},
+          {"id": "rosemary-madalene-hill", "pattern": "\\bMadalene\\s+Hill\\b", "why": "cultivar synonym named for Madalene Hill"},
+          {"id": "texas-hill-country", "pattern": "\\bhill\\s+country\\b", "why": "place: Texas Hill Country (both cases occur)"},
+          {"id": "beverly-hills-apple", "pattern": "\\bBeverly\\s+Hills\\b", "why": "apple cultivar 'Beverly Hills'"},
+          {"id": "mediterranean-hills", "pattern": "\\bMediterranean\\s+hills\\b", "why": "landform: native habitat (oregano, lavender)"},
+          {"id": "hawaii-hills", "pattern": "\\b(cooler|up\\s+in\\s+the)\\s+hills\\b|\\bup\\s+in\\s+the\\s+cooler\\s+hills\\b", "why": "landform: Hawaii upland elevation (citrus, snow peas)"},
+          {"id": "strawberry-hill-system", "pattern": "\\b(annual-hill|hill)\\s+system\\b|\\bannual-hill\\b", "why": "strawberry planting system (matted row vs hill system / plasticulture annual-hill)"},
+          {"id": "raspberry-cane-hill", "pattern": "\\bhills?\\b", "crops": ["raspberry"], "why": "black/purple raspberry 'hill' = the cane clump from one crown (UMN 2e413287: 'the \"hill\" is not made by mounding the soil')"},
+          {"id": "pepper-eggplant-beds-or-hills", "pattern": "\\bbeds\\s+or\\s+hills\\b", "crops": ["bell-pepper", "banana-pepper", "eggplant"], "why": "unsupported claim, re-author pending (part B2)"}
+        ]
+      }
+    ]
+  }
+}

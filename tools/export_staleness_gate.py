@@ -73,6 +73,9 @@ APP_ARTIFACTS = (
     os.path.join("src", "data", "region-chill.json"),
     os.path.join("src", "data", "variety-index.json"),
     os.path.join("src", "data", "control-methods.json"),
+    # PLA-673 (2026-10-05): the glossary, built from the top-level `glossary` key by plant-app 0f3864ae
+    # (written only when canonical carries the key). Added in the SAME commit as the glossary promote.
+    os.path.join("src", "data", "glossary.json"),
 )
 
 # The submodule path inside plant-astro that carries this repo.

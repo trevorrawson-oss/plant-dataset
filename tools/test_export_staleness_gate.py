@@ -173,6 +173,19 @@ class TestE1AppProvenance(_Fixture):
         self.assertTrue(any("E1" in x for x in self.run_gate()))
 
 
+class TestAppArtifactSet(unittest.TestCase):
+    def test_the_artifact_set_is_the_ruled_set(self):
+        """PLA-673 (2026-10-05): the glossary promote adds src/data/glossary.json, in the same commit that lands the
+        top-level `glossary` key (plant-app 0f3864ae writes it only when canonical carries the key)."""
+        self.assertEqual(tuple(gate.APP_ARTIFACTS), (
+            os.path.join("assets", "data", "guides.dataset"),
+            os.path.join("src", "data", "region-chill.json"),
+            os.path.join("src", "data", "variety-index.json"),
+            os.path.join("src", "data", "control-methods.json"),
+            os.path.join("src", "data", "glossary.json"),
+        ))
+
+
 class TestE2AppIntegrity(_Fixture):
     def test_a_hand_edited_artifact_is_caught(self):
         """The stamp cannot be the only evidence: an artifact edited after the build

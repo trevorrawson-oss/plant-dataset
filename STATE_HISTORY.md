@@ -4,6 +4,40 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-10-06 -- PLA-673/674 GLOSSARY LANDED (`350eda38` -> `3ccc25f1`)
+
+ONE promote (`tools/promote_pla673_glossary.py`, new; stage `tools/staging/pla673_glossary/`, built by its `build_stage.py`
+from the ruled inputs in `tools/staging/pla673_674_prep/`). The dataset's first term glossary, the PLA-674 soil_prep
+citation siblings, and the ten document-level ids the glossary cites. Run by Claude Code on Trevor's go (2026-10-06).
+
+* **glossary** (new top-level key): `hill`, `hilling`, each exactly the seven ruled keys (term, definition_beginner,
+  definition_seasoned, sources, anchoring_urls, field_additions, match). 34 sentences (claude.ai, approved round 2;
+  the brief counted 33, the text has 34), each mapped to quotes proven against hashed bytes (64 EVIDENCE rows; guard GL
+  requires each definition == its evidenced sentences joined). Sources document-level only (STOP 2). `match` = the
+  ruled matcher; the sense guard classifies all 232 hill-word consumer leaves (108 hill / 60 hilling / 64 none; the 3
+  pepper/eggplant 'beds or hills' leaves none, pending the part B2 re-author).
+* **PLA-674**: soil_prep_sources + soil_prep_anchoring_urls on ALL 128 crop records (D14, shells included), placed after
+  the last soil_prep_* key; null on 127 (D13, not assessed); watermelon backfilled [uga_ext, clemson_hgic] from the 14
+  Housekeeping 60 Phase C rows. Known divergence: PLA-581 / PLA-10 left shells key-absent (PLA-687).
+* **source_catalog +10**: purdue_ext_ho8wa, csu_ext_cucurbits_07609, nmsu_ext_cr457, uga_b577_home_gardening,
+  umn_ext_potatoes, umn_ext_carrots_parsnips, umn_ext_leeks, umn_ext_cucumbers, usu_ext_leeks,
+  clemson_hgic_homegrown_grits (pinned 65d1d7cb; d533df5c recorded). Crop anchors keep portal ids (PLA-686 for B577).
+* **Tools, same commit**: export_staleness_gate APP_ARTIFACTS + src/data/glossary.json; sourced_block_ratchet_gate names
+  soil_prep (SOIL_PREP_ARMED = False, arming is open on PLA-674); promote_fixture COMMIT_FOR 350eda38 -> ffbbc35;
+  live_pin_registry (+test_glossary_sense live, promote suite exempt; 64/26/68/45); new glossary_sense (+test, +mutate),
+  promote suite and harness. MANIFEST +3 (Purdue 740cafac, CSU 751295b3, Clemson eggplant 635ebdeb).
+* **Gauntlet**: promote --check then --expect-sha (post == an independent minimal apply); gate_all PASS 121/121,
+  launch-ready 114; release_verify: one concern, reference lettuce-leaf changed (its two null siblings only; roster-wide
+  by design, the 2026-07-12 BENIGN precedent); affected set PASS 628 + 3/3 scripts; harnesses promote 54/54, glossary
+  sense 28/28, citation ratchet 31/31 (+15/15, 4/4), export staleness 13/13. DEVIATION: the promote was written before
+  its suite (stand-ins: the independent POST_SHA and the harness, whose first run found 5 suite gaps, closed).
+* **Consumers**: plant-app fast-forwarded to 0f3864ae and re-exported at 3ccc25f1 (5 stamped artifacts incl.
+  glossary.json; NOT committed, re-run build:guides after the dataset commit so the stamp names it). export_staleness
+  E1/E2 clean; E3 red until the plant-astro submodule bump (the astro session's job). Shared match fixture 01912d65
+  for the consumers' step 3.
+* Records: Linear 'PLA-673 / PLA-674 step 2A prep: DECISIONS' (sections 8-10), packets 1/2/B2/C, the evidence check
+  (34 of 34), PLA-684 / PLA-686 / PLA-687.
+
 ## 2026-10-05 -- PLA-666 ROW FIGURES LANDED (`afbd4113` -> `350eda38`)
 
 ONE promote (`tools/promote_pla666_row_figures.py`, new, tools `2d28e63`; stage `tools/staging/pla666_row_figures/`, built by its

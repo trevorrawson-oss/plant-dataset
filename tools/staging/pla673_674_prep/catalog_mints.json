@@ -1,0 +1,55 @@
+{
+  "_note": "PLA-673 prep, STAGED catalog entries (not in canonical). Document id beside portal id, the convention since PLA-8. Titles read off the hashed bytes. Part B rulings 2026-10-05: D4 -> mint nmsu_ext_cr457 (CR457.pdf is hashed and cited on 3 tomatoes only under the portal id nmsu_ext); D6 -> mint uga_b577_home_gardening (uga_b577's catalog url is the one-page planting-chart PDF, MANIFEST a9ed2655, a different document from the bulletin page 61333de7). C1206 and NCSU ch. 16 reuse their existing ids.",
+  "purdue_ext_ho8wa": {
+    "id": "purdue_ext_ho8wa",
+    "name": "Purdue Extension HO-8-W-A -- Growing Cucumbers, Melons, Squash, Pumpkins and Gourds",
+    "title": "Growing Cucumbers, Melons, Squash, Pumpkins and Gourds",
+    "publisher": "Purdue University Cooperative Extension Service, Department of Horticulture",
+    "url": "https://edustore.purdue.edu/media/wysiwyg/downloads/pubs/HO/HO-8-W-A.pdf",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-10",
+    "tier": "T1",
+    "citable_for": "Purdue HO-8-W (B. Rosie Lerner and Michael N. Dana; revised 4/01): planting cucurbits in hills. The only page measured for PLA-673 that sizes the mound: \"To form a hill, mound soil to make a low, broad hill about 8-10 inches high.\" Also: 4-6 seeds per hill, hills 4-8 feet apart by variety, thin to 2-3 plants per hill. No hill diameter is stated. The document's header prints HO-8-W; the edustore filename is HO-8-W-A. Parent portal entry: purdue_ext.",
+    "_admission_provenance": "Minted (staged) 2026-10-05 for PLA-673. Raw bytes sha256 740cafac55dd6af4815320a980c96395be32c5721d15f7cee8e61f5693e8ff79 (153,043 bytes), fetched 2026-10-05 with urllib browser+plain UA (byte-identical), equal to the 2026-10-04 housekeeping scratch hash. The extmedia url 404s; this edustore copy is the live one."
+  },
+  "csu_ext_cucurbits_07609": {
+    "id": "csu_ext_cucurbits_07609",
+    "name": "CSU Extension Fact Sheet 7.609 (Cucumbers, Pumpkins, Squash, and Melons)",
+    "title": "Cucumbers, Pumpkins, Squash, and Melons",
+    "publisher": "CSU Extension",
+    "url": "https://extension.colostate.edu/resource/cucumbers-pumpkins-squash-and-melons/",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-10",
+    "tier": "T1",
+    "citable_for": "CSU Fact Sheet 7.609 (J. Murgel, C.W. Basham, J.E. Ells; published November 1999, reviewed August 2025): cucurbits \"are usually planted in hills or mounds so excess water drains away from the seedlings\"; five or six seeds together in hills 4 to 6 feet apart; thin each hill to the two or three strongest seedlings. States no mound height. Parent portal entry: csu_ext.",
+    "_admission_provenance": "Minted (staged) 2026-10-05 for PLA-673. Raw bytes sha256 751295b31e9054c8d7e8ad6166cbc49a5286cd0fc01b5c46c95d68611a8369c1 (109,058 bytes), fetched 2026-10-05 with urllib browser+plain UA (byte-identical). The 2026-10-04 scratch copy hashed de1b2e1a: same length and same norm_text; the one differing byte is a weekly analytics-script stamp (stats.wp.com e-202640.js -> e-202641.js)."
+  },
+  "nmsu_ext_cr457": {
+    "id": "nmsu_ext_cr457",
+    "name": "NMSU Circular 457 -- Home Vegetable Gardening in New Mexico",
+    "title": "Home Vegetable Gardening in New Mexico",
+    "publisher": "New Mexico State University, College of Agricultural, Consumer and Environmental Sciences, Cooperative Extension Service",
+    "url": "https://pubs.nmsu.edu/_circulars/CR457.pdf",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-10",
+    "tier": "T1",
+    "citable_for": "NMSU Circular 457 (revised by Stephanie Walker and Israel Joukhadar): the hill method of direct seeding (\"use a hoe to make a hole in the soil, then drop four or five seeds in the bottom of the hole\"; \"thin to one to three of the most vigorous seedlings after emergence when plants have their first true leaves\"), the crops often planted in hills (squash, melons, cucumbers, corn, chile), and squash hill spacings (bush 24-45 in. apart in rows 36-60 in.; vining 36-96 in. apart in rows 72-96 in.). Companion: Circular 457-B (nmsu_ext_cr457b). Parent portal entry: nmsu_ext.",
+    "_admission_provenance": "Minted (staged) 2026-10-05 for PLA-673 (D4). Raw bytes sha256 25dbbeb414fb39a5bd78c71de835ec5e032326081a88baca43e74fcad6c5fae8 (9,167,400 bytes), MANIFEST row from PLA-10 promote 1 session 2 (2026-10-01, urllib browser+plain UA byte-identical). Already anchored on cherry-tomato, roma-tomato and grape-tomato under the portal id nmsu_ext; those anchors are not re-keyed here."
+  },
+  "uga_b577_home_gardening": {
+    "id": "uga_b577_home_gardening",
+    "name": "UGA Extension Bulletin 577 -- Home Gardening",
+    "title": "Home Gardening",
+    "publisher": "University of Georgia Extension",
+    "url": "https://fieldreport.caes.uga.edu/publications/B577/",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-10",
+    "tier": "T1",
+    "citable_for": "UGA Bulletin 577, the full Home Gardening bulletin page (distinct from its one-page Home Garden Planting Chart PDF, which is uga_b577). Defines planting in hills against drills: \"a drill is a single row of plants spaced more-or-less evenly. a hill is a cluster of plants, not a mound of soil.\" Parent portal entry: uga_ext; sibling: uga_b577 (the chart).",
+    "_admission_provenance": "Minted (staged) 2026-10-05 for PLA-673 (D6: one document, one id). Raw bytes sha256 61333de7f17ad9b4858596e438d9ed4daeba4dc9dc90e8dcd34cf771258965c4 (342,292 bytes), MANIFEST row from PLA-10 promote 1 session 3 (urllib browser UA; plain UA 403). Re-fetched 2026-10-05: ffadc55a, norm_text identical (per-request element ids only). The url 301s to /B577/home-gardening/. 7 live anchors (asparagus 4, beet 3) carry this page's url under uga_b577; not re-keyed here."
+  }
+}

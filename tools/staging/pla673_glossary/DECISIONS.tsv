@@ -1,0 +1,14 @@
+crop	path	decision	reason
+<roster>	soil_prep_sources	null-not-assessed	D13 (Trevor 2026-10-05): null = not assessed (PLA-581); [] would read as assessed, no sources
+<roster>	soil_prep_anchoring_urls	null-not-assessed	D13: null = not assessed; astro 23df2d5 accepts null or a non-empty source-id map
+<roster>	soil_prep_sources	all-128-records	D14 (Trevor 2026-10-05): all 128 crop records incl. the 7 uncertified shells (field-inventory rule)
+<roster>	soil_prep_sources	known-divergence	PLA-581 critical_warnings and PLA-10 planting_layout left the 7 shells key-absent; this key does not (D14). Backlog issue filed to backfill those keys null on shells for uniformity
+<roster>	soil_prep_sources	placement	D15: immediately after the crop's last soil_prep_* key (the mature_dimensions_* precedent); appended at the end on the 88 records with no soil_prep prose
+watermelon	soil_prep_sources	backfill	PLA-674 scope 3: the 14 Housekeeping 60 Phase C EVIDENCE rows for soil_prep_*, re-proven against hashed bytes; closes Phase C's record-only step
+<glossary>	hill	definitions-verbatim	approved by Trevor 2026-10-05 (round 2: beginner 2 -> 2+2b, seasoned +2b); 16 sentences
+<glossary>	hilling	definitions-verbatim	approved by Trevor 2026-10-05 (round 2: beginner 4 -> 4+4b, seasoned 7 replaced); 18 sentences
+<glossary>	hill	document-level-ids	STOP 2 option (a) widened: umn_ext -> umn_ext_cucumbers
+<glossary>	hilling	document-level-ids	STOP 2 option (a) widened: umn_ext -> umn_ext_potatoes / _carrots_parsnips / _leeks; usu_ext -> usu_ext_leeks; clemson_hgic -> clemson_hgic_homegrown_grits
+<glossary>	hill	match-pepper-held	D8: pepper/eggplant 'beds or hills' tagged none (unsupported claim, re-author pending part B2)
+<catalog>	clemson_hgic_homegrown_grits	pinned-sha	pinned to 65d1d7cb (the quoted bytes); d533df5c, a second MANIFEST row for the url, recorded
+<catalog>	uga_b577_home_gardening	one-document-one-id	D6: uga_b577 is the planting-chart PDF (a9ed2655); 7 crop anchors carrying the bulletin url under uga_b577 are NOT re-keyed here (PLA-686)

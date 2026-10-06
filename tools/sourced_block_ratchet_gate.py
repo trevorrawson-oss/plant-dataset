@@ -68,6 +68,9 @@ SIBLING_BLOCKS = {
     "harvest_urgency": ("harvest_urgency",),
     # PLA-10 promote 3 (spec §4.3, plan 58 §8 T5): one crop-root pair cites BOTH height fields.
     "mature_dimensions": ("mature_height_ft", "mature_spread_ft"),
+    # PLA-674 (2026-10-05): the soil_prep citation pair, written on every crop record by the PLA-673 glossary promote
+    # (null = not assessed, D13; watermelon backfilled). Named here so the keys are not UNNAMED; see SOIL_PREP_ARMED.
+    "soil_prep": ("soil_prep_beginner", "soil_prep_seasoned"),
 }
 # A named sibling block whose ratchet is behind a flag. NAMED from the tools commit (so its keys are never
 # UNNAMED), RATCHETED only once its flag flips, in the data commit that writes the siblings: armed on a
@@ -75,6 +78,10 @@ SIBLING_BLOCKS = {
 # test_sourced_block_ratchet_gate pins the flag to the data (armed iff a certified crop carries the key).
 # ARMED 2026-10-03 in the commit that wrote b331e5f2 (PLA-10 promote 3: 59 certified crops carry the pair).
 MATURE_DIMENSIONS_ARMED = True
+# soil_prep: NAMED, NOT ARMED (PLA-674, 2026-10-05). Armed, every certified crop whose soil_prep prose carries a null
+# sibling (about 39) would be a NEW uncited block; waiving them grows the known set, which is a ruling still open on
+# PLA-674. Unarmed is the status quo: soil_prep was never ratcheted. Flip it with that ruling, never silently.
+SOIL_PREP_ARMED = False
 # List families: name -> (locator, identity key or None for index, parent block covering it or None)
 ITEM_FAMILIES = {
     "pests": (("pests",), "id", None),
@@ -221,10 +228,12 @@ def _item_label(item, i, key):
     return f"[{i}]"
 
 
-def blocks(crop, mature_dimensions_armed=None):
+def blocks(crop, mature_dimensions_armed=None, soil_prep_armed=None):
     """Every NAMED block on this crop that carries authored content: [(identity, cited)]."""
     if mature_dimensions_armed is None:
         mature_dimensions_armed = MATURE_DIMENSIONS_ARMED
+    if soil_prep_armed is None:
+        soil_prep_armed = SOIL_PREP_ARMED
     slug = crop.get("slug")
     out = []
 
@@ -237,6 +246,8 @@ def blocks(crop, mature_dimensions_armed=None):
             add(name, "sources", is_cited(b.get("sources")))
     for name, carriers in SIBLING_BLOCKS.items():
         if name == "mature_dimensions" and not mature_dimensions_armed:
+            continue
+        if name == "soil_prep" and not soil_prep_armed:
             continue
         if any(has_content(crop.get(k)) for k in carriers):
             add(name, f"{name}_sources", is_cited(crop.get(f"{name}_sources")))
@@ -262,8 +273,8 @@ def blocks(crop, mature_dimensions_armed=None):
     return out
 
 
-def uncited(crop, mature_dimensions_armed=None):
-    return sorted(ident for ident, cited in blocks(crop, mature_dimensions_armed) if not cited)
+def uncited(crop, mature_dimensions_armed=None, soil_prep_armed=None):
+    return sorted(ident for ident, cited in blocks(crop, mature_dimensions_armed, soil_prep_armed) if not cited)
 
 
 # ---------------------------------------------------------------- DISCOVERY
