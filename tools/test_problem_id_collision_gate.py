@@ -90,7 +90,12 @@ CANON = os.path.join(REPO, "crops_data_final.json")
 # prose and 25 spelling-only edits; no problem id, pest or disease entry added, removed or renamed. The gate's whole
 # output was run on both states and is byte-identical (50 lines, 36 findings / 12 open / 24 registered); every count
 # test in this file was run on the post-state and passed (only this preflight reddened), so 36 / 24 / 12 hold.
-PINNED_SHA = "350eda387fbed55464b16688a3bdc3263214b7c20631da98c7bbcb79f1d487c7"
+# RE-MEASURED 2026-10-06 (PLA-673 glossary 350eda38 -> 3ccc25f1, which MISSED this re-measure and left the preflight
+# red on main from fbe11bc; and PLA-673 part B2, 3ccc25f1 -> aaf004a2). Glossary top-level key, soil_prep siblings on all
+# 128 records, prose on 6 crops; no problem id, pest or disease entry added, removed or renamed. The gate's whole output
+# was run on all three states (and on aeeb5789, the B2 bundle before usu_ext came off parsnip) and is byte-identical (50 lines, 36 findings / 12 open / 24 registered); every count test
+# in this file was run on the post-state and passed (only this preflight reddened), so 36 / 24 / 12 hold.
+PINNED_SHA = "aaf004a23eb52005962c399d9f2f779b98b6226dacba0f454dff4442c1324812"
 
 # ---------------------------------------------------------------------------------------------
 # The PLA-449 fixture, transcribed from the ticket. NEVER computed from a scan.

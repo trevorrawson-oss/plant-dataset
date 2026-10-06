@@ -78,10 +78,11 @@ SIBLING_BLOCKS = {
 # test_sourced_block_ratchet_gate pins the flag to the data (armed iff a certified crop carries the key).
 # ARMED 2026-10-03 in the commit that wrote b331e5f2 (PLA-10 promote 3: 59 certified crops carry the pair).
 MATURE_DIMENSIONS_ARMED = True
-# soil_prep: NAMED, NOT ARMED (PLA-674, 2026-10-05). Armed, every certified crop whose soil_prep prose carries a null
-# sibling (about 39) would be a NEW uncited block; waiving them grows the known set, which is a ruling still open on
-# PLA-674. Unarmed is the status quo: soil_prep was never ratcheted. Flip it with that ruling, never silently.
-SOIL_PREP_ARMED = False
+# soil_prep: NAMED 2026-10-05 (PLA-673 glossary promote), ARMED 2026-10-06 in the PLA-673 part B2 data commit, as ruled:
+# the waiver set is the 35 certified crops whose soil_prep prose carries a null citation after B2's backfill; the five
+# cited before arming are CLOSED (era identities, sourced_block_ratchet_known.py). Landed promotes that replay an earlier
+# post-state pass soil_prep_armed=False or known=KNOWN_AT_ARMING, the mature_dimensions precedent.
+SOIL_PREP_ARMED = True
 # List families: name -> (locator, identity key or None for index, parent block covering it or None)
 ITEM_FAMILIES = {
     "pests": (("pests",), "id", None),
@@ -184,6 +185,59 @@ CLOSED = tuple(_K.CLOSED)
 # The waiver set as it stood at arming (00dda31c), before any closure: what a LANDED promote replays against, because
 # its post-state predates the citations that closed CLOSED (PLA-10 promotes 1-3). Live gating always uses KNOWN.
 KNOWN_AT_ARMING = KNOWN | frozenset(CLOSED)
+# The ERA SWITCH (2026-10-06, PLA-673 B2; hardened the same day at Trevor's go-condition 2). A landed promote that
+# replays an earlier post-state through gate_all / whole_crop_gate (subprocesses: no `known=` argument reaches A62) sets
+# SBR_KNOWN_AT_ARMING to THAT FILE'S sha256. The gate binds it to the file it gates (bind_era, called first thing by
+# whole_crop_gate and gate_all) and accepts it ONLY if the SHA is a registered replay post-state below, equals the
+# gated file's sha256, and is NOT the live canonical. Anything else raises EraRefused, and a switch that is set but
+# never bound raises at first use: setting it in a live run can never let current data pass against an older waiver
+# set. The pre-commit hook strips it from its gate runs (tools/test_era_switch_safety.py).
+ERA_ENV = "SBR_KNOWN_AT_ARMING"
+ERA_POST_STATES = {   # post-state sha256 -> the landed promote whose replay gates it
+    "3ccc25f194cf0b3808877546b160572ab7ac6a12dbc7dae891f37d43f21a717a": "PLA-673 glossary promote (fbe11bc)",
+    "afbd4113e94b8fc41776178c31e8e3743ec7eef1c11ed0f57e6cf6dfdd7dcd3e": "housekeeping 60 Phase C promote (367c702)",
+}
+CANON = os.path.join(os.path.dirname(HERE), "crops_data_final.json")
+_ERA_BOUND = None
+
+
+class EraRefused(Exception):
+    """The era switch was set where it may not apply. Gates print it and exit 2."""
+
+
+def _sha_file(path):
+    import hashlib
+    with open(path, "rb") as f:
+        return hashlib.sha256(f.read()).hexdigest()
+
+
+def bind_era(path, canonical=None):
+    """Bind the era switch to the file being gated. Returns the bound SHA, or None when the switch is unset."""
+    global _ERA_BOUND
+    _ERA_BOUND = None
+    v = os.environ.get(ERA_ENV)
+    if v is None:
+        return None
+    if v not in ERA_POST_STATES:
+        raise EraRefused(f"{ERA_ENV}={v[:16]!r} is not a registered replay post-state SHA "
+                         f"(registered: {sorted(s[:8] for s in ERA_POST_STATES)})")
+    got = _sha_file(path)
+    if got != v:
+        raise EraRefused(f"{ERA_ENV}={v[:8]} is not the gated file ({path} is {got[:8]})")
+    canonical = CANON if canonical is None else canonical
+    if os.path.exists(canonical) and _sha_file(canonical) == v:
+        raise EraRefused(f"{ERA_ENV}={v[:8]} is the live canonical; live data is always gated against the live set")
+    _ERA_BOUND = v
+    return v
+
+
+def _default_known():
+    v = os.environ.get(ERA_ENV)
+    if v is None:
+        return KNOWN
+    if v != _ERA_BOUND:
+        raise EraRefused(f"{ERA_ENV} is set but not bound to the gated file (bind_era was not called, or refused)")
+    return KNOWN_AT_ARMING
 
 
 def certified(crop):
@@ -340,7 +394,7 @@ def crop_violations(crop, mature_dimensions_armed=None, known=None):
     if not certified(crop):
         return []
     V = []
-    known = KNOWN if known is None else known
+    known = _default_known() if known is None else known
     for ident in uncited(crop, mature_dimensions_armed):
         mv = migration_verdict(crop, ident)
         if mv is not None:
@@ -375,7 +429,7 @@ def roster(data, mature_dimensions_armed=None, known=None):
     if len(pot_live) > POT_CEILING:
         V.append(f"uncited {POT_FIELD} population is {len(pot_live)}, ratchet ceiling is "
                  f"{POT_CEILING}: {pot_live}")
-    stale = sorted((KNOWN if known is None else known) - set(live))
+    stale = sorted((_default_known() if known is None else known) - set(live))
     return len(cert), inspected, sorted(live), V, stale, pot_live
 
 

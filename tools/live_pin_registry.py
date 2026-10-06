@@ -95,16 +95,17 @@ def detect(tools_dir=HERE, prefixes=None):
 # file -> [(test, kind equality|floor|ceiling, class sha|population|content, what it asserts, line)]
 LIVE_PINS = {
     # PLA-673 (2026-10-05): the glossary sense guard reads the LIVE canonical's hill-word consumer leaves. A promote that
-    # adds or rewords a hill / hills / hilled / hilling leaf moves these (re-measure with the leaves read).
+    # adds or rewords a hill / hills / hilled / hilling leaf moves these (re-measure with the leaves read). MOVED at
+    # PLA-673 part B2 (aaf004a2, 2026-10-06): 232 -> 225, hill 108 -> 102, none 64 -> 63 (7 re-authored leaves).
     'test_glossary_sense.py': [
-        ('test_glossary_sense.py::test_population_is_232_consumer_leaves', 'equality', 'population', 'LIVE.inspected == 232; len(LIVE.rows) == 232', 48),
-        ('test_glossary_sense.py::test_the_default_call_accepts_the_live_roster', 'equality', 'population', 'classify_dataset(DATA, SPEC).inspected == 232', 65),
-        ('test_glossary_sense.py::test_live_term_counts', 'equality', 'population', 'by == {hill: 108, hilling: 60, none: 64}', 74),
-        ('test_glossary_sense.py::test_injected_non_consumer_leaf_is_not_inspected', 'equality', 'population', 'inspected == 232 after an injection', 103),
-        ('test_glossary_sense.py::test_potato_all_44_live_leaves_are_hilling', 'equality', 'population', 'len(potato rows) == 44', 159),
-        ('test_glossary_sense.py::test_strawberry_hill_system_live_leaves_are_none', 'equality', 'population', 'len(strawberry rows) == 7', 201),
-        ('test_glossary_sense.py::test_name_exclusions_live', 'equality', 'population', 'per-exclusion live leaf counts (NAMES table: Hill Hardy 31, Madalene 1, Hill Country 7, Beverly Hills 2, Mediterranean 2, Hawaii 11)', 248),
-        ('test_glossary_sense.py::test_glossary_entries_with_the_seven_keys_load', 'equality', 'population', 'classify_dataset(DATA, spec).inspected == 232', 312),
+        ('test_glossary_sense.py::test_population_is_225_consumer_leaves', 'equality', 'population', 'LIVE.inspected == 225; len(LIVE.rows) == 225', 49),
+        ('test_glossary_sense.py::test_the_default_call_accepts_the_live_roster', 'equality', 'population', 'classify_dataset(DATA, SPEC).inspected == 225', 66),
+        ('test_glossary_sense.py::test_live_term_counts', 'equality', 'population', 'by == {hill: 102, hilling: 60, none: 63}', 76),
+        ('test_glossary_sense.py::test_injected_non_consumer_leaf_is_not_inspected', 'equality', 'population', 'inspected == 225 after an injection', 107),
+        ('test_glossary_sense.py::test_potato_all_44_live_leaves_are_hilling', 'equality', 'population', 'len(potato rows) == 44', 163),
+        ('test_glossary_sense.py::test_strawberry_hill_system_live_leaves_are_none', 'equality', 'population', 'len(strawberry rows) == 7', 205),
+        ('test_glossary_sense.py::test_name_exclusions_live', 'equality', 'population', 'per-exclusion live leaf counts (NAMES table: Hill Hardy 31, Madalene 1, Hill Country 7, Beverly Hills 2, Mediterranean 2, Hawaii 11)', 250),
+        ('test_glossary_sense.py::test_glossary_entries_with_the_seven_keys_load', 'equality', 'population', 'classify_dataset(DATA, spec).inspected == 225', 316),
     ],
     'test_annual_calendar.py': [
         ('module-level', 'equality', 'population', '_got == _PINNED_ANNUALS (84 slugs by identity)', 266),
@@ -220,6 +221,8 @@ LIVE_PINS = {
 
 # file -> why it is not a live pin (REPLAY / DOC_ONLY / SYNTHETIC / HISTORICAL / SCRATCH_DERIVED / CONTENT)
 EXEMPT = {
+    'test_promote_pla673_b2.py': 'REPLAY: its POST_SHA and populations are this promote\'s own output over promote_fixture.pre_state(3ccc25f1), never the live canonical; its gates run on that replayed post-state (PLA-673 part B2, 2026-10-06)',
+    'test_era_switch_safety.py': 'SYNTHETIC: hashes the live canonical only to feed its SHA back as a refused era value; it asserts refusals, never a value of the canonical (PLA-673 B2 go-condition 2, 2026-10-06)',
     'test_promote_pla673_glossary.py': 'REPLAY: its POST_SHA and populations are this promote\'s own output over promote_fixture.pre_state(350eda38), never the live canonical; its gate_all runs on that replayed post-state (PLA-673 glossary, 2026-10-05)',
     'test_promote_pla666_row_figures.py': 'REPLAY: its POST_SHA and populations are this promote\'s own output over promote_fixture.pre_state(afbd4113), never the live canonical (PLA-666 row figures, 2026-10-05)',
     'test_promote_housekeeping60_phase_c.py': 'REPLAY: its POST_SHA and populations are this promote\'s own output over promote_fixture.pre_state(b331e5f2), never the live canonical (housekeeping 60 Phase C, 2026-10-04)',

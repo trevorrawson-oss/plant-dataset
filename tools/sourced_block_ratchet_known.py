@@ -10,6 +10,13 @@ watermelon|tips_by_stage.vining[0] (all |sources). MEASURED_ON stays the arming 
 SHRUNK 2026-10-05 (PLA-666 row figures, afbd4113 -> 350eda38): 2630 -> 2629. Closed by citation in that promote:
 raspberry|start_method|sources (start_method gained umn_ext + uada_ext_fsa6107, the fava precedent).
 
+GREW 2026-10-06 (PLA-673 part B2, 3ccc25f1 -> aaf004a2): 2629 -> 2663, by ARMING a newly named block type, not by a
+regression. soil_prep (PLA-674's crop-root citation pair) arms in this promote, as ruled; the 35 certified crops whose
+soil_prep prose carries a null citation after B2's backfill are waived by identity (measured on the post-state). The
+five crops cited before arming (watermelon by the glossary promote, the four squash by B2) are CLOSED: their soil_prep
+was uncited in earlier eras, so a landed promote replaying an earlier post-state checks against KNOWN_AT_ARMING.
+The same promote CLOSED parsnip|growth_stages[id=established]|sources by citation (+35 soil_prep, -1 closed).
+
 Kept as a .py module, not JSON, because every harness that copies tools/*.py into a scratch
 dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_gate at import
 (measured 2026-09-30: both harnesses' test_valid_cell_passes went red on a .json version).
@@ -17,7 +24,7 @@ dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_g
 TICKET = 'PLA-607'
 MEASURED_ON = '00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e'
 MEASURED_DATE = '2026-09-30'
-COUNT = 2629
+COUNT = 2663
 # Closed by citation, kept by identity so a LANDED promote can replay against the set live in its era
 # (sourced_block_ratchet_gate.KNOWN_AT_ARMING). Never re-waived: a closed identity going uncited again fails A62.
 CLOSED = (
@@ -26,6 +33,13 @@ CLOSED = (
     "watermelon|growth_stages[id=vining]|sources",      # housekeeping 60 Phase C
     "watermelon|tips_by_stage.vining[0]|sources",       # housekeeping 60 Phase C
     "raspberry|start_method|sources",                   # PLA-666 row figures, afbd4113 -> 350eda38
+    # soil_prep era identities (armed 2026-10-06, PLA-673 B2): cited before arming, uncited in earlier eras
+    "watermelon|soil_prep|soil_prep_sources",           # PLA-673 glossary promote (PLA-674 backfill), 350eda38 -> 3ccc25f1
+    "acorn-squash|soil_prep|soil_prep_sources",         # PLA-673 part B2, 3ccc25f1 -> aaf004a2
+    "butternut-squash|soil_prep|soil_prep_sources",     # PLA-673 part B2
+    "pumpkin|soil_prep|soil_prep_sources",              # PLA-673 part B2
+    "spaghetti-squash|soil_prep|soil_prep_sources",     # PLA-673 part B2
+    "parsnip|growth_stages[id=established]|sources",    # PLA-673 part B2 (umn_ext, umass_ext_itersonilia_canker, rhs)
 )
 IDENTITIES = (
     "acorn-squash|description|description_sources",
@@ -154,6 +168,7 @@ IDENTITIES = (
     "artichoke|pests[id=cutworms]|sources",
     "artichoke|pests[id=slugs-and-snails]|sources",
     "artichoke|pests[id=two-spotted-spider-mite]|sources",
+    "artichoke|soil_prep|soil_prep_sources",
     "artichoke|start_method|sources",
     "artichoke|succession_policy|sources",
     "artichoke|verification_status.field_additions[1]|sources",
@@ -211,6 +226,7 @@ IDENTITIES = (
     "asparagus|notifications[2]|sources",
     "asparagus|pests[id=asparagus-beetle]|sources",
     "asparagus|pests[id=cutworms]|sources",
+    "asparagus|soil_prep|soil_prep_sources",
     "asparagus|start_method|sources",
     "asparagus|succession_policy|sources",
     "asparagus|verification_status.field_additions[1]|sources",
@@ -310,6 +326,7 @@ IDENTITIES = (
     "beet|notifications[2]|sources",
     "beet|notifications[3]|sources",
     "beet|notifications[4]|sources",
+    "beet|soil_prep|soil_prep_sources",
     "beet|varieties.recommended[name=Bull's Blood]|sources",
     "beet|varieties.recommended[name=Chioggia]|sources",
     "beet|varieties.recommended[name=Cylindra (Formanova)]|sources",
@@ -350,10 +367,12 @@ IDENTITIES = (
     "bell-pepper|weather_triggers[1]|sources",
     "blackberry|description|description_sources",
     "blackberry|harvest_ready|harvest_ready_sources",
+    "blackberry|soil_prep|soil_prep_sources",
     "blackberry|start_method|sources",
     "blackberry|succession_policy|sources",
     "blueberry|description|description_sources",
     "blueberry|harvest_ready|harvest_ready_sources",
+    "blueberry|soil_prep|soil_prep_sources",
     "blueberry|start_method|sources",
     "blueberry|succession_policy|sources",
     "bok-choy|bolting|sources",
@@ -370,6 +389,7 @@ IDENTITIES = (
     "bok-choy|notifications[0]|sources",
     "bok-choy|notifications[1]|sources",
     "bok-choy|notifications[2]|sources",
+    "bok-choy|soil_prep|soil_prep_sources",
     "bok-choy|start_method|sources",
     "bok-choy|succession_policy|sources",
     "bok-choy|tips_by_stage.established[0]|sources",
@@ -430,6 +450,7 @@ IDENTITIES = (
     "broccoli|notifications[0]|sources",
     "broccoli|notifications[1]|sources",
     "broccoli|notifications[2]|sources",
+    "broccoli|soil_prep|soil_prep_sources",
     "broccoli|start_method|sources",
     "broccoli|succession_policy|sources",
     "broccoli|tips_by_stage.established[0]|sources",
@@ -460,6 +481,7 @@ IDENTITIES = (
     "brussels-sprouts|notifications[0]|sources",
     "brussels-sprouts|notifications[1]|sources",
     "brussels-sprouts|notifications[2]|sources",
+    "brussels-sprouts|soil_prep|soil_prep_sources",
     "brussels-sprouts|start_method|sources",
     "brussels-sprouts|succession_policy|sources",
     "brussels-sprouts|tips_by_stage.established[0]|sources",
@@ -515,6 +537,7 @@ IDENTITIES = (
     "cabbage|notifications[0]|sources",
     "cabbage|notifications[1]|sources",
     "cabbage|notifications[2]|sources",
+    "cabbage|soil_prep|soil_prep_sources",
     "cabbage|start_method|sources",
     "cabbage|succession_policy|sources",
     "cabbage|tips_by_stage.established[0]|sources",
@@ -571,6 +594,7 @@ IDENTITIES = (
     "carrot|notifications[2]|sources",
     "carrot|notifications[3]|sources",
     "carrot|notifications[4]|sources",
+    "carrot|soil_prep|soil_prep_sources",
     "carrot|thinning|sources",
     "carrot|varieties.recommended[name=Chantenay]|sources",
     "carrot|varieties.recommended[name=Danvers]|sources",
@@ -598,6 +622,7 @@ IDENTITIES = (
     "cauliflower|notifications[0]|sources",
     "cauliflower|notifications[1]|sources",
     "cauliflower|notifications[2]|sources",
+    "cauliflower|soil_prep|soil_prep_sources",
     "cauliflower|start_method|sources",
     "cauliflower|succession_policy|sources",
     "cauliflower|tips_by_stage.curd_forming[0]|sources",
@@ -648,6 +673,7 @@ IDENTITIES = (
     "celery|notifications[2]|sources",
     "celery|notifications[3]|sources",
     "celery|notifications[4]|sources",
+    "celery|soil_prep|soil_prep_sources",
     "celery|thinning|sources",
     "celery|varieties.recommended[name=Conquistador]|sources",
     "celery|varieties.recommended[name=Giant Pascal and other Pascal types]|sources",
@@ -823,6 +849,7 @@ IDENTITIES = (
     "collards|notifications[0]|sources",
     "collards|notifications[1]|sources",
     "collards|notifications[2]|sources",
+    "collards|soil_prep|soil_prep_sources",
     "collards|start_method|sources",
     "collards|succession_policy|sources",
     "collards|tips_by_stage.established[0]|sources",
@@ -974,6 +1001,7 @@ IDENTITIES = (
     "elderberry|description|description_sources",
     "elderberry|harvest_ready|harvest_ready_sources",
     "elderberry|harvest_urgency|harvest_urgency_sources",
+    "elderberry|soil_prep|soil_prep_sources",
     "elderberry|start_method|sources",
     "elderberry|succession_policy|sources",
     "english-cucumber|description|description_sources",
@@ -1019,6 +1047,7 @@ IDENTITIES = (
     "field-corn|notifications[0]|sources",
     "field-corn|notifications[1]|sources",
     "field-corn|notifications[2]|sources",
+    "field-corn|soil_prep|soil_prep_sources",
     "field-corn|start_method|sources",
     "field-corn|succession_policy|sources",
     "field-corn|weather_triggers[0]|sources",
@@ -1065,6 +1094,7 @@ IDENTITIES = (
     "flint-corn|notifications[0]|sources",
     "flint-corn|notifications[1]|sources",
     "flint-corn|notifications[2]|sources",
+    "flint-corn|soil_prep|soil_prep_sources",
     "flint-corn|start_method|sources",
     "flint-corn|succession_policy|sources",
     "flint-corn|weather_triggers[0]|sources",
@@ -1219,6 +1249,7 @@ IDENTITIES = (
     "honeydew-melon|notifications[1]|sources",
     "honeydew-melon|notifications[2]|sources",
     "honeydew-melon|notifications[3]|sources",
+    "honeydew-melon|soil_prep|soil_prep_sources",
     "honeydew-melon|start_method|sources",
     "honeydew-melon|tips_by_stage.flowering[0]|sources",
     "honeydew-melon|tips_by_stage.flowering[1]|sources",
@@ -1269,6 +1300,7 @@ IDENTITIES = (
     "kale|notifications[0]|sources",
     "kale|notifications[1]|sources",
     "kale|notifications[2]|sources",
+    "kale|soil_prep|soil_prep_sources",
     "kale|start_method|sources",
     "kale|succession_policy|sources",
     "kale|tips_by_stage.established[0]|sources",
@@ -1298,6 +1330,7 @@ IDENTITIES = (
     "kohlrabi|notifications[0]|sources",
     "kohlrabi|notifications[1]|sources",
     "kohlrabi|notifications[2]|sources",
+    "kohlrabi|soil_prep|soil_prep_sources",
     "kohlrabi|start_method|sources",
     "kohlrabi|succession_policy|sources",
     "kohlrabi|tips_by_stage.bulbing[0]|sources",
@@ -1329,6 +1362,7 @@ IDENTITIES = (
     "lavender|notifications[2]|sources",
     "lavender|pollination|sources",
     "lavender|rotation|sources",
+    "lavender|soil_prep|soil_prep_sources",
     "lavender|start_method|sources",
     "lavender|succession_policy|sources",
     "lavender|weather_triggers[0]|sources",
@@ -1382,6 +1416,7 @@ IDENTITIES = (
     "lemon|notifications[3]|sources",
     "lemon|ph|sources",
     "lemon|pollination|sources",
+    "lemon|soil_prep|soil_prep_sources",
     "lemon|start_method|sources",
     "lemon|succession_policy|sources",
     "lemon|weather_triggers[0]|sources",
@@ -1416,6 +1451,7 @@ IDENTITIES = (
     "lime|notifications[2]|sources",
     "lime|notifications[3]|sources",
     "lime|pollination|sources",
+    "lime|soil_prep|soil_prep_sources",
     "lime|start_method|sources",
     "lime|succession_policy|sources",
     "lime|weather_triggers[0]|sources",
@@ -1651,6 +1687,7 @@ IDENTITIES = (
     "oregano|notifications[3]|sources",
     "oregano|pollination|sources",
     "oregano|rotation|sources",
+    "oregano|soil_prep|soil_prep_sources",
     "oregano|start_method|sources",
     "oregano|succession_policy|sources",
     "oregano|weather_triggers[0]|sources",
@@ -1677,7 +1714,6 @@ IDENTITIES = (
     "parsley|weather_triggers[1]|sources",
     "parsnip|description|description_sources",
     "parsnip|fertilizer|sources",
-    "parsnip|growth_stages[id=established]|sources",
     "parsnip|growth_stages[id=germination]|sources",
     "parsnip|growth_stages[id=harvest]|sources",
     "parsnip|growth_stages[id=seedling]|sources",
@@ -1687,6 +1723,7 @@ IDENTITIES = (
     "parsnip|notifications[2]|sources",
     "parsnip|notifications[3]|sources",
     "parsnip|notifications[4]|sources",
+    "parsnip|soil_prep|soil_prep_sources",
     "parsnip|succession_policy|sources",
     "parsnip|thinning|sources",
     "parsnip|varieties.recommended[name=All American]|sources",
@@ -1999,6 +2036,7 @@ IDENTITIES = (
     "popcorn|notifications[0]|sources",
     "popcorn|notifications[1]|sources",
     "popcorn|notifications[2]|sources",
+    "popcorn|soil_prep|soil_prep_sources",
     "popcorn|start_method|sources",
     "popcorn|succession_policy|sources",
     "popcorn|weather_triggers[0]|sources",
@@ -2015,6 +2053,7 @@ IDENTITIES = (
     "potato|notifications[2]|sources",
     "potato|notifications[3]|sources",
     "potato|notifications[4]|sources",
+    "potato|soil_prep|soil_prep_sources",
     "potato|succession_policy|sources",
     "potato|watering|sources",
     "potato|weather_triggers[0]|sources",
@@ -2075,6 +2114,7 @@ IDENTITIES = (
     "radish|notifications[2]|sources",
     "radish|notifications[3]|sources",
     "radish|notifications[4]|sources",
+    "radish|soil_prep|soil_prep_sources",
     "radish|varieties.recommended[name=Cherry Belle]|sources",
     "radish|varieties.recommended[name=Daikon and Asian winter types]|sources",
     "radish|varieties.recommended[name=French Breakfast]|sources",
@@ -2089,6 +2129,7 @@ IDENTITIES = (
     "radish|weather_triggers[4]|sources",
     "raspberry|description|description_sources",
     "raspberry|harvest_ready|harvest_ready_sources",
+    "raspberry|soil_prep|soil_prep_sources",
     "raspberry|succession_policy|sources",
     "roma-tomato|growth_stages[id=end_of_season]|sources",
     "roma-tomato|growth_stages[id=established]|sources",
@@ -2137,6 +2178,7 @@ IDENTITIES = (
     "rosemary|notifications[2]|sources",
     "rosemary|pollination|sources",
     "rosemary|rotation|sources",
+    "rosemary|soil_prep|soil_prep_sources",
     "rosemary|start_method|sources",
     "rosemary|succession_policy|sources",
     "rosemary|weather_triggers[0]|sources",
@@ -2158,6 +2200,7 @@ IDENTITIES = (
     "sage|notifications[2]|sources",
     "sage|pollination|sources",
     "sage|rotation|sources",
+    "sage|soil_prep|soil_prep_sources",
     "sage|succession_policy|sources",
     "sage|weather_triggers[0]|sources",
     "sage|weather_triggers[1]|sources",
@@ -2322,6 +2365,7 @@ IDENTITIES = (
     "strawberry|pests[id=spotted-wing-drosophila]|sources",
     "strawberry|pests[id=tarnished-plant-bug]|sources",
     "strawberry|pests[id=two-spotted-spider-mite]|sources",
+    "strawberry|soil_prep|soil_prep_sources",
     "strawberry|start_method|sources",
     "strawberry|succession_policy|sources",
     "strawberry|weather_triggers[0]|sources",
@@ -2396,6 +2440,7 @@ IDENTITIES = (
     "sweet-corn|notifications[1]|sources",
     "sweet-corn|notifications[2]|sources",
     "sweet-corn|notifications[3]|sources",
+    "sweet-corn|soil_prep|soil_prep_sources",
     "sweet-corn|start_method|sources",
     "sweet-corn|succession_policy|sources",
     "sweet-corn|weather_triggers[0]|sources",
@@ -2426,6 +2471,7 @@ IDENTITIES = (
     "sweet-potato|notifications[2]|sources",
     "sweet-potato|notifications[3]|sources",
     "sweet-potato|notifications[4]|sources",
+    "sweet-potato|soil_prep|soil_prep_sources",
     "sweet-potato|succession_policy|sources",
     "sweet-potato|watering|sources",
     "sweet-potato|weather_triggers[0]|sources",
@@ -2477,6 +2523,7 @@ IDENTITIES = (
     "thyme|notifications[2]|sources",
     "thyme|pollination|sources",
     "thyme|rotation|sources",
+    "thyme|soil_prep|soil_prep_sources",
     "thyme|start_method|sources",
     "thyme|succession_policy|sources",
     "thyme|weather_triggers[0]|sources",
@@ -2522,6 +2569,7 @@ IDENTITIES = (
     "turnip|notifications[2]|sources",
     "turnip|notifications[3]|sources",
     "turnip|notifications[4]|sources",
+    "turnip|soil_prep|soil_prep_sources",
     "turnip|varieties.recommended[name=Golden Ball (Golden Globe)]|sources",
     "turnip|varieties.recommended[name=Hakurei]|sources",
     "turnip|varieties.recommended[name=Purple Top White Globe]|sources",

@@ -151,9 +151,18 @@ def apply_export_waivers(violations, waivers=None):
     return unwaived, waived, [n for n in waivers if n not in fired]
 
 
+ERA_ENV = "SBR_KNOWN_AT_ARMING"   # sourced_block_ratchet_gate.ERA_ENV, retyped (the hook never loads the ratchet module)
+
+
 def gate_violations(path, slug):
+    """The gate's VIOLATION lines. The hook always gates against the LIVE waiver set: it strips the A62 era switch from
+    the gate's environment (2026-10-06, PLA-673 B2 go-condition 2), and it refuses a run that printed no GATE verdict,
+    so a refusing or crashing gate can never read as "no violations" on both sides of the base/candidate diff."""
+    env = {k: v for k, v in os.environ.items() if k != ERA_ENV}
     out = subprocess.run([sys.executable, GATE, slug, path],
-                         capture_output=True, text=True).stdout
+                         capture_output=True, text=True, env=env).stdout
+    if not any(l.startswith("GATE:") for l in out.splitlines()):
+        raise RuntimeError(f"whole_crop_gate {slug} on {path} printed no GATE verdict: {out[-300:]!r}")
     return set(l.strip() for l in out.splitlines() if "VIOLATION:" in l)
 
 

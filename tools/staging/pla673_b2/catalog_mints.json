@@ -1,0 +1,29 @@
+{
+  "_note": "PLA-673 part B2, STAGED catalog entries (not in canonical). Document id beside portal id.",
+  "ncsu_ext_phytophthora_blight_peppers": {
+    "id": "ncsu_ext_phytophthora_blight_peppers",
+    "name": "NC State Extension -- Phytophthora Blight of Peppers (Vegetable Pathology Factsheets)",
+    "title": "Phytophthora Blight of Peppers",
+    "publisher": "NC State Extension, NC State University Vegetable Pathology Lab",
+    "url": "https://content.ces.ncsu.edu/phytophthora-blight-of-peppers",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-10",
+    "tier": "T1",
+    "citable_for": "NC State vegetable pathology factsheet (Lina Quesada-Ocampo; published 29 June 2018, revised 9 Jan 2023) on Phytophthora capsici in pepper: pathogen and oospore survival (over 10 years), spread via water and splash, host range (peppers, eggplant, tomato, beans, most cucurbits; cereals are not hosts, so rotation is weak), symptoms (crown and fruit rot, wilting, girdling crown lesions, white cottony mold on fruit), favorable conditions (excessive rainfall or overhead irrigation, saturated soils, 75 to 90 F), and management (resistant varieties, good drainage and even terrain, raised beds and plastic mulch, moderate drip irrigation from a well, remove diseased plants and culls, rotate to cereals; home gardeners have no effective chemical option). A document-scoped child of ncsu_ext.",
+    "_admission_provenance": "Minted (staged) 2026-10-06 for PLA-673 part B2. Raw bytes sha256 b59564c6d6b04265fffa214c065610313c58b393dd764c0ef4b5077994680e48 (46,691 bytes), urllib browser+plain UA byte-identical. Found as the 'management of Phytophthora Blight of Peppers' link on the vegetables.ces.ncsu.edu/peppers-diseases/ index page that the peppers' ncsu_ext anchor points at."
+  },
+  "umass_ext_itersonilia_canker": {
+    "id": "umass_ext_itersonilia_canker",
+    "name": "UMass Extension Vegetable Program -- Carrot & Parsnip, Itersonilia Canker",
+    "title": "Carrot & Parsnip, Itersonilia Canker",
+    "publisher": "UMass Amherst Center for Agriculture, Food, and the Environment (Extension Vegetable Program)",
+    "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/carrot-parsnip-itersonilia-canker",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-10",
+    "tier": "T1",
+    "citable_for": "UMass fact sheet (last updated 14 Jan 2013) on Itersonilia (black) canker of parsnip and carrot: cankers mainly on crown and shoulder; serious especially in late-harvested crops; favored by cool, wet weather; controls: resistant cultivars, rotate with non-host crops, control carrot rust fly, fungicide sprays not effective on root cankers, cover the shoulder of parsnips with soil throughout the growing season, deep plowing to decompose residue. A document-scoped child of umass_ext.",
+    "_admission_provenance": "Minted (staged) 2026-10-06 for PLA-673 part B2. Raw bytes sha256 e1f62141e5dc10fed18d714b510e8ea66787f9b587bd1ee7a3b87f79c2cedee6 (60,523 bytes), urllib browser UA (plain UA 403); a 2026-10-05 scratch copy (d274f3f1) differs only in a per-request permissions hash. Already cited on parsnip under umass_ext (diseases[0], failure_diagnostics[3])."
+  }
+}

@@ -104,6 +104,12 @@ def main():
         expect = int(argv[i + 1])
         del argv[i:i + 2]
     path = argv[0] if argv else "crops_data_final.json"
+    import sourced_block_ratchet_gate as _sbr_era   # bind the A62 era switch before anything is gated
+    try:
+        _sbr_era.bind_era(path)
+    except _sbr_era.EraRefused as e:
+        print(f"ERA SWITCH REFUSED: {e}")
+        sys.exit(2)
     cert, failed = run(path)
     ready, blocked = launch_ready(path)
     print(f"gate_all: ran whole_crop_gate on {len(cert)} certified crop(s)")
@@ -162,7 +168,8 @@ def main():
     print(f"gate_all: PASS -- gate passes {len(cert)}/{len(cert)} certified, "
           f"launch-ready {len(ready)}/{len(cert)}")
     print(f"  sourced-block ratchet (PLA-607): inspected {_sbr_insp} named blocks, {len(_sbr_live)} "
-          f"uncited, all waived by identity ({len(_sbr_stale)} closed since arming); container "
+          f"uncited, all waived by identity ({len(_sbr_stale)} closed since arming"
+          f"{'; ERA SET ' + _sbr.ERA_ENV + '=1' if _sbr._default_known() is _sbr.KNOWN_AT_ARMING else ''}); container "
           f"pot-size sub-rule {len(_sbr_pot)}/{_sbr.POT_CEILING} (PLA-533, may shrink never grow)")
     print(f"  bare-host (PLA-544): inspected {_bh_insp} anchors, {len(_bh_sole)} SOLE bare, all "
           f"waived by identity ({len(_bh_stale)} closed since arming); {len(_bh_co)} co-cited "

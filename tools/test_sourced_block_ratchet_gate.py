@@ -35,13 +35,15 @@ POT_KNOWN = ("dry-bean", "grapefruit", "green-beans-bush", "orange-navel")
 
 # Per-family uncited counts on 00dda31c, enumerated as literals, never computed from the gate.
 FAMILY_COUNTS = {
-    "growth_stages[]": 613, "notifications[]": 458, "tips_by_stage.*[]": 312,
+    # growth_stages 613 -> 612: PLA-673 B2 cited parsnip|growth_stages[id=established]
+    "growth_stages[]": 612, "notifications[]": 458, "tips_by_stage.*[]": 312,
     "weather_triggers[]": 289, "failure_diagnostics[]": 251, "description": 108,
     "harvest_urgency": 108, "start_method": 101, "succession_policy": 86,
     "varieties.recommended[]": 77, "pests[]": 54, "diseases[]": 50, "harvest_ready": 26,
     "watering": 17, "bolting": 13, "container_notes": 12, "varieties": 12, "fertilizer": 11,
     "pollination": 9, "rotation": 8, "verification_status.field_additions[]": 3, "thinning": 3,
     "soil": 2, "storage": 2, "yield_expectations": 2, "ph": 2,
+    "soil_prep": 35,   # armed 2026-10-06 (PLA-673 B2): the 35 null-citation crops, measured on aaf004a2
 }
 
 
@@ -77,15 +79,27 @@ def cite(block):
                                            "verified": "2026-09-30"}}
 
 
+# claim keys of each crop-root sibling, typed here (independent of the gate's SIBLING_BLOCKS)
+SIBLING_CLAIM_KEYS = {
+    "description": ("description_beginner", "description_seasoned"),
+    "harvest_ready": ("harvest_ready_beginner", "harvest_ready_seasoned"),
+    "harvest_urgency": ("harvest_urgency",),
+    "mature_dimensions": ("mature_height_ft", "mature_spread_ft"),
+    "soil_prep": ("soil_prep_beginner", "soil_prep_seasoned"),
+}
+
+
 # ------------------------------------------------------------------------------------ pins
 class PinsAreTheMeasurement(unittest.TestCase):
     def test_waiver_file_is_the_measured_population(self):
         self.assertEqual(G._KNOWN_DOC["measured_on"], SHA)
         # 2634 at arming (00dda31c); 2630 after housekeeping 60 Phase C cited 4 waived blocks (afbd4113);
-        # 2629 after PLA-666 cited raspberry|start_method (350eda38)
-        self.assertEqual(G._KNOWN_DOC["count"], 2629)
-        self.assertEqual(len(G.KNOWN), 2629)
-        self.assertEqual(len(G._KNOWN_DOC["identities"]), 2629, "duplicate identities")
+        # 2629 after PLA-666 cited raspberry|start_method (350eda38); 2664 after PLA-673 B2 ARMED soil_prep with its
+        # 35 measured null-citation crops (aaf004a2): growth by arming a newly named block type, ruled; the same
+        # promote cited parsnip|growth_stages[id=established] (-1): 2629 + 35 - 1 = 2663
+        self.assertEqual(G._KNOWN_DOC["count"], 2663)
+        self.assertEqual(len(G.KNOWN), 2663)
+        self.assertEqual(len(G._KNOWN_DOC["identities"]), 2663, "duplicate identities")
 
     def test_the_named_list_is_what_was_ruled(self):
         self.assertEqual(set(G.DICT_BLOCKS), {
@@ -237,6 +251,11 @@ CLOSED_2026_10_04 = {  # cited by housekeeping 60 Phase C (b331e5f2 -> afbd4113)
     "broad-beans-fava|start_method|sources", "sweet-corn|growth_stages[id=seedling]|sources",
     "watermelon|growth_stages[id=vining]|sources", "watermelon|tips_by_stage.vining[0]|sources"}
 CLOSED_2026_10_05 = {"raspberry|start_method|sources"}  # cited by PLA-666 row figures (afbd4113 -> 350eda38)
+CLOSED_SOIL_PREP = {  # armed 2026-10-06 (PLA-673 B2); cited before arming, so uncited in every earlier era
+    "watermelon|soil_prep|soil_prep_sources", "pumpkin|soil_prep|soil_prep_sources",
+    "butternut-squash|soil_prep|soil_prep_sources", "acorn-squash|soil_prep|soil_prep_sources",
+    "spaghetti-squash|soil_prep|soil_prep_sources"}
+CLOSED_2026_10_06 = {"parsnip|growth_stages[id=established]|sources"}  # cited by PLA-673 B2 (3ccc25f1 -> aaf004a2)
 
 
 class ClosedWaivers(unittest.TestCase):
@@ -245,18 +264,19 @@ class ClosedWaivers(unittest.TestCase):
     tests when the live set shrank). Each landed promote checks against the set live in its era, KNOWN_AT_ARMING."""
 
     def test_arming_set_is_the_live_set_plus_the_closed(self):
-        self.assertEqual(set(G.CLOSED), CLOSED_2026_10_04 | CLOSED_2026_10_05)
+        self.assertEqual(set(G.CLOSED), CLOSED_2026_10_04 | CLOSED_2026_10_05 | CLOSED_SOIL_PREP | CLOSED_2026_10_06)
         self.assertEqual(G.KNOWN & set(G.CLOSED), frozenset())
         self.assertEqual(G.KNOWN_AT_ARMING, G.KNOWN | set(G.CLOSED))
-        self.assertEqual(len(G.KNOWN_AT_ARMING), 2634)
+        self.assertEqual(len(G.KNOWN_AT_ARMING), 2674)
 
     def test_an_era_post_state_flags_exactly_the_closed_under_the_live_set(self):
         import promote_fixture
         pre = json.loads(promote_fixture.pre_state(
             "b331e5f2c99378526c3ac8f2f870232953b318c994b7dc3d8c54938f2b62c38d"))
         live_v = G.roster(pre, mature_dimensions_armed=True)[3]
-        # b331e5f2 predates both closures, so the live set flags all five closed identities there
-        self.assertEqual({v.split()[3].rstrip(":") for v in live_v}, CLOSED_2026_10_04 | CLOSED_2026_10_05)
+        # b331e5f2 predates every closure (and the soil_prep citations), so the live set flags all ten there
+        self.assertEqual({v.split()[3].rstrip(":") for v in live_v},
+                         CLOSED_2026_10_04 | CLOSED_2026_10_05 | CLOSED_SOIL_PREP | CLOSED_2026_10_06)
         self.assertEqual(G.roster(pre, mature_dimensions_armed=True, known=G.KNOWN_AT_ARMING)[3], [])
 
     def test_the_live_canonical_needs_no_era_set(self):
@@ -290,18 +310,25 @@ class LiveCanonical(unittest.TestCase):
 
     def test_the_tickets_98_slot_present_blocks_are_inside_the_population(self):
         """Independent walk, not the gate: a `sources` / `*_sources` slot equal to [] or null on a
-        certified crop, outside companions/zones/regions. The ticket measured 98 on 83384c85."""
+        certified crop, outside companions/zones/regions. The ticket measured 98 on 83384c85.
+        A crop-root `<name>_sources` sibling counts only when its claim keys carry content: PLA-674 writes
+        soil_prep_sources = null on every record (D13, not assessed), and on the 81 with no soil_prep prose that null
+        cites nothing (fbe11bc shipped this test red on exactly that, found 2026-10-06). 133 = the 98 + the 35
+        soil_prep blocks armed by PLA-673 B2."""
         slots = set()
         for c in _CANON["crops"]:
             if (c.get("verification_status") or {}).get("status") != "verified_gs_arc":
                 continue
             for k, v in c.items():
                 if k.endswith("_sources") and v in ([], None):
+                    carriers = SIBLING_CLAIM_KEYS.get(k[:-8], ())
+                    if carriers and not any(c.get(x) not in (None, "", [], {}) for x in carriers):
+                        continue
                     slots.add(f"{c['slug']}|{k[:-8]}|{k}")
                 if isinstance(v, dict) and k not in ("companions", "zones", "regions") \
                         and "sources" in v and v["sources"] in ([], None):
                     slots.add(f"{c['slug']}|{k}|sources")
-        self.assertLessEqual(len(slots), 98, "the slot-present subset may shrink, never grow")
+        self.assertLessEqual(len(slots), 133, "the slot-present subset may shrink, never grow (98 + 35 armed soil_prep)")
         self.assertEqual(slots - G.KNOWN, set())
 
     def test_a_clean_crop_passes(self):
@@ -701,10 +728,9 @@ if __name__ == "__main__":
 # ------------------------------------------------------- PLA-674: the soil_prep sibling (2026-10-05)
 class SoilPrepSibling(unittest.TestCase):
     """PLA-674 writes soil_prep_sources / soil_prep_anchoring_urls on every crop record, null where not assessed
-    (D13), watermelon backfilled. NAMED here so the keys are not UNNAMED (A62 discovery); NOT ARMED: arming would
-    make the ~39 certified crops whose soil_prep prose carries a null sibling NEW uncited blocks, and waiving
-    them grows the known set, which is a ruling (open on PLA-674). Unarmed = the status quo (soil_prep was never
-    ratcheted)."""
+    (D13), watermelon backfilled. NAMED 2026-10-05 so the keys are not UNNAMED (A62 discovery); ARMED 2026-10-06 in the
+    PLA-673 B2 data commit, as ruled, with the 35 crops whose soil_prep prose still carries a null citation waived by
+    identity and the five cited before arming kept CLOSED (era identities)."""
 
     def _with_siblings(self, value=None):
         d = fresh()
@@ -713,8 +739,9 @@ class SoilPrepSibling(unittest.TestCase):
             c["soil_prep_anchoring_urls"] = None if value is None else {value[0]: {"url": "https://x.edu/a", "verified": "2026-10-05"}}
         return d
 
-    def test_the_flag_is_unarmed_until_ruled(self):
-        self.assertIs(G.SOIL_PREP_ARMED, False)
+    def test_the_flag_is_armed(self):
+        """Armed 2026-10-06 in the PLA-673 B2 data commit, as ruled (named-and-unarmed 2026-10-05 to 2026-10-06)."""
+        self.assertIs(G.SOIL_PREP_ARMED, True)
 
     def test_the_sibling_keys_are_not_UNNAMED(self):
         d = self._with_siblings()
@@ -723,6 +750,7 @@ class SoilPrepSibling(unittest.TestCase):
                 self.assertEqual([f for f in G.unnamed_fields(c) if "soil_prep" in f], [], c["slug"])
 
     def test_unarmed_null_siblings_add_no_uncited_block(self):
+        """The era switch landed promotes pass (soil_prep_armed=False) still turns the block off."""
         """ABSOLUTE, not relative: a before/after comparison passes when the skip is gone (the base, carrying the prose
         and no sibling, would count the block too). Unarmed, no soil_prep identity exists at all, with or without
         the siblings, on a population that does carry the prose."""
@@ -732,10 +760,119 @@ class SoilPrepSibling(unittest.TestCase):
         for crop in (d, fresh()):
             for c in crop["crops"]:
                 if G.certified(c):
-                    self.assertEqual([i for i in G.uncited(c) if "|soil_prep|" in i], [], c["slug"])
+                    self.assertEqual([i for i in G.uncited(c, soil_prep_armed=False) if "|soil_prep|" in i], [], c["slug"])
 
     def test_armed_null_siblings_on_prose_crops_are_uncited(self):
         """Positive control for the flag: armed, a prose-carrying crop with a null sibling IS an uncited block."""
         d = self._with_siblings()
         crop = next(c for c in d["crops"] if G.certified(c) and c.get("soil_prep_beginner"))
         self.assertIn(f"{crop['slug']}|soil_prep|soil_prep_sources", G.uncited(crop, soil_prep_armed=True))
+
+
+class SoilPrepArmed(unittest.TestCase):
+    """PLA-673 B2 (2026-10-06): armed, a NEW soil_prep block with prose and no citation fails by name; a waived one
+    passes; a closed one going uncited again fails."""
+
+    def test_a_new_uncited_soil_prep_block_fails(self):
+        d = fresh()
+        crop = next(c for c in d["crops"] if G.certified(c) and not c.get("soil_prep_beginner")
+                    and not c.get("soil_prep_seasoned"))
+        crop["soil_prep_seasoned"] = "Work in compost before planting."
+        v = G.roster(d)[3]
+        self.assertTrue(any(f"{crop['slug']}|soil_prep|soil_prep_sources" in m for m in v), v)
+
+    def test_a_closed_soil_prep_block_going_uncited_fails(self):
+        d = fresh()
+        c = by(d)["pumpkin"]
+        if c.get("soil_prep_sources"):          # only meaningful once B2's backfill is the canonical
+            c["soil_prep_sources"] = None
+            v = G.roster(d)[3]
+            self.assertTrue(any("pumpkin|soil_prep|soil_prep_sources" in m for m in v), v)
+        else:
+            self.skipTest("pumpkin's soil_prep is not cited on this canonical (pre-B2)")
+
+    def test_the_35_are_exactly_the_waived_soil_prep(self):
+        self.assertEqual(len([i for i in G.KNOWN if "|soil_prep|" in i]), 35)
+
+
+AFBD = "afbd4113e94b8fc41776178c31e8e3743ec7eef1c11ed0f57e6cf6dfdd7dcd3e"   # housekeeping 60 Phase C post-state
+GLOSS = "3ccc25f194cf0b3808877546b160572ab7ac6a12dbc7dae891f37d43f21a717a"  # PLA-673 glossary post-state
+
+
+class EraSwitchIsBoundToAHistoricalPostState(unittest.TestCase):
+    """The ERA SWITCH (2026-10-06, hardened at Trevor's B2 go-condition 2). A landed promote replaying an earlier
+    post-state through the gate subprocesses sets SBR_KNOWN_AT_ARMING to THAT FILE'S SHA. The gate binds it to the file
+    it gates (bind_era) and accepts it only if the SHA is a registered replay post-state, equals the gated file's
+    sha256, and is NOT the live canonical. Anything else REFUSES, and a switch that is set but never bound refuses at
+    first use: setting it in a live run can never let current data pass against an older waiver set."""
+
+    @classmethod
+    def setUpClass(cls):
+        import promote_fixture, tempfile
+        cls.tmp = tempfile.mkdtemp(prefix="era_")
+        cls.era = os.path.join(cls.tmp, "afbd.json")
+        with open(cls.era, "wb") as f:
+            b = promote_fixture.pre_state(AFBD)
+            f.write(b if isinstance(b, bytes) else b.encode("utf-8"))
+        cls.other = os.path.join(cls.tmp, "other.json")
+        with open(cls.other, "wb") as f:
+            f.write(open(cls.era, "rb").read() + b" ")
+        cls.data = json.load(open(cls.era, encoding="utf-8"))
+
+    def setUp(self):
+        os.environ.pop(G.ERA_ENV, None)
+        G._ERA_BOUND = None
+
+    tearDown = setUp
+
+    def _pumpkin(self):
+        return [m for m in G.roster(self.data)[3] if "pumpkin|soil_prep|soil_prep_sources" in m]
+
+    def test_the_registry_is_exactly_the_two_replays(self):
+        self.assertEqual(set(G.ERA_POST_STATES), {AFBD, GLOSS})
+
+    def test_unset_binds_nothing_and_uses_the_live_set(self):
+        self.assertIsNone(G.bind_era(self.era))
+        self.assertTrue(self._pumpkin(), "afbd4113 predates pumpkin's soil_prep citation: the live set flags it")
+
+    def test_a_registered_sha_bound_to_its_own_file_uses_the_era_set(self):
+        os.environ[G.ERA_ENV] = AFBD
+        self.assertEqual(G.bind_era(self.era, canonical=CANON), AFBD)
+        self.assertEqual(self._pumpkin(), [])
+        self.assertIs(G._default_known(), G.KNOWN_AT_ARMING)
+
+    def test_the_old_value_1_refuses(self):
+        os.environ[G.ERA_ENV] = "1"
+        with self.assertRaisesRegex(G.EraRefused, "not a registered replay post-state"):
+            G.bind_era(self.era, canonical=CANON)
+
+    def test_an_unregistered_sha_refuses_even_when_it_matches_the_file(self):
+        import hashlib
+        os.environ[G.ERA_ENV] = hashlib.sha256(open(self.other, "rb").read()).hexdigest()
+        with self.assertRaisesRegex(G.EraRefused, "not a registered replay post-state"):
+            G.bind_era(self.other, canonical=CANON)
+
+    def test_a_registered_sha_on_a_different_file_refuses(self):
+        os.environ[G.ERA_ENV] = AFBD
+        with self.assertRaisesRegex(G.EraRefused, "is not the gated file"):
+            G.bind_era(self.other, canonical=CANON)
+
+    def test_a_registered_sha_that_is_the_live_canonical_refuses(self):
+        os.environ[G.ERA_ENV] = AFBD
+        with self.assertRaisesRegex(G.EraRefused, "is the live canonical"):
+            G.bind_era(self.era, canonical=self.era)
+
+    def test_set_but_never_bound_refuses_at_first_use(self):
+        os.environ[G.ERA_ENV] = AFBD
+        with self.assertRaisesRegex(G.EraRefused, "not bound"):
+            G.roster(self.data)
+
+    def test_a_failed_bind_leaves_nothing_bound(self):
+        os.environ[G.ERA_ENV] = AFBD
+        self.assertEqual(G.bind_era(self.era, canonical=CANON), AFBD)
+        with self.assertRaises(G.EraRefused):
+            G.bind_era(self.other, canonical=CANON)
+        self.assertIsNone(G._ERA_BOUND)
+
+    def test_the_era_set_adds_only_the_closed(self):
+        self.assertEqual(G.KNOWN_AT_ARMING - G.KNOWN, frozenset(G.CLOSED))

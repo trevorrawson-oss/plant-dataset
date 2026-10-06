@@ -125,15 +125,22 @@ armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered gates) +
   landed-replay tests; fixed in `e47e58a`.) A
   pure data promote with no tool change runs release verification (below) plus the promote's own suite and
   mutation harness. **The full tree** (`python3 tools/run_test_tree.py`, ~1 hour single-process, 6,369
-  pytest tests on 2026-10-01; speed-up PLA-630) runs only when a change touches SHARED test infrastructure
-  every suite leans on (`promote_fixture.py`, `run_test_tree.py`, a harness helper module), or on Trevor's
-  ask. **Why narrowed, measured 2026-10-01:** every recorded full-tree catch was tooling breaking tooling --
+  pytest tests on 2026-10-01; speed-up PLA-630) runs during development only when a change touches SHARED
+  test infrastructure every suite leans on (`promote_fixture.py`, `run_test_tree.py`, a harness helper
+  module), or on Trevor's ask -- and ALWAYS before a push (next rule). **Why narrowed, measured 2026-10-01:** every recorded full-tree catch was tooling breaking tooling --
   the 2026-09-30 region-harness crashes from a JSON waiver file the harnesses did not copy (PLA-607/544),
   and the 2026-09-06 PLA-450 suite reading the live registry against replayed history -- and none was a
   user-facing app or dataset defect. Each of those sat in a suite that names the changed module or in a
   harness that copies `tools/`, which is exactly what (a) and (b) run. User-facing protection is
   `gate_all`, `release_verify`, the promote guards, the mutation harnesses and the consumer builds. Tell
   Trevor the time cost before starting any run over ~10 minutes.
+- **EVERY DATASET PUSH RUNS THE FULL TEST TREE FIRST, ON THE COMMIT BEING PUSHED** (Trevor, standing rule,
+  2026-10-06). The affected set is for iterating; it is not the push gate. Order: commit (state trio
+  included), run `python3 tools/run_test_tree.py` on that commit with the exit code captured unpiped, and
+  push only on a clean verdict. Anything red stops before the push. A change made after a full run, however
+  small, needs a fresh one. **Why:** the PLA-673 glossary landing (fbe11bc) ran only its affected set and
+  shipped three red tests on main (a skipped collision-gate re-measure, a ratchet walk and a sense-guard
+  injection, both broken by PLA-674's null siblings); the B2 full tree found all three.
 - **Release verification before any promote** (protocol #6): `whole_crop_gate` 18/18 +
   `tools/gate_all.py` (the whole suite on **every** certified crop) + `release_verify` + the
   per-batch source-truth sample. A green gate is NOT a clean release.

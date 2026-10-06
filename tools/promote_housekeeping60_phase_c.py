@@ -312,8 +312,11 @@ def gate_post(post, slugs):
             f.write(serialize(post))
         passed = 0
         for slug in sorted(slugs):
+            # The ERA SET (added 2026-10-06 when PLA-673 B2 armed soil_prep): this post-state predates watermelon's
+            # soil_prep citation, so A62 checks it against the waiver set live in its era (SBR_KNOWN_AT_ARMING = this post-state's
+            # sha256, a registered replay post-state; the gate refuses any other value).
             r = subprocess.run([sys.executable, os.path.join(HERE, "whole_crop_gate.py"), slug, p],
-                               capture_output=True, text=True)
+                               capture_output=True, text=True, env=dict(os.environ, SBR_KNOWN_AT_ARMING=sha256_bytes(serialize(post))))
             if r.returncode != 0:
                 refuse(f"whole_crop_gate {slug} rc={r.returncode}: {(r.stdout + r.stderr)[-400:]}")
             # count the gate's OWN verdict, never the input set: a skipped gate must not read as a gated crop

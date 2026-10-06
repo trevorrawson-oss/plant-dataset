@@ -1,6 +1,6 @@
 """PLA-673: the glossary sense guard (tools/glossary_sense.py) over the staged match spec.
 
-Pins the live population (232 consumer leaves on 350eda38), proves every exclusion family both on its LIVE leaves and on a
+Pins the live population (225 consumer leaves on aaf004a2; 232 before PLA-673 B2), proves every exclusion family both on its LIVE leaves and on a
 SYNTHETIC leaf injected into a scratch copy, and proves the refusal spec: a hill-word the spec does not classify fails
 loud rather than taking a gloss. Run under pytest (def test_ functions), via tools/run_test_tree.py --files.
 """
@@ -44,9 +44,10 @@ def leaf(slug, field, text):
 
 
 # ------------------------------------------------------------------ population (inspected-nothing is not clean)
-def test_population_is_232_consumer_leaves():
-    assert LIVE.inspected == 232
-    assert len(LIVE.rows) == 232
+def test_population_is_225_consumer_leaves():
+    # 232 on 350eda38 / 3ccc25f1; 225 after PLA-673 B2 (aaf004a2) re-authored 7 leaves without a hill-word
+    assert LIVE.inspected == 225
+    assert len(LIVE.rows) == 225
 
 
 def test_population_floor_refuses_an_empty_roster():
@@ -62,7 +63,7 @@ def test_live_roster_is_fully_classified():
 
 def test_the_default_call_accepts_the_live_roster():
     """The refusing entry point (default floor, refuse=True) passes on canonical."""
-    assert gs.classify_dataset(DATA, SPEC).inspected == 232
+    assert gs.classify_dataset(DATA, SPEC).inspected == 225
 
 
 def test_live_term_counts():
@@ -71,7 +72,8 @@ def test_live_term_counts():
         by.setdefault(r.term_ids, 0)
         by[r.term_ids] += 1
     # D8 (2026-10-05): the 3 pepper/eggplant "beds or hills" leaves moved hill -> none pending the part B2 re-author.
-    assert by == {("hill",): 108, ("hilling",): 60, ("none",): 64}
+    # B2 (aaf004a2): eggplant's prevention_seasoned and the three squash soil_prep pairs no longer carry a hill-word
+    assert by == {("hill",): 102, ("hilling",): 60, ("none",): 63}
 
 
 def test_non_consumer_and_structural_paths_are_not_inspected():
@@ -93,14 +95,16 @@ def test_injected_non_consumer_leaf_is_not_inspected(path):
     for k in path[:-1]:
         nxt = path[path.index(k) + 1]
         if isinstance(o, dict):
-            o = o.setdefault(k, [] if isinstance(nxt, int) else {})
+            if o.get(k) is None:              # absent OR null (PLA-674 wrote soil_prep_sources = null; fbe11bc went red here)
+                o[k] = [] if isinstance(nxt, int) else {}
+            o = o[k]
         else:
             o = o[k]
     if isinstance(o, list):
         o.append("Plant in hills (an unscoped crop: inspecting this leaf would refuse).")
     else:
         o[path[-1]] = "Plant in hills (an unscoped crop: inspecting this leaf would refuse)."
-    assert gs.classify_dataset(d, SPEC).inspected == 232
+    assert gs.classify_dataset(d, SPEC).inspected == 225
 
 
 # ------------------------------------------------------------------ positive controls
@@ -112,8 +116,8 @@ def test_positive_control_mounded_hills_on_zucchini():
     assert leaf("zucchini-courgette", "x", "Raised beds or mounded hills improve drainage.") == ("hill",)
 
 
-PEPPER_LEAVES = [("bell-pepper", "diseases.1.prevention_seasoned"), ("banana-pepper", "diseases.1.prevention_seasoned"),
-                 ("eggplant", "diseases.3.prevention_seasoned")]
+# eggplant's leaf was re-authored in PLA-673 B2 (no hill-word); the two pepper leaves stay HELD (PLA-688)
+PEPPER_LEAVES = [("bell-pepper", "diseases.1.prevention_seasoned"), ("banana-pepper", "diseases.1.prevention_seasoned")]
 
 
 def test_d8_pepper_eggplant_beds_or_hills_live_leaves_are_none_pending_b2():
@@ -309,7 +313,7 @@ def test_glossary_entries_with_the_seven_keys_load():
                      "anchoring_urls": None, "field_additions": [], "match": RAW_SPEC[tid]["match"]}
                for tid in ("hill", "hilling")}
     spec = gs.build_spec(entries)
-    assert gs.classify_dataset(DATA, spec).inspected == 232
+    assert gs.classify_dataset(DATA, spec).inspected == 225
 
 
 @pytest.mark.parametrize("mutate", [

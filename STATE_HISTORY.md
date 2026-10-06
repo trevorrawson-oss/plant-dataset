@@ -4,6 +4,52 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-10-06 -- PLA-673 PART B2 LANDED (`3ccc25f1` -> `aaf004a2`)
+
+ONE promote (`tools/promote_pla673_b2.py`, new, derived from promote_pla666_row_figures by
+`tools/staging/pla673_b2/derive_promote.py`; stage `tools/staging/pla673_b2/`, built by its `build_stage.py` from the
+approved texts in `b2_texts.py`). Run by Claude Code on Trevor's conditional go (2026-10-06), after go-conditions 1
+(parsnip sources) and 2 (era-switch safety) came back clean; --check then --expect-sha aaf004a2 (== an independent
+minimal apply).
+
+* **Prose (16 leaves, both registers; claude.ai texts approved by Trevor, B2 rounds 1-2):** eggplant
+  `diseases[id=phytophthora-blight].prevention_*` (6 + 5 sentences; RULED precedence, methodology v1.4 candidate: a
+  pathogen-specific T1 page governs a multi-disease rotation paragraph, NC State's P. capsici factsheet over Clemson's
+  three-disease paragraph, Clemson recorded as the conflicting source); pumpkin, butternut, acorn, spaghetti
+  `soil_prep_*`; parsnip `diseases[id=itersonilia-canker].prevention_*`, `failure_diagnostics[id=canker].next_season_tip_*`,
+  `growth_stages[id=established].user_action_*`. 109 EVIDENCE rows, every quote proven against hashed bytes.
+* **Citations:** eggplant entry [clemson_hgic, ncsu_ext_phytophthora_blight_peppers]; PLA-674 backfill pumpkin
+  [uga_c1206_homegrown_pumpkins, umn_ext], the three squash [umn_ext]; parsnip canker entry [umass_ext_itersonilia_canker,
+  clemson_hgic] (umass_ext re-keyed to the document id; **usu_ext removed**, go-condition 1: a root-crop index page that
+  only names the disease, cited by no sentence), canker diagnostic [umass_ext_itersonilia_canker, clemson_hgic], and a NEW
+  citation block on the established stage [umn_ext, umass_ext_itersonilia_canker, rhs] (rhs T1). Bundle re-pinned
+  aeeb5789 -> aaf004a2 by the USU removal.
+* **source_catalog +2:** ncsu_ext_phytophthora_blight_peppers (b59564c6), umass_ext_itersonilia_canker (e1f62141);
+  MANIFEST +2.
+* **A62 ARMED on soil_prep** (as ruled): waiver set 2629 -> 2663 (+35 soil_prep identities measured on the post-state,
+  -1 parsnip|growth_stages[id=established] cited); CLOSED +6 (watermelon, the four squash, the parsnip stage),
+  KNOWN_AT_ARMING 2674. **Era switch** SBR_KNOWN_AT_ARMING: a landed promote replaying an older post-state through the
+  gate subprocesses passes that file's own sha256; the gate accepts only a registered replay post-state
+  (ERA_POST_STATES: 3ccc25f1 glossary, afbd4113 Phase C) that IS the gated file and is NOT the live canonical, else exits
+  2 with no verdict; a set-but-unbound switch refuses at first use. The glossary and Phase C promotes pass it (the full
+  tree reddened Phase C's replay on watermelon's era soil_prep block). The **pre-commit hook** strips the switch and now
+  refuses a gate run with no GATE verdict (a refusing gate had read as clean on both sides of its diff).
+* **fbe11bc shipped three red tests** (the glossary promote skipped the full tree): the collision-gate preflight (pin
+  re-measured; output byte-identical on 350eda38 / 3ccc25f1 / aeeb5789 / aaf004a2, 36 / 12 open / 24 registered), the
+  ratchet's 98-slot walk (now counts a sibling only when its claim keys carry content; bound 133), the sense guard's
+  null-slot injection. All fixed here. **New standing rule (CLAUDE.md): every dataset push runs the full tree first.**
+* **Sense guard** 232 -> 225 consumer leaves (102 hill / 60 hilling / 63 none); fixture +1 case (parsnip "Hill soil"
+  -> hilling), re-pinned 990eac25 (32 cases); live_pin_registry pins moved, +2 exempt (66/26/68/47).
+* **Gauntlet:** promote suite 46 tests, harness 40/40; glossary 54/54; Phase C 31/31; citation ratchets 37 + 15 + 4;
+  era wiring 5/5; affected set (60 entry points) PASS after registry entries; whole_crop_gate PASS on the six crops,
+  gate_all 121/121 (launch-ready 114), release_verify clean, doc_roster_claim_gate 0. Full tree on this commit before
+  the push (the new rule).
+* **Consumers:** APP 673 STEP 3 stays on fbe11bc (worktree pla-673-render, 37f59179, rebased from cf88048e) with fixture
+  01912d65; B2 reaches them at a later data bump with 990eac25. ~/plant-app's own checkout re-exported at aaf004a2,
+  not committed (E1 green). E3 red until the astro bump.
+* Records: Linear 'PLA-673 / PLA-674 step 2A prep: DECISIONS' sections 11-13; PLA-692 (parsnip rotation rung's
+  "two to three years" unsourced) filed; local pre-state copy archive/crops_data_final.2026-10-06.pla673_b2_pre.3ccc25f1.json.
+
 ## 2026-10-06 -- PLA-673/674 GLOSSARY LANDED (`350eda38` -> `3ccc25f1`)
 
 ONE promote (`tools/promote_pla673_glossary.py`, new; stage `tools/staging/pla673_glossary/`, built by its `build_stage.py`

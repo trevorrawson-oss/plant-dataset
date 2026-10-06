@@ -343,7 +343,11 @@ def gate_post(post):
         p = os.path.join(td, "post.json")
         with open(p, "wb") as f:
             f.write(serialize(post))
-        r = subprocess.run([sys.executable, os.path.join(HERE, "gate_all.py"), p], capture_output=True, text=True)
+        # The ERA SET (added 2026-10-06 when PLA-673 B2 armed soil_prep): this post-state predates the four squash
+        # citations, so it is checked against the waiver set live in its era (sourced_block_ratchet_gate.ERA_ENV, set to
+        # the gated file's own sha256: the gate accepts only a registered historical post-state).
+        r = subprocess.run([sys.executable, os.path.join(HERE, "gate_all.py"), p], capture_output=True, text=True,
+                           env=dict(os.environ, SBR_KNOWN_AT_ARMING=sha256_bytes(serialize(post))))
     out = r.stdout + r.stderr
     if r.returncode != 0:
         refuse(f"gate_all rc={r.returncode}: {out[-600:]}")

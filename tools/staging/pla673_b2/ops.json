@@ -1,0 +1,444 @@
+[
+ {
+  "crop": "eggplant",
+  "path": "diseases[id=phytophthora-blight].prevention_seasoned",
+  "kind": "prose",
+  "old": "Plant on raised, well-drained beds or hills, avoid low spots that stay wet, water at the soil rather than overhead, mulch to limit splash, rotate away from solanaceous and cucurbit crops, and keep fruit up off saturated soil.",
+  "new": "Keeping soil moisture from getting excessive is a key strategy for managing Phytophthora. Water often enough to keep the soil moist but not saturated. Use drip irrigation rather than overhead watering, or water at the base of the plants and keep the leaves as dry as possible. Don't plant eggplant where tomatoes, potatoes, peppers or eggplant grew in the last three years, since the pathogen survives in soil. The pathogen's broad host range, which includes tomato, beans and most cucurbits, makes rotation much less effective. Rotate to cereals such as corn or wheat, which are not hosts.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "eggplant",
+  "path": "diseases[id=phytophthora-blight].prevention_beginner",
+  "kind": "prose",
+  "old": "Plant on raised beds or mounds so water drains away, avoid wet low spots, water at the soil, and keep fruit off soggy ground. Rotate away from peppers, tomatoes, and squash.",
+  "new": "Too much water in the soil makes this disease worse, so keep the soil moist but not soggy. Water with a drip line if you can, or water at the base of the plants and keep the leaves dry. Don't plant eggplant where tomatoes, potatoes, peppers or eggplant grew in the last three years. This disease also attacks tomatoes, beans and most squash and melons, so rotating crops helps less against it. Corn and wheat don't get it, so they are good crops to plant in that spot instead.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "pumpkin",
+  "path": "soil_prep_seasoned",
+  "kind": "prose",
+  "old": "Prepare a deep, fertile, well-drained bed in full sun, working several inches of compost or rotted manure into the soil before planting, since pumpkins are big, hungry, long-season plants. Most growers plant in low hills or mounds about a foot across, which warm faster, drain better, and give the sprawling vines a starting point. Space hills generously: at least 8 feet apart on all sides for full-size vining types (closer for bush and miniature kinds), because a full-size vine can run 10 to 20 feet. On heavy or wet ground, build the mounds up for drainage to head off crown and Phytophthora fruit rot.",
+  "new": "Choose a spot in full sun with well-drained soil. Prepare it by tilling deeply and adding organic matter. Add well-rotted manure or compost in spring or fall. Skip fresh manure, which may carry harmful bacteria and increase weed problems. Depending on how much manure or compost you add, you may not need extra fertilizer. Plant in hills: raise the soil a few inches into a gentle mound to help drainage.",
+  "cited_at": "<soil_prep>",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "pumpkin",
+  "path": "soil_prep_beginner",
+  "kind": "prose",
+  "old": "Pick a sunny spot with rich, well-drained soil and mix in plenty of compost before planting, since pumpkins are large, hungry plants. Plant them on low hills or mounds, which warm up and drain better. Give them lots of room: space hills at least 8 feet apart on all sides for full-size pumpkins, since the vines can spread 10 to 20 feet (small and bush types need less). If your soil is heavy or wet, build the mounds up higher so water drains away from the roots and fruit.",
+  "new": "Pick a sunny spot with soil that drains well. Before planting, dig the soil deeply and mix in compost or well-rotted manure. Don't use fresh manure, which can carry harmful bacteria and bring more weeds. With enough compost or manure, you may not need extra fertilizer. Plant in hills, raising the soil a few inches into a gentle mound so water drains away.",
+  "cited_at": "<soil_prep>",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "butternut-squash",
+  "path": "soil_prep_seasoned",
+  "kind": "prose",
+  "old": "Prepare a deep, fertile, well-drained bed in full sun, working several inches of compost or rotted manure into the soil before planting, since butternut is a big, hungry, long-season plant. Many growers plant in low hills or mounds about a foot across, which warm faster, drain better, and give the sprawling vines a starting point. Space generously: roughly 24 to 36 inches between plants in the row with 5 to 6 feet between rows for full-size vining types (closer for the bush Butterbush), because a full-size vine can run 8 to 12 feet. On heavy or wet ground, build the mounds up for drainage to head off crown and fruit rot.",
+  "new": "Choose a spot with soil that holds moisture yet drains well. Add well-rotted manure or compost in spring or fall. Skip fresh manure, which may carry harmful bacteria and increase weed problems. Depending on how much manure or compost you add, you may not need extra fertilizer. Form raised beds, since these crops need good drainage.",
+  "cited_at": "<soil_prep>",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "butternut-squash",
+  "path": "soil_prep_beginner",
+  "kind": "prose",
+  "old": "Pick a sunny spot with rich, well-drained soil and mix in plenty of compost before planting, since butternut is a large, hungry plant. Plant it on low hills or mounds, which warm up and drain better. Give it lots of room: space plants about 2 to 3 feet apart in rows 5 to 6 feet apart for full-size butternut, since the vines can spread 8 to 12 feet (bush types like Butterbush need less). If your soil is heavy or wet, build the mounds up higher so water drains away from the roots and fruit.",
+  "new": "Choose a spot with soil that stays moist but drains well. Mix in compost or well-rotted manure in spring or fall. Don't use fresh manure, which can carry harmful bacteria and bring more weeds. With enough compost or manure, you may not need extra fertilizer. Build raised beds, since these plants need good drainage.",
+  "cited_at": "<soil_prep>",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "acorn-squash",
+  "path": "soil_prep_seasoned",
+  "kind": "prose",
+  "old": "Prepare a fertile, well-drained bed in full sun, working several inches of compost or rotted manure into the soil before planting, since acorn squash is a hungry, warm-season plant. Many growers set plants in low hills or mounds about a foot across, which warm faster in spring, drain better, and give the plants a clear starting point. Space to the type: bush and semi-bush acorn squash can go about 18 to 24 inches apart, while vining types want 24 to 36 inches in the row with 5 to 6 feet between rows, since the vines run 4 to 8 feet. On heavy or wet ground, build the mounds up for drainage to head off crown and fruit rot.",
+  "new": "Choose a spot with soil that holds moisture yet drains well. Add well-rotted manure or compost in spring or fall. Skip fresh manure, which may carry harmful bacteria and increase weed problems. Depending on how much manure or compost you add, you may not need extra fertilizer. Form raised beds, since these crops need good drainage.",
+  "cited_at": "<soil_prep>",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "acorn-squash",
+  "path": "soil_prep_beginner",
+  "kind": "prose",
+  "old": "Pick a sunny spot with rich, well-drained soil and mix in plenty of compost before planting, since acorn squash is a hungry plant. Plant it on low hills or mounds, which warm up and drain better. Space it to the type: bush kinds like Table King can go about a foot and a half to two feet apart, while vining kinds need more room, about 2 to 3 feet apart in rows 5 to 6 feet apart. If your soil is heavy or wet, build the mounds up higher so water drains away from the roots and fruit.",
+  "new": "Choose a spot with soil that stays moist but drains well. Mix in compost or well-rotted manure in spring or fall. Don't use fresh manure, which can carry harmful bacteria and bring more weeds. With enough compost or manure, you may not need extra fertilizer. Build raised beds, since these plants need good drainage.",
+  "cited_at": "<soil_prep>",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "spaghetti-squash",
+  "path": "soil_prep_seasoned",
+  "kind": "prose",
+  "old": "Prepare a fertile, well-drained bed in full sun, working several inches of compost or rotted manure into the soil before planting, since spaghetti squash is a hungry, long-season plant. Many growers set plants in low hills or mounds about a foot across, which warm faster in spring, drain better, and give the vines a clear starting point. Space generously: roughly 24 to 36 inches between plants in the row with 5 to 6 feet between rows for vining types (closer for bush types like Tivoli), because the vines can run 6 to 8 feet. On heavy or wet ground, build the mounds up for drainage to head off crown and fruit rot.",
+  "new": "Choose a spot with soil that holds moisture yet drains well. Add well-rotted manure or compost in spring or fall. Skip fresh manure, which may carry harmful bacteria and increase weed problems. Depending on how much manure or compost you add, you may not need extra fertilizer. Form raised beds, since these crops need good drainage.",
+  "cited_at": "<soil_prep>",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "spaghetti-squash",
+  "path": "soil_prep_beginner",
+  "kind": "prose",
+  "old": "Pick a sunny spot with rich, well-drained soil and mix in plenty of compost before planting, since spaghetti squash is a large, hungry plant. Plant it on low hills or mounds, which warm up and drain better. Give it room: space plants about 2 to 3 feet apart in rows 5 to 6 feet apart, since the vines can spread 6 to 8 feet (bush types like Tivoli need less). If your soil is heavy or wet, build the mounds up higher so water drains away from the roots and fruit.",
+  "new": "Choose a spot with soil that stays moist but drains well. Mix in compost or well-rotted manure in spring or fall. Don't use fresh manure, which can carry harmful bacteria and bring more weeds. With enough compost or manure, you may not need extra fertilizer. Build raised beds, since these plants need good drainage.",
+  "cited_at": "<soil_prep>",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "parsnip",
+  "path": "diseases[id=itersonilia-canker].prevention_seasoned",
+  "kind": "prose",
+  "old": "Choose resistant varieties (Avonresister, Cobham Improved Marrow), rotate out of the carrot family for two to three years, hill soil over the shoulders through the season, control carrot rust fly, avoid waterlogged beds, harvest before very late in cold wet spells, and bury old parsnip residue by deep cultivation to lower inoculum. (UMass)",
+  "new": "Choose canker-resistant varieties. Rotate parsnip with crops the pathogen doesn't infect. Besides parsnip, it infects carrot, coriander and parsley, along with sunflower, aster and chrysanthemum. Hill soil over the root shoulders throughout the season. Control carrot rust fly, since its larvae can make roots more prone to infection. Grow parsnips in loose, well-drained soil. Cool, wet weather favors the disease, and it can be serious in late-harvested crops. After harvest, dig old parsnip residue in deeply so it decomposes and less inoculum survives in the soil.",
+  "cited_at": "diseases[id=itersonilia-canker]",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "parsnip",
+  "path": "diseases[id=itersonilia-canker].prevention_beginner",
+  "kind": "prose",
+  "old": "Grow a canker-resistant variety, do not plant parsnips or their relatives in the same bed for two to three years, mound a little soil over the root shoulders during the season, keep carrot rust fly down, avoid soggy soil, and clear and bury old parsnip plants after harvest. (UMass)",
+  "new": "Grow a variety that resists canker. Rotate parsnips with crops this disease doesn't infect. It also attacks carrots, parsley and cilantro. Keep the tops of the roots covered with soil all season. Control carrot rust fly, since its larvae can make roots easier to infect. Cool, wet weather makes the disease worse, and it does the most damage in parsnips harvested late. After harvest, dig old parsnip plants deep into the soil so they break down.",
+  "cited_at": "diseases[id=itersonilia-canker]",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "parsnip",
+  "path": "failure_diagnostics[id=canker].next_season_tip_seasoned",
+  "kind": "prose",
+  "old": "Choose resistant varieties (Avonresister, Cobham Improved Marrow), rotate out of the carrot family for three years, hill soil over the shoulders through the season, control carrot rust fly, avoid overly wet beds, and bury old parsnip residue. Fungicides do not control root cankers. (UMass)",
+  "new": "Choose canker-resistant varieties. Rotate with crops the pathogen doesn't infect, keeping carrot, coriander and parsley out of the rotation too. Hill soil over the root shoulders throughout the season. Control carrot rust fly. Grow in loose, well-drained soil. Dig old parsnip residue in deeply after harvest. Fungicide sprays don't control root cankers.",
+  "cited_at": "failure_diagnostics[id=canker]",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "parsnip",
+  "path": "failure_diagnostics[id=canker].next_season_tip_beginner",
+  "kind": "prose",
+  "old": "Grow a canker-resistant variety, do not plant parsnips or their relatives in the same bed for three years, mound a little soil over the root shoulders during the season, keep carrot rust fly down, and avoid soggy soil. Sprays do not fix root canker. (UMass)",
+  "new": "Grow a canker-resistant variety. Rotate parsnips with crops this disease doesn't infect. Keep the tops of the roots covered with soil all season. Control carrot rust fly. Grow them in loose soil that drains well. Bury old parsnip plants deep in the soil after harvest. Sprays won't fix root canker.",
+  "cited_at": "failure_diagnostics[id=canker]",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "parsnip",
+  "path": "growth_stages[id=established].user_action_seasoned",
+  "kind": "prose",
+  "old": "Maintain even moisture, about 1 inch per week, to prevent cracking, and hill a little soil or mulch over the shoulders to suppress canker and greening. Feeding is rarely needed. Wear gloves and long sleeves when working among the foliage in bright sun, since parsnip sap can cause a skin rash.",
+  "new": "Keep the soil evenly moist, since drought can split the roots. Hill soil over the root shoulders through the season to help prevent canker. Avoid excess nitrogen, which pushes leaf growth at the expense of the roots. Some people get a skin rash from contact with parsnip leaves, especially on bright, sunny days. Wear long sleeves, long pants and gloves when weeding or harvesting.",
+  "cited_at": "growth_stages[id=established]",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "parsnip",
+  "path": "growth_stages[id=established].user_action_beginner",
+  "kind": "prose",
+  "old": "Keep the watering steady, about 1 inch a week, so the roots do not crack, and pull a little soil or mulch over the root tops as they show. They usually need no feeding. Wear gloves and long sleeves when handling the leaves on a sunny day, because parsnip sap can give some people a skin rash.",
+  "new": "Keep the soil evenly moist, because dry spells can make the roots split. Keep the tops of the roots covered with soil to help prevent canker. Don't overdo nitrogen fertilizer, which grows leaves at the expense of the roots. Some people get a skin rash from touching parsnip leaves, especially on sunny days. Wear long sleeves, long pants and gloves when weeding or harvesting.",
+  "cited_at": "growth_stages[id=established]",
+  "reason": "PLA-673 part B2: approved text (claude.ai, Trevor), round 1/2"
+ },
+ {
+  "crop": "eggplant",
+  "path": "diseases[id=phytophthora-blight].sources",
+  "kind": "sources",
+  "old": [
+   "clemson_hgic"
+  ],
+  "new": [
+   "clemson_hgic",
+   "ncsu_ext_phytophthora_blight_peppers"
+  ],
+  "cited_at": null,
+  "reason": "PLA-673 part B2: the leaf's citation, as ruled"
+ },
+ {
+  "crop": "eggplant",
+  "path": "diseases[id=phytophthora-blight].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/factsheet/eggplant-insect-pests-diseases/",
+    "verified": "2026-06-29"
+   }
+  },
+  "new": {
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/factsheet/eggplant-insect-pests-diseases/",
+    "verified": "2026-10-06"
+   },
+   "ncsu_ext_phytophthora_blight_peppers": {
+    "url": "https://content.ces.ncsu.edu/phytophthora-blight-of-peppers",
+    "verified": "2026-10-06"
+   }
+  },
+  "cited_at": null,
+  "reason": "PLA-673 part B2: anchoring map keyed by source id (convention)"
+ },
+ {
+  "crop": "parsnip",
+  "path": "diseases[id=itersonilia-canker].sources",
+  "kind": "sources",
+  "old": [
+   "umass_ext",
+   "usu_ext"
+  ],
+  "new": [
+   "umass_ext_itersonilia_canker",
+   "clemson_hgic"
+  ],
+  "cited_at": null,
+  "reason": "PLA-673 part B2: the leaf's citation, as ruled"
+ },
+ {
+  "crop": "parsnip",
+  "path": "diseases[id=itersonilia-canker].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "umass_ext": {
+    "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/carrot-parsnip-itersonilia-canker",
+    "verified": "2026-06-29"
+   },
+   "usu_ext": {
+    "url": "https://extension.usu.edu/planthealth/ipm/notes_ag/veg-list-root-crops",
+    "verified": "2026-06-29"
+   }
+  },
+  "new": {
+   "umass_ext_itersonilia_canker": {
+    "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/carrot-parsnip-itersonilia-canker",
+    "verified": "2026-10-06"
+   },
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+    "verified": "2026-10-06"
+   }
+  },
+  "cited_at": null,
+  "reason": "PLA-673 part B2: anchoring map keyed by source id (convention)"
+ },
+ {
+  "crop": "parsnip",
+  "path": "failure_diagnostics[id=canker].sources",
+  "kind": "sources",
+  "old": [
+   "umass_ext"
+  ],
+  "new": [
+   "umass_ext_itersonilia_canker",
+   "clemson_hgic"
+  ],
+  "cited_at": null,
+  "reason": "PLA-673 part B2: the leaf's citation, as ruled"
+ },
+ {
+  "crop": "parsnip",
+  "path": "failure_diagnostics[id=canker].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "umass_ext": {
+    "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/carrot-parsnip-itersonilia-canker",
+    "verified": "2026-06-29"
+   }
+  },
+  "new": {
+   "umass_ext_itersonilia_canker": {
+    "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/carrot-parsnip-itersonilia-canker",
+    "verified": "2026-10-06"
+   },
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+    "verified": "2026-10-06"
+   }
+  },
+  "cited_at": null,
+  "reason": "PLA-673 part B2: anchoring map keyed by source id (convention)"
+ },
+ {
+  "crop": "parsnip",
+  "path": "growth_stages[id=established].sources",
+  "kind": "sources",
+  "old": "<absent>",
+  "new": [
+   "umn_ext",
+   "umass_ext_itersonilia_canker",
+   "rhs"
+  ],
+  "cited_at": null,
+  "reason": "PLA-673 part B2: the leaf's citation, as ruled"
+ },
+ {
+  "crop": "parsnip",
+  "path": "growth_stages[id=established].anchoring_urls",
+  "kind": "anchors",
+  "old": "<absent>",
+  "new": {
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-carrots-and-parsnips",
+    "verified": "2026-10-06"
+   },
+   "umass_ext_itersonilia_canker": {
+    "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/carrot-parsnip-itersonilia-canker",
+    "verified": "2026-10-06"
+   },
+   "rhs": {
+    "url": "https://www.rhs.org.uk/vegetables/parsnips/grow-your-own",
+    "verified": "2026-10-06"
+   }
+  },
+  "cited_at": null,
+  "reason": "PLA-673 part B2: anchoring map keyed by source id (convention)"
+ },
+ {
+  "crop": "pumpkin",
+  "path": "soil_prep_sources",
+  "kind": "sources",
+  "old": null,
+  "new": [
+   "uga_c1206_homegrown_pumpkins",
+   "umn_ext"
+  ],
+  "cited_at": null,
+  "reason": "PLA-673 part B2: the leaf's citation, as ruled"
+ },
+ {
+  "crop": "pumpkin",
+  "path": "soil_prep_anchoring_urls",
+  "kind": "anchors",
+  "old": null,
+  "new": {
+   "uga_c1206_homegrown_pumpkins": {
+    "url": "https://fieldreport.caes.uga.edu/publications/C1206/homegrown-pumpkins/",
+    "verified": "2026-10-06"
+   },
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/pumpkins-and-winter-squash",
+    "verified": "2026-10-06"
+   }
+  },
+  "cited_at": null,
+  "reason": "PLA-673 part B2: anchoring map keyed by source id (convention)"
+ },
+ {
+  "crop": "butternut-squash",
+  "path": "soil_prep_sources",
+  "kind": "sources",
+  "old": null,
+  "new": [
+   "umn_ext"
+  ],
+  "cited_at": null,
+  "reason": "PLA-673 part B2: the leaf's citation, as ruled"
+ },
+ {
+  "crop": "butternut-squash",
+  "path": "soil_prep_anchoring_urls",
+  "kind": "anchors",
+  "old": null,
+  "new": {
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/pumpkins-and-winter-squash",
+    "verified": "2026-10-06"
+   }
+  },
+  "cited_at": null,
+  "reason": "PLA-673 part B2: anchoring map keyed by source id (convention)"
+ },
+ {
+  "crop": "acorn-squash",
+  "path": "soil_prep_sources",
+  "kind": "sources",
+  "old": null,
+  "new": [
+   "umn_ext"
+  ],
+  "cited_at": null,
+  "reason": "PLA-673 part B2: the leaf's citation, as ruled"
+ },
+ {
+  "crop": "acorn-squash",
+  "path": "soil_prep_anchoring_urls",
+  "kind": "anchors",
+  "old": null,
+  "new": {
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/pumpkins-and-winter-squash",
+    "verified": "2026-10-06"
+   }
+  },
+  "cited_at": null,
+  "reason": "PLA-673 part B2: anchoring map keyed by source id (convention)"
+ },
+ {
+  "crop": "spaghetti-squash",
+  "path": "soil_prep_sources",
+  "kind": "sources",
+  "old": null,
+  "new": [
+   "umn_ext"
+  ],
+  "cited_at": null,
+  "reason": "PLA-673 part B2: the leaf's citation, as ruled"
+ },
+ {
+  "crop": "spaghetti-squash",
+  "path": "soil_prep_anchoring_urls",
+  "kind": "anchors",
+  "old": null,
+  "new": {
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/pumpkins-and-winter-squash",
+    "verified": "2026-10-06"
+   }
+  },
+  "cited_at": null,
+  "reason": "PLA-673 part B2: anchoring map keyed by source id (convention)"
+ },
+ {
+  "crop": "<catalog>",
+  "path": "ncsu_ext_phytophthora_blight_peppers",
+  "kind": "catalog",
+  "old": "<absent>",
+  "new": {
+   "id": "ncsu_ext_phytophthora_blight_peppers",
+   "name": "NC State Extension -- Phytophthora Blight of Peppers (Vegetable Pathology Factsheets)",
+   "title": "Phytophthora Blight of Peppers",
+   "publisher": "NC State Extension, NC State University Vegetable Pathology Lab",
+   "url": "https://content.ces.ncsu.edu/phytophthora-blight-of-peppers",
+   "source_class": "university_extension",
+   "trust_tier": "high",
+   "accessed": "2026-10",
+   "tier": "T1",
+   "citable_for": "NC State vegetable pathology factsheet (Lina Quesada-Ocampo; published 29 June 2018, revised 9 Jan 2023) on Phytophthora capsici in pepper: pathogen and oospore survival (over 10 years), spread via water and splash, host range (peppers, eggplant, tomato, beans, most cucurbits; cereals are not hosts, so rotation is weak), symptoms (crown and fruit rot, wilting, girdling crown lesions, white cottony mold on fruit), favorable conditions (excessive rainfall or overhead irrigation, saturated soils, 75 to 90 F), and management (resistant varieties, good drainage and even terrain, raised beds and plastic mulch, moderate drip irrigation from a well, remove diseased plants and culls, rotate to cereals; home gardeners have no effective chemical option). A document-scoped child of ncsu_ext.",
+   "_admission_provenance": "Minted (staged) 2026-10-06 for PLA-673 part B2. Raw bytes sha256 b59564c6d6b04265fffa214c065610313c58b393dd764c0ef4b5077994680e48 (46,691 bytes), urllib browser+plain UA byte-identical. Found as the 'management of Phytophthora Blight of Peppers' link on the vegetables.ces.ncsu.edu/peppers-diseases/ index page that the peppers' ncsu_ext anchor points at."
+  },
+  "cited_at": null,
+  "reason": "PLA-673 part B2: document-level id (rulings 4/5; eggplant ruling)"
+ },
+ {
+  "crop": "<catalog>",
+  "path": "umass_ext_itersonilia_canker",
+  "kind": "catalog",
+  "old": "<absent>",
+  "new": {
+   "id": "umass_ext_itersonilia_canker",
+   "name": "UMass Extension Vegetable Program -- Carrot & Parsnip, Itersonilia Canker",
+   "title": "Carrot & Parsnip, Itersonilia Canker",
+   "publisher": "UMass Amherst Center for Agriculture, Food, and the Environment (Extension Vegetable Program)",
+   "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/carrot-parsnip-itersonilia-canker",
+   "source_class": "university_extension",
+   "trust_tier": "high",
+   "accessed": "2026-10",
+   "tier": "T1",
+   "citable_for": "UMass fact sheet (last updated 14 Jan 2013) on Itersonilia (black) canker of parsnip and carrot: cankers mainly on crown and shoulder; serious especially in late-harvested crops; favored by cool, wet weather; controls: resistant cultivars, rotate with non-host crops, control carrot rust fly, fungicide sprays not effective on root cankers, cover the shoulder of parsnips with soil throughout the growing season, deep plowing to decompose residue. A document-scoped child of umass_ext.",
+   "_admission_provenance": "Minted (staged) 2026-10-06 for PLA-673 part B2. Raw bytes sha256 e1f62141e5dc10fed18d714b510e8ea66787f9b587bd1ee7a3b87f79c2cedee6 (60,523 bytes), urllib browser UA (plain UA 403); a 2026-10-05 scratch copy (d274f3f1) differs only in a per-request permissions hash. Already cited on parsnip under umass_ext (diseases[0], failure_diagnostics[3])."
+  },
+  "cited_at": null,
+  "reason": "PLA-673 part B2: document-level id (rulings 4/5; eggplant ruling)"
+ }
+]

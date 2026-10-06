@@ -57,6 +57,14 @@ if len(sys.argv) < 2:
     sys.exit(2)
 SLUG = sys.argv[1]
 PATH = sys.argv[2] if len(sys.argv) > 2 else "crops_data_final.json"
+# The A62 era switch binds to THIS file before anything is gated (sourced_block_ratchet_gate.bind_era): set anywhere
+# but on a registered historical replay post-state, the gate refuses outright and prints no verdict.
+import sourced_block_ratchet_gate as _sbr_era  # noqa: E402
+try:
+    _sbr_era.bind_era(PATH)
+except _sbr_era.EraRefused as _e:
+    print(f"ERA SWITCH REFUSED: {_e}")
+    sys.exit(2)
 
 data = json.load(open(PATH))
 matches = [c for c in data["crops"] if c.get("slug") == SLUG]
