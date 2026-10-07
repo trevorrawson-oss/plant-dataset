@@ -63,7 +63,8 @@ SENTINEL = ("sentinel-population-pin", mod_sub("DEFAULT_FLOOR = 200", "DEFAULT_F
 def scratch():
     d = tempfile.mkdtemp(prefix="mut_glossary_")
     os.makedirs(os.path.join(d, "tools", "staging", "pla673_674_prep"))
-    for f in (MOD, SPEC, TEST):
+    # + the shared match fixture, which test_glossary_sense reads since PLA-673 part D (its absence killed the control)
+    for f in (MOD, SPEC, TEST, "tools/staging/pla673_674_prep/glossary-match.fixture.json"):
         shutil.copy(os.path.join(ROOT, f), os.path.join(d, f))
     os.symlink(os.path.join(ROOT, "crops_data_final.json"), os.path.join(d, "crops_data_final.json"))
     return d

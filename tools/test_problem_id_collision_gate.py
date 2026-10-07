@@ -95,7 +95,10 @@ CANON = os.path.join(REPO, "crops_data_final.json")
 # 128 records, prose on 6 crops; no problem id, pest or disease entry added, removed or renamed. The gate's whole output
 # was run on all three states (and on aeeb5789, the B2 bundle before usu_ext came off parsnip) and is byte-identical (50 lines, 36 findings / 12 open / 24 registered); every count test
 # in this file was run on the post-state and passed (only this preflight reddened), so 36 / 24 / 12 hold.
-PINNED_SHA = "aaf004a23eb52005962c399d9f2f779b98b6226dacba0f454dff4442c1324812"
+# RE-MEASURED 2026-10-06 (PLA-673 part D), aaf004a2 -> 5420479d. Pepper Phytophthora entry re-authored (same id), watermelon
+# row entry + thinning; no problem id, pest or disease entry added, removed or renamed. The gate's whole output is
+# byte-identical on both states (36 findings / 12 open / 24 registered).
+PINNED_SHA = "5420479d85bb8b65be62fa459fd97b8ce12dfdf9d3951e455be52aadc7a98063"
 
 # ---------------------------------------------------------------------------------------------
 # The PLA-449 fixture, transcribed from the ticket. NEVER computed from a scan.

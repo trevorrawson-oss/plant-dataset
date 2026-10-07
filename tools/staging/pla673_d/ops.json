@@ -1,0 +1,566 @@
+[
+ {
+  "crop": "watermelon",
+  "path": "thinning.tip_seasoned",
+  "kind": "prose",
+  "old": "Sow three to four seeds per hill and thin to the strongest two once they have a true leaf or two. Snip the extras off at soil line rather than pulling, so you do not disturb the roots of the keepers. In rows, thin to one plant every 24 to 36 inches for icebox types and 5 to 6 feet for full-size vines.",
+  "new": "Sow four to five seeds per hill. Once seedlings have two leaves, about a week after they come up, thin to the strongest two plants per hill. In rows, thin to one plant every 24 to 48 inches.",
+  "cited_at": "thinning",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "watermelon",
+  "path": "thinning.tip_beginner",
+  "kind": "prose",
+  "old": "Plant three or four seeds in each hill, then keep the two strongest seedlings once they grow their first real leaves. Cut the extra ones off at the ground instead of pulling them, so you do not hurt the roots of the ones you keep.",
+  "new": "Plant four or five seeds in each hill. When the seedlings have two leaves, about a week after they sprout, keep the two strongest in each hill and remove the rest. If you plant in rows, leave one plant every 24 to 48 inches.",
+  "cited_at": "thinning",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "watermelon",
+  "path": "thinning.method",
+  "kind": "prose",
+  "old": "snip extras at soil line",
+  "new": "thin to two plants per hill",
+  "cited_at": "thinning",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].symptoms_seasoned",
+  "kind": "prose",
+  "old": "Dark, water-soaked lesions girdle the stem at or near the soil line and the plant wilts and collapses suddenly, sometimes with a white cottony growth; roots rot, and fruit can develop a firm, white-mold rot. It flares in warm, wet, poorly drained ground and after heavy rain or flooding, and is the most serious pepper disease in much of the country.",
+  "new": "Symptoms usually start at the soil line in the roots and crown, though infection can occur anywhere splashing water throws soil onto the plant. Crown lesions turn dark brown and extend up the stem until they girdle it and kill the plant. In wet conditions, plants typically wilt and then die. Infected fruit shows water-soaked areas that become covered with white, powdery to cottony mold. It develops best with heavy rain or overhead irrigation, saturated soil and temperatures of 75 to 90°F.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].symptoms_beginner",
+  "kind": "prose",
+  "old": "The plant wilts and collapses suddenly, often with a dark rotten patch on the stem near the soil, and the roots and even the fruit can rot. It strikes in warm, wet, soggy ground and moves fast. It is one of the worst pepper diseases.",
+  "new": "Look for a dark brown patch on the stem near the soil that spreads up and circles the stem. In wet weather, the plant wilts and then dies. Fruit can rot too, with wet-looking spots that turn white and fuzzy. It's worst in warm weather with lots of rain and soggy soil.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].cause_seasoned",
+  "kind": "prose",
+  "old": "Phytophthora capsici, a water mold that thrives in saturated soil and spreads in splashing and running water. It survives in soil and debris for years and moves fast in warm, wet weather, especially on heavy or poorly drained ground and in low spots that stay wet.",
+  "new": "Phytophthora capsici, a fungus-like oomycete (water mold). It spreads rapidly through water, including rain and irrigation that splash infested soil onto plants and fruit. Its oospores can persist in soil for more than 10 years. Culls and plant debris can also become a significant source of the pathogen. Saturated soil and warm temperatures favor it.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].cause_beginner",
+  "kind": "prose",
+  "old": "A mold-like disease that lives in wet soil and spreads in splashing and running water, attacking peppers in warm, soggy conditions. It moves fast once it starts and lives in the soil for years.",
+  "new": "A fungus-like organism that lives in the soil and spreads in water, especially splashing rain and irrigation. It can survive in the soil for more than 10 years. It does best in warm weather and soggy soil.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].organic_treatment_seasoned",
+  "kind": "prose",
+  "old": "Remove and destroy affected plants and fruit promptly, and improve drainage immediately. There is no effective home-garden cure once plants collapse, so control is preventive and drainage-based.",
+  "new": "Home gardeners have no effective chemical control options, so control relies on resistant varieties and cultural practices. Remove diseased plants and fruit from the garden. Don't leave culls on the ground or near ponds or creeks.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].organic_treatment_beginner",
+  "kind": "prose",
+  "old": "Pull and destroy affected plants and fruit, and fix the drainage. There is no good home cure once it takes hold, so prevention is what matters.",
+  "new": "No spray works for this in a home garden, so prevention is what counts. Pull diseased plants and rotted fruit and take them out of the garden.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].prevention_seasoned",
+  "kind": "prose",
+  "old": "Plant on raised, well-drained beds or hills, avoid low spots that stay wet, water at the soil rather than overhead, do not overwater, mulch to limit splash, rotate away from peppers and other susceptible crops for at least three to four years, and keep fruit up off saturated soil.",
+  "new": "Choose resistant varieties; some bell, sweet and hot peppers have moderate resistance. Plant on well-drained, level ground where water won't stand. Use raised beds and plastic mulch whenever possible. Irrigate moderately by drip, and avoid overhead watering, especially once fruit forms. Don't irrigate from ponds or creeks, which may carry the pathogen. The pathogen's broad host range, including eggplant, tomato, beans and most cucurbits, makes rotation much less effective. Rotate to cereals such as corn or wheat, which are not hosts.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].prevention_beginner",
+  "kind": "prose",
+  "old": "Plant on raised beds or mounds so water drains away, avoid wet low spots, water at the soil and do not overwater, and rotate away from peppers for several years. Keeping the ground from staying soggy is the key.",
+  "new": "Choose a pepper variety with some resistance to this disease. Plant where water drains away and doesn't pool. Raised beds covered with plastic mulch help. Water at the soil with a drip line, and don't overwater. This disease also attacks eggplant, tomatoes, beans and most squash and melons, so moving peppers to a new spot helps less. Corn and wheat don't get it, so they're good crops for that spot.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=improve_drainage].note_seasoned",
+  "kind": "prose",
+  "old": "Raised, well-drained beds deny this water mold the saturated soil it thrives in, and low spots that stay wet are where it starts; with no effective home-garden cure once plants collapse, drainage correction is the immediate response as well as the prevention.",
+  "new": "Plant on well-drained, level ground where water won't stand. Use raised beds where possible. Saturated soil favors the disease.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=improve_drainage].note_beginner",
+  "kind": "prose",
+  "old": "Plant on raised beds or mounds so water drains away fast, and avoid low spots that stay wet after rain. This disease needs soggy soil, so drainage is the heart of the defense, and if it strikes, fix the drainage right away.",
+  "new": "Plant where water drains away and doesn't pool. Raised beds help, because this disease does best in soggy soil.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=water_at_the_base].note_seasoned",
+  "kind": "prose",
+  "old": "Water at the soil and avoid excess; the pathogen spreads in splashing and running water and flares in saturated ground, so volume matters as much as placement.",
+  "new": "Irrigate moderately by drip and avoid overhead watering, especially once fruit forms. Rain and overhead irrigation can splash infested soil onto developing fruit and infect it.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=water_at_the_base].note_beginner",
+  "kind": "prose",
+  "old": "Water at the soil rather than over the plants, and do not overwater. Warm, wet, soggy ground is exactly what lets this disease take off.",
+  "new": "Water at the soil with a drip line, and don't overwater. Splashing water can throw infected soil onto the peppers.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=splash_barrier_mulch].note_seasoned",
+  "kind": "prose",
+  "old": "Mulch limits splash dispersal off infested soil, one of the routes by which the pathogen moves through a bed in wet weather.",
+  "new": "NC State recommends plastic mulch on raised beds where possible. Infection can start anywhere splashing water throws soil onto the plant.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=splash_barrier_mulch].note_beginner",
+  "kind": "prose",
+  "old": "Mulch under the plants to cut down on splashing, which is one of the ways the disease spreads.",
+  "new": "Lay plastic mulch over a raised bed if you can. Water splashing up from the soil can carry the disease onto the plant.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=crop_rotation].note_seasoned",
+  "kind": "prose",
+  "old": "Rotate away from peppers and other susceptible crops for at least three to four years; the pathogen persists in soil and debris for years, so a short gap buys little.",
+  "new": "The pathogen's broad host range, including eggplant, tomato, beans and most cucurbits, makes rotation much less effective. Oospores can persist in soil for more than 10 years. If you rotate, rotate to cereals such as corn or wheat, which are not hosts.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=crop_rotation].note_beginner",
+  "kind": "prose",
+  "old": "Move peppers to fresh ground and keep them, along with the other crops this disease attacks, out of a troubled bed for at least three to four years. It lives in the soil for years.",
+  "new": "This disease attacks many garden crops and can live in the soil for more than 10 years, so rotating helps less. If you rotate, plant corn or wheat in that spot, since they don't get it.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=garden_sanitation].note_seasoned",
+  "kind": "prose",
+  "old": "Prompt removal and destruction of collapsed plants and affected fruit reduces the inoculum that splashing and running water carries onward through the bed.",
+  "new": "Remove diseased plants and fruit from the garden, and don't leave culls on the ground or near ponds or creeks. Culls and debris can become a significant source of the pathogen.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=garden_sanitation].note_beginner",
+  "kind": "prose",
+  "old": "Pull and destroy any plant that wilts and collapses, along with rotted fruit, as soon as you see it.",
+  "new": "Pull any plant that wilts and dies, along with rotted fruit, and take them out of the garden. Don't leave them lying on the ground.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].symptoms_seasoned",
+  "kind": "prose",
+  "old": "Dark, water-soaked lesions girdle the stem at or near the soil line and the plant wilts and collapses suddenly, sometimes with a white cottony growth; roots rot, and fruit can develop a firm, white-mold rot. It flares in warm, wet, poorly drained ground and after heavy rain or flooding, and is among the most serious pepper diseases in much of the country.",
+  "new": "Symptoms usually start at the soil line in the roots and crown, though infection can occur anywhere splashing water throws soil onto the plant. Crown lesions turn dark brown and extend up the stem until they girdle it and kill the plant. In wet conditions, plants typically wilt and then die. Infected fruit shows water-soaked areas that become covered with white, powdery to cottony mold. It develops best with heavy rain or overhead irrigation, saturated soil and temperatures of 75 to 90°F.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].symptoms_beginner",
+  "kind": "prose",
+  "old": "The plant wilts and collapses suddenly, often with a dark rotten patch on the stem near the soil, and the roots and even the fruit can rot. It strikes in warm, wet, soggy ground and moves fast. It is one of the worst pepper diseases.",
+  "new": "Look for a dark brown patch on the stem near the soil that spreads up and circles the stem. In wet weather, the plant wilts and then dies. Fruit can rot too, with wet-looking spots that turn white and fuzzy. It's worst in warm weather with lots of rain and soggy soil.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].cause_seasoned",
+  "kind": "prose",
+  "old": "Phytophthora capsici, a water mold that thrives in saturated soil and spreads in splashing and running water. It survives in soil and debris for years and moves fast in warm, wet weather, especially on heavy or poorly drained ground and in low spots that stay wet.",
+  "new": "Phytophthora capsici, a fungus-like oomycete (water mold). It spreads rapidly through water, including rain and irrigation that splash infested soil onto plants and fruit. Its oospores can persist in soil for more than 10 years. Culls and plant debris can also become a significant source of the pathogen. Saturated soil and warm temperatures favor it.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].cause_beginner",
+  "kind": "prose",
+  "old": "A mold-like disease that lives in wet soil and spreads in splashing and running water, attacking peppers in warm, soggy conditions. It moves fast once it starts and lives in the soil for years.",
+  "new": "A fungus-like organism that lives in the soil and spreads in water, especially splashing rain and irrigation. It can survive in the soil for more than 10 years. It does best in warm weather and soggy soil.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].organic_treatment_seasoned",
+  "kind": "prose",
+  "old": "Remove and destroy affected plants and fruit promptly, and improve drainage immediately. There is no effective home-garden cure once plants collapse, so control is preventive and drainage-based.",
+  "new": "Home gardeners have no effective chemical control options, so control relies on resistant varieties and cultural practices. Remove diseased plants and fruit from the garden. Don't leave culls on the ground or near ponds or creeks.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].organic_treatment_beginner",
+  "kind": "prose",
+  "old": "Pull and destroy affected plants and fruit, and fix the drainage. There is no good home cure once it takes hold, so prevention is what matters.",
+  "new": "No spray works for this in a home garden, so prevention is what counts. Pull diseased plants and rotted fruit and take them out of the garden.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].prevention_seasoned",
+  "kind": "prose",
+  "old": "Plant on raised, well-drained beds or hills, avoid low spots that stay wet, water at the soil rather than overhead, do not overwater, mulch to limit splash, rotate away from peppers and other susceptible crops for at least three to four years, and keep fruit up off saturated soil.",
+  "new": "Choose resistant varieties; some bell, sweet and hot peppers have moderate resistance. Plant on well-drained, level ground where water won't stand. Use raised beds and plastic mulch whenever possible. Irrigate moderately by drip, and avoid overhead watering, especially once fruit forms. Don't irrigate from ponds or creeks, which may carry the pathogen. The pathogen's broad host range, including eggplant, tomato, beans and most cucurbits, makes rotation much less effective. Rotate to cereals such as corn or wheat, which are not hosts.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].prevention_beginner",
+  "kind": "prose",
+  "old": "Plant on raised beds or mounds so water drains away, avoid wet low spots, water at the soil and do not overwater, and rotate away from peppers for several years. Keeping the ground from staying soggy is the key.",
+  "new": "Choose a pepper variety with some resistance to this disease. Plant where water drains away and doesn't pool. Raised beds covered with plastic mulch help. Water at the soil with a drip line, and don't overwater. This disease also attacks eggplant, tomatoes, beans and most squash and melons, so moving peppers to a new spot helps less. Corn and wheat don't get it, so they're good crops for that spot.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=improve_drainage].note_seasoned",
+  "kind": "prose",
+  "old": "Raised, well-drained beds deny this water mold the saturated soil it thrives in, and low spots that stay wet are where it starts; with no effective home-garden cure once plants collapse, drainage correction is the immediate response as well as the prevention.",
+  "new": "Plant on well-drained, level ground where water won't stand. Use raised beds where possible. Saturated soil favors the disease.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=improve_drainage].note_beginner",
+  "kind": "prose",
+  "old": "Plant on raised beds or mounds so water drains away fast, and avoid low spots that stay wet after rain. This disease needs soggy soil, so drainage is the heart of the defense, and if it strikes, fix the drainage right away.",
+  "new": "Plant where water drains away and doesn't pool. Raised beds help, because this disease does best in soggy soil.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=water_at_the_base].note_seasoned",
+  "kind": "prose",
+  "old": "Water at the soil and avoid excess; the pathogen spreads in splashing and running water and flares in saturated ground, so volume matters as much as placement.",
+  "new": "Irrigate moderately by drip and avoid overhead watering, especially once fruit forms. Rain and overhead irrigation can splash infested soil onto developing fruit and infect it.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=water_at_the_base].note_beginner",
+  "kind": "prose",
+  "old": "Water at the soil rather than over the plants, and do not overwater. Warm, wet, soggy ground is exactly what lets this disease take off.",
+  "new": "Water at the soil with a drip line, and don't overwater. Splashing water can throw infected soil onto the peppers.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=splash_barrier_mulch].note_seasoned",
+  "kind": "prose",
+  "old": "Mulch limits splash dispersal off infested soil, one of the routes by which the pathogen moves through a bed in wet weather.",
+  "new": "NC State recommends plastic mulch on raised beds where possible. Infection can start anywhere splashing water throws soil onto the plant.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=splash_barrier_mulch].note_beginner",
+  "kind": "prose",
+  "old": "Mulch under the plants to cut down on splashing, which is one of the ways the disease spreads.",
+  "new": "Lay plastic mulch over a raised bed if you can. Water splashing up from the soil can carry the disease onto the plant.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=crop_rotation].note_seasoned",
+  "kind": "prose",
+  "old": "Rotate away from peppers and other susceptible crops for at least three to four years; the pathogen persists in soil and debris for years, so a short gap buys little.",
+  "new": "The pathogen's broad host range, including eggplant, tomato, beans and most cucurbits, makes rotation much less effective. Oospores can persist in soil for more than 10 years. If you rotate, rotate to cereals such as corn or wheat, which are not hosts.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=crop_rotation].note_beginner",
+  "kind": "prose",
+  "old": "Move peppers to fresh ground and keep them, along with the other crops this disease attacks, out of a troubled bed for at least three to four years. It lives in the soil for years.",
+  "new": "This disease attacks many garden crops and can live in the soil for more than 10 years, so rotating helps less. If you rotate, plant corn or wheat in that spot, since they don't get it.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=garden_sanitation].note_seasoned",
+  "kind": "prose",
+  "old": "Prompt removal and destruction of collapsed plants and affected fruit reduces the inoculum that splashing and running water carries onward through the bed.",
+  "new": "Remove diseased plants and fruit from the garden, and don't leave culls on the ground or near ponds or creeks. Culls and debris can become a significant source of the pathogen.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].control_ladder[method=garden_sanitation].note_beginner",
+  "kind": "prose",
+  "old": "Pull and destroy any plant that wilts and collapses, along with rotted fruit, as soon as you see it.",
+  "new": "Pull any plant that wilts and dies, along with rotted fruit, and take them out of the garden. Don't leave them lying on the ground.",
+  "cited_at": "diseases[id=phytophthora-blight]",
+  "reason": "PLA-673 part D: approved text (claude.ai, Trevor)"
+ },
+ {
+  "crop": "watermelon",
+  "path": "planting_layout[id=row-none].in_row_inches",
+  "kind": "value",
+  "old": [
+   60,
+   72
+  ],
+  "new": [
+   24,
+   48
+  ],
+  "cited_at": "planting_layout[id=row-none]",
+  "reason": "PLA-673 part D: UF VH021 (24-48 in-row, 60 rows), the consensus ruling"
+ },
+ {
+  "crop": "watermelon",
+  "path": "planting_layout[id=row-none].row_spacing_inches",
+  "kind": "value",
+  "old": [
+   72,
+   96
+  ],
+  "new": [
+   60,
+   60
+  ],
+  "cited_at": "planting_layout[id=row-none]",
+  "reason": "PLA-673 part D: UF VH021 (24-48 in-row, 60 rows), the consensus ruling"
+ },
+ {
+  "crop": "watermelon",
+  "path": "spacing_inches",
+  "kind": "value",
+  "old": [
+   60,
+   72
+  ],
+  "new": [
+   24,
+   48
+  ],
+  "cited_at": "planting_layout[id=row-none]",
+  "reason": "PLA-673 part D: UF VH021 (24-48 in-row, 60 rows), the consensus ruling; the crop-root mirror of the first entry carrying in_row_inches"
+ },
+ {
+  "crop": "watermelon",
+  "path": "thinning.sources",
+  "kind": "sources",
+  "old": [
+   "usu_ext",
+   "umn_ext"
+  ],
+  "new": [
+   "usu_ext",
+   "umn_ext",
+   "uga_ext",
+   "uf_ifas"
+  ],
+  "cited_at": null,
+  "reason": "PLA-673 part D: the block's citation, as ruled"
+ },
+ {
+  "crop": "watermelon",
+  "path": "thinning.anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "usu_ext": {
+    "url": "https://extension.usu.edu/yardandgarden/research/watermelon-in-the-garden",
+    "verified": "2026-06-29"
+   },
+   "umn_ext": {
+    "url": "https://extension.umn.edu/fruit/growing-melons-home-garden",
+    "verified": "2026-06-29"
+   }
+  },
+  "new": {
+   "usu_ext": {
+    "url": "https://extension.usu.edu/yardandgarden/research/watermelon-in-the-garden",
+    "verified": "2026-10-06"
+   },
+   "umn_ext": {
+    "url": "https://extension.umn.edu/fruit/growing-melons-home-garden",
+    "verified": "2026-10-06"
+   },
+   "uga_ext": {
+    "url": "https://fieldreport.caes.uga.edu/publications/C1035/",
+    "verified": "2026-10-06"
+   },
+   "uf_ifas": {
+    "url": "https://edis.ifas.ufl.edu/publication/VH021",
+    "verified": "2026-10-06"
+   }
+  },
+  "cited_at": null,
+  "reason": "PLA-673 part D: anchoring map keyed by source id (convention)"
+ },
+ {
+  "crop": "watermelon",
+  "path": "planting_layout[id=row-none].sources",
+  "kind": "sources",
+  "old": [
+   "clemson_hgic"
+  ],
+  "new": [
+   "uf_ifas"
+  ],
+  "cited_at": null,
+  "reason": "PLA-673 part D: the block's citation, as ruled"
+ },
+ {
+  "crop": "watermelon",
+  "path": "planting_layout[id=row-none].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/factsheet/watermelon/",
+    "verified": "2026-10-01"
+   }
+  },
+  "new": {
+   "uf_ifas": {
+    "url": "https://edis.ifas.ufl.edu/publication/VH021",
+    "verified": "2026-10-06"
+   }
+  },
+  "cited_at": null,
+  "reason": "PLA-673 part D: anchoring map keyed by source id (convention)"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].sources",
+  "kind": "sources",
+  "old": [
+   "ncsu_ext",
+   "clemson_hgic"
+  ],
+  "new": [
+   "ncsu_ext_phytophthora_blight_peppers",
+   "umn_ext"
+  ],
+  "cited_at": null,
+  "reason": "PLA-673 part D: the block's citation, as ruled"
+ },
+ {
+  "crop": "bell-pepper",
+  "path": "diseases[id=phytophthora-blight].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "ncsu_ext": {
+    "url": "https://vegetables.ces.ncsu.edu/peppers-diseases/",
+    "verified": "2026-06-30"
+   },
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/factsheet/pepper/",
+    "verified": "2026-06-30"
+   }
+  },
+  "new": {
+   "ncsu_ext_phytophthora_blight_peppers": {
+    "url": "https://content.ces.ncsu.edu/phytophthora-blight-of-peppers",
+    "verified": "2026-10-06"
+   },
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-peppers",
+    "verified": "2026-10-06"
+   }
+  },
+  "cited_at": null,
+  "reason": "PLA-673 part D: anchoring map keyed by source id (convention)"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].sources",
+  "kind": "sources",
+  "old": [
+   "ncsu_ext",
+   "clemson_hgic"
+  ],
+  "new": [
+   "ncsu_ext_phytophthora_blight_peppers",
+   "umn_ext"
+  ],
+  "cited_at": null,
+  "reason": "PLA-673 part D: the block's citation, as ruled"
+ },
+ {
+  "crop": "banana-pepper",
+  "path": "diseases[id=phytophthora-blight].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "ncsu_ext": {
+    "url": "https://vegetables.ces.ncsu.edu/peppers-diseases/",
+    "verified": "2026-06-30"
+   },
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/factsheet/pepper/",
+    "verified": "2026-06-30"
+   }
+  },
+  "new": {
+   "ncsu_ext_phytophthora_blight_peppers": {
+    "url": "https://content.ces.ncsu.edu/phytophthora-blight-of-peppers",
+    "verified": "2026-10-06"
+   },
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-peppers",
+    "verified": "2026-10-06"
+   }
+  },
+  "cited_at": null,
+  "reason": "PLA-673 part D: anchoring map keyed by source id (convention)"
+ }
+]

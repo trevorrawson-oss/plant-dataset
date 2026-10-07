@@ -1,6 +1,6 @@
 """PLA-673: the glossary sense guard (tools/glossary_sense.py) over the staged match spec.
 
-Pins the live population (225 consumer leaves on aaf004a2; 232 before PLA-673 B2), proves every exclusion family both on its LIVE leaves and on a
+Pins the live population (224 consumer leaves on 5420479d; 225 on aaf004a2, 232 before PLA-673 B2), proves every exclusion family both on its LIVE leaves and on a
 SYNTHETIC leaf injected into a scratch copy, and proves the refusal spec: a hill-word the spec does not classify fails
 loud rather than taking a gloss. Run under pytest (def test_ functions), via tools/run_test_tree.py --files.
 """
@@ -44,10 +44,10 @@ def leaf(slug, field, text):
 
 
 # ------------------------------------------------------------------ population (inspected-nothing is not clean)
-def test_population_is_225_consumer_leaves():
+def test_population_is_224_consumer_leaves():
     # 232 on 350eda38 / 3ccc25f1; 225 after PLA-673 B2 (aaf004a2) re-authored 7 leaves without a hill-word
-    assert LIVE.inspected == 225
-    assert len(LIVE.rows) == 225
+    assert LIVE.inspected == 224
+    assert len(LIVE.rows) == 224
 
 
 def test_population_floor_refuses_an_empty_roster():
@@ -63,7 +63,7 @@ def test_live_roster_is_fully_classified():
 
 def test_the_default_call_accepts_the_live_roster():
     """The refusing entry point (default floor, refuse=True) passes on canonical."""
-    assert gs.classify_dataset(DATA, SPEC).inspected == 225
+    assert gs.classify_dataset(DATA, SPEC).inspected == 224
 
 
 def test_live_term_counts():
@@ -73,7 +73,8 @@ def test_live_term_counts():
         by[r.term_ids] += 1
     # D8 (2026-10-05): the 3 pepper/eggplant "beds or hills" leaves moved hill -> none pending the part B2 re-author.
     # B2 (aaf004a2): eggplant's prevention_seasoned and the three squash soil_prep pairs no longer carry a hill-word
-    assert by == {("hill",): 102, ("hilling",): 60, ("none",): 63}
+    # part D (5420479d): both peppers' prevention_seasoned lose their hill-word (none -2); watermelon thinning.method gains one (hill +1)
+    assert by == {("hill",): 103, ("hilling",): 60, ("none",): 61}
 
 
 def test_non_consumer_and_structural_paths_are_not_inspected():
@@ -104,7 +105,7 @@ def test_injected_non_consumer_leaf_is_not_inspected(path):
         o.append("Plant in hills (an unscoped crop: inspecting this leaf would refuse).")
     else:
         o[path[-1]] = "Plant in hills (an unscoped crop: inspecting this leaf would refuse)."
-    assert gs.classify_dataset(d, SPEC).inspected == 225
+    assert gs.classify_dataset(d, SPEC).inspected == 224
 
 
 # ------------------------------------------------------------------ positive controls
@@ -116,19 +117,18 @@ def test_positive_control_mounded_hills_on_zucchini():
     assert leaf("zucchini-courgette", "x", "Raised beds or mounded hills improve drainage.") == ("hill",)
 
 
-# eggplant's leaf was re-authored in PLA-673 B2 (no hill-word); the two pepper leaves stay HELD (PLA-688)
-PEPPER_LEAVES = [("bell-pepper", "diseases.1.prevention_seasoned"), ("banana-pepper", "diseases.1.prevention_seasoned")]
+# eggplant's leaf was re-authored in PLA-673 B2 and both peppers' in part D (PLA-688): none carries a hill-word now.
+D8_CROPS = ("bell-pepper", "banana-pepper", "eggplant")
 
 
-def test_d8_pepper_eggplant_beds_or_hills_live_leaves_are_none_pending_b2():
-    """D8 (2026-10-05): an unsupported claim is tagged none with its reason until part B2 re-authors it."""
-    rows = {(r.crop, r.path): r for r in LIVE.rows if r.crop in ("bell-pepper", "banana-pepper", "eggplant")}
-    assert sorted(rows) == sorted(PEPPER_LEAVES)
-    for k in PEPPER_LEAVES:
-        assert rows[k].term_ids == ("none",)
-        assert [m.exclusion for m in rows[k].matches] == ["pepper-eggplant-beds-or-hills"]
+def test_d8_no_pepper_or_eggplant_leaf_carries_a_hill_word_after_part_d():
+    """D8 (2026-10-05) tagged the 3 'beds or hills' leaves none pending a re-author; B2 (eggplant) and part D (peppers)
+    re-authored them without a hill-word. The exclusion stays in the glossary (a glossary change is its own ruling) and
+    now matches no live leaf: proven here, so a re-introduced 'beds or hills' leaf shows up as a population change."""
+    assert [(r.crop, r.path) for r in LIVE.rows if r.crop in D8_CROPS] == []
     ex = next(e for e in SPEC["exclusions"] if e["id"] == "pepper-eggplant-beds-or-hills")
     assert ex["why"] == "unsupported claim, re-author pending (part B2)"
+    assert leaf("bell-pepper", "x", "Plant on raised, well-drained beds or hills.") == ("none",)
 
 
 def test_d8_other_hill_text_on_pepper_refuses():
@@ -282,7 +282,9 @@ def test_term_crop_scopes_are_disjoint_and_exist():
 def test_every_exclusion_fires_on_live_or_is_a_declared_future_guard():
     fired = {m.exclusion for r in LIVE.rows for m in r.matches if m.exclusion}
     declared = {e["id"] for e in SPEC["exclusions"]}
-    assert declared - fired == {"raspberry-cane-hill"}
+    # pepper-eggplant-beds-or-hills went DORMANT at part D (5420479d): B2 and part D re-authored all three leaves it
+    # tagged. It stays in the glossary (removing it is a glossary ruling) and is declared here by identity.
+    assert declared - fired == {"raspberry-cane-hill", "pepper-eggplant-beds-or-hills"}
 
 
 # ------------------------------------------------------------------ the ruled glossary shape (2026-10-05)
@@ -313,7 +315,7 @@ def test_glossary_entries_with_the_seven_keys_load():
                      "anchoring_urls": None, "field_additions": [], "match": RAW_SPEC[tid]["match"]}
                for tid in ("hill", "hilling")}
     spec = gs.build_spec(entries)
-    assert gs.classify_dataset(DATA, spec).inspected == 225
+    assert gs.classify_dataset(DATA, spec).inspected == 224
 
 
 @pytest.mark.parametrize("mutate", [
@@ -332,3 +334,64 @@ def test_two_matchers_refuse():
     bad["hill"]["match"].append(copy.deepcopy(bad["hill"]["match"][0]))
     with pytest.raises(gs.Refused, match="must be one matcher"):
         gs.build_spec(bad)
+
+
+# ------------------------------------------------------------------ the shared match fixture (PLA-673 part D)
+FIXTURE = os.path.join(HERE, "staging", "pla673_674_prep", "glossary-match.fixture.json")
+FIXTURE_SHA = "e075f0f8e915aff14b106b0cd29b5132ab7cbf5060db8d136dc9ab07dbb61f84"   # 35 cases (part D); 990eac25 before
+# refuse_on pattern -> the ONE fixture case that fails when that pattern alone is dropped (Trevor, part D: each pattern
+# exercised alone; plant-astro's mutation run found dropping any single one failed nothing).
+SOLE_CASE = {
+    ("hill", r"\bhill(ed|ing)?\s+(a\s+little\s+)?(soil|up|mulch)\b"): "refuse-hilling-verb-on-pumpkin",
+    ("hilling", r"\bper\s+hill\b"): "refuse-planting-sense-on-corn",
+    ("hilling", r"\bin\s+hills\b"): "refuse-in-hills-on-potato",
+    ("hilling", r"\bhills?\s+(spaced|apart)\b"): "refuse-hills-spaced-on-carrot",
+    ("hilling", r"\bseeds?\s+(in|to)\s+(a|each)\s+hill\b"): "refuse-seeds-in-each-hill-on-sweet-corn",
+}
+# Waived by identity AND character: UNREACHABLE as a sole cause. The hill term's forms are hill/hills, so any sentence
+# these match also holds a hilled/hilling occurrence that refuses on its FORM; dropping the pattern changes no verdict.
+# Reported for a ruling (PLA-673 part D). If either ever becomes the sole cause, this waiver fails as STALE.
+UNREACHABLE = {("hill", r"\bhilled\b"), ("hill", r"\bhilling\b")}
+
+
+def _fixture():
+    import hashlib
+    b = open(FIXTURE, "rb").read()
+    return hashlib.sha256(b).hexdigest(), json.loads(b)
+
+
+def _failing(glossary, cases):
+    spec, bad = gs.build_spec(glossary), []
+    for c in cases:
+        ms = gs.classify_leaf_matches(c["crop"], c["text"], spec)
+        ok = any(m.term is None for m in ms) if c.get("refuse") else [m.term for m in ms] == c["expect"]
+        if not ok:
+            bad.append(c["id"])
+    return bad
+
+
+def test_fixture_is_the_pinned_bytes():
+    assert _fixture()[0] == FIXTURE_SHA
+
+
+def test_every_fixture_case_holds_on_the_canonical_glossary():
+    cases = _fixture()[1]["cases"]
+    assert len(cases) == 35
+    assert _failing(DATA["glossary"], cases) == []
+
+
+def test_every_refuse_on_pattern_is_exercised_alone_or_waived():
+    import copy as _copy
+    cases = _fixture()[1]["cases"]
+    seen = set()
+    for tid in ("hill", "hilling"):
+        for i, pat in enumerate(DATA["glossary"][tid]["match"][0]["refuse_on"]):
+            seen.add((tid, pat))
+            g = _copy.deepcopy(DATA["glossary"])
+            del g[tid]["match"][0]["refuse_on"][i]
+            got = _failing(g, cases)
+            if (tid, pat) in UNREACHABLE:
+                assert got == [], f"STALE waiver: {tid} {pat} is now the sole cause of {got}"
+            else:
+                assert got == [SOLE_CASE[(tid, pat)]], (tid, pat, got)
+    assert seen == set(SOLE_CASE) | UNREACHABLE      # every pattern is named, none invented

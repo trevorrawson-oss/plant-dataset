@@ -6,7 +6,7 @@
     {"id": "hill-per-hill-pumpkin", "crop": "pumpkin", "text": "Sow four to five seeds per hill and thin to the two or three strongest.", "expect": ["hill"]},
     {"id": "hill-mound-cucumber", "crop": "cucumber", "text": "Many gardeners plant them on low hills or mounds.", "expect": ["hill"]},
     {"id": "hill-two-in-one-leaf", "crop": "honeydew-melon", "text": "Plant on low hills, or hills about 4 feet apart.", "expect": ["hill", "hill"]},
-    {"id": "none-pepper-beds-or-hills-pending-b2", "crop": "bell-pepper", "text": "Plant on raised, well-drained beds or hills, avoid low spots that stay wet.", "expect": ["none"]},
+    {"id": "pepper-prevention-reauthored-part-d", "crop": "bell-pepper", "text": "Use raised beds and plastic mulch whenever possible.", "expect": []},
     {"id": "none-eggplant-beds-or-hills-pending-b2", "crop": "eggplant", "text": "Plant on raised, well-drained beds or hills.", "expect": ["none"]},
     {"id": "refuse-other-hill-text-on-pepper", "crop": "banana-pepper", "text": "Plant in hills.", "refuse": true},
     {"id": "hilling-potato-verb", "crop": "potato", "text": "Hill again around flowering to keep tubers covered.", "expect": ["hilling"]},
@@ -31,6 +31,9 @@
     {"id": "refuse-planting-sense-on-corn", "crop": "sweet-corn", "text": "Sow 4 to 5 seeds per hill.", "refuse": true},
     {"id": "refuse-hilling-verb-on-pumpkin", "crop": "pumpkin", "text": "Hill soil up around the vines.", "refuse": true},
     {"id": "refuse-hilled-on-cantaloupe", "crop": "cantaloupe", "text": "Hilled rows warm faster.", "refuse": true},
+    {"id": "refuse-in-hills-on-potato", "crop": "potato", "text": "Plant seed pieces in hills.", "refuse": true},
+    {"id": "refuse-hills-spaced-on-carrot", "crop": "carrot", "text": "Make hills spaced 3 feet across.", "refuse": true},
+    {"id": "refuse-seeds-in-each-hill-on-sweet-corn", "crop": "sweet-corn", "text": "Drop two seeds in each hill.", "refuse": true},
     {"id": "refuse-unscoped-crop", "crop": "cherry-tomato", "text": "Plant in hills 3 feet apart.", "refuse": true},
     {"id": "refuse-unlisted-place", "crop": "peach", "text": "Grown in the Ozark hills.", "refuse": true},
     {"id": "no-match-chill", "crop": "peach", "text": "Needs 800 chill hours; hillside sites drain cold air.", "expect": []}

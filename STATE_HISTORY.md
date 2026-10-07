@@ -4,6 +4,39 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-10-06 -- PLA-673 PART D LANDED (`aaf004a2` -> `5420479d`)
+
+ONE promote (`tools/promote_pla673_d.py`, new, derived from promote_pla673_b2 by `tools/staging/pla673_d/derive_promote.py`;
+stage `tools/staging/pla673_d/`, built by its `build_stage.py` from the approved texts in `d_texts.py`). Run by Claude Code on
+Trevor's GO (2026-10-06); --check then --expect-sha 5420479d (== an independent minimal apply).
+
+* **Peppers (PLA-688):** `diseases[id=phytophthora-blight]` re-authored whole from NC State's Phytophthora Blight of Peppers
+  factsheet (+ UMN growing-peppers), identical on bell-pepper and banana-pepper: symptoms, cause, organic treatment, prevention
+  and the five control-ladder rungs, both registers, 57 sentences per crop. Sources [ncsu_ext_phytophthora_blight_peppers,
+  umn_ext]; ncsu_ext (the index page) and clemson_hgic off the entry. Fixed copper omitted (organic farms only; home gardens have
+  no effective chemical option); the drainage-as-response claim cut (NC State: site choice); the splash_barrier_mulch rung id
+  kept (its visible catalog label "Splash-barrier mulch" filed as PLA-700, after the split).
+* **Watermelon row entry:** UF VH021 only, in_row [24,48], rows [60,60]; crop-root spacing_inches mirror [24,48]. RULED: where
+  cited T1 sources disagree on a layout figure, the entry takes one T1 source inside the consensus of the cited sources
+  (WSU 24-36, UF 24-48, VT 36-48, NMSU CR457B 24-36; 60 in rows in WSU, UF, VT); Clemson 60-72 x 72-96 and OSU 60 x 72 recorded
+  as the wide end.
+* **Watermelon thinning (option a):** both registers re-authored (four to five seeds per hill, UGA C1035; thin to the
+  strongest two at two leaves, USU / UGA / UMN; 24 to 48 inches in rows, UF). "Three to four seeds" and "snip at the soil line"
+  were stated by no cited page. `method` (free text) -> "thin to two plants per hill". USU (2618f2f2, browser UA only) and UMN
+  (9e2a61b5) hashed, MANIFEST +2.
+* **Match fixture** e075f0f8 (35 cases): the pepper case updated; three cases, each the sole case of its refuse_on pattern (5
+  of 7 now exercised alone). The hill term's \bhilled\b / \bhilling\b are unreachable as a sole cause; waived by identity
+  (STALE-checked); ruled: drop them in the next dataset change after the split. Dataset-side tests now run the fixture.
+* **Tools, same commit:** promote_pla673_d + suite (47) + harness (41/41); promote_fixture aaf004a2 -> 6bce088 (pin-only);
+  test_glossary_sense live pins 225 -> 224 (103 / 60 / 61), D8 exclusion declared dormant, fixture + refuse_on coverage
+  tests; mutate_glossary_sense copies the fixture (its control died without it; 28/28); live_pin_registry 67/26/70/48;
+  collision-gate pin re-measured (output identical).
+* **Gauntlet:** gate_all PASS 121/121 (launch-ready 114); whole_crop_gate PASS on the 3 crops; release_verify clean;
+  doc_roster_claim_gate 0; A62 unchanged at 2663; affected set PASS; full tree on this commit before the push.
+* **Consumers:** ~/plant-app re-exported at 5420479d (not committed, E1 green); E3 until the astro bump. Watermelon row-figure
+  pins in app and astro move at the final data bump (listed in the part D report on PLA-673).
+* Records: PLA-673 comments (part D report, GO), Linear DECISIONS section 14; PLA-688 closed; PLA-700 filed.
+
 ## 2026-10-06 -- PLA-673 PART B2 LANDED (`3ccc25f1` -> `aaf004a2`)
 
 ONE promote (`tools/promote_pla673_b2.py`, new, derived from promote_pla666_row_figures by
