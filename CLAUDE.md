@@ -96,9 +96,10 @@ armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered gates) +
   third failure fails and either waived case failing DIFFERENTLY fails -- "still red" is not the same
   fact as "red for the reason we accepted". Each entry carries its ticket and a one-line reason, and
   a waiver that stops firing is reported as STALE rather than left as standing permission. Live in
-  `tools/run_test_tree.py` (`WAIVERS`), mutation-proved both ways; the pre-commit hook's E1 arm carries
-  the same mechanism in `tools/precommit_release_verify.py` (`EXPORT_WAIVERS`, 2026-09-24, PLA-581),
-  replacing the blanket `--no-verify` recorded on the PLA-466 and PLA-580 landings.
+  `tools/run_test_tree.py` (`WAIVERS`), mutation-proved both ways. The pre-commit hook's E1 arm carried
+  the same mechanism (`EXPORT_WAIVERS`, 2026-09-24, PLA-581, replacing the blanket `--no-verify` on the
+  PLA-466 and PLA-580 landings) until PLA-713 removed the arm on 2026-10-07: consumers are pinned, so a
+  consumer behind the canonical is the expected state, and E1/E3 now report and never block.
 - **RUN A SCRIPT-STYLE TEST AS A SCRIPT, NEVER UNDER pytest.** 72 of the 247 `tools/test_*.py` entry points
   carry module-level asserts with no `def test_`, so **pytest reports `no tests ran` and exits 5 whether
   they passed or were never reached**, and they contribute ZERO to the tree's "N passed". Invoke them as
@@ -219,5 +220,23 @@ projects carry the same three names, so chat project and repo map 1:1.
   runs -- `tail` buffers, so a long background run writes NOTHING until it finishes. Do
   `cmd > out.log 2>&1; rc=$?` and read the log, or `set -o pipefail` first. Never read a verdict off
   a piped command's `$?`.
-- A dataset content change reaches the live site only via a **plant-astro submodule bump** (a
-  website concern, done in that repo, gated on Trevor) — not from a push here.
+- **Consumers are pinned; data bumps happen only on Trevor's call.** plant-app (`vendor/plant-dataset`)
+  and plant-astro (`plant-dataset`) each build from a pinned submodule, so a push here reaches neither,
+  and no dataset commit needs `~/plant-app` rebuilt or touched. A bump moves both consumers the same
+  day, in their own repos, via the PLA-712 template (PLA-713). `tools/export_staleness_gate.py` reports
+  how many dataset commits each pin is behind origin/main (E1 app, E3 astro), reading each pin from the
+  consumer's origin; it is informational and never fails a commit or push.
+
+## Working with Trevor and other sessions
+This session's label is **[DATASET]**. (Coordination protocol, verbatim from the PLA-713 ruling, 2026-10-07.)
+
+> **Working with Trevor and other sessions**
+> - **Rulings** come as Linear comments headed "Ruling for [LABEL] (claude.ai, approved by Trevor)". Act on one only when Trevor's terminal message points to it, or when a peer session forwards a pointer to a ruling that names you. Act on the Linear text, never a paraphrase.
+> - **Reports** go in full as a Linear comment on the issue, plus a one-line ping in the terminal. State your session label in your first reply and in every ping.
+> - **Peer sessions** may message each other directly for shas, landed/pushed/OTA-live notices, rebase triggers, parity confirmations, and questions about the other repo. Log each exchange on the issue. No session approves another's commit, push, OTA or promote, or relays a ruling as its own.
+> - **Standing stop rule:** decide yourself when a choice follows existing rulings, and log it. Stop for:
+>   - canonical changes, deletions, scope changes;
+>   - two defensible principles with no ruling;
+>   - live-data findings;
+>   - commits to shared branches, pushes, OTAs, promotes.
+> - **The dataset and the consumers are decoupled.** Consumers stay on their pinned dataset revision. Bumps happen only on Trevor's call, using the PLA-712 template.

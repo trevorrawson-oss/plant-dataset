@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Instrumented mutation harness for the PLA-258 export-staleness gate. PLA-215 convention.
+"""Instrumented mutation harness for export_staleness_gate, the informational consumer-pin report
+(PLA-713; rewritten from the PLA-258 blocking gate). PLA-215 convention.
 
-The suite under test claims to catch a defect that is invisible to every other instrument
-in this repo: an export whose BYTES ARE CORRECT and whose SOURCE IS OLD. That claim is
-worth exactly as much as a run like this one, so each guard family gets a defect sneaked
-at it, injected into a SCRATCH COPY of the gate, never the working file.
+The suite claims the report counts how far behind each consumer's ORIGIN pin is, reports a pin it
+cannot read as UNMEASURED, and never fails a run -- a stale pin produces a report and exit 0. Each
+guard family gets a defect sneaked at it, injected into a SCRATCH COPY of the gate, never the
+working file.
 
 The three self-checks the convention requires (PLA-138's harness dedented an already-
 indented template, silently ran the CLEAN fixture, and reported every mutation as
@@ -34,86 +35,76 @@ SUITE = os.path.join(HERE, "test_export_staleness_gate.py")
 # (name, anchor, replacement, the guard that MUST redden)
 # `None` as the expected guard means "no guard should redden" (the positive control).
 MUTATIONS = [
-    # ---- E1: provenance ----
-    ("E1 blind: a stale stamp is accepted as current",
-     "    elif stamped != canonical_sha:",
-     "    elif False:",
-     "TestE1AppProvenance::test_a_stale_stamp_is_caught"),
+    # ---- the count: how far behind ----
+    ("behind blind: the commit range is reversed (counts what the pin has, not what it lacks)",
+     '    behind = _git(dataset_root, "rev-list", "--count", f"{pinned}..{head}")',
+     '    behind = _git(dataset_root, "rev-list", "--count", f"{head}..{pinned}")',
+     "TestBehindCount::test_a_pin_two_commits_back_is_two_behind_with_a_different_canonical"),
 
-    ("E1 blind: a missing stamp is treated as nothing-to-report",
-     "    if not os.path.exists(mpath):",
+    ("canonical blind: every pin reads as serving origin/main's bytes",
+     "               canonical_same=pin_canon == head_canon,",
+     "               canonical_same=True,",
+     "TestBehindCount::test_a_pin_two_commits_back_is_two_behind_with_a_different_canonical"),
+
+    ("off-main blind: a pin carrying commits main lacks is reported as merely behind",
+     '    if row["ahead"]:',
      "    if False:",
-     "TestE1AppProvenance::test_a_missing_manifest_is_caught_not_skipped"),
+     "TestBehindCount::test_a_pin_off_origin_main_is_flagged"),
 
-    ("E1 blind: an unparseable stamp is swallowed and the export passes",
-     "    except (ValueError, OSError) as e:",
-     "    except (ValueError, OSError) as e:\n        return [], []\n    except SyntaxError as e:",
-     "TestE1AppProvenance::test_an_unparseable_manifest_is_caught_not_swallowed"),
+    # ---- where the pin is read from ----
+    ("wrong ref: the origin's default HEAD is read instead of the consumer's shipping branch",
+     '                f"refs/heads/{branch}") is None:',
+     '                "HEAD") is None:',
+     "TestReadsOriginNotCheckout::test_the_branch_named_is_the_branch_read"),
 
-    # ---- E2: integrity. The key-set family is PLA-162's defect at a new boundary. ----
-    ("E2 blind: iterate only what the stamp RECORDS (PLA-162's one-directional shape)",
-     "    for missing in sorted(expected - got):",
-     "    for missing in sorted(set()):",
-     "TestE2AppIntegrity::test_an_artifact_the_manifest_forgot_is_caught"),
+    ("consumer table: the app's gitlink path drifts",
+     '     "feat/community-foundation", "vendor/plant-dataset"),',
+     '     "feat/community-foundation", "plant-dataset"),',
+     "TestConsumerTable::test_the_consumers_are_the_ruled_pins"),
 
-    ("E2 blind: an artifact the stamp invented is ignored",
-     "    for extra in sorted(got - expected):",
-     "    for extra in sorted(set()):",
-     "TestE2AppIntegrity::test_an_artifact_the_manifest_invented_is_caught"),
+    ("population: a consumer row is silently dropped",
+     "    rows = [pin_status(*c, dataset_root=dataset_root, dataset_ref=dataset_ref) for c in consumers]",
+     "    rows = [pin_status(*c, dataset_root=dataset_root, dataset_ref=dataset_ref) for c in consumers][:1]",
+     "TestConsumerTable::test_every_consumer_is_reported"),
 
-    ("E2 blind: the artifact hash is never compared (a hand edit ships)",
-     "        if actual != recorded[rel]:",
-     "        if False:",
-     "TestE2AppIntegrity::test_a_hand_edited_artifact_is_caught"),
-
-    ("E2 blind: a stamped artifact missing from disk is skipped quietly",
-     "        if not os.path.exists(full):",
-     "        if False and not os.path.exists(full):",
-     "TestE2AppIntegrity::test_a_missing_artifact_is_caught"),
-
-    # ---- E3: the website pin ----
-    ("E3 blind: a stale submodule pin is accepted",
-     "    if pinned_sha != canonical_sha:",
-     "    if False:",
-     "TestE3AstroPin::test_a_stale_submodule_pin_is_caught"),
-
-    ("E3 blind: a pin this repo cannot resolve is treated as fine",
-     "    if blob is None:",
-     "    if False:",
-     "TestE3AstroPin::test_a_pin_at_a_commit_the_dataset_does_not_have_is_caught"),
-
-    ("E3 blind: a repo with no submodule entry passes",
-     "    if not entry:",
-     "    if False:",
-     "TestE3AstroPin::test_a_repo_with_no_submodule_entry_is_caught"),
+    # ---- NEVER BLOCKS (ruling item 5): a stale pin must report and exit 0 ----
+    ("blocking restored: a stale or unmeasured pin fails the run",
+     '    return 0\n\n\nif __name__ == "__main__":',
+     '    return 1 if r["unmeasured"] or any(x["behind"] for x in r["consumers"]) else 0\n\n\nif __name__ == "__main__":',
+     "TestStalePinReportsAndNeverFails::test_a_stale_pin_exits_zero_and_says_how_far_behind"),
 
     # ---- the unmeasured channel: an instrument that cannot justify its zero ----
-    ("UNMEASURED erased: an absent app repo reports a clean zero",
-     '        return [], [f"UNMEASURED app: no repo at {app_root} -- export currency NOT checked"]',
-     "        return [], []",
-     "TestUnmeasuredIsNotGreen::test_an_absent_app_repo_reports_unmeasured_not_clean"),
+    ("unresolvable pin: the history check is skipped",
+     '    if _git(dataset_root, "cat-file", "-e", f"{pinned}^{{commit}}") is None:',
+     "    if False:",
+     "TestUnmeasured::test_a_pin_this_repo_cannot_resolve_is_unmeasured"),
 
-    ("UNMEASURED erased: an absent astro repo reports a clean zero",
-     '        return [], [f"UNMEASURED astro: no repo at {astro_root} -- site currency NOT checked"]',
-     "        return [], []",
-     "TestUnmeasuredIsNotGreen::test_an_absent_astro_repo_reports_unmeasured_not_clean"),
+    ("gitlink shape: any tree entry is accepted as a pin",
+     '        if len(parts) < 3 or parts[0] != "160000":',
+     "        if len(parts) < 3:",
+     "TestUnmeasured::test_a_path_that_is_not_a_gitlink_is_unmeasured"),
 
-    ("UNMEASURED collapsed into violations (the two become indistinguishable)",
-     '        "violations": av + sv,\n        "unmeasured": au + su,',
-     '        "violations": av + sv + au + su,\n        "unmeasured": [],',
-     "TestUnmeasuredIsNotGreen::test_unmeasured_is_distinguishable_from_a_violation"),
+    ("missing entry: an absent gitlink is not reported as such",
+     "        if not entry:",
+     "        if False:",
+     "TestUnmeasured::test_a_branch_without_the_gitlink_is_unmeasured"),
+
+    ("unmeasured erased: the count of unread pins is always zero",
+     '            "unmeasured": sum(not r["measured"] for r in rows)}',
+     '            "unmeasured": 0}',
+     "TestUnmeasured::test_unmeasured_is_counted_apart_from_measured"),
 
     # ---- SENTINEL: guaranteed fatal. If this survives, the harness is not running. ----
-    ("SENTINEL: the gate never reports anything at all",
-     "def all_violations(canonical_path=None, app_root=None, astro_root=None, dataset_root=None):",
-     "def all_violations(canonical_path=None, app_root=None, astro_root=None, dataset_root=None):\n    return []",
+    ("SENTINEL: every row raises",
+     '    row = {"check": check, "consumer": label,',
+     '    raise RuntimeError("sentinel")\n    row = {"check": check, "consumer": label,',
      "__SENTINEL__"),
 
     # ---- POSITIVE CONTROL: guaranteed invisible. If this reddens, the suite is
     #      asserting on prose it should not be asserting on. ----
-    ("POSITIVE CONTROL: a violation message's advisory tail is reworded",
-     "run `npm run build:guides` in {app_root}.\")",
-     "rebuild the export in {app_root}.\")",
+    ("POSITIVE CONTROL: the summary's advisory tail is reworded",
+     'happen only on Trevor\'s call (PLA-713). Never blocks.")',
+     'happen only on Trevor\'s call (PLA-713). Does not block.")',
      None),
 ]
 

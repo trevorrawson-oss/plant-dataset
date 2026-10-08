@@ -61,48 +61,45 @@ assert drop_precert_anchoring({ANCH, other}, precert) == {other}, "only anchorin
 
 print("PASS precommit_release_verify pre-cert anchoring allowance")
 
-# --- export-currency arm (PLA-258) ---------------------------------------------
-# The arm blocks a canonical commit whose downstream export was built from different
-# bytes. Guarded here for the two ways it could go quietly wrong: firing on commits it
-# has no business judging, and passing a stale export because it measured the wrong
-# canonical.
-import json as _json, shutil as _shutil, tempfile as _tempfile, hashlib as _hashlib
-from precommit_release_verify import export_currency_concerns
-import export_staleness_gate as _esg
+# --- no consumer coupling (PLA-713) ---------------------------------------------
+# Consumers are pinned; a stale consumer export is the expected state and must never block a dataset
+# commit. Behavioral, not textual: a real canonical commit is staged in a scratch repo while $HOME
+# carries a plant-app whose export stamp names a DIFFERENT canonical -- exactly what the removed
+# PLA-258 arm blocked on. The hook must let it through. The hook under test is HOOK_UNDER_TEST when
+# set (the mutation harness points it at a scratch copy), else this tools/ dir's hook.
+import json as _json, shutil as _shutil, subprocess as _sp, tempfile as _tempfile
+import precommit_release_verify as _hook
+
+_hook_path = os.environ.get("HOOK_UNDER_TEST") or os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "precommit_release_verify.py")
+for _name in ("export_currency_concerns", "apply_export_waivers", "EXPORT_WAIVERS"):
+    assert not hasattr(_hook, _name), f"the PLA-258 export arm is back: {_name}"
 
 _tmp = _tempfile.mkdtemp()
-
-def _mk_app(root, stamped_sha):
-    for rel in _esg.APP_ARTIFACTS:
-        full = os.path.join(root, rel)
-        os.makedirs(os.path.dirname(full), exist_ok=True)
-        open(full, "w").write(f"body-of-{rel}")
-    m = {"canonical_sha256": stamped_sha, "artifacts":
-         {r: _hashlib.sha256(f"body-of-{r}".encode()).hexdigest() for r in _esg.APP_ARTIFACTS}}
-    p = os.path.join(root, _esg.APP_PROVENANCE)
-    os.makedirs(os.path.dirname(p), exist_ok=True)
-    _json.dump(m, open(p, "w"))
-    return root
-
-# case 9: a commit that does NOT stage the canonical is none of this arm's business.
-# (An arm that fires on doc-only commits gets bypassed by habit, and then never fires.)
-assert export_currency_concerns(["docs/foo.md"], _mk_app(os.path.join(_tmp, "a1"), "x"*64)) == [], \
-    "must not judge a commit that does not stage the canonical"
-
-# case 10: canonical staged + export stamped with a DIFFERENT canonical -> blocks.
-# The staged canonical is read from the git index, so this asserts against the real
-# repo's staged/HEAD bytes rather than a synthetic hash.
-_real = _esg.sha256_bytes(open(os.path.join(os.path.dirname(os.path.dirname(
-    os.path.abspath(__file__))), "crops_data_final.json"), "rb").read())
-_stale = export_currency_concerns(["crops_data_final.json"],
-                                  _mk_app(os.path.join(_tmp, "a2"), "0"*64))
-assert _stale and any("E1" in c for c in _stale), \
-    f"a stale stamp must block a canonical commit, got {_stale}"
-
-# case 11: an absent plant-app SKIPS rather than blocks. This backstop must never make a
-# dataset-only checkout uncommittable; the RELEASE gate is where unmeasured stays red.
-assert export_currency_concerns(["crops_data_final.json"], os.path.join(_tmp, "nope")) == [], \
-    "absent plant-app must fail open in the backstop"
-
-_shutil.rmtree(_tmp, ignore_errors=True)
-print("PASS precommit_release_verify export-currency arm")
+try:
+    _home = os.path.join(_tmp, "home")
+    _app = os.path.join(_home, "plant-app")
+    os.makedirs(os.path.join(_app, "assets", "data"))
+    _json.dump({"canonical_sha256": "0" * 64, "artifacts": {}},
+               open(os.path.join(_app, "assets", "data", "dataset-provenance.json"), "w"))
+    _repo = os.path.join(_tmp, "repo")
+    os.makedirs(_repo)
+    def _g(*a):
+        _sp.run(["git", "-C", _repo, *a], check=True, capture_output=True)
+    _g("init", "-q"); _g("config", "user.email", "t@e.com"); _g("config", "user.name", "t")
+    _canon = os.path.join(_repo, "crops_data_final.json")
+    open(_canon, "w").write(_json.dumps({"crops": [], "source_catalog": {}}))
+    _g("add", "crops_data_final.json"); _g("commit", "-qm", "base", "--no-verify")
+    # a catalog admit: the canonical is staged, no crop changes, so no gate run is needed
+    open(_canon, "w").write(_json.dumps({"crops": [], "source_catalog": {"new_src": {"name": "x"}}}))
+    _g("add", "crops_data_final.json")
+    _env = dict(os.environ, HOME=_home)
+    _r = _sp.run([sys.executable, _hook_path], cwd=_repo, env=_env, capture_output=True, text=True)
+    _out = _r.stdout + _r.stderr
+    assert "ERRORED" not in _out, f"hook errored, so it failed OPEN and proves nothing: {_out}"
+    assert "catalog admit" in _out, f"hook did not reach the canonical arm (vacuous): {_out}"
+    assert _r.returncode == 0, f"a stale consumer export blocked a dataset commit (rc {_r.returncode}): {_out}"
+    assert "plant-app" not in _out and "build:guides" not in _out, f"hook still talks about the app: {_out}"
+finally:
+    _shutil.rmtree(_tmp, ignore_errors=True)
+print("PASS precommit_release_verify no consumer coupling (PLA-713)")

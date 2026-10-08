@@ -1,106 +1,65 @@
 #!/usr/bin/env python3
-"""export_staleness_gate -- does every downstream surface serve the CURRENT canonical? (PLA-258)
+"""export_staleness_gate -- how far behind is each consumer's dataset pin? INFORMATIONAL (PLA-713).
 
-WHAT THIS EXISTS TO CATCH, precisely. On 2026-08-19 the shipped app bundle
-(`assets/data/guides.dataset`) was a byte-exact projection of canonical `b0d01f13`
-(dataset commit `8a5398a`, 2026-07-29), and plant-astro's submodule was pinned to that
-same commit. Canonical was `3bf8b4ce`. Three content promotes -- PLA-155/199 catalog work,
-PLA-202's 22 verbatim rewrites, PLA-253's Bt safety rewrite -- were live in canonical and
-absent from BOTH consumer surfaces, for three weeks, silently.
+WHAT THIS IS NOW. Since the split (PLA-713, ruled 2026-10-07) both consumers build from a PINNED
+dataset revision -- plant-astro by its `plant-dataset` submodule, plant-app by its
+`vendor/plant-dataset` submodule -- and data bumps happen only on Trevor's call, both repos the same
+day, through the PLA-712 template. A consumer sitting behind this repo's origin/main is therefore
+the EXPECTED state, not a defect, and this tool only says how far behind each one is:
 
-THE REASON NOTHING COULD REPORT IT: the export was FAITHFUL. Every byte of it was a correct
-projection of the canonical it was built from. No value check, no schema check, no diff
-against the app's own expectations could ever have found the defect, because the artifact
-was not corrupt -- it was OLD. Staleness is a property of PROVENANCE, and provenance was
-not recorded anywhere. `build-guides-data.mjs` wrote the bytes and forgot where they came
-from.
+  E1 APP-PIN    plant-app's pinned dataset commit, read from plant-app's ORIGIN
+  E3 ASTRO-PIN  plant-astro's pinned dataset commit, read from plant-astro's ORIGIN
 
-So the gate's first requirement is a stamp (`assets/data/dataset-provenance.json`, written
-by the build script), and its second is to never trust the stamp alone.
+For each: the pinned commit, how many dataset commits it is behind origin/main, and whether the
+canonical at the pin is byte-identical to the canonical at origin/main (tooling-only commits put a
+consumer "behind" without changing a byte it serves).
 
-  E1 APP-PROVENANCE  the app's manifest records a canonical SHA, and it is the current one.
-  E2 APP-INTEGRITY   every artifact still hashes to what the manifest recorded, and the
-                     manifest's artifact key set is EXACTLY the known build outputs.
-  E3 ASTRO-PIN       plant-astro's recorded submodule pin resolves, in this repo's history,
-                     to a commit whose crops_data_final.json IS the current canonical.
+IT NEVER BLOCKS. The CLI exits 0 whatever it finds, and nothing in the commit or push path calls it
+as a gate (the pre-commit hook no longer touches either consumer).
 
-E2's key-set equality is not decoration. `build-guides-data.mjs` emits FOUR artifacts, and
-the three besides `guides.dataset` are built from TOP-LEVEL dataset keys, not from crops:
-`control-methods.json` comes from `control_methods` + `source_catalog`. PLA-253 changed
-`control_methods.bt` and PLA-199 changed `source_catalog` titles -- neither of which alters
-`guides.dataset` by a single byte. A gate that watched only the big file would have called
-both promotes shipped. Iterating only what the manifest RECORDS repeats PLA-162's defect at
-a new boundary, so the sets are compared before any hash is.
+IT READS ORIGINS, NEVER A CHECKOUT. Each pin is the gitlink recorded in the consumer's branch on its
+origin, fetched into a throwaway bare repo. A local `~/plant-app` or `~/plant-astro` checkout, its
+working tree and its export are never opened: what ships is what the consumer's origin pins.
 
-WHY E3 IS IN THE SAME GATE AND NOT A SEPARATE ONE. Wiring app regeneration without wiring
-the site pin moves the gap one step down the pipeline: the export becomes current and the
-website still serves the old canonical, because astro reads `plant-dataset/crops_data_final
-.json` from the submodule at build time (`src/lib/dataset.ts`) and Netlify checks out the
-PINNED commit. One canonical, two consumers, one question -- so one gate.
-
-UNMEASURED IS NOT GREEN. If a consumer repo is not on this disk, the gate says so in its
-own channel rather than returning a clean zero over a surface it never opened. That is the
-distinction this arc has paid for repeatedly (`docs/` PLA-160, PLA-138): an instrument that
-cannot justify its zero is worse than no instrument, because the zero gets believed.
+WHAT IT REPLACED. PLA-258 (2026-08-19) built E1/E2/E3 as a BLOCKING currency gate after both
+consumers silently served a three-week-old canonical: E1 compared the app's export stamp in
+`~/plant-app` to the live canonical, E2 hashed that checkout's artifacts, E3 required the astro pin
+to carry the live canonical. The split makes "behind" deliberate, so blocking on it would be a check
+that is always red. E2 is retired here: the app checks its own export against its own pin, inside
+its repo (`src/lib/dataset-pin.test.ts`, PLA-713 [APP]). The PLA-258 lesson survives as the
+UNMEASURED channel: a pin that cannot be read is reported as unmeasured, never as current.
 
 Usage:
-  export_staleness_gate.py [--canonical PATH] [--app-root PATH] [--astro-root PATH] [--json]
-Exit 0 clean, 1 stale/unmeasured.
+  export_staleness_gate.py [--no-fetch] [--json]
+Exit 0 always (2 only on a usage error).
 """
 import argparse
 import hashlib
 import json
 import os
+import shutil
 import subprocess
 import sys
+import tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 
-DEFAULT_CANONICAL = os.path.join(REPO, "crops_data_final.json")
-DEFAULT_APP_ROOT = os.path.join(os.path.expanduser("~"), "plant-app")
-DEFAULT_ASTRO_ROOT = os.path.join(os.path.expanduser("~"), "plant-astro")
+DATASET_REF = "refs/remotes/origin/main"
+CANONICAL = "crops_data_final.json"
 
-# The provenance stamp the app's build script writes, relative to the app root.
-APP_PROVENANCE = os.path.join("assets", "data", "dataset-provenance.json")
-
-# Every artifact `scripts/build-guides-data.mjs` generates from the canonical. Adding an
-# output to that script without adding it here is a DELIBERATE act that fails this gate
-# until both sides agree -- which is the point. The export boundary grows on purpose or
-# not at all.
-APP_ARTIFACTS = (
-    os.path.join("assets", "data", "guides.dataset"),
-    os.path.join("src", "data", "region-chill.json"),
-    os.path.join("src", "data", "variety-index.json"),
-    os.path.join("src", "data", "control-methods.json"),
-    # PLA-673 (2026-10-05): the glossary, built from the top-level `glossary` key by plant-app 0f3864ae
-    # (written only when canonical carries the key). Added in the SAME commit as the glossary promote.
-    os.path.join("src", "data", "glossary.json"),
+# (check, label, origin url, branch the consumer ships from, gitlink path). The branches are the ones
+# PLA-713 pinned: the app ships from feat/community-foundation, the site from main (Netlify).
+CONSUMERS = (
+    ("E1", "app", "https://github.com/trevorrawson-oss/plant-app.git",
+     "feat/community-foundation", "vendor/plant-dataset"),
+    ("E3", "astro", "https://github.com/trevorrawson-oss/plant-astro.git",
+     "main", "plant-dataset"),
 )
-
-# The submodule path inside plant-astro that carries this repo.
-ASTRO_SUBMODULE_PATH = "plant-dataset"
-
-
-def sha256_bytes(b):
-    return hashlib.sha256(b).hexdigest()
-
-
-def sha256_file(path):
-    h = hashlib.sha256()
-    with open(path, "rb") as f:
-        for chunk in iter(lambda: f.read(1 << 20), b""):
-            h.update(chunk)
-    return h.hexdigest()
-
-
-def canonical_sha256(path=None):
-    return sha256_file(path or DEFAULT_CANONICAL)
 
 
 def _git(repo, *args):
-    """stdout of a git command, or None if it failed. Never raises: a gate that dies on a
-    detached HEAD or a missing repo teaches people to skip it."""
+    """stdout of a git command, or None if it failed. Never raises."""
     try:
         r = subprocess.run(["git", "-C", repo, *args], capture_output=True)
     except OSError:
@@ -108,157 +67,113 @@ def _git(repo, *args):
     return r.stdout.decode("utf-8", "replace").strip() if r.returncode == 0 else None
 
 
-# ---------------------------------------------------------------- E1 + E2 (the app)
-
-def app_violations(app_root, canonical_sha):
-    """(violations, unmeasured). E1 provenance, E2 integrity."""
-    if not os.path.isdir(app_root):
-        return [], [f"UNMEASURED app: no repo at {app_root} -- export currency NOT checked"]
-
-    mpath = os.path.join(app_root, APP_PROVENANCE)
-    if not os.path.exists(mpath):
-        return ([f"E1 app-provenance: no provenance stamp at {APP_PROVENANCE}. The export "
-                 f"cannot say which canonical it was built from, so it cannot be shown "
-                 f"current. Run `npm run build:guides` in {app_root}."], [])
+def _git_bytes(repo, *args):
     try:
-        with open(mpath) as f:
-            manifest = json.load(f)
-        if not isinstance(manifest, dict):
-            raise ValueError("provenance stamp is not an object")
-    except (ValueError, OSError) as e:
-        return [f"E1 app-provenance: {APP_PROVENANCE} is unreadable ({e}). Treated as "
-                f"absent, never as current."], []
-
-    V = []
-    stamped = manifest.get("canonical_sha256")
-    if not stamped or not isinstance(stamped, str):
-        V.append(f"E1 app-provenance: stamp carries no canonical_sha256 "
-                 f"(got {stamped!r}); provenance unproven.")
-    elif stamped != canonical_sha:
-        V.append(f"E1 app-provenance: export was built from canonical {stamped[:12]} but "
-                 f"canonical is now {canonical_sha[:12]}. The shipped artifact is STALE -- "
-                 f"run `npm run build:guides` in {app_root}.")
-
-    # E2. Key sets FIRST -- comparing only the keys the manifest happens to list makes a
-    # newly emitted artifact invisible (PLA-162's defect, at the export boundary).
-    recorded = manifest.get("artifacts")
-    if not isinstance(recorded, dict):
-        V.append(f"E2 app-integrity: stamp carries no artifacts map (got {type(recorded).__name__}).")
-        return V, []
-
-    expected = set(APP_ARTIFACTS)
-    got = set(recorded)
-    for missing in sorted(expected - got):
-        V.append(f"E2 app-integrity: build output {missing} is generated but NOT stamped. "
-                 f"An unstamped artifact can go stale invisibly.")
-    for extra in sorted(got - expected):
-        V.append(f"E2 app-integrity: stamp records {extra}, which is not a known build "
-                 f"output. Add it to APP_ARTIFACTS deliberately or stop stamping it.")
-
-    for rel in sorted(expected & got):
-        full = os.path.join(app_root, rel)
-        if not os.path.exists(full):
-            V.append(f"E2 app-integrity: stamped artifact {rel} is missing from disk.")
-            continue
-        actual = sha256_file(full)
-        if actual != recorded[rel]:
-            V.append(f"E2 app-integrity: {rel} hashes {actual[:12]} but the stamp recorded "
-                     f"{str(recorded[rel])[:12]}. It was changed after the build, so the "
-                     f"provenance stamp no longer describes it.")
-    return V, []
-
-
-# ---------------------------------------------------------------- E3 (the website)
-
-def astro_violations(astro_root, dataset_root, canonical_sha):
-    """(violations, unmeasured). The pin Netlify actually builds is the one RECORDED in
-    astro's HEAD tree, not whatever happens to be checked out in the local worktree."""
-    if not os.path.isdir(astro_root):
-        return [], [f"UNMEASURED astro: no repo at {astro_root} -- site currency NOT checked"]
-
-    entry = _git(astro_root, "ls-tree", "HEAD", ASTRO_SUBMODULE_PATH)
-    if not entry:
-        return [f"E3 astro-pin: plant-astro HEAD records no `{ASTRO_SUBMODULE_PATH}` entry. "
-                f"The site's dataset source cannot be identified."], []
-    parts = entry.split()
-    if len(parts) < 3 or parts[0] != "160000":
-        return [f"E3 astro-pin: `{ASTRO_SUBMODULE_PATH}` in plant-astro HEAD is not a "
-                f"submodule gitlink (mode {parts[0] if parts else '?'})."], []
-    pinned = parts[2]
-
-    blob = None
-    try:
-        r = subprocess.run(["git", "-C", dataset_root, "show", f"{pinned}:crops_data_final.json"],
-                           capture_output=True)
-        if r.returncode == 0:
-            blob = r.stdout
+        r = subprocess.run(["git", "-C", repo, *args], capture_output=True)
     except OSError:
-        blob = None
-
-    if blob is None:
-        return [f"E3 astro-pin: plant-astro pins dataset commit {pinned[:12]}, which this "
-                f"repo cannot resolve (unpushed, rewritten, or unfetched). An unverifiable "
-                f"pin is not a current pin."], []
-
-    pinned_sha = sha256_bytes(blob)
-    if pinned_sha != canonical_sha:
-        desc = _git(dataset_root, "log", "-1", "--format=%h %ad %s", "--date=short", pinned) or pinned[:12]
-        return [f"E3 astro-pin: the site builds from dataset commit {desc}, whose canonical "
-                f"is {pinned_sha[:12]}; canonical is now {canonical_sha[:12]}. The website "
-                f"serves STALE content until the submodule is bumped in plant-astro."], []
-    return [], []
+        return None
+    return r.stdout if r.returncode == 0 else None
 
 
-# ---------------------------------------------------------------- report
-
-def report(canonical_path=None, app_root=None, astro_root=None, dataset_root=None):
-    canonical_path = canonical_path or DEFAULT_CANONICAL
-    app_root = app_root or DEFAULT_APP_ROOT
-    astro_root = astro_root or DEFAULT_ASTRO_ROOT
-    dataset_root = dataset_root or REPO
-
-    canonical_sha = canonical_sha256(canonical_path)
-    av, au = app_violations(app_root, canonical_sha)
-    sv, su = astro_violations(astro_root, dataset_root, canonical_sha)
-    return {
-        "canonical_sha256": canonical_sha,
-        "violations": av + sv,
-        "unmeasured": au + su,
-    }
-
-
-def all_violations(canonical_path=None, app_root=None, astro_root=None, dataset_root=None):
-    """Violations AND unmeasured, in one list, for callers that must not pass either.
-
-    They stay separable via `report()`; they are combined here because for a RELEASE the
-    two have the same consequence -- you cannot assert the surfaces are current."""
-    r = report(canonical_path, app_root, astro_root, dataset_root)
-    return r["violations"] + r["unmeasured"]
+def origin_gitlink(url, branch, path):
+    """(pinned commit, None) or (None, why). Fetches the consumer branch's tip from its ORIGIN into a
+    throwaway bare repo and reads the gitlink there. Trees only (blob:none): a gitlink is a tree entry."""
+    tmp = tempfile.mkdtemp(prefix="consumer-pin-")
+    try:
+        if _git(tmp, "init", "--bare", "-q") is None:
+            return None, "could not create a scratch repo"
+        if _git(tmp, "fetch", "-q", "--depth=1", "--filter=blob:none", url,
+                f"refs/heads/{branch}") is None:
+            return None, f"could not fetch {branch} from {url}"
+        entry = _git(tmp, "ls-tree", "FETCH_HEAD", path)
+        if not entry:
+            return None, f"{branch} on origin records no `{path}` entry"
+        parts = entry.split()
+        if len(parts) < 3 or parts[0] != "160000":
+            return None, f"`{path}` on origin {branch} is not a submodule gitlink (mode {parts[0]})"
+        return parts[2], None
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
 
 
-def main():
+def pin_status(check, label, url, branch, path, dataset_root=REPO, dataset_ref=DATASET_REF):
+    """One consumer's row. `measured` is False when the pin, or its place in this repo's history,
+    could not be established -- that row is UNMEASURED, never read as current."""
+    row = {"check": check, "consumer": label, "origin": url, "branch": branch, "path": path,
+           "pinned": None, "head": None, "behind": None, "ahead": None,
+           "canonical_same": None, "measured": False, "note": None}
+    head = _git(dataset_root, "rev-parse", "--verify", f"{dataset_ref}^{{commit}}")
+    if head is None:
+        row["note"] = f"this repo has no {dataset_ref}"
+        return row
+    row["head"] = head
+    pinned, why = origin_gitlink(url, branch, path)
+    if pinned is None:
+        row["note"] = why
+        return row
+    row["pinned"] = pinned
+    if _git(dataset_root, "cat-file", "-e", f"{pinned}^{{commit}}") is None:
+        row["note"] = (f"pinned commit {pinned[:12]} is not in this repo's history "
+                       f"(unpushed, rewritten, or unfetched)")
+        return row
+    behind = _git(dataset_root, "rev-list", "--count", f"{pinned}..{head}")
+    ahead = _git(dataset_root, "rev-list", "--count", f"{head}..{pinned}")
+    pin_canon = _git_bytes(dataset_root, "show", f"{pinned}:{CANONICAL}")
+    head_canon = _git_bytes(dataset_root, "show", f"{head}:{CANONICAL}")
+    if behind is None or ahead is None or pin_canon is None or head_canon is None:
+        row["note"] = "could not count commits or read the canonical at the pin"
+        return row
+    row.update(behind=int(behind), ahead=int(ahead), measured=True,
+               canonical_same=pin_canon == head_canon,
+               pinned_canonical=hashlib.sha256(pin_canon).hexdigest(),
+               head_canonical=hashlib.sha256(head_canon).hexdigest())
+    if row["ahead"]:
+        row["note"] = f"pin is NOT on {dataset_ref}: {row['ahead']} commit(s) only the pin has"
+    return row
+
+
+def report(consumers=None, dataset_root=None, dataset_ref=DATASET_REF, fetch=True):
+    """Defaults resolve at CALL time, so a test can point main() at fixture origins."""
+    consumers = CONSUMERS if consumers is None else consumers
+    dataset_root = REPO if dataset_root is None else dataset_root
+    if fetch:
+        _git(dataset_root, "fetch", "-q", "origin")
+    rows = [pin_status(*c, dataset_root=dataset_root, dataset_ref=dataset_ref) for c in consumers]
+    return {"dataset_ref": dataset_ref,
+            "head": _git(dataset_root, "rev-parse", "--verify", f"{dataset_ref}^{{commit}}"),
+            "consumers": rows,
+            "measured": sum(r["measured"] for r in rows),
+            "unmeasured": sum(not r["measured"] for r in rows)}
+
+
+def format_row(r):
+    where = f"{r['consumer']} ({r['branch']}:{r['path']})"
+    if not r["measured"]:
+        return f"{r['check']} UNMEASURED {where}: {r['note']}"
+    canon = (f"canonical identical ({r['pinned_canonical'][:8]})" if r["canonical_same"] else
+             f"canonical differs (pin {r['pinned_canonical'][:8]}, origin/main {r['head_canonical'][:8]})")
+    line = (f"{r['check']} {where}: pin {r['pinned'][:7]}, {r['behind']} dataset commit(s) behind "
+            f"origin/main {r['head'][:7]}; {canon}")
+    return line + (f"; {r['note']}" if r["note"] else "")
+
+
+def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--canonical", default=DEFAULT_CANONICAL,
-                    help="canonical to measure against (default: this repo's working tree)")
-    ap.add_argument("--app-root", default=DEFAULT_APP_ROOT)
-    ap.add_argument("--astro-root", default=DEFAULT_ASTRO_ROOT)
-    ap.add_argument("--dataset-root", default=REPO)
+    ap.add_argument("--no-fetch", action="store_true",
+                    help="measure against this repo's existing origin/main ref without fetching it")
     ap.add_argument("--json", action="store_true")
-    a = ap.parse_args()
-
-    r = report(a.canonical, a.app_root, a.astro_root, a.dataset_root)
+    a = ap.parse_args(argv)
+    r = report(fetch=not a.no_fetch)
     if a.json:
         print(json.dumps(r, indent=2))
     else:
-        print(f"canonical: {r['canonical_sha256'][:12]}")
-        for v in r["violations"]:
-            print("VIOLATION:", v)
-        for u in r["unmeasured"]:
-            print("UNMEASURED:", u)
-        print(f"export_staleness_gate: {len(r['violations'])} violation(s), "
-              f"{len(r['unmeasured'])} unmeasured")
-    sys.exit(1 if (r["violations"] or r["unmeasured"]) else 0)
+        for row in r["consumers"]:
+            print(format_row(row))
+        print(f"export_staleness_gate: {len(r['consumers'])} consumer(s), {r['measured']} measured, "
+              f"{r['unmeasured']} unmeasured. Informational only: consumers are pinned and data bumps "
+              f"happen only on Trevor's call (PLA-713). Never blocks.")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

@@ -70,86 +70,10 @@ def roster_claim_concerns(staged_names):
     return concerns
 
 
-def export_currency_concerns(staged_names, app_root=None):
-    """Block a canonical commit whose downstream EXPORT was built from a different canonical.
-
-    PLA-258: for three weeks the app shipped a byte-exact projection of a canonical that was
-    three promotes old, and the only reason it went unnoticed is that a faithful projection
-    of stale bytes is indistinguishable from a faithful projection of current ones. The fix
-    is to make the two states unable to coexist across a commit boundary, which is what this
-    arm does.
-
-    Measured against the STAGED canonical, not the working tree: the export must have been
-    built from the bytes about to be committed. `npm run build:guides` reads the working
-    tree, so the intended order is promote -> build:guides -> commit, and a commit that
-    reorders those is exactly what this catches.
-
-    ONLY the app arm (E1/E2). The astro submodule pin is deliberately excluded: it can only
-    ever point at an ALREADY-COMMITTED dataset commit, so at pre-commit time a current pin
-    is not merely absent, it is impossible. The site's currency is the release gate's
-    question (`tools/export_staleness_gate.py`), not this hook's.
-
-    SKIPS when plant-app is not on this disk. That is a deliberate departure from the gate's
-    "unmeasured is not green" rule, and it is safe only because this is the fail-open
-    backstop: a dataset-only checkout must stay committable. The release gate still refuses
-    to call an unmeasured surface clean."""
-    if "crops_data_final.json" not in set(staged_names):
-        return []
-    sys.path.insert(0, HERE)
-    import export_staleness_gate as esg
-    root = app_root or esg.DEFAULT_APP_ROOT
-    if not os.path.isdir(root):
-        print(f"  export-currency: no plant-app at {root} -> skip (backstop fails open)")
-        return []
-    staged = _index_bytes("crops_data_final.json")
-    if staged is None:
-        return []
-    violations, _ = esg.app_violations(root, esg.sha256_bytes(staged))
-    return violations
-
-
-# ---------------------------------------------------------------- EXPORT WAIVERS
-# A CHECK THAT IS ALWAYS RED IS AS USELESS AS ONE THAT IS ALWAYS GREEN (Trevor, 2026-09-22), and E1
-# was the FIRST instance named: the PLA-466 and PLA-580 landings (as their records state) bypassed
-# this hook with a blanket `--no-verify` because plant-app's export was stale, and explained it in
-# prose. The blanket bypass
-# also switched off every OTHER check in the hook for that commit. Ruled 2026-09-24 (PLA-581): waive
-# the EXACT known case and fail on everything else, the run_test_tree WAIVERS pattern.
-#
-# Keyed on IDENTITY (the check: E1 app-provenance, never E2) AND CHARACTER (the export is stamped at
-# exactly d7b33682f992). An export rebuilt at ANY other SHA and still stale fails -- that is a
-# different fact from the one accepted. A waiver that no longer fires is reported STALE, loudly,
-# but does not block: failing there would punish whoever fixed it.
-#
-# EMPTY since 2026-10-01 (PLA-10 promote 1's tools commit). The one waiver this table carried, PLA-465's
-# E1 at the export frozen at d7b33682f992, stopped firing when plant-app re-exported at c5fc3d13
-# (5976254c, PLA-532) and reported STALE from then on; a stale waiver is removed, not left as standing
-# permission. The mechanism stays, and its drivers run against a synthetic table
-# (test_precommit_export_waiver.FIXTURE_WAIVERS). Adding an entry here is a ruling: identity, character,
-# ticket and reason, exactly as that one carried.
-# 2026-10-05: PLA-666's entry (foundation's export held at b331e5f2 while the PLA-666 release shipped from its branch;
-# added dca5931) went STALE when that release merged to feat/community-foundation (371a0f4a, OTA 16cf0b1f) and is
-# removed, as ruled. The table is EMPTY again.
-EXPORT_WAIVERS = {}
-
-
-def apply_export_waivers(violations, waivers=None):
-    """(unwaived, waived, stale): waived is [(violation, waiver name)]; stale lists waivers that
-    did not fire. The CHARACTER pattern is anchored on the check's own prefix (`^E1
-    app-provenance:`), so it carries identity AND character in one match. A separate
-    `startswith(name)` identity test was written first and REMOVED: it could never fire before the
-    anchored pattern did, and an unreachable guard reads as coverage."""
-    waivers = EXPORT_WAIVERS if waivers is None else waivers
-    unwaived, waived, fired = [], [], set()
-    for v in violations:
-        hit = next((name for name, w in waivers.items() if w["character"].search(v)), None)
-        if hit is None:
-            unwaived.append(v)
-        else:
-            waived.append((v, hit))
-            fired.add(hit)
-    return unwaived, waived, [n for n in waivers if n not in fired]
-
+# PLA-713 (2026-10-07): the export-currency arm (PLA-258) and its EXPORT_WAIVERS table (PLA-581) are REMOVED.
+# Consumers are pinned and data bumps happen only on Trevor's call, so a consumer behind the canonical is the
+# expected state, not a regression; this hook never reads ~/plant-app or any consumer. How far behind each pin
+# sits is reported, never enforced, by tools/export_staleness_gate.py.
 
 ERA_ENV = "SBR_KNOWN_AT_ARMING"   # sourced_block_ratchet_gate.ERA_ENV, retyped (the hook never loads the ratchet module)
 
@@ -282,24 +206,6 @@ def main():
             tmp = [cand_path, base_path]
         print("pre-commit release-verify (safety net -- NOT a substitute for protocol #6):")
         concerns = check(base_path, cand_path)
-        if not (a.base and a.candidate):
-            unwaived, waived, stale_waivers = apply_export_waivers(export_currency_concerns(staged))
-            for v, name in waived:
-                w = EXPORT_WAIVERS[name]
-                print(f"  WAIVED [{w['ticket']}]: {v}\n    reason: {w['reason']}")
-            import export_staleness_gate as _esg   # the app root is the gate's constant, never retyped
-            if os.path.isdir(_esg.DEFAULT_APP_ROOT):   # stale only means something if E1 was measured
-                for name in stale_waivers:
-                    print(f"  STALE WAIVER (no longer fires -- remove it): {name} "
-                          f"[{EXPORT_WAIVERS[name]['ticket']}]")
-            stale_export = unwaived
-            if stale_export:
-                print("\nBLOCKED -- the shipped export does not match the canonical being committed:")
-                for c in stale_export:
-                    print("  VIOLATION: " + c)
-                print("Fix: run `npm run build:guides` in ~/plant-app, then commit again.")
-                print("(Or bypass with: git commit --no-verify)")
-                return 1
         if concerns:
             print("\nBLOCKED -- regression(s) detected:")
             for c in concerns:

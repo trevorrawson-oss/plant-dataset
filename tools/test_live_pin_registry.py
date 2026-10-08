@@ -65,7 +65,7 @@ class PositiveControl(unittest.TestCase):
 
 class Population(unittest.TestCase):
     def test_the_registry_population(self):
-        self.assertEqual((len(DETECTED), len(R.LIVE_PINS), len(R.reverify_list()), len(R.EXEMPT)), (67, 26, 70, 48))  # 2026-10-06: +test_promote_pla673_b2 (replay), +test_era_switch_safety exempt; part D: +test_promote_pla673_d (replay), +2 sense pins (D8, refuse_on sole cases)  # +test_glossary_sense (8 pins) live, +test_promote_pla673_glossary exempt (PLA-673, 2026-10-05)
+        self.assertEqual((len(DETECTED), len(R.LIVE_PINS), len(R.reverify_list()), len(R.EXEMPT)), (65, 26, 70, 46))  # 2026-10-07 PLA-713: -test_precommit_export_waiver (deleted with the hook's export arm), -test_export_staleness_gate (rewritten on git fixtures; no longer detected, its exempt entry removed)  # 2026-10-06: +test_promote_pla673_b2 (replay), +test_era_switch_safety exempt; part D: +test_promote_pla673_d (replay), +2 sense pins (D8, refuse_on sole cases)  # +test_glossary_sense (8 pins) live, +test_promote_pla673_glossary exempt (PLA-673, 2026-10-05)
 
 
 if __name__ == "__main__":
