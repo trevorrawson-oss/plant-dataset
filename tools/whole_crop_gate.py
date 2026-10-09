@@ -1042,6 +1042,25 @@ print(f"  bare anchors: {len(_bhrows)} ({sum(1 for _i, s, _u in _bhrows if s)} s
 for m in _bhv:
     fail(f"bare-host: {m}")
 
+# ---------------- A64. rootstock prose names only listed rootstocks (PLA-608 Part 2, 2026-10-09) ----------------
+# A rootstock named in recommended_rootstock_note, a row's traits_* / what_to_ask_nursery, or any container_notes
+# string must resolve (synonym / family / selection table) to a row of THIS crop's rootstock_options. PLA-464/466
+# removed and renamed rows and left the prose naming them; nothing checked it. Today's unresolved names are waived BY
+# IDENTITY AND SENTENCE in rootstock_prose_gate_known.py, so a new one, or a waived one whose sentence is reworded,
+# fails by name. recommended_rootstock itself is NOT read (PLA-589, held). Names on no list pass silently; the
+# roster half (population by identity, STALE waivers) runs in gate_all. No-op on a crop without the field.
+from rootstock_prose_gate import crop_violations as _rp_violations, scan_crop as _rp_scan, has_field as _rp_has
+print("A64. rootstock prose names only listed rootstocks (waived by identity and sentence)")
+if _rp_has(crop):
+    _rpms, _rpn = _rp_scan(crop)
+    _rpv = _rp_violations(crop)
+    print(f"  fields: {_rpn}; rootstock names: {len(_rpms)} ({sum(1 for _m in _rpms if _m['resolved'])} matched a row); "
+          f"violations: {len(_rpv)}")
+    for m in _rpv:
+        fail(f"rootstock-prose: {m}")
+else:
+    print("  no rootstock_options field: not in the population")
+
 # ---------------- A55. perennial year-pill coherence (PLA-6 Round 2) ----------------
 # HARD-FLIPPED 2026-08-22, the day its findings reached zero, which is the same soft-then-hard
 # discipline A49/A50 followed. It shipped standalone on 2026-08-22 with 4 live findings and was

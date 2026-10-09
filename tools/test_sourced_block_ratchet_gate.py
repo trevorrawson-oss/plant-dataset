@@ -86,6 +86,7 @@ SIBLING_CLAIM_KEYS = {
     "harvest_urgency": ("harvest_urgency",),
     "mature_dimensions": ("mature_height_ft", "mature_spread_ft"),
     "soil_prep": ("soil_prep_beginner", "soil_prep_seasoned"),
+    "recommended_rootstock_note": ("recommended_rootstock_note",),
 }
 
 
@@ -108,7 +109,10 @@ class PinsAreTheMeasurement(unittest.TestCase):
             "pollination", "rotation", "soil", "start_method", "storage", "succession_policy",
             "thinning", "varieties", "watering", "winter_hardiness", "yield_expectations"})
         self.assertEqual(set(G.SIBLING_BLOCKS), {"description", "harvest_ready", "harvest_urgency",
-                                                 "mature_dimensions", "soil_prep"})
+                                                 "mature_dimensions", "soil_prep", "recommended_rootstock_note"})
+        # PLA-608 ruling 2 (2026-09-25) + PLA-625 stop-1 ruling (2026-10-09): the rootstock-note pair, NAMED in the
+        # rootstock_prose_gate tools commit; the fields land with citrus promote 1 (null everywhere).
+        self.assertEqual(G.SIBLING_BLOCKS["recommended_rootstock_note"], ("recommended_rootstock_note",))
         # PLA-674 (2026-10-05): the soil_prep citation pair, named in the glossary promote's tools commit.
         self.assertEqual(G.SIBLING_BLOCKS["soil_prep"], ("soil_prep_beginner", "soil_prep_seasoned"))
         # PLA-10 promote 3 (spec §4.3, plan 58 §8 T5): one crop-root pair cites both height fields.
@@ -244,6 +248,66 @@ class MatureDimensionsSibling(unittest.TestCase):
         by(d)[NULL_CROP]["mature_height_ft"] = [2, 4]
         self.assertFalse(any("|mature_dimensions|" in i for i, _ in G.blocks(by(d)[NULL_CROP], False)))
         self.assertTrue(any("|mature_dimensions|" in i for i, _ in G.blocks(by(d)[NULL_CROP], True)))
+
+
+RR_CROP = "lemon"   # certified, carries an authored recommended_rootstock_note
+
+
+class RecommendedRootstockNoteSibling(unittest.TestCase):
+    """PLA-608 ruling 2 (2026-09-25; anchoring partner amended the same day) and the PLA-625 stop-1 ruling (2026-10-09):
+    `recommended_rootstock_note_sources` / `_anchoring_urls` cite recommended_rootstock_note. NAMED now, in the
+    rootstock_prose_gate tools commit, so the keys are never UNNAMED; RATCHETED only once
+    RECOMMENDED_ROOTSTOCK_NOTE_ARMED flips, in the promote that writes the pair (citrus promote 1: null everywhere,
+    three-state contract, register entry). Armed today, every authored note would fail as a NEW uncited block."""
+
+    def setUp(self):
+        self.assertIsInstance(by(_CANON)[RR_CROP].get("recommended_rootstock_note"), str)
+        self.assertNotIn("recommended_rootstock_note_sources", by(_CANON)[RR_CROP])
+
+    def test_the_flag_matches_the_data(self):
+        carrying = any("recommended_rootstock_note_sources" in c for c in _CANON["crops"] if G.certified(c))
+        self.assertEqual(G.RECOMMENDED_ROOTSTOCK_NOTE_ARMED, carrying,
+                         "RECOMMENDED_ROOTSTOCK_NOTE_ARMED flips in the SAME commit that writes the pair, never before")
+
+    def test_the_pair_is_not_UNNAMED_in_any_of_its_three_states(self):
+        for srcs, anchors in ((None, None), ([], {}),
+                              (["uf_ifas_hs1153"], {"uf_ifas_hs1153": {"url": "https://ask.ifas.ufl.edu/publication/HS402",
+                                                                        "verified": "2026-10-09"}})):
+            d = fresh()
+            c = by(d)[RR_CROP]
+            c["recommended_rootstock_note_sources"] = srcs
+            c["recommended_rootstock_note_anchoring_urls"] = anchors
+            self.assertEqual(G.unnamed_fields(c), [], (srcs, anchors))
+            self.assertFalse(any("UNNAMED" in m for m in violations(d)), (srcs, anchors))
+
+    def test_a_misspelled_pair_key_is_UNNAMED(self):
+        """Naming is exact: the ruled pair is note-scoped, so a key spelled on the value field fails."""
+        for k in ("recommended_rootstock_sources", "recommended_rootstock_anchoring_urls",
+                  "recommended_rootstock_notes_sources"):
+            d = fresh()
+            by(d)[RR_CROP][k] = ["uf_ifas_hs1153"] if k.endswith("_sources") else {}
+            self.assertTrue(any(f"UNNAMED sourced field {k}" in m for m in violations(d)), k)
+
+    def test_armed_an_authored_note_with_a_null_or_empty_pair_FAILS_by_name(self):
+        for srcs in (None, [], "absent"):
+            d = fresh()
+            c = by(d)[RR_CROP]
+            if srcs != "absent":
+                c["recommended_rootstock_note_sources"] = srcs
+            ident = f"{RR_CROP}|recommended_rootstock_note|recommended_rootstock_note_sources"
+            self.assertIn(ident, G.uncited(c, recommended_rootstock_note_armed=True), srcs)
+            self.assertNotIn(ident, G.uncited(c, recommended_rootstock_note_armed=False), srcs)
+
+    def test_armed_a_cited_note_is_not_uncited(self):
+        d = fresh()
+        c = by(d)[RR_CROP]
+        c["recommended_rootstock_note_sources"] = ["uf_ifas_hs1153"]
+        self.assertFalse(any("|recommended_rootstock_note|" in i
+                             for i in G.uncited(c, recommended_rootstock_note_armed=True)))
+
+    def test_unarmed_the_live_canonical_counts_no_note_block(self):
+        self.assertFalse(any("|recommended_rootstock_note|" in i for c in _CANON["crops"] if G.certified(c)
+                             for i, _ok in G.blocks(c)))
 
 
 # ------------------------------------------------------- closures keep landed replays reproducible
@@ -509,8 +573,10 @@ class NamingIsPartOfAdding(unittest.TestCase):
 
     def test_a_new_crop_root_anchoring_sibling_is_UNNAMED(self):
         d = fresh()
-        by(d)[VICTIM]["recommended_rootstock_note_anchoring_urls"] = {}
-        self.assertTrue(any("recommended_rootstock_note_anchoring_urls" in m
+        # re-pointed 2026-10-09: its old example, recommended_rootstock_note_anchoring_urls, is NAMED now (PLA-608
+        # ruling 2, PLA-625 stop 1), so a still-unnamed crop-root pair key stands in.
+        by(d)[VICTIM]["zz_claim_anchoring_urls"] = {}
+        self.assertTrue(any("zz_claim_anchoring_urls" in m
                             for m in violations(d)))
 
     def test_a_nested_anchoring_dict_on_an_unnamed_block_is_UNNAMED(self):

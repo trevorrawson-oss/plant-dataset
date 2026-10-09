@@ -65,6 +65,23 @@ RATCHET = {
          "    soil_prep_armed = SOIL_PREP_ARMED" + M + "\n",
          # armed by default since 2026-10-06, so an ignored argument shows only when it is passed False
          "test_unarmed_null_siblings_add_no_uncited_block"),
+        # --- PLA-608 rootstock-note pair (NAMED 2026-10-09, PLA-625 stop 1; arms with citrus promote 1) -----
+        ("rr_note", "rr_note_flag_flipped",
+         "RECOMMENDED_ROOTSTOCK_NOTE_ARMED = False\n",
+         "RECOMMENDED_ROOTSTOCK_NOTE_ARMED = True" + M + "\n",
+         "RecommendedRootstockNoteSibling and test_the_flag_matches_the_data"),
+        ("rr_note", "rr_note_skip_removed",
+         '        if name == "recommended_rootstock_note" and not recommended_rootstock_note_armed:\n            continue\n',
+         "        pass" + M + "\n",
+         "test_unarmed_the_live_canonical_counts_no_note_block"),
+        ("rr_note", "rr_note_armed_arg_ignored",
+         "    if recommended_rootstock_note_armed is None:\n        recommended_rootstock_note_armed = RECOMMENDED_ROOTSTOCK_NOTE_ARMED\n",
+         "    recommended_rootstock_note_armed = RECOMMENDED_ROOTSTOCK_NOTE_ARMED" + M + "\n",
+         "test_armed_an_authored_note_with_a_null_or_empty_pair_FAILS_by_name"),
+        ("rr_note", "rr_note_pair_not_named",
+         '    "recommended_rootstock_note": ("recommended_rootstock_note",),\n',
+         "" + M + "\n",
+         "test_the_pair_is_not_UNNAMED_in_any_of_its_three_states"),
         # --- era waiver set (2026-10-04): a landed promote replays against KNOWN_AT_ARMING -----------
         ("era", "era_set_ignored",
          "    known = _default_known() if known is None else known",

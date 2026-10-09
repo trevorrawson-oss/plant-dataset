@@ -71,6 +71,10 @@ SIBLING_BLOCKS = {
     # PLA-674 (2026-10-05): the soil_prep citation pair, written on every crop record by the PLA-673 glossary promote
     # (null = not assessed, D13; watermelon backfilled). Named here so the keys are not UNNAMED; see SOIL_PREP_ARMED.
     "soil_prep": ("soil_prep_beginner", "soil_prep_seasoned"),
+    # PLA-608 ruling 2 (2026-09-25, anchoring partner amended the same day) + the PLA-625 stop-1 ruling (2026-10-09): the
+    # rootstock-note citation pair, NAMED in the rootstock_prose_gate tools commit so its keys are never UNNAMED. The
+    # fields land with citrus promote 1 (null everywhere, three-state contract, register entry); see the flag below.
+    "recommended_rootstock_note": ("recommended_rootstock_note",),
 }
 # A named sibling block whose ratchet is behind a flag. NAMED from the tools commit (so its keys are never
 # UNNAMED), RATCHETED only once its flag flips, in the data commit that writes the siblings: armed on a
@@ -83,6 +87,10 @@ MATURE_DIMENSIONS_ARMED = True
 # cited before arming are CLOSED (era identities, sourced_block_ratchet_known.py). Landed promotes that replay an earlier
 # post-state pass soil_prep_armed=False or known=KNOWN_AT_ARMING, the mature_dimensions precedent.
 SOIL_PREP_ARMED = True
+# recommended_rootstock_note: NAMED 2026-10-09 (PLA-608 Part 2's tools commit), NOT ARMED. It flips in the promote that
+# writes the pair (citrus promote 1), with that promote's measured waiver set: armed today, every certified crop's
+# authored note would fail as a NEW uncited block. test_sourced_block_ratchet_gate pins the flag to the data.
+RECOMMENDED_ROOTSTOCK_NOTE_ARMED = False
 # List families: name -> (locator, identity key or None for index, parent block covering it or None)
 ITEM_FAMILIES = {
     "pests": (("pests",), "id", None),
@@ -282,12 +290,14 @@ def _item_label(item, i, key):
     return f"[{i}]"
 
 
-def blocks(crop, mature_dimensions_armed=None, soil_prep_armed=None):
+def blocks(crop, mature_dimensions_armed=None, soil_prep_armed=None, recommended_rootstock_note_armed=None):
     """Every NAMED block on this crop that carries authored content: [(identity, cited)]."""
     if mature_dimensions_armed is None:
         mature_dimensions_armed = MATURE_DIMENSIONS_ARMED
     if soil_prep_armed is None:
         soil_prep_armed = SOIL_PREP_ARMED
+    if recommended_rootstock_note_armed is None:
+        recommended_rootstock_note_armed = RECOMMENDED_ROOTSTOCK_NOTE_ARMED
     slug = crop.get("slug")
     out = []
 
@@ -302,6 +312,8 @@ def blocks(crop, mature_dimensions_armed=None, soil_prep_armed=None):
         if name == "mature_dimensions" and not mature_dimensions_armed:
             continue
         if name == "soil_prep" and not soil_prep_armed:
+            continue
+        if name == "recommended_rootstock_note" and not recommended_rootstock_note_armed:
             continue
         if any(has_content(crop.get(k)) for k in carriers):
             add(name, f"{name}_sources", is_cited(crop.get(f"{name}_sources")))
@@ -327,8 +339,9 @@ def blocks(crop, mature_dimensions_armed=None, soil_prep_armed=None):
     return out
 
 
-def uncited(crop, mature_dimensions_armed=None, soil_prep_armed=None):
-    return sorted(ident for ident, cited in blocks(crop, mature_dimensions_armed, soil_prep_armed) if not cited)
+def uncited(crop, mature_dimensions_armed=None, soil_prep_armed=None, recommended_rootstock_note_armed=None):
+    return sorted(ident for ident, cited in blocks(crop, mature_dimensions_armed, soil_prep_armed,
+                                                   recommended_rootstock_note_armed) if not cited)
 
 
 # ---------------------------------------------------------------- DISCOVERY

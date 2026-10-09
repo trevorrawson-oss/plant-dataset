@@ -127,16 +127,21 @@ def main():
     #   PLA-544 (2026-09-30): a SOLE citation anchored at a bare host; co-cited ones are reported.
     #   PLA-10 (2026-10-01): planting_layout (A44)'s population -- certified crops and entries against
     #     literal floors; the entry floor arms with presence in promote 1's data commit.
+    #   PLA-608 (2026-10-09): rootstock prose (A64) over EVERY crop carrying rootstock_options, shells included
+    #     (gate_all's per-crop pass runs certified crops only); the population is by identity, STALE reported.
     import sourced_block_ratchet_gate as _sbr
     import bare_host_gate as _bh
     import planting_layout_gate as _plg
+    import rootstock_prose_gate as _rp
     _data = json.load(open(path, encoding="utf-8"))
     _sbr_n, _sbr_insp, _sbr_live, _sbr_v, _sbr_stale, _sbr_pot = _sbr.roster(_data)
     _bh_n, _bh_insp, _bh_sole, _bh_co, _bh_v, _bh_stale = _bh.roster(_data)
     _pl = _plg.roster(_data)
+    _rpr = _rp.roster(_data)
     for _name, _v, _why in (("sourced_block_ratchet_gate", _sbr_v, _sbr.refusal(_sbr_n, _sbr_insp)),
                             ("bare_host_gate", _bh_v, _bh.refusal(_bh_n, _bh_insp)),
-                            ("planting_layout_gate", _pl["violations"], _plg.refusal(_pl))):
+                            ("planting_layout_gate", _pl["violations"], _plg.refusal(_pl)),
+                            ("rootstock_prose_gate", _rpr["violations"], _rp.refusal(_rpr))):
         if _why:
             print(f"gate_all: REFUSED -- {_name} {_why}. A check that inspected nothing is not a pass.")
             sys.exit(2)
@@ -175,6 +180,11 @@ def main():
           f"waived by identity ({len(_bh_stale)} closed since arming); {len(_bh_co)} co-cited "
           f"bare (reported, non-blocking)")
     print(f"  planting_layout (PLA-10, A44): {_plg.summary(_pl)}")
+    print(f"  rootstock prose (PLA-608, A64): inspected {_rpr['inspected']} crops carrying rootstock_options, "
+          f"{_rpr['fields']} fields, {_rpr['mentions']} rootstock names ({_rpr['matched']} matched a row), "
+          f"{len(_rpr['unresolved'])} waived by identity, {len(_rpr['stale'])} STALE"
+          + (f" ({', '.join(k[0] + ' ' + k[2] for k in _rpr['stale'])}: delete in the retiring promote)"
+             if _rpr['stale'] else "") + f"; {_rp.LIMIT_LINE}")
     if blocked:
         print(f"  NOT launch-ready ({len(blocked)}): {', '.join(sorted(blocked))}")
         print("  (CERTIFIED = status verified_gs_arc. LAUNCH-READY = that plus both "
