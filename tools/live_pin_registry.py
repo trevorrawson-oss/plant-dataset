@@ -220,6 +220,23 @@ LIVE_PINS = {
         ('test_sourced_block_ratchet_gate.py::PinsAreTheMeasurement::test_waiver_file_is_the_measured_population', 'equality', 'sha', "_KNOWN_DOC['measured_on'] == SHA (00dda31c..); count == 2634", 83),
         ('test_sourced_block_ratchet_gate.py::LiveCanonical::test_per_family_counts / test_every_certified_crop_has_at_least_one_waived_block', 'equality', 'population', 'family counts of KNOWN == FAMILY_COUNTS; crops in KNOWN == 121', 251),
         ('test_sourced_block_ratchet_gate.py::MatureDimensionsSibling::setUp', 'equality', 'content', 'carrot mature_height_ft and mature_spread_ft are None', 149),
+        # PLA-608 / PLA-625 stop 1 (2026-10-09): the rootstock-note pair is NAMED, unarmed until citrus promote 1 writes it.
+        ('test_sourced_block_ratchet_gate.py::RecommendedRootstockNoteSibling::setUp', 'equality', 'content', 'lemon recommended_rootstock_note is a str and carries no recommended_rootstock_note_sources key', 264),
+        ('test_sourced_block_ratchet_gate.py::RecommendedRootstockNoteSibling::test_the_flag_matches_the_data', 'equality', 'content', 'RECOMMENDED_ROOTSTOCK_NOTE_ARMED == any certified crop carries recommended_rootstock_note_sources (flips with promote 1)', 269),
+    ],
+    # PLA-608 Part 2 (2026-10-09, citrus/rootstock pass stop 1): rootstock_prose_gate reads the LIVE canonical's rootstock
+    # prose (note, row traits / what_to_ask_nursery, container_notes) on every crop carrying rootstock_options. Measured on
+    # 5420479d. A promote that adds, removes or rewords a rootstock name in those fields, or adds/removes a row, moves these:
+    # re-measure with the mentions read, and retire or add ledger entries in rootstock_prose_gate_known.py by sentence.
+    'test_rootstock_prose_gate.py': [
+        ('test_rootstock_prose_gate.py::test_the_ledger_was_measured_on_this_canonical_family', 'equality', 'sha', "MEASURED_ON startswith 5420479d; len(WAIVERS) == 19", 40),
+        ('test_rootstock_prose_gate.py::test_population_is_the_21_crops_carrying_the_field_by_identity', 'equality', 'population', 'sorted(KNOWN_POPULATION) == live slugs carrying rootstock_options; len == 21; carrying/inspected (21, 21)', 50),
+        ('test_rootstock_prose_gate.py::test_inspected_fields_and_names_are_the_measurement', 'equality', 'population', 'fields 515, mentions 272, matched 253', 58),
+        ('test_rootstock_prose_gate.py::test_live_unresolved_equals_the_waiver_ledger_exactly', 'equality', 'population', 'set(live unresolved keys) == set(G.KNOWN) (19); violations == stale == []', 66),
+        ('test_rootstock_prose_gate.py::test_cli_live_passes_and_prints_its_population_and_limit', 'equality', 'population', "'inspected 21 crops ... 515 fields, 272 rootstock names (253 matched a row)' in CLI output", 314),
+        ('test_rootstock_prose_gate.py::test_whole_crop_gate_A64_live_prints_its_counts', 'equality', 'population', "lime A64: 'rootstock names: 10 (7 matched a row); violations: 0'", 345),
+        ('test_rootstock_prose_gate.py::test_the_pla608_part1_hits_are_in_the_ledger_and_st_julien_is_retired', 'equality', 'content', 'the 9 Part 1 (crop, name) hits are ledgered; no plum St. Julien mention', 75),
+        ('test_rootstock_prose_gate.py::test_the_new_container_notes_hit_is_apple_m27', 'equality', 'content', 'apple M27 waivers on container_notes.notes_beginner / _seasoned', 84),
     ],
 }
 
