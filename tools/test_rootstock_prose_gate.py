@@ -1,11 +1,12 @@
 """PLA-608 Part 2: tools/rootstock_prose_gate.py -- a rootstock named in prose must be a row of that crop's list.
 
-Pins the live measurement (canonical 5420479d: 21 crops by identity, 515 fields, 272 names, 253 matched, 19 waived),
+Pins the live measurement (canonical 5420479d: 21 crops by identity, 515 fields, 272 names, 253 matched, 19 waived;
+PLA-625 stop 2 moved own-root wording to a propagation-mode list: 260 names, 248 matched, 12 waived),
 proves every guard family on a SCRATCH COPY, carries PLA-608's six named injections, and drives the two entry points
 (whole_crop_gate A64, gate_all's roster half) as subprocesses. Run under pytest (def test_), via
 tools/run_test_tree.py --files. Mutation harness: tools/mutate_rootstock_prose_gate.py.
 """
-import copy, json, os, subprocess, sys
+import copy, json, os, re, subprocess, sys
 
 import pytest
 
@@ -38,8 +39,8 @@ def viol(d, slug):
 def test_the_ledger_was_measured_on_this_canonical_family():
     # re-measured on 5420479d (stop-1 ruling: NOT copied from the ticket)
     assert G._K.MEASURED_ON.startswith("5420479d")
-    assert len(G._K.WAIVERS) == 19
-    assert len({(w["crop"], w["field"], w["name"], w["sentence"]) for w in G._K.WAIVERS}) == 19, "duplicate waiver"
+    assert len(G._K.WAIVERS) == 12
+    assert len({(w["crop"], w["field"], w["name"], w["sentence"]) for w in G._K.WAIVERS}) == 12, "duplicate waiver"
     for w in G._K.WAIVERS:
         assert w["ticket"] in ("PLA-608", "PLA-566", "PLA-612") and w["reason"].strip(), w
 
@@ -56,8 +57,8 @@ def test_population_is_the_21_crops_carrying_the_field_by_identity():
 
 def test_inspected_fields_and_names_are_the_measurement():
     assert LIVE["fields"] == 515
-    assert LIVE["mentions"] == 272
-    assert LIVE["matched"] == 253
+    assert LIVE["mentions"] == 260
+    assert LIVE["matched"] == 248
     assert G.refusal(LIVE) is None
 
 
@@ -101,8 +102,7 @@ def test_every_live_row_name_is_known_to_the_table():
     ("P. insititia", "st_julien"), ("Poncirus trifoliata", "trifoliate_orange"), ("Citrus trifoliata", "trifoliate_orange"),
     ("C. aurantium", "sour_orange"), ("Citrus jambhiri", "rough_lemon"), ("C. volkameriana", "volkamer"),
     ("Old Home x Farmingdale", None), ("betulaefolia", "betulifolia"), ("D. virginiana", "american_persimmon"),
-    ("date-plum", "date_plum"), ("Asimina triloba seedling", "pawpaw_seedling"), ("own roots", "own_root"),
-    ("ungrafted", "own_root"), ("from cuttings", "own_root"), ("Swingle citrumelo", "swingle"),
+    ("date-plum", "date_plum"), ("Asimina triloba seedling", "pawpaw_seedling"), ("Swingle citrumelo", "swingle"),
 ])
 def test_synonyms_name_the_same_stock(text, sid):
     hits = G.names_in(text)
@@ -141,12 +141,73 @@ def test_cultivars_are_never_read_as_rootstocks():
     assert viol(d, "peach") == []
 
 
-def test_own_root_resolves_on_an_authored_empty_list_only():
+# ------------------------------------------------------------------ own-root wording is a propagation mode (stop-2 ruling)
+# PLA-625 stop 2, ruling 1b (2026-10-13): own-root wording names how a tree is propagated, not a rootstock (PLA-464
+# retired propagation modes from rootstock_options), so it sits on a printed list beside the cultivar deny-list.
+OWN_ROOT_TERMS = ["own roots", "own root", "own-root", "own-rooted", "ungrafted", "cutting-grown", "from cuttings",
+                  "from hardwood cuttings"]
+# The 7 waivers the ruling deleted, kept here so their retirement stays proven: each one is STALE on the live data.
+RETIRED_OWN_ROOT = {
+    ("lime", "recommended_rootstock_note", "own roots",
+     "Key lime is often grown on its own roots from seed, cuttings, or air-layers rather than grafted."),
+    ("persimmon", "rootstock_options[name=Diospyros virginiana (American persimmon)].traits_seasoned", "own roots",
+     "Native D. virginiana is very cold-hardy and more tolerant of heavy, wet soils and root rot than kaki on its own "
+     "roots, and it improves anchorage."),
+    ("persimmon", "rootstock_options[name=Diospyros virginiana (American persimmon)].traits_beginner", "own roots",
+     "Native persimmon roots are very cold-hardy and handle heavy, wet soil and root rot better than the Asian type on "
+     "its own roots."),
+    ("mulberry", "recommended_rootstock_note", "from hardwood cuttings",
+     "Mulberries root readily from hardwood cuttings, so many are grown own-root; named cultivars are also grafted or "
+     "budded onto seedling Morus alba or rubra, mainly for propagation, not to dwarf the tree."),
+    ("mulberry", "recommended_rootstock_note", "own-root",
+     "Mulberries root readily from hardwood cuttings, so many are grown own-root; named cultivars are also grafted or "
+     "budded onto seedling Morus alba or rubra, mainly for propagation, not to dwarf the tree."),
+    ("mulberry", "recommended_rootstock_note", "own-root",
+     "On an own-root tree there is no graft union to keep above the soil, and any suckers are the same variety."),
+    ("pawpaw", "recommended_rootstock_note", "ungrafted",
+     "An ungrafted seedling is a cheaper way to a tree, but expect variable fruit and a wait of about 5 to 8 years "
+     "instead of around 4 for a grafted variety."),
+}
+
+
+@pytest.mark.parametrize("text", OWN_ROOT_TERMS)
+def test_own_root_wording_is_a_propagation_mode_not_a_stock(text):
+    hits = G.names_in(text)
+    assert [(h[2], h[3]) for h in hits] == [("propagation", None)], (text, hits)
+
+
+def test_seedling_is_not_a_propagation_mode():
+    """'seedling' is a real row name on some crops (apple's row is named just that), so it stays off the list."""
+    assert not any(re.search(p, "seedling", re.I) for p in G.PROPAGATION_MODES)
+    assert G.names_in("a seedling") == []
+    assert [h[3] for h in G.names_in("an apple seedling")] == ["apple_seedling"]
+
+
+def test_own_root_prose_is_never_a_violation_and_never_hides_a_stock():
     d = fresh()
-    assert by(d)["fig"]["rootstock_options"] == []
-    assert viol(d, "fig") == []
-    by(d)["peach"]["recommended_rootstock_note"] += " Some peaches grow on their own roots."
-    assert any("own roots" in v for v in viol(d, "peach"))
+    assert by(d)["fig"]["rootstock_options"] == [] and viol(d, "fig") == []
+    by(d)["peach"]["recommended_rootstock_note"] += " Some peaches grow on their own roots, ungrafted, from cuttings."
+    assert viol(d, "peach") == []
+    # the list hides only the mode: a stock in the same sentence still fails
+    by(d)["peach"]["recommended_rootstock_note"] += " Own-root trees beat St. Julien."
+    v = viol(d, "peach")
+    assert len(v) == 1 and "'St. Julien'" in v[0], v
+
+
+def test_no_live_mention_is_a_propagation_mode():
+    ms = [m for c in DATA["crops"] if G.has_field(c) for m in G.scan_crop(c)[0]]
+    assert ms and not any(m["kind"] == "propagation" for m in ms)
+    assert not any(re.search(p, w["name"], re.I) for w in G._K.WAIVERS for p in G.PROPAGATION_MODES)
+
+
+def test_the_seven_own_root_waivers_are_STALE_and_deleted():
+    """Ruling 1b: prove each STALE, then delete it in the same commit."""
+    assert not (RETIRED_OWN_ROOT & set(G.KNOWN))
+    known = dict(G.KNOWN)
+    known.update({k: {"ticket": "PLA-608", "reason": "retired"} for k in RETIRED_OWN_ROOT})
+    r = G.roster(DATA, known)
+    assert set(r["stale"]) == RETIRED_OWN_ROOT
+    assert r["violations"] == []
 
 
 def test_a_row_named_only_seedling_holds_apple_seedling():
@@ -311,8 +372,9 @@ def _run(args):
 def test_cli_live_passes_and_prints_its_population_and_limit():
     rc, out = _run([os.path.join(HERE, "rootstock_prose_gate.py")])
     assert rc == 0, out
-    assert "inspected 21 crops carrying rootstock_options (of 21), 515 fields, 272 rootstock names (253 matched a row)" in out
+    assert "inspected 21 crops carrying rootstock_options (of 21), 515 fields, 260 rootstock names (248 matched a row)" in out
     assert G.LIMIT_LINE in out
+    assert G.PROPAGATION_LINE in out and "ungrafted" in G.PROPAGATION_LINE
 
 
 def test_cli_exit_codes(tmp_path):
@@ -342,7 +404,7 @@ def test_whole_crop_gate_A64_fails_by_name(tmp_path):
 def test_whole_crop_gate_A64_live_prints_its_counts():
     rc, out = _run([os.path.join(HERE, "whole_crop_gate.py"), "lime"])
     assert rc == 0, out[-3000:]
-    assert "A64. rootstock prose" in out and "rootstock names: 10 (7 matched a row); violations: 0" in out
+    assert "A64. rootstock prose" in out and "rootstock names: 9 (7 matched a row); violations: 0" in out
 
 
 def test_gate_all_runs_the_roster_half_on_a_SHELL(tmp_path):

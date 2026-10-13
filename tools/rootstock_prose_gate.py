@@ -19,8 +19,12 @@ NAME RESOLUTION (the table below; PLA-608's synonym and family relations).
   * SELECTION_OF: a species stock named in prose also resolves when a row holds a named selection of it (Flying Dragon
     is a selection of trifoliate orange, so "a dwarfing selection of trifoliate orange" on a Flying Dragon row resolves).
     It is one-way: Flying Dragon named on a crop whose only trifoliate row is the species FAILS.
-  * OWN ROOT: an authored EMPTY list (`[]`) is the own-root statement (PLA-464), so "own roots" / "ungrafted" /
-    "from cuttings" resolve there. On a crop that HAS rows, own-root prose must resolve to an own-root row.
+  * PROPAGATION_MODES: own-root wording ("own roots", "own-root", "ungrafted", "from cuttings" / "from hardwood
+    cuttings") names how a tree is propagated, not a rootstock (PLA-464 retired propagation modes from
+    rootstock_options), so it is never read as a stock, on any crop. Ruled in the citrus/rootstock pass stop 2 (PLA-625,
+    2026-10-13), which retired the 7 own-root waivers stop 1 measured. The list is printed on every run. "seedling" is
+    deliberately NOT on it: it is a real row name on some crops (apple's row). The claims themselves are sourced in each
+    crop's normal pass.
   * NOT_ROOTSTOCKS: cultivar names that sit in rootstock prose (cherry-sour's North Star and Meteor, PLA-608's second
     handling case) are listed so they are never read as stocks. Decided at build time over a waiver (the ticket's
     preference): a cultivar is never a rootstock, so no sentence should carry a waiver for it.
@@ -110,8 +114,6 @@ STOCKS = {
                        r"seedlings?\s+(?:of\s+)?(?:Morus|M\.)\s*(?:alba|rubra)(?:\s+or\s+(?:alba|rubra))?"],
     "pawpaw_seedling": [r"pawpaw\s+seedlings?(?:\s*\(grafted\))?", r"Asimina(?:\s+triloba)?\s+seedlings?"],
     "apple_seedling": [r"apple\s+seedlings?"],
-    "own_root": [r"own[- ]roots?(?:ed)?", r"own-rooted", r"ungrafted", r"cutting-grown",
-                 r"from\s+(?:hardwood\s+)?cuttings?"],
     "genetic_dwarf": [r"genetic\s+dwarfs?"],
 }
 # family -> (terms that name the family itself, members). A member named in prose resolves only to itself.
@@ -131,10 +133,11 @@ SELECTION_OF = {"flying_dragon": "trifoliate_orange"}
 # A row whose WHOLE name is one of these is read as that stock (apple's row is named just "seedling"; a bare "seedling"
 # in prose is not a stock name, so it is not in STOCKS).
 ROW_NAME_ALIASES = {"seedling": "apple_seedling"}
-# An authored EMPTY list is the own-root statement (PLA-464: fig, pomegranate, avocado and olive carry `[]`, own-root
-# by design), so own-root prose resolves there. On a crop WITH rows, own-root prose must resolve to an own-root row.
-OWN_ROOT = "own_root"
 NOT_ROOTSTOCKS = [r"(?-i:North\s+Star)", r"(?-i:Meteor)"]   # cherry-sour cultivars named in its rootstock prose
+# Own-root wording is a propagation mode, not a rootstock name (PLA-625 stop 2, ruling 1b): never read as a stock.
+PROPAGATION_MODES = [r"own[- ]roots?(?:ed)?", r"ungrafted", r"cutting-grown", r"from\s+(?:hardwood\s+)?cuttings?"]
+PROPAGATION_LINE = ("propagation modes, never read as rootstocks (PLA-464; PLA-625 stop 2): "
+                    + " | ".join(PROPAGATION_MODES))
 
 ROW_FIELDS = ("traits_seasoned", "traits_beginner", "what_to_ask_nursery")
 NOTE_FIELD = "recommended_rootstock_note"
@@ -149,6 +152,7 @@ def _compile():
     for fid, (terms, _m) in FAMILIES.items():
         pats += [(re.compile(rf"\b(?:{p})", re.I), "family", fid) for p in terms]
     pats += [(re.compile(rf"\b(?:{p})\b", re.I), "cultivar", None) for p in NOT_ROOTSTOCKS]
+    pats += [(re.compile(rf"\b(?:{p})\b", re.I), "propagation", None) for p in PROPAGATION_MODES]
     return pats
 
 
@@ -186,10 +190,7 @@ def sentence_at(text, pos):
 def row_index(crop):
     """(stocks held by the crop's rows, family terms carried in row names)."""
     stocks, fams = set(), set()
-    rows = crop.get("rootstock_options")
-    if rows == []:
-        stocks.add(OWN_ROOT)
-    for r in rows or []:
+    for r in crop.get("rootstock_options") or []:
         n = r.get("name") if isinstance(r, dict) else None
         if isinstance(n, str) and n.strip().lower() in ROW_NAME_ALIASES:
             stocks.add(ROW_NAME_ALIASES[n.strip().lower()])
@@ -245,7 +246,7 @@ def scan_crop(crop):
     ms = []
     for field, text in fl:
         for s, _e, kind, nid, t in names_in(text):
-            if kind == "cultivar":
+            if kind in ("cultivar", "propagation"):
                 continue
             ms.append({"crop": crop.get("slug"), "field": field, "name": t, "kind": kind, "id": nid,
                        "sentence": sentence_at(text, s), "resolved": resolves(kind, nid, stocks, fams)})
@@ -330,6 +331,7 @@ def main(argv):
     if r["new_crops"]:
         print(f"  new to the population (inspected): {', '.join(r['new_crops'])}")
     print(f"  {LIMIT_LINE}")
+    print(f"  {PROPAGATION_LINE}")
     why = refusal(r)
     if why:
         print(f"rootstock_prose_gate: REFUSED -- {why}. A check that inspected nothing is not a pass.")
