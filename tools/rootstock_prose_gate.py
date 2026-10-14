@@ -258,6 +258,13 @@ def waiver_key(m):
 
 
 KNOWN = {(w["crop"], w["field"], w["name"], w["sentence"]): w for w in _K.WAIVERS}
+CLOSED = {(w["crop"], w["field"], w["name"], w["sentence"]): w for w in _K.CLOSED}
+KNOWN_AT_ARMING = {**KNOWN, **CLOSED}   # what a LANDED replay gates against (era switch); live gating uses KNOWN
+
+
+def _default_known():
+    import sourced_block_ratchet_gate as _sbr
+    return KNOWN_AT_ARMING if _sbr.era_active() else KNOWN
 KNOWN_POPULATION = frozenset(_K.POPULATION)
 
 
@@ -269,7 +276,7 @@ def crop_violations(crop, known=None):
     """Per-crop half (whole_crop_gate A64): unresolved, unwaived names on this crop. No-op without the field."""
     if not has_field(crop):
         return []
-    known = KNOWN if known is None else known
+    known = _default_known() if known is None else known
     ms, _n = scan_crop(crop)
     return [f"{m['crop']} {m['field']}: names '{m['name']}' ({m['kind']} {m['id']}), which resolves to no row of "
             f"its rootstock_options. Add the row (sourced) or rephrase the prose; a waiver is keyed on the exact "
@@ -279,7 +286,7 @@ def crop_violations(crop, known=None):
 
 def roster(data, known=None):
     """dict(carrying, inspected, fields, mentions, matched, unresolved, violations, stale, new_crops, lost_crops)."""
-    known = KNOWN if known is None else known
+    known = _default_known() if known is None else known
     crops = data.get("crops", []) if isinstance(data, dict) else []
     carrying = [c for c in crops if has_field(c)]
     inspected, nfields, mentions, V = 0, 0, [], []
@@ -310,7 +317,7 @@ def refusal(r):
 
 
 def stale_lines(stale, known=None):
-    known = KNOWN if known is None else known
+    known = _default_known() if known is None else known
     return [f"STALE waiver ({known[k]['ticket']}): {k[0]} {k[1]} '{k[2]}' no longer fires on that exact sentence. "
             f"Delete it from rootstock_prose_gate_known.py in the commit that retires it." for k in stale]
 

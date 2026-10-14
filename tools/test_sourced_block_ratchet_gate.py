@@ -898,6 +898,8 @@ class SoilPrepArmed(unittest.TestCase):
 
 AFBD = "afbd4113e94b8fc41776178c31e8e3743ec7eef1c11ed0f57e6cf6dfdd7dcd3e"   # housekeeping 60 Phase C post-state
 GLOSS = "3ccc25f194cf0b3808877546b160572ab7ac6a12dbc7dae891f37d43f21a717a"  # PLA-673 glossary post-state
+B2 = "aaf004a23eb52005962c399d9f2f779b98b6226dacba0f454dff4442c1324812"     # PLA-673 part B2 post-state
+PART_D = "5420479d85bb8b65be62fa459fd97b8ce12dfdf9d3951e455be52aadc7a98063"  # PLA-673 part D post-state
 
 
 class EraSwitchIsBoundToAHistoricalPostState(unittest.TestCase):
@@ -929,8 +931,9 @@ class EraSwitchIsBoundToAHistoricalPostState(unittest.TestCase):
     def _pumpkin(self):
         return [m for m in G.roster(self.data)[3] if "pumpkin|soil_prep|soil_prep_sources" in m]
 
-    def test_the_registry_is_exactly_the_two_replays(self):
-        self.assertEqual(set(G.ERA_POST_STATES), {AFBD, GLOSS})
+    def test_the_registry_is_exactly_the_four_replays(self):
+        # + B2 and part D (2026-10-14, PLA-625 citrus promote 1): their post-states predate that promote's closures.
+        self.assertEqual(set(G.ERA_POST_STATES), {AFBD, GLOSS, B2, PART_D})
 
     def test_unset_binds_nothing_and_uses_the_live_set(self):
         self.assertIsNone(G.bind_era(self.era))

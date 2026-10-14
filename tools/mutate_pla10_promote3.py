@@ -51,8 +51,9 @@ MUTATIONS = [
      "    (re.compile(r\"(?:apart|between|deep|long|away|in\\s+length|of\\s+vine)\\b\"), \"\"),",
      "", PRT, "test_vine_run_and_spacing_state_no_dimension"),
     # ---- T5: A62's mature_dimensions sibling block ---------------------------------------------------
-    ("t5_a62_not_named", SBR, "    \"mature_dimensions\": (\"mature_height_ft\", \"mature_spread_ft\"),\n}",
-     "}", SBT, "test_the_sibling_keys_are_not_UNNAMED"),
+    # anchor retargeted 2026-10-14: dead since fbe11bc (2026-10-06), when soil_prep was named AFTER mature_dimensions
+    ("t5_a62_not_named", SBR, "    \"mature_dimensions\": (\"mature_height_ft\", \"mature_spread_ft\"),\n",
+     "", SBT, "test_the_sibling_keys_are_not_UNNAMED"),
     ("t5_a62_flag_ignored", SBR, "        if name == \"mature_dimensions\" and not mature_dimensions_armed:",
      "        if name == \"mature_dimensions\":", SBT, "test_armed_a_height_with_no_sibling_FAILS_by_name"),
     ("t5_a62_always_armed", SBR, "        if name == \"mature_dimensions\" and not mature_dimensions_armed:",
@@ -207,7 +208,7 @@ MUTATIONS = [
      PRT, "test_REACH_A59_sibling_a_source_with_no_anchor"),
     ("g_a62_unarmed", PRM, "    v = SBR.roster(post, mature_dimensions_armed=True, known=SBR.KNOWN_AT_ARMING)[3]",
      "    v = SBR.roster(post, mature_dimensions_armed=False, known=SBR.KNOWN_AT_ARMING)[3]", PRT, "test_REACH_A62_armed_a_blank_sibling_source"),
-    ("g_a63_never_run", PRM, "    v = BH.roster(post)[4]", "    v = []", PRT, "test_REACH_A63_a_bare_host_sibling_anchor"),
+    ("g_a63_never_run", PRM, "    v = BH.roster(post, known=BH.KNOWN_AT_ARMING)[4]", "    v = []", PRT, "test_REACH_A63_a_bare_host_sibling_anchor"),
     ("g_numeric_sanity_dropped", PRM, "            v = NS.numeric_sanity_violations(c) + DR.display_readiness_violations(c)",
      "            v = DR.display_readiness_violations(c)", PRT, "test_numeric_sanity_runs_on_the_post_state"),
 ]

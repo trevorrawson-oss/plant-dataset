@@ -216,6 +216,68 @@ def test_the_seven_own_root_waivers_are_STALE_and_deleted():
     assert r["violations"] == []
 
 
+# ------------------------------------------------------------------ closed by content: kept by identity for the era
+# A waiver retired BY CONTENT (the prose changed) still fires on every post-state before that promote, so a LANDED
+# promote replaying one gates against the set live in its era (KNOWN_AT_ARMING = KNOWN + CLOSED), the A62 precedent
+# (e47e58a). The default follows the era switch A62 binds (whole_crop_gate / gate_all run A64 as subprocesses). The 7
+# own-root waivers are NOT closed: they were retired by a gate change and fire on no earlier state either. Measured RED
+# 2026-10-14: the full tree on 5603b28 failed 40 tests, grapefruit's sour orange pair among the replays' violations.
+P1_BASE = "59010fe6994b95eb52407fa60a6995eedefe5636bd6a52d2f960d4b08641cf68"   # PLA-625 citrus promote 1's base
+SOUR_ORANGE = {("grapefruit", "recommended_rootstock_note", "sour orange"),
+               ("grapefruit", "recommended_rootstock_note", "Sour orange")}
+
+
+@pytest.fixture(scope="module")
+def p1_base():
+    import promote_fixture
+    return json.loads(promote_fixture.pre_state(P1_BASE))
+
+
+@pytest.fixture
+def era(monkeypatch):
+    import sourced_block_ratchet_gate as SBR
+    monkeypatch.delenv(SBR.ERA_ENV, raising=False)
+    monkeypatch.setattr(SBR, "_ERA_BOUND", None)
+    return SBR
+
+
+def test_closed_is_the_sour_orange_pair_disjoint_and_the_arming_set_is_12():
+    closed = {(w["crop"], w["field"], w["name"]) for w in G._K.CLOSED}
+    assert closed == SOUR_ORANGE
+    assert not (set(G.KNOWN) & set(G.CLOSED))
+    assert set(G.KNOWN_AT_ARMING) == set(G.KNOWN) | set(G.CLOSED)
+    assert len(G.KNOWN_AT_ARMING) == 12
+    for w in G._K.CLOSED:
+        assert w["closed_by"].strip() and w["ticket"] == "PLA-612", w
+
+
+def test_on_promote_1s_base_the_live_set_flags_exactly_the_closed_pair(p1_base, era):
+    v = G.roster(p1_base)["violations"]
+    assert len(v) == 2 and all(x.startswith("grapefruit recommended_rootstock_note: names '") for x in v), v
+    assert {x.split("'")[1] for x in v} == {"sour orange", "Sour orange"}
+
+
+def test_on_promote_1s_base_the_era_set_flags_none(p1_base, era):
+    r = G.roster(p1_base, G.KNOWN_AT_ARMING)
+    assert r["violations"] == [] and r["stale"] == []
+
+
+def test_the_live_canonical_needs_no_era_set(era):
+    assert G.roster(DATA)["violations"] == []
+
+
+def test_the_default_follows_the_bound_era_switch(p1_base, era, monkeypatch):
+    monkeypatch.setenv(era.ERA_ENV, P1_BASE)
+    monkeypatch.setattr(era, "_ERA_BOUND", P1_BASE)
+    assert G.roster(p1_base)["violations"] == []
+
+
+def test_the_switch_set_but_never_bound_refuses(p1_base, era, monkeypatch):
+    monkeypatch.setenv(era.ERA_ENV, P1_BASE)
+    with pytest.raises(era.EraRefused):
+        G.roster(p1_base)
+
+
 def test_a_row_named_only_seedling_holds_apple_seedling():
     """apple's row is named just "seedling" (ROW_NAME_ALIASES): apple prose naming its seedling stock resolves there,
     and the same sentence on a crop without that row fails."""

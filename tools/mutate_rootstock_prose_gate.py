@@ -137,6 +137,17 @@ MUTATIONS = [
      '                            ("rootstock_prose_gate", _rpr["violations"], _rp.refusal(_rpr))):',
      '                            ("rootstock_prose_gate", [], None)):' + M,
      "test_gate_all_runs_the_roster_half_on_a_SHELL"),
+    # --- era waiver set (2026-10-14, PLA-625 citrus promote 1): a landed replay gates against KNOWN_AT_ARMING --------
+    ("era", "era_switch_ignored", GATE,
+     "    return KNOWN_AT_ARMING if _sbr.era_active() else KNOWN\n",
+     "    return KNOWN" + M + "\n", "test_the_default_follows_the_bound_era_switch"),
+    ("era", "closed_rejoin_the_live_set", GATE,
+     'KNOWN = {(w["crop"], w["field"], w["name"], w["sentence"]): w for w in _K.WAIVERS}\n',
+     'KNOWN = {(w["crop"], w["field"], w["name"], w["sentence"]): w for w in _K.WAIVERS + _K.CLOSED}' + M + "\n",
+     "test_closed_is_the_sour_orange_pair_disjoint_and_the_arming_set_is_12"),
+    ("era", "closed_dropped_from_the_era_set", GATE,
+     "KNOWN_AT_ARMING = {**KNOWN, **CLOSED}",
+     "KNOWN_AT_ARMING = dict(KNOWN)" + M, "test_on_promote_1s_base_the_era_set_flags_none"),
 ]
 
 

@@ -4,6 +4,24 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-10-14 -- PLA-625 PROMOTE 1 FOLLOW-UP: landed replays gate A63/A64 by era (tooling only; canonical stays `2f67359e`)
+
+The full tree on 5603b28 (promote 1) went RED, 40 problems, before any push. Cause: promote 1 retired waivers in THREE
+identity gates, and every landed promote replaying an earlier post-state still carries those six identities. A62 already had
+the era mechanism (CLOSED + KNOWN_AT_ARMING, e47e58a; era switch, B2); A63 and A64 had none.
+
+* **A63 / A64 era sets:** `bare_host_gate_known.CLOSED` (the two Flying Dragon rows) and `rootstock_prose_gate_known.CLOSED`
+  (grapefruit's two sour orange waivers, retired by content) keep the closed identities; each gate gains `KNOWN_AT_ARMING` and a
+  `known=` default that follows the ONE era switch (`sourced_block_ratchet_gate.era_active`, bound by whole_crop_gate / gate_all).
+  Live gating is unchanged (379 / 10).
+* **Registry:** ERA_POST_STATES + `aaf004a2` (PLA-673 B2) and `5420479d` (PLA-673 part D). Their promotes set the switch to their
+  post-state's sha on the whole_crop_gate and gate_all runs (the glossary promote's precedent); PLA-10 promotes 1-3 pass
+  `known=BH.KNOWN_AT_ARMING` to A63 in-process.
+* **Self-pathed leads:** `bare_host_self_pathed_known.json` 321 -> 327: orange-navel's Carrizo and Swingle now cite ucr_citrus
+  pathed, so six of its other bare ucr_citrus citations became self-pathed LEADS (all co-cited; SOLE split unchanged at 161).
+* **Harness:** mutate_pla10_promote3's `t5_a62_not_named` anchor was dead since fbe11bc (soil_prep named after
+  mature_dimensions); retargeted, 80/80.
+
 ## 2026-10-13 -- PLA-625 CITRUS PROMOTE 1 LANDED (`59010fe6` -> `2f67359e`; orange-navel + grapefruit rootstock rows)
 
 ONE promote (`tools/promote_pla625_p1.py`, new, derived from promote_pla673_d by copy; stage `tools/staging/pla625_p1/`, built

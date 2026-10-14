@@ -123,10 +123,10 @@ LIVE_PINS = {
         ('test_bare_host_gate.py::LiveCanonical::test_the_self_pathed_blind_spot_is_real_and_closed', 'equality', 'content', "on the replayed arming canonical: ('grapefruit','rootstock_options[2]','ucr_citrus') in self_pathed; orange-navel not; orange-navel's row SOLE", 136),
     ],
     'test_bare_host_scan.py': [
-        ('test_bare_host_scan.py::test_self_pathed_population_at_this_canonical', 'ceiling (red on growth)', 'population', 'live self-pathed rows - known == {} (321 identities in bare_host_self_pathed_known.json)', 131),
-        ('test_bare_host_scan.py::test_self_pathed_sole_split_is_pinned_by_identity', 'equality', 'population', 'SOLE status of every present pinned row == sole_identities (161)', 145),
+        ('test_bare_host_scan.py::test_self_pathed_population_at_this_canonical', 'ceiling (red on growth)', 'population', 'live self-pathed rows - known == {} (327 identities in bare_host_self_pathed_known.json: 321 at 00dda31c + 6 orange-navel leads at 2f67359e)', 146),
+        ('test_bare_host_scan.py::test_self_pathed_sole_split_is_pinned_by_identity', 'equality', 'population', 'SOLE status of every present pinned row == sole_identities (161)', 160),
         ('test_bare_host_scan.py::test_lemon_already_resolves_clemson_hgic_to_one_document', 'equality', 'population', "len(pathed['clemson_hgic']) == 14; urls == {CLEMSON_COLD}", 80),
-        ('test_bare_host_scan.py::test_self_pathed_pin_is_the_measured_population', 'equality', 'sha', "measured_on.startswith('00dda31c'); count == 321; decisions == 80; crops == 37", 118),
+        ('test_bare_host_scan.py::test_self_pathed_pin_is_the_measured_population', 'equality', 'sha', "measured_on.startswith('00dda31c'); count == 327; decisions == 81; crops == 38", 131),
         ('test_bare_host_scan.py::test_the_hunt_28_node_is_still_bare_and_still_masked', 'equality', 'content', "exactly one bare row for HUNT_28, url == 'https://hgic.clemson.edu', is_sole False", 67),
     ],
     'test_calendar_basis_gate.py': [

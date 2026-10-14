@@ -425,7 +425,9 @@ def check_post(pre, post, stage, ev, evidence_dir):
     v = SBR.roster(post, mature_dimensions_armed=False, known=SBR.KNOWN_AT_ARMING)[3]
     if v:
         refuse(f"A62 on the post-state: {v[:5]}")
-    v = BH.roster(post)[4]
+    # known=BH.KNOWN_AT_ARMING (2026-10-14, PLA-625 citrus promote 1): this post-state predates that promote's repoint
+    # of the two Flying Dragon rows, so it gates against the A63 set live in its era (the A62 precedent above).
+    v = BH.roster(post, known=BH.KNOWN_AT_ARMING)[4]
     if v:
         refuse(f"A63 on the post-state: {v[:5]}")
     for c in post["crops"]:

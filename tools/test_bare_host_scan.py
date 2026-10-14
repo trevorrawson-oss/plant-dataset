@@ -94,7 +94,10 @@ def test_SELF_PATHED_finds_hunt_28(data, crops):
 # count failure reads the same at 316 and at 321, so it rode four promotes unread. Now a NEW row
 # fails by NAME, and a row that leaves is reported, never failed (a lead that disappears is
 # progress). The six uada_ext rows are IN the pinned set as unadjudicated LEADS for PLA-625:
-# they were not re-pinned away, they were named.
+# they were not re-pinned away, they were named. The same holds for the six orange-navel ucr_citrus rows that entered
+# at 2f67359e (PLA-625 citrus promote 1, 2026-10-13): Carrizo and Swingle now cite ucr_citrus PATHED (crc2863 /
+# crc3771), which makes six of orange-navel's other bare ucr_citrus citations self-pathed. All six are co-cited
+# (masked), so the SOLE split is unchanged; they are LEADS for PLA-544, named, not adjudicated.
 SELF_PATHED_KNOWN_FILE = os.path.join(REPO, 'tools', 'bare_host_self_pathed_known.json')
 SIX_UADA = {
     ('mulberry', 'regions.mid_south.plantings[0]', 'uada_ext'),
@@ -103,6 +106,14 @@ SIX_UADA = {
     ('mulberry', 'regions.mid_south.plantings[0].harvest_start[0]', 'uada_ext'),
     ('persimmon', 'regions.mid_south.plantings[0]', 'uada_ext'),
     ('persimmon', 'regions.mid_south.plantings[0].bloom[0]', 'uada_ext'),
+}
+SIX_ORANGE_NAVEL = {
+    ('orange-navel', 'diseases[1]', 'ucr_citrus'),
+    ('orange-navel', 'diseases[5]', 'ucr_citrus'),
+    ('orange-navel', 'failure_diagnostics[0]', 'ucr_citrus'),
+    ('orange-navel', 'failure_diagnostics[2]', 'ucr_citrus'),
+    ('orange-navel', 'pests[4]', 'ucr_citrus'),
+    ('orange-navel', 'varieties', 'ucr_citrus'),
 }
 
 
@@ -113,14 +124,18 @@ def _self_pathed_known():
 
 
 def test_self_pathed_pin_is_the_measured_population():
-    """The pin's own units, as literals: 321 CITATIONS / 161 SOLE / 80 DECISIONS / 37 CROPS."""
+    """The pin's own units, as literals: 327 CITATIONS / 161 SOLE / 81 DECISIONS / 38 CROPS (321 / 161 / 80 / 37 at
+    00dda31c, + the six orange-navel leads at 2f67359e)."""
     doc, known = _self_pathed_known()
     assert doc['measured_on'].startswith('00dda31c')
-    assert len(known) == doc['count'] == 321
+    assert len(known) == doc['count'] == 327
     assert SIX_UADA <= known, 'the six uada_ext leads must be named in the pin, not dropped'
+    assert SIX_ORANGE_NAVEL <= known, 'the six orange-navel leads must be named in the pin, not dropped'
+    sole_known = {tuple(i.split('|')) for i in doc['sole_identities']}
+    assert not (SIX_ORANGE_NAVEL & sole_known), 'the six orange-navel leads entered co-cited (masked)'
     decisions = {(c, region_of(p), s) for c, p, s in known}
-    assert len(decisions) == 80
-    assert len({c for c, _p, _s in known}) == 37
+    assert len(decisions) == 81
+    assert len({c for c, _p, _s in known}) == 38
 
 
 def test_self_pathed_population_at_this_canonical(data):

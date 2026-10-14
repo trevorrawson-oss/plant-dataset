@@ -206,6 +206,9 @@ ERA_ENV = "SBR_KNOWN_AT_ARMING"
 ERA_POST_STATES = {   # post-state sha256 -> the landed promote whose replay gates it
     "3ccc25f194cf0b3808877546b160572ab7ac6a12dbc7dae891f37d43f21a717a": "PLA-673 glossary promote (fbe11bc)",
     "afbd4113e94b8fc41776178c31e8e3743ec7eef1c11ed0f57e6cf6dfdd7dcd3e": "housekeeping 60 Phase C promote (367c702)",
+    # + 2026-10-14 (PLA-625 citrus promote 1 closed A62/A63/A64 identities these post-states still carry)
+    "aaf004a23eb52005962c399d9f2f779b98b6226dacba0f454dff4442c1324812": "PLA-673 part B2 promote (6bce088)",
+    "5420479d85bb8b65be62fa459fd97b8ce12dfdf9d3951e455be52aadc7a98063": "PLA-673 part D promote (86d6ed6)",
 }
 CANON = os.path.join(os.path.dirname(HERE), "crops_data_final.json")
 _ERA_BOUND = None
@@ -241,13 +244,20 @@ def bind_era(path, canonical=None):
     return v
 
 
-def _default_known():
+def era_active():
+    """True when the era switch is set AND bound to the gated file; raises EraRefused when it is set but unbound.
+    One switch for every identity-waiver gate (2026-10-14, PLA-625 citrus promote 1): A63 (bare_host_gate) and A64
+    (rootstock_prose_gate) default to their own KNOWN_AT_ARMING through this, so a replay binds once, here."""
     v = os.environ.get(ERA_ENV)
     if v is None:
-        return KNOWN
+        return False
     if v != _ERA_BOUND:
         raise EraRefused(f"{ERA_ENV} is set but not bound to the gated file (bind_era was not called, or refused)")
-    return KNOWN_AT_ARMING
+    return True
+
+
+def _default_known():
+    return KNOWN_AT_ARMING if era_active() else KNOWN
 
 
 def certified(crop):

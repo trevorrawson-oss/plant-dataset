@@ -320,17 +320,23 @@ def gate_post(post, slugs):
         p = os.path.join(td, "post.json")
         with open(p, "wb") as f:
             f.write(serialize(post))
+        # The ERA SET (added 2026-10-14, PLA-625 citrus promote 1): this post-state predates that promote's closures
+        # (A62 rootstock notes, A63 Flying Dragon bare hosts, A64 sour orange), so it is checked against the waiver sets
+        # live in its era (sourced_block_ratchet_gate.ERA_ENV, set to the gated file's own sha256: the gates accept only
+        # a registered historical post-state). The PLA-673 glossary promote's precedent.
+        era = dict(os.environ, SBR_KNOWN_AT_ARMING=sha256_bytes(serialize(post)))
         passed = 0
         for slug in sorted(slugs):
             r = subprocess.run([sys.executable, os.path.join(HERE, "whole_crop_gate.py"), slug, p],
-                               capture_output=True, text=True)
+                               capture_output=True, text=True, env=era)
             if r.returncode != 0:
                 refuse(f"whole_crop_gate {slug} rc={r.returncode}: {(r.stdout + r.stderr)[-400:]}")
             # count the gate's OWN verdict, never the input set: a skipped gate must not read as a gated crop
             passed += r.stdout.count("\nGATE: PASS")
         if passed != len(slugs):
             refuse(f"whole_crop_gate printed {passed} PASS verdicts for {len(slugs)} crops")
-        r = subprocess.run([sys.executable, os.path.join(HERE, "gate_all.py"), p], capture_output=True, text=True)
+        r = subprocess.run([sys.executable, os.path.join(HERE, "gate_all.py"), p], capture_output=True, text=True,
+                           env=era)
     out = r.stdout + r.stderr
     if r.returncode != 0:
         refuse(f"gate_all rc={r.returncode}: {out[-600:]}")

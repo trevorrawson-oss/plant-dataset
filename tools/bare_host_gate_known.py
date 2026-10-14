@@ -5,6 +5,8 @@ SOLE bare-host citations on certified crops at arming, by identity crop|path|anc
 
 SHRUNK 2026-10-13 (PLA-625 citrus promote 1, 59010fe6 -> 2f67359e): 381 -> 379. orange-navel and grapefruit
 rootstock_options[2] (Flying Dragon) drop ucr_citrus (ruling D), retiring their two bare citrusvariety.ucr.edu anchors.
+Both moved to CLOSED (2026-10-14): every earlier post-state still carries them, so a landed replay gates against
+KNOWN_AT_ARMING (the full tree on 5603b28 failed the landed replays until it did).
 
 Kept as a .py module, not JSON, because every harness that copies tools/*.py into a scratch
 dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_gate at import
@@ -14,6 +16,12 @@ TICKET = 'PLA-544'
 MEASURED_ON = '00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e'
 MEASURED_DATE = '2026-09-30'
 COUNT = 379
+# Closed by a repoint, kept by identity so a LANDED promote can replay against the set live in its era
+# (bare_host_gate.KNOWN_AT_ARMING). Never re-waived: a closed identity going bare again fails A63.
+CLOSED = (
+    "grapefruit|rootstock_options[2]|anchoring_urls|ucr_citrus",    # PLA-625 citrus promote 1, 59010fe6 -> 2f67359e
+    "orange-navel|rootstock_options[2]|anchoring_urls|ucr_citrus",  # PLA-625 citrus promote 1, 59010fe6 -> 2f67359e
+)
 IDENTITIES = (
     "acorn-squash|regions.ca_desert.plantings[0]|anchoring_urls|uc_mg",
     "acorn-squash|regions.ca_desert.plantings[0]|anchoring_urls|ucanr_ext",

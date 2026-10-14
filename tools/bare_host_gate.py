@@ -51,6 +51,15 @@ import bare_host_gate_known as _K  # noqa: E402  -- the measured waiver set, a .
 _KNOWN_DOC = {"ticket": _K.TICKET, "measured_on": _K.MEASURED_ON, "count": _K.COUNT,
               "identities": list(_K.IDENTITIES)}
 KNOWN = frozenset(_K.IDENTITIES)
+# Closed by a repoint, kept by identity so a LANDED promote can replay against the set live in its era (the A62
+# precedent, e47e58a). Live gating always uses KNOWN; the default follows the A62 era switch (era_active).
+CLOSED = tuple(_K.CLOSED)
+KNOWN_AT_ARMING = KNOWN | frozenset(CLOSED)
+
+
+def _default_known():
+    import sourced_block_ratchet_gate as _sbr
+    return KNOWN_AT_ARMING if _sbr.era_active() else KNOWN
 
 
 def certified(crop):
@@ -110,19 +119,21 @@ def scan_crop(crop):
     return rows, seen
 
 
-def crop_violations(crop):
+def crop_violations(crop, known=None):
     """Per-crop half (whole_crop_gate A63). No-op off certified: the waivers cover certified only."""
     if not certified(crop):
         return []
+    known = _default_known() if known is None else known
     rows, _ = scan_crop(crop)
     return [f"NEW sole bare-host citation {ident} -> {url}: the node's ONLY citation is a domain "
             f"root, which cannot support a crop-specific claim. Anchor it at the document, or "
             f"co-cite a document (PLA-544)."
-            for ident, sole, url in rows if sole and ident not in KNOWN]
+            for ident, sole, url in rows if sole and ident not in known]
 
 
-def roster(data):
+def roster(data, known=None):
     """(certified_count, inspected, sole_live, cocited_live, violations, stale)."""
+    known = _default_known() if known is None else known
     cert = [c for c in data.get("crops", []) if certified(c)]
     inspected, sole, co, V = 0, [], [], []
     for c in cert:
@@ -130,8 +141,8 @@ def roster(data):
         inspected += n
         sole.extend(i for i, s, _u in rows if s)
         co.extend(i for i, s, _u in rows if not s)
-        V.extend(crop_violations(c))
-    stale = sorted(KNOWN - set(sole))
+        V.extend(crop_violations(c, known))
+    stale = sorted(known - set(sole))
     return len(cert), inspected, sorted(sole), sorted(co), V, stale
 
 

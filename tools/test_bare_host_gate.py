@@ -277,6 +277,65 @@ class RefusesAnEmptyPopulation(unittest.TestCase):
         self.assertIsNone(G.refusal(121, G.MIN_INSPECTED))
 
 
+P1_BASE = "59010fe6994b95eb52407fa60a6995eedefe5636bd6a52d2f960d4b08641cf68"   # PLA-625 citrus promote 1's base
+
+
+def _idents(vs):
+    """The identity each violation message names ('NEW sole bare-host citation <ident> -> <url>: ...')."""
+    return {m.split(" -> ")[0].rsplit(" ", 1)[1] for m in vs}
+
+
+class ClosedWaiversAndTheEra(unittest.TestCase):
+    """A closed waiver is KEPT BY IDENTITY (CLOSED), so a LANDED promote replaying an earlier post-state gates against
+    the set live in its era (KNOWN_AT_ARMING = KNOWN | CLOSED), the A62 precedent (e47e58a). Live gating uses KNOWN.
+    The default follows the era switch A62 binds (sourced_block_ratchet_gate.bind_era): whole_crop_gate and gate_all
+    run A63 as subprocesses, where no `known=` argument reaches it. Measured RED 2026-10-14: the full tree on 5603b28
+    failed 40 tests, the landed replays among them flagging exactly the two Flying Dragon rows."""
+
+    @classmethod
+    def setUpClass(cls):
+        import sourced_block_ratchet_gate as SBR
+        cls.SBR = SBR
+        cls.PRE = json.loads(promote_fixture.pre_state(P1_BASE))
+
+    def setUp(self):
+        self._env = os.environ.pop(self.SBR.ERA_ENV, None)
+        self._bound = self.SBR._ERA_BOUND
+        self.SBR._ERA_BOUND = None
+
+    def tearDown(self):
+        os.environ.pop(self.SBR.ERA_ENV, None)
+        if self._env is not None:
+            os.environ[self.SBR.ERA_ENV] = self._env
+        self.SBR._ERA_BOUND = self._bound
+
+    def test_closed_is_the_flying_dragon_pair_disjoint_and_the_arming_set_is_381(self):
+        self.assertEqual(set(G.CLOSED), FLYING_DRAGON)
+        self.assertFalse(set(G.CLOSED) & G.KNOWN)
+        self.assertEqual(G.KNOWN_AT_ARMING, G.KNOWN | set(G.CLOSED))
+        self.assertEqual(len(G.KNOWN_AT_ARMING), 381)
+
+    def test_on_promote_1s_base_the_live_set_flags_exactly_the_closed_pair(self):
+        self.assertEqual(_idents(G.roster(self.PRE)[4]), FLYING_DRAGON)
+
+    def test_on_promote_1s_base_the_era_set_flags_none(self):
+        self.assertEqual(G.roster(self.PRE, known=G.KNOWN_AT_ARMING)[4], [])
+        self.assertEqual(G.crop_violations(by(self.PRE)["grapefruit"], known=G.KNOWN_AT_ARMING), [])
+
+    def test_the_live_canonical_needs_no_era_set(self):
+        self.assertEqual(G.roster(fresh())[4], [])
+
+    def test_the_default_follows_the_bound_era_switch(self):
+        os.environ[self.SBR.ERA_ENV] = P1_BASE
+        self.SBR._ERA_BOUND = P1_BASE
+        self.assertEqual(G.roster(self.PRE)[4], [])
+
+    def test_the_switch_set_but_never_bound_refuses(self):
+        os.environ[self.SBR.ERA_ENV] = P1_BASE
+        with self.assertRaises(self.SBR.EraRefused):
+            G.roster(self.PRE)
+
+
 class CLI(unittest.TestCase):
     def _run(self, path):
         r = subprocess.run([sys.executable, os.path.join(HERE, "bare_host_gate.py"), path],
