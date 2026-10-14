@@ -3,6 +3,9 @@
 Measured 2026-09-30 on canonical 00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e.
 SOLE bare-host citations on certified crops at arming, by identity crop|path|anchor_key|source_id. May shrink, never grow. Remove an identity in the commit that repoints or co-cites it.
 
+SHRUNK 2026-10-13 (PLA-625 citrus promote 1, 59010fe6 -> 2f67359e): 381 -> 379. orange-navel and grapefruit
+rootstock_options[2] (Flying Dragon) drop ucr_citrus (ruling D), retiring their two bare citrusvariety.ucr.edu anchors.
+
 Kept as a .py module, not JSON, because every harness that copies tools/*.py into a scratch
 dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_gate at import
 (measured 2026-09-30: both harnesses' test_valid_cell_passes went red on a .json version).
@@ -10,7 +13,7 @@ dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_g
 TICKET = 'PLA-544'
 MEASURED_ON = '00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e'
 MEASURED_DATE = '2026-09-30'
-COUNT = 381
+COUNT = 379
 IDENTITIES = (
     "acorn-squash|regions.ca_desert.plantings[0]|anchoring_urls|uc_mg",
     "acorn-squash|regions.ca_desert.plantings[0]|anchoring_urls|ucanr_ext",
@@ -126,7 +129,6 @@ IDENTITIES = (
     "grapefruit|regions.ca_south_coast.resolved_by_zone.10|anchoring_urls|ucr_citrus",
     "grapefruit|regions.ca_south_coast.resolved_by_zone.11|anchoring_urls|ucr_citrus",
     "grapefruit|regions.ca_south_coast.resolved_by_zone.9|anchoring_urls|ucr_citrus",
-    "grapefruit|rootstock_options[2]|anchoring_urls|ucr_citrus",
     "jalapeno|regions.fl_peninsula.resolved_by_zone.10.heat_pause|anchoring_urls|ufifas_ext",
     "jalapeno|regions.fl_peninsula.resolved_by_zone.11.heat_pause|anchoring_urls|ufifas_ext",
     "jalapeno|regions.se_gulf.resolved_by_zone.10.heat_pause|anchoring_urls|uga_ext",
@@ -274,7 +276,6 @@ IDENTITIES = (
     "okra|regions.warm_arid.plantings[0]|anchoring_urls|tamu_agrilife",
     "okra|regions.warm_arid.resolved_by_zone.8|anchoring_urls|nmsu_ext",
     "okra|regions.warm_arid.resolved_by_zone.8|anchoring_urls|tamu_agrilife",
-    "orange-navel|rootstock_options[2]|anchoring_urls|ucr_citrus",
     "oregano|regions.mid_south.plantings[0]|anchoring_urls|uada_ext",
     "oregano|regions.mid_south.resolved_by_zone.7|anchoring_urls|uada_ext",
     "oregano|regions.mid_south.resolved_by_zone.8|anchoring_urls|uada_ext",

@@ -44,7 +44,8 @@ FAMILY_COUNTS = {
     "pollination": 9, "rotation": 8, "verification_status.field_additions[]": 3, "thinning": 3,
     "soil": 2, "storage": 2, "yield_expectations": 2, "ph": 2,
     "soil_prep": 35,   # armed 2026-10-06 (PLA-673 B2): the 35 null-citation crops, measured on aaf004a2
-    "recommended_rootstock_note": 19,  # armed with citrus promote 1 (PLA-625 stop 2 staging): 19 null-citation crops
+    "recommended_rootstock_note": 17,  # armed 2026-10-13 (PLA-625 housekeeping 59010fe6): 19 null-citation crops;
+                                       # citrus promote 1 (2f67359e) cited orange-navel and grapefruit (-2)
 }
 
 
@@ -99,10 +100,11 @@ class PinsAreTheMeasurement(unittest.TestCase):
         # 2629 after PLA-666 cited raspberry|start_method (350eda38); 2664 after PLA-673 B2 ARMED soil_prep with its
         # 35 measured null-citation crops (aaf004a2): growth by arming a newly named block type, ruled; the same
         # promote cited parsnip|growth_stages[id=established] (-1): 2629 + 35 - 1 = 2663; 2682 after citrus promote 1
-        # ARMED recommended_rootstock_note with its 19 measured null-citation certified crops (PLA-625 stop 2 staging)
-        self.assertEqual(G._KNOWN_DOC["count"], 2682)
-        self.assertEqual(len(G.KNOWN), 2682)
-        self.assertEqual(len(G._KNOWN_DOC["identities"]), 2682, "duplicate identities")
+        # ARMED recommended_rootstock_note with its 19 measured null-citation certified crops (PLA-625 housekeeping,
+        # 59010fe6); 2680 after citrus promote 1 cited orange-navel's and grapefruit's notes (2f67359e, -2)
+        self.assertEqual(G._KNOWN_DOC["count"], 2680)
+        self.assertEqual(len(G.KNOWN), 2680)
+        self.assertEqual(len(G._KNOWN_DOC["identities"]), 2680, "duplicate identities")
 
     def test_the_named_list_is_what_was_ruled(self):
         self.assertEqual(set(G.DICT_BLOCKS), {
@@ -315,16 +317,18 @@ class RecommendedRootstockNoteSibling(unittest.TestCase):
         self.assertFalse(any("|recommended_rootstock_note|" in i for c in _CANON["crops"] if G.certified(c)
                              for i, _ok in G.blocks(c, recommended_rootstock_note_armed=False)))
 
-    def test_armed_the_19_are_exactly_the_waived_notes(self):
-        """The pair lands null on the 21 crops carrying the note; the 19 certified with an authored note are the
-        waiver set, and the two shells (avocado, olive: note null) carry no block."""
+    def test_armed_the_17_are_exactly_the_waived_notes(self):
+        """The pair landed null on the 21 crops carrying the note; the 19 certified with an authored note were the
+        waiver set, and the two shells (avocado, olive: note null) carry no block. Citrus promote 1 cited
+        orange-navel's and grapefruit's notes, so 17 stay waived (PLA-608) and those two are CLOSED."""
         waived = {i.split("|")[0] for i in G.KNOWN if "|recommended_rootstock_note|" in i}
         authored = {c["slug"] for c in _CANON["crops"] if G.certified(c)
                     and isinstance(c.get("recommended_rootstock_note"), str) and c["recommended_rootstock_note"].strip()}
         live = {i.split("|")[0] for c in _CANON["crops"] if G.certified(c)
                 for i in G.uncited(c) if "|recommended_rootstock_note|" in i}
-        self.assertEqual(len(waived), 19)
+        self.assertEqual(len(waived), 17)
         self.assertEqual(waived, authored & live)
+        self.assertEqual(authored - live, {"orange-navel", "grapefruit"})
         self.assertEqual(live - waived, set())
 
     def test_armed_a_new_uncited_note_fails_by_name(self):
@@ -346,6 +350,9 @@ CLOSED_SOIL_PREP = {  # armed 2026-10-06 (PLA-673 B2); cited before arming, so u
     "butternut-squash|soil_prep|soil_prep_sources", "acorn-squash|soil_prep|soil_prep_sources",
     "spaghetti-squash|soil_prep|soil_prep_sources"}
 CLOSED_2026_10_06 = {"parsnip|growth_stages[id=established]|sources"}  # cited by PLA-673 B2 (3ccc25f1 -> aaf004a2)
+CLOSED_NOTES = {  # armed 2026-10-13 (PLA-625 housekeeping 59010fe6); cited by citrus promote 1 (59010fe6 -> 2f67359e)
+    "orange-navel|recommended_rootstock_note|recommended_rootstock_note_sources",
+    "grapefruit|recommended_rootstock_note|recommended_rootstock_note_sources"}
 
 
 class ClosedWaivers(unittest.TestCase):
@@ -354,19 +361,20 @@ class ClosedWaivers(unittest.TestCase):
     tests when the live set shrank). Each landed promote checks against the set live in its era, KNOWN_AT_ARMING."""
 
     def test_arming_set_is_the_live_set_plus_the_closed(self):
-        self.assertEqual(set(G.CLOSED), CLOSED_2026_10_04 | CLOSED_2026_10_05 | CLOSED_SOIL_PREP | CLOSED_2026_10_06)
+        self.assertEqual(set(G.CLOSED), CLOSED_2026_10_04 | CLOSED_2026_10_05 | CLOSED_SOIL_PREP | CLOSED_2026_10_06
+                         | CLOSED_NOTES)
         self.assertEqual(G.KNOWN & set(G.CLOSED), frozenset())
         self.assertEqual(G.KNOWN_AT_ARMING, G.KNOWN | set(G.CLOSED))
-        self.assertEqual(len(G.KNOWN_AT_ARMING), 2693)  # 2682 live + 11 closed (2674 before the 19 armed notes)
+        self.assertEqual(len(G.KNOWN_AT_ARMING), 2693)  # 2680 live + 13 closed (2674 before the 19 armed notes)
 
     def test_an_era_post_state_flags_exactly_the_closed_under_the_live_set(self):
         import promote_fixture
         pre = json.loads(promote_fixture.pre_state(
             "b331e5f2c99378526c3ac8f2f870232953b318c994b7dc3d8c54938f2b62c38d"))
         live_v = G.roster(pre, mature_dimensions_armed=True)[3]
-        # b331e5f2 predates every closure (and the soil_prep citations), so the live set flags all ten there
+        # b331e5f2 predates every closure (and the soil_prep and note citations), so the live set flags all 13 there
         self.assertEqual({v.split()[3].rstrip(":") for v in live_v},
-                         CLOSED_2026_10_04 | CLOSED_2026_10_05 | CLOSED_SOIL_PREP | CLOSED_2026_10_06)
+                         CLOSED_2026_10_04 | CLOSED_2026_10_05 | CLOSED_SOIL_PREP | CLOSED_2026_10_06 | CLOSED_NOTES)
         self.assertEqual(G.roster(pre, mature_dimensions_armed=True, known=G.KNOWN_AT_ARMING)[3], [])
 
     def test_the_live_canonical_needs_no_era_set(self):

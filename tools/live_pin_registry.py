@@ -116,11 +116,11 @@ LIVE_PINS = {
         ('module-level', 'floor', 'population', 'len(_annuals) >= 10', 243),
     ],
     'test_bare_host_gate.py': [
-        ('test_bare_host_gate.py::LiveCanonical::test_population_and_verdict', 'equality', 'population', 'set(sole) == set(G.KNOWN) (381 waived SOLE identities)', 89),
+        ('test_bare_host_gate.py::LiveCanonical::test_population_and_verdict', 'equality', 'population', 'set(sole) == set(G.KNOWN) (379 waived SOLE identities: 381 at arming, the two Flying Dragon rows closed by PLA-625 citrus promote 1)', 108),
         ('test_bare_host_gate.py::LiveCanonical::test_population_and_verdict', 'floor', 'population', 'insp >= G.MIN_INSPECTED (28000, pinned at :75)', 87),
-        ('test_bare_host_gate.py::PinsAreTheMeasurement::test_waiver_file_is_the_measured_population', 'equality', 'sha', "_KNOWN_DOC['measured_on'] == SHA (00dda31c..); count == 381", 70),
-        ('test_bare_host_gate.py::LiveCanonical::test_the_named_examples', 'equality', 'content', "Flying Dragon rows SOLE; lemon TAMU rows co-cited; grapefruit/orange-navel rootstock_options[2] sources == ['ucr_citrus'] at UCR url", 96),
-        ('test_bare_host_gate.py::LiveCanonical::test_the_self_pathed_blind_spot_is_real_and_closed', 'equality', 'content', "('grapefruit','rootstock_options[2]','ucr_citrus') in self_pathed; orange-navel not", 107),
+        ('test_bare_host_gate.py::PinsAreTheMeasurement::test_waiver_file_is_the_measured_population', 'equality', 'sha', "_KNOWN_DOC['measured_on'] == SHA (00dda31c..); count == 379", 90),
+        ('test_bare_host_gate.py::LiveCanonical::test_the_named_examples', 'equality', 'content', 'Flying Dragon rows SOLE on the arming canonical (replayed 00dda31c) and closed live (PLA-625 citrus promote 1); lemon TAMU rows co-cited; RATCHET_ROW (grapefruit ca_interior zone 8 ucr_citrus) SOLE live', 116),
+        ('test_bare_host_gate.py::LiveCanonical::test_the_self_pathed_blind_spot_is_real_and_closed', 'equality', 'content', "on the replayed arming canonical: ('grapefruit','rootstock_options[2]','ucr_citrus') in self_pathed; orange-navel not; orange-navel's row SOLE", 136),
     ],
     'test_bare_host_scan.py': [
         ('test_bare_host_scan.py::test_self_pathed_population_at_this_canonical', 'ceiling (red on growth)', 'population', 'live self-pathed rows - known == {} (321 identities in bare_host_self_pathed_known.json)', 131),
@@ -189,7 +189,7 @@ LIVE_PINS = {
         ('test_pla220_borderline_frame.py::test_coverage_is_reported_not_silently_dropped', 'floor', 'population', 'totals.sources_uncovered_total > 0', 199),
     ],
     'test_problem_id_collision_gate.py': [
-        ('test_problem_id_collision_gate.py::Preflight::test_canonical_is_the_pinned_sha', 'equality', 'sha', 'shasum(CANON) == PINNED_SHA (b331e5f2..)', 174),
+        ('test_problem_id_collision_gate.py::Preflight::test_canonical_is_the_pinned_sha', 'equality', 'sha', 'shasum(CANON) == PINNED_SHA (2f67359e..)', 195),
         ('test_problem_id_collision_gate.py::AuditFixture::test_audit_output_is_exactly_pinned', 'equality', 'population', 'findings == 36, actionable == 12, registered == 24 (+12 named registered pairs)', 339),
         ('test_problem_id_collision_gate.py::AuditFixture::test_the_six_merged_decisions_are_resolved_for_the_right_reason / test_the_two_scoped... / test_the_celery_split... / test_the_nine_known_good... / test_batch24_minted_the_ninth_pair', 'equality', 'content', 'named ids absent/present in live; named pairs flagged-then-registered', 248),
     ],
@@ -212,12 +212,12 @@ LIVE_PINS = {
         ('module-level', 'equality', 'population', 'len(ud) == 6 (the ruled utah_dixie cucurbit hits)', 143),
     ],
     'test_sourced_block_ratchet_gate.py': [
-        ('test_sourced_block_ratchet_gate.py::LiveCanonical::test_live_uncited_equals_the_waiver_set_exactly', 'equality', 'population', 'set(live uncited) == set(G.KNOWN) (2682: 2634 at arming, +35 soil_prep, +19 recommended_rootstock_note, -6 closed)', 245),
+        ('test_sourced_block_ratchet_gate.py::LiveCanonical::test_live_uncited_equals_the_waiver_set_exactly', 'equality', 'population', 'set(live uncited) == set(G.KNOWN) (2680: 2634 at arming, +35 soil_prep, +19 recommended_rootstock_note, -8 closed by citation)', 398),
         ('test_sourced_block_ratchet_gate.py::LiveCanonical::test_inspected_population_and_verdict', 'floor', 'population', 'inspected >= G.MIN_INSPECTED (6500, pinned :128); stale == []', 239),
         ('test_sourced_block_ratchet_gate.py::PotSizeSubRule::test_live_pot_population_is_the_known_four', 'equality', 'population', "roster(_CANON)[5] == ['dry-bean','grapefruit','green-beans-bush','orange-navel']", 568),
         ('test_sourced_block_ratchet_gate.py::MatureDimensionsSibling::test_armed_the_live_canonical_cites_every_authored_height', 'floor', 'population', 'len(want) >= 59; cited == want', 212),
         ('test_sourced_block_ratchet_gate.py::LiveCanonical::test_the_tickets_98_slot_present_blocks_are_inside_the_population', 'ceiling (red on growth)', 'population', 'len(slots) <= 98', 269),
-        ('test_sourced_block_ratchet_gate.py::PinsAreTheMeasurement::test_waiver_file_is_the_measured_population', 'equality', 'sha', "_KNOWN_DOC['measured_on'] == SHA (00dda31c..); count == 2682", 101),
+        ('test_sourced_block_ratchet_gate.py::PinsAreTheMeasurement::test_waiver_file_is_the_measured_population', 'equality', 'sha', "_KNOWN_DOC['measured_on'] == SHA (00dda31c..); count == 2680", 105),
         ('test_sourced_block_ratchet_gate.py::LiveCanonical::test_per_family_counts / test_every_certified_crop_has_at_least_one_waived_block', 'equality', 'population', 'family counts of KNOWN == FAMILY_COUNTS; crops in KNOWN == 121', 251),
         ('test_sourced_block_ratchet_gate.py::MatureDimensionsSibling::setUp', 'equality', 'content', 'carrot mature_height_ft and mature_spread_ft are None', 149),
         # PLA-608 / PLA-625 stop 1 (2026-10-09): the rootstock-note pair is NAMED, unarmed until citrus promote 1 writes it.
@@ -229,19 +229,20 @@ LIVE_PINS = {
     # 5420479d. A promote that adds, removes or rewords a rootstock name in those fields, or adds/removes a row, moves these:
     # re-measure with the mentions read, and retire or add ledger entries in rootstock_prose_gate_known.py by sentence.
     'test_rootstock_prose_gate.py': [
-        ('test_rootstock_prose_gate.py::test_the_ledger_was_measured_on_this_canonical_family', 'equality', 'sha', "MEASURED_ON startswith 5420479d; len(WAIVERS) == 12 (19 measured; 7 own-root retired, PLA-625 stop 2)", 42),
+        ('test_rootstock_prose_gate.py::test_the_ledger_was_measured_on_this_canonical_family', 'equality', 'sha', "MEASURED_ON startswith 5420479d; len(WAIVERS) == 10 (19 measured; 7 own-root retired, PLA-625 stop 2; grapefruit's 2 sour orange retired, citrus promote 1)", 43),
         ('test_rootstock_prose_gate.py::test_population_is_the_21_crops_carrying_the_field_by_identity', 'equality', 'population', 'sorted(KNOWN_POPULATION) == live slugs carrying rootstock_options; len == 21; carrying/inspected (21, 21)', 51),
-        ('test_rootstock_prose_gate.py::test_inspected_fields_and_names_are_the_measurement', 'equality', 'population', 'fields 515, mentions 260, matched 248', 59),
-        ('test_rootstock_prose_gate.py::test_live_unresolved_equals_the_waiver_ledger_exactly', 'equality', 'population', 'set(live unresolved keys) == set(G.KNOWN) (12); violations == stale == []', 67),
-        ('test_rootstock_prose_gate.py::test_cli_live_passes_and_prints_its_population_and_limit', 'equality', 'population', "'inspected 21 crops ... 515 fields, 260 rootstock names (248 matched a row)' in CLI output", 375),
+        ('test_rootstock_prose_gate.py::test_inspected_fields_and_names_are_the_measurement', 'equality', 'population', 'fields 515, mentions 268, matched 258', 61),
+        ('test_rootstock_prose_gate.py::test_live_unresolved_equals_the_waiver_ledger_exactly', 'equality', 'population', 'set(live unresolved keys) == set(G.KNOWN) (10); violations == stale == []', 68),
+        ('test_rootstock_prose_gate.py::test_cli_live_passes_and_prints_its_population_and_limit', 'equality', 'population', "'inspected 21 crops ... 515 fields, 268 rootstock names (258 matched a row)' in CLI output", 381),
         ('test_rootstock_prose_gate.py::test_whole_crop_gate_A64_live_prints_its_counts', 'equality', 'population', "lime A64: 'rootstock names: 9 (7 matched a row); violations: 0'", 407),
-        ('test_rootstock_prose_gate.py::test_the_pla608_part1_hits_are_in_the_ledger_and_st_julien_is_retired', 'equality', 'content', 'the 9 Part 1 (crop, name) hits are ledgered; no plum St. Julien mention', 73),
+        ('test_rootstock_prose_gate.py::test_the_pla608_part1_hits_are_in_the_ledger_and_st_julien_is_retired', 'equality', 'content', "the 8 remaining Part 1 (crop, name) hits are ledgered; no plum St. Julien mention; grapefruit's sour orange retired by content (no waiver, no live mention)", 73),
         ('test_rootstock_prose_gate.py::test_the_new_container_notes_hit_is_apple_m27', 'equality', 'content', 'apple M27 waivers on container_notes.notes_beginner / _seasoned', 84),
     ],
 }
 
 # file -> why it is not a live pin (REPLAY / DOC_ONLY / SYNTHETIC / HISTORICAL / SCRATCH_DERIVED / CONTENT)
 EXEMPT = {
+    'test_promote_pla625_p1.py': 'REPLAY: its POST_SHA and populations are this promote\'s own output over promote_fixture.pre_state(59010fe6), never the live canonical; its gates run on that replayed post-state (PLA-625 citrus promote 1, 2026-10-13)',
     'test_promote_pla673_d.py': 'REPLAY: its POST_SHA and populations are this promote\'s own output over promote_fixture.pre_state(aaf004a2), never the live canonical; its gates run on that replayed post-state (PLA-673 part D, 2026-10-06)',
     'test_promote_pla673_b2.py': 'REPLAY: its POST_SHA and populations are this promote\'s own output over promote_fixture.pre_state(3ccc25f1), never the live canonical; its gates run on that replayed post-state (PLA-673 part B2, 2026-10-06)',
     'test_era_switch_safety.py': 'SYNTHETIC: hashes the live canonical only to feed its SHA back as a refused era value; it asserts refusals, never a value of the canonical (PLA-673 B2 go-condition 2, 2026-10-06)',

@@ -101,7 +101,10 @@ CANON = os.path.join(REPO, "crops_data_final.json")
 # RE-MEASURED 2026-10-13 (PLA-625 citrus stop 2, STAGED scratch), 5420479d -> 59010fe6. Note-sources null pair added
 # on 21 crops + glossary hill refuse_on; no problem id, pest or disease entry added, removed or renamed. The gate's
 # whole output is byte-identical on both states (36 findings / 12 open / 24 registered).
-PINNED_SHA = "59010fe6994b95eb52407fa60a6995eedefe5636bd6a52d2f960d4b08641cf68"
+# RE-MEASURED 2026-10-13 (PLA-625 citrus promote 1), 59010fe6 -> 2f67359e. orange-navel + grapefruit rootstock rows and
+# notes re-authored, three non-blocking open findings appended; no problem id, pest or disease entry added, removed or
+# renamed. The gate's whole output is byte-identical on both states (36 findings / 12 open / 24 registered).
+PINNED_SHA = "2f67359ecdbdbd40203e6201a2b230e50bb21a2b84d2b01a4091a988087c8080"
 
 # ---------------------------------------------------------------------------------------------
 # The PLA-449 fixture, transcribed from the ticket. NEVER computed from a scan.

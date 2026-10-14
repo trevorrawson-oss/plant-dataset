@@ -4,6 +4,35 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-10-13 -- PLA-625 CITRUS PROMOTE 1 LANDED (`59010fe6` -> `2f67359e`; orange-navel + grapefruit rootstock rows)
+
+ONE promote (`tools/promote_pla625_p1.py`, new, derived from promote_pla673_d by copy; stage `tools/staging/pla625_p1/`, built
+by its `build_stage.py` from `p1_texts.py`, the ruling's texts and values with each sentence's quote keys). Ruling: PLA-625
+comment 6ab0c56a (claude.ai, approved by Trevor, 2026-10-13). --check, then --expect-sha 2f67359e (== an independent minimal
+apply of p1_texts straight onto the base, no ops and no promote code).
+
+* **Rows (identical on both crops unless marked):** Carrizo `standard`, height / spread / container_suitable null (Lg waits
+  on PLA-543), bearing 3 (TAMU, generic budded citrus); Swingle `semi_dwarf` [8, 14] (HS1260 I), spread / container null;
+  Flying Dragon `dwarf` [4, 8] (Santa Clara MG; the home-garden page governs), `container_suitable` true (31-018C). Prose in
+  both registers + `what_to_ask_nursery`; orange-navel's Carrizo carries the AZ1001 tag-example sentence, grapefruit's Swingle
+  the UCR-3771 grapefruit sentences.
+* **Sources:** Carrizo ucr_citrus (crc2863), uf_ifas_edis (HS1260), uc_anr_8100, ucce_placer_nevada_31_018c, az_coop_ext
+  (AZ1001), tamu_agrilife; Swingle ucr_citrus (crc3771), uf_ifas_edis, tamu_agrilife; Flying Dragon 31-018C,
+  ucanr_santa_clara_mg (319461.pdf), uf_ifas_edis, tamu_agrilife. `uf_ifas_hs132` off all six rows; `ucr_citrus` off Flying
+  Dragon. No catalog id minted (AZ1001 and Santa Clara under the ids both crops already carry).
+* **Recommendations:** orange-navel `recommended_rootstock` null (Carrizo PARTIAL: AZ1001 only as a tag example); grapefruit
+  Swingle citrumelo unchanged, now FOUND (UCR-3771). Notes re-authored; the pair cites HS132 + AZ1001 + 31-018C (orange-navel)
+  and UCR-3771 + HS1260 + TAMU + HS132 + AZ1001 + 31-018C (grapefruit).
+* **Findings:** three non-blocking PLA-612 findings (grapefruit Carrizo, grapefruit Flying Dragon, orange-navel Swingle: no
+  T1 page read pairs the stock with that scion). Launch flags unchanged: both crops stay NOT launch-ready (PLA-533 blockers).
+* **Waivers:** A64 rootstock_prose 12 -> 10 (grapefruit's two sour orange note waivers, proven STALE on the post-state);
+  A63 bare_host 381 -> 379 (the Flying Dragon rows); A62 2682 -> 2680 (orange-navel's and grapefruit's notes, moved to CLOSED
+  so the housekeeping era replays against KNOWN_AT_ARMING). 17 uncited notes stay waived (PLA-608).
+* **PLA-567 size scale RULED** (section A of the ruling): recorded in CURRENT_STATE's locked decisions.
+* **Clause check:** every sentence mapped to its bracketed quote in the cached bytes; one gloss recorded (DECISIONS):
+  "a pot or a small yard" rests on 31-018C "well suited for home-use or container citrus" plus the ~75% dwarfing effect; no
+  cited page says "yard".
+
 ## 2026-10-13 -- PLA-625 CITRUS HOUSEKEEPING LANDED (`5420479d` -> `59010fe6`; stops 1 + 2, the first commit of promote 1's push)
 
 The stop 1 and stop 2 staging (PLA-625 rulings 4334c8fd and c12b65c1), landed as ONE commit ahead of promote 1 so the promote

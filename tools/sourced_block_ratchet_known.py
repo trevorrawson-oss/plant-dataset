@@ -17,11 +17,14 @@ five crops cited before arming (watermelon by the glossary promote, the four squ
 was uncited in earlier eras, so a landed promote replaying an earlier post-state checks against KNOWN_AT_ARMING.
 The same promote CLOSED parsnip|growth_stages[id=established]|sources by citation (+35 soil_prep, -1 closed).
 
-GREW (STAGED 2026-10-13 for citrus promote 1, PLA-625 stop 2; lands with that promote): 2663 -> 2682, by ARMING a newly
+GREW 2026-10-13 (PLA-625 citrus housekeeping, stops 1 + 2, 5420479d -> 59010fe6): 2663 -> 2682, by ARMING a newly
 named block type. The recommended_rootstock_note pair (PLA-608 ruling 2) lands null on all 21 crops carrying the note;
-the 19 certified crops whose authored note is then uncited are waived by identity (measured on the staged post-state
-59010fe6). avocado and olive (shells, note null) carry no block. Promote 1 cites orange-navel's and grapefruit's notes,
-so it removes those 2 identities in its own commit. No era identity: nothing was cited before arming.
+the 19 certified crops whose authored note is then uncited are waived by identity (measured on 59010fe6). avocado and
+olive (shells, note null) carry no block. No era identity: nothing was cited before arming.
+
+SHRUNK 2026-10-13 (PLA-625 citrus promote 1, 59010fe6 -> 2f67359e): 2682 -> 2680. Closed by citation in that promote:
+orange-navel and grapefruit |recommended_rootstock_note|recommended_rootstock_note_sources (moved to CLOSED: uncited in
+the housekeeping era, so its replay checks against KNOWN_AT_ARMING). 17 uncited notes stay waived (PLA-608).
 
 Kept as a .py module, not JSON, because every harness that copies tools/*.py into a scratch
 dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_gate at import
@@ -30,7 +33,7 @@ dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_g
 TICKET = 'PLA-607'
 MEASURED_ON = '00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e'
 MEASURED_DATE = '2026-09-30'
-COUNT = 2682
+COUNT = 2680
 # Closed by citation, kept by identity so a LANDED promote can replay against the set live in its era
 # (sourced_block_ratchet_gate.KNOWN_AT_ARMING). Never re-waived: a closed identity going uncited again fails A62.
 CLOSED = (
@@ -46,6 +49,9 @@ CLOSED = (
     "pumpkin|soil_prep|soil_prep_sources",              # PLA-673 part B2
     "spaghetti-squash|soil_prep|soil_prep_sources",     # PLA-673 part B2
     "parsnip|growth_stages[id=established]|sources",    # PLA-673 part B2 (umn_ext, umass_ext_itersonilia_canker, rhs)
+    # recommended_rootstock_note era identities (armed 2026-10-13, PLA-625 housekeeping 59010fe6)
+    "grapefruit|recommended_rootstock_note|recommended_rootstock_note_sources",  # PLA-625 citrus promote 1, 59010fe6 -> 2f67359e
+    "orange-navel|recommended_rootstock_note|recommended_rootstock_note_sources",  # PLA-625 citrus promote 1, 59010fe6 -> 2f67359e
 )
 IDENTITIES = (
     "acorn-squash|description|description_sources",
@@ -1171,7 +1177,6 @@ IDENTITIES = (
     "grapefruit|notifications[1]|sources",
     "grapefruit|notifications[2]|sources",
     "grapefruit|notifications[3]|sources",
-    "grapefruit|recommended_rootstock_note|recommended_rootstock_note_sources",
     "grapefruit|rotation|sources",
     "grapefruit|soil|sources",
     "grapefruit|start_method|sources",
@@ -1676,7 +1681,6 @@ IDENTITIES = (
     "orange-navel|notifications[3]|sources",
     "orange-navel|ph|sources",
     "orange-navel|pollination|sources",
-    "orange-navel|recommended_rootstock_note|recommended_rootstock_note_sources",
     "orange-navel|rotation|sources",
     "orange-navel|soil|sources",
     "orange-navel|start_method|sources",

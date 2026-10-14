@@ -33,8 +33,10 @@ POPULATION = (
     "plum",
     "pomegranate",
 )
-# 12 waivers on 7 crops. (19 measured on 5420479d; PLA-625 stop 2, ruling 1b, 2026-10-13, retired the 7 own-root
-# waivers -- lime, persimmon x2, mulberry x3, pawpaw -- when own-root wording became a propagation mode, each proven STALE.)
+# 10 waivers on 6 crops. (19 measured on 5420479d; PLA-625 stop 2, ruling 1b, 2026-10-13, retired the 7 own-root
+# waivers -- lime, persimmon x2, mulberry x3, pawpaw -- when own-root wording became a propagation mode, each proven STALE.
+# PLA-625 citrus promote 1, 2026-10-13, retired grapefruit's two sour orange note waivers when the note was re-authored,
+# each proven STALE on the post-state 2f67359e.)
 WAIVERS = [
     {"crop": "apple", "field": "container_notes.notes_beginner", "name": "M27", "sentence": "Only the smallest apple trees do well in pots, the ones grown on a dwarfing rootstock (ask the nursery for M9 or M27).", "ticket": "PLA-608", "reason": "NEW on 5420479d, found by the stop-1 container_notes widening: M27 is named for the smallest pots and apple's list has no M27 row. Add a sourced row or rephrase (content call)."},
     {"crop": "apple", "field": "container_notes.notes_seasoned", "name": "M27", "sentence": "Containers suit apple only on a true dwarfing rootstock (M9, or M27 for the smallest pots); a semi-dwarf or standard tree will outgrow any practical pot.", "ticket": "PLA-608", "reason": "NEW on 5420479d, found by the stop-1 container_notes widening: M27 is named for the smallest pots and apple's list has no M27 row. Add a sourced row or rephrase (content call)."},
@@ -46,6 +48,4 @@ WAIVERS = [
     {"crop": "pear-asian", "field": "recommended_rootstock_note", "name": "quince", "sentence": "Note that quince, the dwarfing stock used for some European pears, is graft-incompatible with most Asian pears, so it is not an option here.", "ticket": "PLA-608", "reason": "STANDING handling case: quince is named in order to EXCLUDE it (graft-incompatible). Rewording the exclusion retires this waiver."},
     {"crop": "lime", "field": "recommended_rootstock_note", "name": "alemow", "sentence": "On the deep sands and calcareous rocklands where limes are often grown, UF/IFAS favors rough lemon, Volkamer lemon, alemow, or Rangpur lime; on neutral-to-low-pH soils, Swingle citrumelo adds foot-rot and tristeza resistance and some cold tolerance.", "ticket": "PLA-608", "reason": "PENDING the alemow row (ruling 1 refined 2026-09-25): ends when lime's sourced alemow row lands (promote 2)."},
     {"crop": "lime", "field": "recommended_rootstock_note", "name": "Rangpur lime", "sentence": "On the deep sands and calcareous rocklands where limes are often grown, UF/IFAS favors rough lemon, Volkamer lemon, alemow, or Rangpur lime; on neutral-to-low-pH soils, Swingle citrumelo adds foot-rot and tristeza resistance and some cold tolerance.", "ticket": "PLA-608", "reason": "PENDING the Rangpur fold (ruling 2026-09-25, stands): retires when Rangpur is folded into the rough lemon / Volkamer row."},
-    {"crop": "grapefruit", "field": "recommended_rootstock_note", "name": "sour orange", "sentence": "Grapefruit grows vigorously and yields well on Swingle citrumelo, which resists Phytophthora and citrus nematode and tolerates the tristeza virus that killed off the once-standard sour orange rootstock for grapefruit.", "ticket": "PLA-612", "reason": "HELD (ruling 2026-09-25): grapefruit's note names sour orange; held until its rows are re-sourced (PLA-612, promote 1)."},
-    {"crop": "grapefruit", "field": "recommended_rootstock_note", "name": "Sour orange", "sentence": "Sour orange still produces excellent grapefruit where tristeza is not a threat.", "ticket": "PLA-612", "reason": "HELD (ruling 2026-09-25): grapefruit's note names sour orange; held until its rows are re-sourced (PLA-612, promote 1)."},
 ]

@@ -11,6 +11,11 @@ THE BLIND SPOT THIS CLOSES, named in the ticket and re-confirmed here: grapefrui
 carry the SAME bare, sole-cited Flying Dragon row (`rootstock_options[2]`, `ucr_citrus` at
 https://citrusvariety.ucr.edu). bare_host_scan.self_pathed sees grapefruit's (it paths ucr_citrus
 elsewhere) and NOT orange-navel's (it never does). This gate sees both.
+
+CLOSED 2026-10-13 by PLA-625 citrus promote 1 (59010fe6 -> 2f67359e): both Flying Dragon rows dropped ucr_citrus
+(ruling D), so the waiver set is 379. The blind-spot proof now runs on the arming canonical 00dda31c, REPLAYED from its
+pinned commit (promote_fixture), and the ratchet tests act on another waived SOLE row (grapefruit's ca_interior zone 8
+cell, ucr_citrus at the bare host).
 """
 import copy
 import json
@@ -25,6 +30,7 @@ REPO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 import bare_host_gate as G  # noqa: E402
 import bare_host_scan as B  # noqa: E402
+import promote_fixture  # noqa: E402
 
 CANON = os.path.join(REPO, "crops_data_final.json")
 SHA = "00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e"
@@ -32,6 +38,7 @@ VICTIM = "cabbage"
 UCR = "https://citrusvariety.ucr.edu"
 FLYING_DRAGON = {"grapefruit|rootstock_options[2]|anchoring_urls|ucr_citrus",
                  "orange-navel|rootstock_options[2]|anchoring_urls|ucr_citrus"}
+RATCHET_ROW = "grapefruit|regions.ca_interior.resolved_by_zone.8|anchoring_urls|ucr_citrus"
 LEMON_TAMU = {"lemon|rootstock_options[0]|anchoring_urls|tamu_agrilife",
               "lemon|rootstock_options[1]|anchoring_urls|tamu_agrilife"}
 
@@ -65,11 +72,23 @@ def first_single_cited_node(crop):
     raise AssertionError("no cited dict block to inject into")
 
 
+
+ARMING = json.loads(promote_fixture.pre_state(SHA))   # the arming canonical 00dda31c, replayed from its pinned commit
+
+
+def ratchet_node(d):
+    """The node RATCHET_ROW names (crop | dotted dict path | ...)."""
+    crop, path = RATCHET_ROW.split("|")[:2]
+    node = by(d)[crop]
+    for k in path.split("."):
+        node = node[k]
+    return node
+
 class PinsAreTheMeasurement(unittest.TestCase):
     def test_waiver_file_is_the_measured_population(self):
         self.assertEqual(G._KNOWN_DOC["measured_on"], SHA)
-        self.assertEqual((G._KNOWN_DOC["count"], len(G.KNOWN)), (381, 381))
-        self.assertEqual(len(G._KNOWN_DOC["identities"]), 381, "duplicate identities")
+        self.assertEqual((G._KNOWN_DOC["count"], len(G.KNOWN)), (379, 379))
+        self.assertEqual(len(G._KNOWN_DOC["identities"]), 379, "duplicate identities")
 
     def test_floor(self):
         self.assertEqual(G.MIN_INSPECTED, 28000)
@@ -91,23 +110,34 @@ class LiveCanonical(unittest.TestCase):
         self.assertLessEqual(len({i.split("|")[0] for i in G.KNOWN}), 41)
 
     def test_the_named_examples(self):
-        """Confirm the three cases the brief names, from the data, both severities."""
-        n, insp, sole, co, V, stale = G.roster(_CANON)
-        self.assertTrue(FLYING_DRAGON <= set(sole), "Flying Dragon rows must be SOLE")
-        self.assertTrue(LEMON_TAMU <= set(co), "lemon TAMU rows must be CO-CITED, non-blocking")
-        idx = by(_CANON)
+        """Confirm the three cases the brief names, both severities: Flying Dragon SOLE on the arming canonical
+        (replayed), and CLOSED live by PLA-625 citrus promote 1; lemon's TAMU rows CO-CITED live."""
+        n, insp, sole, co, V, stale = G.roster(ARMING)
+        self.assertTrue(FLYING_DRAGON <= set(sole), "Flying Dragon rows were SOLE at arming")
         for slug in ("grapefruit", "orange-navel"):
-            row = idx[slug]["rootstock_options"][2]
+            row = by(ARMING)[slug]["rootstock_options"][2]
             self.assertIn("Flying Dragon", row["name"])
             self.assertEqual(row["sources"], ["ucr_citrus"])
             self.assertEqual(row["anchoring_urls"]["ucr_citrus"]["url"], UCR)
+        n, insp, sole, co, V, stale = G.roster(_CANON)
+        self.assertTrue(LEMON_TAMU <= set(co), "lemon TAMU rows must be CO-CITED, non-blocking")
+        self.assertFalse(FLYING_DRAGON & (set(sole) | set(co)), "closed by PLA-625 citrus promote 1")
+        self.assertFalse(FLYING_DRAGON & set(G.KNOWN), "retired from the waiver set in the same commit")
+        for slug in ("grapefruit", "orange-navel"):
+            row = by(_CANON)[slug]["rootstock_options"][2]
+            self.assertIn("Flying Dragon", row["name"])
+            self.assertNotIn("ucr_citrus", row["sources"])
+        self.assertIn(RATCHET_ROW, set(sole))
 
     def test_the_self_pathed_blind_spot_is_real_and_closed(self):
-        sp = {(r["crop"], r["path"], r["source_id"]) for r in B.self_pathed(_CANON)}
+        """On the arming canonical (replayed): the scan saw grapefruit's row and NOT orange-navel's; this gate saw
+        both (the measured set carried both until PLA-625 citrus promote 1 closed them)."""
+        sp = {(r["crop"], r["path"], r["source_id"]) for r in B.self_pathed(ARMING)}
         self.assertIn(("grapefruit", "rootstock_options[2]", "ucr_citrus"), sp)
         self.assertNotIn(("orange-navel", "rootstock_options[2]", "ucr_citrus"), sp,
                          "the blind spot the ticket names")
-        self.assertIn("orange-navel|rootstock_options[2]|anchoring_urls|ucr_citrus", G.KNOWN)
+        n, insp, sole, co, V, stale = G.roster(ARMING)
+        self.assertIn("orange-navel|rootstock_options[2]|anchoring_urls|ucr_citrus", sole)
 
     def test_agrees_row_for_row_with_bare_host_scan_on_anchoring_urls(self):
         """An independent walk: the scan's rows on certified crops == this gate's."""
@@ -207,32 +237,30 @@ class TheDefectBounces(unittest.TestCase):
 class TheRatchet(unittest.TestCase):
     def test_repointing_a_waived_row_PASSES_and_reports_stale(self):
         d = fresh()
-        row = by(d)["orange-navel"]["rootstock_options"][2]
-        row["anchoring_urls"]["ucr_citrus"]["url"] = "https://citrusvariety.ucr.edu/citrus/flyingdragon.html"
+        ratchet_node(d)["anchoring_urls"]["ucr_citrus"]["url"] = "https://citrusvariety.ucr.edu/crc3602"
         n, insp, sole, co, V, stale = G.roster(d)
         self.assertEqual(V, [])
-        self.assertEqual(stale, ["orange-navel|rootstock_options[2]|anchoring_urls|ucr_citrus"])
+        self.assertEqual(stale, [RATCHET_ROW])
 
     def test_substitution_FAILS(self):
         d = fresh()
-        by(d)["orange-navel"]["rootstock_options"][2]["anchoring_urls"]["ucr_citrus"]["url"] = \
-            "https://citrusvariety.ucr.edu/citrus/flyingdragon.html"
+        ratchet_node(d)["anchoring_urls"]["ucr_citrus"]["url"] = "https://citrusvariety.ucr.edu/crc3602"
         node, sid = first_single_cited_node(by(d)[VICTIM])
         for s in list(node["anchoring_urls"]):
             node["anchoring_urls"][s]["url"] = "https://zz.edu"
         n, insp, sole, co, V, stale = G.roster(d)
-        self.assertGreaterEqual(len(sole), 381)
+        self.assertGreaterEqual(len(sole), 379)
         self.assertTrue(any(f"{VICTIM}|" in m for m in V), V)
 
     def test_co_citing_a_waived_sole_row_demotes_it(self):
         d = fresh()
-        row = by(d)["orange-navel"]["rootstock_options"][2]
-        row["sources"].append("uf_ifas_hs132")
-        row["anchoring_urls"]["uf_ifas_hs132"] = {"url": "https://edis.ifas.ufl.edu/publication/HS132",
-                                                  "verified": "2026-09-30"}
+        node = ratchet_node(d)
+        node["sources"].append("uf_ifas_hs132")
+        node["anchoring_urls"]["uf_ifas_hs132"] = {"url": "https://edis.ifas.ufl.edu/publication/HS132",
+                                                   "verified": "2026-09-30"}
         n, insp, sole, co, V, stale = G.roster(d)
         self.assertEqual(V, [])
-        self.assertIn("orange-navel|rootstock_options[2]|anchoring_urls|ucr_citrus", co)
+        self.assertIn(RATCHET_ROW, co)
 
 
 class RefusesAnEmptyPopulation(unittest.TestCase):

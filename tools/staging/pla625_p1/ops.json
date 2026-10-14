@@ -1,0 +1,1189 @@
+[
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Carrizo citrange].mature_height_ft",
+  "kind": "value",
+  "old": [
+   15,
+   25
+  ],
+  "new": null,
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "nulled (PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D)"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Carrizo citrange].spread_ft",
+  "kind": "value",
+  "old": [
+   15,
+   20
+  ],
+  "new": null,
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "nulled (PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D)"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Carrizo citrange].container_suitable",
+  "kind": "value",
+  "old": false,
+  "new": null,
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "nulled (PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D)"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Carrizo citrange].traits_seasoned",
+  "kind": "prose",
+  "old": "The standard rootstock for sweet oranges in California and the most common commercial choice. Resistant to Phytophthora root rot and tolerant of citrus tristeza virus. Produces vigorous, upright trees with good early bearing and excellent internal fruit quality. Not adapted to calcareous, highly alkaline, or saline soils. Cold tolerance is moderate, less than trifoliate types but adequate in zones 9 through 11.",
+  "new": "Carrizo is a citrange, a cross of Washington navel orange and trifoliate orange. UF/IFAS rates it a large, vigorous tree under Florida grove conditions. It tolerates tristeza virus, and UF/IFAS rates its Phytophthora tolerance intermediate. It does poorly in saline, high-pH and heavy clay soils, and it is susceptible to citrus nematode. Its cold tolerance is moderate, a little below that of trifoliate orange. Foothill growers sometimes use it, and it produces high-quality fruit later in the season. The University of Arizona uses a navel orange on Carrizo as its example of a correctly labeled nursery tree.",
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Carrizo citrange].traits_beginner",
+  "kind": "prose",
+  "old": "Carrizo citrange is the most common rootstock for sweet oranges in California and a reliable all-around choice. It resists the root rot that threatens citrus, handles a common citrus virus, and grows a vigorous full-size tree that bears early with good-quality fruit. Its one weakness is that it does not like very alkaline or salty soil, so it is less ideal in some desert areas.",
+  "new": "Carrizo grows a large, vigorous tree. It holds up well against tristeza, a virus that can kill citrus trees quickly. Its protection from root rot is only middling. It struggles in salty, alkaline or heavy clay soil. It handles cold moderately well, a bit less well than trifoliate orange.",
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Carrizo citrange].what_to_ask_nursery",
+  "kind": "prose",
+  "old": "Ask for a certified disease-free tree on Carrizo citrange. Confirm your soil is not highly alkaline or saline, as Carrizo is sensitive to both conditions.",
+  "new": "Ask for a certified disease-free tree whose tag names both the variety and the rootstock. Carrizo does poorly in salty or alkaline soil, so it is a poor match where your soil is either.",
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Carrizo citrange].sources",
+  "kind": "sources",
+  "old": [
+   "ucr_citrus",
+   "uf_ifas_hs132"
+  ],
+  "new": [
+   "ucr_citrus",
+   "uf_ifas_edis",
+   "uc_anr_8100",
+   "ucce_placer_nevada_31_018c",
+   "az_coop_ext",
+   "tamu_agrilife"
+  ],
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Carrizo citrange].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu",
+    "verified": "2026-06-12"
+   },
+   "uf_ifas_hs132": {
+    "url": "https://edis.ifas.ufl.edu/publication/HS132",
+    "verified": "2026-06-12"
+   }
+  },
+  "new": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc2863",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "uc_anr_8100": {
+    "url": "https://escholarship.org/content/qt5hh528qp/qt5hh528qp.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   },
+   "az_coop_ext": {
+    "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1001.pdf",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Swingle citrumelo].size_class",
+  "kind": "value",
+  "old": "standard",
+  "new": "semi_dwarf",
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Swingle citrumelo].mature_height_ft",
+  "kind": "value",
+  "old": [
+   12,
+   20
+  ],
+  "new": [
+   8,
+   14
+  ],
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Swingle citrumelo].spread_ft",
+  "kind": "value",
+  "old": [
+   12,
+   18
+  ],
+  "new": null,
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "nulled (PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D)"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Swingle citrumelo].container_suitable",
+  "kind": "value",
+  "old": false,
+  "new": null,
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "nulled (PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D)"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Swingle citrumelo].traits_seasoned",
+  "kind": "prose",
+  "old": "A grapefruit and trifoliate orange hybrid widely used in Florida and the Gulf Coast. Excellent Phytophthora resistance, good cold hardiness among standard rootstocks, and tristeza tolerant. Produces slightly smaller trees than Carrizo with good fruit quality. Not well adapted to calcareous or high-pH soils. A strong general-purpose choice for the Southeast and Gulf regions.",
+  "new": "Swingle is a citrumelo, a cross of Duncan grapefruit and trifoliate orange. It became the most widely used rootstock in Florida. It resists Phytophthora foot rot and citrus nematode, and it tolerates tristeza virus. Its cold hardiness is good. UF/IFAS rates it an intermediate-size tree, smaller than one on Carrizo. It is not adapted to heavy clay or calcareous soils. On salt the sources differ: UF/IFAS rates its salinity tolerance poor, while UC Riverside calls it moderately salt tolerant.",
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Swingle citrumelo].traits_beginner",
+  "kind": "prose",
+  "old": "Swingle citrumelo is a tough rootstock widely used in Florida and along the Gulf Coast. It strongly resists root rot, handles wet soils better than most, and has decent cold hardiness. It makes a slightly smaller tree than Carrizo with good fruit, and is a good pick in humid, wetter regions.",
+  "new": "Swingle is a tough rootstock that became Florida's most widely used. It resists foot rot and root rot, and a root pest called citrus nematode. It holds up well against tristeza virus and cold. It makes a medium-size tree, smaller than Carrizo. It does poorly in heavy clay or alkaline, lime-rich soil.",
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Swingle citrumelo].what_to_ask_nursery",
+  "kind": "prose",
+  "old": "Ask for Swingle citrumelo rootstock. It handles wet soils better than Carrizo but may not perform well in alkaline or calcareous conditions.",
+  "new": "Swingle is a poor match for heavy clay or alkaline soil, so ask about another rootstock if yours is either.",
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Swingle citrumelo].sources",
+  "kind": "sources",
+  "old": [
+   "uf_ifas_hs132"
+  ],
+  "new": [
+   "ucr_citrus",
+   "uf_ifas_edis",
+   "tamu_agrilife"
+  ],
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Swingle citrumelo].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "uf_ifas_hs132": {
+    "url": "https://edis.ifas.ufl.edu/publication/HS132",
+    "verified": "2026-06-12"
+   }
+  },
+  "new": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc3771",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Flying Dragon trifoliate].mature_height_ft",
+  "kind": "value",
+  "old": [
+   5,
+   8
+  ],
+  "new": [
+   4,
+   8
+  ],
+  "cited_at": "rootstock_options[name=Flying Dragon trifoliate]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Flying Dragon trifoliate].spread_ft",
+  "kind": "value",
+  "old": [
+   5,
+   8
+  ],
+  "new": null,
+  "cited_at": "rootstock_options[name=Flying Dragon trifoliate]",
+  "reason": "nulled (PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D)"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Flying Dragon trifoliate].traits_seasoned",
+  "kind": "prose",
+  "old": "A naturally dwarfing mutation of Poncirus trifoliata that produces very compact trees well suited to containers and small home gardens. Offers the best cold hardiness of any widely available citrus rootstock. Excellent resistance to Phytophthora, citrus nematode, and tristeza virus. Sensitive to high-pH and saline soils. Fruit quality is good and trees are precocious, though total yield per tree is lower due to small canopy size.",
+  "new": "Flying Dragon is a trifoliate rootstock with a dwarfing effect of about 75 percent. UC Master Gardeners call it the only true dwarfing citrus rootstock, with trees 4 to 8 feet tall. UC Cooperative Extension calls it well suited to home and container citrus, but not to production orchards. UF/IFAS rates it tolerant of tristeza and Phytophthora, resistant to citrus nematode, and good in freezes. It does poorly in saline and high-pH soils. Its juice quality rates high, but small trees bear less fruit per tree.",
+  "cited_at": "rootstock_options[name=Flying Dragon trifoliate]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Flying Dragon trifoliate].traits_beginner",
+  "kind": "prose",
+  "old": "Flying Dragon is a special dwarfing rootstock that keeps the tree small, which makes it perfect for pots and small yards, and it is the key to growing oranges in cold climates since you can move the pot under cover for winter. It also has the best cold hardiness of the common citrus rootstocks and strongly resists root rot. The tradeoff is simply a smaller tree with a smaller crop, which is usually exactly what a container or small-space grower wants.",
+  "new": "Flying Dragon is a dwarfing rootstock that keeps a citrus tree small, usually 4 to 8 feet tall. That makes it a good fit for a pot or a small yard. It holds up well against tristeza virus, root rot and cold. Its fruit is good, but a smaller tree means a smaller crop. It does poorly in salty or alkaline soil.",
+  "cited_at": "rootstock_options[name=Flying Dragon trifoliate]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Flying Dragon trifoliate].what_to_ask_nursery",
+  "kind": "prose",
+  "old": "Ask specifically for Flying Dragon rootstock (a dwarfing selection of trifoliate orange). The compact tree size makes frost protection easier and fits container growing or small yards.",
+  "new": "Ask for Flying Dragon if you want a citrus tree for a pot or a small yard. It is a dwarfing trifoliate rootstock that keeps the tree small.",
+  "cited_at": "rootstock_options[name=Flying Dragon trifoliate]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Flying Dragon trifoliate].sources",
+  "kind": "sources",
+  "old": [
+   "ucr_citrus"
+  ],
+  "new": [
+   "ucce_placer_nevada_31_018c",
+   "ucanr_santa_clara_mg",
+   "uf_ifas_edis",
+   "tamu_agrilife"
+  ],
+  "cited_at": "rootstock_options[name=Flying Dragon trifoliate]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[name=Flying Dragon trifoliate].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu",
+    "verified": "2026-06-12"
+   }
+  },
+  "new": {
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucanr_santa_clara_mg": {
+    "url": "https://ucanr.edu/sites/default/files/2020-02/319461.pdf",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "cited_at": "rootstock_options[name=Flying Dragon trifoliate]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "recommended_rootstock",
+  "kind": "value",
+  "old": "Carrizo citrange",
+  "new": null,
+  "cited_at": "recommended_rootstock_note",
+  "reason": "nulled (PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) E)"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "recommended_rootstock_note",
+  "kind": "prose",
+  "old": "Carrizo citrange is the most widely used rootstock for sweet oranges. It provides good disease resistance and fruit quality. For containers or small spaces, Flying Dragon trifoliate produces a compact tree. Ask the nursery which rootstock the tree is grafted onto and match it to your soil and space.",
+  "new": "Rootstocks are usually not a choice at retail garden centers, because trees come grafted onto industry-standard rootstocks. Ask which rootstock your tree is on, and look for a tag that names both the variety and the rootstock. Rootstocks differ in the soils they suit, and they can affect fruit quality. For a pot or a small yard, Flying Dragon is a dwarfing rootstock well suited to home and container citrus.",
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) E"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "recommended_rootstock_note_sources",
+  "kind": "sources",
+  "old": null,
+  "new": [
+   "uf_ifas_hs132",
+   "az_coop_ext",
+   "ucce_placer_nevada_31_018c"
+  ],
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) E"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "recommended_rootstock_note_anchoring_urls",
+  "kind": "anchors",
+  "old": null,
+  "new": {
+   "uf_ifas_hs132": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS132",
+    "verified": "2026-10-13"
+   },
+   "az_coop_ext": {
+    "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1001.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   }
+  },
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) E"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "verification_status.open_findings",
+  "kind": "record",
+  "old": [
+   {
+    "id": "orange_app_enum_dependency",
+    "summary": "Citrus enum values drive the iOS notification/weather engine, incl. the Trevor-ratified guard_against_heat_stress used as a NOTIFICATION action (the summer_heat_irrigation reminder), not only a weather action; plus protect_from_frost/avoid_oil_in_heat/fertilize, offset anchors fruit_set/spring_growth_start, stage mature_bearing. App must support them. Dataset-correct; app-side owed. Folds lemon_app_enum_dependency.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "orange_cert",
+    "status": "open"
+   },
+   {
+    "id": "orange_verbatim_uncovered",
+    "summary": "5 of 22 cited URLs could not be text-compared in the verbatim scan: aggie-hort L2304 (301), arizona low-desert-citrus (403), mgsantaclara fruit-trees (404), ctahr F_N-14 (PDF, no extractor), lsuagcenter citrus (404). All legitimate sources used at authoring; prose on those claims not machine-verified for lifts.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "orange_cert",
+    "status": "open"
+   },
+   {
+    "id": "orange_biology_band_edge_confirm",
+    "summary": "se_gulf/warm_arid winter-low min_winter_temp_f band EDGES were reasoned from documented citrus damage thresholds rather than a single zone table; and the >95F spring-heat fruit-drop specific (growth_stages) is consistent with az1850's '90s F' but az1850 was a not-covered URL. Qualitative claims sourced; confirm the numeric edges/threshold against the sources.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "orange_cert",
+    "status": "open"
+   },
+   {
+    "id": "orange_lemon_echo_residual",
+    "summary": "After the cert-time reword (31->5), 5 passages retain an 8-9 word run with the certified lemon: 3 region plant_out date windows, the fertilizer feeding-season window, and 1 generic container phrasing. Adjudicated benign convergence on shared citrus fact-windows (one honest phrasing), NOT lifts; source-verbatim is 0 HARD.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "orange_cert",
+    "status": "open"
+   },
+   {
+    "id": "orange_rotation_shape",
+    "summary": "rotation dict is annual-shaped; authored honestly N/A for a permanent tree + the citrus replant-decline caveat. The perennial-aware rotation variant is still owed in the tree spec (shared with peach/apple/lemon).",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "orange_cert",
+    "status": "open"
+   },
+   {
+    "id": "orange_start_method_sources_slot",
+    "summary": "start_method (and moon_phase_preference) have no structured sources/anchoring_urls slot; citations are inline in the notes prose. Schema decision owed (shared with lemon).",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "orange_cert",
+    "status": "open"
+   },
+   {
+    "id": "orange_navel_plant_dimensions_sources_conflict_pla465",
+    "severity": "low",
+    "status": "accepted",
+    "blocks_launch": false,
+    "filed_in_session": "pla465_2026-09-17",
+    "summary": "mature_height_ft / mature_spread_ft left null at PLA-465 promote 1. The two candidate pages are an archived capture of a WAF-blocked UC Master Gardener page (Santa Clara 'Growing Great Citrus', 2025-10-10 capture: 'Navel -- Standard tree 20-25 feet high, dwarf 8 feet tall') and a retired UF/IFAS bulletin (HS982, read from an LSU-hosted copy: a sweet orange 'on standard or non-dwarfing commercial rootstocks will reach a 15 to 20-foot height'), and they disagree. The live UF/IFAS HS1260 rates Carrizo citrange 'Lg, perhaps 14-20 ft', a size class, not a measurement. No page states a navel spread.",
+    "resolution_note": "Trevor's ruling 2026-09-17: UNUSABLE SOURCE, null, no derivation attempted. Two sources in conflict anchor neither figure.",
+    "deferred_to": null
+   },
+   {
+    "id": "orange_navel_sulfur_acidification_contradicted_pla533",
+    "severity": "high",
+    "status": "open",
+    "blocks_launch": true,
+    "filed_in_session": "pla533_2a_2026_09_25",
+    "summary": "BLOCKS LAUNCH. Five strings advise acidifying high-pH soil with sulfur as the durable fix: ph.note_seasoned ('acidify the soil gradually with elemental sulfur for a durable fix'), ph.note_beginner ('over time you can add sulfur to make the soil a little more acidic'), soil.preferred_description_seasoned ('slow acidification help'), failure_diagnostics[4].next_season_tip_seasoned ('Lowering soil pH toward slightly acidic over time (sulfur, acidifying amendments) ... is the durable fix on high-pH ground') and _beginner. The UF/IFAS page says a naturally basic soil cannot be changed on any permanent basis. failure_diagnostics[4] CITES uf_ifas_hs132, the page that says the opposite: a mis-attribution as well as a contradiction. CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+    "basis": "UF/IFAS HS132 (1022a27c...): 'If the soil is naturally basic, it will be difficult to change the reaction on any permanent basis.' HS132's only sulfur mention is in a pest-control context ('sulfur is not used in a regular program of pest control'). No cached page recommends sulfur acidification.",
+    "deferred_to": "PLA-533"
+   },
+   {
+    "id": "orange_navel_juice_freezing_contradicted_pla533",
+    "severity": "medium",
+    "status": "open",
+    "blocks_launch": true,
+    "filed_in_session": "pla533_2a_2026_09_25",
+    "summary": "BLOCKS LAUNCH. storage.freezer_seasoned ('the juice freezes excellently ... for up to about six months') and storage.freezer_beginner ('the juice does ... freeze it in a sealed container for up to about six months') recommend storing navel juice. The Arizona page says navel juice should be drunk directly because stored juice turns bitter (limonin). CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+    "basis": "University of Arizona, Oranges for Southern Arizona (4fb8059f...): 'They can be juiced, but the juice should be consumed directly because most navel orange juice contains bitter compounds including limonin, which make stored juice disagreeable.'",
+    "deferred_to": "PLA-533"
+   },
+   {
+    "id": "orange_navel_best_pot_tree_contradicted_pla533",
+    "severity": "medium",
+    "status": "open",
+    "blocks_launch": true,
+    "filed_in_session": "pla533_2a_2026_09_25",
+    "summary": "BLOCKS LAUNCH. container_notes.notes_beginner ('Oranges are one of the best fruit trees to grow in a pot') and container_notes.notes_seasoned ('Citrus are among the best fruit trees for containers' ... 'citrus genuinely thrives in pots') rank oranges among the best container fruit trees. TAMU names the smaller citrus types as best suited and says the rest grow in containers only for a limited time. Separately, notes_seasoned ends with an AUTHORING NOTE leaked into consumer copy: 'Do not lift peach's container guidance here; unlike peach, citrus genuinely thrives in pots.' (kickoff text, orange Step 6). Measured 2026-09-25: NOT RENDERED by plant-astro (no template reads container_notes prose) or plant-app origin/main; it SHIPS in plant-app's bundled src/data/guides.json. CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+    "basis": "TAMU citrus fact sheet (5dcf248a...): 'The smaller citrus types (calamondin, limes, kumquats, lemons and limequats) are best suited to container culture, but all will grow for a limited time.'",
+    "deferred_to": "PLA-533"
+   },
+   {
+    "id": "orange_navel_yield_figure_contradicted_pla533",
+    "severity": "medium",
+    "status": "open",
+    "blocks_launch": true,
+    "filed_in_session": "pla533_2a_2026_09_25",
+    "summary": "BLOCKS LAUNCH. yield_expectations.per_plant_seasoned ('A mature standard navel commonly yields on the order of one hundred to two hundred or more pounds of fruit per year') states a heavy-yield figure no cached page gives, and two UF/IFAS pages characterize navels as low-yielding. CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+    "basis": "UF/IFAS HS132 (1022a27c...) cultivar table: 'Navels Early (Oct-Jan) 0-6 Shy Bearers, susceptible to Postbloom Fruit Drop (PFD)'. UF/IFAS HS141 (70844740...): 'Inadequate fruit set and severe fruit drop are major causes of low yield of navel orange.'",
+    "deferred_to": "PLA-533"
+   }
+  ],
+  "new": [
+   {
+    "id": "orange_app_enum_dependency",
+    "summary": "Citrus enum values drive the iOS notification/weather engine, incl. the Trevor-ratified guard_against_heat_stress used as a NOTIFICATION action (the summer_heat_irrigation reminder), not only a weather action; plus protect_from_frost/avoid_oil_in_heat/fertilize, offset anchors fruit_set/spring_growth_start, stage mature_bearing. App must support them. Dataset-correct; app-side owed. Folds lemon_app_enum_dependency.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "orange_cert",
+    "status": "open"
+   },
+   {
+    "id": "orange_verbatim_uncovered",
+    "summary": "5 of 22 cited URLs could not be text-compared in the verbatim scan: aggie-hort L2304 (301), arizona low-desert-citrus (403), mgsantaclara fruit-trees (404), ctahr F_N-14 (PDF, no extractor), lsuagcenter citrus (404). All legitimate sources used at authoring; prose on those claims not machine-verified for lifts.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "orange_cert",
+    "status": "open"
+   },
+   {
+    "id": "orange_biology_band_edge_confirm",
+    "summary": "se_gulf/warm_arid winter-low min_winter_temp_f band EDGES were reasoned from documented citrus damage thresholds rather than a single zone table; and the >95F spring-heat fruit-drop specific (growth_stages) is consistent with az1850's '90s F' but az1850 was a not-covered URL. Qualitative claims sourced; confirm the numeric edges/threshold against the sources.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "orange_cert",
+    "status": "open"
+   },
+   {
+    "id": "orange_lemon_echo_residual",
+    "summary": "After the cert-time reword (31->5), 5 passages retain an 8-9 word run with the certified lemon: 3 region plant_out date windows, the fertilizer feeding-season window, and 1 generic container phrasing. Adjudicated benign convergence on shared citrus fact-windows (one honest phrasing), NOT lifts; source-verbatim is 0 HARD.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "orange_cert",
+    "status": "open"
+   },
+   {
+    "id": "orange_rotation_shape",
+    "summary": "rotation dict is annual-shaped; authored honestly N/A for a permanent tree + the citrus replant-decline caveat. The perennial-aware rotation variant is still owed in the tree spec (shared with peach/apple/lemon).",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "orange_cert",
+    "status": "open"
+   },
+   {
+    "id": "orange_start_method_sources_slot",
+    "summary": "start_method (and moon_phase_preference) have no structured sources/anchoring_urls slot; citations are inline in the notes prose. Schema decision owed (shared with lemon).",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "orange_cert",
+    "status": "open"
+   },
+   {
+    "id": "orange_navel_plant_dimensions_sources_conflict_pla465",
+    "severity": "low",
+    "status": "accepted",
+    "blocks_launch": false,
+    "filed_in_session": "pla465_2026-09-17",
+    "summary": "mature_height_ft / mature_spread_ft left null at PLA-465 promote 1. The two candidate pages are an archived capture of a WAF-blocked UC Master Gardener page (Santa Clara 'Growing Great Citrus', 2025-10-10 capture: 'Navel -- Standard tree 20-25 feet high, dwarf 8 feet tall') and a retired UF/IFAS bulletin (HS982, read from an LSU-hosted copy: a sweet orange 'on standard or non-dwarfing commercial rootstocks will reach a 15 to 20-foot height'), and they disagree. The live UF/IFAS HS1260 rates Carrizo citrange 'Lg, perhaps 14-20 ft', a size class, not a measurement. No page states a navel spread.",
+    "resolution_note": "Trevor's ruling 2026-09-17: UNUSABLE SOURCE, null, no derivation attempted. Two sources in conflict anchor neither figure.",
+    "deferred_to": null
+   },
+   {
+    "id": "orange_navel_sulfur_acidification_contradicted_pla533",
+    "severity": "high",
+    "status": "open",
+    "blocks_launch": true,
+    "filed_in_session": "pla533_2a_2026_09_25",
+    "summary": "BLOCKS LAUNCH. Five strings advise acidifying high-pH soil with sulfur as the durable fix: ph.note_seasoned ('acidify the soil gradually with elemental sulfur for a durable fix'), ph.note_beginner ('over time you can add sulfur to make the soil a little more acidic'), soil.preferred_description_seasoned ('slow acidification help'), failure_diagnostics[4].next_season_tip_seasoned ('Lowering soil pH toward slightly acidic over time (sulfur, acidifying amendments) ... is the durable fix on high-pH ground') and _beginner. The UF/IFAS page says a naturally basic soil cannot be changed on any permanent basis. failure_diagnostics[4] CITES uf_ifas_hs132, the page that says the opposite: a mis-attribution as well as a contradiction. CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+    "basis": "UF/IFAS HS132 (1022a27c...): 'If the soil is naturally basic, it will be difficult to change the reaction on any permanent basis.' HS132's only sulfur mention is in a pest-control context ('sulfur is not used in a regular program of pest control'). No cached page recommends sulfur acidification.",
+    "deferred_to": "PLA-533"
+   },
+   {
+    "id": "orange_navel_juice_freezing_contradicted_pla533",
+    "severity": "medium",
+    "status": "open",
+    "blocks_launch": true,
+    "filed_in_session": "pla533_2a_2026_09_25",
+    "summary": "BLOCKS LAUNCH. storage.freezer_seasoned ('the juice freezes excellently ... for up to about six months') and storage.freezer_beginner ('the juice does ... freeze it in a sealed container for up to about six months') recommend storing navel juice. The Arizona page says navel juice should be drunk directly because stored juice turns bitter (limonin). CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+    "basis": "University of Arizona, Oranges for Southern Arizona (4fb8059f...): 'They can be juiced, but the juice should be consumed directly because most navel orange juice contains bitter compounds including limonin, which make stored juice disagreeable.'",
+    "deferred_to": "PLA-533"
+   },
+   {
+    "id": "orange_navel_best_pot_tree_contradicted_pla533",
+    "severity": "medium",
+    "status": "open",
+    "blocks_launch": true,
+    "filed_in_session": "pla533_2a_2026_09_25",
+    "summary": "BLOCKS LAUNCH. container_notes.notes_beginner ('Oranges are one of the best fruit trees to grow in a pot') and container_notes.notes_seasoned ('Citrus are among the best fruit trees for containers' ... 'citrus genuinely thrives in pots') rank oranges among the best container fruit trees. TAMU names the smaller citrus types as best suited and says the rest grow in containers only for a limited time. Separately, notes_seasoned ends with an AUTHORING NOTE leaked into consumer copy: 'Do not lift peach's container guidance here; unlike peach, citrus genuinely thrives in pots.' (kickoff text, orange Step 6). Measured 2026-09-25: NOT RENDERED by plant-astro (no template reads container_notes prose) or plant-app origin/main; it SHIPS in plant-app's bundled src/data/guides.json. CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+    "basis": "TAMU citrus fact sheet (5dcf248a...): 'The smaller citrus types (calamondin, limes, kumquats, lemons and limequats) are best suited to container culture, but all will grow for a limited time.'",
+    "deferred_to": "PLA-533"
+   },
+   {
+    "id": "orange_navel_yield_figure_contradicted_pla533",
+    "severity": "medium",
+    "status": "open",
+    "blocks_launch": true,
+    "filed_in_session": "pla533_2a_2026_09_25",
+    "summary": "BLOCKS LAUNCH. yield_expectations.per_plant_seasoned ('A mature standard navel commonly yields on the order of one hundred to two hundred or more pounds of fruit per year') states a heavy-yield figure no cached page gives, and two UF/IFAS pages characterize navels as low-yielding. CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+    "basis": "UF/IFAS HS132 (1022a27c...) cultivar table: 'Navels Early (Oct-Jan) 0-6 Shy Bearers, susceptible to Postbloom Fruit Drop (PFD)'. UF/IFAS HS141 (70844740...): 'Inadequate fruit set and severe fruit drop are major causes of low yield of navel orange.'",
+    "deferred_to": "PLA-533"
+   },
+   {
+    "id": "orange-navel_swingle_scion_pairing_unread_pla612",
+    "severity": "low",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla625_promote1_2026_10_13",
+    "summary": "No T1 page read pairs Swingle with an orange scion. The row describes the stock.",
+    "basis": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D; PLA-612. Non-blocking: the row describes the stock."
+   }
+  ],
+  "cited_at": null,
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D (PLA-612)"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Carrizo citrange].mature_height_ft",
+  "kind": "value",
+  "old": [
+   15,
+   25
+  ],
+  "new": null,
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "nulled (PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D)"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Carrizo citrange].spread_ft",
+  "kind": "value",
+  "old": [
+   15,
+   20
+  ],
+  "new": null,
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "nulled (PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D)"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Carrizo citrange].container_suitable",
+  "kind": "value",
+  "old": false,
+  "new": null,
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "nulled (PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D)"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Carrizo citrange].traits_seasoned",
+  "kind": "prose",
+  "old": "The standard rootstock for sweet oranges in California and the most common commercial choice. Resistant to Phytophthora root rot and tolerant of citrus tristeza virus. Produces vigorous, upright trees with good early bearing and excellent internal fruit quality. Not adapted to calcareous, highly alkaline, or saline soils. Cold tolerance is moderate, less than trifoliate types but adequate in zones 9 through 11.",
+  "new": "Carrizo is a citrange, a cross of Washington navel orange and trifoliate orange. UF/IFAS rates it a large, vigorous tree under Florida grove conditions. It tolerates tristeza virus, and UF/IFAS rates its Phytophthora tolerance intermediate. It does poorly in saline, high-pH and heavy clay soils, and it is susceptible to citrus nematode. Its cold tolerance is moderate, a little below that of trifoliate orange. Foothill growers sometimes use it, and it produces high-quality fruit later in the season.",
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Carrizo citrange].traits_beginner",
+  "kind": "prose",
+  "old": "Carrizo citrange is the most common rootstock for sweet oranges in California and a reliable all-around choice. It resists the root rot that threatens citrus, handles a common citrus virus, and grows a vigorous full-size tree that bears early with good-quality fruit. Its one weakness is that it does not like very alkaline or salty soil, so it is less ideal in some desert areas.",
+  "new": "Carrizo grows a large, vigorous tree. It holds up well against tristeza, a virus that can kill citrus trees quickly. Its protection from root rot is only middling. It struggles in salty, alkaline or heavy clay soil. It handles cold moderately well, a bit less well than trifoliate orange.",
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Carrizo citrange].what_to_ask_nursery",
+  "kind": "prose",
+  "old": "Ask for a certified disease-free tree on Carrizo citrange. Confirm your soil is not highly alkaline or saline, as Carrizo is sensitive to both conditions.",
+  "new": "Ask for a certified disease-free tree whose tag names both the variety and the rootstock. Carrizo does poorly in salty or alkaline soil, so it is a poor match where your soil is either.",
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Carrizo citrange].sources",
+  "kind": "sources",
+  "old": [
+   "ucr_citrus",
+   "uf_ifas_hs132"
+  ],
+  "new": [
+   "ucr_citrus",
+   "uf_ifas_edis",
+   "uc_anr_8100",
+   "ucce_placer_nevada_31_018c",
+   "az_coop_ext",
+   "tamu_agrilife"
+  ],
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Carrizo citrange].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu",
+    "verified": "2026-06-12"
+   },
+   "uf_ifas_hs132": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS132",
+    "verified": "2026-06-12"
+   }
+  },
+  "new": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc2863",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "uc_anr_8100": {
+    "url": "https://escholarship.org/content/qt5hh528qp/qt5hh528qp.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   },
+   "az_coop_ext": {
+    "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1001.pdf",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "cited_at": "rootstock_options[name=Carrizo citrange]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Swingle citrumelo].size_class",
+  "kind": "value",
+  "old": "standard",
+  "new": "semi_dwarf",
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Swingle citrumelo].mature_height_ft",
+  "kind": "value",
+  "old": [
+   12,
+   20
+  ],
+  "new": [
+   8,
+   14
+  ],
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Swingle citrumelo].spread_ft",
+  "kind": "value",
+  "old": [
+   12,
+   18
+  ],
+  "new": null,
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "nulled (PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D)"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Swingle citrumelo].container_suitable",
+  "kind": "value",
+  "old": false,
+  "new": null,
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "nulled (PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D)"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Swingle citrumelo].traits_seasoned",
+  "kind": "prose",
+  "old": "A grapefruit and trifoliate orange hybrid widely used in Florida and the Gulf Coast. Excellent Phytophthora resistance, good cold hardiness among standard rootstocks, and tristeza tolerant. Produces slightly smaller trees than Carrizo with good fruit quality. Not well adapted to calcareous or high-pH soils. A strong general-purpose choice for the Southeast and Gulf regions.",
+  "new": "Swingle is a citrumelo, a cross of Duncan grapefruit and trifoliate orange. It became the most widely used rootstock in Florida. UC Riverside observed it to be particularly well adapted to grapefruit. It resists Phytophthora foot rot and citrus nematode, and it tolerates tristeza virus. Its cold hardiness is good. UF/IFAS rates it an intermediate-size tree, smaller than one on Carrizo. It is not adapted to heavy clay or calcareous soils. On salt the sources differ: UF/IFAS rates its salinity tolerance poor, while UC Riverside calls it moderately salt tolerant.",
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Swingle citrumelo].traits_beginner",
+  "kind": "prose",
+  "old": "Swingle citrumelo is a tough rootstock widely used in Florida and along the Gulf Coast. It strongly resists root rot, handles wet soils better than most, and has decent cold hardiness. It makes a slightly smaller tree than Carrizo with good fruit, and is a good pick in humid, wetter regions.",
+  "new": "Swingle is a tough rootstock that became Florida's most widely used. It is known to suit grapefruit especially well. It resists foot rot and root rot, and a root pest called citrus nematode. It holds up well against tristeza virus and cold. It makes a medium-size tree, smaller than Carrizo. It does poorly in heavy clay or alkaline, lime-rich soil.",
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Swingle citrumelo].what_to_ask_nursery",
+  "kind": "prose",
+  "old": "Ask for Swingle citrumelo rootstock. It handles wet soils better than Carrizo but may not perform well in alkaline or calcareous conditions.",
+  "new": "Swingle is a good rootstock to ask for with grapefruit. It is a poor match for heavy clay or alkaline soil.",
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Swingle citrumelo].sources",
+  "kind": "sources",
+  "old": [
+   "uf_ifas_hs132"
+  ],
+  "new": [
+   "ucr_citrus",
+   "uf_ifas_edis",
+   "tamu_agrilife"
+  ],
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Swingle citrumelo].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "uf_ifas_hs132": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS132",
+    "verified": "2026-06-12"
+   }
+  },
+  "new": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc3771",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "cited_at": "rootstock_options[name=Swingle citrumelo]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Flying Dragon trifoliate].mature_height_ft",
+  "kind": "value",
+  "old": [
+   5,
+   8
+  ],
+  "new": [
+   4,
+   8
+  ],
+  "cited_at": "rootstock_options[name=Flying Dragon trifoliate]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Flying Dragon trifoliate].spread_ft",
+  "kind": "value",
+  "old": [
+   5,
+   8
+  ],
+  "new": null,
+  "cited_at": "rootstock_options[name=Flying Dragon trifoliate]",
+  "reason": "nulled (PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D)"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Flying Dragon trifoliate].traits_seasoned",
+  "kind": "prose",
+  "old": "A naturally dwarfing mutation of Poncirus trifoliata that produces very compact trees well suited to containers and small home gardens. Offers the best cold hardiness of any widely available citrus rootstock. Excellent resistance to Phytophthora, citrus nematode, and tristeza virus. Sensitive to high-pH and saline soils. Fruit quality is good and trees are precocious, though total yield per tree is lower due to small canopy size.",
+  "new": "Flying Dragon is a trifoliate rootstock with a dwarfing effect of about 75 percent. UC Master Gardeners call it the only true dwarfing citrus rootstock, with trees 4 to 8 feet tall. UC Cooperative Extension calls it well suited to home and container citrus, but not to production orchards. UF/IFAS rates it tolerant of tristeza and Phytophthora, resistant to citrus nematode, and good in freezes. It does poorly in saline and high-pH soils. Its juice quality rates high, but small trees bear less fruit per tree.",
+  "cited_at": "rootstock_options[name=Flying Dragon trifoliate]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Flying Dragon trifoliate].traits_beginner",
+  "kind": "prose",
+  "old": "Flying Dragon is a special dwarfing rootstock that keeps the tree small, which makes it perfect for pots and small yards. It also has the best cold hardiness of the common citrus rootstocks and strongly resists root rot. The tradeoff is simply a smaller tree with a smaller crop, which is usually exactly what a container or small-space grower wants.",
+  "new": "Flying Dragon is a dwarfing rootstock that keeps a citrus tree small, usually 4 to 8 feet tall. That makes it a good fit for a pot or a small yard. It holds up well against tristeza virus, root rot and cold. Its fruit is good, but a smaller tree means a smaller crop. It does poorly in salty or alkaline soil.",
+  "cited_at": "rootstock_options[name=Flying Dragon trifoliate]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Flying Dragon trifoliate].what_to_ask_nursery",
+  "kind": "prose",
+  "old": "Ask specifically for Flying Dragon rootstock (a dwarfing selection of trifoliate orange). The compact tree size makes frost protection easier and fits container growing or small yards.",
+  "new": "Ask for Flying Dragon if you want a citrus tree for a pot or a small yard. It is a dwarfing trifoliate rootstock that keeps the tree small.",
+  "cited_at": "rootstock_options[name=Flying Dragon trifoliate]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Flying Dragon trifoliate].sources",
+  "kind": "sources",
+  "old": [
+   "ucr_citrus"
+  ],
+  "new": [
+   "ucce_placer_nevada_31_018c",
+   "ucanr_santa_clara_mg",
+   "uf_ifas_edis",
+   "tamu_agrilife"
+  ],
+  "cited_at": "rootstock_options[name=Flying Dragon trifoliate]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[name=Flying Dragon trifoliate].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu",
+    "verified": "2026-06-12"
+   }
+  },
+  "new": {
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucanr_santa_clara_mg": {
+    "url": "https://ucanr.edu/sites/default/files/2020-02/319461.pdf",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "cited_at": "rootstock_options[name=Flying Dragon trifoliate]",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "recommended_rootstock_note",
+  "kind": "prose",
+  "old": "Grapefruit grows vigorously and yields well on Swingle citrumelo, which resists Phytophthora and citrus nematode and tolerates the tristeza virus that killed off the once-standard sour orange rootstock for grapefruit. Sour orange still produces excellent grapefruit where tristeza is not a threat. For containers or small spaces, Flying Dragon trifoliate makes a dwarf tree. Ask the nursery which rootstock the tree is on and match it to your soil, since Swingle and trifoliate types dislike high-pH, calcareous, or saline soils common in the desert.",
+  "new": "Swingle citrumelo is particularly well adapted to grapefruit. It resists Phytophthora foot rot and citrus nematode, and it tolerates tristeza, a virus that can kill citrus trees quickly. Rootstocks are usually not a choice at retail garden centers, so ask which one your tree is on. For a pot or a small yard, Flying Dragon makes a dwarf tree. Swingle does poorly in calcareous soil, and Flying Dragon does poorly in high-pH soil.",
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) E"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "recommended_rootstock_note_sources",
+  "kind": "sources",
+  "old": null,
+  "new": [
+   "ucr_citrus",
+   "uf_ifas_edis",
+   "tamu_agrilife",
+   "uf_ifas_hs132",
+   "az_coop_ext",
+   "ucce_placer_nevada_31_018c"
+  ],
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) E"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "recommended_rootstock_note_anchoring_urls",
+  "kind": "anchors",
+  "old": null,
+  "new": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc3771",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_hs132": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS132",
+    "verified": "2026-10-13"
+   },
+   "az_coop_ext": {
+    "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1001.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   }
+  },
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) E"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "verification_status.open_findings",
+  "kind": "record",
+  "old": [
+   {
+    "id": "grapefruit_pilot_finding_001",
+    "summary": "Grapefruit-drug interaction (furanocoumarin/CYP3A4 inhibition affecting statins, some blood-pressure, anti-anxiety, and transplant drugs) is a well-documented consumer-safety fact but was NOT asserted in consumer prose because no clean Tier-1 university-extension/.edu page could be read via WebFetch this session (searches surfaced FDA + medical-journal sources only; the FDA consumer page 404'd on fetch). Flagged per brief rather than asserted; certify session should source it from a T1/authoritative page and add an honest note.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "grapefruit_author_fresh_pilot",
+    "status": "open"
+   },
+   {
+    "id": "grapefruit_pilot_finding_002",
+    "summary": "Two key source pages could not be cleanly WebFetched: the Texas A&M AgriLife grapefruit page (aggie-hort.tamu.edu/citrus/grapefruit.htm) hit an http/https + host redirect loop, and the University of Arizona pages (extension.arizona.edu low-desert-citrus 403; AZ1925 grapefruit-pummelo is a 5.3MB scanned PDF not machine-readable). Their grapefruit claims (Texas variety history Ruby Red/Rio Red/Star Ruby/Duncan; desert 9-13 month ripening and long-hang sweetening) were corroborated via multiple WebSearch summaries but not read from a single clean page; confirm at certify.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "grapefruit_author_fresh_pilot",
+    "status": "open"
+   },
+   {
+    "id": "grapefruit_pilot_finding_003",
+    "summary": "Per-cell cold bands (min_winter_temp_f) and the heat_summer_basis verdicts were modeled from grapefruit's documented cold-hardiness rank (below sweet orange, wood damage mid-20s°F, fruit 26-28°F per LSU/UGA) and its documented high-heat need, applied to each region's climate, not from a grapefruit-specific per-region freeze/heat table. Edges are best-effort; tighten at variety-delta pass.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "grapefruit_author_fresh_pilot",
+    "status": "open"
+   },
+   {
+    "id": "grapefruit_pilot_finding_004",
+    "summary": "ca_north_coast modeled as survives_no_fruit/insufficient with an EMPTY calendar (a sharper call than navel orange's marginal), on the judgment that grapefruit's much higher heat requirement means the coolest CA coast produces no dependable edible crop. ca_south_coast kept marginal/marginal with a long-hang calendar. Confirm the coastal split against a CA-coast grapefruit source at review.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "grapefruit_author_fresh_pilot",
+    "status": "open"
+   },
+   {
+    "id": "grapefruit_pilot_finding_005",
+    "summary": "hawaii_tropical is lowest-confidence: modeled marginal/marginal (warm humid tropical lowland lacks the heat accumulation and day-night swing that sweetens grapefruit; pummelo does better), cited to UH CTAHR generally rather than a grapefruit-specific Hawaii calendar. Regional harvest windows across all 10 regions are modeled from the nearest readable citrus source plus grapefruit's long-hang biology, not a grapefruit-specific regional planting chart.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "grapefruit_author_fresh_pilot",
+    "status": "open"
+   },
+   {
+    "id": "grapefruit_pilot_finding_006",
+    "summary": "Pests/diseases and rootstock sourcing lean on citrus-general Tier-1 pages (uc_ipm citrus, uf_ifas_hs132/edis), re-tuned for grapefruit emphasis (rust mite russeting, melanose, greasy-spot and canker susceptibility, faster HLB decline; Swingle citrumelo / sour orange rootstock notes), rather than grapefruit-only trials. Companions are traditional/low-confidence citrus guild items plus the grounded grass-competition avoid. Rootstock recommendation (Swingle citrumelo) modeled from citrus-general guidance.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "grapefruit_author_fresh_pilot",
+    "status": "open"
+   },
+   {
+    "id": "grapefruit_plant_dimensions_sources_conflict_pla465",
+    "severity": "low",
+    "status": "accepted",
+    "blocks_launch": false,
+    "filed_in_session": "pla465_2026-09-17",
+    "summary": "mature_height_ft / mature_spread_ft left null at PLA-465 promote 1. The retired UF/IFAS HS982 (read from an LSU-hosted copy) gives 15 to 20 ft for grapefruit on standard rootstocks; the live UF/IFAS HS1260 rates Swingle citrumelo, the crop's recommended rootstock, 'I, 8 to 14 ft tall' (in-row spacing 8-12 ft), while LSU pub 1234 calls Swingle 'very vigorous'; the crop's own rootstock row carries 12-20. No page states a grapefruit spread.",
+    "resolution_note": "Trevor's ruling 2026-09-17: UNUSABLE SOURCE, null, no derivation attempted. Two sources in conflict anchor neither figure.",
+    "deferred_to": null
+   },
+   {
+    "id": "grapefruit_mulched_basin_contradicted_pla533",
+    "severity": "high",
+    "status": "open",
+    "blocks_launch": true,
+    "filed_in_session": "pla533_2a_2026_09_25",
+    "summary": "BLOCKS LAUNCH, PENDING PLA-610. watering.method_seasoned ('Maintain a mulched, grass-free basin, with mulch pulled back from the trunk.') and watering.method_beginner ('Mulch the area under the tree (but keep the mulch away from the trunk) and keep grass out.') recommend mulching. Three cached T1 pages say mulch is not recommended around citrus. See PLA-610 for the side-by-side read (UF/IFAS CH092/CH093 reportedly recommend mulch with clearance for lime). Values are NOT changed by this finding. CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+    "basis": "UF/IFAS HS132 (1022a27c...): 'Mulches are not recommended around citrus trees, but if trees are located in a cultivated plant bed where mulch is used, it should be kept at least a foot away from tree trunks.' UF/IFAS HS141 (70844740...): 'Trees should not be wrapped or mulched.' TAMU (5dcf248a...): 'Organic mulches are not recommended for citrus trees because of the potential for inducing foot rot disease.'",
+    "deferred_to": "PLA-610"
+   },
+   {
+    "id": "grapefruit_sulfur_acidification_contradicted_pla533",
+    "severity": "high",
+    "status": "open",
+    "blocks_launch": true,
+    "filed_in_session": "pla533_2a_2026_09_25",
+    "summary": "BLOCKS LAUNCH. Five strings advise acidifying high-pH soil with sulfur as the durable fix: ph.note_seasoned ('acidify the soil gradually with elemental sulfur for a durable fix'), ph.note_beginner ('over time you can add sulfur'), soil.preferred_description_seasoned ('gradual acidification help'), failure_diagnostics[5].next_season_tip_seasoned ('Lowering soil pH toward slightly acidic over time with sulfur ... is the durable fix on high-pH ground') and _beginner. ph.sources is ['uf_ifas_hs132'] and failure_diagnostics[5] cites uf_ifas_hs132 + az_coop_ext: the claim is CITED TO THE PAGE THAT CONTRADICTS IT. (Out of scope here: grapefruit's pests[1] sulfur SPRAY for rust mite is a different claim and is not covered by this finding.) CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+    "basis": "UF/IFAS HS132 (1022a27c...): 'If the soil is naturally basic, it will be difficult to change the reaction on any permanent basis.' HS132's only sulfur mention is in a pest-control context. No cached page recommends sulfur acidification.",
+    "deferred_to": "PLA-533"
+   }
+  ],
+  "new": [
+   {
+    "id": "grapefruit_pilot_finding_001",
+    "summary": "Grapefruit-drug interaction (furanocoumarin/CYP3A4 inhibition affecting statins, some blood-pressure, anti-anxiety, and transplant drugs) is a well-documented consumer-safety fact but was NOT asserted in consumer prose because no clean Tier-1 university-extension/.edu page could be read via WebFetch this session (searches surfaced FDA + medical-journal sources only; the FDA consumer page 404'd on fetch). Flagged per brief rather than asserted; certify session should source it from a T1/authoritative page and add an honest note.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "grapefruit_author_fresh_pilot",
+    "status": "open"
+   },
+   {
+    "id": "grapefruit_pilot_finding_002",
+    "summary": "Two key source pages could not be cleanly WebFetched: the Texas A&M AgriLife grapefruit page (aggie-hort.tamu.edu/citrus/grapefruit.htm) hit an http/https + host redirect loop, and the University of Arizona pages (extension.arizona.edu low-desert-citrus 403; AZ1925 grapefruit-pummelo is a 5.3MB scanned PDF not machine-readable). Their grapefruit claims (Texas variety history Ruby Red/Rio Red/Star Ruby/Duncan; desert 9-13 month ripening and long-hang sweetening) were corroborated via multiple WebSearch summaries but not read from a single clean page; confirm at certify.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "grapefruit_author_fresh_pilot",
+    "status": "open"
+   },
+   {
+    "id": "grapefruit_pilot_finding_003",
+    "summary": "Per-cell cold bands (min_winter_temp_f) and the heat_summer_basis verdicts were modeled from grapefruit's documented cold-hardiness rank (below sweet orange, wood damage mid-20s°F, fruit 26-28°F per LSU/UGA) and its documented high-heat need, applied to each region's climate, not from a grapefruit-specific per-region freeze/heat table. Edges are best-effort; tighten at variety-delta pass.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "grapefruit_author_fresh_pilot",
+    "status": "open"
+   },
+   {
+    "id": "grapefruit_pilot_finding_004",
+    "summary": "ca_north_coast modeled as survives_no_fruit/insufficient with an EMPTY calendar (a sharper call than navel orange's marginal), on the judgment that grapefruit's much higher heat requirement means the coolest CA coast produces no dependable edible crop. ca_south_coast kept marginal/marginal with a long-hang calendar. Confirm the coastal split against a CA-coast grapefruit source at review.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "grapefruit_author_fresh_pilot",
+    "status": "open"
+   },
+   {
+    "id": "grapefruit_pilot_finding_005",
+    "summary": "hawaii_tropical is lowest-confidence: modeled marginal/marginal (warm humid tropical lowland lacks the heat accumulation and day-night swing that sweetens grapefruit; pummelo does better), cited to UH CTAHR generally rather than a grapefruit-specific Hawaii calendar. Regional harvest windows across all 10 regions are modeled from the nearest readable citrus source plus grapefruit's long-hang biology, not a grapefruit-specific regional planting chart.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "grapefruit_author_fresh_pilot",
+    "status": "open"
+   },
+   {
+    "id": "grapefruit_pilot_finding_006",
+    "summary": "Pests/diseases and rootstock sourcing lean on citrus-general Tier-1 pages (uc_ipm citrus, uf_ifas_hs132/edis), re-tuned for grapefruit emphasis (rust mite russeting, melanose, greasy-spot and canker susceptibility, faster HLB decline; Swingle citrumelo / sour orange rootstock notes), rather than grapefruit-only trials. Companions are traditional/low-confidence citrus guild items plus the grounded grass-competition avoid. Rootstock recommendation (Swingle citrumelo) modeled from citrus-general guidance.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "grapefruit_author_fresh_pilot",
+    "status": "open"
+   },
+   {
+    "id": "grapefruit_plant_dimensions_sources_conflict_pla465",
+    "severity": "low",
+    "status": "accepted",
+    "blocks_launch": false,
+    "filed_in_session": "pla465_2026-09-17",
+    "summary": "mature_height_ft / mature_spread_ft left null at PLA-465 promote 1. The retired UF/IFAS HS982 (read from an LSU-hosted copy) gives 15 to 20 ft for grapefruit on standard rootstocks; the live UF/IFAS HS1260 rates Swingle citrumelo, the crop's recommended rootstock, 'I, 8 to 14 ft tall' (in-row spacing 8-12 ft), while LSU pub 1234 calls Swingle 'very vigorous'; the crop's own rootstock row carries 12-20. No page states a grapefruit spread.",
+    "resolution_note": "Trevor's ruling 2026-09-17: UNUSABLE SOURCE, null, no derivation attempted. Two sources in conflict anchor neither figure.",
+    "deferred_to": null
+   },
+   {
+    "id": "grapefruit_mulched_basin_contradicted_pla533",
+    "severity": "high",
+    "status": "open",
+    "blocks_launch": true,
+    "filed_in_session": "pla533_2a_2026_09_25",
+    "summary": "BLOCKS LAUNCH, PENDING PLA-610. watering.method_seasoned ('Maintain a mulched, grass-free basin, with mulch pulled back from the trunk.') and watering.method_beginner ('Mulch the area under the tree (but keep the mulch away from the trunk) and keep grass out.') recommend mulching. Three cached T1 pages say mulch is not recommended around citrus. See PLA-610 for the side-by-side read (UF/IFAS CH092/CH093 reportedly recommend mulch with clearance for lime). Values are NOT changed by this finding. CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+    "basis": "UF/IFAS HS132 (1022a27c...): 'Mulches are not recommended around citrus trees, but if trees are located in a cultivated plant bed where mulch is used, it should be kept at least a foot away from tree trunks.' UF/IFAS HS141 (70844740...): 'Trees should not be wrapped or mulched.' TAMU (5dcf248a...): 'Organic mulches are not recommended for citrus trees because of the potential for inducing foot rot disease.'",
+    "deferred_to": "PLA-610"
+   },
+   {
+    "id": "grapefruit_sulfur_acidification_contradicted_pla533",
+    "severity": "high",
+    "status": "open",
+    "blocks_launch": true,
+    "filed_in_session": "pla533_2a_2026_09_25",
+    "summary": "BLOCKS LAUNCH. Five strings advise acidifying high-pH soil with sulfur as the durable fix: ph.note_seasoned ('acidify the soil gradually with elemental sulfur for a durable fix'), ph.note_beginner ('over time you can add sulfur'), soil.preferred_description_seasoned ('gradual acidification help'), failure_diagnostics[5].next_season_tip_seasoned ('Lowering soil pH toward slightly acidic over time with sulfur ... is the durable fix on high-pH ground') and _beginner. ph.sources is ['uf_ifas_hs132'] and failure_diagnostics[5] cites uf_ifas_hs132 + az_coop_ext: the claim is CITED TO THE PAGE THAT CONTRADICTS IT. (Out of scope here: grapefruit's pests[1] sulfur SPRAY for rust mite is a different claim and is not covered by this finding.) CLOSE CONDITION (Trevor, 2026-09-25): this finding resolves ONLY when the named fields are re-authored and every clause of both registers is graded supported by an independent clause check against cached T1 bytes (tools/.evidence_cache, MANIFEST.tsv). Removing, emptying or repointing a citation NEVER resolves it, and deleting the contradicted text alone does not resolve it either.",
+    "basis": "UF/IFAS HS132 (1022a27c...): 'If the soil is naturally basic, it will be difficult to change the reaction on any permanent basis.' HS132's only sulfur mention is in a pest-control context. No cached page recommends sulfur acidification.",
+    "deferred_to": "PLA-533"
+   },
+   {
+    "id": "grapefruit_carrizo_scion_pairing_unread_pla612",
+    "severity": "low",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla625_promote1_2026_10_13",
+    "summary": "No T1 page read pairs Carrizo with a grapefruit scion. The row describes the stock, as HS1260 rates stocks averaged across scions.",
+    "basis": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D; PLA-612. Non-blocking: the row describes the stock."
+   },
+   {
+    "id": "grapefruit_flying_dragon_scion_pairing_unread_pla612",
+    "severity": "low",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla625_promote1_2026_10_13",
+    "summary": "No T1 page read pairs Flying Dragon with grapefruit. 31-018C and Santa Clara name no scion.",
+    "basis": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D; PLA-612. Non-blocking: the row describes the stock."
+   }
+  ],
+  "cited_at": null,
+  "reason": "PLA-625 promote 1 ruling (claude.ai comment 6ab0c56a, approved by Trevor, 2026-10-13) D (PLA-612)"
+ }
+]

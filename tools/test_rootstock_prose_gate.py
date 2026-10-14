@@ -1,7 +1,8 @@
 """PLA-608 Part 2: tools/rootstock_prose_gate.py -- a rootstock named in prose must be a row of that crop's list.
 
 Pins the live measurement (canonical 5420479d: 21 crops by identity, 515 fields, 272 names, 253 matched, 19 waived;
-PLA-625 stop 2 moved own-root wording to a propagation-mode list: 260 names, 248 matched, 12 waived),
+PLA-625 stop 2 moved own-root wording to a propagation-mode list: 260 names, 248 matched, 12 waived; PLA-625 citrus
+promote 1 (2f67359e) re-authored orange-navel's and grapefruit's rows and notes: 268 names, 258 matched, 10 waived),
 proves every guard family on a SCRATCH COPY, carries PLA-608's six named injections, and drives the two entry points
 (whole_crop_gate A64, gate_all's roster half) as subprocesses. Run under pytest (def test_), via
 tools/run_test_tree.py --files. Mutation harness: tools/mutate_rootstock_prose_gate.py.
@@ -39,8 +40,8 @@ def viol(d, slug):
 def test_the_ledger_was_measured_on_this_canonical_family():
     # re-measured on 5420479d (stop-1 ruling: NOT copied from the ticket)
     assert G._K.MEASURED_ON.startswith("5420479d")
-    assert len(G._K.WAIVERS) == 12
-    assert len({(w["crop"], w["field"], w["name"], w["sentence"]) for w in G._K.WAIVERS}) == 12, "duplicate waiver"
+    assert len(G._K.WAIVERS) == 10
+    assert len({(w["crop"], w["field"], w["name"], w["sentence"]) for w in G._K.WAIVERS}) == 10, "duplicate waiver"
     for w in G._K.WAIVERS:
         assert w["ticket"] in ("PLA-608", "PLA-566", "PLA-612") and w["reason"].strip(), w
 
@@ -57,8 +58,8 @@ def test_population_is_the_21_crops_carrying_the_field_by_identity():
 
 def test_inspected_fields_and_names_are_the_measurement():
     assert LIVE["fields"] == 515
-    assert LIVE["mentions"] == 260
-    assert LIVE["matched"] == 248
+    assert LIVE["mentions"] == 268
+    assert LIVE["matched"] == 258
     assert G.refusal(LIVE) is None
 
 
@@ -70,13 +71,18 @@ def test_live_unresolved_equals_the_waiver_ledger_exactly():
 
 def test_the_pla608_part1_hits_are_in_the_ledger_and_st_julien_is_retired():
     names = {(w["crop"], w["name"]) for w in G._K.WAIVERS}
-    for hit in [("plum", "Lovell"), ("plum", "Halford"), ("grapefruit", "sour orange"), ("lime", "alemow"),
+    for hit in [("plum", "Lovell"), ("plum", "Halford"), ("lime", "alemow"),
                 ("lime", "Rangpur lime"), ("lemon", "macrophylla"), ("lemon", "rough lemon"),
                 ("apricot", "Nemaguard"), ("pear-asian", "quince")]:
         assert hit in names, hit
     # plum's note St. Julien was retired BY CONTENT in PLA-626 (00dda31c): no waiver, and no live mention
     assert not any(w["crop"] == "plum" and "Julien" in w["name"] for w in G._K.WAIVERS)
     assert not any(m["crop"] == "plum" and m["id"] == "st_julien" for m in LIVE["unresolved"])
+    # grapefruit's two sour orange note waivers were retired BY CONTENT in PLA-625 citrus promote 1 (2f67359e): the
+    # note was re-authored without sour orange, both waivers went STALE on the post-state and were deleted
+    assert not any(w["crop"] == "grapefruit" for w in G._K.WAIVERS)
+    assert not any(m["crop"] == "grapefruit" for m in LIVE["unresolved"])
+    assert "sour orange" not in by(fresh())["grapefruit"]["recommended_rootstock_note"].lower()
 
 
 def test_the_new_container_notes_hit_is_apple_m27():
@@ -372,7 +378,7 @@ def _run(args):
 def test_cli_live_passes_and_prints_its_population_and_limit():
     rc, out = _run([os.path.join(HERE, "rootstock_prose_gate.py")])
     assert rc == 0, out
-    assert "inspected 21 crops carrying rootstock_options (of 21), 515 fields, 260 rootstock names (248 matched a row)" in out
+    assert "inspected 21 crops carrying rootstock_options (of 21), 515 fields, 268 rootstock names (258 matched a row)" in out
     assert G.LIMIT_LINE in out
     assert G.PROPAGATION_LINE in out and "ungrafted" in G.PROPAGATION_LINE
 
