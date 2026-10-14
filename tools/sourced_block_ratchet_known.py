@@ -17,6 +17,12 @@ five crops cited before arming (watermelon by the glossary promote, the four squ
 was uncited in earlier eras, so a landed promote replaying an earlier post-state checks against KNOWN_AT_ARMING.
 The same promote CLOSED parsnip|growth_stages[id=established]|sources by citation (+35 soil_prep, -1 closed).
 
+GREW (STAGED 2026-10-13 for citrus promote 1, PLA-625 stop 2; lands with that promote): 2663 -> 2682, by ARMING a newly
+named block type. The recommended_rootstock_note pair (PLA-608 ruling 2) lands null on all 21 crops carrying the note;
+the 19 certified crops whose authored note is then uncited are waived by identity (measured on the staged post-state
+59010fe6). avocado and olive (shells, note null) carry no block. Promote 1 cites orange-navel's and grapefruit's notes,
+so it removes those 2 identities in its own commit. No era identity: nothing was cited before arming.
+
 Kept as a .py module, not JSON, because every harness that copies tools/*.py into a scratch
 dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_gate at import
 (measured 2026-09-30: both harnesses' test_valid_cell_passes went red on a .json version).
@@ -24,7 +30,7 @@ dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_g
 TICKET = 'PLA-607'
 MEASURED_ON = '00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e'
 MEASURED_DATE = '2026-09-30'
-COUNT = 2663
+COUNT = 2682
 # Closed by citation, kept by identity so a LANDED promote can replay against the set live in its era
 # (sourced_block_ratchet_gate.KNOWN_AT_ARMING). Never re-waived: a closed identity going uncited again fails A62.
 CLOSED = (
@@ -86,6 +92,7 @@ IDENTITIES = (
     "apple|notifications[4]|sources",
     "apple|notifications[5]|sources",
     "apple|notifications[6]|sources",
+    "apple|recommended_rootstock_note|recommended_rootstock_note_sources",
     "apple|start_method|sources",
     "apple|succession_policy|sources",
     "apple|tips_by_stage.bloom[0]|sources",
@@ -134,6 +141,7 @@ IDENTITIES = (
     "apricot|notifications[5]|sources",
     "apricot|notifications[6]|sources",
     "apricot|notifications[7]|sources",
+    "apricot|recommended_rootstock_note|recommended_rootstock_note_sources",
     "apricot|start_method|sources",
     "apricot|succession_policy|sources",
     "apricot|weather_triggers[0]|sources",
@@ -714,6 +722,7 @@ IDENTITIES = (
     "cherry-sour|notifications[6]|sources",
     "cherry-sour|notifications[7]|sources",
     "cherry-sour|notifications[8]|sources",
+    "cherry-sour|recommended_rootstock_note|recommended_rootstock_note_sources",
     "cherry-sour|start_method|sources",
     "cherry-sour|succession_policy|sources",
     "cherry-sour|weather_triggers[0]|sources",
@@ -744,6 +753,7 @@ IDENTITIES = (
     "cherry-sweet|notifications[6]|sources",
     "cherry-sweet|notifications[7]|sources",
     "cherry-sweet|notifications[8]|sources",
+    "cherry-sweet|recommended_rootstock_note|recommended_rootstock_note_sources",
     "cherry-sweet|start_method|sources",
     "cherry-sweet|succession_policy|sources",
     "cherry-sweet|weather_triggers[0]|sources",
@@ -1073,6 +1083,7 @@ IDENTITIES = (
     "fig|notifications[4]|sources",
     "fig|notifications[5]|sources",
     "fig|notifications[6]|sources",
+    "fig|recommended_rootstock_note|recommended_rootstock_note_sources",
     "fig|start_method|sources",
     "fig|succession_policy|sources",
     "fig|weather_triggers[0]|sources",
@@ -1160,6 +1171,7 @@ IDENTITIES = (
     "grapefruit|notifications[1]|sources",
     "grapefruit|notifications[2]|sources",
     "grapefruit|notifications[3]|sources",
+    "grapefruit|recommended_rootstock_note|recommended_rootstock_note_sources",
     "grapefruit|rotation|sources",
     "grapefruit|soil|sources",
     "grapefruit|start_method|sources",
@@ -1416,6 +1428,7 @@ IDENTITIES = (
     "lemon|notifications[3]|sources",
     "lemon|ph|sources",
     "lemon|pollination|sources",
+    "lemon|recommended_rootstock_note|recommended_rootstock_note_sources",
     "lemon|soil_prep|soil_prep_sources",
     "lemon|start_method|sources",
     "lemon|succession_policy|sources",
@@ -1451,6 +1464,7 @@ IDENTITIES = (
     "lime|notifications[2]|sources",
     "lime|notifications[3]|sources",
     "lime|pollination|sources",
+    "lime|recommended_rootstock_note|recommended_rootstock_note_sources",
     "lime|soil_prep|soil_prep_sources",
     "lime|start_method|sources",
     "lime|succession_policy|sources",
@@ -1471,6 +1485,7 @@ IDENTITIES = (
     "mandarin-clementine|notifications[2]|sources",
     "mandarin-clementine|notifications[3]|sources",
     "mandarin-clementine|pollination|sources",
+    "mandarin-clementine|recommended_rootstock_note|recommended_rootstock_note_sources",
     "mandarin-clementine|rotation|sources",
     "mandarin-clementine|start_method|sources",
     "mandarin-clementine|succession_policy|sources",
@@ -1545,6 +1560,7 @@ IDENTITIES = (
     "mulberry|notifications[5]|sources",
     "mulberry|notifications[6]|sources",
     "mulberry|notifications[7]|sources",
+    "mulberry|recommended_rootstock_note|recommended_rootstock_note_sources",
     "mulberry|start_method|sources",
     "mulberry|succession_policy|sources",
     "mulberry|weather_triggers[0]|sources",
@@ -1586,6 +1602,7 @@ IDENTITIES = (
     "nectarine|notifications[5]|sources",
     "nectarine|notifications[6]|sources",
     "nectarine|notifications[7]|sources",
+    "nectarine|recommended_rootstock_note|recommended_rootstock_note_sources",
     "nectarine|start_method|sources",
     "nectarine|succession_policy|sources",
     "nectarine|weather_triggers[0]|sources",
@@ -1659,6 +1676,7 @@ IDENTITIES = (
     "orange-navel|notifications[3]|sources",
     "orange-navel|ph|sources",
     "orange-navel|pollination|sources",
+    "orange-navel|recommended_rootstock_note|recommended_rootstock_note_sources",
     "orange-navel|rotation|sources",
     "orange-navel|soil|sources",
     "orange-navel|start_method|sources",
@@ -1760,6 +1778,7 @@ IDENTITIES = (
     "pawpaw|notifications[4]|sources",
     "pawpaw|notifications[5]|sources",
     "pawpaw|notifications[6]|sources",
+    "pawpaw|recommended_rootstock_note|recommended_rootstock_note_sources",
     "pawpaw|start_method|sources",
     "pawpaw|succession_policy|sources",
     "pawpaw|weather_triggers[0]|sources",
@@ -1803,6 +1822,7 @@ IDENTITIES = (
     "peach|notifications[5]|sources",
     "peach|notifications[6]|sources",
     "peach|notifications[7]|sources",
+    "peach|recommended_rootstock_note|recommended_rootstock_note_sources",
     "peach|start_method|sources",
     "peach|succession_policy|sources",
     "peach|weather_triggers[0]|sources",
@@ -1828,6 +1848,7 @@ IDENTITIES = (
     "pear-asian|notifications[5]|sources",
     "pear-asian|notifications[6]|sources",
     "pear-asian|notifications[7]|sources",
+    "pear-asian|recommended_rootstock_note|recommended_rootstock_note_sources",
     "pear-asian|start_method|sources",
     "pear-asian|succession_policy|sources",
     "pear-asian|tips_by_stage.bloom[0]|sources",
@@ -1870,6 +1891,7 @@ IDENTITIES = (
     "pear-european|notifications[5]|sources",
     "pear-european|notifications[6]|sources",
     "pear-european|notifications[7]|sources",
+    "pear-european|recommended_rootstock_note|recommended_rootstock_note_sources",
     "pear-european|start_method|sources",
     "pear-european|succession_policy|sources",
     "pear-european|tips_by_stage.bloom[0]|sources",
@@ -1914,6 +1936,7 @@ IDENTITIES = (
     "persimmon|notifications[4]|sources",
     "persimmon|notifications[5]|sources",
     "persimmon|notifications[6]|sources",
+    "persimmon|recommended_rootstock_note|recommended_rootstock_note_sources",
     "persimmon|start_method|sources",
     "persimmon|succession_policy|sources",
     "persimmon|weather_triggers[0]|sources",
@@ -1971,6 +1994,7 @@ IDENTITIES = (
     "plum|notifications[5]|sources",
     "plum|notifications[6]|sources",
     "plum|notifications[7]|sources",
+    "plum|recommended_rootstock_note|recommended_rootstock_note_sources",
     "plum|start_method|sources",
     "plum|succession_policy|sources",
     "plum|weather_triggers[0]|sources",
@@ -2014,6 +2038,7 @@ IDENTITIES = (
     "pomegranate|notifications[5]|sources",
     "pomegranate|notifications[6]|sources",
     "pomegranate|notifications[7]|sources",
+    "pomegranate|recommended_rootstock_note|recommended_rootstock_note_sources",
     "pomegranate|start_method|sources",
     "pomegranate|succession_policy|sources",
     "pomegranate|weather_triggers[0]|sources",

@@ -6,7 +6,7 @@
         "sense": "planting in hills: a small group of seeds sown together in one spot (some guides raise it into a low mound)",
         "forms": ["hill", "hills"],
         "crops": ["pumpkin", "butternut-squash", "acorn-squash", "spaghetti-squash", "watermelon", "honeydew-melon", "cantaloupe", "slicing-cucumber", "pickling-cucumber", "cucumber", "zucchini-courgette", "yellow-summer-squash"],
-        "refuse_on": ["\\bhill(ed|ing)?\\s+(a\\s+little\\s+)?(soil|up|mulch)\\b", "\\bhilled\\b", "\\bhilling\\b"],
+        "refuse_on": ["\\bhill(ed|ing)?\\s+(a\\s+little\\s+)?(soil|up|mulch)\\b"],
         "exclusions": [
           {"id": "rosemary-hill-hardy", "pattern": "\\bHill\\s+Hardy\\b", "why": "rosemary cultivar 'Hill Hardy'"},
           {"id": "rosemary-madalene-hill", "pattern": "\\bMadalene\\s+Hill\\b", "why": "cultivar synonym named for Madalene Hill"},

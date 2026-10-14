@@ -67,8 +67,8 @@ RATCHET = {
          "test_unarmed_null_siblings_add_no_uncited_block"),
         # --- PLA-608 rootstock-note pair (NAMED 2026-10-09, PLA-625 stop 1; arms with citrus promote 1) -----
         ("rr_note", "rr_note_flag_flipped",
-         "RECOMMENDED_ROOTSTOCK_NOTE_ARMED = False\n",
-         "RECOMMENDED_ROOTSTOCK_NOTE_ARMED = True" + M + "\n",
+         "RECOMMENDED_ROOTSTOCK_NOTE_ARMED = True\n",
+         "RECOMMENDED_ROOTSTOCK_NOTE_ARMED = False" + M + "\n",
          "RecommendedRootstockNoteSibling and test_the_flag_matches_the_data"),
         ("rr_note", "rr_note_skip_removed",
          '        if name == "recommended_rootstock_note" and not recommended_rootstock_note_armed:\n            continue\n',

@@ -109,7 +109,7 @@ LIVE_PINS = {
         ('test_glossary_sense.py::test_name_exclusions_live', 'equality', 'population', 'per-exclusion live leaf counts (NAMES table: Hill Hardy 31, Madalene 1, Hill Country 7, Beverly Hills 2, Mediterranean 2, Hawaii 11)', 250),
         ('test_glossary_sense.py::test_glossary_entries_with_the_seven_keys_load', 'equality', 'population', 'classify_dataset(DATA, spec).inspected == 224', 318),
         ('test_glossary_sense.py::test_d8_no_pepper_or_eggplant_leaf_carries_a_hill_word_after_part_d', 'equality', 'population', 'pepper / eggplant hill-word leaves == [] (D8 exclusion matches no live leaf)', 128),
-        ('test_glossary_sense.py::test_every_refuse_on_pattern_is_exercised_alone_or_waived', 'equality', 'content', 'each refuse_on pattern of the LIVE glossary drives exactly its SOLE_CASE fixture case (2 waived UNREACHABLE)', 396),
+        ('test_glossary_sense.py::test_every_refuse_on_pattern_is_exercised_alone', 'equality', 'content', 'each refuse_on pattern of the LIVE glossary drives exactly its SOLE_CASE fixture case (none waived; the 2 UNREACHABLE hill patterns dropped)', 396),
     ],
     'test_annual_calendar.py': [
         ('module-level', 'equality', 'population', '_got == _PINNED_ANNUALS (84 slugs by identity)', 266),
@@ -212,17 +212,17 @@ LIVE_PINS = {
         ('module-level', 'equality', 'population', 'len(ud) == 6 (the ruled utah_dixie cucurbit hits)', 143),
     ],
     'test_sourced_block_ratchet_gate.py': [
-        ('test_sourced_block_ratchet_gate.py::LiveCanonical::test_live_uncited_equals_the_waiver_set_exactly', 'equality', 'population', 'set(live uncited) == set(G.KNOWN) (2634)', 245),
+        ('test_sourced_block_ratchet_gate.py::LiveCanonical::test_live_uncited_equals_the_waiver_set_exactly', 'equality', 'population', 'set(live uncited) == set(G.KNOWN) (2682: 2634 at arming, +35 soil_prep, +19 recommended_rootstock_note, -6 closed)', 245),
         ('test_sourced_block_ratchet_gate.py::LiveCanonical::test_inspected_population_and_verdict', 'floor', 'population', 'inspected >= G.MIN_INSPECTED (6500, pinned :128); stale == []', 239),
         ('test_sourced_block_ratchet_gate.py::PotSizeSubRule::test_live_pot_population_is_the_known_four', 'equality', 'population', "roster(_CANON)[5] == ['dry-bean','grapefruit','green-beans-bush','orange-navel']", 568),
         ('test_sourced_block_ratchet_gate.py::MatureDimensionsSibling::test_armed_the_live_canonical_cites_every_authored_height', 'floor', 'population', 'len(want) >= 59; cited == want', 212),
         ('test_sourced_block_ratchet_gate.py::LiveCanonical::test_the_tickets_98_slot_present_blocks_are_inside_the_population', 'ceiling (red on growth)', 'population', 'len(slots) <= 98', 269),
-        ('test_sourced_block_ratchet_gate.py::PinsAreTheMeasurement::test_waiver_file_is_the_measured_population', 'equality', 'sha', "_KNOWN_DOC['measured_on'] == SHA (00dda31c..); count == 2634", 83),
+        ('test_sourced_block_ratchet_gate.py::PinsAreTheMeasurement::test_waiver_file_is_the_measured_population', 'equality', 'sha', "_KNOWN_DOC['measured_on'] == SHA (00dda31c..); count == 2682", 101),
         ('test_sourced_block_ratchet_gate.py::LiveCanonical::test_per_family_counts / test_every_certified_crop_has_at_least_one_waived_block', 'equality', 'population', 'family counts of KNOWN == FAMILY_COUNTS; crops in KNOWN == 121', 251),
         ('test_sourced_block_ratchet_gate.py::MatureDimensionsSibling::setUp', 'equality', 'content', 'carrot mature_height_ft and mature_spread_ft are None', 149),
         # PLA-608 / PLA-625 stop 1 (2026-10-09): the rootstock-note pair is NAMED, unarmed until citrus promote 1 writes it.
-        ('test_sourced_block_ratchet_gate.py::RecommendedRootstockNoteSibling::setUp', 'equality', 'content', 'lemon recommended_rootstock_note is a str and carries no recommended_rootstock_note_sources key', 264),
-        ('test_sourced_block_ratchet_gate.py::RecommendedRootstockNoteSibling::test_the_flag_matches_the_data', 'equality', 'content', 'RECOMMENDED_ROOTSTOCK_NOTE_ARMED == any certified crop carries recommended_rootstock_note_sources (flips with promote 1)', 269),
+        ('test_sourced_block_ratchet_gate.py::RecommendedRootstockNoteSibling::setUp', 'equality', 'content', 'lemon recommended_rootstock_note is a str and its recommended_rootstock_note_sources is null (citrus promote 1 writes the pair)', 264),
+        ('test_sourced_block_ratchet_gate.py::RecommendedRootstockNoteSibling::test_the_flag_matches_the_data', 'equality', 'content', 'RECOMMENDED_ROOTSTOCK_NOTE_ARMED == any certified crop carries recommended_rootstock_note_sources (ARMED with citrus promote 1)', 272),
     ],
     # PLA-608 Part 2 (2026-10-09, citrus/rootstock pass stop 1): rootstock_prose_gate reads the LIVE canonical's rootstock
     # prose (note, row traits / what_to_ask_nursery, container_notes) on every crop carrying rootstock_options. Measured on

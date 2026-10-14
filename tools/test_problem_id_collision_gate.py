@@ -98,7 +98,10 @@ CANON = os.path.join(REPO, "crops_data_final.json")
 # RE-MEASURED 2026-10-06 (PLA-673 part D), aaf004a2 -> 5420479d. Pepper Phytophthora entry re-authored (same id), watermelon
 # row entry + thinning; no problem id, pest or disease entry added, removed or renamed. The gate's whole output is
 # byte-identical on both states (36 findings / 12 open / 24 registered).
-PINNED_SHA = "5420479d85bb8b65be62fa459fd97b8ce12dfdf9d3951e455be52aadc7a98063"
+# RE-MEASURED 2026-10-13 (PLA-625 citrus stop 2, STAGED scratch), 5420479d -> 59010fe6. Note-sources null pair added
+# on 21 crops + glossary hill refuse_on; no problem id, pest or disease entry added, removed or renamed. The gate's
+# whole output is byte-identical on both states (36 findings / 12 open / 24 registered).
+PINNED_SHA = "59010fe6994b95eb52407fa60a6995eedefe5636bd6a52d2f960d4b08641cf68"
 
 # ---------------------------------------------------------------------------------------------
 # The PLA-449 fixture, transcribed from the ticket. NEVER computed from a scan.

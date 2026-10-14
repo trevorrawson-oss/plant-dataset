@@ -348,10 +348,9 @@ SOLE_CASE = {
     ("hilling", r"\bhills?\s+(spaced|apart)\b"): "refuse-hills-spaced-on-carrot",
     ("hilling", r"\bseeds?\s+(in|to)\s+(a|each)\s+hill\b"): "refuse-seeds-in-each-hill-on-sweet-corn",
 }
-# Waived by identity AND character: UNREACHABLE as a sole cause. The hill term's forms are hill/hills, so any sentence
-# these match also holds a hilled/hilling occurrence that refuses on its FORM; dropping the pattern changes no verdict.
-# Reported for a ruling (PLA-673 part D). If either ever becomes the sole cause, this waiver fails as STALE.
-UNREACHABLE = {("hill", r"\bhilled\b"), ("hill", r"\bhilling\b")}
+# The hill term's \bhilled\b / \bhilling\b were UNREACHABLE as a sole cause and are DROPPED from refuse_on (PLA-673
+# part D ruling, option a; citrus/rootstock pass stop 1, rides promote 1). Their waiver is deleted with them: every
+# remaining pattern is exercised alone.
 
 
 def _fixture():
@@ -380,7 +379,7 @@ def test_every_fixture_case_holds_on_the_canonical_glossary():
     assert _failing(DATA["glossary"], cases) == []
 
 
-def test_every_refuse_on_pattern_is_exercised_alone_or_waived():
+def test_every_refuse_on_pattern_is_exercised_alone():
     import copy as _copy
     cases = _fixture()[1]["cases"]
     seen = set()
@@ -390,8 +389,5 @@ def test_every_refuse_on_pattern_is_exercised_alone_or_waived():
             g = _copy.deepcopy(DATA["glossary"])
             del g[tid]["match"][0]["refuse_on"][i]
             got = _failing(g, cases)
-            if (tid, pat) in UNREACHABLE:
-                assert got == [], f"STALE waiver: {tid} {pat} is now the sole cause of {got}"
-            else:
-                assert got == [SOLE_CASE[(tid, pat)]], (tid, pat, got)
-    assert seen == set(SOLE_CASE) | UNREACHABLE      # every pattern is named, none invented
+            assert got == [SOLE_CASE[(tid, pat)]], (tid, pat, got)
+    assert seen == set(SOLE_CASE)      # every pattern is named, none invented

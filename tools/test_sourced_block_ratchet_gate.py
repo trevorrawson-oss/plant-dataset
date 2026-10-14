@@ -44,6 +44,7 @@ FAMILY_COUNTS = {
     "pollination": 9, "rotation": 8, "verification_status.field_additions[]": 3, "thinning": 3,
     "soil": 2, "storage": 2, "yield_expectations": 2, "ph": 2,
     "soil_prep": 35,   # armed 2026-10-06 (PLA-673 B2): the 35 null-citation crops, measured on aaf004a2
+    "recommended_rootstock_note": 19,  # armed with citrus promote 1 (PLA-625 stop 2 staging): 19 null-citation crops
 }
 
 
@@ -97,10 +98,11 @@ class PinsAreTheMeasurement(unittest.TestCase):
         # 2634 at arming (00dda31c); 2630 after housekeeping 60 Phase C cited 4 waived blocks (afbd4113);
         # 2629 after PLA-666 cited raspberry|start_method (350eda38); 2664 after PLA-673 B2 ARMED soil_prep with its
         # 35 measured null-citation crops (aaf004a2): growth by arming a newly named block type, ruled; the same
-        # promote cited parsnip|growth_stages[id=established] (-1): 2629 + 35 - 1 = 2663
-        self.assertEqual(G._KNOWN_DOC["count"], 2663)
-        self.assertEqual(len(G.KNOWN), 2663)
-        self.assertEqual(len(G._KNOWN_DOC["identities"]), 2663, "duplicate identities")
+        # promote cited parsnip|growth_stages[id=established] (-1): 2629 + 35 - 1 = 2663; 2682 after citrus promote 1
+        # ARMED recommended_rootstock_note with its 19 measured null-citation certified crops (PLA-625 stop 2 staging)
+        self.assertEqual(G._KNOWN_DOC["count"], 2682)
+        self.assertEqual(len(G.KNOWN), 2682)
+        self.assertEqual(len(G._KNOWN_DOC["identities"]), 2682, "duplicate identities")
 
     def test_the_named_list_is_what_was_ruled(self):
         self.assertEqual(set(G.DICT_BLOCKS), {
@@ -261,8 +263,11 @@ class RecommendedRootstockNoteSibling(unittest.TestCase):
     three-state contract, register entry). Armed today, every authored note would fail as a NEW uncited block."""
 
     def setUp(self):
+        # citrus promote 1 writes the pair null on every crop carrying the note (three-state contract: null = not
+        # yet assessed); lemon's note is cited in a later promote
         self.assertIsInstance(by(_CANON)[RR_CROP].get("recommended_rootstock_note"), str)
-        self.assertNotIn("recommended_rootstock_note_sources", by(_CANON)[RR_CROP])
+        self.assertIn("recommended_rootstock_note_sources", by(_CANON)[RR_CROP])
+        self.assertIsNone(by(_CANON)[RR_CROP]["recommended_rootstock_note_sources"])
 
     def test_the_flag_matches_the_data(self):
         carrying = any("recommended_rootstock_note_sources" in c for c in _CANON["crops"] if G.certified(c))
@@ -306,8 +311,29 @@ class RecommendedRootstockNoteSibling(unittest.TestCase):
                              for i in G.uncited(c, recommended_rootstock_note_armed=True)))
 
     def test_unarmed_the_live_canonical_counts_no_note_block(self):
+        # armed by default since citrus promote 1, so the unarmed branch shows only when it is passed False
         self.assertFalse(any("|recommended_rootstock_note|" in i for c in _CANON["crops"] if G.certified(c)
-                             for i, _ok in G.blocks(c)))
+                             for i, _ok in G.blocks(c, recommended_rootstock_note_armed=False)))
+
+    def test_armed_the_19_are_exactly_the_waived_notes(self):
+        """The pair lands null on the 21 crops carrying the note; the 19 certified with an authored note are the
+        waiver set, and the two shells (avocado, olive: note null) carry no block."""
+        waived = {i.split("|")[0] for i in G.KNOWN if "|recommended_rootstock_note|" in i}
+        authored = {c["slug"] for c in _CANON["crops"] if G.certified(c)
+                    and isinstance(c.get("recommended_rootstock_note"), str) and c["recommended_rootstock_note"].strip()}
+        live = {i.split("|")[0] for c in _CANON["crops"] if G.certified(c)
+                for i in G.uncited(c) if "|recommended_rootstock_note|" in i}
+        self.assertEqual(len(waived), 19)
+        self.assertEqual(waived, authored & live)
+        self.assertEqual(live - waived, set())
+
+    def test_armed_a_new_uncited_note_fails_by_name(self):
+        d = fresh()
+        crop = next(c for c in d["crops"] if G.certified(c) and "recommended_rootstock_note" not in c)
+        crop["recommended_rootstock_note"] = "Ask the nursery which rootstock the tree is on."
+        v = G.roster(d)[3]
+        self.assertTrue(any(f"{crop['slug']}|recommended_rootstock_note|recommended_rootstock_note_sources" in m
+                            for m in v), v)
 
 
 # ------------------------------------------------------- closures keep landed replays reproducible
@@ -331,7 +357,7 @@ class ClosedWaivers(unittest.TestCase):
         self.assertEqual(set(G.CLOSED), CLOSED_2026_10_04 | CLOSED_2026_10_05 | CLOSED_SOIL_PREP | CLOSED_2026_10_06)
         self.assertEqual(G.KNOWN & set(G.CLOSED), frozenset())
         self.assertEqual(G.KNOWN_AT_ARMING, G.KNOWN | set(G.CLOSED))
-        self.assertEqual(len(G.KNOWN_AT_ARMING), 2674)
+        self.assertEqual(len(G.KNOWN_AT_ARMING), 2693)  # 2682 live + 11 closed (2674 before the 19 armed notes)
 
     def test_an_era_post_state_flags_exactly_the_closed_under_the_live_set(self):
         import promote_fixture
@@ -392,7 +418,8 @@ class LiveCanonical(unittest.TestCase):
                 if isinstance(v, dict) and k not in ("companions", "zones", "regions") \
                         and "sources" in v and v["sources"] in ([], None):
                     slots.add(f"{c['slug']}|{k}|sources")
-        self.assertLessEqual(len(slots), 133, "the slot-present subset may shrink, never grow (98 + 35 armed soil_prep)")
+        self.assertLessEqual(len(slots), 152, "the slot-present subset may shrink, never grow "
+                                             "(98 + 35 armed soil_prep + 19 armed recommended_rootstock_note)")
         self.assertEqual(slots - G.KNOWN, set())
 
     def test_a_clean_crop_passes(self):

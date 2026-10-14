@@ -4,6 +4,38 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-10-13 -- PLA-625 CITRUS HOUSEKEEPING LANDED (`5420479d` -> `59010fe6`; stops 1 + 2, the first commit of promote 1's push)
+
+The stop 1 and stop 2 staging (PLA-625 rulings 4334c8fd and c12b65c1), landed as ONE commit ahead of promote 1 so the promote
+replays from a pinned base. Byte-identical to what passed the full tree in a throwaway worktree on 2026-10-13 (stop 2 report
+b56b0b45), except LATEST.txt's session line and CURRENT_STATE's pointer line, rewritten from "STAGED SCRATCH" to this landing.
+
+* **Note-sources pair:** `recommended_rootstock_note_sources` + `recommended_rootstock_note_anchoring_urls`, both null, inserted
+  right after `recommended_rootstock_note` on all 21 crops carrying it (19 certified + the avocado and olive shells). Register
+  row 34. Three-state contract (null = not assessed; [] = assessed, none found; non-empty = cited).
+* **A62:** `RECOMMENDED_ROOTSTOCK_NOTE_ARMED = True`; the waiver set grows 2663 -> 2682 by the 19 uncited notes (apple, apricot,
+  cherry-sour, cherry-sweet, fig, grapefruit, lemon, lime, mandarin-clementine, mulberry, nectarine, orange-navel, pawpaw,
+  peach, pear-asian, pear-european, persimmon, plum, pomegranate); KNOWN_AT_ARMING 2674 -> 2693.
+* **Glossary hill term** (PLA-673 part D ruling, option a): `glossary.hill.match[0].refuse_on` drops `\bhilled\b` and
+  `\bhilling\b`; the waived-by-identity UNREACHABLE test is deleted with them. Sense guard 224 leaves (103 hill / 60 hilling /
+  61 none) unchanged; match fixture e075f0f8 unchanged; no consumer-shared fixture moves (the next bump carries the glossary
+  record, refuse_on 3 -> 1).
+* **CURRENT_STATE splice** (stop 1 item 1a): see the 2026-10-09 entry below.
+* **Re-pins:** problem_id_collision_gate PINNED_SHA 5420479d -> 59010fe6 (gate output byte-identical on both states: 36
+  findings / 12 open / 24 registered).
+
+## 2026-10-09 -- CURRENT_STATE consumer-instruction splice (citrus/rootstock pass stop 1, PLA-625; rides promote 1)
+
+Item 1a of the stop-1 ruling (PLA-625, 2026-10-09). Consumers are pinned (PLA-713), so CURRENT_STATE.md no longer
+tells a session to re-export or rebuild plant-app. Each line below was REMOVED from CURRENT_STATE.md's "Active work +
+next step" section, verbatim, and replaced there by one sentence on the Consumers line: "Consumers are pinned at 86d6ed6; data bumps happen only on Trevor's call, using the PLA-712 template."
+
+* (was CURRENT_STATE.md line 59) Consumers stay on fbe11bc with fixture 01912d65 (APP 673 STEP 3, worktree pla-673-render); B2 reaches them at a later data bump with fixture 990eac25. ~/plant-app's checkout re-exported at aaf004a2 (uncommitted; no session commits it). The astro submodule bump is the astro session's.
+* (was CURRENT_STATE.md line 60) The consumer release is next (app + site the same day): the held PLA-666 floor-removal branches, PLA-638 parity, Housekeeping 60's text and these row figures, after a plant-app re-export and the astro submodule bump.
+* (was CURRENT_STATE.md line 61) Consumers: plant-app re-export + the astro bump pick up the prose (not this session).
+* (was CURRENT_STATE.md line 62) plant-app re-exported at b331e5f2 (HEIGHT tile on 43 more crops); the astro submodule bump is the astro session's.
+* (was CURRENT_STATE.md line 69) plant-app needs a re-export (PLA-628): its `guides.json` bundles `container_notes` whole (PLA-533, PLA-626) and `MethodSheet` renders `control_methods` cautions (PLA-457); export frozen at `d7b33682` until `378c7b9f` ships. plant-astro picks all three up only through a submodule bump (the astro session's call).
+
 ## 2026-10-06 -- PLA-673 PART D LANDED (`aaf004a2` -> `5420479d`)
 
 ONE promote (`tools/promote_pla673_d.py`, new, derived from promote_pla673_b2 by `tools/staging/pla673_d/derive_promote.py`;

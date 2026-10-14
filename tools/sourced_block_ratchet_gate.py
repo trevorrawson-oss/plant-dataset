@@ -87,10 +87,12 @@ MATURE_DIMENSIONS_ARMED = True
 # cited before arming are CLOSED (era identities, sourced_block_ratchet_known.py). Landed promotes that replay an earlier
 # post-state pass soil_prep_armed=False or known=KNOWN_AT_ARMING, the mature_dimensions precedent.
 SOIL_PREP_ARMED = True
-# recommended_rootstock_note: NAMED 2026-10-09 (PLA-608 Part 2's tools commit), NOT ARMED. It flips in the promote that
-# writes the pair (citrus promote 1), with that promote's measured waiver set: armed today, every certified crop's
-# authored note would fail as a NEW uncited block. test_sourced_block_ratchet_gate pins the flag to the data.
-RECOMMENDED_ROOTSTOCK_NOTE_ARMED = False
+# recommended_rootstock_note: NAMED 2026-10-09 (PLA-608 Part 2's tools commit). ARMED in the promote that writes the
+# pair (citrus promote 1; structure staged in PLA-625 stop 2, 2026-10-13): the pair lands null on all 21 crops carrying
+# the note, and the 19 certified crops whose authored note is then uncited are waived by identity (measured on the
+# staged post-state). Landed promotes that replay an earlier post-state pass recommended_rootstock_note_armed=False or
+# known=KNOWN_AT_ARMING, the soil_prep precedent. test_sourced_block_ratchet_gate pins the flag to the data.
+RECOMMENDED_ROOTSTOCK_NOTE_ARMED = True
 # List families: name -> (locator, identity key or None for index, parent block covering it or None)
 ITEM_FAMILIES = {
     "pests": (("pests",), "id", None),
