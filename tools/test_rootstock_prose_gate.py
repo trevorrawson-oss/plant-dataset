@@ -288,6 +288,74 @@ def test_a_row_named_only_seedling_holds_apple_seedling():
     assert any("apple seedling" in v for v in viol(d, "pear-european"))
 
 
+# ------------------------------------------------------------------ PARENTAGE (PLA-625 promote 2 amendment, 2026-10-16)
+PARENT_SENTENCE = "Swingle is a citrumelo, a cross of Duncan grapefruit and trifoliate orange."
+LIME_SWINGLE = "Swingle citrumelo (trifoliate hybrid)"
+
+
+def _lime_with(where):
+    """A scratch copy whose lime carries PARENT_SENTENCE at `where` (lime has no trifoliate or Flying Dragon row)."""
+    d = fresh()
+    lime = by(d)["lime"]
+    assert not ({"trifoliate_orange", "flying_dragon"} & G.row_index(lime)[0])
+    if where == "swingle_row":
+        row(lime, LIME_SWINGLE)["traits_seasoned"] = PARENT_SENTENCE
+    elif where == "note":
+        lime["recommended_rootstock_note"] += " " + PARENT_SENTENCE
+    elif where == "alemow_row":
+        lime["rootstock_options"].append({"name": "Alemow (Citrus macrophylla)", "traits_seasoned": PARENT_SENTENCE})
+    elif where == "container_notes":
+        lime["container_notes"]["notes_seasoned"] += " " + PARENT_SENTENCE
+    return d
+
+
+def test_parentage_is_the_ruled_table():
+    """Exactly the two hybrids the amendment names, each parent set as ruled."""
+    assert {s: tuple(e["parents"]) for s, e in G.PARENTAGE.items()} == {
+        "swingle": ("Duncan grapefruit", "trifoliate orange"),
+        "carrizo": ("Washington navel orange", "trifoliate orange")}
+    assert G.parent_stocks({"swingle"}) == {"trifoliate_orange"}
+    assert G.parent_stocks({"carrizo"}) == {"trifoliate_orange"}
+    assert G.parent_stocks({"rough_lemon", "alemow"}) == set()
+
+
+def test_parentage_basis_is_in_cached_t1_bytes():
+    """Entered only from cached T1 bytes: every basis quote is in the hashed, MANIFEST-listed page it names."""
+    from cited_promote_common import cached_quote, manifest
+    ev = os.path.join(HERE, ".evidence_cache")
+    man, cache = manifest(ev), {}
+    n = 0
+    for sid, e in G.PARENTAGE.items():
+        assert e["basis"], sid
+        for label, url, sha, quote in e["basis"]:
+            cached_quote({"url": url, "sha256": sha, "quote": quote}, man, ev, cache, f"{sid} {label}")
+            n += 1
+    assert n == 3
+
+
+def test_a_hybrids_own_row_may_name_its_parent():
+    assert viol(_lime_with("swingle_row"), "lime") == []
+
+
+@pytest.mark.parametrize("where", ["note", "alemow_row", "container_notes"])
+def test_the_parent_named_anywhere_else_still_FAILS(where):
+    v = viol(_lime_with(where), "lime")
+    assert len(v) == 1 and "names 'trifoliate orange'" in v[0], v
+
+
+def test_a_parent_not_in_the_table_FAILS():
+    d = fresh()
+    row(by(d)["lime"], LIME_SWINGLE)["traits_seasoned"] = "Swingle is a cross of sour orange and Cleopatra mandarin."
+    v = viol(d, "lime")
+    assert sorted(re.findall(r"names '([^']+)'", " ".join(v))) == ["Cleopatra mandarin", "sour orange"], v
+
+
+def test_emptying_the_table_makes_lime_FAIL(monkeypatch):
+    monkeypatch.setattr(G, "PARENTAGE", {})
+    v = viol(_lime_with("swingle_row"), "lime")
+    assert len(v) == 1 and "names 'trifoliate orange'" in v[0], v
+
+
 # ------------------------------------------------------------------ PLA-608's six named injections
 def test_injection_1_st_julien_into_peachs_note_FAILS():
     d = fresh()
@@ -443,6 +511,7 @@ def test_cli_live_passes_and_prints_its_population_and_limit():
     assert "inspected 21 crops carrying rootstock_options (of 21), 515 fields, 268 rootstock names (258 matched a row)" in out
     assert G.LIMIT_LINE in out
     assert G.PROPAGATION_LINE in out and "ungrafted" in G.PROPAGATION_LINE
+    assert G.PARENTAGE_LINE in out and "swingle: Duncan grapefruit, trifoliate orange" in G.PARENTAGE_LINE
 
 
 def test_cli_exit_codes(tmp_path):

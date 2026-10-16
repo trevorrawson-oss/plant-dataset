@@ -130,6 +130,23 @@ FAMILIES = {
     "ohxf": ([r"OHxF", r"Old\s+Home\s*(?:x|×)\s*Farmingdale"], {"ohxf_87", "ohxf_97", "ohxf_333"}),
 }
 SELECTION_OF = {"flying_dragon": "trifoliate_orange"}
+# PARENTAGE (PLA-625 promote 2 amendment, 2026-10-16): a hybrid stock -> its parents, entered ONLY from cached T1 bytes
+# (basis: label, url, sha256, the quote; test_rootstock_prose_gate proves each quote against the hashed page). A parent
+# that is a known stock resolves ONLY inside that hybrid's own row fields (ROW_FIELDS of a row whose name holds the
+# hybrid). Named anywhere else -- another row, the note, container_notes -- it must still resolve to a row.
+PARENTAGE = {
+    "swingle": {"parents": ("Duncan grapefruit", "trifoliate orange"),
+                "basis": (("UCR-3771", "https://citrusvariety.ucr.edu/crc3771",
+                           "b7c86be25f532cbdf26120a88d50564bdfd388621fb12681c373a45fc5fcc0c9",
+                           "'duncan' grapefruit x poncirus trifoliata"),
+                          ("CH093", "https://ask.ifas.ufl.edu/publication/CH093",
+                           "6fc9a10b6b331b5676fb16be747852eb56ffeecc9077aeca44cb6aaf4f9e92fa",
+                           "swingle citrumelo ( c. paradise 'duncan' x poncirus trifoliate )"))},
+    "carrizo": {"parents": ("Washington navel orange", "trifoliate orange"),
+                "basis": (("UCR-2863", "https://citrusvariety.ucr.edu/crc2863",
+                           "651bd22c46ba74e1630d3a0e4479d7602aa557d9b55edbf46f0e7fac040e88cb",
+                           "a cross of washington navel and trifoliate orange"),)},
+}
 # A row whose WHOLE name is one of these is read as that stock (apple's row is named just "seedling"; a bare "seedling"
 # in prose is not a stock name, so it is not in STOCKS).
 ROW_NAME_ALIASES = {"seedling": "apple_seedling"}
@@ -138,6 +155,14 @@ NOT_ROOTSTOCKS = [r"(?-i:North\s+Star)", r"(?-i:Meteor)"]   # cherry-sour cultiv
 PROPAGATION_MODES = [r"own[- ]roots?(?:ed)?", r"ungrafted", r"cutting-grown", r"from\s+(?:hardwood\s+)?cuttings?"]
 PROPAGATION_LINE = ("propagation modes, never read as rootstocks (PLA-464; PLA-625 stop 2): "
                     + " | ".join(PROPAGATION_MODES))
+
+
+def _parentage_line():
+    return ("parentage, resolving only in the hybrid's own row (PLA-625 promote 2 amendment): "
+            + "; ".join(f"{s}: {', '.join(e['parents'])}" for s, e in PARENTAGE.items()))
+
+
+PARENTAGE_LINE = _parentage_line()
 
 ROW_FIELDS = ("traits_seasoned", "traits_beginner", "what_to_ask_nursery")
 NOTE_FIELD = "recommended_rootstock_note"
@@ -202,9 +227,18 @@ def row_index(crop):
     return stocks, fams
 
 
-def resolves(kind, nid, stocks, fams):
+def parent_stocks(row_stocks):
+    """The known stocks named as parents of the hybrids a row holds (PARENTAGE, read at call time)."""
+    out = set()
+    for s in row_stocks:
+        for p in (PARENTAGE.get(s) or {}).get("parents", ()):
+            out |= {nid for _s, _e, kind, nid, _t in names_in(p) if kind == "stock"}
+    return out
+
+
+def resolves(kind, nid, stocks, fams, parents=frozenset()):
     if kind == "stock":
-        return nid in stocks or any(SELECTION_OF.get(s) == nid for s in stocks)
+        return nid in stocks or any(SELECTION_OF.get(s) == nid for s in stocks) or nid in parents
     if kind == "family":
         return nid in fams or bool(FAMILIES[nid][1] & stocks)
     return True
@@ -239,17 +273,31 @@ def fields(crop):
     return out
 
 
+def row_parents(crop):
+    """{row field identity: parent stocks of the hybrid(s) that row holds} -- the ONLY place a parent resolves."""
+    out = {}
+    for i, r in enumerate(crop.get("rootstock_options") or []):
+        if not isinstance(r, dict):
+            continue
+        label = f"rootstock_options[name={r.get('name')}]" if r.get("name") else f"rootstock_options[{i}]"
+        own = {nid for _s, _e, kind, nid, _t in names_in(r.get("name")) if kind == "stock"}
+        out.update({f"{label}.{f}": parent_stocks(own) for f in ROW_FIELDS})
+    return out
+
+
 def scan_crop(crop):
     """(mentions, fields_inspected). mention = dict(crop, field, name, kind, id, sentence, resolved)."""
     stocks, fams = row_index(crop)
     fl = fields(crop)
+    par = row_parents(crop)
     ms = []
     for field, text in fl:
+        parents = par.get(field, frozenset())
         for s, _e, kind, nid, t in names_in(text):
             if kind in ("cultivar", "propagation"):
                 continue
             ms.append({"crop": crop.get("slug"), "field": field, "name": t, "kind": kind, "id": nid,
-                       "sentence": sentence_at(text, s), "resolved": resolves(kind, nid, stocks, fams)})
+                       "sentence": sentence_at(text, s), "resolved": resolves(kind, nid, stocks, fams, parents)})
     return ms, len(fl)
 
 
@@ -339,6 +387,7 @@ def main(argv):
         print(f"  new to the population (inspected): {', '.join(r['new_crops'])}")
     print(f"  {LIMIT_LINE}")
     print(f"  {PROPAGATION_LINE}")
+    print(f"  {_parentage_line()}")
     why = refusal(r)
     if why:
         print(f"rootstock_prose_gate: REFUSED -- {why}. A check that inspected nothing is not a pass.")

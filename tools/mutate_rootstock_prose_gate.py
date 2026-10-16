@@ -38,12 +38,12 @@ MUTATIONS = [
      "        return nid in fams or bool(FAMILIES[nid][1] & stocks)",
      "        return nid in fams" + M, "test_a_family_term_resolves_through_any_member_row"),
     ("table", "member_resolves_through_its_family", GATE,
-     "        return nid in stocks or any(SELECTION_OF.get(s) == nid for s in stocks)",
-     "        return nid in stocks or any(nid in m and (m & stocks) for _t, m in FAMILIES.values())" + M,
+     "        return nid in stocks or any(SELECTION_OF.get(s) == nid for s in stocks) or nid in parents",
+     "        return nid in stocks or any(nid in m and (m & stocks) for _t, m in FAMILIES.values()) or nid in parents" + M,
      "test_a_member_named_resolves_only_to_itself"),
     ("table", "selection_of_two_way", GATE,
-     "        return nid in stocks or any(SELECTION_OF.get(s) == nid for s in stocks)",
-     "        return nid in stocks or any(SELECTION_OF.get(s) == nid for s in stocks) or SELECTION_OF.get(nid) in stocks" + M,
+     "        return nid in stocks or any(SELECTION_OF.get(s) == nid for s in stocks) or nid in parents",
+     "        return nid in stocks or any(SELECTION_OF.get(s) == nid for s in stocks) or SELECTION_OF.get(nid) in stocks or nid in parents" + M,
      "test_selection_of_is_one_way"),
     ("table", "shortest_match_wins", GATE,
      "    cands.sort(key=lambda c: (-(c[1] - c[0]), c[0]))",
@@ -72,6 +72,22 @@ MUTATIONS = [
      '    "genetic_dwarf": [r"genetic\\s+dwarfs?"],' + M, "test_the_seven_own_root_waivers_are_STALE_and_deleted"),
     ("propagation", "mode_list_not_printed", GATE,
      '    print(f"  {PROPAGATION_LINE}")', "    pass" + M,
+     "test_cli_live_passes_and_prints_its_population_and_limit"),
+    # --- PARENTAGE (PLA-625 promote 2 amendment, 2026-10-16): a parent resolves only in its hybrid's own row -------
+    ("parentage", "parents_never_consulted", GATE,
+     "        return nid in stocks or any(SELECTION_OF.get(s) == nid for s in stocks) or nid in parents",
+     "        return nid in stocks or any(SELECTION_OF.get(s) == nid for s in stocks)" + M,
+     "test_a_hybrids_own_row_may_name_its_parent"),
+    ("parentage", "scope_widened_from_row_to_crop", GATE,
+     "        parents = par.get(field, frozenset())",
+     "        parents = set().union(*par.values()) if par else frozenset()" + M,
+     "test_the_parent_named_anywhere_else_still_FAILS"),
+    ("parentage", "parent_resolves_for_the_wrong_stock", GATE,
+     '        for p in (PARENTAGE.get(s) or {}).get("parents", ()):',
+     '        for p in [q for e in PARENTAGE.values() for q in e["parents"]]:' + M,
+     "test_the_parent_named_anywhere_else_still_FAILS or test_parentage_is_the_ruled_table"),
+    ("parentage", "parentage_not_printed", GATE,
+     '    print(f"  {_parentage_line()}")', "    pass" + M,
      "test_cli_live_passes_and_prints_its_population_and_limit"),
     ("table", "row_name_alias_ignored", GATE,
      "            stocks.add(ROW_NAME_ALIASES[n.strip().lower()])",
@@ -159,6 +175,8 @@ def build_scratch():
         src = os.path.join(HERE, f)
         if os.path.isfile(src) and (f.endswith(".py") or f.endswith(".json")):
             shutil.copy2(src, os.path.join(tools, f))
+    # the PARENTAGE basis test reads the hashed pages (gitignored bytes, local only)
+    os.symlink(os.path.join(HERE, ".evidence_cache"), os.path.join(tools, ".evidence_cache"))
     os.symlink(os.path.join(REPO, "crops_data_final.json"), os.path.join(tmp, "crops_data_final.json"))
     os.symlink(os.path.join(REPO, ".git"), os.path.join(tmp, ".git"))
     os.symlink(os.path.join(REPO, "CLAUDE.md"), os.path.join(tmp, "CLAUDE.md"))   # gate_all's certified floor
