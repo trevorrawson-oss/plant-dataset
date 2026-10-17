@@ -1,0 +1,809 @@
+{
+ "carrot": {
+  "evidence": [
+   {
+    "mech": "G",
+    "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": "Carrot > Planting",
+    "quote": "The optimum soil temperature for seed germination is 55 to 75 °F. Seeds will not germinate above 95 °F.",
+    "temp_f": [
+     55,
+     95
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://www.extension.purdue.edu/extmedia/HO/HO-186-W.pdf",
+    "source_name": "Purdue Extension HO-186-W (Harrington data)",
+    "tier": "T1",
+    "section": "Table 3. Soil Temperatures for Vegetable Seed Germination (columns: Optimum/Optimum Range (°F), Minimum/Maximum (°F))",
+    "quote": "Carrot 80/45-85 40/95",
+    "temp_f": [
+     40,
+     95
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.oregonstate.edu/gardening/soil-compost/soil-temperature-conditions-vegetable-seed-germination",
+    "source_name": "Oregon State Extension (J. F. Harrington, UC Davis)",
+    "tier": "T1",
+    "section": "Days to appearance of seedlings at various soil temperatures from seed planted at a depth of one-half inch (columns 32, 41, 50, 59, 68, 77, 86, 95, 104 °F)",
+    "quote": "Carrot Little or no germination 51 17 10 7 6 6 8 Little or no germination",
+    "temp_f": [
+     32,
+     104
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/781811/1/pereiracarrot.pdf",
+    "source_name": "Pereira, Nascimento & Vieira 2008, Scientia Agricola 65(2) (Embrapa repository copy)",
+    "tier": "T1",
+    "section": "Abstract",
+    "quote": "High temperatures (35 - 40°C), for instance, may delay or inhibit carrot seed germination in the field and so compromise the stand establishment.",
+    "temp_f": [
+     95,
+     104
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/781811/1/pereiracarrot.pdf",
+    "source_name": "Pereira, Nascimento & Vieira 2008, Scientia Agricola 65(2) (Embrapa repository copy)",
+    "tier": "T1",
+    "section": "Results and Discussion, Study 1",
+    "quote": "Seeds incubated at temperatures ranging from 20 to 32ºC had the same germination pattern (Figure 1).",
+    "temp_f": [
+     68,
+     90
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "E",
+    "url": "https://extension.illinois.edu/gardening/carrots",
+    "source_name": "University of Illinois Extension",
+    "tier": "T1",
+    "section": "Carrots",
+    "quote": "In the heat of summer, some shade may be necessary to keep the tiny seedlings from burning off at the soil line.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "E",
+    "url": "https://extension.illinois.edu/gardening/carrots",
+    "source_name": "University of Illinois Extension",
+    "tier": "T1",
+    "section": "Carrots",
+    "quote": "To assure germination of successive plantings during the late spring and summer months, it may be necessary to supply water by sprinkling.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "TOL",
+    "url": "https://extension.illinois.edu/gardening/carrots",
+    "source_name": "University of Illinois Extension",
+    "tier": "T1",
+    "section": "Carrots",
+    "quote": "Although carrots can endure summer heat in many areas, they grow best when planted in early spring.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.illinois.edu/gardening/carrots",
+    "source_name": "University of Illinois Extension",
+    "tier": "T1",
+    "section": "Carrots",
+    "quote": "Midsummer plantings that mature quickly in cool fall weather produce tender, sweet \"baby\" carrots that are much prized.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "S",
+    "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": "Carrot > Planting Dates for Carrots (table)",
+    "quote": "Planting Dates for Carrots Area Spring Fall Piedmont March 1 – 15 July 1 – 30",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": "Carrot > Planting",
+    "quote": "It is important to plant carrots early enough in the spring to ensure that the crop is harvested before early summer.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": "Carrot > Planting",
+    "quote": "Carrots near maturity that are allowed to remain in the garden under high temperature conditions tend to develop a strong flavor and roots that are coarse and fibrous.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umd.edu/resource/growing-carrots-home-garden",
+    "source_name": "University of Maryland Extension",
+    "tier": "T1",
+    "section": "Planting",
+    "quote": "Carrots are best planted in the spring and fall. They do not grow well during hot weather.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "E",
+    "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+    "source_name": "University of Hawaii CTAHR B-91",
+    "tier": "T1",
+    "section": "Mulches / How to Use Them",
+    "quote": "A temporary mulch on the soil surface, applied immediately after planting such crops as lettuce, beets, and carrots, will aid in securing better stands in summer at low elevations.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "weak",
+  "hold_basis": "G only at the extreme: carrot seed germinates best near 80°F soil and fails near 95°F (Clemson, Harrington, Sci. Agric. 35-40°C). M (coarse, strong roots) is about roots NEAR MATURITY in heat, 65-75 days after sowing, so a hot 10-day forecast at sowing does not trigger it.",
+  "proposed_pause_in_heat": null,
+  "proposed_threshold_f": 95,
+  "threshold_quote_ref": 0,
+  "threshold_note": "If a sowing hold is kept, the only sourced germination ceiling is Clemson carrot section 'Seeds will not germinate above 95 °F' (soil), matched by Harrington max 95 (Purdue/OSU) and Sci. Agric. 35-40°C -> 95. The current 80 contradicts the germination literature: 80°F soil is Harrington's OPTIMUM (Purdue 'Carrot 80/45-85 40/95'; OSU emergence fastest, 6 days, at 77-86°F). 80 is defensible only as a mature-root quality number, and no T1 quote found gives 80 for that either (Clemson gives growth optimum 60-65°F average, no ceiling). Caveat: 95 is SOIL temperature; app compares AIR daily highs.",
+  "reason_tip_candidate": {
+   "field": "germination_tips (tips_by_stage.germination)",
+   "draft_seasoned": "Carrot seed germinates fastest in warm soil, with an optimum near 80°F, but it will not germinate when the soil is above 95°F. Summer sowings for a fall crop work if you keep the seedbed moist with frequent light watering; in the heat of summer, light shade keeps the tiny seedlings from burning off at the soil line.",
+   "draft_beginner": "Carrot seeds sprout fastest in warm soil, around 80°F, but they will not sprout at all once the soil gets above 95°F. You can still plant carrots in summer for a fall crop: sprinkle the row often so it never dries out, and give the tiny seedlings a little shade in hot weather so they do not burn off at the soil line.",
+   "evidence_refs": [
+    0,
+    1,
+    5,
+    6,
+    8
+   ]
+  },
+  "gaps": [
+   "No T1 source gives an AIR-temperature number at which carrot sowing should stop; all numbers found are soil temperatures.",
+   "No T1 source attributes summer sowing failure to crusting/drying with a temperature (Clemson and UMN discuss crusting without heat; Illinois gives water + shade advice for summer plantings).",
+   "ASHS HortScience 43(5):1538 (carrot germination at high temperature, genotype) returned 403; not quoted.",
+   "No T1 quote supports the current heat_threshold_f 80 or the current heat_stress_trigger body figure of 75°F."
+  ],
+  "notes": "Strong counter-evidence to an 80°F sowing hold: Clemson schedules Piedmont fall carrot sowing July 1-30 (daily highs routinely ~90°F) and Illinois endorses midsummer plantings. Sowing-in-heat advice from T1 is MITIGATION (water, shade, mulch), not pausing. Recommend Trevor rule between (a) pause_in_heat false, with a germination tip carrying the 95°F soil ceiling and summer-sowing care, or (b) a germination-ceiling hold at 95. The mature-plant 80 should not drive a SOWING hold under the contract that defines heat_threshold_f as a mature-plant number. Section attribution on the multi-crop Clemson page is correct: both carrot Clemson quotes sit under the 'Carrot' heading; 'Seeds will not germinate above 95 °F' is the carrot paragraph (the radish paragraph has its own 95 sentence)."
+ },
+ "beet": {
+  "evidence": [
+   {
+    "mech": "G",
+    "url": "https://extension.usu.edu/yardandgarden/research/beets-in-the-garden",
+    "source_name": "Utah State University Extension (peer-reviewed fact sheet, Drost 2020)",
+    "tier": "T1",
+    "section": "Plants",
+    "quote": "Seeds germinate best at 55-75°F and require 7-14 days to emerge. Temperatures above 80°F reduce seed germination.",
+    "temp_f": [
+     55,
+     80
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/beets-in-the-garden",
+    "source_name": "Utah State University Extension (peer-reviewed fact sheet, Drost 2020)",
+    "tier": "T1",
+    "section": "Plants",
+    "quote": "Beets grow best when temperatures do not exceed 85°F.",
+    "temp_f": 85,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/beets-in-the-garden",
+    "source_name": "Utah State University Extension (peer-reviewed fact sheet, Drost 2020)",
+    "tier": "T1",
+    "section": "Frequently Asked Questions",
+    "quote": "Hot weather and water stress can cause woody bulbs. Keep plants well-watered when temperature go above 85ºF.",
+    "temp_f": 85,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://www.extension.purdue.edu/extmedia/HO/HO-186-W.pdf",
+    "source_name": "Purdue Extension HO-186-W (Harrington data)",
+    "tier": "T1",
+    "section": "Table 3. Soil Temperatures for Vegetable Seed Germination (columns: Optimum/Optimum Range (°F), Minimum/Maximum (°F))",
+    "quote": "Beet 85/50-85 40/95",
+    "temp_f": [
+     40,
+     95
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.oregonstate.edu/gardening/soil-compost/soil-temperature-conditions-vegetable-seed-germination",
+    "source_name": "Oregon State Extension (J. F. Harrington, UC Davis)",
+    "tier": "T1",
+    "section": "Days to appearance of seedlings at various soil temperatures from seed planted at a depth of one-half inch (columns 32, 41, 50, 59, 68, 77, 86, 95, 104 °F)",
+    "quote": "Beet Not tested 42 17 10 6 5 4 4 Not tested",
+    "temp_f": [
+     41,
+     95
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://ucanr.edu/site/uc-master-gardeners-sacramento-county/growing-beets-sacramento",
+    "source_name": "UC Master Gardeners Sacramento County (UC ANR)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Optimal soil temperatures for beet germination are 50° to 86°F, and the maximum soil temperature for germination is 95°F.",
+    "temp_f": [
+     50,
+     95
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/beets",
+    "source_name": "UC Marin Master Gardeners (UC ANR)",
+    "tier": "T1",
+    "section": "When to Plant",
+    "quote": "They don’t like temperatures above 75 degrees.",
+    "temp_f": 75,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/beets",
+    "source_name": "UC Marin Master Gardeners (UC ANR)",
+    "tier": "T1",
+    "section": "When to Plant",
+    "quote": "The strongest plants emerge when soil temperatures range from 50 to 75 degrees.",
+    "temp_f": [
+     50,
+     75
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "E",
+    "url": "https://extension.illinois.edu/gardening/beet",
+    "source_name": "University of Illinois Extension",
+    "tier": "T1",
+    "section": "Beet",
+    "quote": "Although beets grow well during warm weather, the seedlings are established more easily under cool, moist conditions.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.illinois.edu/gardening/beet",
+    "source_name": "University of Illinois Extension",
+    "tier": "T1",
+    "section": "Beet",
+    "quote": "Start successive plantings at 3-to-4-week intervals until midsummer for a continuous supply of fresh, tender, young beets.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://agrilifeextension.tamu.edu/library/gardening/beets/",
+    "source_name": "Texas A&M AgriLife Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "They do poorly in hot weather.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "E",
+    "url": "https://agrilifeextension.tamu.edu/library/gardening/beets/",
+    "source_name": "Texas A&M AgriLife Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "In hot weather, cover seed with sand or light-colored mulch.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": "Beet > Planting Dates for Beets (table)",
+    "quote": "Planting Dates for Beets Area Spring Fall Piedmont March 1 – 30 Aug. 1 – 15",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umd.edu/resource/growing-beets-home-garden",
+    "source_name": "University of Maryland Extension",
+    "tier": "T1",
+    "section": "Planting",
+    "quote": "Sow beets several weeks before the last spring frost, throughout the summer, and up until 6 weeks before the first killing frost in the fall.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "weak",
+  "hold_basis": "G: USU (peer-reviewed) says temperatures above 80°F reduce beet seed germination, and Illinois says seedlings establish more easily under cool, moist conditions; M (woody roots, above 75-85°F) applies at maturity 50-70 days later, not at sowing.",
+  "proposed_pause_in_heat": true,
+  "proposed_threshold_f": 80,
+  "threshold_quote_ref": 0,
+  "threshold_note": "USU 'Temperatures above 80°F reduce seed germination.' -> 80 (germination; the sentence does not say soil or air). Current 75 traces to UC Marin MG 'They don’t like temperatures above 75 degrees' (mature-plant, ref 6), which is an M number. Tension: Harrington (Purdue/OSU) puts beet germination OPTIMUM at 85°F soil with 4-day emergence even at 95°F, and Sacramento MG gives max 95°F; so 80 is a 'reduced germination' number from one T1 against a lab dataset showing no reduction. 'weak' because UMD and Clemson schedule beet sowing through summer / Aug 1-15 with mitigation (TAMU: cover seed with sand or light mulch in hot weather).",
+  "reason_tip_candidate": {
+   "field": "germination_tips (tips_by_stage.germination)",
+   "draft_seasoned": "Beet seed germinates best at 55 to 75°F, and temperatures above 80°F reduce germination; seedlings establish more easily in cool, moist conditions. If you sow in hot weather, cover the seed with sand or a light-colored mulch and keep it watered until the seedlings are up.",
+   "draft_beginner": "Beet seeds sprout best when it is mild, about 55 to 75°F. Above 80°F fewer seeds come up, and young beets get going more easily when it is cool and damp. If you plant during hot weather, cover the seeds with sand or a light-colored mulch and keep them watered until they sprout.",
+   "evidence_refs": [
+    0,
+    8,
+    11
+   ]
+  },
+  "gaps": [
+   "No T1 quote gives an air-temperature sowing cutoff for beets.",
+   "USU does not say whether its 80°F is soil or air."
+  ],
+  "notes": "Two defensible readings: hold at 80 on USU germination grounds (ruled-for \"a crop holds only when research supports\"), or no hold because three T1s schedule summer sowing with mitigation and Harrington shows fast emergence to 95°F. CTAHR B-91 beet section gives a 70°F mean-temperature ceiling for growth/color/texture but the cached OCR text is corrupted (\"uIifavorably\", soft hyphen), so it is not quoted."
+ },
+ "radish": {
+  "evidence": [
+   {
+    "mech": "G",
+    "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": "Radish > Planting",
+    "quote": "Optimum soil temperature for seed germination is 45 to 85 °F. Radish seed will not germinate when the soil temperature is above 95 °F.",
+    "temp_f": [
+     45,
+     95
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://www.extension.purdue.edu/extmedia/HO/HO-186-W.pdf",
+    "source_name": "Purdue Extension HO-186-W (Harrington data)",
+    "tier": "T1",
+    "section": "Table 3. Soil Temperatures for Vegetable Seed Germination (columns: Optimum/Optimum Range (°F), Minimum/Maximum (°F))",
+    "quote": "Radish 85/45-90 40/95",
+    "temp_f": [
+     40,
+     95
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": "Radish > Planting",
+    "quote": "High summer temperatures cause radishes to crack, become pithy, and develop a strong flavor.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": "Radish > Cultural Practices",
+    "quote": "Radishes planted in late spring will bolt (form a flower stalk) as the temperatures get warm in late spring and early summer.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": "Radish > Planting",
+    "quote": "Radishes prefer cool and moist conditions for best growth. The optimum temperature is 50 to 65 °F.",
+    "temp_f": [
+     50,
+     65
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://ucanr.edu/site/uc-master-gardener-program-sonoma-county/radish",
+    "source_name": "UC Master Gardener Program Sonoma County (UC ANR)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Plant fast-growing varieties in shallow beds or containers during spring and fall when temperatures are 50-75 degrees.",
+    "temp_f": [
+     50,
+     75
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://ucanr.edu/site/uc-master-gardener-program-sonoma-county/radish",
+    "source_name": "UC Master Gardener Program Sonoma County (UC ANR)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Most small-rooted radishes grow best during cool months of spring and fall and bolt when days are longer and heat is higher.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umd.edu/resource/growing-radishes-home-garden",
+    "source_name": "University of Maryland Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Storage roots (“the radish”) become spicy hot and woody when over-mature or when grown in hot weather.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-radishes",
+    "source_name": "University of Minnesota Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "They may develop a flower that goes to seed, develop excessively hot flavor or become woody during the heat of a typical Minnesota summer.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://extension.illinois.edu/gardening/radish",
+    "source_name": "University of Illinois Extension",
+    "tier": "T1",
+    "section": "Radish",
+    "quote": "Later-maturing varieties of radishes (Icicle or French Breakfast) usually withstand heat better than the early-maturing varieties and are recommended for late-spring planting for summer harvest.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   }
+  ],
+  "hold_supported": "yes",
+  "hold_basis": "M coupled to sowing: radishes mature in 3 to 4 weeks (Clemson), so a sowing made in a hot spell matures in the heat and bolts or turns pithy and hot; UC Sonoma MG gives the sowing window as temperatures of 50-75 degrees. G is not the reason (germinates to 95°F soil).",
+  "proposed_pause_in_heat": true,
+  "proposed_threshold_f": 75,
+  "threshold_quote_ref": 5,
+  "threshold_note": "UC Sonoma MG: plant fast-growing varieties when temperatures are 50-75 degrees -> 75 (the page says 'degrees' without F or air/soil; US page, read as °F air). Current 72 has no T1 quote found; nearest is Clemson growth optimum 50-65°F (ref 4), which would give 65 if read as a ceiling, but it is an optimum not a limit.",
+  "reason_tip_candidate": {
+   "field": "succession_policy.tip / heat-hold reason (tips_by_stage.germination is the wrong stage: radish germinates to 95°F)",
+   "draft_seasoned": "Radishes go from seed to harvest in 3 to 4 weeks, so a sowing made in hot weather matures in that heat: high summer temperatures make radishes crack, turn pithy, and develop a strong flavor, and warm late-spring weather makes them bolt. Sow fast-growing types when temperatures are 50 to 75°F; later-maturing types such as Icicle or French Breakfast withstand heat better.",
+   "draft_beginner": "Radishes are ready only 3 to 4 weeks after you plant them, so seeds planted in hot weather grow up in that heat. Hot weather makes radishes crack, get spongy, and taste too sharp, and warm spring weather makes them flower instead of making good roots. Plant quick radishes when it is about 50 to 75°F; Icicle and French Breakfast handle heat better than most.",
+   "evidence_refs": [
+    2,
+    3,
+    5,
+    9
+   ]
+  },
+  "gaps": [
+   "No T1 source gives a radish bolting temperature in °F.",
+   "The Sonoma 50-75 does not say air vs soil."
+  ],
+  "notes": "Clemson radish harvest-time sentence (3 to 4 weeks) is in the radish Harvest & Storage paragraph: \"Radishes will be ready to harvest in about 3 to 4 weeks after planting.\" Variety exception (Icicle, French Breakfast) could justify a variety-level override later."
+ },
+ "turnip": {
+  "evidence": [
+   {
+    "mech": "G",
+    "url": "https://extension.usu.edu/yardandgarden/research/rutabagas-and-turnips-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": "Plants",
+    "quote": "Turnips can be sown after soils reach 40ºF. Seeds germinate best at 60-85ºF and require 7-10 days to emerge.",
+    "temp_f": [
+     60,
+     85
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://www.extension.purdue.edu/extmedia/HO/HO-186-W.pdf",
+    "source_name": "Purdue Extension HO-186-W (Harrington data)",
+    "tier": "T1",
+    "section": "Table 3. Soil Temperatures for Vegetable Seed Germination (columns: Optimum/Optimum Range (°F), Minimum/Maximum (°F))",
+    "quote": "Turnip 85/60-105 40/105",
+    "temp_f": [
+     40,
+     105
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.oregonstate.edu/gardening/soil-compost/soil-temperature-conditions-vegetable-seed-germination",
+    "source_name": "Oregon State Extension (J. F. Harrington, UC Davis)",
+    "tier": "T1",
+    "section": "Days to appearance of seedlings at various soil temperatures from seed planted at a depth of one-half inch (columns 32, 41, 50, 59, 68, 77, 86, 95, 104 °F)",
+    "quote": "Turnip Little or no germination Little or no germination 5 3 2 1 1 1 2",
+    "temp_f": [
+     50,
+     104
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/rutabagas-and-turnips-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": "Plants",
+    "quote": "Turnips grow best when temperatures do not exceed 85ºF.",
+    "temp_f": 85,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/rutabagas-and-turnips-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Turnips taste best when plants grow rapidly and mature before the heat of summer.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/rutabagas-and-turnips-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": "Planting and Spacing",
+    "quote": "High summer temperatures reduce growth, decrease quality, and cause bitter or off flavors to develop if plants are not watered properly.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-turnips-and-rutabagas",
+    "source_name": "University of Minnesota Extension",
+    "tier": "T1",
+    "section": "Easy-to-grow root vegetables (turnip sentence)",
+    "quote": "Their quality can be poor when they grow in hot weather, or if they grow too large.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://hgic.clemson.edu/factsheet/turnips-rutabagas/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": "Planting",
+    "quote": "Although these are normally considered cool-weather crops, they will tolerate some heat. Plant in late winter/early spring for a spring crop or in the late summer for a fall/winter crop.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.illinois.edu/gardening/turnip",
+    "source_name": "University of Illinois Extension",
+    "tier": "T1",
+    "section": "Growing Turnips > When to Plant",
+    "quote": "For summer use, turnips should be planted as early in the spring as possible.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "E",
+    "url": "https://extension.illinois.edu/gardening/turnip",
+    "source_name": "University of Illinois Extension",
+    "tier": "T1",
+    "section": "Growing Turnips",
+    "quote": "Water if necessary to germinate the seed and establish the seedlings (especially for summer sowings).",
+    "temp_f": null,
+    "in_dataset_cache": false
+   }
+  ],
+  "hold_supported": "weak",
+  "hold_basis": "M only: turnip quality drops when roots grow and mature in heat (USU, UMN, Clemson), with USU giving 85°F; G is no reason (Harrington: emergence in 1 day at 77-95°F, max 105). Maturity is about 2 months out, so a hot 10-day forecast at sowing is a weak trigger.",
+  "proposed_pause_in_heat": null,
+  "proposed_threshold_f": 85,
+  "threshold_quote_ref": 3,
+  "threshold_note": "If a hold is kept: USU 'Turnips grow best when temperatures do not exceed 85ºF.' -> 85. Current 75 has no turnip quote; the only 75 on the USU page is 'Rutabaga root development occurs best when temperatures are less than 75ºF.', which is the RUTABAGA sentence and must not be attributed to turnip.",
+  "reason_tip_candidate": null,
+  "gaps": [
+   "No T1 source says to stop SOWING turnips because of a hot forecast; T1 sowing advice is calendar (early spring; late summer for fall) plus water for summer sowings."
+  ],
+  "notes": "Recommend Trevor rule pause false or 85. The Illinois \"When they develop and mature in hot weather, they do not develop typical sweetness and flavor.\" sentence answers a RUTABAGA question and is excluded; same exclusion for USU rutabaga sentences."
+ },
+ "parsley": {
+  "evidence": [
+   {
+    "mech": "G",
+    "url": "https://www.extension.purdue.edu/extmedia/HO/HO-186-W.pdf",
+    "source_name": "Purdue Extension HO-186-W (Harrington data)",
+    "tier": "T1",
+    "section": "Table 3. Soil Temperatures for Vegetable Seed Germination (columns: Optimum/Optimum Range (°F), Minimum/Maximum (°F))",
+    "quote": "Parsley 75/50-85 40/90",
+    "temp_f": [
+     40,
+     90
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.oregonstate.edu/gardening/soil-compost/soil-temperature-conditions-vegetable-seed-germination",
+    "source_name": "Oregon State Extension (J. F. Harrington, UC Davis)",
+    "tier": "T1",
+    "section": "Days to appearance of seedlings at various soil temperatures from seed planted at a depth of one-half inch (columns 32, 41, 50, 59, 68, 77, 86, 95, 104 °F)",
+    "quote": "Parsley Not tested Not tested 29 17 14 13 12 Not tested Not tested",
+    "temp_f": [
+     50,
+     86
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://www.aces.edu/wp-content/uploads/2023/03/ANR-1061_SoilTemperatureConditionsforVegetableSeedGermination_030623bL-G.pdf",
+    "source_name": "Alabama Cooperative Extension ANR-1061",
+    "tier": "T1",
+    "section": "Table 1 (columns: Minimum, Optimum Range, Maximum, Optimum)",
+    "quote": "Parsley 40 50–95 95 75",
+    "temp_f": [
+     40,
+     95
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://seer.ufu.br/index.php/biosciencejournal/article/view/37192",
+    "source_name": "da Silva et al. 2017, Bioscience Journal 33(6) \"Thermoinhibition in parsley seeds\"",
+    "tier": "T1",
+    "section": "Abstract",
+    "quote": "Seeds of the different cultivars did not germinate at temperature of 35°C.",
+    "temp_f": 95,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "S",
+    "url": "https://hort.extension.wisc.edu/articles/parsley/",
+    "source_name": "University of Wisconsin-Madison Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "For continuous harvest throughout the growing season, make a few sequential plantings through mid-summer.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "weak",
+  "hold_basis": "G only: soil germination maximum 90°F (Harrington via Purdue) or 95°F (ACES), and no germination at a constant 35°C/95°F in lab (Bioscience Journal). No T1 mature-plant heat-stress evidence found; Wisconsin endorses sowing through midsummer.",
+  "proposed_pause_in_heat": null,
+  "proposed_threshold_f": 90,
+  "threshold_quote_ref": 0,
+  "threshold_note": "If a germination hold is wanted: Purdue 'Parsley 75/50-85 40/90' -> max 90°F soil. Conflict: ACES ANR-1061 lists max 95 for parsley (and optimum range 50-95 vs Purdue/OSU 50-85). heat_effect 'heat_tolerant' with null threshold is consistent with the absence of T1 mature-heat evidence.",
+  "reason_tip_candidate": {
+   "field": "germination_tips (tips_by_stage.germination)",
+   "draft_seasoned": "Parsley seed germinates best near 75°F soil and has a germination ceiling of about 90°F; in a lab trial, seed did not germinate at all at 95°F. Midsummer sowings still work: keep the seedbed moist through the long wait.",
+   "draft_beginner": "Parsley seeds sprout best in soil around 75°F and struggle once the soil passes about 90°F. You can still sow parsley into midsummer; just keep the soil damp the whole time it takes to come up.",
+   "evidence_refs": [
+    0,
+    3,
+    4
+   ]
+  },
+  "gaps": [
+   "No T1 source found saying mature parsley bolts, yellows or declines in summer heat (Clemson herbs parsley section is silent on heat; Clemson heat/bolt sentences on that page belong to cilantro/chervil).",
+   "No T1 source tells gardeners to stop sowing parsley in hot weather.",
+   "Harrington did not test parsley emergence above 86°F."
+  ],
+  "notes": "Evidence leans against a hold: keep pause_in_heat false unless Trevor wants a germination-ceiling hold at 90. The heat_tolerant label is not directly quoted by any T1 either; it is supported only by absence plus the Wisconsin midsummer-sowing advice."
+ },
+ "spring-onion": {
+  "evidence": [
+   {
+    "mech": "G",
+    "url": "https://www.extension.purdue.edu/extmedia/HO/HO-186-W.pdf",
+    "source_name": "Purdue Extension HO-186-W (Harrington data, bulb onion A. cepa)",
+    "tier": "T1",
+    "section": "Table 3. Soil Temperatures for Vegetable Seed Germination (columns: Optimum/Optimum Range (°F), Minimum/Maximum (°F))",
+    "quote": "Onion 75/50-95 35/95",
+    "temp_f": [
+     35,
+     95
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.oregonstate.edu/gardening/soil-compost/soil-temperature-conditions-vegetable-seed-germination",
+    "source_name": "Oregon State Extension (J. F. Harrington, UC Davis; A. cepa)",
+    "tier": "T1",
+    "section": "Days to appearance of seedlings at various soil temperatures from seed planted at a depth of one-half inch (columns 32, 41, 50, 59, 68, 77, 86, 95, 104 °F)",
+    "quote": "Onion 135 31 13 7 5 4 4 12 Little or no germination",
+    "temp_f": [
+     32,
+     104
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "S",
+    "url": "https://my.ucanr.edu/repository/fileaccess.cfm?article=54051&p=+FLPUZE",
+    "source_name": "UC ANR Publication 7243, Green Onion Production in California",
+    "tier": "T1",
+    "section": "Production Areas and Seasons",
+    "quote": "Green onions are plant- ed during the fall, spring, and summer for harvest 60 to 120 days later.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "TOL",
+    "url": "https://my.ucanr.edu/repository/fileaccess.cfm?article=54051&p=+FLPUZE",
+    "source_name": "UC ANR Publication 7243, Green Onion Production in California",
+    "tier": "T1",
+    "section": "Varieties",
+    "quote": "Green onion production in areas with long days or during the summer months is most successful with the use of varieties with Japanese bunching onion parentage.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://my.ucanr.edu/repository/fileaccess.cfm?article=54051&p=+FLPUZE",
+    "source_name": "UC ANR Publication 7243, Green Onion Production in California",
+    "tier": "T1",
+    "section": "Climatic Requirements",
+    "quote": "Optimal leaf growth rate occurs at 68° to 77°F (20° to 25°C).",
+    "temp_f": [
+     68,
+     77
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://my.ucanr.edu/repository/fileaccess.cfm?article=54051&p=+FLPUZE",
+    "source_name": "UC ANR Publication 7243, Green Onion Production in California",
+    "tier": "T1",
+    "section": "Planting",
+    "quote": "This shallow planting requires a soil surface that is well prepared and must be kept moist until germination.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   }
+  ],
+  "hold_supported": "no",
+  "hold_basis": "None found: onion seed emerges across 50-95°F soil (fastest, 4 days, at 77-86°F; 12 days at 95°F; little or no germination only at 104°F), and UC ANR 7243 says green onions are planted in summer, best with Japanese bunching parentage.",
+  "proposed_pause_in_heat": false,
+  "proposed_threshold_f": null,
+  "threshold_quote_ref": null,
+  "threshold_note": "No threshold proposed. If a germination-ceiling hold were ever wanted, Harrington onion max is 95°F soil (ref 0), with emergence slowing from 4 to 12 days between 86 and 95°F (ref 1); that is A. cepa data, not A. fistulosum.",
+  "reason_tip_candidate": {
+   "field": "germination_tips (tips_stage_keys: germination_emergence); record currently has germination_tips null",
+   "draft_seasoned": "Onion seed germinates over a wide soil range, about 50 to 95°F, with an optimum near 75°F; in trials it emerged in about 4 days at 77 to 86°F but took about 12 days at 95°F and barely germinated at 104°F. Sow shallow and keep the surface moist until the seedlings are up; for summer sowings, choose Japanese bunching types.",
+   "draft_beginner": "Scallion seeds sprout in soil anywhere from about 50 to 95°F and come up fastest when it is warm, around 75 to 85°F. Very hot soil slows them down. Plant them shallow and keep the soil damp until they sprout, and pick a Japanese bunching kind if you are planting in summer.",
+   "evidence_refs": [
+    0,
+    1,
+    3,
+    5
+   ]
+  },
+  "gaps": [
+   "No A. fistulosum-specific germination temperature table found in a T1 source; Harrington/Purdue/ACES rows are \"Onion\" (A. cepa). Seed-company (T2) pages give 60-75°F optimum for bunching onion but were not quoted.",
+   "No T1 states a heat temperature at which green onions bolt or decline (UC 7243 bolting text is about cold, 45-50°F).",
+   "UC Sonoma MG onions page returned 403 (both user agents)."
+  ],
+  "notes": "UC 7243 sentence 1 contains a line-break hyphen in the PDF text (\"plant- ed\"); quoted as extracted so the verifier can match it. heat_effect heat_tolerant is consistent with UC 7243 for bunching parentage. The minimum-emergence sentence in 7243 (55°F) is split by a hyphen (\"min- imum\") and not quoted."
+ }
+}

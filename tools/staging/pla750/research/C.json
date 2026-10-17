@@ -1,0 +1,938 @@
+{
+ "broccoli": {
+  "evidence": [
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+    "source_name": "UMN Extension",
+    "tier": "T1",
+    "section": "Disorders",
+    "quote": "Hot weather (86 degrees Fahrenheit in the day and over 77 degrees Fahrenheit at night) can cause broccoli to grow no crown.",
+    "temp_f": [
+     77,
+     86
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-broccoli-home-garden",
+    "source_name": "Iowa State Extension",
+    "tier": "T1",
+    "section": "Potential Problems: No Crown or Head",
+    "quote": "Hot weather (86°F or more during the day and 77°F or more at night) can prevent broccoli from forming heads or crowns.",
+    "temp_f": [
+     77,
+     86
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+    "source_name": "UMN Extension",
+    "tier": "T1",
+    "section": "Selecting varieties",
+    "quote": "While summer heat harms the quality of the developing head, heat while the leafy broccoli plant is growing is fine. By the time heads form on plants started in July, the weather will have started to cool down.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+    "source_name": "UMN Extension",
+    "tier": "T1",
+    "section": "Starting seeds indoors",
+    "quote": "The seeds will germinate and the plants will grow well in regular summer temperatures.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://ucanr.edu/program/uc-master-gardener-program/seed-germination-temperature-and-timing",
+    "source_name": "UC Master Gardener Program (UC ANR), citing California Master Gardener Handbook Table 5.2",
+    "tier": "T1",
+    "section": "Soil temperature table (row: Broccoli; columns Minimum, Optimum range, Maximum °F)",
+    "quote": "Broccoli 40 60-85 95",
+    "temp_f": [
+     40,
+     95
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://ohioline.osu.edu/factsheet/hyg-1605",
+    "source_name": "Ohio State Ohioline HYG-1605",
+    "tier": "T1",
+    "section": null,
+    "quote": "Germinating air temperatures are 40 to 86 degrees Fahrenheit.",
+    "temp_f": [
+     40,
+     86
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+    "source_name": "UMN Extension",
+    "tier": "T1",
+    "section": "Direct seeding",
+    "quote": "Direct seed broccoli in July.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+    "source_name": "University of Maryland Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Seeds can be sown directly in mid-July for a fall harvest or transplants are set out by the first week in August.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
+    "source_name": "NC State Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "In eastern North Carolina, it is recommended to plant in the spring between February 15 and April 15, and for the fall crop, between August 1 and September 15.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/broccoli-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "High summer temperatures reduce growth, decrease quality, and cause loose heads to form, which taste bitter.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/broccoli-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": "Planting and Spacing",
+    "quote": "Broccoli grows best and produces highest yields when temperatures do not exceed 75°F and is not seriously damaged by temperatures down to 28°F.",
+    "temp_f": 75,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "E",
+    "url": "https://extension.usu.edu/vegetableguide/brassica/production-problems",
+    "source_name": "Utah State University Extension (Vegetable Guide: Brassica, Other Production Problems)",
+    "tier": "T1",
+    "section": "Premature Head Formation (Buttoning in Broccoli and Cauliflower)",
+    "quote": "Buttoning occurs when transplants are exposed to stress (heat/cold, water) after planting in the field.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "E",
+    "url": "https://extension.usu.edu/vegetableguide/brassica/production-problems",
+    "source_name": "Utah State University Extension (Vegetable Guide: Brassica, Other Production Problems)",
+    "tier": "T1",
+    "section": "Premature Head Formation (Buttoning in Broccoli and Cauliflower)",
+    "quote": "Low fertility, micronutrient deficiencies, water stress, warm weather (more than 85-degree days and 75-degree nights), diseases, and insects can also cause buttoning.",
+    "temp_f": [
+     75,
+     85
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "TOL",
+    "url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
+    "source_name": "NC State Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "It tolerates heat better than other brassicas, with optimal head development between 54-68°F ( Figure 2 ).",
+    "temp_f": [
+     54,
+     68
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://ohioline.osu.edu/factsheet/hyg-1605",
+    "source_name": "Ohio State Ohioline HYG-1605",
+    "tier": "T1",
+    "section": null,
+    "quote": "High summertime temperatures may cause bolting in broccoli plants.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "E",
+    "url": "https://ucanr.edu/blog/savvy-sage/article/august-vegetable-guide",
+    "source_name": "UC ANR, The Savvy Sage (UC Master Gardeners, Sacramento/Yolo)",
+    "tier": "T1",
+    "section": "August Vegetable Guide",
+    "quote": "Err on the side of caution and hold off until later in the month. Brassica and any other transplants will appreciate some shade protection from late afternoon heat and on days with extreme heat.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "S",
+    "url": "https://ucanr.edu/blog/savvy-sage/article/august-vegetable-guide",
+    "source_name": "UC ANR, The Savvy Sage (UC Master Gardeners, Sacramento/Yolo)",
+    "tier": "T1",
+    "section": "YOLO County Vegetables Recommended for August",
+    "quote": "The following brassicas are best started in shaded seed trays or pots and transplanted out in late September/October. Broccoli – Seed - shade",
+    "temp_f": null,
+    "in_dataset_cache": false
+   }
+  ],
+  "hold_supported": "no",
+  "hold_basis": "M only (no crown / loose bitter heads / bolting when HEADING in heat, UMN+Iowa 86°F day/77°F night). The effect is at heading, 50-100 days after sowing, so a hot 10-day forecast at SOWING time does not predict it; G is fine to 95°F soil (UC) and UMN says heat during leafy growth is fine and directs July sowing. The only short-term heat risk T1 names is to a TRANSPLANT set out in heat (USU buttoning >85°F days/75°F nights; UC Savvy Sage: hold off transplanting in searing late-August heat), not to a sowing.",
+  "proposed_pause_in_heat": false,
+  "proposed_threshold_f": 86,
+  "threshold_quote_ref": 0,
+  "threshold_note": "86 is the mature-plant (M) number for heat_threshold_f per climate_thresholds_contract: UMN and Iowa State both give 86°F day / 77°F night for no-crown. Matches the current value (86); no change. It is NOT a sowing-hold number. USU gives a lower growth optimum (does not exceed 75°F) and USU buttoning gives >85°F day/>75°F night for transplants.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.head_forming (already carries this M reason: \"heat above about 86°F by day and warm nights during heading cause bolting and loose, open heads\"); if a held/advisory message is still wanted, scope it to TRANSPLANTING, e.g. tips_by_stage.seedling or start_method.notes",
+   "draft_seasoned": "Heat hurts broccoli at heading, not at sowing: days of 86°F or more with nights of 77°F or more can stop a crown from forming. Sow the fall crop in July as usual; if you set out transplants during a hot spell, shade them from late afternoon heat until they settle in.",
+   "draft_beginner": "Hot weather is a problem when broccoli is forming its head, not when you plant the seeds. Very hot days and warm nights can keep the plant from making a head. You can still sow in summer for a fall crop; if you plant young plants out during a heat wave, give them some afternoon shade until they settle in.",
+   "evidence_refs": [
+    0,
+    2,
+    6,
+    15
+   ]
+  },
+  "gaps": [
+   "No T1 source found saying broccoli seed fails to germinate or should not be SOWN during a hot spell; UC chart max is 95°F soil.",
+   "No T1 source tying a 10-day air-temperature forecast at sowing to later heading failure."
+  ],
+  "notes": "start_method=both; T1 sources (UMN, UMD, Iowa, NCSU) describe the fall crop as sown in July (or transplanted late June to early August/Sept), i.e. explicitly INTO summer heat. Evidence runs AGAINST pause_in_heat=true for a sowing. If Trevor wants a heat-time message, the defensible one is about setting out transplants (E: USU buttoning, UC Savvy Sage), which is a different action than the succession sowing the app holds. NCSU calls broccoli the most heat-tolerant brassica."
+ },
+ "cauliflower": {
+  "evidence": [
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/cauliflower-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": "Planting and Spacing",
+    "quote": "Cauliflower grows best when temperatures do not exceed 75°F. Low (32°F) or high (greater than 80°F) temperatures decrease plant growth, lower yields and decrease head quality.",
+    "temp_f": 80,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-cauliflower",
+    "source_name": "UMN Extension",
+    "tier": "T1",
+    "section": "Disorders",
+    "quote": "Hot weather (86°F in the day and over 77°F at night) can cause cauliflower to grow no crown.",
+    "temp_f": [
+     77,
+     86
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cauliflower-home-garden",
+    "source_name": "Iowa State Extension",
+    "tier": "T1",
+    "section": "Potential Problems: No Crown or Head",
+    "quote": "Hot weather (86°F or more during the day and 77°F or more at night) can prevent cauliflower from forming heads or crowns.",
+    "temp_f": [
+     77,
+     86
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://aggie-horticulture.tamu.edu/vegetable/files/2011/10/cauliflower3.pdf",
+    "source_name": "Texas A&M AgriLife (Masabni, Cauliflower crop sheet)",
+    "tier": "T1",
+    "section": "Comments/Production Keys",
+    "quote": "Curd initiation can be delayed in mature vegetative stage by high temperatures (>80°F).",
+    "temp_f": 80,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://aggie-horticulture.tamu.edu/vegetable/files/2011/10/cauliflower3.pdf",
+    "source_name": "Texas A&M AgriLife (Masabni, Cauliflower crop sheet)",
+    "tier": "T1",
+    "section": "Comments/Production Keys",
+    "quote": "Daily mean of 58-68°F ideal for quality curd formation and development; temperature above 68°F during curd development often results in poor quality.",
+    "temp_f": 68,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/cauliflower-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": "FAQ",
+    "quote": "During hot weather, plants may not get enough water which leads to poorer quality heads that are more open.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://extension.umn.edu/vegetables/growing-cauliflower",
+    "source_name": "UMN Extension",
+    "tier": "T1",
+    "section": "Selecting varieties",
+    "quote": "Warm weather during growth of the leafy portion of the plant helps build a large plant, leading to a larger head.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.umn.edu/vegetables/growing-cauliflower",
+    "source_name": "UMN Extension",
+    "tier": "T1",
+    "section": "Starting seeds indoors",
+    "quote": "The seeds will germinate and the plants will grow well in summer temperatures.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://ucanr.edu/program/uc-master-gardener-program/seed-germination-temperature-and-timing",
+    "source_name": "UC Master Gardener Program (UC ANR), citing California Master Gardener Handbook Table 5.2",
+    "tier": "T1",
+    "section": "Soil temperature table (row: Cauliflower)",
+    "quote": "Cauliflower 40 65-85 95",
+    "temp_f": [
+     40,
+     95
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umn.edu/vegetables/growing-cauliflower",
+    "source_name": "UMN Extension",
+    "tier": "T1",
+    "section": "Direct seeding",
+    "quote": "Direct seed cauliflower in July.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cauliflower-home-garden",
+    "source_name": "Iowa State Extension",
+    "tier": "T1",
+    "section": "Planting",
+    "quote": "For a fall crop, plant transplants in the garden in early to mid July.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "E",
+    "url": "https://extension.usu.edu/vegetableguide/brassica/production-problems",
+    "source_name": "Utah State University Extension (Vegetable Guide: Brassica, Other Production Problems)",
+    "tier": "T1",
+    "section": "Premature Head Formation (Buttoning in Broccoli and Cauliflower)",
+    "quote": "Low fertility, micronutrient deficiencies, water stress, warm weather (more than 85-degree days and 75-degree nights), diseases, and insects can also cause buttoning.",
+    "temp_f": [
+     75,
+     85
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "E",
+    "url": "https://ucanr.edu/blog/savvy-sage/article/august-vegetable-guide",
+    "source_name": "UC ANR, The Savvy Sage (UC Master Gardeners, Sacramento/Yolo)",
+    "tier": "T1",
+    "section": "August Vegetable Guide",
+    "quote": "If you have well developed seedlings from a July seeding of the following brassicas transplant in cool weather and provide shade until established.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cauliflower-home-garden",
+    "source_name": "Iowa State Extension",
+    "tier": "T1",
+    "section": "Harvest",
+    "quote": "Over-mature heads will begin to open up and become “ricey.”",
+    "temp_f": null,
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "no",
+  "hold_basis": "M only (curd quality/no curd/delayed curd initiation in heat at curd formation, weeks after sowing). G is fine (UC max 95°F soil; UMN: seeds germinate and plants grow well in summer temperatures) and T1 directs July sowing for fall. Short-term heat risk named by T1 is to transplants set out in heat (USU buttoning >85/75°F), not to a sowing.",
+  "proposed_pause_in_heat": false,
+  "proposed_threshold_f": 80,
+  "threshold_quote_ref": 0,
+  "threshold_note": "For heat_threshold_f (mature-plant M number): USU \"high (greater than 80°F) temperatures ... decrease head quality\" and TAMU \">80°F\" delays curd initiation -> 80. Current value 78 has no quote found behind it; 80 is the nearest sourced figure. Other sourced figures: TAMU 68°F daily mean for curd quality (stricter, a mean not a high), UMN/Iowa 86 day/77 night for no crown. Trevor to choose which M statistic the field encodes; none of these justifies a sowing hold.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.curd_forming (already says heat causes ricing and discoloration; could add the sourced number); transplant-heat advice belongs in tips_by_stage.seedling or start_method.notes, not a sowing hold",
+   "draft_seasoned": "Heat matters most once the curd starts: temperatures above 80°F lower head quality and can delay curd formation. Time plantings so the curd forms in cool weather; summer sowing for a fall crop is normal, but shade transplants set out in hot weather until they establish.",
+   "draft_beginner": "Cauliflower minds the heat most when the white head is forming. Days above 80°F can make the head poor or slow it down. Sowing in summer for a fall crop is normal; if you plant young plants out in hot weather, give them shade until they settle in.",
+   "evidence_refs": [
+    0,
+    3,
+    9,
+    12
+   ]
+  },
+  "gaps": [
+   "No T1 source found linking riciness to a specific temperature (Iowa ties ricey to over-maturity; a 80°F riciness figure appears in an archived 1982 MSU bulletin found by search, not fetched/used).",
+   "No T1 source says not to SOW cauliflower in heat."
+  ],
+  "notes": "start_method=both but the record itself says it is almost always transplanted. TAMU calls cauliflower \"Does not tolerate heat\" for mature growth; that is M, not G."
+ },
+ "cabbage": {
+  "evidence": [
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/cabbage-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": "Planting and Spacing",
+    "quote": "Cabbage grows best when temperatures do not exceed 80°F and is not seriously damaged by temperatures down to 25°F.",
+    "temp_f": 80,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://hgic.clemson.edu/factsheet/cabbage-chinese-cabbage/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": "Planting (Cabbage)",
+    "quote": "When planted in the spring, cabbages must be planted early enough to ensure that they are harvested before temperatures become too hot.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://hgic.clemson.edu/factsheet/cabbage-chinese-cabbage/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": null,
+    "quote": "They grow best at temperatures of 60 to 65 °F.",
+    "temp_f": [
+     60,
+     65
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://ucanr.edu/program/uc-master-gardener-program/seed-germination-temperature-and-timing",
+    "source_name": "UC Master Gardener Program (UC ANR), citing California Master Gardener Handbook Table 5.2",
+    "tier": "T1",
+    "section": "Soil temperature table (row: Cabbage)",
+    "quote": "Cabbage 40 60-85 95",
+    "temp_f": [
+     40,
+     95
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/cabbage",
+    "source_name": "UC Marin Master Gardeners",
+    "tier": "T1",
+    "section": null,
+    "quote": "Grows best between 60 and 65 degrees but seeds germinate best around 70F degrees – range for growth is 41 F to 77 F to 86 F degrees.",
+    "temp_f": [
+     41,
+     86
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "E",
+    "url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/cabbage",
+    "source_name": "UC Marin Master Gardeners",
+    "tier": "T1",
+    "section": null,
+    "quote": "If planting in warmer summer months, protect young seedlings with shade cloth or floating row cover.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umn.edu/vegetables/growing-cabbage",
+    "source_name": "UMN Extension",
+    "tier": "T1",
+    "section": "Direct seeding",
+    "quote": "For a fall crop, plant seed directly in the garden in early July.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umn.edu/vegetables/growing-cabbage",
+    "source_name": "UMN Extension",
+    "tier": "T1",
+    "section": "Direct seeding",
+    "quote": "A July planting will begin to form a head as summer turns to fall, and be ready to harvest before a hard freeze.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://hgic.clemson.edu/factsheet/cabbage-chinese-cabbage/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": "Planting",
+    "quote": "Cabbage transplants are best for spring plantings, but fall plantings may be directly seeded into the row.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cabbage-home-garden",
+    "source_name": "Iowa State Extension",
+    "tier": "T1",
+    "section": "Planting",
+    "quote": "For a fall crop, plant transplants in the garden anytime between mid-June and mid-July.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cabbage-home-garden",
+    "source_name": "Iowa State Extension",
+    "tier": "T1",
+    "section": "Potential Problems: Split Head",
+    "quote": "Splitting is caused by excessive water uptake; the resulting pressure splits the head.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "E",
+    "url": "https://ucanr.edu/blog/savvy-sage/article/august-vegetable-guide",
+    "source_name": "UC ANR, The Savvy Sage (UC Master Gardeners, Sacramento/Yolo)",
+    "tier": "T1",
+    "section": "August Vegetable Guide",
+    "quote": "Err on the side of caution and hold off until later in the month. Brassica and any other transplants will appreciate some shade protection from late afternoon heat and on days with extreme heat.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   }
+  ],
+  "hold_supported": "no",
+  "hold_basis": "M only, and weakly stated: cabbage grows best below 80°F (USU) and spring crops must be harvested before it gets too hot (Clemson). That is a season-window (last spring planting) fact, not a reason to pause one sowing for a hot 10-day forecast. G fine to 95°F soil (UC); T1 directs early-July direct seeding for fall. Splitting is a water-uptake effect (Iowa/USU/UMN/Clemson), not a heat effect; no T1 heat-bolting claim found (all T1 bolting text is cold-induced).",
+  "proposed_pause_in_heat": false,
+  "proposed_threshold_f": 80,
+  "threshold_quote_ref": 0,
+  "threshold_note": "USU: \"grows best when temperatures do not exceed 80°F\" -> 80, matching the current value. Note it is a growth-optimum ceiling, not a damage threshold. UC Marin gives a growth range topping at 86°F.",
+  "reason_tip_candidate": {
+   "field": "succession_policy.tip_seasoned (already explains the short spring window) or tips_by_stage.head_forming; no sowing-hold message",
+   "draft_seasoned": "Cabbage grows best below about 80°F, so time spring plantings to head before summer heat. For fall, sowing in early July is standard; shade young seedlings in hot weather.",
+   "draft_beginner": "Cabbage likes it cooler than about 80°F, so get spring plants in early enough to finish before summer heat. For a fall crop, it is normal to sow in early July; give young seedlings some shade when it is hot.",
+   "evidence_refs": [
+    0,
+    1,
+    6,
+    5
+   ]
+  },
+  "gaps": [
+   "No T1 source found for cabbage bolting caused by heat (Clemson, Iowa describe cold-induced bolting).",
+   "No T1 source linking head splitting to heat; all T1 sources attribute splitting to water uptake/nitrogen.",
+   "No T1 source says not to sow cabbage in a hot spell."
+  ],
+  "notes": "The brief anticipated \"bolting or splitting\" for cabbage; the T1 evidence does not support either as a HEAT effect. heat_effect=quality_loss is supported only by USU growth ceiling and Clemson harvest-before-hot wording."
+ },
+ "brussels-sprouts": {
+  "evidence": [
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/brussel-sprouts-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": "Planting and Spacing",
+    "quote": "High summer temperatures reduce plant growth, decrease sprout quality, and cause internal tipburn.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/brussel-sprouts-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": "Planting and Spacing",
+    "quote": "Brussels sprouts grow best when temperatures do not exceed 70°F and are not seriously damaged by temperatures below freezing.",
+    "temp_f": 70,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umd.edu/resource/brussels-sprouts",
+    "source_name": "University of Maryland Extension",
+    "tier": "T1",
+    "section": "Watering",
+    "quote": "Plants maturing in hot and dry conditions may develop bitterness or fail to form compact sprouts.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/brussels-sprouts",
+    "source_name": "UC Master Gardeners Santa Clara County",
+    "tier": "T1",
+    "section": null,
+    "quote": "Sprouts maturing in hot weather and/or dry conditions are more likely to develop bitterness.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.usu.edu/yardandgarden/research/brussel-sprouts-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": "FAQ",
+    "quote": "Plant in early summer to ensure cool weather during harvest—heat reduces quality.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-brussels-sprouts/",
+    "source_name": "UC IPM",
+    "tier": "T1",
+    "section": null,
+    "quote": "However, seeds germinate best with slightly warmer temperatures of around 70° F so you can start your seed indoors if you are planting later in the season.",
+    "temp_f": 70,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.umn.edu/vegetables/growing-brussels-sprouts",
+    "source_name": "UMN Extension",
+    "tier": "T1",
+    "section": "Starting seeds indoors",
+    "quote": "The seeds will germinate and the plants will grow well in regular summer temperatures.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "E",
+    "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-brussels-sprouts/",
+    "source_name": "UC IPM",
+    "tier": "T1",
+    "section": null,
+    "quote": "If growing Brussels sprouts during the summer months, protect seedlings from sunburn with 50% shade cloth or two layers of floating row cover until they have about 6 leaves.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "E",
+    "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-brussels-sprouts/",
+    "source_name": "UC IPM",
+    "tier": "T1",
+    "section": null,
+    "quote": "If transplanting in the summer, shade the plants in the middle of the day for the first week or use floating row cover.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://hgic.clemson.edu/start-brussels-sprouts-now-for-a-winter-harvest/",
+    "source_name": "Clemson HGIC (blog)",
+    "tier": "T1",
+    "section": "Start Brussels Sprouts Now for a Winter Harvest",
+    "quote": "To maximize stem growth, set out Brussels sprouts as transplants during the ideal planting dates for your region, August 15 to September 15 in the Upstate and September 15 to October 15 in the Coastal Plain.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://hgic.clemson.edu/start-brussels-sprouts-now-for-a-winter-harvest/",
+    "source_name": "Clemson HGIC (blog)",
+    "tier": "T1",
+    "section": "Start Brussels Sprouts Now for a Winter Harvest",
+    "quote": "Keep them well-watered during the hot days of August and September.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umn.edu/vegetables/growing-brussels-sprouts",
+    "source_name": "UMN Extension",
+    "tier": "T1",
+    "section": "Starting seeds indoors",
+    "quote": "Sow seeds indoors in June.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "no",
+  "hold_basis": "M only (bitter/loose sprouts and tipburn when sprouts MATURE in heat; USU, UMD, UC MG SCC). Sprout set is months after sowing (long-season crop), so a 10-day forecast at sowing is irrelevant to it. Crop is start_method=transplant and is not a true succession crop (record says so); T1 sows/sets it out in summer heat on purpose (Clemson Aug 15 set-out, UMN June sowing, UC IPM summer seedling shade).",
+  "proposed_pause_in_heat": false,
+  "proposed_threshold_f": null,
+  "threshold_quote_ref": null,
+  "threshold_note": "No T1 damage-threshold number found. USU gives a growth optimum \"do not exceed 70°F\" (idx 1), well below the current 78. Current 78 has no quote behind it. If the field must carry a sourced number, 70 (USU, growth-optimum) is the only one found; Trevor to rule whether a growth optimum may stand in for a stress threshold.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.sprout_formation (currently has no heat reason; existing loose-sprout tip cites nitrogen only)",
+   "draft_seasoned": "Sprouts that mature in hot, dry weather turn bitter or loose, so time plantings for sprouts to form as fall cools. Summer sowing and setting out are normal; shade summer seedlings until they have about 6 leaves.",
+   "draft_beginner": "Brussels sprouts taste best when the little sprouts grow in cool fall weather; in hot, dry weather they can turn bitter or loose. It is normal to start them in summer, so shade the young plants until they have about 6 leaves.",
+   "evidence_refs": [
+    2,
+    0,
+    4,
+    7
+   ]
+  },
+  "gaps": [
+   "No T1 temperature for loose/bitter sprouts; an 80°F loose-sprout figure appears only on non-T1 sites (gardenerspath) and was not used.",
+   "No T1 source says not to SOW Brussels sprouts in heat."
+  ],
+  "notes": "Record start_method=transplant and succession tip says largely a single planting; pause_in_heat on a succession sowing barely applies. Recommend false. UMN \"loose, poorly developed sprouts\" is attributed to inconsistent water, not heat, so it was excluded."
+ },
+ "kale": {
+  "evidence": [
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+    "source_name": "UMN Extension (collards and kale)",
+    "tier": "T1",
+    "section": "Watering",
+    "quote": "The best quality of kale or collards—flavorful, tender, non-bitter leaves—results from fast growth without heat or moisture stress. If the plants are overheated or struggling to take up water, they will produce chemicals resulting in pungent or bitter flavors.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+    "source_name": "UMN Extension (collards and kale)",
+    "tier": "T1",
+    "section": "Harvesting",
+    "quote": "For the spring crop, flavor is best if you harvest the plants before the weather becomes hot and dry. Heat will slow growth and leaves will become tough and strong flavored.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/kale-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "High summer temperatures reduce growth, decrease quality, and cause bitter or off flavors to develop.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/kale-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": "Planting and Spacing",
+    "quote": "Kale grows best when temperatures do not exceed 75°F.",
+    "temp_f": 75,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://www.aces.edu/blog/topics/lawn-garden/grow-more-kale/",
+    "source_name": "Alabama Cooperative Extension (ACES)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Kale is a cool-season crop that tastes best before the heat of summer or after fall frost.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-leafy-greens-iowa",
+    "source_name": "Iowa State Extension (leafy greens)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Other leafy greens like kale, collards, mustard, endive, and chard will be ready to harvest 8 to 10 weeks after planting in early April. These leafy greens are more heat tolerant and some may grow through the hot summer months, especially if provided enough moisture.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+    "source_name": "UMN Extension (collards and kale)",
+    "tier": "T1",
+    "section": "Direct seeding",
+    "quote": "Direct seed again about three months before the average frost date for a fall crop.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+    "source_name": "UMN Extension (collards and kale)",
+    "tier": "T1",
+    "section": null,
+    "quote": "For fall crops, start seed indoors in June.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://content.ces.ncsu.edu/kale",
+    "source_name": "NC State Extension",
+    "tier": "T1",
+    "section": "Cultivars",
+    "quote": "Toscano (65 days) is a dinosaur, or laciniata-type, kale with long, thin, puckered dark-green leaves that tolerate heat and cold.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://ucanr.edu/blog/savvy-sage/article/august-vegetable-guide",
+    "source_name": "UC ANR, The Savvy Sage (UC Master Gardeners, Sacramento/Yolo)",
+    "tier": "T1",
+    "section": "Additional Sacramento Area Recommended Vegetables for August",
+    "quote": "Plant in the last two weeks of August Chard (Swiss) – Seed Collards – Seed Endive – Seed Fennel (Florence) – Seed Kale – Seed",
+    "temp_f": null,
+    "in_dataset_cache": false
+   }
+  ],
+  "hold_supported": "no",
+  "hold_basis": "M only (bitter, tough, strong-flavored leaves when grown/harvested in heat; UMN, USU, ACES). No T1 G or sowing-in-heat failure found; T1 sows the fall crop in summer (UMN direct seed ~3 months before frost; UC Sacramento sow kale seed late August; Iowa calls kale more heat tolerant than lettuce/spinach). A hot week at sowing does not determine leaf quality at harvest weeks later.",
+  "proposed_pause_in_heat": false,
+  "proposed_threshold_f": null,
+  "threshold_quote_ref": null,
+  "threshold_note": "Only number found is USU growth optimum \"does not exceed 75°F\" (idx 3). Current 82 has no quote behind it. No T1 bitterness/toughness temperature found. Trevor to rule whether a growth optimum may serve as heat_threshold_f.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.harvest (or established): the heat reason is a harvest-quality fact; existing established tip attributes toughness to drought only",
+   "draft_seasoned": "Heat slows kale and turns leaves tough and strong flavored, so harvest the spring crop before hot, dry weather and keep moisture even. Summer sowing for a fall crop is normal; fall leaves sweeten as it cools.",
+   "draft_beginner": "In hot weather kale grows slowly and its leaves get tough and bitter, so pick your spring plants before summer heat and keep them watered. It is fine to sow in summer for a fall crop.",
+   "evidence_refs": [
+    1,
+    0,
+    6
+   ]
+  },
+  "gaps": [
+   "No T1 germination maximum for kale found (UC chart has no kale row; record gives 45-85 without a located source).",
+   "No T1 temperature for kale bitterness/toughness.",
+   "No T1 source says not to sow kale in a hot spell."
+  ],
+  "notes": "Clemson arugula/kale/mustard/chard factsheet says \"Direct seeding works well when planting in late summer for a fall harvest, when the soil is much warmer.\" but it sits in a general planting section, not a kale section, so it is excluded per the multi-crop rule; same wording appears on the Clemson COLLARDS factsheet (used there). Clemson's \"Warm temperatures cause plants to bolt\" is in the ARUGULA section, not kale; excluded."
+ },
+ "collards": {
+  "evidence": [
+   {
+    "mech": "TOL",
+    "url": "https://extension.umd.edu/resource/growing-leafy-greens-home-garden",
+    "source_name": "University of Maryland Extension (leafy greens)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Collards are more heat-tolerant than kale or turnip greens.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://hgic.clemson.edu/factsheet/collards/",
+    "source_name": "Clemson HGIC (Collards, HGIC 1307)",
+    "tier": "T1",
+    "section": "Planting",
+    "quote": "Collards ( Brassica oleracea ) can be grown most of the year in South Carolina, though early spring or fall production is generally preferred.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "S",
+    "url": "https://hgic.clemson.edu/factsheet/collards/",
+    "source_name": "Clemson HGIC (Collards, HGIC 1307)",
+    "tier": "T1",
+    "section": "Planting",
+    "quote": "Direct seeding works well when planting in the late summer for a fall harvest, as the soil is much warmer at this time.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "TOL",
+    "url": "https://fieldreport.caes.uga.edu/news/cultivating-collards-a-step-by-step-guide/",
+    "source_name": "UGA Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "If you keep the soil moist enough during hot spells in the summer, collards will produce an abundant harvest.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://fieldreport.caes.uga.edu/news/cultivating-collards-a-step-by-step-guide/",
+    "source_name": "UGA Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Plant collards in early spring for summer harvest and again in midsummer for fall and early winter harvest.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+    "source_name": "UMN Extension (collards and kale)",
+    "tier": "T1",
+    "section": "Watering",
+    "quote": "The best quality of kale or collards—flavorful, tender, non-bitter leaves—results from fast growth without heat or moisture stress. If the plants are overheated or struggling to take up water, they will produce chemicals resulting in pungent or bitter flavors.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+    "source_name": "UMN Extension (collards and kale)",
+    "tier": "T1",
+    "section": "Harvesting",
+    "quote": "For the spring crop, flavor is best if you harvest the plants before the weather becomes hot and dry. Heat will slow growth and leaves will become tough and strong flavored.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-leafy-greens-iowa",
+    "source_name": "Iowa State Extension (leafy greens)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Other leafy greens like kale, collards, mustard, endive, and chard will be ready to harvest 8 to 10 weeks after planting in early April. These leafy greens are more heat tolerant and some may grow through the hot summer months, especially if provided enough moisture.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+    "source_name": "UMN Extension (collards and kale)",
+    "tier": "T1",
+    "section": "Direct seeding",
+    "quote": "Direct seed again about three months before the average frost date for a fall crop.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "no",
+  "hold_basis": "Weak M only (UMN: heat makes leaves tough/strong flavored, a harvest-quality effect). Strong TOL evidence: UMD most heat-tolerant of the greens, Clemson grown most of the year in SC with late-summer direct seeding in warm soil, UGA abundant harvest through summer hot spells with moisture, midsummer planting for fall. Nothing supports pausing a sowing for heat.",
+  "proposed_pause_in_heat": false,
+  "proposed_threshold_f": null,
+  "threshold_quote_ref": null,
+  "threshold_note": "No T1 heat-stress number found for collards. Current 85 has no quote behind it. UMD ranks collards above kale for heat tolerance, so a collards value at or above kale's is consistent, but no number is sourced.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.harvest (or established); no hold message",
+   "draft_seasoned": "Collards handle summer heat better than kale, and keep producing through hot spells if the soil stays moist; heat and drought together make leaves tough and strong flavored. Late-summer direct sowing into warm soil works well for fall.",
+   "draft_beginner": "Collards put up with summer heat better than kale. Keep the soil moist in hot spells and they keep producing; hot, dry weather can make leaves tough. Sowing seeds in late summer works well for a fall crop.",
+   "evidence_refs": [
+    0,
+    3,
+    6,
+    2
+   ]
+  },
+  "gaps": [
+   "No T1 temperature for collard bitterness/toughness or heat damage.",
+   "No T1 collards germination maximum (not in UC chart)."
+  ],
+  "notes": "Evidence is clearly AGAINST a heat hold for collards; the record's own succession tip already says only extreme heat (deserts, peak FL/HI summers) warrants skipping. Clemson collards factsheet is NOT in dataset cache (fetched; saved under scratchpad/fetched)."
+ }
+}

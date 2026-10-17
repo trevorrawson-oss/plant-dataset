@@ -1,0 +1,2263 @@
+{
+ "kale": {
+  "name": "Kale",
+  "botanical": null,
+  "start_method": {
+   "start": "both",
+   "weeks_before": 4,
+   "hardening_off_seasoned": true,
+   "hardening_off_beginner": true,
+   "notes_seasoned": "Kale can be direct sown or transplanted. For a spring crop, start seeds indoors about 4 to 5 weeks before set-out and transplant around 4 to 5 weeks before the last frost, or direct sow as soon as the soil is workable; kale tolerates frost. For a fall and overwintering crop, sow in midsummer (often direct in the garden) so plants size up before cold, then harvest through fall and, in milder zones, winter. Harden transplants off over 7 to 10 days.",
+   "notes_beginner": "You can sow kale seeds right in the garden or start them indoors. For spring, start seeds about a month before planting out, and set plants in the garden a few weeks before your last frost, or just sow seeds once the soil can be worked. For a fall crop, sow in mid to late summer so it is ready before winter. If you grow your own transplants, let them get used to the outdoors over a week before planting."
+  },
+  "germination_temp_f": [
+   45,
+   85
+  ],
+  "heat_threshold_f": 82,
+  "heat_effect": "quality_loss",
+  "succession_policy": {
+   "interval_weeks": 3,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Kale crops over a long window, so rather than one big planting, sow small batches every 2 to 3 weeks through the cool stretches of spring and again from late summer for a fall and overwintering crop. Because each plant is cut over many weeks, you need fewer sowings than for a fast crop, but staggering them keeps a supply of tender young leaves coming. In hot regions skip the summer heat and plant for fall and winter instead.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "text_seasoned": "Sow about 0.25 to 0.5 inch deep into a moist seedbed or starting mix; kale germinates reliably across 45 to 85°F in about 5 to 10 days.",
+    "text_beginner": "Plant the seeds about a quarter to half an inch deep in damp soil, and keep it evenly moist while they sprout in 5 to 10 days.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "For a spring crop start indoors about 4 to 5 weeks before set-out, or direct sow as soon as the soil is workable; kale tolerates cool soil.",
+    "text_beginner": "Start seeds indoors about a month before planting out, or just sow them in the garden once the soil can be worked.",
+    "audience": "core"
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "harvest",
+   "overwintering"
+  ]
+ },
+ "spinach": {
+  "name": "Spinach",
+  "botanical": null,
+  "start_method": {
+   "start": "direct",
+   "weeks_before": null,
+   "hardening_off_seasoned": false,
+   "hardening_off_beginner": false,
+   "notes_seasoned": "Spinach is almost always direct-sown, since it grows fast and resents root disturbance. Sow seed about 0.5 inch deep as soon as the soil can be worked in spring (it germinates in soil as cool as 40°F), and again in late summer for the main fall crop. Transplanting is possible from cells or soil blocks for an early start or to place an overwintering crop, but handle the roots gently. Germination is poor in soil above about 75 to 85°F, so summer sowings in warm regions wait for cooling soil.",
+   "notes_beginner": "Spinach is best planted straight in the garden from seed, because it grows quickly and does not like having its roots disturbed. Sow the seeds about half an inch deep as soon as the soil can be worked in spring, and again in late summer for a fall crop. The seeds sprout even in cold soil, but they will not come up well in hot soil, so do not sow in the heat of summer."
+  },
+  "germination_temp_f": [
+   40,
+   75
+  ],
+  "heat_threshold_f": 78,
+  "heat_effect": "bolting",
+  "succession_policy": {
+   "interval_weeks": 2,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Spinach matures fast and bolts hard, so sow small batches every 1 to 2 weeks through the cool windows rather than all at once: across spring until days lengthen and warm, and again from late summer through fall, which is the longer, more reliable run. In hot regions skip summer entirely and succession-sow through the cool fall, winter, and spring.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "text_seasoned": "Sow about 0.5 inch deep into a moist, uncrusted seedbed; spinach germinates from about 40°F and reliably at 60 to 70°F, but poorly above 75 to 85°F.",
+    "text_beginner": "Plant seeds about half an inch deep in damp soil. Spinach sprouts even in cold soil, so you can sow it very early.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "For the fall crop, pre-sprout or water the furrow to cool it, or wait for soil to drop below 75°F, since warm soil is the main cause of poor late-summer stands.",
+    "text_beginner": "If you sow in late summer for fall, wait until the soil cools down, because spinach seeds will not come up well in hot soil.",
+    "audience": "core"
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "harvest",
+   "bolting"
+  ]
+ },
+ "carrot": {
+  "name": "Carrot",
+  "botanical": "Daucus carota",
+  "start_method": {
+   "start": "direct",
+   "weeks_before": 0,
+   "hardening_off_seasoned": false,
+   "hardening_off_beginner": "You do not need to harden off carrots. They are sown straight into the garden from seed, not started indoors and transplanted.",
+   "notes_seasoned": "Always direct-sow carrots into the garden; never start them in pots or cells. The taproot begins extending almost immediately and transplanting damages and misdirects its growth, producing forked or stunted roots. Direct-seed about 3 to 4 weeks before the last spring frost once the soil is workable and has reached at least 45°F, sowing seed shallowly (1/8 to 1/4 inch) and keeping the surface evenly moist, since a crusted seedbed blocks the small seedlings. Germination is slow, often 2 to 3 weeks; many growers sow a few fast radishes in the same row to mark it. There is no indoor-start or hardening-off step for carrots.",
+   "notes_beginner": "Plant carrot seeds right in the garden where they will grow. Do not start them in pots or trays. Carrots make one long root (the part you eat), and moving a started plant breaks or bends that root, so you end up with forked, stubby carrots. Sow the seed straight into loose soil about 3 to 4 weeks before your last spring frost, once the ground is no longer frozen or soggy. Cover the tiny seeds only lightly (about 1/8 to 1/4 inch) and keep the surface damp until they come up. Be patient: carrot seeds are slow and can take 2 to 3 weeks to sprout. A trick is to scatter a few fast-sprouting radish seeds in the same row to mark where the carrots are.",
+   "sources": [
+    "umn_ext",
+    "umd_ext"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/vegetables/growing-carrots-and-parsnips",
+     "verified": "2026-06-08"
+    },
+    "umd_ext": {
+     "url": "https://extension.umd.edu/resource/growing-carrots-home-garden",
+     "verified": "2026-06-08"
+    }
+   }
+  },
+  "germination_temp_f": [
+   55,
+   75
+  ],
+  "heat_threshold_f": 80,
+  "heat_effect": "quality_loss",
+  "succession_policy": {
+   "interval_weeks": 3,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Carrots succession well: sow a short row every 3 weeks through the cool-season window rather than one large planting, so roots mature in sequence instead of all at once. In cold-summer climates that means spring through early summer, then a late-summer sowing for a fall and winter-storage crop; in hot-summer climates it means fall through early spring, skipping the heat. Stop spring sowings before sustained heat arrives, because carrots near maturity held in hot soil turn coarse, fibrous, and strong-flavored. The exact number of sowings per season is set by the length of your cool window, not a fixed cap.",
+   "sources": [
+    "umn_ext",
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/vegetables/growing-carrots-and-parsnips",
+     "verified": "2026-06-08"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+     "verified": "2026-06-08"
+    }
+   }
+  },
+  "germination_tips": [
+   {
+    "tip_id": "carrot_germ_moisture",
+    "audience": "core",
+    "text_seasoned": "Carrot seed is slow and erratic, often 14 to 21 days, and the fine seedlings cannot push through a dried crust. Keep the surface evenly moist from sowing until emergence, watering lightly and often; a board or light burlap laid over the row holds moisture and is removed at the first sign of green.",
+    "text_beginner": "Carrot seeds are slow, often 14 to 21 days, and the tiny sprouts cannot break through a dry crust. Keep the soil surface damp from planting until they come up, watering a little and often. Laying a board or piece of burlap over the row helps hold moisture; lift it as soon as you see green.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "umn_ext",
+     "umd_ext"
+    ],
+    "anchoring_urls": {
+     "umn_ext": {
+      "url": "https://extension.umn.edu/vegetables/growing-carrots-and-parsnips",
+      "verified": "2026-06-08"
+     },
+     "umd_ext": {
+      "url": "https://extension.umd.edu/resource/growing-carrots-home-garden",
+      "verified": "2026-06-08"
+     }
+    },
+    "author": "plant",
+    "added_in": "carrot_steps6_8",
+    "last_reviewed": "2026-06-10",
+    "last_reviewed_operation": "carrot_steps6_8_release",
+    "display_priority_override": null
+   },
+   {
+    "tip_id": "carrot_germ_sow_shallow",
+    "audience": "core",
+    "text_seasoned": "Sow shallowly, about 1/8 to 1/4 inch, since deep-sown carrot seed exhausts itself before reaching the surface. Mixing in a few fast radish seeds marks the slow row and breaks any forming crust.",
+    "text_beginner": "Plant the seeds shallow, only about 1/8 to 1/4 inch deep, because carrot seeds planted too deep run out of energy before they reach the top. Mixing in a few fast radish seeds marks the row and helps break up any crust.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "umn_ext",
+     "clemson_hgic"
+    ],
+    "anchoring_urls": {
+     "umn_ext": {
+      "url": "https://extension.umn.edu/vegetables/growing-carrots-and-parsnips",
+      "verified": "2026-06-08"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "verified": "2026-06-08"
+     }
+    },
+    "author": "plant",
+    "added_in": "carrot_steps6_8",
+    "last_reviewed": "2026-06-10",
+    "last_reviewed_operation": "carrot_steps6_8_release",
+    "display_priority_override": null
+   }
+  ],
+  "heat_stress_trigger": [
+   {
+    "active_stages": [
+     "established",
+     "harvest"
+    ],
+    "body_seasoned": "Sustained air above about 75°F coarsens roots and turns them bitter (carrots do not bolt, this is a quality issue). Harvest mature roots, keep moisture even, and mulch or shade if you can."
+   }
+  ],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "harvest"
+  ]
+ },
+ "sugar-snap-peas": {
+  "name": "Sugar Snap Peas",
+  "botanical": null,
+  "start_method": {
+   "start": "direct",
+   "weeks_before": null,
+   "hardening_off_seasoned": "Not applicable. Peas are direct-sown in place and are not started indoors or hardened off.",
+   "hardening_off_beginner": "You do not need to harden off peas. They are planted straight into the garden from seed.",
+   "notes_seasoned": "Direct-sow into cool, workable soil as early as the ground can be prepared in spring, and again for a fall crop. Peas resent root disturbance and germinate readily in cool soil, so transplanting offers no advantage. Sow about 1 to 1.5 inches deep and 1 to 2 inches apart in rows roughly 18 to 24 inches apart; some growers presoak seed overnight to speed emergence.",
+   "notes_beginner": "Plant snap pea seeds right where they will grow, as soon as the soil can be worked in spring and again in late summer for fall. Peas do not like their roots disturbed, so skip starting them indoors. Plant about 1 to 1.5 inches deep and 1 to 2 inches apart."
+  },
+  "germination_temp_f": [
+   40,
+   75
+  ],
+  "heat_threshold_f": 82,
+  "heat_effect": "poor_fruit_set",
+  "succession_policy": {
+   "interval_weeks": 2,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Sugar snap peas, especially the tall indeterminate types, crop over a longer window than snow peas, so one sowing often carries the spring crop; add a second sowing a week or two later only to stretch the supply, and a separate fall crop where summers allow. In hot regions skip summer entirely and sow through the cool fall, winter, and early spring.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "tip_id": "peas_germ_cool_soil",
+    "audience": "core",
+    "text_seasoned": "Sow peas as soon as the soil can be worked, but into moist, well-drained ground, not cold mud. Pea seed germinates from about 40°F up and fastest at 55 to 65°F, yet it rots in cold, saturated soil, the most common cause of a thin stand. Raised beds and good drainage matter more than calendar date.",
+    "text_beginner": "Plant peas as early as you can work the soil, but make sure it drains well and is not soggy. Pea seeds sprout in cool soil but rot in cold, wet mud, which is the usual reason for gaps in the row. Good drainage matters more than planting on an exact date.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "usu_ext",
+     "umd_ext"
+    ],
+    "anchoring_urls": {
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+      "verified": "2026-07-02"
+     },
+     "umd_ext": {
+      "url": "https://extension.umd.edu/resource/peas/",
+      "verified": "2026-07-02"
+     }
+    },
+    "author": "plant",
+    "added_in": "sugar_snap_peas_author_fresh_pilot",
+    "last_reviewed": "2026-07-02",
+    "last_reviewed_operation": "sugar_snap_peas_author_fresh_pilot",
+    "display_priority_override": null
+   },
+   {
+    "tip_id": "peas_germ_inoculant",
+    "audience": "core",
+    "text_seasoned": "Peas fix their own nitrogen with Rhizobium bacteria on their roots. Where peas or beans have grown before, those bacteria are already present; in a new bed, an inexpensive seed inoculant can improve nodulation. It is optional, not required, and no substitute for good drainage and tilth.",
+    "text_beginner": "Peas make their own nitrogen with the help of tiny bacteria on their roots. If peas or beans have grown in your bed before, the bacteria are already there. In a brand-new bed you can coat the seed with a pea inoculant powder to help, but it is optional.",
+    "evidence_tier": "likely",
+    "sources": [
+     "usu_ext"
+    ],
+    "anchoring_urls": {
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+      "verified": "2026-07-02"
+     }
+    },
+    "author": "plant",
+    "added_in": "sugar_snap_peas_author_fresh_pilot",
+    "last_reviewed": "2026-07-02",
+    "last_reviewed_operation": "sugar_snap_peas_author_fresh_pilot",
+    "display_priority_override": null
+   }
+  ],
+  "heat_stress_trigger": [
+   {
+    "active_stages": [
+     "flowering",
+     "pod_development"
+    ],
+    "body_seasoned": "Sustained heat above about 80 to 85°F during bloom causes peas to drop blossoms instead of setting pods, keeps the pods from plumping up, and brings on powdery mildew. Keep moisture steady and water deeply ahead of a heat wave, harvest promptly, and treat the arrival of summer heat as the end of the spring crop."
+   }
+  ],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "vegetative",
+   "flowering",
+   "pod_development",
+   "harvest"
+  ]
+ },
+ "broccoli": {
+  "name": "Broccoli",
+  "botanical": null,
+  "start_method": {
+   "start": "both",
+   "weeks_before": 5,
+   "hardening_off_seasoned": true,
+   "hardening_off_beginner": true,
+   "notes_seasoned": "For the spring crop, start seeds indoors about 5 to 7 weeks before setting out and transplant roughly 2 to 4 weeks before the last frost; broccoli tolerates light frost. For fall, start transplants in mid to late summer, about 4 to 6 weeks before setting them out as the heat breaks, or direct sow. Set out young, well-rooted transplants with 4 to 6 true leaves, since oversized or cold-shocked transplants are prone to buttoning (tiny premature heads). Harden plants off over 7 to 10 days.",
+   "notes_beginner": "You can start broccoli indoors or buy young plants. For a spring crop, start seeds about 5 to 7 weeks before you plant out, and set plants in the garden a couple of weeks before your last frost. For fall, start them in mid to late summer and plant out as the heat eases. Use small, healthy plants, not big leggy ones, and let them get used to the outdoors over a week before planting."
+  },
+  "germination_temp_f": [
+   40,
+   86
+  ],
+  "heat_threshold_f": 86,
+  "heat_effect": "crown_failure",
+  "succession_policy": {
+   "interval_weeks": 3,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Broccoli crops in the cool shoulders of the year, so plant in small batches every 2 to 3 weeks within the spring window and again in late summer for fall, rather than all at once. The spring window is short because heads must size up before summer heat arrives, so most gardens fit only a sowing or two before the midsummer gap; the fall planting, heading into cooling weather, is often the more reliable crop.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "text_seasoned": "Start broccoli seeds indoors at 60 to 75°F; germination is fast, usually 5 to 10 days, and seedlings stretch if light is weak after they emerge.",
+    "text_beginner": "Start your seeds indoors where it's about 60 to 75°F. They sprout quickly, in 5 to 10 days, and need bright light right away or they'll get leggy.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "Sow about 0.25 to 0.5 inch deep into a moist seed-starting mix; broccoli germinates reliably across a wide soil-temperature range as long as moisture stays even.",
+    "text_beginner": "Plant the seeds about a quarter to half an inch deep in damp seed-starting mix, and keep it evenly moist while they sprout.",
+    "audience": "core"
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "head_forming",
+   "harvest",
+   "side_shoots"
+  ]
+ },
+ "snow-peas": {
+  "name": "Snow Peas",
+  "botanical": null,
+  "start_method": {
+   "start": "direct",
+   "weeks_before": null,
+   "hardening_off_seasoned": "Not applicable. Peas are direct-sown in place and are not started indoors or hardened off.",
+   "hardening_off_beginner": "You do not need to harden off peas. They are planted straight into the garden from seed.",
+   "notes_seasoned": "Direct-sow into cool, workable soil as early as the ground can be prepared in spring, and again for a fall crop. Peas resent root disturbance and germinate readily in cool soil, so transplanting offers no advantage. Sow about 1 to 1.5 inches deep; some growers presoak seed overnight to speed emergence.",
+   "notes_beginner": "Plant pea seeds right where they will grow, as soon as the soil can be worked in spring and again in late summer for fall. Peas do not like their roots disturbed, so skip starting them indoors. Plant about 1 to 1.5 inches deep."
+  },
+  "germination_temp_f": [
+   40,
+   75
+  ],
+  "heat_threshold_f": 80,
+  "heat_effect": "poor_fruit_set",
+  "succession_policy": {
+   "interval_weeks": 2,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Snow peas crop over a short window and then decline in the heat, so sow small batches a week or two apart through the cool spring window rather than all at once, and again for fall where summers allow. In hot regions skip summer entirely and succession-sow through the cool fall, winter, and early spring.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "tip_id": "peas_germ_cool_soil",
+    "audience": "core",
+    "text_seasoned": "Sow peas as soon as the soil can be worked, but into moist, well-drained ground, not cold mud. Pea seed germinates from about 40°F up and fastest at 55 to 65°F, yet it rots in cold, saturated soil, the most common cause of a thin stand. Raised beds and good drainage matter more than calendar date.",
+    "text_beginner": "Plant peas as early as you can work the soil, but make sure it drains well and is not soggy. Pea seeds sprout in cool soil but rot in cold, wet mud, which is the usual reason for gaps in the row. Good drainage matters more than planting on an exact date.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "usu_ext",
+     "umd_ext"
+    ],
+    "anchoring_urls": {
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+      "verified": "2026-06-29"
+     },
+     "umd_ext": {
+      "url": "https://extension.umd.edu/resource/peas/",
+      "verified": "2026-06-29"
+     }
+    },
+    "author": "plant",
+    "added_in": "snow_peas_author_fresh_pilot",
+    "last_reviewed": "2026-06-29",
+    "last_reviewed_operation": "snow_peas_author_fresh_pilot",
+    "display_priority_override": null
+   },
+   {
+    "tip_id": "peas_germ_inoculant",
+    "audience": "core",
+    "text_seasoned": "Peas fix their own nitrogen with Rhizobium bacteria on their roots. Where peas or beans have grown before, those bacteria are already present; in a new bed, an inexpensive seed inoculant can improve nodulation. It is optional, not required, and no substitute for good drainage and tilth.",
+    "text_beginner": "Peas make their own nitrogen with the help of tiny bacteria on their roots. If peas or beans have grown in your bed before, the bacteria are already there. In a brand-new bed you can coat the seed with a pea inoculant powder to help, but it is optional.",
+    "evidence_tier": "likely",
+    "sources": [
+     "usu_ext"
+    ],
+    "anchoring_urls": {
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+      "verified": "2026-06-29"
+     }
+    },
+    "author": "plant",
+    "added_in": "snow_peas_author_fresh_pilot",
+    "last_reviewed": "2026-06-29",
+    "last_reviewed_operation": "snow_peas_author_fresh_pilot",
+    "display_priority_override": null
+   }
+  ],
+  "heat_stress_trigger": [
+   {
+    "active_stages": [
+     "flowering",
+     "pod_development"
+    ],
+    "body_seasoned": "Sustained heat above about 80°F during bloom causes peas to drop blossoms instead of setting pods, toughens the pods that do form, and brings on powdery mildew. Keep moisture steady and water deeply ahead of a heat wave, harvest promptly, and treat the arrival of summer heat as the end of the spring crop."
+   }
+  ],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "vegetative",
+   "flowering",
+   "pod_development",
+   "harvest"
+  ]
+ },
+ "lettuce-leaf": {
+  "name": "Lettuce (Leaf)",
+  "botanical": null,
+  "start_method": {
+   "start": "direct",
+   "weeks_before": 0,
+   "hardening_off_seasoned": false,
+   "hardening_off_beginner": "You do not need to harden off leaf lettuce when you direct sow it. Seeds go straight into the garden. If you instead buy or raise transplants, give them a few days to adjust to outdoor conditions before planting out.",
+   "notes_seasoned": "Direct sow outdoors about 3 to 4 weeks before your last spring frost, as soon as the soil is workable, since lettuce tolerates light frost and germinates in cool soil. To get an earlier harvest, start seeds indoors roughly 4 weeks ahead and set out 3 to 4 week old transplants, which also skips the thinning step. Lettuce transplants easily because its shallow roots re-establish quickly, just harden plants off before moving them outside.",
+   "notes_beginner": "Sow seed straight into the garden about 3 to 4 weeks before your last spring frost, as soon as you can work the soil, since lettuce handles light frost and sprouts in cool ground. For an earlier harvest, start seeds indoors about 4 weeks ahead and set out the young plants when they are 3 to 4 weeks old, which also lets you skip thinning. Lettuce moves outdoors easily because its shallow roots settle in fast, just harden the plants off first (let them get used to outdoor conditions over several days before planting them out).",
+   "sources": [
+    "umd_ext"
+   ],
+   "anchoring_urls": {
+    "umd_ext": {
+     "url": "https://extension.umd.edu/resource/growing-lettuce-home-garden",
+     "verified": "2026-06-04"
+    }
+   }
+  },
+  "germination_temp_f": [
+   35,
+   75
+  ],
+  "heat_threshold_f": 78,
+  "heat_effect": "bolting",
+  "succession_policy": {
+   "interval_weeks": 2,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Succession sow at roughly 2-week intervals through the cool-season window for your climate. Where summers are cold-limited, that means spring through early summer plus a late-summer fall sowing; where summers are hot, it means fall through spring with a summer heat pause. Lettuce bolts and turns bitter above about 75°F, so anchor your sowings to the cool side of the season and stop before sustained heat. Sow just enough for 1-2 weeks of salads per batch rather than a full bed at once.",
+   "sources": [
+    "usu_ext",
+    "umn_ext",
+    "umd_ext"
+   ],
+   "anchoring_urls": {
+    "usu_ext": {
+     "url": "https://extension.usu.edu/vegetableguide/leafy-greens/planting-spacing",
+     "verified": "2026-05-31"
+    },
+    "umn_ext": {
+     "url": "https://extension.umn.edu/planting-and-growing-guides/planting-vegetables-midsummer-fall-harvest",
+     "verified": "2026-05-31"
+    },
+    "umd_ext": {
+     "url": "https://extension.umd.edu/resource/growing-lettuce-home-garden",
+     "verified": "2026-05-31"
+    }
+   }
+  },
+  "germination_tips": [
+   {
+    "tip_id": "tip_85e7xx84",
+    "sources": [
+     "ncsu_ext",
+     "umn_ext",
+     "umd_ext",
+     "uiuc_ext",
+     "uf_ifas"
+    ],
+    "evidence_tier": "extension_backed",
+    "author": {
+     "type": "plant_team"
+    },
+    "added_in": "phase_4_3_session_15",
+    "last_reviewed": "2026-05-28",
+    "last_reviewed_operation": "phase_3_lettuce_m13_s2c_na_tips_attribution",
+    "display_priority_override": null,
+    "audience": "core",
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://content.ces.ncsu.edu/lettuce",
+      "verified": "2026-05-28"
+     },
+     "umn_ext": {
+      "url": "https://extension.umn.edu/vegetables/growing-lettuce-endive-and-radicchio",
+      "verified": "2026-05-28"
+     },
+     "umd_ext": {
+      "url": "https://extension.umd.edu/resource/growing-lettuce-home-garden",
+      "verified": "2026-05-28"
+     },
+     "uiuc_ext": {
+      "url": "https://extension.illinois.edu/gardening/lettuce",
+      "verified": "2026-05-28"
+     },
+     "uf_ifas": {
+      "url": "https://blogs.ifas.ufl.edu/escambiaco/2014/09/30/thinning-vegetable-seedlings-2",
+      "verified": "2026-05-28"
+     }
+    },
+    "text_beginner": "Lettuce and other leafy greens sprout easily in cool, moist soil. The catch is heat: once the soil gets above about 80°F, the seeds mostly stop sprouting, which is why seed sown in the heat of summer often just fails. Sow a little more thickly than the spacing on the packet, then thin the seedlings out to that spacing once they are up.",
+    "text_seasoned": "Leafy greens are some of the easiest crops to germinate in cool, moist soil, but germination drops off sharply once soil climbs above roughly 80°F, which is why midsummer sowings so often fail. Sow a little more thickly than your final spacing and thin to the recommended distance."
+   },
+   {
+    "tip_id": "tip_85by323c",
+    "sources": [
+     "uiuc_ext",
+     "ncsu_ext",
+     "uwi_hort",
+     "umd_ext",
+     "uf_ifas"
+    ],
+    "evidence_tier": "extension_backed",
+    "author": {
+     "type": "plant_team"
+    },
+    "added_in": "phase_4_3_session_15",
+    "last_reviewed": "2026-05-28",
+    "last_reviewed_operation": "phase_3_lettuce_m13_s2c_na_tips_attribution",
+    "display_priority_override": null,
+    "audience": "core",
+    "anchoring_urls": {
+     "uiuc_ext": {
+      "url": "https://extension.illinois.edu/gardening/lettuce",
+      "verified": "2026-05-28"
+     },
+     "ncsu_ext": {
+      "url": "https://extensiongardener.ces.ncsu.edu/news/microgreens-for-macro-satisfaction/",
+      "verified": "2026-05-28"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/grow-your-own-salad-greens/",
+      "verified": "2026-05-28"
+     },
+     "umd_ext": {
+      "url": "https://extension.umd.edu/resource/growing-lettuce-home-garden",
+      "verified": "2026-05-28"
+     },
+     "uf_ifas": {
+      "url": "https://blogs.ifas.ufl.edu/escambiaco/2014/09/30/thinning-vegetable-seedlings-2",
+      "verified": "2026-05-28"
+     }
+    },
+    "text_beginner": "The little seedlings you pull out when thinning are completely edible. Rinse them and toss them into a salad as microgreens. With leafy greens, thinning and harvesting are the same job.",
+    "text_seasoned": "The thinnings from leafy greens are completely edible; use them as microgreens in salads. Thinning is harvesting."
+   }
+  ],
+  "heat_stress_trigger": [
+   {
+    "active_stages": [
+     "established",
+     "harvest"
+    ],
+    "body_seasoned": "Heat is the enemy of leafy greens. They bolt quickly and the flavor turns bitter fast, so harvest as much as you can before the hot spell arrives. Shade cloth over the bed can buy you roughly another week in marginal temperatures by keeping the plants a few degrees cooler."
+   }
+  ],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "harvest",
+   "bolting"
+  ]
+ },
+ "arugula": {
+  "name": "Arugula",
+  "botanical": null,
+  "start_method": {
+   "start": "direct",
+   "weeks_before": null,
+   "hardening_off_seasoned": false,
+   "hardening_off_beginner": false,
+   "notes_seasoned": "Arugula is almost always direct-sown, since it grows fast and resents root disturbance. Sow seed about 0.25 to 0.5 inch deep as soon as the soil can be worked in spring; it germinates readily even in cool soil, often in 5 to 7 days, and tolerates frost, so it can go in several weeks before the last frost. Sow a little more thickly than the final stand and thin to taste, eating the thinnings. In hot regions, shift sowing to fall through spring, since warm soil above about 80°F cuts germination and lengthening warm days bolt the crop.",
+   "notes_beginner": "Arugula is best planted straight in the garden from seed, because it grows so fast and does not like having its roots disturbed. Sow the seeds about a quarter to half an inch deep as soon as the soil can be worked in spring, since they sprout even in cold soil and the plants handle frost. Sow again every couple of weeks, and in hot areas plant in fall through spring instead of summer, because heat keeps the seeds from sprouting well and makes the plants bolt."
+  },
+  "germination_temp_f": [
+   40,
+   75
+  ],
+  "heat_threshold_f": 75,
+  "heat_effect": "bolting",
+  "succession_policy": {
+   "interval_weeks": 2,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Arugula is one of the best succession crops: it matures so fast and bolts so readily that one sowing is gone in a few weeks. Sow a short row every 2 to 3 weeks through the cool windows, spring until heat and long days set in, and again from late summer through fall, which is the longer, more reliable run. In hot regions skip summer and succession-sow through the cool fall, winter, and spring.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "tip_id": "tip_aru_germ1",
+    "sources": [
+     "cornell_ext",
+     "uwi_hort"
+    ],
+    "evidence_tier": "extension_backed",
+    "author": {
+     "type": "plant_team"
+    },
+    "added_in": "arugula_author_fresh_pilot",
+    "last_reviewed": "2026-06-29",
+    "audience": "core",
+    "anchoring_urls": {
+     "cornell_ext": {
+      "url": "https://gardening.cals.cornell.edu/garden-guidance/foodgarden/vegetable-growing-guides/arugula/",
+      "verified": "2026-06-29"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/arugula/",
+      "verified": "2026-06-29"
+     }
+    },
+    "text_seasoned": "Arugula germinates fast and in cool soil, but germination drops off sharply above about 80°F, which is why midsummer sowings fail. Sow shallowly, a little thicker than your final stand, and thin to taste.",
+    "text_beginner": "Arugula sprouts quickly, even in cold soil, but not in hot soil, so do not sow in the heat of summer. Sow it shallow and a bit thick, then thin the seedlings out, eating the ones you pull."
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "harvest",
+   "bolting"
+  ]
+ },
+ "bok-choy": {
+  "name": "Bok Choy",
+  "botanical": null,
+  "start_method": {
+   "start": "both",
+   "weeks_before": 3,
+   "hardening_off_seasoned": true,
+   "hardening_off_beginner": true,
+   "notes_seasoned": "Bok choy is fast and resents root disturbance, so it is often direct sown, though young transplants work well if set out before they become root-bound. Sow seed about 0.25 to 0.5 inch deep (NCSU) and thin to about 6 inches for baby types or 12 to 18 inches for full-size heads (NCSU; UMN). For transplants, start only about 3 weeks ahead and set out small. The timing trap is the cold-snap bolt: bok choy held more than about a week of nights below 50°F bolts once it warms, so avoid setting young spring plants into a long cold spell, and lean on the fall sowing, which is the more reliable crop. In hot regions, shift sowing to fall through early spring, since heat and long days force bolting.",
+   "notes_beginner": "Bok choy is best sown straight in the garden because it grows fast and does not like having its roots disturbed, though small transplants work too. Sow the seeds about a quarter to half an inch deep and thin to about 6 inches apart for baby plants or a foot for full-size ones. The big thing to avoid is a cold spell on young plants: more than about a week of nights below 50°F can make them flower (bolt) once it warms up. The fall crop is the most reliable. In hot areas, plant in fall through early spring instead of summer."
+  },
+  "germination_temp_f": [
+   45,
+   85
+  ],
+  "heat_threshold_f": 80,
+  "heat_effect": "bolting",
+  "succession_policy": {
+   "interval_weeks": 2,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Bok choy is fast and bolt-prone, so plant in small batches every 1 to 2 weeks within the cool windows rather than all at once: spring is short and the fall crop is the mainstay. The spring window is narrow because the crop must mature before heat and avoid the cold-snap bolt, so most gardens fit only a sowing or two; the fall planting, heading into cooling weather, is the more reliable and longer-yielding crop.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "text_seasoned": "Sow about 0.25 to 0.5 inch deep into moist soil; bok choy germinates fast in cool soil, often in 4 to 10 days, as long as moisture stays even.",
+    "text_beginner": "Plant the seeds about a quarter to half an inch deep in damp soil. They sprout fast, in about 4 to 10 days, in cool conditions.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "Direct sowing suits this fast, disturbance-sensitive crop; if using transplants, start only about 3 weeks ahead so they go out small.",
+    "text_beginner": "Bok choy is happiest sown right in the garden. If you start it indoors, plant it out while it is still small, after about 3 weeks.",
+    "audience": "core"
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "harvest"
+  ]
+ },
+ "radish": {
+  "name": "Radish",
+  "botanical": "Raphanus sativus",
+  "start_method": {
+   "start": "direct",
+   "weeks_before": 0,
+   "hardening_off_seasoned": false,
+   "hardening_off_beginner": "You do not need to harden off radishes. They are sown straight into the garden from seed, not started indoors and transplanted.",
+   "notes_seasoned": "Always direct-sow radishes into the garden; they are a root crop and resent transplanting. Sow seed about 1/4 to 1/2 inch deep for small garden types and up to 1 inch for large daikon types, spacing seed about 1 inch apart in rows or broadcasting in a wide band. Germination is fast, often 3 to 7 days, so there is no indoor-start or hardening-off step. Thin promptly once seedlings are up, since crowded radishes fail to form usable roots, and sow small batches every week to ten days for a continuous supply through the cool windows.",
+   "notes_beginner": "Plant radish seeds right in the garden where they will grow; do not start them in pots. Radishes make their root fast and do not like being moved. Cover the seeds about 1/4 to 1/2 inch deep (up to 1 inch for big daikon types), spacing them about an inch apart. They sprout fast, often in 3 to 7 days, so there is no need to start them indoors or harden them off. Thin the little seedlings soon after they come up, because crowded radishes never make good roots, and plant a new short row every week or so for a steady supply.",
+   "sources": [
+    "clemson_hgic",
+    "umn_ext",
+    "umd_ext"
+   ],
+   "anchoring_urls": {
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+     "verified": "2026-06-29"
+    },
+    "umn_ext": {
+     "url": "https://extension.umn.edu/vegetables/growing-radishes",
+     "verified": "2026-06-29"
+    },
+    "umd_ext": {
+     "url": "https://extension.umd.edu/resource/growing-radishes-home-garden",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  "germination_temp_f": [
+   45,
+   85
+  ],
+  "heat_threshold_f": 72,
+  "heat_effect": "bolting",
+  "succession_policy": {
+   "interval_weeks": 1,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Radishes are the textbook succession crop: sow a short row every week to ten days through the cool window rather than one large planting, so roots mature in sequence instead of all at once and none over-mature waiting to be pulled. In cool-summer climates that means spring through early summer, then a late-summer-into-fall run; in hot-summer climates it means fall through early spring, skipping the heat. Stop spring sowings before sustained heat and long days arrive, since radishes bolt and turn pithy and hot in warm weather. The number of sowings per season is set by the length of your cool window, not a fixed cap.",
+   "sources": [
+    "clemson_hgic",
+    "umd_ext"
+   ],
+   "anchoring_urls": {
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+     "verified": "2026-06-29"
+    },
+    "umd_ext": {
+     "url": "https://extension.umd.edu/resource/growing-radishes-home-garden",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  "germination_tips": [
+   {
+    "tip_id": "radish_germ_fast",
+    "audience": "core",
+    "text_seasoned": "Radish seed germinates fast, often in 3 to 7 days, so the seedbed only needs to stay moist for a short window. Keep the surface evenly damp and crust-free until the seedlings break through; sow shallowly, about 1/4 to 1/2 inch deep.",
+    "text_beginner": "Radish seeds sprout fast, often in 3 to 7 days, so you only need to keep the soil damp for a short time. Keep the surface moist and free of a hard crust until they come up, and plant the seeds shallow, about 1/4 to 1/2 inch deep.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "clemson_hgic",
+     "umn_ext"
+    ],
+    "anchoring_urls": {
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "verified": "2026-06-29"
+     },
+     "umn_ext": {
+      "url": "https://extension.umn.edu/vegetables/growing-radishes",
+      "verified": "2026-06-29"
+     }
+    },
+    "author": "plant",
+    "added_in": "m20_radish_pilot",
+    "last_reviewed": "2026-06-29",
+    "last_reviewed_operation": "m20_radish_pilot_release",
+    "display_priority_override": null
+   },
+   {
+    "tip_id": "radish_germ_rowmarker",
+    "audience": "core",
+    "text_seasoned": "Radishes are so quick to emerge that a few seeds sown in a row of carrots, beets, or other slow germinators mark the row and break any crust; pull the radishes before they crowd the slower crop.",
+    "text_beginner": "Because radishes pop up so fast, sprinkling a few seeds in a row of slow crops like carrots marks where the row is and helps break up any crust. Just pull the radishes before they crowd the slower plants.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "umn_ext",
+     "umd_ext"
+    ],
+    "anchoring_urls": {
+     "umn_ext": {
+      "url": "https://extension.umn.edu/planting-and-growing-guides/companion-planting-home-gardens",
+      "verified": "2026-06-29"
+     },
+     "umd_ext": {
+      "url": "https://extension.umd.edu/resource/growing-radishes-home-garden",
+      "verified": "2026-06-29"
+     }
+    },
+    "author": "plant",
+    "added_in": "m20_radish_pilot",
+    "last_reviewed": "2026-06-29",
+    "last_reviewed_operation": "m20_radish_pilot_release",
+    "display_priority_override": null
+   }
+  ],
+  "heat_stress_trigger": [
+   {
+    "active_stages": [
+     "established",
+     "harvest"
+    ],
+    "body_seasoned": "Sustained air above about 70 °F, especially as days lengthen, pushes radishes to bolt and turns roots pithy, woody, and sharply hot. Harvest any that are ready and keep moisture even."
+   }
+  ],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "harvest"
+  ]
+ },
+ "cauliflower": {
+  "name": "Cauliflower",
+  "botanical": null,
+  "start_method": {
+   "start": "both",
+   "weeks_before": 5,
+   "hardening_off_seasoned": true,
+   "hardening_off_beginner": true,
+   "notes_seasoned": "Cauliflower is almost always transplanted, since precise timing and an unstressed start matter so much. For spring, start seeds indoors about 4 to 6 weeks before set-out and transplant sturdy young plants out around 2 weeks before the last frost; cauliflower transplants are less cold-hardy than cabbage or broccoli, so do not rush them into hard cold. For fall, start indoors or direct sow in early-to-mid summer and set out so the curd matures in cool fall weather. The single biggest transplant mistake is setting out an old, root-bound, or cold-checked plant: that stress triggers buttoning, where the plant forms a tiny premature curd. Set out stocky plants with 4 to 6 true leaves, harden them off over 7 to 10 days, and keep them growing without a stall.",
+   "notes_beginner": "Cauliflower is best grown from transplants, since timing and a smooth, unstressed start are so important. For spring, start seeds indoors about a month before planting out and set the plants out around 2 weeks before your last frost; do not rush them into hard cold, since young cauliflower is touchier than cabbage. For fall, start them in early-to-mid summer. The key is to never let the seedlings get old, root-bound, or chilled, because that stress makes them head early. Let homegrown seedlings get used to the outdoors over a week before planting."
+  },
+  "germination_temp_f": [
+   45,
+   85
+  ],
+  "heat_threshold_f": 78,
+  "heat_effect": "crown_failure",
+  "succession_policy": {
+   "interval_weeks": 3,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Cauliflower crops in the cool shoulders of the year, so plant in small batches within the spring window and again in late summer for fall, rather than all at once. Because it is so tightly tied to cool weather and so prone to buttoning in heat, the spring window is short and unforgiving: most gardens fit only a sowing or two before midsummer heat shuts it down. The fall planting, with the curd maturing into cooling weather, is usually the more reliable crop. Mixing early and late varieties in one planting also spreads the harvest.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "text_seasoned": "Start seeds indoors about 4 to 6 weeks before set-out; cauliflower is transplanted in nearly all regions for timing and an unstressed start.",
+    "text_beginner": "Start seeds indoors about a month before you plan to plant them out.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "Sow about 0.25 to 0.5 inch deep into a moist starting mix, give bright light from emergence, and pot up before roots crowd, since a root-bound start invites buttoning.",
+    "text_beginner": "Plant the seeds about a quarter to half an inch deep, keep them damp, and give them strong light so they do not get leggy.",
+    "audience": "core"
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "curd_forming",
+   "harvest"
+  ]
+ },
+ "cabbage": {
+  "name": "Cabbage",
+  "botanical": null,
+  "start_method": {
+   "start": "both",
+   "weeks_before": 5,
+   "hardening_off_seasoned": true,
+   "hardening_off_beginner": true,
+   "notes_seasoned": "Cabbage is usually transplanted but can also be direct sown, especially for the fall crop. For spring, start seeds indoors about 4 to 6 weeks before set-out and transplant sturdy young plants out 2 to 4 weeks before the last frost, since cabbage transplants are cold-hardy. For fall, sow indoors or direct seed in early-to-mid summer and set out in mid-to-late summer to mature in cool fall weather. Set out stocky plants with 4 to 6 true leaves and harden them off over 7 to 10 days. Avoid setting out overly large or root-bound transplants into a cold spell, which can trigger bolting.",
+   "notes_beginner": "You can grow cabbage from transplants or sow the seeds right in the garden, especially for a fall crop. For spring, start seeds indoors about a month before planting out and set the plants out a few weeks before your last frost, since young cabbage handles cold well. For fall, start them in early to mid summer. Let homegrown seedlings get used to the outdoors over a week before planting."
+  },
+  "germination_temp_f": [
+   45,
+   85
+  ],
+  "heat_threshold_f": 80,
+  "heat_effect": "quality_loss",
+  "succession_policy": {
+   "interval_weeks": 3,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Cabbage crops in the cool shoulders of the year, so plant in small batches within the spring window and again in late summer for fall, rather than all at once. Mixing early, mid, and late varieties in one planting also spreads the harvest, since they mature at different times. The spring window is short because heads must size up before summer heat, so most gardens fit only a sowing or two before the midsummer gap; the fall planting, heading into cooling weather, is often the more reliable crop and the one to grow for storage.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "text_seasoned": "Start seeds indoors about 4 to 6 weeks before set-out for spring; the fall crop can be started indoors or direct sown in early-to-mid summer.",
+    "text_beginner": "Start seeds indoors about a month before you plan to plant them out, or sow them right in the garden for a fall crop.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "Sow about 0.25 to 0.5 inch deep into a moist starting mix and give bright light from emergence to keep seedlings stocky.",
+    "text_beginner": "Plant the seeds about a quarter to half an inch deep, keep them damp, and give them strong light so they do not get leggy.",
+    "audience": "core"
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "head_forming",
+   "harvest"
+  ]
+ },
+ "spring-onion": {
+  "name": "Spring Onion / Scallion",
+  "botanical": null,
+  "start_method": {
+   "start": "both",
+   "weeks_before": 4,
+   "hardening_off_seasoned": "Indoor-grown transplants need about a week of gradual outdoor exposure before set-out. Keep seedlings slender at transplanting and trim the tops to a few inches so they do not topple.",
+   "hardening_off_beginner": "If you grow your own seedlings indoors, set them outside for a few hours a day for a week before planting so they get used to sun and wind. Trim the tops to a few inches so they stand up.",
+   "notes_seasoned": "Three easy routes. Direct-sow seed in a two-inch-wide band, a quarter to a half inch deep, in rows 12 to 18 inches apart, then thin to about one plant per inch (UMN); this is the simplest method and suits succession sowing. Or start seed indoors about four weeks before set-out for an earlier first cutting, transplanting seedlings an inch apart. The tidiest indoor route is to multisow: sow a pinch of about six to ten seeds per cell, grow the cluster on undivided, and set the whole clump out without separating it, spacing clumps four to six inches apart; scallions are pulled as a bunch, so there is no thinning, and you take the biggest from each clump first and let the rest size up (RHS). Bunching types can also be multiplied by dividing established clumps.",
+   "notes_beginner": "There are three easy ways. The simplest is to sow seed right in the garden, a quarter to a half inch deep, then thin the seedlings to about one per inch. Or start seeds indoors about four weeks before planting out for an earlier harvest, then set the little plants an inch apart. The tidiest way is to multisow: drop a small pinch of about six to ten seeds into each cell, let them grow as a little clump, and plant the whole clump out without splitting it, about four to six inches from the next one. Because you eat scallions in bunches anyway, there is nothing to thin, and you just pull the biggest few from each clump and let the rest keep growing. Bunching kinds can also be split from an existing clump."
+  },
+  "germination_temp_f": [
+   50,
+   75
+  ],
+  "heat_threshold_f": null,
+  "heat_effect": "heat_tolerant",
+  "succession_policy": {
+   "interval_weeks": 2,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Scallions are a natural succession crop: sow a short row every two to three weeks through the cool season rather than one big planting, so they mature in sequence and none over-mature. In cool-summer regions that means spring through fall; in hot-summer regions it means fall through spring, skipping peak summer heat; in mild regions it runs nearly year-round. The number of sowings is set by the length of your cool window, not a fixed cap.",
+   "sources": [
+    "clemson_hgic",
+    "umd_ext"
+   ],
+   "anchoring_urls": {
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/onion-leek-shallot-garlic/",
+     "verified": "2026-06-30"
+    },
+    "umd_ext": {
+     "url": "https://extension.umd.edu/resource/growing-onions-home-garden",
+     "verified": "2026-06-30"
+    }
+   }
+  },
+  "germination_tips": null,
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination_emergence",
+   "leaf_development",
+   "established",
+   "harvest"
+  ]
+ },
+ "edamame": {
+  "name": "Edamame",
+  "botanical": null,
+  "start_method": {
+   "start": "direct",
+   "weeks_before": null,
+   "hardening_off_seasoned": "Not applicable. Edamame is direct-sown in place and is not started indoors or hardened off.",
+   "hardening_off_beginner": "You do not need to harden off edamame. It is planted straight into the garden from seed.",
+   "notes_seasoned": "Direct-sow after the last spring frost, once the soil has warmed to at least 60 to 65°F. Edamame resents root disturbance and germinates quickly in warm soil, so transplanting offers no advantage. Sow about 1 to 1.5 inches deep, and inoculate the seed with a soybean-type (Bradyrhizobium japonicum) inoculant, especially where soybeans have not grown before.",
+   "notes_beginner": "Plant edamame seeds right where they will grow, after the last frost once the soil has warmed to at least 60 to 65°F. Edamame does not like its roots disturbed, so skip starting it indoors. Plant about 1 to 1.5 inches deep, and coat the seed with a soybean inoculant if you have it."
+  },
+  "germination_temp_f": [
+   60,
+   85
+  ],
+  "heat_threshold_f": null,
+  "heat_effect": "heat_tolerant",
+  "succession_policy": {
+   "interval_weeks": 2,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Edamame ripens all at once, so a single sowing gives one concentrated harvest rather than a long pick. To spread the supply, sow several small batches a week or two apart through the warm season, each maturing in turn, and stop about 90 days before your first fall frost so the last sowing finishes. In the hottest regions, skip the peak of summer and sow for spring and fall sets instead.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "tip_id": "edamame_germ_warm_soil",
+    "audience": "core",
+    "text_seasoned": "Edamame seed is large and rots in cold, wet ground. Wait until the soil is at least 60 to 65°F after the last frost before sowing, since early planting only invites poor stands, seed rot, and seedcorn maggot. There is no head start to be had: seed sown into warm soil quickly overtakes seed sown into cold soil.",
+    "text_beginner": "Edamame seeds are big and rot in cold, wet soil. Wait until the soil has warmed to at least 60 to 65°F after the last frost, because planting early just leads to rotted seed and missing plants. Seed planted in warm soil catches up fast, so there is nothing to gain by rushing.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "mu_ext",
+     "iastate_ext"
+    ],
+    "anchoring_urls": {
+     "mu_ext": {
+      "url": "https://extension.missouri.edu/news/edamame-an-easy-crop-to-introduce-to-your-vegetable-garden",
+      "verified": "2026-06-29"
+     },
+     "iastate_ext": {
+      "url": "https://yardandgarden.extension.iastate.edu",
+      "verified": "2026-06-29"
+     }
+    },
+    "author": "plant",
+    "added_in": "edamame_author_fresh_pilot",
+    "last_reviewed": "2026-06-29",
+    "last_reviewed_operation": "edamame_author_fresh_pilot",
+    "display_priority_override": null
+   },
+   {
+    "tip_id": "edamame_germ_soybean_inoculant",
+    "audience": "core",
+    "text_seasoned": "Edamame fixes its own nitrogen, but only with the SOYBEAN bacterium Bradyrhizobium japonicum, which is a different species from the all-purpose bean and pea inoculant. Where soybeans have not grown before, coating the seed with a soybean-specific inoculant improves nodulation; the generic legume inoculant will not work for soybeans.",
+    "text_beginner": "Edamame makes its own nitrogen, but it needs the soybean kind of inoculant (called Bradyrhizobium japonicum), not the regular bean and pea inoculant, which is a different bacteria. If soybeans have never grown in your bed, coat the seed with a soybean inoculant to help. The regular bean inoculant will not do the job.",
+    "evidence_tier": "likely",
+    "sources": [
+     "vce_spes_455",
+     "iastate_ext"
+    ],
+    "anchoring_urls": {
+     "iastate_ext": {
+      "url": "https://yardandgarden.extension.iastate.edu",
+      "verified": "2026-06-29"
+     },
+     "vce_spes_455": {
+      "url": "https://www.pubs.ext.vt.edu/SPES/spes-455/spes-455.html",
+      "verified": "2026-08-10"
+     }
+    },
+    "author": "plant",
+    "added_in": "edamame_author_fresh_pilot",
+    "last_reviewed": "2026-06-29",
+    "last_reviewed_operation": "edamame_author_fresh_pilot",
+    "display_priority_override": null
+   }
+  ],
+  "heat_stress_trigger": [
+   {
+    "active_stages": [
+     "flowering",
+     "pod_fill"
+    ],
+    "body_seasoned": "Edamame tolerates ordinary summer heat far better than snap beans, but sustained extremes above roughly 95 to 100°F during bloom and pod set can drop flowers and young pods. Keep moisture steady and water deeply ahead of a heat wave; the plant resumes setting once the worst heat eases."
+   }
+  ],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "vegetative",
+   "flowering",
+   "pod_fill",
+   "harvest"
+  ]
+ },
+ "parsley": {
+  "name": "Parsley",
+  "botanical": null,
+  "start_method": {
+   "start": "both",
+   "weeks_before": 6,
+   "hardening_off_seasoned": true,
+   "hardening_off_beginner": true,
+   "notes_seasoned": "Parsley can be direct-sown or started indoors. Its seed germinates slowly and erratically, often 2 to 5 weeks, and germinates poorly in cold soil, so soaking the dry seed in warm water for up to 24 hours before sowing speeds and evens emergence. Direct-sow about 0.25 inch deep as soon as the soil can be worked in spring, since parsley tolerates frost. To get a head start, sow indoors 6 to 8 weeks before the last frost and transplant out after hardening off; parsley moves better when young, before the taproot is long, so transplant on the early side. Keep the seedbed evenly moist through the long germination.",
+   "notes_beginner": "You can plant parsley straight in the garden or start it indoors. The seeds are slow, often taking 2 to 5 weeks, so soak them in warm water for up to a day before planting and keep the soil moist the whole time. Sow about a quarter inch deep as soon as the soil can be worked in spring, since parsley handles frost. For an earlier start, sow indoors 6 to 8 weeks before the last frost and move the young plants outside after hardening them off, while they are still small."
+  },
+  "germination_temp_f": [
+   50,
+   75
+  ],
+  "heat_threshold_f": null,
+  "heat_effect": "heat_tolerant",
+  "succession_policy": {
+   "interval_weeks": 4,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Parsley does not need the aggressive succession sowing fast herbs do; one planting yields all season because you cut from the same plants. Still, a spring sowing plus a midsummer or early-fall sowing keeps the freshest, most tender leaves coming and sets up an overwintering crop in mild zones. In the hottest regions, sow through the long cool window (fall into spring) and skip the peak of summer.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "tip_id": "tip_pars_germ1",
+    "sources": [
+     "umn_ext",
+     "uwi_hort"
+    ],
+    "evidence_tier": "extension_backed",
+    "author": {
+     "type": "plant_team"
+    },
+    "added_in": "parsley_author_fresh_pilot",
+    "last_reviewed": "2026-06-29",
+    "audience": "core",
+    "anchoring_urls": {
+     "umn_ext": {
+      "url": "https://extension.umn.edu/vegetables/growing-parsley",
+      "verified": "2026-06-29"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/parsley/",
+      "verified": "2026-06-29"
+     }
+    },
+    "text_seasoned": "Parsley germinates slowly and erratically, often 2 to 5 weeks, and worse in cold, wet soil. Soak the dry seed in warm water for up to 24 hours before sowing to speed and even out emergence, sow shallowly, and keep the surface from drying or crusting through the long wait.",
+    "text_beginner": "Parsley seeds are slow, often 2 to 5 weeks. Soak them in warm water for up to a day before planting, sow them shallowly, and keep the soil moist the whole time. Do not give up too soon."
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "harvest",
+   "second_year_bolting"
+  ]
+ },
+ "cilantro-coriander": {
+  "name": "Cilantro / Coriander",
+  "botanical": null,
+  "start_method": {
+   "start": "direct",
+   "weeks_before": null,
+   "hardening_off_seasoned": false,
+   "hardening_off_beginner": false,
+   "notes_seasoned": "Cilantro is almost always direct-sown, since it has a slender taproot and resents transplanting. Sow seed about 0.25 to 0.5 inch deep as soon as the soil can be worked in spring; it tolerates frost, so it can go in several weeks before the last frost, and it germinates slowly, often 7 to 21 days. The round seed is actually two seeds fused, so growers sometimes gently crack it to speed and even out germination. Sow a little thicker than the final stand and thin to taste. In hot regions, shift sowing to fall through spring, since heat both slows germination and bolts the crop almost at once; midsummer sowings are grown for coriander seed rather than leaves.",
+   "notes_beginner": "Plant cilantro straight in the garden from seed, because it has a deep little root and does not like being moved. Sow the seeds about a quarter to half an inch deep as soon as the soil can be worked in spring, since the plants handle frost. The seeds are slow, often taking one to three weeks, so keep the soil moist. Sow again every couple of weeks, and in hot areas plant in fall through spring instead of summer, because heat makes it bolt almost right away. A summer crop is really for the coriander seed."
+  },
+  "germination_temp_f": [
+   55,
+   70
+  ],
+  "heat_threshold_f": 75,
+  "heat_effect": "bolting",
+  "succession_policy": {
+   "interval_weeks": 2,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Cilantro is a classic succession crop: it matures fast and bolts faster, so one sowing is gone in a few weeks. Sow a short row every 2 to 3 weeks through the cool windows, spring until heat and long days set in, and again from late summer through fall, which is the longer, more reliable leaf run. In hot regions skip summer for leaves and succession-sow through the cool fall, winter, and spring, while letting any summer plants run to coriander seed.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "tip_id": "tip_cil_germ1",
+    "sources": [
+     "usu_ext",
+     "tamu_agrilife"
+    ],
+    "evidence_tier": "extension_backed",
+    "author": {
+     "type": "plant_team"
+    },
+    "added_in": "cilantro_coriander_author_fresh_pilot",
+    "last_reviewed": "2026-06-29",
+    "audience": "core",
+    "anchoring_urls": {
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden",
+      "verified": "2026-06-29"
+     },
+     "tamu_agrilife": {
+      "url": "https://agrilifeextension.tamu.edu/asset-external/easy-gardening-cilantro/",
+      "verified": "2026-06-29"
+     }
+    },
+    "text_seasoned": "Cilantro germinates slowly, often 7 to 21 days, partly because each round fruit holds two seeds; some growers gently crack the seed to speed and even out emergence. Sow shallowly into cool, moist soil, since warm soil above about 75°F slows germination and pushes early bolting.",
+    "text_beginner": "Cilantro seeds are slow, often one to three weeks. Keep the soil moist the whole time. The round seed is really two seeds, so cracking it gently can help it sprout faster. Sow in cool weather, not summer heat."
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "harvest",
+   "bolting"
+  ]
+ },
+ "dill": {
+  "name": "Dill",
+  "botanical": null,
+  "start_method": {
+   "start": "direct",
+   "weeks_before": null,
+   "hardening_off_seasoned": false,
+   "hardening_off_beginner": false,
+   "notes_seasoned": "Dill is almost always direct-sown, since it forms a slender taproot and resents transplanting. Sow seed about 0.25 inch deep as soon as the soil can be worked in spring; young dill tolerates light frost, so Wisconsin Horticulture suggests sowing a week or two before the last hard frost, and it germinates slowly, often 10 to 21 days. Sow a little thicker than the final stand and thin to about 9 inches for full plants, or 4 to 6 inches for cut leaf. Succession-sow every 2 to 3 weeks for a steady leaf supply. In hot regions, shift sowing to fall through spring, since summer heat and long days bolt the crop to seed; midsummer plantings are grown for seed and pickling heads rather than leaves.",
+   "notes_beginner": "Plant dill straight in the garden from seed, because it has a deep little root and does not like being moved. Sow the seeds about a quarter inch deep as soon as the soil can be worked in spring, since young plants handle light frost. The seeds are slow, often taking two to three weeks, so keep the soil moist. Thin the plants to about 9 inches apart, and sow again every couple of weeks for a steady supply. In hot areas plant in fall through spring instead of summer, because heat makes it bolt; a summer crop is really for the seed and pickling heads."
+  },
+  "germination_temp_f": [
+   60,
+   70
+  ],
+  "heat_threshold_f": 78,
+  "heat_effect": "bolting",
+  "succession_policy": {
+   "interval_weeks": 2,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Dill is a natural succession crop: it matures fast and bolts once summer heat and long days arrive, so one sowing fades in a few weeks. Sow a short row every 2 to 3 weeks through the cool windows, spring until heat sets in, and again from late summer through fall, which gives a strong second leaf crop. In hot regions skip high summer for leaves and succession-sow through the cool fall, winter, and spring, letting any summer plants run to seed and pickling heads.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "tip_id": "tip_dill_germ1",
+    "sources": [
+     "usu_ext",
+     "uwi_hort"
+    ],
+    "evidence_tier": "extension_backed",
+    "author": {
+     "type": "plant_team"
+    },
+    "added_in": "dill_author_fresh_pilot",
+    "last_reviewed": "2026-06-29",
+    "audience": "core",
+    "anchoring_urls": {
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/dill-in-the-garden",
+      "verified": "2026-06-29"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/dill-anethum-graveolens/",
+      "verified": "2026-06-29"
+     }
+    },
+    "text_seasoned": "Dill germinates slowly, often 10 to 21 days. Sow it shallowly, only about a quarter inch deep, directly where it will grow, since the taproot resents transplanting, and keep the surface evenly moist. Cool soil around 60 to 70°F suits it; young plants tolerate light frost, so you can sow a week or two before the last hard frost.",
+    "text_beginner": "Dill seeds are slow, often two to three weeks. Keep the soil moist the whole time and sow them shallowly, right where they will grow, because dill does not like being moved. You can sow early, since young dill takes a light frost."
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "harvest",
+   "bolting"
+  ]
+ },
+ "kohlrabi": {
+  "name": "Kohlrabi",
+  "botanical": null,
+  "start_method": {
+   "start": "both",
+   "weeks_before": 4,
+   "hardening_off_seasoned": true,
+   "hardening_off_beginner": true,
+   "notes_seasoned": "Kohlrabi is grown both ways. Direct sowing is simple and common since the crop is fast: sow 1/4 to 1/2 inch deep once the soil is workable and thin to 6 to 8 inches apart. For an earlier or more uniform crop, start transplants indoors about 4 to 5 weeks before set-out and plant them out 1 to 2 weeks before the last frost, since young plants take light frost. Avoid exposing young plants to a long cold spell (more than about a week of nights below roughly 45 to 50°F), which can trigger bolting. Sow the fall crop in mid-summer. Harden transplants off over 7 to 10 days.",
+   "notes_beginner": "You can sow kohlrabi seeds right in the garden or start with young plants. For direct sowing, plant the seeds about a quarter to half an inch deep once the soil can be worked, then thin the seedlings to about 6 to 8 inches apart. For transplants, start seeds indoors about a month before planting out, and set them in the garden a week or two before the last frost. Let homegrown seedlings get used to the outdoors over a week before planting. Sow again in mid-summer for a fall crop."
+  },
+  "germination_temp_f": [
+   45,
+   85
+  ],
+  "heat_threshold_f": 75,
+  "heat_effect": "quality_loss",
+  "succession_policy": {
+   "interval_weeks": 2,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Kohlrabi is fast (about 45 to 60 days) and each plant makes a single bulb, so the way to a steady supply is small, frequent sowings rather than one big planting. Sow in batches every 2 to 3 weeks across the spring window and again in late summer for fall, skipping the high heat of summer, when the stem turns woody and bitter. The fall crop, sizing in cooling weather, is often the most dependable.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "text_seasoned": "Sow about 1/4 to 1/2 inch deep into a moist seedbed or starting mix; kohlrabi germinates fast and reliably across a wide soil-temperature range as long as moisture stays even.",
+    "text_beginner": "Plant the seeds about a quarter to half an inch deep in damp soil, and keep it evenly moist while they sprout.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "Because kohlrabi is so quick, direct sowing works well; start transplants only when you want an earlier or more uniform stand.",
+    "text_beginner": "Kohlrabi grows fast, so you can plant the seeds right in the garden. Starting indoors is only needed if you want an earlier crop.",
+    "audience": "core"
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "bulbing",
+   "harvest"
+  ]
+ },
+ "turnip": {
+  "name": "Turnip",
+  "botanical": "Brassica rapa",
+  "start_method": {
+   "start": "direct",
+   "weeks_before": 0,
+   "hardening_off_seasoned": false,
+   "hardening_off_beginner": "You do not need to harden off turnips. They are sown straight into the garden from seed, not started indoors and transplanted.",
+   "notes_seasoned": "Direct-sow turnips into the garden; they grow fast from seed in place and, like most root crops, do not transplant well. Sow about 1/4 to 1/2 inch deep once the soil is workable and at least 40 to 45°F, roughly 2 to 3 weeks before the last spring frost, and again in late summer for the fall crop, which is the better crop in most climates. Seeds germinate best at about 60 to 85°F and emerge in roughly 7 to 10 days. Sow a little thick and plan to thin: the thinnings are edible baby greens. Keep the surface moist and uncrusted until the seedlings emerge.",
+   "notes_beginner": "Plant turnip seeds right in the garden where they will grow, since turnips do not like being moved. Sow them about 1/4 to 1/2 inch deep once the soil is no longer frozen or soggy (about 40 to 45°F), roughly 2 to 3 weeks before your last spring frost, and again in late summer for a fall crop, which is usually the best crop. They sprout in about 7 to 10 days. Plant a little thick and plan to thin them later; the little plants you pull out are tasty baby greens. Keep the soil surface damp until the sprouts appear.",
+   "sources": [
+    "usu_ext",
+    "clemson_hgic",
+    "umn_ext"
+   ],
+   "anchoring_urls": {
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/rutabagas-and-turnips-in-the-garden",
+     "verified": "2026-06-29"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/turnips-rutabagas/",
+     "verified": "2026-06-29"
+    },
+    "umn_ext": {
+     "url": "https://extension.umn.edu/vegetables/growing-turnips-and-rutabagas",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  "germination_temp_f": [
+   45,
+   85
+  ],
+  "heat_threshold_f": 75,
+  "heat_effect": "quality_loss",
+  "succession_policy": {
+   "interval_weeks": 3,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Turnips succession well: sow a short row every 3 to 4 weeks through the cool-season window rather than one large planting, so roots mature in sequence. In cold-summer climates that means spring through early summer, then a late-summer sowing for the main fall crop; in hot-summer climates it means fall through early spring, skipping the heat. Stop spring sowings before sustained heat, since turnips maturing in hot soil turn woody, pithy, and strong and tend to bolt. The fall crop is the prime one in most regions.",
+   "sources": [
+    "usu_ext",
+    "umn_ext"
+   ],
+   "anchoring_urls": {
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/rutabagas-and-turnips-in-the-garden",
+     "verified": "2026-06-29"
+    },
+    "umn_ext": {
+     "url": "https://extension.umn.edu/vegetables/growing-turnips-and-rutabagas",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  "germination_tips": [
+   {
+    "tip_id": "turnip_germ_fast",
+    "audience": "core",
+    "text_seasoned": "Turnip seed germinates fast and evenly, usually in 7 to 10 days at 60 to 85°F, so emergence is rarely the problem. Keep the surface evenly moist and uncrusted until the seedlings appear, and sow shallowly, about 1/4 to 1/2 inch deep.",
+    "text_beginner": "Turnip seeds sprout quickly, usually in 7 to 10 days, so they are easy to start. Just keep the soil surface damp and free of a hard crust until they come up, and plant them shallow, about 1/4 to 1/2 inch deep.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "usu_ext",
+     "clemson_hgic"
+    ],
+    "anchoring_urls": {
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/rutabagas-and-turnips-in-the-garden",
+      "verified": "2026-06-29"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/turnips-rutabagas/",
+      "verified": "2026-06-29"
+     }
+    },
+    "author": "plant",
+    "added_in": "turnip_author_fresh_pilot",
+    "last_reviewed": "2026-06-29",
+    "last_reviewed_operation": "turnip_author_fresh_pilot_release",
+    "display_priority_override": null
+   },
+   {
+    "tip_id": "turnip_germ_sow_thick",
+    "audience": "core",
+    "text_seasoned": "Sow turnips a little thick and plan to thin, since not every seed comes up and a fuller stand lets you thin for baby greens. Sow closer for a salad or greens crop, wider for full-size roots.",
+    "text_beginner": "Plant turnip seeds a bit thick and plan to thin them later, since not every seed sprouts and the extras make good baby greens. Plant closer together for greens or small salad turnips, wider apart for big roots.",
+    "evidence_tier": "likely",
+    "sources": [
+     "umn_ext",
+     "usu_ext"
+    ],
+    "anchoring_urls": {
+     "umn_ext": {
+      "url": "https://extension.umn.edu/vegetables/growing-turnips-and-rutabagas",
+      "verified": "2026-06-29"
+     },
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/rutabagas-and-turnips-in-the-garden",
+      "verified": "2026-06-29"
+     }
+    },
+    "author": "plant",
+    "added_in": "turnip_author_fresh_pilot",
+    "last_reviewed": "2026-06-29",
+    "last_reviewed_operation": "turnip_author_fresh_pilot_release",
+    "display_priority_override": null
+   }
+  ],
+  "heat_stress_trigger": [
+   {
+    "active_stages": [
+     "established",
+     "harvest"
+    ],
+    "body_seasoned": "Sustained heat above about 75°F turns roots woody, pithy, and sharp-flavored and can prompt bolting, especially as days lengthen. Harvest mature roots promptly, keep moisture even, and mulch or shade if you can; lean on the fall crop where summers are hot."
+   }
+  ],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "harvest"
+  ]
+ },
+ "brussels-sprouts": {
+  "name": "Brussels Sprouts",
+  "botanical": null,
+  "start_method": {
+   "start": "transplant",
+   "weeks_before": 5,
+   "hardening_off_seasoned": true,
+   "hardening_off_beginner": true,
+   "notes_seasoned": "Brussels sprouts are almost always transplanted because of their long season. Start seeds indoors about 5 to 6 weeks before set-out. In cold regions, sow in spring and transplant in late spring or early summer to mature in the cool fall; in warm regions, sow in mid to late summer and transplant in late summer or fall for a winter crop. Set out sturdy young plants with about 4 to 6 true leaves and harden them off over 7 to 10 days.",
+   "notes_beginner": "Brussels sprouts take a long time to grow, so it is easiest to start them as transplants. Sow seeds indoors about 5 to 6 weeks before you plant out. In cold areas, plant out in late spring or early summer so they mature in fall. In warm areas, plant in late summer or fall for a winter crop. Let homegrown seedlings get used to the outdoors over a week before planting."
+  },
+  "germination_temp_f": [
+   45,
+   85
+  ],
+  "heat_threshold_f": 78,
+  "heat_effect": "quality_loss",
+  "succession_policy": {
+   "interval_weeks": 4,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Brussels sprouts are largely a single long-season planting rather than a true succession crop: each plant holds the bed for months and is harvested progressively up the stalk. In short-season regions, set out one crop and let it ride. In long, mild regions such as the cool coast you can stagger a couple of sowings about a month apart to spread the harvest. Time plantings so the sprouts form in cool weather; in hot regions skip summer and plant for a fall and winter crop.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "text_seasoned": "Start seeds indoors about 5 to 6 weeks before set-out; brussels sprouts are transplanted, not direct sown, because of their long season.",
+    "text_beginner": "Start seeds indoors about 5 to 6 weeks before you plan to plant them out.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "Sow about 0.25 to 0.5 inch deep into a moist starting mix and give bright light from emergence to keep seedlings stocky.",
+    "text_beginner": "Plant the seeds about a quarter to half an inch deep, keep them damp, and give them strong light so they do not get leggy.",
+    "audience": "core"
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "sprout_formation",
+   "harvest"
+  ]
+ },
+ "celery": {
+  "name": "Celery",
+  "botanical": "Apium graveolens",
+  "start_method": {
+   "start": "transplant",
+   "weeks_before": 10,
+   "hardening_off_seasoned": true,
+   "hardening_off_beginner": "Yes, harden celery off before transplanting, but do it by gradually reducing water rather than by exposing the plants to cold. Celery is unusual here: chilling the seedlings to toughen them can backfire and make them bolt later, so ease them outdoors over 7 to 10 days into mild, not cold, conditions.",
+   "notes_seasoned": "Always start celery as a transplant; it is too slow and too long-season to direct sow in most of the country. Sow seed indoors about 8 to 10 weeks before the target transplant date, barely covering the fine seed (it needs light and warmth, ideally about 70°F, to germinate, and is slow, often 2 to 3 weeks). Grow the seedlings on and transplant out when they have several true leaves and, critically, only after the danger of a hard frost or a prolonged cold snap has passed: young celery exposed to roughly two or more weeks of temperatures near or below 50°F can vernalize and bolt later instead of forming usable stalks. Harden off over 7 to 10 days by easing water, not by chilling.",
+   "notes_beginner": "Start celery indoors from seed, or buy young plants, because it is too slow to plant straight in the garden in most areas. Sow the seed about 8 to 10 weeks before you plan to set plants out. Barely cover the tiny seeds, since they need light and warmth (around 70°F) to sprout, and be patient, they can take 2 to 3 weeks. Plant out only after the risk of hard frost and long cold spells is over: cold-shocked young celery often bolts (runs to seed) later instead of making good stalks. Harden the plants off over a week or so by watering a little less, not by putting them out in the cold.",
+   "sources": [
+    "msu_ext",
+    "usu_ext"
+   ],
+   "anchoring_urls": {
+    "msu_ext": {
+     "url": "https://www.canr.msu.edu/resources/how_to_grow_celery",
+     "verified": "2026-06-30"
+    },
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+     "verified": "2026-06-30"
+    }
+   }
+  },
+  "germination_temp_f": [
+   60,
+   70
+  ],
+  "heat_threshold_f": 75,
+  "heat_effect": "quality_loss",
+  "succession_policy": {
+   "interval_weeks": 3,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Celery is a long-season crop, so it does not succession-sow rapidly the way salad crops do, but you can stagger transplants a couple of weeks apart within a window and grow both a spring and a fall crop in milder climates. In cold-summer regions that usually means a single main crop transplanted after frost and grown through summer; in warm regions it means a fall and a late-winter or spring crop bracketing the summer heat. Time each window so the long crop matures in cool, not hot, weather and never goes short of water.",
+   "sources": [
+    "msu_ext"
+   ],
+   "anchoring_urls": {
+    "msu_ext": {
+     "url": "https://www.canr.msu.edu/resources/how_to_grow_celery",
+     "verified": "2026-06-30"
+    }
+   }
+  },
+  "germination_tips": [
+   {
+    "tip_id": "celery_germ_surface_warm",
+    "audience": "core",
+    "text_seasoned": "Celery seed is fine and needs light to germinate, so surface-sow it or barely cover it, and hold the medium warm (about 70°F) and constantly moist. Germination is slow and erratic, often 2 to 3 weeks, so do not give up early or let the surface dry.",
+    "text_beginner": "Celery seeds are tiny and need light to sprout, so sow them on top of the mix or barely cover them. Keep them warm (around 70°F) and never let the surface dry out. They are slow, often 2 to 3 weeks, so be patient.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "msu_ext"
+    ],
+    "anchoring_urls": {
+     "msu_ext": {
+      "url": "https://www.canr.msu.edu/resources/how_to_grow_celery",
+      "verified": "2026-06-30"
+     }
+    },
+    "author": "plant",
+    "added_in": "celery_author_fresh_pilot",
+    "last_reviewed": "2026-06-30",
+    "last_reviewed_operation": "celery_author_fresh_pilot",
+    "display_priority_override": null
+   },
+   {
+    "tip_id": "celery_germ_early_start",
+    "audience": "core",
+    "text_seasoned": "Because celery needs roughly 8 to 10 weeks indoors before transplant and a long season after, start seed early, on the order of 10 to 12 weeks before your intended set-out date, to make the most of the cool growing window.",
+    "text_beginner": "Celery takes about 8 to 10 weeks to grow big enough to plant out, plus a long season after that, so start the seeds early, around 10 to 12 weeks before you plan to plant outside.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "msu_ext",
+     "usu_ext"
+    ],
+    "anchoring_urls": {
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+      "verified": "2026-06-30"
+     },
+     "msu_ext": {
+      "url": "https://www.canr.msu.edu/resources/how_to_grow_celery",
+      "verified": "2026-06-30"
+     }
+    },
+    "author": "plant",
+    "added_in": "celery_author_fresh_pilot",
+    "last_reviewed": "2026-06-30",
+    "last_reviewed_operation": "celery_author_fresh_pilot",
+    "display_priority_override": null
+   }
+  ],
+  "heat_stress_trigger": [
+   {
+    "active_stages": [
+     "established",
+     "harvest"
+    ],
+    "body_seasoned": "Sustained heat above about 75°F coarsens stalks, turns them bitter, and combined with drought can trigger bolting. Keep moisture even, mulch, provide afternoon shade if possible, and harvest before a long hot stretch."
+   }
+  ],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "harvest"
+  ]
+ },
+ "nasturtium": {
+  "name": "Nasturtium",
+  "botanical": null,
+  "start_method": {
+   "start": "both",
+   "weeks_before": 4,
+   "hardening_off_seasoned": "If started indoors, harden off transplants over 7 to 10 days before setting out after frost; nasturtium resents root disturbance, so move the whole biodegradable pot without breaking the root ball.",
+   "hardening_off_beginner": "If you started plants indoors, harden them off first: set them outside for a little longer each day over about a week before planting them out, and move them in their biodegradable pots so you do not disturb the roots.",
+   "notes_seasoned": "Direct sowing is strongly preferred: nasturtium has a sensitive root system and resents transplanting, so sow the large seeds in place, about 1/2 in deep, after frost once soil is near 55 to 65 °F. Soaking seeds overnight speeds germination, which takes roughly 7 to 12 days. In very short-season areas you can gain a few weeks by starting indoors about 4 weeks before last frost, but only in biodegradable pots set out intact to avoid root shock.",
+   "notes_beginner": "The best way to grow nasturtiums is to plant the big seeds right where they will grow, about half an inch deep, after your last frost. They do not like having their roots disturbed, so direct sowing works best. Soaking the seeds overnight helps them sprout, usually in one to two weeks. If your season is very short, you can start them indoors about a month early, but use biodegradable pots and plant the whole pot so the roots are not disturbed."
+  },
+  "germination_temp_f": [
+   55,
+   65
+  ],
+  "heat_threshold_f": null,
+  "heat_effect": "heat_tolerant",
+  "succession_policy": {
+   "interval_weeks": 2,
+   "window_type": "spring_and_fall_cool_shoulders",
+   "trigger": "interval",
+   "tip_seasoned": "Sow successively every 2 to 3 weeks through the cool growing windows to keep fresh, vigorous plants coming; older plantings tire and grow leggy. Unlike heat-loving annuals, nasturtium favors cool weather, so in hot-summer regions concentrate sowings in spring and fall and pause through peak heat.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "tip_id": "nas_germ_directsow",
+    "audience": "core",
+    "text_seasoned": "Direct-sow where plants are to grow: nasturtium resents root disturbance, so seeding in place avoids transplant shock. Sow 1/2 in deep after frost into soil near 55 to 65 °F; soaking seed overnight speeds the 7 to 12 day germination.",
+    "text_beginner": "Plant the seeds right where you want the plants, about half an inch deep, after your last frost. Nasturtiums do not like being moved, so do not start them in trays unless you use biodegradable pots. Soaking the seeds overnight helps them sprout.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "uwi_hort",
+     "ncsu_ext"
+    ],
+    "anchoring_urls": {
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/nasturtium-tropaeolum-majus/",
+      "verified": "2026-06-29"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/tropaeolum-majus/",
+      "verified": "2026-06-29"
+     }
+    }
+   },
+   {
+    "tip_id": "nas_germ_leansoil",
+    "audience": "core",
+    "text_seasoned": "Sow into lean, unenriched soil. Resist the urge to amend with compost or fertilizer at planting; rich soil sets the plant up to grow leaves instead of flowers from the start.",
+    "text_beginner": "Plant in plain, poor soil and do not add compost or fertilizer. Rich soil makes nasturtiums grow leaves instead of flowers.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "ncsu_ext",
+     "umn_ext"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/tropaeolum-majus/",
+      "verified": "2026-06-29"
+     },
+     "umn_ext": {
+      "url": "https://extension.umn.edu/news/writers-guild-article-nasturtiums",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "budding",
+   "flowering",
+   "seed_saving"
+  ]
+ },
+ "borage": {
+  "name": "Borage",
+  "botanical": null,
+  "start_method": {
+   "start": "direct",
+   "weeks_before": null,
+   "hardening_off_seasoned": "Hardening off does not apply, because borage is direct-sown rather than transplanted. It has a taproot and resents root disturbance, so sow it where it is to grow rather than starting it indoors.",
+   "hardening_off_beginner": "There is nothing to harden off, because you sow borage right in the garden instead of starting it inside. It does not like being moved.",
+   "notes_seasoned": "Direct-sow borage where it will grow; it has a taproot and does not transplant well, so starting it indoors is not recommended. Sow after the last spring frost in cool and temperate regions, or in fall and the cool season in hot ones, covering the seed about 1/2 in (it germinates fine in darkness or light, but should be covered). It comes up in 1 to 2 weeks. Thin or space plants to 12 to 24 in, since borage grows large and sprawling, and it self-sows readily for future seasons.",
+   "notes_beginner": "Sow borage seeds straight into the garden where you want plants, since it does not like being transplanted. Plant after your last frost in most gardens, or in the cool season where summers are hot, covering the seeds about half an inch deep. They come up in one to two weeks. Space plants 12 to 24 inches apart because borage gets big, and it will drop seed and come back on its own."
+  },
+  "germination_temp_f": [
+   65,
+   70
+  ],
+  "heat_threshold_f": null,
+  "heat_effect": "heat_tolerant",
+  "succession_policy": {
+   "interval_weeks": 4,
+   "window_type": "continuous",
+   "trigger": "interval",
+   "tip_seasoned": "Borage can be sown successively every 3 to 4 weeks through the growing window for a continuous supply of young leaves and fresh flowers, though a single spring sowing plus its own self-sown volunteers often keeps a patch going on its own. In hot regions there is a real summer pause: stop sowing through the hottest, most humid months, since borage declines and mildews in that heat.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "tip_id": "bor_germ_direct",
+    "audience": "core",
+    "text_seasoned": "Direct-sow borage where it will grow and cover seed about 1/2 in; it has a taproot and does not transplant well, so skip indoor starts. Seedlings emerge in 1 to 2 weeks.",
+    "text_beginner": "Plant borage seeds right in the garden, about half an inch deep, because it does not like to be moved. They come up in a week or two.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "ncsu_ext",
+     "ucanr_marin_mg"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/borago-officinalis/",
+      "verified": "2026-07-02"
+     },
+     "ucanr_marin_mg": {
+      "url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/borage",
+      "verified": "2026-07-02"
+     }
+    }
+   },
+   {
+    "tip_id": "bor_germ_timing",
+    "audience": "core",
+    "text_seasoned": "Sow after the last frost in cool and temperate regions; in hot, humid climates sow in fall and the cool season instead, since borage struggles in extreme summer heat.",
+    "text_beginner": "Sow after your last frost in most gardens. Where summers are hot, plant it in fall or the cool season instead.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "ncsu_ext",
+     "uf_ifas"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/borago-officinalis/",
+      "verified": "2026-07-02"
+     },
+     "uf_ifas": {
+      "url": "https://blogs.ifas.ufl.edu/nassauco/2017/06/19/q-borage-listed-one-herbs-grown-november-please-tell-plant/",
+      "verified": "2026-07-02"
+     }
+    }
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "budding",
+   "flowering",
+   "seed_saving"
+  ]
+ },
+ "calendula": {
+  "name": "Calendula",
+  "botanical": null,
+  "start_method": {
+   "start": "both",
+   "weeks_before": 6,
+   "hardening_off_seasoned": "Indoor-started transplants need about a week of hardening off, increasing outdoor exposure gradually, before transplanting. Because calendula is frost-tolerant to about 25°F, transplants can go out a couple of weeks before the last spring frost.",
+   "hardening_off_beginner": "If you started plants indoors, harden them off first: set them outside for a little longer each day over about a week before planting them out. Calendula handles light frost, so it can go out a couple of weeks before your last frost.",
+   "notes_seasoned": "Calendula direct-sows readily into cool soil (about 60°F) at 1/4 to 1/2 in depth; cover the seed, because light inhibits germination. It germinates in 1 to 2 weeks and is the simplest method in the cool shoulders. To gain time in short-season areas, start indoors about 6 to 8 weeks before the last frost and transplant; calendula resents heavy root disturbance, so use cells or pots and transplant while young. Pinch once when young for bushier plants.",
+   "notes_beginner": "The easiest way is to sow calendula seeds straight into cool garden soil (about 60°F), a quarter to half an inch deep, and cover them well because the seeds need darkness to sprout. They come up in one to two weeks. For a head start, sow indoors about 6 to 8 weeks before your last frost and move the young plants outside. You can pinch the tops once to make plants bushier."
+  },
+  "germination_temp_f": [
+   60,
+   70
+  ],
+  "heat_threshold_f": 85,
+  "heat_effect": "quality_loss",
+  "succession_policy": {
+   "interval_weeks": 3,
+   "window_type": "cool_season_shoulders",
+   "trigger": "interval",
+   "tip_seasoned": "Sow successively every 3 to 4 weeks through the cool windows, early spring and again late summer into fall, and through winter in mild and Mediterranean zones, to keep fresh, vigorous plants in bloom. There IS a heat pause: stop sowing through the hot months, since calendula germinates and blooms poorly in summer heat.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "tip_id": "cal_germ_cover",
+    "audience": "core",
+    "text_seasoned": "Cover calendula seed about 1/4 to 1/2 in; light inhibits germination, so darkness and cool soil near 60°F are the triggers. Seedlings emerge in 1 to 2 weeks.",
+    "text_beginner": "Cover the seeds well, about a quarter to half an inch deep, because calendula needs darkness to sprout. In cool soil they come up in one to two weeks.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "usu_ext",
+     "uwi_hort"
+    ],
+    "anchoring_urls": {
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+      "verified": "2026-06-30"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/calendula-calendula-officinalis/",
+      "verified": "2026-06-30"
+     }
+    }
+   },
+   {
+    "tip_id": "cal_germ_coolsoil",
+    "audience": "core",
+    "text_seasoned": "Sow into cool soil, the way you would spinach: direct-sow in early spring and again in late summer or fall, and through winter in mild and Mediterranean zones. Calendula germinates poorly in hot soil.",
+    "text_beginner": "Plant calendula in cool weather, not summer heat. Sow in early spring and again in late summer or fall (and in winter where winters are mild). Hot soil keeps the seeds from sprouting well.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "usu_ext",
+     "ufifas_ext"
+    ],
+    "anchoring_urls": {
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+      "verified": "2026-06-30"
+     },
+     "ufifas_ext": {
+      "url": "https://ask.ifas.ufl.edu/publication/FP087",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "budding",
+   "flowering",
+   "seed_saving"
+  ]
+ },
+ "chamomile": {
+  "name": "Chamomile",
+  "botanical": null,
+  "start_method": {
+   "start": "both",
+   "weeks_before": 5,
+   "hardening_off_seasoned": "Indoor-started transplants need about a week of hardening off before setting out. Move chamomile out young: it resents transplanting once it is more than a couple of inches tall, so set out small plants. Seedlings tolerate light frost, so they can go out around the last spring frost.",
+   "hardening_off_beginner": "If you started plants indoors, harden them off first: set them outside for a little longer each day over about a week. Move chamomile out while it is still small (under a couple of inches), because bigger plants do not transplant well. It handles light frost, so it can go out around your last frost.",
+   "notes_seasoned": "Chamomile is easiest direct-sown: scatter the fine seed on the surface of cool soil (around 55°F) and press it in without covering, since light aids germination. It sprouts in about 1 to 2 weeks and self-thins little, so thin to about 8 in. To gain time in short-season areas, start indoors about 4 to 6 weeks before the last frost and transplant while seedlings are small, because larger plants transplant poorly. Sowing in fall lets it overwinter and reseed in mild zones.",
+   "notes_beginner": "The easiest way is to scatter chamomile seeds right on top of cool garden soil (about 55°F) and just press them in, without covering, because the seeds need light to sprout. They come up in one to two weeks. For a head start, sow indoors about 4 to 6 weeks before your last frost and move the young plants out while they are still small, since big plants do not transplant well."
+  },
+  "germination_temp_f": [
+   55,
+   70
+  ],
+  "heat_threshold_f": null,
+  "heat_effect": "heat_tolerant",
+  "succession_policy": {
+   "interval_weeks": 4,
+   "window_type": "cool_season_shoulders",
+   "trigger": "interval",
+   "tip_seasoned": "Chamomile blooms a long time from one sowing and self-sows, so heavy succession is optional, but a fresh sowing every 4 weeks through the cool windows keeps young, vigorous plants coming into flower. There IS a heat pause in hot regions: stop sowing through the hottest, most humid months, when chamomile declines and molds.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "tip_id": "cham_germ_light",
+    "audience": "core",
+    "text_seasoned": "Surface-sow chamomile and press the fine seed in without covering; light aids germination, so do not bury it. In cool soil near 55°F seedlings emerge in about 1 to 2 weeks.",
+    "text_beginner": "Scatter the tiny seeds on top of the soil and press them in, but do not cover them, because chamomile needs light to sprout. In cool soil they come up in one to two weeks.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "uwi_hort",
+     "ncsu_ext"
+    ],
+    "anchoring_urls": {
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+      "verified": "2026-07-02"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/matricaria-chamomilla/",
+      "verified": "2026-07-02"
+     }
+    }
+   },
+   {
+    "tip_id": "cham_germ_coolsoil",
+    "audience": "core",
+    "text_seasoned": "Sow into cool soil in early spring (or fall in mild zones); chamomile prefers cool conditions and does not need warm soil to start. Keep the surface evenly moist while the fine seed germinates.",
+    "text_beginner": "Plant chamomile in cool weather, in early spring (or fall where winters are mild). It does not need warm soil. Just keep the surface damp until the little seeds sprout.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "msu_bozeman",
+     "ucanr_santa_clara_mg"
+    ],
+    "anchoring_urls": {
+     "msu_bozeman": {
+      "url": "https://agresearch.montana.edu/warc/research_current/research_past/herbsandoils/chamomile.html",
+      "verified": "2026-07-02"
+     },
+     "ucanr_santa_clara_mg": {
+      "url": "https://ucanr.edu/sites/mgscc2016/garden-help/herbs/chamomile",
+      "verified": "2026-07-02"
+     }
+    }
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "budding",
+   "flowering",
+   "seed_saving"
+  ]
+ },
+ "sweet-alyssum": {
+  "name": "Sweet Alyssum",
+  "botanical": null,
+  "start_method": {
+   "start": "both",
+   "weeks_before": 5,
+   "hardening_off_seasoned": "Indoor-grown or purchased transplants need about 7 to 10 days of hardening off before setting out. Sweet alyssum tolerates cool weather and light frost well, so hardening is mainly about adjusting seedlings to wind and direct sun.",
+   "hardening_off_beginner": "If you started or bought plants grown under cover, harden them off first: set them outside for a little longer each day over about a week. Sweet alyssum handles cool weather and light frost, so this is mostly to get it used to wind and full sun.",
+   "notes_seasoned": "Sweet alyssum is easily direct-sown and is often the simplest path: surface-sow and barely cover the seed, since it needs light to germinate, on cool, moist soil around the last frost, and it flowers in roughly 6 to 8 weeks. For a head start, sow indoors about 5 to 6 weeks before set-out, pressing seed onto the surface under light, and transplant around the last frost. In mild-winter regions, sow in fall for winter and spring bloom. Do not bury the seed. Deadhead or shear rather than pinch, and leave a few plants to self-sow.",
+   "notes_beginner": "The easiest way is to sow sweet alyssum right where you want it: scatter the seed on cool, moist soil and barely cover it, because it needs light to sprout, around your last frost. It flowers in about 6 to 8 weeks. To get a jump on the season, start seed indoors about 5 to 6 weeks early, pressing it onto the surface so light reaches it, and plant out around the last frost. In mild areas, sow in fall for winter and spring flowers. Do not bury the seed, and leave a few plants to drop seed for next year."
+  },
+  "germination_temp_f": [
+   60,
+   70
+  ],
+  "heat_threshold_f": null,
+  "heat_effect": "heat_tolerant",
+  "succession_policy": {
+   "interval_weeks": 3,
+   "window_type": "cool_season_split",
+   "trigger": "interval",
+   "tip_seasoned": "Sweet alyssum is fast and reseeding, so it is often a one- or two-window bedding planting rather than a continuously sown crop, but you can stagger sowings every 2 to 3 weeks through the cool season for unbroken fresh bloom and to replace tired or rotted patches. In mild zones that window is fall through spring with a summer heat pause; in cold zones it is spring and again in late summer around a midsummer pause. Anchor sowings to the cool side of the season, since bloom stalls above summer heat.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "tip_id": "sa_germ_surface_light",
+    "audience": "core",
+    "text_seasoned": "Surface-sow sweet alyssum and barely cover the seed, since it needs light to germinate; keep the surface evenly moist at about 60 to 70 °F and expect emergence in 7 to 14 days. Burying the seed is the most common reason it fails to come up.",
+    "text_beginner": "Scatter sweet alyssum seed on the surface and barely cover it, because it needs light to sprout. Keep the surface damp and it comes up in one to two weeks. Burying the seed too deep is the usual reason it does not sprout.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "clemson_hgic",
+     "uwi_hort"
+    ],
+    "anchoring_urls": {
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/sweet-alyssum/",
+      "verified": "2026-07-02"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/sweet-alyssum-lobularia-maritima/",
+      "verified": "2026-07-02"
+     }
+    }
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "budding",
+   "flowering",
+   "seed_saving"
+  ]
+ },
+ "viola": {
+  "name": "Viola",
+  "botanical": null,
+  "start_method": {
+   "start": "both",
+   "weeks_before": 8,
+   "hardening_off_seasoned": "Indoor-grown or purchased transplants need 7 to 10 days of hardening off before setting out, though viola transplants tolerate cool and light frost well, so the process is mainly about adjusting to wind and direct sun.",
+   "hardening_off_beginner": "If you started or bought plants grown under cover, harden them off first: set them outside for a little longer each day over about a week. Violas handle cold easily, so this is mostly to get them used to wind and full sun.",
+   "notes_seasoned": "Viola is most often set out as transplants, since seed-to-bloom runs roughly 10 to 14 weeks and the seed needs cool, dark conditions (about 65 to 75 °F) that summer soil cannot give. Start indoors 6 to 8 weeks ahead in cells, kept cool and covered to exclude light, then transplant once the weather is cool: late summer for fall and winter bloom in mild zones, early spring for spring bloom in cold ones. Direct sowing works in mild climates when soil is cool. Do not pinch; deadhead instead to drive bloom.",
+   "notes_beginner": "The easiest path is to buy or start transplants, because viola seed takes 10 to 14 weeks to bloom and needs cool, dark soil to sprout, which summer cannot provide. Start seed indoors 6 to 8 weeks ahead, kept cool and covered so it is dark, then plant out when the weather is cool: late summer in mild areas for fall and winter flowers, or early spring in cold areas. You can sow straight in the ground where the soil is cool. Do not pinch the tops; just remove old flowers to keep them blooming."
+  },
+  "germination_temp_f": [
+   65,
+   75
+  ],
+  "heat_threshold_f": 75,
+  "heat_effect": "quality_loss",
+  "succession_policy": {
+   "interval_weeks": 3,
+   "window_type": "cool_season_split",
+   "trigger": "interval",
+   "tip_seasoned": "Stagger transplant sets every 2 to 3 weeks through your cool-season window for continuous, fresh bloom and to replace plants lost to slugs or rot. In mild zones that window is fall through spring with a summer heat pause; in cold zones it is early spring and again in late summer, around a midsummer pause. Violas fade above roughly 75 °F, so anchor plantings to the cool side of the season.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "tip_id": "vio_germ_cool_dark",
+    "audience": "core",
+    "text_seasoned": "Sow into cool soil (about 65 to 75 °F) and cover the seed to exclude light; warm soil and light both inhibit viola germination, which is why seed is started in late summer under cover rather than direct-sown into warm beds.",
+    "text_beginner": "Plant viola seed in cool soil, around 65 to 75 °F, and cover it so it stays dark. Warm soil and light both keep the seeds from sprouting, so they are usually started indoors in late summer.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "clemson_hgic"
+    ],
+    "anchoring_urls": {
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/pansies-and-johnny-jump-ups/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "budding",
+   "flowering",
+   "seed_saving"
+  ]
+ },
+ "sweet-pea": {
+  "name": "Sweet Pea",
+  "botanical": null,
+  "start_method": {
+   "start": "both",
+   "weeks_before": 6,
+   "hardening_off_seasoned": "If started indoors, harden off over 7 to 10 days before setting out; sweet pea seedlings are cold-tolerant, so they can go out early, even before the last frost, once hardened. Transplant while young with minimal root disturbance, ideally from deep root-trainers or biodegradable pots, because the plant makes a long taproot that resents being cramped or broken.",
+   "hardening_off_beginner": "If you started plants indoors, harden them off by setting them outside for longer each day over about a week before planting out. Sweet pea seedlings handle cold, so they can go out early. Move them while small and try not to disturb the roots, since they grow a long taproot; deep pots or biodegradable pots help.",
+   "notes_seasoned": "Both methods work. Direct-sow as soon as the soil is workable in late winter or early spring (fall in mild-winter zones), or start indoors about 6 weeks earlier in deep cells or root-trainers for an earlier, stronger start. Soak the hard seed overnight; for dark, hard-coated seed that has not swelled, nick the coat opposite the eye with a knife or file to speed the 10 to 21 day germination near 60 °F. Sow about 1 in deep, and pinch seedlings above the second or third leaf pair to force basal branching. Provide the climbing support at or before planting.",
+   "notes_beginner": "You can plant seeds straight in the ground or start them indoors. Direct-sow as soon as you can work the soil in late winter or spring (or in fall where winters are mild), or start seeds indoors about 6 weeks earlier in deep pots. Soak the hard seeds overnight first; if any have not swelled, carefully nick the hard coat with a file to help them sprout, which takes 10 to 21 days. Plant about 1 in deep, and when seedlings are a few inches tall pinch out the tip to make them bushier. Put the trellis up when you plant."
+  },
+  "germination_temp_f": [
+   55,
+   65
+  ],
+  "heat_threshold_f": null,
+  "heat_effect": "heat_tolerant",
+  "succession_policy": {
+   "interval_weeks": 3,
+   "window_type": "spring_and_fall_cool_shoulders",
+   "trigger": "interval",
+   "tip_seasoned": "Sweet pea is largely a single-cohort crop, but a couple of successive sowings across the cool window (early plus late in the sowing season) stretch the cut-flower supply, since the plant is undone by heat rather than tired plantings. In mild-winter regions the two real windows are fall and late winter; in cold regions, one early-spring sowing (optionally split by a few weeks) is the practical maximum before summer heat closes the season.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "tip_id": "sp_germ_earlycool",
+    "audience": "core",
+    "text_seasoned": "Sow early into cool soil: sweet pea germinates near 60 °F and seedlings are frost-hardy, so late-winter or early-spring sowing (fall in mild zones) gives the long cool run the plant needs before heat.",
+    "text_beginner": "Plant sweet peas early, in cool weather. The seeds sprout in cool soil and young plants handle frost, so late winter or early spring (or fall where winters are mild) is the right time.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "cornell_ext",
+     "ncsu_ext"
+    ],
+    "anchoring_urls": {
+     "cornell_ext": {
+      "url": "https://blogs.cornell.edu/hightunnels/flowers/cut-flowers/cut-flower-crops/sweet-pea/",
+      "verified": "2026-07-02"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/lathyrus-odoratus/",
+      "verified": "2026-07-02"
+     }
+    }
+   },
+   {
+    "tip_id": "sp_germ_soaknick",
+    "audience": "core",
+    "text_seasoned": "Soak the hard seed overnight; dark, hard-coated seed that stays hard can be nicked opposite the eye to let water in and even up the 10 to 21 day germination.",
+    "text_beginner": "Soak the seeds in water overnight before planting. If any seeds are dark and stay hard, carefully nick the hard shell with a file so water can get in.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "cornell_ext",
+     "ncsu_ext"
+    ],
+    "anchoring_urls": {
+     "cornell_ext": {
+      "url": "https://blogs.cornell.edu/hightunnels/flowers/cut-flowers/cut-flower-crops/sweet-pea/",
+      "verified": "2026-07-02"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/lathyrus-odoratus/",
+      "verified": "2026-07-02"
+     }
+    }
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "budding",
+   "flowering",
+   "decline_seed"
+  ]
+ },
+ "beet": {
+  "name": "Beet",
+  "botanical": "Beta vulgaris",
+  "start_method": {
+   "start": "direct",
+   "weeks_before": 0,
+   "hardening_off_seasoned": false,
+   "hardening_off_beginner": "You do not need to harden off beets. They are sown straight into the garden from seed, not started indoors and transplanted.",
+   "notes_seasoned": "Direct-sow beets into the garden; they resent transplanting and are simplest grown from seed in place. Sow about 1/2 inch deep once the soil is workable and at least 45 to 50°F, roughly 2 to 3 weeks before the last spring frost, and again in late summer for a fall crop. Soaking the seed in warm water for about 24 hours before sowing speeds the slow germination. The key beet-specific point is that each beet seed is a multigerm seedball, a dried fruit containing several embryos, so a single seed sprouts a small cluster of seedlings and the stand must be thinned. Monogerm cultivars (one seedling per seed) avoid this. Keep the surface moist and uncrusted until the seedlings emerge, often 1 to 2 weeks.",
+   "notes_beginner": "Plant beet seeds right in the garden where they will grow, since beets do not like being moved. Sow them about 1/2 inch deep once the soil is no longer frozen or soggy (about 45 to 50°F), roughly 2 to 3 weeks before your last spring frost, and again in late summer for a fall crop. Soaking the seeds in warm water for about a day before planting helps them sprout faster. Here is the beet surprise: each beet seed is really a little dried fruit holding several seeds, so one seed grows a small clump of seedlings, which is why you have to thin them later. Some kinds, sold as monogerm, grow just one seedling per seed. Keep the soil surface damp until the sprouts appear, often 1 to 2 weeks.",
+   "sources": [
+    "umd_ext",
+    "usu_ext",
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "umd_ext": {
+     "url": "https://extension.umd.edu/resource/growing-beets-home-garden",
+     "verified": "2026-06-29"
+    },
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/beets-in-the-garden",
+     "verified": "2026-06-29"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  "germination_temp_f": [
+   50,
+   85
+  ],
+  "heat_threshold_f": 75,
+  "heat_effect": "quality_loss",
+  "succession_policy": {
+   "interval_weeks": 3,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Beets succession well: sow a short row every 2 to 3 weeks through the cool-season window rather than one large planting, so roots mature in sequence. In cold-summer climates that means spring through early summer, then a late-summer sowing for a fall and storage crop; in hot-summer climates it means fall through early spring, skipping the heat. Stop spring sowings before sustained heat, since beets near maturity in hot soil turn woody and lose sweetness, and very early sowings into cold soil risk bolting.",
+   "sources": [
+    "usu_ext",
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/beets-in-the-garden",
+     "verified": "2026-06-29"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  "germination_tips": [
+   {
+    "tip_id": "beet_germ_soak_crust",
+    "audience": "core",
+    "text_seasoned": "Beet seed is slow, often 1 to 2 weeks, and the fine seedlings cannot push through a dried crust. Soak the seedballs in warm water for about 24 hours before sowing, and keep the surface evenly moist until emergence; a board or light burlap over the row holds moisture and is removed at the first sign of green.",
+    "text_beginner": "Beet seeds are slow, often 1 to 2 weeks, and the little sprouts cannot break through a dry crust. Soak the seeds in warm water for about a day before planting, and keep the soil surface damp until they come up. A board or piece of burlap laid over the row helps hold moisture; lift it as soon as you see green.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "umd_ext",
+     "usu_ext"
+    ],
+    "anchoring_urls": {
+     "umd_ext": {
+      "url": "https://extension.umd.edu/resource/growing-beets-home-garden",
+      "verified": "2026-06-29"
+     },
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/beets-in-the-garden",
+      "verified": "2026-06-29"
+     }
+    },
+    "author": "plant",
+    "added_in": "beet_author_fresh_pilot",
+    "last_reviewed": "2026-06-29",
+    "last_reviewed_operation": "beet_author_fresh_pilot_release",
+    "display_priority_override": null
+   },
+   {
+    "tip_id": "beet_germ_seedball",
+    "audience": "core",
+    "text_seasoned": "Each beet seed is a multigerm seedball that sprouts a cluster of seedlings, so a normal-looking sowing comes up crowded by design. Sow about 1/2 inch deep and an inch or two apart; plan to thin. Monogerm cultivars produce a single seedling per seed.",
+    "text_beginner": "Each beet seed is really a little dried fruit with several seeds inside, so one seed grows a clump of seedlings. That is normal. Plant them about 1/2 inch deep and an inch or two apart, and plan to thin them later. Kinds sold as monogerm grow just one seedling per seed.",
+    "evidence_tier": "research_backed",
+    "sources": [
+     "umd_ext",
+     "ncsu_ext"
+    ],
+    "anchoring_urls": {
+     "umd_ext": {
+      "url": "https://extension.umd.edu/resource/growing-beets-home-garden",
+      "verified": "2026-06-29"
+     },
+     "ncsu_ext": {
+      "url": "https://content.ces.ncsu.edu/beets",
+      "verified": "2026-06-29"
+     }
+    },
+    "author": "plant",
+    "added_in": "beet_author_fresh_pilot",
+    "last_reviewed": "2026-06-29",
+    "last_reviewed_operation": "beet_author_fresh_pilot_release",
+    "display_priority_override": null
+   }
+  ],
+  "heat_stress_trigger": [
+   {
+    "active_stages": [
+     "established",
+     "harvest"
+    ],
+    "body_seasoned": "Sustained heat above about 75°F coarsens roots, dulls sweetness, and can prompt bolting in plants that also met a cold spell. Harvest mature roots, keep moisture even, and mulch or shade if you can."
+   }
+  ],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "harvest"
+  ]
+ },
+ "collards": {
+  "name": "Collards (Collard Greens)",
+  "botanical": null,
+  "start_method": {
+   "start": "both",
+   "weeks_before": 4,
+   "hardening_off_seasoned": true,
+   "hardening_off_beginner": true,
+   "notes_seasoned": "Collards can be direct sown or transplanted, and in the South direct sowing is the norm. For a spring crop, start seeds indoors about 4 to 5 weeks before set-out and transplant around 3 to 4 weeks before the last frost, or direct sow as soon as the soil is workable; collards tolerate frost. For a fall and winter crop, sow in mid to late summer so plants size up before cold, then harvest through fall and, in mild zones, winter. Harden transplants off over 7 to 10 days. Thin or set plants 12 to 24 inches apart for full-size plants.",
+   "notes_beginner": "You can sow collard seeds right in the garden or start them indoors. For spring, start seeds about a month before planting out, and set plants in the garden a few weeks before your last frost, or just sow seeds once the soil can be worked. For a fall crop, sow in mid to late summer so it is ready before winter. Space full-size plants 12 to 24 inches apart. If you grow your own transplants, let them get used to the outdoors over a week before planting."
+  },
+  "germination_temp_f": [
+   45,
+   85
+  ],
+  "heat_threshold_f": 85,
+  "heat_effect": "quality_loss",
+  "succession_policy": {
+   "interval_weeks": 3,
+   "window_type": "continuous",
+   "trigger": "last_frost",
+   "tip_seasoned": "Collards crop over a long window, so rather than one big planting, sow small batches every 2 to 3 weeks through the cool stretches of spring and again from late summer for a fall and winter crop. Because each plant is cropped over many weeks, you need fewer sowings than for a fast crop, but staggering keeps tender young leaves coming. In the South you can plant across most of the year; only in genuinely extreme heat (deserts, peak Florida and Hawaii summers) do you skip the peak and plant for fall and winter instead.",
+   "sources": null,
+   "anchoring_urls": null
+  },
+  "germination_tips": [
+   {
+    "text_seasoned": "Sow about 0.25 to 0.5 inch deep into a moist seedbed or starting mix; collards germinate reliably across 45 to 85°F in about 5 to 10 days.",
+    "text_beginner": "Plant the seeds about a quarter to half an inch deep in damp soil, and keep it evenly moist while they sprout in 5 to 10 days.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "For a spring crop start indoors about 4 to 5 weeks before set-out, or direct sow as soon as the soil is workable; for a fall crop sow in mid to late summer.",
+    "text_beginner": "Start seeds indoors about a month before planting out, sow them in the garden once the soil can be worked, or sow in late summer for a fall crop.",
+    "audience": "core"
+   }
+  ],
+  "heat_stress_trigger": [],
+  "tips_stage_keys": [
+   "germination",
+   "seedling",
+   "established",
+   "harvest",
+   "overwintering"
+  ]
+ }
+}

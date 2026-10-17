@@ -1,0 +1,808 @@
+{
+ "spinach": {
+  "evidence": [
+   {
+    "mech": "G",
+    "url": "https://extension.usu.edu/yardandgarden/research/spinach-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Seeds germinate best at 55-65 degrees F and require 7-10 days to emerge.",
+    "temp_f": [
+     55,
+     65
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.usu.edu/yardandgarden/research/spinach-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Temperatures above 80 ° F reduce seed germination.",
+    "temp_f": 80,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://hgic.clemson.edu/factsheet/spinach/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": null,
+    "quote": "The optimum soil temperature for spinach seed germination is 70 °F.",
+    "temp_f": 70,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://hgic.clemson.edu/factsheet/spinach/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": null,
+    "quote": "Soil temperature above 85 °F will inhibit seed germination.",
+    "temp_f": 85,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.usu.edu/vegetableguide/leafy-greens/planting-spacing",
+    "source_name": "Utah State University Extension (Leafy Greens guide)",
+    "tier": "T1",
+    "section": "Planting, Spacing & Thinning",
+    "quote": "Soil temperatures above 80 °F cause the seeds of some crops (lettuce, spinach, others) to go dormant and they will not germinate until cooler soil temperatures return.",
+    "temp_f": 80,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard",
+    "source_name": "University of Minnesota Extension",
+    "tier": "T1",
+    "section": "Direct seeding",
+    "quote": "For a continuous spring supply, plant spinach seeds every one to two weeks, until outdoor temperatures reach 80°F.",
+    "temp_f": 80,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard",
+    "source_name": "University of Minnesota Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "In other parts of the state, it is best to wait until mid-August or later to sow the fall crop of spinach, to avoid summer heat.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard",
+    "source_name": "University of Minnesota Extension",
+    "tier": "T1",
+    "section": "Disorders",
+    "quote": "Spinach plants can start to flower after multiple days of high temperatures (greater than 75° F).",
+    "temp_f": 75,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/spinach-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "High summer temperatures reduce growth, decrease quality, and cause the plants to flower and the leaves to develop bitter or off-flavors.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://hgic.clemson.edu/factsheet/spinach/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": null,
+    "quote": "Plant spinach in early spring to avoid high temperatures and long days, which cause the plants to bolt, or form flower stalks.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "E",
+    "url": "https://projects.sare.org/media/pdf/s/p/i/spinach19.pdf",
+    "source_name": "West Virginia University (L. Jett), High Tunnel Spinach Production, hosted by SARE",
+    "tier": "T1",
+    "section": null,
+    "quote": "Since high soil temperatures can reduce germination and vigor, spinach seed can be chilled in a refrigerator (38-45°F) 48 h prior to sowing.",
+    "temp_f": [
+     38,
+     45
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.illinois.edu/gardening/spinach",
+    "source_name": "University of Illinois Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Chill seeds for summer or fall plantings in the refrigerator for 1 or 2 weeks before planting.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://www.johnnyseeds.com/growers-library/vegetables/spinach/spinach-key-growing-information.html",
+    "source_name": "Johnny's Selected Seeds",
+    "tier": "T2",
+    "section": null,
+    "quote": "Summer sowing in soil over 85°F (30°C) risks low or erratic germination.",
+    "temp_f": 85,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://www.johnnyseeds.com/growers-library/vegetables/spinach/spinach-key-growing-information.html",
+    "source_name": "Johnny's Selected Seeds",
+    "tier": "T2",
+    "section": null,
+    "quote": "If sowing must be done during warmer weather, irrigating can help cool the soil and improve germination.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "E",
+    "url": "https://www.johnnyseeds.com/growers-library/vegetables/spinach/spinach-key-growing-information.html",
+    "source_name": "Johnny's Selected Seeds",
+    "tier": "T2",
+    "section": null,
+    "quote": "Transplanting can help ensure full stands if germination has been difficult, either because of warm soil temperatures or diseases like damping off.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.usu.edu/vegetableguide/leafy-greens/planting-spacing",
+    "source_name": "Utah State University Extension (Leafy Greens guide)",
+    "tier": "T1",
+    "section": "Planting, Spacing & Thinning",
+    "quote": "When conditions are cooler, water after seeding and plant later in the day to overcome dormancy effects.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "source_name": "Washington State University Extension, Home Vegetable Gardening in Washington",
+    "tier": "T1",
+    "section": "Seeding/Germination/Growth table (columns: depth, in-row, between-row, days to germinate, optimum soil temperature range °F, base air temp, weeks to transplant, days to maturity)",
+    "quote": "Spinach ½ 2-4 12-18 6-14 45-75 15-20 DS 30-40",
+    "temp_f": [
+     45,
+     75
+    ],
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "yes",
+  "hold_basis": "G+S: T1 germination ceilings (USU >80°F reduces germination, Clemson >85°F soil inhibits) plus UMN's explicit air-temperature stop for succession sowing ('until outdoor temperatures reach 80°F'). M (bolting >75°F, UMN) backs it but is not what makes a sowing fail.",
+  "proposed_pause_in_heat": true,
+  "proposed_threshold_f": 80,
+  "threshold_quote_ref": 5,
+  "threshold_note": "UMN: sow every 1-2 weeks 'until outdoor temperatures reach 80°F' -> 80. It is the only quote that is an AIR temperature tied to a SOWING decision, so it maps directly onto the app's forecast-high comparison. USU 'above 80 °F reduce seed germination' [1] and USU leafy greens 80°F soil dormancy [4] land on the same number; Clemson's 85°F [3] is a soil-inhibition ceiling. Current value 78 has no quote; contract defines heat_threshold_f as the mature-plant number, and UMN's mature-plant number is 75 (flowering after multiple days >75°F [7]). So: 80 if the field is re-scoped to the sowing hold, 75 if it stays mature-plant; 78 matches neither.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.germination (replace germination_tips[0] heat clause and germination_tips[1])",
+   "draft_seasoned": "Spinach germinates best in cool soil, around 55 to 65°F; soil above 80°F reduces germination and above 85°F inhibits it. In late summer, chill the seed in the refrigerator for 1 to 2 weeks before sowing, and stop spring successions once outdoor temperatures reach 80°F.",
+   "draft_beginner": "Spinach seeds sprout best in cool soil. In hot soil, above about 80°F, many will not come up. For a late-summer sowing, keep the seed in the refrigerator for a week or two first, and stop spring sowings once the weather reaches 80°F.",
+   "evidence_refs": [
+    0,
+    1,
+    3,
+    5,
+    11
+   ]
+  },
+  "gaps": [
+   "Tip 1 'germinates from about 40°F': USU says 'Spinach seed can be sown after soils reach 40 degrees F' (a sowing floor, not a germination statement); close but not the same claim.",
+   "Tip 1 'reliably at 60 to 70°F': no source states 60-70; USU says best 55-65°F, Clemson optimum 70°F.",
+   "Tip 1 'poorly above 75 to 85°F': 80 (USU) and 85 (Clemson, Johnny's T2) are sourced; the 75 lower bound appears only as the top of WSU's 45-75 'optimum soil temperature range' table cell, which is an optimum range, not a 'poor germination' threshold.",
+   "Tip 2 'pre-sprout': NO source found. T1 sources (Illinois, WVU) say CHILL the seed in the refrigerator, a different technique.",
+   "Tip 2 'water the furrow to cool it': supported only at T2 (Johnny's: 'irrigating can help cool the soil'). USU says 'water after seeding and plant later in the day to overcome dormancy effects' but does not say the water cools the soil.",
+   "Tip 2 'wait for soil to drop below 75°F': no source gives 75°F as a wait-to-sow threshold; the T1 numbers are 80 (USU) and 85 (Clemson).",
+   "Tip 2 'warm soil is the main cause of poor late-summer stands': 'main cause' is unsupported. WVU says high soil temperatures 'can reduce germination and vigor'; Johnny's (T2) names warm soil AND damping off as causes of difficult stands.",
+   "UMaine spinach page (cached FETCHFAIL) now 404s; MSState fall-gardening page and MSU leafy-greens page are bad in cache and were not re-fetched."
+  ],
+  "notes": "Both existing heat tips carry no sources and each has at least one clause no source supports (pre-sprout, 75°F wait, 'main cause'). Recommend re-authoring them to the drafted version (or similar) anchored to USU, Clemson, Illinois and UMN. start_method.notes_seasoned carries the same unsupported 'above about 75 to 85°F' phrasing. The UMN 80°F quote is in the 'Direct seeding' section of the spinach-and-Swiss-chard page and names spinach explicitly."
+ },
+ "lettuce-leaf": {
+  "evidence": [
+   {
+    "mech": "G",
+    "url": "https://extension.usu.edu/vegetableguide/leafy-greens/planting-spacing",
+    "source_name": "Utah State University Extension (Leafy Greens guide)",
+    "tier": "T1",
+    "section": "Planting, Spacing & Thinning",
+    "quote": "Soil temperatures above 80 °F cause the seeds of some crops (lettuce, spinach, others) to go dormant and they will not germinate until cooler soil temperatures return.",
+    "temp_f": 80,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+    "source_name": "New Mexico State University, CR-457",
+    "tier": "T1",
+    "section": "Greens and Salad Crops > Lettuce",
+    "quote": "This cool-season vegetable germinates best at 65-70°F. Temperatures above 79°F tend to inhibit germination.",
+    "temp_f": 79,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/res-164.pdf",
+    "source_name": "University of Hawaii CTAHR",
+    "tier": "T1",
+    "section": "Propagation",
+    "quote": "Lettuce seeds germinate best at 60-70°F (15­ 20°C) and will fail to germinate above 81°F (27°C).",
+    "temp_f": 81,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://content.ces.ncsu.edu/lettuce",
+    "source_name": "NC State Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Germination may be reduced under high soil temperatures due to thermoinhibition.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://content.ces.ncsu.edu/lettuce",
+    "source_name": "NC State Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Lettuce seed can germinate at temperatures as low as 35°F; however, optimal germination occurs between 70 and 75°F.",
+    "temp_f": [
+     70,
+     75
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://hgic.clemson.edu/factsheet/lettuce/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": null,
+    "quote": "The optimum soil temperature for seed germination is 60 to 80 °F. Raw lettuce seed will not germinate at a soil temperature above 95 °F.",
+    "temp_f": [
+     60,
+     95
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://ucanr.edu/site/uc-master-gardeners-sacramento-county/growing-lettuce-warm-weather",
+    "source_name": "UC Master Gardeners of Sacramento County",
+    "tier": "T1",
+    "section": null,
+    "quote": "Lettuce seeds germinate poorly in warm summer soil since heat may cause seed dormancy.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-lettuce-endive-and-radicchio",
+    "source_name": "University of Minnesota Extension",
+    "tier": "T1",
+    "section": "Disorders",
+    "quote": "Multiple days of high temperatures (greater than 75° F) can cause lettuce plants to flower.",
+    "temp_f": 75,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umd.edu/resource/growing-lettuce-home-garden",
+    "source_name": "University of Maryland Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Increasing day-length and high summer temperatures usually cause seedstalk formation (bolting) and bitter flavor.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.illinois.edu/gardening/lettuce",
+    "source_name": "University of Illinois Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Lettuce does not withstand hot summer days well and spring planting should be completed at least a month before the really hot days of early summer begin.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://content.ces.ncsu.edu/lettuce",
+    "source_name": "NC State Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Many modern cultivars can tolerate short periods of daytime temperatures in the 80–85°F range if adequate soil moisture is maintained and nighttime temperatures remain cool.",
+    "temp_f": [
+     80,
+     85
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://content.ces.ncsu.edu/lettuce",
+    "source_name": "NC State Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Romaine generally tolerates more heat than head lettuce, while butterhead and leaf types are typically the most heat-tolerant and have the longest potential production window.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "yes",
+  "hold_basis": "G: three T1 sources put a soil-temperature germination ceiling at 79-81°F (USU 80 dormancy, NMSU 79, CTAHR 81), with NCSU and UC MG Sacramento naming thermoinhibition/dormancy in warm soil. M (UMN >75°F flowering) is secondary for a sowing decision.",
+  "proposed_pause_in_heat": true,
+  "proposed_threshold_f": 80,
+  "threshold_quote_ref": 0,
+  "threshold_note": "USU: soil above 80°F makes lettuce seed go dormant -> 80; NMSU 79 and CTAHR 81 bracket it. All three are SOIL temperatures; the app compares AIR highs, so Trevor must rule whether a soil number may stand in for an air high (no source found that maps the two). Current 78 has no quote. If heat_threshold_f stays the mature-plant number, UMN's 75°F (multi-day flowering) is the sourced value; NCSU [10] says many cultivars tolerate short 80-85°F daytime spells, which argues against a hold on a single hot forecast day.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.germination (re-anchor existing tip_85e7xx84)",
+   "draft_seasoned": "Lettuce germinates best around 60 to 70°F. Above about 80°F soil, the seed goes dormant and will not sprout until the soil cools, which is why midsummer sowings often come up poorly.",
+   "draft_beginner": "Lettuce seeds sprout best in cool soil. When the soil gets hotter than about 80°F, the seeds rest instead of sprouting, so summer sowings often come up poorly.",
+   "evidence_refs": [
+    0,
+    2,
+    6
+   ]
+  },
+  "gaps": [
+   "Existing tip tip_85e7xx84 cites ncsu_ext, umn_ext, umd_ext, uiuc_ext, uf_ifas: NONE of those five cached pages states an ~80°F germination figure. NCSU says only 'Germination may be reduced under high soil temperatures due to thermoinhibition' (no number); UMN/UMD/Illinois have no germination-heat statement (Illinois attributes germination failure to 'insufficient moisture or old seed'); the UF/IFAS Escambia blog is about thinning and has no temperature content.",
+   "No source maps a soil-temperature germination ceiling onto an air-temperature forecast high."
+  ],
+  "notes": "The tip's CLAIM (germination drops above ~80°F; midsummer sowings fail) is well supported, but by sources it does not cite: USU leafy-greens (already in the lettuce record under succession_policy), NMSU CR-457, CTAHR res-164, UC MG Sacramento. Re-point the tip's sources; do not keep the five current attributions for the heat clause. Clemson's 60-80°F optimum and 95°F raw-seed ceiling is an outlier on the high side."
+ },
+ "arugula": {
+  "evidence": [
+   {
+    "mech": "G",
+    "url": "https://gardening.cals.cornell.edu/garden-guidance/foodgarden/vegetable-growing-guides/arugula/",
+    "source_name": "Cornell Garden-Based Learning",
+    "tier": "T1",
+    "section": "Growing information",
+    "quote": "Germination temperature: 40 F to 55 F",
+    "temp_f": [
+     40,
+     55
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://gardening.cals.cornell.edu/garden-guidance/foodgarden/vegetable-growing-guides/arugula/",
+    "source_name": "Cornell Garden-Based Learning",
+    "tier": "T1",
+    "section": null,
+    "quote": "Seeds germinate quickly even in cold soil.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://www.sare.org/publications/northeast-crop-production-harvest-manual/arugula/",
+    "source_name": "USDA SARE, Northeast Crop Production & Harvest Manual: Arugula",
+    "tier": "T1",
+    "section": null,
+    "quote": "Arugula won’t germinate below a soil temperature of 40°. Optimum germination is 75°.",
+    "temp_f": 75,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "TOL",
+    "url": "https://www.sare.org/publications/northeast-crop-production-harvest-manual/arugula/",
+    "source_name": "USDA SARE, Northeast Crop Production & Harvest Manual: Arugula",
+    "tier": "T1",
+    "section": "Soil temperature and days to germinate (table)",
+    "quote": "Soil temperature 40 ° 50° 60° 70° 75° Days to germinate 23 5 3 2 1",
+    "temp_f": 75,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "TOL",
+    "url": "https://www.redalyc.org/pdf/995/99515218004.pdf",
+    "source_name": "Steiner et al. 2010, Scientia Agraria 11(2):119-124 (peer-reviewed)",
+    "tier": "T1",
+    "section": "Abstract",
+    "quote": "The cultivars of the specie Eruca sativa (‘Cultivated’, ‘Cultivated – Giant Wide Leaf’ and ‘Apreciatta – Wide Leaf’) possess satisfactory germination (more than 94%) at temperatures ranging from 10 to 35 ºC.",
+    "temp_f": [
+     50,
+     95
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://www.sare.org/publications/northeast-crop-production-harvest-manual/arugula/",
+    "source_name": "USDA SARE, Northeast Crop Production & Harvest Manual: Arugula",
+    "tier": "T1",
+    "section": null,
+    "quote": "Arugula bolts due to longer days and high temperatures. Therefore, avoid late spring plantings that will mature in summer.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "S",
+    "url": "https://www.sare.org/publications/northeast-crop-production-harvest-manual/arugula/",
+    "source_name": "USDA SARE, Northeast Crop Production & Harvest Manual: Arugula",
+    "tier": "T1",
+    "section": null,
+    "quote": "Resume with weekly plantings when nights have cooled off, which is in August through September in the northern United States.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://hgic.clemson.edu/factsheet/arugula-kale-mesclun-mustard-and-swiss-chard/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": "Arugula section",
+    "quote": "Warm temperatures cause plants to bolt (produce a flowering stem) and decline.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://hort.extension.wisc.edu/articles/arugula/",
+    "source_name": "University of Wisconsin Extension (Hort)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Plants grow a rosette of dull green leaves 3-8 inches long and under the appropriate conditions (long days, high temperatures, and/or dry soil) quickly produce a single, branched flower stem 2-3 feet tall.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://www.sare.org/publications/northeast-crop-production-harvest-manual/arugula/",
+    "source_name": "USDA SARE, Northeast Crop Production & Harvest Manual: Arugula",
+    "tier": "T1",
+    "section": null,
+    "quote": "Optimum growing conditions are 65°–75°.",
+    "temp_f": [
+     65,
+     75
+    ],
+    "in_dataset_cache": false
+   }
+  ],
+  "hold_supported": "weak",
+  "hold_basis": "M only (bolting under high temperatures and long days: SARE, Clemson, UWisc), with NO temperature number. The germination basis is NOT supported and is contradicted: SARE gives optimum germination at 75°F (1 day to emerge), and a peer-reviewed study found >94% germination of three Eruca sativa cultivars from 10 to 35°C (50-95°F).",
+  "proposed_pause_in_heat": null,
+  "proposed_threshold_f": null,
+  "threshold_quote_ref": null,
+  "threshold_note": "No source gives a bolting temperature for arugula. The nearest number is SARE 'Optimum growing conditions are 65°–75°' [9], an optimum range, not a stress threshold. Current 75 could be read off that upper bound only by inference, which the brief forbids. Trevor to rule: hold on M with no number (85 fallback) or no hold.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.bolting (NOT germination)",
+   "draft_seasoned": "Arugula bolts in response to long days and high temperatures, so avoid late spring sowings that would mature in summer, and resume sowing once nights cool off in late summer.",
+   "draft_beginner": "Hot weather and long days make arugula flower and turn tough fast. Skip sowings that would grow up in summer, and start again once the nights cool down in late summer.",
+   "evidence_refs": [
+    5,
+    6,
+    7
+   ]
+  },
+  "gaps": [
+   "Existing tip tip_aru_germ1 'germination drops off sharply above about 80°F, which is why midsummer sowings fail': NOT supported by its cited sources (Cornell gives a 40-55°F germination temperature and says seed germinates quickly in cold soil; UWisc has no germination temperature) and CONTRADICTED by SARE (optimum 75°F) and Steiner et al. 2010 (>94% at 35°C/95°F).",
+   "start_method.notes_seasoned repeats 'warm soil above about 80°F cuts germination' and notes_beginner 'heat keeps the seeds from sprouting well': same unsupported claim.",
+   "No T1 bolting temperature found for arugula.",
+   "A 2022 hydrothermal-time study (Life 12:400, PMC8955359) reportedly puts the germination optimum/ceiling at 30°C; the PMC page returned a browser check and MDPI returned 403, so it was not quoted."
+  ],
+  "notes": "Recommend retiring the germination-heat clause from tip_aru_germ1 and the start_method notes. Clemson's group intro (not the arugula section, so not counted) even says direct seeding works well in late summer 'when the soil is much warmer'. Cornell's 40-55°F germination temperature also conflicts with the dataset's germination_temp_f [40,75]; SARE supports 75 as optimum."
+ },
+ "cilantro-coriander": {
+  "evidence": [
+   {
+    "mech": "G",
+    "url": "https://extension.oregonstate.edu/news/how-grow-cilantro-leaves-or-coriander-seeds",
+    "source_name": "Oregon State University Extension",
+    "tier": "T1",
+    "section": "Planting directions",
+    "quote": "Seeds germinate at soil temperatures of 55–68° F, and mature plants tolerate light freezing.",
+    "temp_f": [
+     55,
+     68
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://db.koreascholar.com/Article/Detail/450931",
+    "source_name": "Yang et al., Journal of Bio-Environment Control (Korea), peer-reviewed",
+    "tier": "T1",
+    "section": "Abstract",
+    "quote": "At 25°C, the GR was 75% in darkness and 43% under light, whereas at 30°C was the lowest with 7 and 1%, respectively.",
+    "temp_f": [
+     77,
+     86
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://scielo.br/j/hb/a/q9RfrWvyVGRx3q4V3PbbqXp/abstract/?lang=en",
+    "source_name": "Pereira, Muniz & Nascimento 2005, Horticultura Brasileira 23(3) (peer-reviewed)",
+    "tier": "T1",
+    "section": "Abstract",
+    "quote": "Temperatures between 15 and 25ºC were favorable to germination whereas higher temperatures reduced the germination.",
+    "temp_f": [
+     59,
+     77
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://scielo.br/j/hb/a/q9RfrWvyVGRx3q4V3PbbqXp/abstract/?lang=en",
+    "source_name": "Pereira, Muniz & Nascimento 2005, Horticultura Brasileira 23(3) (peer-reviewed)",
+    "tier": "T1",
+    "section": "Abstract",
+    "quote": "At 35ºC no germination was observed in all tested cultivars, possibly due to thermoinhibition, since the seeds germinated when transferred to 20ºC.",
+    "temp_f": 95,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": "FAQ: What can I do to keep my cilantro/coriander from bolting?",
+    "quote": "Try to keep the soil temperature below 75°F, especially if grown near a heat source or a particular window that becomes quite warm",
+    "temp_f": 75,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.oregonstate.edu/news/how-grow-cilantro-leaves-or-coriander-seeds",
+    "source_name": "Oregon State University Extension",
+    "tier": "T1",
+    "section": "Plant timing matters",
+    "quote": "Avoid planting during peak summer heat, when plants are likely to bolt before producing many leaves.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "S",
+    "url": "https://hort.extension.wisc.edu/articles/cilantro-coriander-coriandrum-sativum/",
+    "source_name": "University of Wisconsin Extension (Hort)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Summer plantings are not recommended because the plants generally just bolt before producing much.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://hgic.clemson.edu/factsheet/herbs/",
+    "source_name": "Clemson HGIC (Herbs)",
+    "tier": "T1",
+    "section": "Cilantro (Coriandrum sativum)",
+    "quote": "The onset of summer heat causes it to bolt quickly and go to seed.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://hort.extension.wisc.edu/articles/cilantro-coriander-coriandrum-sativum/",
+    "source_name": "University of Wisconsin Extension (Hort)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Cilantro is a cool season crop that tends to bolt (go to seed) in hot weather but will not survive a hard freeze.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://www.johnnyseeds.com/on/demandware.static/-/Library-Sites-JSSSharedLibrary/default/dwd4559419/assets/information/8306-cilantro-production.pdf",
+    "source_name": "Johnny's Selected Seeds, Cilantro Production",
+    "tier": "T2",
+    "section": null,
+    "quote": "Temperature is important for good germination; a temperature of 65–70°F (18–21°C)",
+    "temp_f": [
+     65,
+     70
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": "FAQ: What can I do to keep my cilantro/coriander from bolting?",
+    "quote": "Mulch the soil to keep it cool and make sure the plant is well watered.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "yes",
+  "hold_basis": "S+M (T1 extension: OSU 'avoid planting during peak summer heat', UWisc 'summer plantings are not recommended'), with G from peer-reviewed lab work (germination falls at 25°C/77°F and collapses at 30°C/86°F; none at 35°C/95°F). The extension sources frame the sowing hold as a bolting problem, not a germination one.",
+  "proposed_pause_in_heat": true,
+  "proposed_threshold_f": 75,
+  "threshold_quote_ref": 4,
+  "threshold_note": "USU: 'keep the soil temperature below 75°F' (in the anti-bolting FAQ) -> 75, matching the current value. Caveat: it is a SOIL temperature and a bolting measure, not an air high. The peer-reviewed lab numbers (constant temperatures, petri dish) point to 77-86°F as the germination fall-off; they are not field soil and not air.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.germination (correct tip_cil_germ1 heat clause)",
+   "draft_seasoned": "Cilantro seed germinates at soil temperatures of about 55 to 68°F. Avoid sowing in peak summer heat, when plants are likely to bolt before producing many leaves; to slow bolting, keep the soil below 75°F.",
+   "draft_beginner": "Cilantro seeds sprout best in cool soil. Do not sow in the peak of summer heat, because the plants will flower before giving you many leaves. Mulch and water to keep the soil cool.",
+   "evidence_refs": [
+    0,
+    4,
+    5,
+    10
+   ]
+  },
+  "gaps": [
+   "Existing tip tip_cil_germ1 'warm soil above about 75°F slows germination': USU's 75°F is stated for BOLTING, not germination; the cached TAMU 'Easy Gardening: Cilantro' page is a landing stub with no growing content, so it supports nothing. No extension source found that says warm soil SLOWS cilantro germination; peer-reviewed work says germination is REDUCED (fewer seeds), not slowed.",
+   "No extension source gives a germination upper limit for cilantro."
+  ],
+  "notes": "Trevor to rule whether peer-reviewed lab germination data (non-US, constant temperatures) may anchor a consumer tip; the drafted tip uses only OSU and USU."
+ },
+ "dill": {
+  "evidence": [
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/dill-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Temperature stress (high heat) and overcrowding promote bolting; thinning seedlings and succession planting helps.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://hgic.clemson.edu/factsheet/herbs/",
+    "source_name": "Clemson HGIC (Herbs)",
+    "tier": "T1",
+    "section": "Dill (Anethum graveolens)",
+    "quote": "At the onset of hot weather, this cool-weather annual will go to seed.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://hort.extension.wisc.edu/articles/dill-anethum-graveolens/",
+    "source_name": "University of Wisconsin Extension (Hort)",
+    "tier": "T1",
+    "section": null,
+    "quote": "When the weather gets hot or dry, one long flower stalk will be produced.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://hort.extension.wisc.edu/articles/dill-anethum-graveolens/",
+    "source_name": "University of Wisconsin Extension (Hort)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Successive plantings can be made every 10 days or so while the weather is cool for a continuous supply of leaves.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/dill-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Dill grows best in full sun and oil content in the leaves increases with longer day lengths and higher temperatures; however, hot temperatures (+95° F) decrease seed production.",
+    "temp_f": 95,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.usu.edu/yardandgarden/research/dill-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Germination in 7–21 days; harvest generally 6–8 weeks after sowing.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "weak",
+  "hold_basis": "M+S without a number: high heat promotes bolting (USU, Clemson, UWisc) and UWisc says to make successive plantings 'while the weather is cool'. No germination-heat source exists for dill.",
+  "proposed_pause_in_heat": null,
+  "proposed_threshold_f": null,
+  "threshold_quote_ref": null,
+  "threshold_note": "No source gives a leaf-bolting temperature. The only dill number is USU '+95° F decrease seed production' [4], which concerns the SEED crop, and the same sentence says leaf oil content rises with higher temperatures (TOL for flavor). Current 78 has no quote.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.bolting or succession_policy.tip (not germination)",
+   "draft_seasoned": "High heat promotes bolting in dill, and the plants send up a flower stalk once weather turns hot or dry. Make successive sowings every 10 days or so while the weather is cool.",
+   "draft_beginner": "Hot, dry weather makes dill flower and go to seed. Sow a little more every 10 days or so while the weather is still cool.",
+   "evidence_refs": [
+    0,
+    2,
+    3
+   ]
+  },
+  "gaps": [
+   "No T1 source for a dill germination upper temperature or for poor germination in warm soil (searched cached USU/UWisc/Clemson and web; only seed-company ranges like 60-70°F found, not recorded).",
+   "No numeric bolting threshold for dill leaf crops.",
+   "germination_temp_f [60,70] matches the tip text but no T1 quote found for that range in the cached docs."
+  ],
+  "notes": "Trevor to rule: hold on M with fallback 85 and a sourced, non-numeric reason, or no hold. A dill tip must not claim a germination heat effect."
+ },
+ "celery": {
+  "evidence": [
+   {
+    "mech": "M",
+    "url": "https://aggiehorticulture.tamu.edu/vegetable/wp-content/uploads/sites/10/2011/10/celery2.pdf",
+    "source_name": "Texas A&M AgriLife Extension (J. Masabni), celery crop sheet",
+    "tier": "T1",
+    "section": "Optimum Growing Conditions",
+    "quote": "Average high temperature above 75°F in month preceding harvest limits vegetative growth and quality.",
+    "temp_f": 75,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://aggiehorticulture.tamu.edu/vegetable/wp-content/uploads/sites/10/2011/10/celery2.pdf",
+    "source_name": "Texas A&M AgriLife Extension (J. Masabni), celery crop sheet",
+    "tier": "T1",
+    "section": "Optimum Growing Conditions",
+    "quote": "Celery has exacting climatic requirements, doing best when monthly mean temperature is 60-70°F.",
+    "temp_f": [
+     60,
+     70
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+    "source_name": "Utah State University Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Celery harvested in hot, dry weather may be tough, stringy, and bitter.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "E",
+    "url": "https://aggiehorticulture.tamu.edu/vegetable/wp-content/uploads/sites/10/2011/10/celery2.pdf",
+    "source_name": "Texas A&M AgriLife Extension (J. Masabni), celery crop sheet",
+    "tier": "T1",
+    "section": "Establishment Methods",
+    "quote": "Transplanting primary method as difficult to obtain uniform stands",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/celery",
+    "source_name": "UMass Extension Vegetable Program",
+    "tier": "T1",
+    "section": null,
+    "quote": "Although this crop will withstand light frosts, bolting (premature seeding) will occur if temperatures below 40°F persist over a period of 10 to 14 days.",
+    "temp_f": 40,
+    "in_dataset_cache": false
+   }
+  ],
+  "hold_supported": "no",
+  "hold_basis": "Celery is transplant-started (sown indoors ~10 weeks before set-out, germinated at ~70°F), so a forecast outdoor high has no bearing on the SOWING; there is no germination-heat basis for an outdoor hold. Its sourced heat effect is M at HARVEST (TAMU: average high >75°F in the month before harvest), which is months after a sowing and far outside a 10-day forecast. Its bolting risk is from COLD, not heat (UMass, USU).",
+  "proposed_pause_in_heat": false,
+  "proposed_threshold_f": 75,
+  "threshold_quote_ref": 0,
+  "threshold_note": "TAMU: 'Average high temperature above 75°F in month preceding harvest limits vegetative growth and quality' -> 75, matching the current value and the contract's mature-plant meaning. It is a monthly-average high, not a single-day or 10-day forecast high, so it justifies heat_stress_trigger and harvest timing, not a sowing pause.",
+  "reason_tip_candidate": null,
+  "gaps": [
+   "No T1 source on transplant establishment in heat (E) found; searched UMass, TAMU, USU, UC MG Santa Clara and web.",
+   "MSU 'How to grow celery' (cited in the record) returns an Incapsula block to both user agents and is bad in cache; not re-verified.",
+   "aggie-hort.tamu.edu/archives/parsons/vegetables/celery.html (cited) is not in cache and was not fetched."
+  ],
+  "notes": "If the app's held message is about the next transplant date rather than the next indoor sowing, that is a different feature; no source found that supports holding a celery transplant for a hot 10-day forecast. The existing heat_stress_trigger body ('Sustained heat above about 75°F coarsens stalks, turns them bitter, and combined with drought can trigger bolting') : the 75°F/quality part is supported by TAMU+USU; 'combined with drought can trigger bolting' was not found in any source checked."
+ }
+}

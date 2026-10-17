@@ -1,0 +1,689 @@
+{
+ "calendula": {
+  "evidence": [
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+    "source_name": "USU Extension",
+    "tier": "T1",
+    "section": "Planting and Spacing",
+    "quote": "Calendula prefers cooler temperatures (< 85°F) and often stops blooming in extreme heat.",
+    "temp_f": 85,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "TOL",
+    "url": "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+    "source_name": "USU Extension",
+    "tier": "T1",
+    "section": "Cultivars (variety-level only)",
+    "quote": "‘Coronet’ and ‘Pacific Beauty’ exhibit increased heat tolerance.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://hort.extension.wisc.edu/articles/calendula-calendula-officinalis/",
+    "source_name": "UW-Madison Extension (Wisconsin Horticulture)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Plants may languish in prolonged hot summer weather but typically recover when cooler weather returns.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://plants.ces.ncsu.edu/plants/calendula-officinalis/",
+    "source_name": "NC State Extension Gardener Plant Toolbox",
+    "tier": "T1",
+    "section": "Calendula officinalis page (pot marigold)",
+    "quote": "Marigolds do not do well in hot summer weather or times of drought, but can be cut back to rejuvenate in the fall.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://ask.ifas.ufl.edu/publication/FP087",
+    "source_name": "UF/IFAS Extension (EDIS FP087)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Pot marigold is generally not a warm-season plant but may be cut back in the spring to encourage fall regrowth.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://hort.extension.wisc.edu/articles/calendula-calendula-officinalis/",
+    "source_name": "UW-Madison Extension (Wisconsin Horticulture)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Sow the seeds ¼ to ½ inches deep; light will inhibit germination.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+    "source_name": "USU Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Plant seeds ¼ inch deep when soil temperatures reach 60°F.",
+    "temp_f": 60,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://scisoc.confex.com/crops/2013am/webprogram/Paper79429.html",
+    "source_name": "Eberle et al., ASA/CSSA/SSSA 2013 meeting abstract (USDA-ARS / UMN)",
+    "tier": "T1",
+    "section": "Abstract 237-6",
+    "quote": "Above 30°C calendula germination was 0%.",
+    "temp_f": 86,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "S",
+    "url": "https://scisoc.confex.com/crops/2013am/webprogram/Paper79429.html",
+    "source_name": "Eberle et al., ASA/CSSA/SSSA 2013 meeting abstract (USDA-ARS / UMN)",
+    "tier": "T1",
+    "section": "Abstract 237-6",
+    "quote": "Based on these data calendula seed should only be sown in the field if environmental temperature conditions are predicted to be below 30°C during seed germination.",
+    "temp_f": 86,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "E",
+    "url": "https://experts.umn.edu/en/publications/seed-germination-of-calendula-in-response-to-temperature/",
+    "source_name": "Eberle et al. 2014, Industrial Crops and Products 52:199-204 (peer-reviewed; abstract on Experts@Minnesota)",
+    "tier": "T1",
+    "section": "Abstract",
+    "quote": "Calendula is adapted to temperate climate, but field studies in western Minnesota indicated that stand establishment was susceptible to high soil temperatures immediately after planting in spring.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://hortscans.ces.ncsu.edu/uploads/c/a/calendul_53a04b0fb2907.pdf",
+    "source_name": "NC State Extension (Maisano, commercial cut-flower note)",
+    "tier": "T1",
+    "section": "CALENDULA",
+    "quote": "Seeds germinate best at 70°F in continuous darkness and should emerge in about ten days.",
+    "temp_f": 70,
+    "in_dataset_cache": false
+   }
+  ],
+  "hold_supported": "yes",
+  "hold_basis": "G+M: seed fails to germinate above 30°C/86°F and the peer-reviewed authors explicitly say to sow only when forecast conditions stay below 30°C (G/S); mature plants prefer < 85°F and often stop blooming in extreme heat (M).",
+  "proposed_pause_in_heat": true,
+  "proposed_threshold_f": 85,
+  "threshold_quote_ref": 0,
+  "threshold_note": "USU: 'prefers cooler temperatures (< 85°F) and often stops blooming in extreme heat' -> 85, matching the current value and the contract's mature-plant definition. Independent G corroboration: Eberle et al. 0% germination above 30°C (86°F) and 'sow only if ... predicted to be below 30°C'. Tension: Eberle's 30°C is soil/environment temperature during germination, while the app compares the forecast air HIGH; the two numbers (85 vs 86) agree closely anyway. Note the USU sentence's '< 85°F' is lost in tools/.doc_cache (the cache's tag stripper ate the literal '<'), so the cached copy reads 'prefers cooler temperatures (' ; the bytes are in fetched/ from a fresh fetch.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.germination",
+   "draft_seasoned": "Hold calendula sowings when highs are running above about 85°F: the seed does not germinate above about 86°F (30°C), and researchers advise sowing only when conditions are forecast to stay below that. Mature plants also prefer temperatures under 85°F and often stop blooming in extreme heat.",
+   "draft_beginner": "Wait for cooler weather to sow calendula. Its seeds will not sprout when it is hotter than about 86°F, and the plants often stop flowering in strong heat.",
+   "evidence_refs": [
+    0,
+    7,
+    8
+   ]
+  },
+  "gaps": [
+   "No extension page gives a germination upper limit in °F; the 86°F (30°C) figure is from the Eberle et al. peer-reviewed work and its meeting abstract.",
+   "The full Industrial Crops and Products paper was not fetched; quotes come from the Experts@Minnesota abstract and the ASA meeting abstract (the Experts@Minnesota abstract renders decimals as '30. °C', so the cleaner confex abstract is used for the threshold quotes)."
+  ],
+  "notes": "Coherent as held. Existing tip cal_germ_coolsoil says 'Calendula germinates poorly in hot soil' citing usu_ext + ufifas_ext; neither of those pages states that. Eberle et al. does, so a repoint (or add) of that tip's source to Eberle is suggested. USU and Wisconsin both note heat-tolerant cultivars / recovery when cool, which is a reason the hold is a pause, not an end of season."
+ },
+ "viola": {
+  "evidence": [
+   {
+    "mech": "G",
+    "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/pansies/",
+    "source_name": "UF/IFAS Gardening Solutions",
+    "tier": "T1",
+    "section": "Pansies (Viola x wittrockiana)",
+    "quote": "If planting by seed, keep in mind that they only germinate at temperatures between 65˚ and 75˚Fahrenheit.",
+    "temp_f": [
+     65,
+     75
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://edis.ifas.ufl.edu/publication/FP609",
+    "source_name": "UF/IFAS EDIS FP609 (Viola x wittrockiana)",
+    "tier": "T1",
+    "section": "Propagation",
+    "quote": "The seed germinates in 10 to 14 days at temperatures between 65 and 75°F.",
+    "temp_f": [
+     65,
+     75
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://edis.ifas.ufl.edu/publication/FP609",
+    "source_name": "UF/IFAS EDIS FP609 (Viola x wittrockiana)",
+    "tier": "T1",
+    "section": "Propagation",
+    "quote": "Cover the seed to exclude light.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://sanweb.lib.msu.edu/DMC/extension_publications/e2239/E2239-1990.PDF",
+    "source_name": "MSU Extension Bulletin E-2239 (1990, archived; 'do not use for current recommendations')",
+    "tier": "T1",
+    "section": "Germination conditions (commercial)",
+    "quote": "Seeds can be hard to germinate at temperatures over 75 to 80 degrees F.",
+    "temp_f": [
+     75,
+     80
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://hortscans.ces.ncsu.edu/uploads/p/a/pansy_pr_51e448e796b25.pdf",
+    "source_name": "NC State Extension, commercial pansy production (hortscans PDF)",
+    "tier": "T1",
+    "section": "Seedling and plug production",
+    "quote": "High temperatures (90° F) for longer than the first day reduce the percentage of germination from 90 to 55 percent.",
+    "temp_f": 90,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://hgic.clemson.edu/factsheet/pansies-and-johnny-jump-ups/",
+    "source_name": "Clemson HGIC 1155",
+    "tier": "T1",
+    "section": "Pansies and Johnny-jump-ups",
+    "quote": "They fade and should be discarded with the start of hot summer weather.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://hgic.clemson.edu/factsheet/pansies-and-johnny-jump-ups/",
+    "source_name": "Clemson HGIC 1155",
+    "tier": "T1",
+    "section": "Planting",
+    "quote": "The pansies can be transplanted into the garden once the summer heat has been broken and cooler weather arrives.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/files/Pansies.pdf",
+    "source_name": "USU Extension, Growing Pansies (PDF)",
+    "tier": "T1",
+    "section": null,
+    "quote": "The ideal temperature range for growing pansies is from about 40° F at night to 60° F during the day.",
+    "temp_f": [
+     40,
+     60
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/files/Pansies.pdf",
+    "source_name": "USU Extension, Growing Pansies (PDF)",
+    "tier": "T1",
+    "section": null,
+    "quote": "They produce their best flowers in the spring when the weather is mild, then fade and are usually discarded when really hot weather arrives.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "E",
+    "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/pansies/",
+    "source_name": "UF/IFAS Gardening Solutions",
+    "tier": "T1",
+    "section": null,
+    "quote": "If pansies are planted too early in the year while it’s still hot, they can exhibit yellowing foliage or elongated stems, which makes them more susceptible to diseases and insect pests.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/pansies/",
+    "source_name": "UF/IFAS Gardening Solutions",
+    "tier": "T1",
+    "section": null,
+    "quote": "Pansies thrive in air temperatures below 65˚ Fahrenheit at night.",
+    "temp_f": 65,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://plants.ces.ncsu.edu/plants/viola-x-wittrockiana/",
+    "source_name": "NC State Extension Gardener Plant Toolbox",
+    "tier": "T1",
+    "section": null,
+    "quote": "Pansy will eventually succumb to summer heat and should then be removed from the garden.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://ipm.ucanr.edu/home-and-landscape/pansy-violet/",
+    "source_name": "UC IPM",
+    "tier": "T1",
+    "section": null,
+    "quote": "Plants often need to be removed during the summer in very hot areas as they get ragged.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "yes",
+  "hold_basis": "G+E+M: seed germinates only between 65 and 75°F (UF, two pages) and is hard to germinate above 75 to 80°F (MSU); transplants set out while still hot yellow and stretch (UF); plants fade with hot summer weather (Clemson, USU, NCSU, UC IPM).",
+  "proposed_pause_in_heat": true,
+  "proposed_threshold_f": 75,
+  "threshold_quote_ref": 0,
+  "threshold_note": "75 = the top of UF's 'only germinate at temperatures between 65˚ and 75˚Fahrenheit' (also EDIS FP609; MSU E-2239 'hard to germinate at temperatures over 75 to 80 degrees F'). TENSION FOR TREVOR: the contract defines heat_threshold_f as the MATURE-plant number, and 75 is a GERMINATION (medium/soil) number. No T1 source found gives a mature-plant heat number in °F; the mature sources give only a cool ideal (USU 40°F night / 60°F day; UF below 65°F at night) or no number ('hot summer weather'). So 75 is sourced only as a germination ceiling, compared against forecast air highs. Also scope: every source is about garden pansy (Viola x wittrockiana; Clemson also covers Johnny-jump-ups); none is specific to V. cornuta.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.germination",
+   "draft_seasoned": "Hold viola sowings while highs run above about 75°F: pansy seed germinates only between 65 and 75°F, and is hard to germinate above 75 to 80°F. Cover the seed to exclude light. Plants set out while it is still hot can yellow and stretch, so wait until summer heat breaks.",
+   "draft_beginner": "Wait for cooler weather to sow violas. The seeds only sprout between about 65 and 75°F, and young plants set out in the heat turn yellow and leggy. Cover the seeds so they stay dark.",
+   "evidence_refs": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    9
+   ]
+  },
+  "gaps": [
+   "No T1 source gives a mature-plant heat-decline temperature in °F for any Viola; the 'fade above roughly 75°F' wording in the description/weather_trigger is not stated by UF's page (it gives 65-75°F for GERMINATION and <65°F nights for growth).",
+   "No T1 source specific to Viola cornuta or V. tricolor germination temperatures."
+  ],
+  "notes": "RE-VERIFY of the existing tip vio_germ_cool_dark: its ONLY source, Clemson HGIC pansies-and-johnny-jump-ups, does NOT contain any germination temperature, does not mention light or darkness for germination, and does not say warm soil inhibits germination (checked both the dataset cache 41afb0f5... and a fresh fetch). Clemson supports only the timing half: 'Sow seed indoors in late summer, six to eight weeks before transplanting.' The 65-75°F range and the cover-to-exclude-light instruction are supported by UF/IFAS EDIS FP609 and UF Gardening Solutions pansies (the latter is already cited elsewhere in this crop as uf_ifas). The tip's claim that light 'inhibits' germination is stronger than any source: EDIS says 'Cover the seed to exclude light', MSU E-2239 lists 'Continuous darkness' as a germination condition, and the NCSU commercial pansy PDF reports trials where uncovered seed germinated as well or better than covered seed. Suggest: repoint the tip to EDIS FP609 + UF Gardening Solutions and soften 'warm soil and light both inhibit' to what the quotes say. MSU E-2239 is archived and self-labeled not for current recommendations; the NCSU and MSU PDFs are two-column, so fetched/ text has a script-split DECOLUMNED copy appended (same bytes) so the quotes can be grepped."
+ },
+ "sweet-alyssum": {
+  "evidence": [
+   {
+    "mech": "M",
+    "url": "https://hgic.clemson.edu/sweet-alyssum/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": null,
+    "quote": "As summer temperatures rise, alyssum grown from seed may stop producing flowers.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://hgic.clemson.edu/sweet-alyssum/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": "variety-level only",
+    "quote": "Many sterile hybrids are available that have improved heat resistance and will last through the summer.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://hgic.clemson.edu/sweet-alyssum/",
+    "source_name": "Clemson HGIC",
+    "tier": "T1",
+    "section": null,
+    "quote": "Seeds can also be sown in September for fall into winter flowers.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://hort.extension.wisc.edu/articles/sweet-alyssum-lobularia-maritima/",
+    "source_name": "UW-Madison Extension (Wisconsin Horticulture)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Like many brassicas, growth and flowering slows in hot weather ; the plants will look ragged in the heat of summer but will revive with cooler temperatures and last well into the fall.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://plants.ces.ncsu.edu/plants/lobularia-maritima/",
+    "source_name": "NC State Extension Gardener Plant Toolbox",
+    "tier": "T1",
+    "section": null,
+    "quote": "The mat-forming plant produces spreading mounds of fragrant white flowers from spring to first frost where the summers are cool (blooms will decline in hot summers).",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://plants.ces.ncsu.edu/plants/lobularia-maritima/",
+    "source_name": "NC State Extension Gardener Plant Toolbox",
+    "tier": "T1",
+    "section": null,
+    "quote": "May stop blooming in the heat of summer, but can be rejuvenated.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sweet-alyssum/",
+    "source_name": "UF/IFAS Gardening Solutions",
+    "tier": "T1",
+    "section": "refers to the vegetatively propagated Easy Breezy hybrid series, not seed-grown alyssum",
+    "quote": "It’s compact and so heat tolerant that it will continue well after spring.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://butterflywebsite.com/articles/msu/01700580.html",
+    "source_name": "MSU Extension horticulture sheet (unofficial mirror on butterflywebsite.com)",
+    "tier": "T2",
+    "section": null,
+    "quote": "The seed germinates in 8 to 15 days at temperatures between 65 to 75 degrees.",
+    "temp_f": [
+     65,
+     75
+    ],
+    "in_dataset_cache": false
+   }
+  ],
+  "hold_supported": "yes",
+  "hold_basis": "M: seed-grown plants slow, look ragged and may stop flowering as summer temperatures rise (Clemson, Wisconsin, NCSU); no T1 germination ceiling found.",
+  "proposed_pause_in_heat": true,
+  "proposed_threshold_f": null,
+  "threshold_quote_ref": null,
+  "threshold_note": "No T1 source gives a temperature for the bloom stall; every T1 quote is qualitative ('summer temperatures rise', 'hot weather', 'hot summers'). With threshold null the app falls back to 85°F, which is NOT sourced for this crop. The only number found is a 65 to 75°F germination range on an unofficial mirror of an MSU sheet (T2), which describes a germination temperature, not an upper limit.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.flowering",
+   "draft_seasoned": "Hold sweet alyssum sowings through hot spells: as summer temperatures rise, seed-grown alyssum slows, looks ragged and may stop flowering, then revives as it cools. Sow again in late summer or September for fall bloom, or grow a sterile heat-resistant hybrid.",
+   "draft_beginner": "Sweet alyssum grown from seed slows down and may stop flowering in summer heat. Wait for cooler weather to sow more, or plant a heat-tolerant type.",
+   "evidence_refs": [
+    0,
+    1,
+    2,
+    3
+   ]
+  },
+  "gaps": [
+   "No T1 germination temperature or germination upper limit for Lobularia maritima found (searched Clemson, Wisconsin, NCSU, UF, MSU, Penn State 'Sowing annual seeds' which gives spacing only).",
+   "No T1 temperature for the summer bloom stall."
+  ],
+  "notes": "INCOHERENCE CONFIRMED: heat_effect 'heat_tolerant' contradicts every T1 page; only sterile/vegetative hybrids (Snow Princess, Easy Breezy, Princess Group) are called heat tolerant, which is variety-level. Suggest heat_effect -> a bloom/quality-loss value with pause_in_heat true; the threshold stays a gap (fallback 85 is unsourced) unless Trevor accepts a qualitative hold."
+ },
+ "nasturtium": {
+  "evidence": [
+   {
+    "mech": "M",
+    "url": "https://blogs.ifas.ufl.edu/charlotteco/2024/12/20/nasturtiums-make-me-smile/",
+    "source_name": "UF/IFAS Extension Charlotte County blog",
+    "tier": "T1",
+    "section": null,
+    "quote": "Nasturtiums do best in the cooler part of the year and will tend to decline when the temperatures get too hot.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://plants.ces.ncsu.edu/plants/tropaeolum/",
+    "source_name": "NC State Extension Gardener Plant Toolbox (Tropaeolum genus page)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Areas where the summer temperatures are somewhat cooler will allow this plant to perform at its best.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://plants.ces.ncsu.edu/plants/tropaeolum-majus/",
+    "source_name": "NC State Extension Gardener Plant Toolbox",
+    "tier": "T1",
+    "section": null,
+    "quote": "It grows best in poor to average, well-drained soil in full sun, but with some afternoon shade in hot summers.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.illinois.edu/herbs/nasturtium",
+    "source_name": "Illinois Extension (Herb Gardening)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Heat stressed plants often produce leaves and flowers that may be more pungent than most people prefer.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.illinois.edu/herbs/nasturtium",
+    "source_name": "Illinois Extension (Herb Gardening)",
+    "tier": "T1",
+    "section": null,
+    "quote": "If plants show signs of decline or become leggy during the summer, cut them back lightly and they will produce new growth for the remainder of the season.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umd.edu/resource/nasturtium",
+    "source_name": "University of Maryland Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "They grow best in early summer and fall and should be kept watered during the hottest, driest part of the summer.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://plants.ces.ncsu.edu/plants/tropaeolum-majus/",
+    "source_name": "NC State Extension Gardener Plant Toolbox",
+    "tier": "T1",
+    "section": null,
+    "quote": "Common nasturtium is a warm-weather annual with long stems, parasol-like leaves, and spurred 5-petaled flowers.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://hort.extension.wisc.edu/articles/nasturtium-tropaeolum-majus/",
+    "source_name": "UW-Madison Extension (Wisconsin Horticulture)",
+    "tier": "T1",
+    "section": null,
+    "quote": "The distinctive nasturtium seedlings generally come up with 7-10 days of seeding and grow quickly in warm weather.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.umd.edu/resource/nasturtium",
+    "source_name": "University of Maryland Extension",
+    "tier": "T1",
+    "section": null,
+    "quote": "Sow seeds outdoors after the danger of frost has passed and the soil has had a chance to warm up.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/nasturtiums/",
+    "source_name": "UF/IFAS Gardening Solutions",
+    "tier": "T1",
+    "section": null,
+    "quote": "Plant seeds from spring through fall throughout Florida and year-round in South Florida.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "weak",
+  "hold_basis": "M only, qualitative: plants decline when temperatures get too hot (UF Charlotte, NCSU, Illinois). No G limit: T1 sources call it a warm-weather annual, say seedlings grow quickly in warm weather, and UF says sow spring through fall in Florida.",
+  "proposed_pause_in_heat": null,
+  "proposed_threshold_f": null,
+  "threshold_quote_ref": null,
+  "threshold_note": "No T1 temperature found for either the bloom decline or a germination ceiling. A seed-gardening site (harvesttotable, not T1/T2-grade) claims bloom stops above 85°F; not used. A peer-reviewed SJST 2015 paper (Munir et al., 'Empress of India') reportedly found plant quality decreased at 25 and 30°C with best quality at 15-20°C, but the SJST and DOAJ pages could not be fetched (timeout / Cloudflare 403), so no verbatim quote; AGRIS record has no abstract text.",
+  "reason_tip_candidate": null,
+  "gaps": [
+   "No T1 germination temperature or upper germination limit (extension pages give only 'after frost' / 'soil has had a chance to warm up' / 'depending on soil temperature').",
+   "No T1 numeric heat threshold for flowering decline.",
+   "Munir et al. 2015 SJST (temperature vs. quality) unfetchable: sjst.psu.ac.th timed out twice, doaj.org 403 to both user agents and WebFetch."
+  ],
+  "notes": "T1 evidence is split. Mature-plant decline in heat is real (M), but the germination evidence points the other way (warm soil wanted, 'grow quickly in warm weather', UF sows spring through fall). A sowing hold rests only on 'new plants would grow into heat and decline', with no number, so Trevor must rule between (a) pause_in_heat true with a qualitative reason and the unsourced 85 fallback, or (b) pause_in_heat false. heat_effect 'heat_tolerant' is contradicted by the M quotes either way (UF Charlotte, NCSU); suggest a bloom/quality-loss value."
+ },
+ "borage": {
+  "evidence": [
+   {
+    "mech": "S",
+    "url": "https://extension.illinois.edu/herbs/borage",
+    "source_name": "Illinois Extension (Herb Gardening)",
+    "tier": "T1",
+    "section": null,
+    "quote": "If grown for culinary use, successive sowings of seed at four week intervals will result in a good supply of fresh foliage.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://plants.ces.ncsu.edu/plants/borago-officinalis/",
+    "source_name": "NC State Extension Gardener Plant Toolbox",
+    "tier": "T1",
+    "section": null,
+    "quote": "Cut the plant back by a half in mid-summer for new growth for the fall.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://ucanr.edu/blog/backyard-gardener/article/magical-marvelous-borage",
+    "source_name": "UC ANR Backyard Gardener blog",
+    "tier": "T1",
+    "section": null,
+    "quote": "Borage will bloom for many weeks if the older flowers are trimmed off, and you can often push tattered plants to make a comeback by pruning them back halfway in midsummer.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://seedracks.southernexposure.com/products/borage-herb-native-plant-seed-packet",
+    "source_name": "Southern Exposure Seed Exchange",
+    "tier": "T2",
+    "section": null,
+    "quote": "Plants fade in deep summer heat and humidity, but can be reseeded for late summer/early fall harvest.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://seedracks.southernexposure.com/products/borage-herb-native-plant-seed-packet",
+    "source_name": "Southern Exposure Seed Exchange",
+    "tier": "T2",
+    "section": null,
+    "quote": "Germination: 70°F, light required, 10 days.",
+    "temp_f": 70,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "TOL",
+    "url": "https://bexarmg.org/2023/06/21/borage-aka-starflower-an-annual-herb/",
+    "source_name": "Bexar County (TX) Master Gardeners",
+    "tier": "T2",
+    "section": null,
+    "quote": "Temperature and Humidity Borage is a particularly hardy herb and able to withstand high and low temperatures.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "TOL",
+    "url": "https://bexarmg.org/2023/06/21/borage-aka-starflower-an-annual-herb/",
+    "source_name": "Bexar County (TX) Master Gardeners",
+    "tier": "T2",
+    "section": null,
+    "quote": "While it is tolerant of heat and cold weather, it is unable to withstand a hard frost.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   }
+  ],
+  "hold_supported": "unsourced",
+  "hold_basis": "None at T1. Only a T2 seed catalog says plants fade in deep summer heat and humidity; a T2 master-gardener page says borage withstands high temperatures; Illinois Extension (T1) recommends 4-week successive sowings with no heat caveat.",
+  "proposed_pause_in_heat": false,
+  "proposed_threshold_f": null,
+  "threshold_quote_ref": null,
+  "threshold_note": "No temperature found at any tier for a borage heat limit or germination ceiling. A legacy Illinois State Water Survey alt-crops page (ECOCROP-style, reportedly 'Abs.Max=79°F, Opt.Max=72°F') is now a 404, so it is unverifiable.",
+  "reason_tip_candidate": null,
+  "gaps": [
+   "No T1 source (NCSU, UC ANR x2, UF Nassau, Illinois, UMD, Wisconsin not present) states borage declines, stops flowering, or fails to germinate in heat.",
+   "No T1 germination temperature range."
+  ],
+  "notes": "The pause_in_heat=true value and the succession tip's 'borage declines and mildews in that heat' have no T1 support. RE-VERIFY of existing tip bor_germ_timing ('in hot, humid climates sow in fall... since borage struggles in extreme summer heat', sources ncsu_ext + uf_ifas): NCSU's page has no heat statement (only 'cut back by a half in mid-summer for new growth for the fall'), and the UF Nassau blog body says nothing about heat or timing (only its title question mentions November). Midsummer cut-back advice (NCSU, UC ANR) implies tired plants by midsummer but does not attribute it to heat. Recommend pause_in_heat false (coherent with heat_tolerant), or, if Trevor accepts T2, a qualitative hold citing Southern Exposure only."
+ },
+ "chamomile": {
+  "evidence": [
+   {
+    "mech": "M",
+    "url": "https://agresearch.montana.edu/warc/research_current/research_past/herbsandoils/chamomile.html",
+    "source_name": "Montana State University, Western Agricultural Research Center",
+    "tier": "T1",
+    "section": null,
+    "quote": "German chamomile is relatively easy to grow but prefers cooler climates.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+    "source_name": "UW-Madison Extension (Wisconsin Horticulture)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Under warm conditions, germination generally occurs within a week.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://ucanr.edu/sites/mgscc2016/garden-help/herbs/chamomile",
+    "source_name": "UC Master Gardeners Santa Clara County",
+    "tier": "T1",
+    "section": null,
+    "quote": "How to grow Type: Annual Light: Full sun to partial shade Soil: Slightly alkaline preferred Water: Low water Size: 1 to 2 feet tall, 12 to 14 inches wide When to plant/propagate From seed: Preferred; plant in early spring when soil temperature is above 55 deg.",
+    "temp_f": 55,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://www.scielo.br/j/cr/a/YGkZLccNzMb5vY3M6GRhhKy/abstract/?lang=en",
+    "source_name": "Souza et al. 2007, Ciência Rural 37(4) (peer-reviewed)",
+    "tier": "T1",
+    "section": null,
+    "quote": "The constant temperature of 10°C and 15°C, and alternated in 10°C/15°C and 10°C/20°C provided germination of the seeds superior to 80% in the end of 14th day.",
+    "temp_f": [
+     50,
+     68
+    ],
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://rd.uffs.edu.br/handle/prefix/7716?locale=en",
+    "source_name": "UFFS institutional repository (Brazilian university student work)",
+    "tier": "T2",
+    "section": "Abstract (English); tested 8, 16, 24, 32 and 40°C, 'high' not specified",
+    "quote": "At high temperatures, they did not germinate.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   }
+  ],
+  "hold_supported": "weak",
+  "hold_basis": "Only a general T1 'prefers cooler climates' (MSU). No T1 statement that chamomile declines, stops flowering, or fails to germinate in heat; Wisconsin says germination is fast under warm conditions.",
+  "proposed_pause_in_heat": null,
+  "proposed_threshold_f": null,
+  "threshold_quote_ref": null,
+  "threshold_note": "No usable temperature. Souza et al. tested only cool regimes (10-20°C) and shows good germination there, not an upper limit. The UFFS repository item says seeds did not germinate 'at high temperatures' among 24/32/40°C without saying which, and is student work (T2).",
+  "reason_tip_candidate": null,
+  "gaps": [
+   "No T1 extension source on chamomile heat decline, flowering stop, or humidity/mildew (the existing weather_trigger 'declines in the heat and humidity ... powdery mildew or botrytis' cites msu_bozeman + uwi_hort; neither page contains heat, humidity, mildew or botrytis).",
+   "No T1 germination upper limit.",
+   "Nóbrega et al. (Revista Brasileira de Sementes, light and temperature on Matricaria recutita germination) page at abrates.org.br returned an empty body to both user agents."
+  ],
+  "notes": "pause_in_heat true is not supported at T1 beyond 'prefers cooler climates'. Trevor to rule: false (coherent with heat_tolerant) or keep a qualitative hold. Separately, the hot-humid weather_trigger and the succession tip's 'declines and molds' text appear unsourced by their cited pages (re-verified against cache bytes)."
+ }
+}

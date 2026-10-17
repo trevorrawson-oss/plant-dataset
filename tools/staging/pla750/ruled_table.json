@@ -1,0 +1,602 @@
+{
+ "ruling": "PLA-750 comment 47a09951 (2026-10-17)",
+ "canonical_measured_on": "2f67359e",
+ "rows": [
+  {
+   "slug": "arugula",
+   "verdict": "unsourced",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "Arugula bolts due to longer days and high temperatures. Therefore, avoid late spring plantings that will mature in summer.",
+     "source_name": "USDA SARE, Northeast Crop Production & Harvest Manual: Arugula",
+     "url": "https://www.sare.org/publications/northeast-crop-production-harvest-manual/arugula/",
+     "tier": "T1",
+     "mech": "M"
+    }
+   },
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": "rewrite tip_aru_germ1 (+ start_method notes) to what SARE and Steiner support"
+  },
+  {
+   "slug": "beet",
+   "verdict": "hold",
+   "pause_in_heat": true,
+   "sowing_heat_ceiling": {
+    "temp_f": 80,
+    "measures": "soil",
+    "basis": "germination",
+    "claim": {
+     "quote": "Seeds germinate best at 55-75°F and require 7-14 days to emerge. Temperatures above 80°F reduce seed germination.",
+     "source_name": "Utah State University Extension (peer-reviewed fact sheet, Drost 2020)",
+     "url": "https://extension.usu.edu/yardandgarden/research/beets-in-the-garden",
+     "tier": "T1",
+     "mech": "G"
+    },
+    "temp": "same as claim"
+   },
+   "d2_soil_proxy": true,
+   "flag": "claim sentence does not say 'soil' (plan row P3)",
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "bok-choy",
+   "verdict": "unsourced",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "Warm weather can cause bok choy to flower.",
+     "source_name": "University of Minnesota Extension (Growing Chinese cabbage and bok choy)",
+     "url": "https://extension.umn.edu/vegetables/growing-chinese-cabbage-and-bok-choy",
+     "tier": "T1",
+     "mech": "M"
+    }
+   },
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "borage",
+   "verdict": "change",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "If grown for culinary use, successive sowings of seed at four week intervals will result in a good supply of fresh foliage.",
+     "source_name": "Illinois Extension (Herb Gardening)",
+     "url": "https://extension.illinois.edu/herbs/borage",
+     "tier": "T1",
+     "mech": "S"
+    }
+   },
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": "drop bor_germ_timing's heat clause"
+  },
+  {
+   "slug": "broccoli",
+   "verdict": "change",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "Hot weather (86 degrees Fahrenheit in the day and over 77 degrees Fahrenheit at night) can cause broccoli to grow no crown.",
+     "source_name": "UMN Extension",
+     "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+     "tier": "T1",
+     "mech": "M"
+    }
+   },
+   "d4_stage": "head_forming",
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "brussels-sprouts",
+   "verdict": "change",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "High summer temperatures reduce plant growth, decrease sprout quality, and cause internal tipburn.",
+     "source_name": "Utah State University Extension",
+     "url": "https://extension.usu.edu/yardandgarden/research/brussel-sprouts-in-the-garden",
+     "tier": "T1",
+     "mech": "M"
+    }
+   },
+   "d4_stage": "sprout_formation",
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "cabbage",
+   "verdict": "change",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "Cabbage grows best when temperatures do not exceed 80°F and is not seriously damaged by temperatures down to 25°F.",
+     "source_name": "Utah State University Extension",
+     "url": "https://extension.usu.edu/yardandgarden/research/cabbage-in-the-garden",
+     "tier": "T1",
+     "mech": "M"
+    }
+   },
+   "d4_stage": "head_forming",
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "calendula",
+   "verdict": "hold",
+   "pause_in_heat": true,
+   "sowing_heat_ceiling": {
+    "temp_f": 86,
+    "measures": "air",
+    "basis": "sowing_statement",
+    "claim": {
+     "quote": "Based on these data calendula seed should only be sown in the field if environmental temperature conditions are predicted to be below 30°C during seed germination.",
+     "source_name": "Eberle et al., ASA/CSSA/SSSA 2013 meeting abstract (USDA-ARS / UMN)",
+     "url": "https://scisoc.confex.com/crops/2013am/webprogram/Paper79429.html",
+     "tier": "T1",
+     "mech": "S"
+    },
+    "temp": "same as claim"
+   },
+   "d2_soil_proxy": false,
+   "flag": "30°C = 86°F from the sowing source; the report's 85 is USU's bloom number (plan row P2)",
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": "anchor cal_germ_coolsoil to Eberle 2014 (D6)"
+  },
+  {
+   "slug": "carrot",
+   "verdict": "unsourced",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "The optimum soil temperature for seed germination is 55 to 75 °F. Seeds will not germinate above 95 °F.",
+     "source_name": "Clemson HGIC",
+     "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+     "tier": "T1",
+     "mech": "G"
+    }
+   },
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "cauliflower",
+   "verdict": "change",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "Cauliflower grows best when temperatures do not exceed 75°F. Low (32°F) or high (greater than 80°F) temperatures decrease plant growth, lower yields and decrease head quality.",
+     "source_name": "Utah State University Extension",
+     "url": "https://extension.usu.edu/yardandgarden/research/cauliflower-in-the-garden",
+     "tier": "T1",
+     "mech": "M"
+    }
+   },
+   "d4_stage": "curd_forming",
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "celery",
+   "verdict": "change",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "Average high temperature above 75°F in month preceding harvest limits vegetative growth and quality.",
+     "source_name": "Texas A&M AgriLife Extension (J. Masabni), celery crop sheet",
+     "url": "https://aggiehorticulture.tamu.edu/vegetable/wp-content/uploads/sites/10/2011/10/celery2.pdf",
+     "tier": "T1",
+     "mech": "M"
+    }
+   },
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": "strike the unsupported weather-trigger prose"
+  },
+  {
+   "slug": "chamomile",
+   "verdict": "unsourced",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "Under warm conditions, germination generally occurs within a week.",
+     "source_name": "UW-Madison Extension (Wisconsin Horticulture)",
+     "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+     "tier": "T1",
+     "mech": "TOL"
+    }
+   },
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": "strike the unsupported weather-trigger prose"
+  },
+  {
+   "slug": "cilantro-coriander",
+   "verdict": "hold",
+   "pause_in_heat": true,
+   "sowing_heat_ceiling": {
+    "temp_f": 75,
+    "measures": "soil",
+    "basis": "bolting",
+    "claim": {
+     "quote": "Try to keep the soil temperature below 75°F, especially if grown near a heat source or a particular window that becomes quite warm",
+     "source_name": "Utah State University Extension",
+     "url": "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden",
+     "tier": "T1",
+     "mech": "M"
+    },
+    "temp": "same as claim"
+   },
+   "d2_soil_proxy": true,
+   "flag": null,
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": "move tip_cil_germ1's 75°F to a bolting tip"
+  },
+  {
+   "slug": "collards",
+   "verdict": "change",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "Collards are more heat-tolerant than kale or turnip greens.",
+     "source_name": "University of Maryland Extension (leafy greens)",
+     "url": "https://extension.umd.edu/resource/growing-leafy-greens-home-garden",
+     "tier": "T1",
+     "mech": "TOL"
+    }
+   },
+   "d4_stage": "harvest",
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "dill",
+   "verdict": "unsourced",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "At the onset of hot weather, this cool-weather annual will go to seed.",
+     "source_name": "Clemson HGIC (Herbs)",
+     "url": "https://hgic.clemson.edu/factsheet/herbs/",
+     "tier": "T1",
+     "mech": "M"
+    }
+   },
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "edamame",
+   "verdict": "change",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "For a continuous supply of edamame throughout the growing season, plant every 7-14 days up to mid-July, depending on location.",
+     "source_name": "University of Missouri Extension (The soy of gardening includes edamame)",
+     "url": "https://extension.missouri.edu/news/the-soy-of-gardening-includes-edamame",
+     "tier": "T1",
+     "mech": "S"
+    }
+   },
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": "strike the unsupported weather-trigger prose"
+  },
+  {
+   "slug": "kale",
+   "verdict": "change",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "For the spring crop, flavor is best if you harvest the plants before the weather becomes hot and dry. Heat will slow growth and leaves will become tough and strong flavored.",
+     "source_name": "UMN Extension (collards and kale)",
+     "url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+     "tier": "T1",
+     "mech": "M"
+    }
+   },
+   "d4_stage": "harvest",
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "kohlrabi",
+   "verdict": "hold",
+   "pause_in_heat": true,
+   "sowing_heat_ceiling": {
+    "temp_f": 75,
+    "measures": "air",
+    "basis": "maturity_coupled",
+    "claim": {
+     "quote": "Avoid planting after May 1. The high temperatures will not produce good quality.",
+     "source_name": "University of Minnesota Extension (Growing kohlrabi)",
+     "url": "https://extension.umn.edu/vegetables/growing-kohlrabi",
+     "tier": "T1",
+     "mech": "S"
+    },
+    "temp": {
+     "quote": "Kohlrabi grows best when temperatures do not exceed 75°F.",
+     "source_name": "Utah State University Extension (Kohlrabi in the Garden)",
+     "url": "https://extension.usu.edu/yardandgarden/research/kohlrabi-in-the-garden",
+     "tier": "T1",
+     "mech": "M"
+    }
+   },
+   "d2_soil_proxy": false,
+   "flag": null,
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "lettuce-leaf",
+   "verdict": "hold",
+   "pause_in_heat": true,
+   "sowing_heat_ceiling": {
+    "temp_f": 80,
+    "measures": "soil",
+    "basis": "germination",
+    "claim": {
+     "quote": "Soil temperatures above 80 °F cause the seeds of some crops (lettuce, spinach, others) to go dormant and they will not germinate until cooler soil temperatures return.",
+     "source_name": "Utah State University Extension (Leafy Greens guide)",
+     "url": "https://extension.usu.edu/vegetableguide/leafy-greens/planting-spacing",
+     "tier": "T1",
+     "mech": "G"
+    },
+    "temp": "same as claim"
+   },
+   "d2_soil_proxy": true,
+   "flag": null,
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": "re-point tip_85e7xx84 to USU leafy greens"
+  },
+  {
+   "slug": "nasturtium",
+   "verdict": "unsourced",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "Nasturtiums do best in the cooler part of the year and will tend to decline when the temperatures get too hot.",
+     "source_name": "UF/IFAS Extension Charlotte County blog",
+     "url": "https://blogs.ifas.ufl.edu/charlotteco/2024/12/20/nasturtiums-make-me-smile/",
+     "tier": "T1",
+     "mech": "M"
+    }
+   },
+   "d4_stage": null,
+   "d5_enum_correction": true,
+   "live_fix": null
+  },
+  {
+   "slug": "parsley",
+   "verdict": "unsourced",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "Parsley 75/50-85 40/90",
+     "source_name": "Purdue Extension HO-186-W (Harrington data)",
+     "url": "https://www.extension.purdue.edu/extmedia/HO/HO-186-W.pdf",
+     "tier": "T1",
+     "mech": "G"
+    }
+   },
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "radish",
+   "verdict": "hold",
+   "pause_in_heat": true,
+   "sowing_heat_ceiling": {
+    "temp_f": 75,
+    "measures": "air",
+    "basis": "maturity_coupled",
+    "claim": {
+     "quote": "Plant fast-growing varieties in shallow beds or containers during spring and fall when temperatures are 50-75 degrees.",
+     "source_name": "UC Master Gardener Program Sonoma County (UC ANR)",
+     "url": "https://ucanr.edu/site/uc-master-gardener-program-sonoma-county/radish",
+     "tier": "T1",
+     "mech": "S"
+    },
+    "temp": "same as claim"
+   },
+   "d2_soil_proxy": false,
+   "flag": "page gives 'degrees' with no unit or medium (plan row P3)",
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "snow-peas",
+   "verdict": "hold",
+   "pause_in_heat": true,
+   "sowing_heat_ceiling": {
+    "temp_f": 80,
+    "measures": "air",
+    "basis": "germination",
+    "claim": {
+     "quote": "Peas are cool weather, frost tolerant vegetables that require soil and air temperatures to remain below 80ºF for best germination and plant growth.",
+     "source_name": "Utah State University Extension (Peas in the Garden)",
+     "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+     "tier": "T1",
+     "mech": "G"
+    },
+    "temp": "same as claim"
+   },
+   "d2_soil_proxy": false,
+   "flag": null,
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "spinach",
+   "verdict": "hold",
+   "pause_in_heat": true,
+   "sowing_heat_ceiling": {
+    "temp_f": 80,
+    "measures": "air",
+    "basis": "sowing_statement",
+    "claim": {
+     "quote": "For a continuous spring supply, plant spinach seeds every one to two weeks, until outdoor temperatures reach 80°F.",
+     "source_name": "University of Minnesota Extension",
+     "url": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard",
+     "tier": "T1",
+     "mech": "S"
+    },
+    "temp": "same as claim"
+   },
+   "d2_soil_proxy": false,
+   "flag": null,
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": "re-anchor both germination tips from the evidence file"
+  },
+  {
+   "slug": "spring-onion",
+   "verdict": "change",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "Green onions are plant- ed during the fall, spring, and summer for harvest 60 to 120 days later.",
+     "source_name": "UC ANR Publication 7243, Green Onion Production in California",
+     "url": "https://my.ucanr.edu/repository/fileaccess.cfm?article=54051&p=+FLPUZE",
+     "tier": "T1",
+     "mech": "S"
+    }
+   },
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "sugar-snap-peas",
+   "verdict": "hold",
+   "pause_in_heat": true,
+   "sowing_heat_ceiling": {
+    "temp_f": 80,
+    "measures": "air",
+    "basis": "germination",
+    "claim": {
+     "quote": "Peas are cool weather, frost tolerant vegetables that require soil and air temperatures to remain below 80ºF for best germination and plant growth.",
+     "source_name": "Utah State University Extension (Peas in the Garden)",
+     "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+     "tier": "T1",
+     "mech": "G"
+    },
+    "temp": "same as claim"
+   },
+   "d2_soil_proxy": false,
+   "flag": null,
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "sweet-alyssum",
+   "verdict": "d3_flip",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "As summer temperatures rise, alyssum grown from seed may stop producing flowers.",
+     "source_name": "Clemson HGIC",
+     "url": "https://hgic.clemson.edu/sweet-alyssum/",
+     "tier": "T1",
+     "mech": "M"
+    }
+   },
+   "d4_stage": null,
+   "d5_enum_correction": true,
+   "live_fix": null
+  },
+  {
+   "slug": "sweet-pea",
+   "verdict": "unsourced",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "Needs cool temperatures and will bloom poorly (or not at all) when weather is hot.",
+     "source_name": "University of Illinois Extension HortAnswers (Sweet Pea, Annual)",
+     "url": "https://web.extension.illinois.edu/hortanswers/PlantDetail.cfm?PlantID=532&PlantTypeID=5",
+     "tier": "T1",
+     "mech": "M"
+    }
+   },
+   "d4_stage": null,
+   "d5_enum_correction": true,
+   "live_fix": null
+  },
+  {
+   "slug": "turnip",
+   "verdict": "unsourced",
+   "pause_in_heat": false,
+   "sowing_heat_ceiling": {
+    "temp_f": null,
+    "note_quote": {
+     "quote": "Turnips grow best when temperatures do not exceed 85ºF.",
+     "source_name": "Utah State University Extension",
+     "url": "https://extension.usu.edu/yardandgarden/research/rutabagas-and-turnips-in-the-garden",
+     "tier": "T1",
+     "mech": "M"
+    }
+   },
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": null
+  },
+  {
+   "slug": "viola",
+   "verdict": "hold",
+   "pause_in_heat": true,
+   "sowing_heat_ceiling": {
+    "temp_f": 75,
+    "measures": "soil",
+    "basis": "germination",
+    "claim": {
+     "quote": "If planting by seed, keep in mind that they only germinate at temperatures between 65˚ and 75˚Fahrenheit.",
+     "source_name": "UF/IFAS Gardening Solutions",
+     "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/pansies/",
+     "tier": "T1",
+     "mech": "G"
+    },
+    "temp": "same as claim"
+   },
+   "d2_soil_proxy": true,
+   "flag": "claim sentence does not say 'soil' (plan row P3)",
+   "d4_stage": null,
+   "d5_enum_correction": false,
+   "live_fix": "re-anchor vio_germ_cool_dark to UF (FP609 / Gardening Solutions); drop the light claim"
+  }
+ ]
+}

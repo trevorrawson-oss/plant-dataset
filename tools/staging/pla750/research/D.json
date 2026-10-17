@@ -1,0 +1,672 @@
+{
+ "bok-choy": {
+  "evidence": [
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-chinese-cabbage-and-bok-choy",
+    "source_name": "University of Minnesota Extension (Growing Chinese cabbage and bok choy)",
+    "tier": "T1",
+    "section": "Bolting",
+    "quote": "If you delay planting until after the last frost to avoid the risk of bolting, the plants will have to mature in hot weather.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-chinese-cabbage-and-bok-choy",
+    "source_name": "University of Minnesota Extension (Growing Chinese cabbage and bok choy)",
+    "tier": "T1",
+    "section": "Bolting",
+    "quote": "Although some varieties are tolerant of heat, hot days during the formation of the head lead to narrower leaves and less dense heads.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-chinese-cabbage-and-bok-choy",
+    "source_name": "University of Minnesota Extension (Growing Chinese cabbage and bok choy)",
+    "tier": "T1",
+    "section": "Disorders",
+    "quote": "Warm weather can cause bok choy to flower.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umn.edu/vegetables/growing-chinese-cabbage-and-bok-choy",
+    "source_name": "University of Minnesota Extension (Growing Chinese cabbage and bok choy)",
+    "tier": "T1",
+    "section": "Bolting",
+    "quote": "Plant in mid-summer, so that the plants will mature in the shortening days and cooler temperatures of September.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://hgic.clemson.edu/factsheet/cabbage-chinese-cabbage/",
+    "source_name": "Clemson HGIC (Cabbage & Chinese Cabbage)",
+    "tier": "T1",
+    "section": "Planting (Chinese cabbage; the page lists pak choi under Chinese cabbage cultivars)",
+    "quote": "Chinese cabbage is best sown in late summer and fall rather than spring.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://hgic.clemson.edu/factsheet/cabbage-chinese-cabbage/",
+    "source_name": "Clemson HGIC (Cabbage & Chinese Cabbage)",
+    "tier": "T1",
+    "section": "Intro (names cabbage and Chinese cabbage, Pekinensis Group; pak choi appears only in the cultivar list)",
+    "quote": "They grow best at temperatures of 60 to 65 °F.",
+    "temp_f": [
+     60,
+     65
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://www.omafra.gov.on.ca/CropOp/en/spec_veg/brassicas/bokc.html",
+    "source_name": "Ontario OMAFRA CropOp (Bok choy)",
+    "tier": "T1",
+    "section": "Bok choy crop profile (Ontario government, not US land-grant)",
+    "quote": "Bok choy is also sensitive to daylength and will bolt if exposed to long-day photoperiods.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   }
+  ],
+  "hold_supported": "weak",
+  "hold_basis": "M only: sources say bok choy that MATURES in hot weather bolts/flowers or forms loose, narrow-leaved heads (UMN). No source gives a germination or establishment heat limit for bok choy, and no source gives a bok choy-specific temperature.",
+  "proposed_pause_in_heat": null,
+  "proposed_threshold_f": null,
+  "threshold_quote_ref": null,
+  "threshold_note": "No T1 source names a bok choy heat temperature. The current 80 is unsourced for bok choy: USU leafy-greens 'high temperatures (80+ °F) cause many to bolt' does not name bok choy, so it cannot count. Clemson's 60 to 65 °F optimum is stated for Chinese cabbage (Pekinensis), with pak choi only in the cultivar list; it is an optimum, not a stress threshold. Seed-company/blog pages cite 70°F but are not T1.",
+  "reason_tip_candidate": null,
+  "gaps": [
+   "No T1 source with a bok choy-specific heat temperature (bolting or quality).",
+   "No source (T1 or T2) found saying bok choy seed germinates poorly in warm soil; NMSU's 'above 79°F inhibits germination' sits in the LETTUCE section and does not count.",
+   "Iowa State farm-report trial on bok choy (iastatedigitalpress.com) blocked by an Anubis bot wall; not read."
+  ],
+  "notes": "Tension for Trevor: the T1 timing advice runs AGAINST a hot-forecast sowing hold. UMN says to plant in mid-summer for a September harvest and Clemson says Chinese cabbage is best sown in late summer and fall. The heat problem in the sources is the crop maturing in heat (a late SPRING sowing), not seed sown during heat. A 10-day high-temperature hold would block exactly the mid-summer fall sowing UMN recommends. Lean: pause_in_heat false, or keep the hold only if the app can limit it to spring successions. Either way the 80°F number has no bok choy source."
+ },
+ "kohlrabi": {
+  "evidence": [
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/kohlrabi-in-the-garden",
+    "source_name": "Utah State University Extension (Kohlrabi in the Garden)",
+    "tier": "T1",
+    "section": "Planting / spacing",
+    "quote": "Kohlrabi grows best when temperatures do not exceed 75°F.",
+    "temp_f": 75,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/kohlrabi-in-the-garden",
+    "source_name": "Utah State University Extension (Kohlrabi in the Garden)",
+    "tier": "T1",
+    "section": "Planting / spacing",
+    "quote": "High summer temperatures reduce growth, decrease quality, and cause the enlarging stems to become tough and woody.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.usu.edu/yardandgarden/research/kohlrabi-in-the-garden",
+    "source_name": "Utah State University Extension (Kohlrabi in the Garden)",
+    "tier": "T1",
+    "section": "Planting / spacing",
+    "quote": "In hot areas it is best to grow kohlrabi as a spring or autumn crop.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-kohlrabi",
+    "source_name": "University of Minnesota Extension (Growing kohlrabi)",
+    "tier": "T1",
+    "section": "Intro",
+    "quote": "It does best in cool weather, between 65°F and 75 °F, and when planted in fertile, moisture-retentive soil.",
+    "temp_f": [
+     65,
+     75
+    ],
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umn.edu/vegetables/growing-kohlrabi",
+    "source_name": "University of Minnesota Extension (Growing kohlrabi)",
+    "tier": "T1",
+    "section": "Spring crop: direct seeding",
+    "quote": "Avoid planting after May 1. The high temperatures will not produce good quality.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.umn.edu/vegetables/growing-kohlrabi",
+    "source_name": "University of Minnesota Extension (Growing kohlrabi)",
+    "tier": "T1",
+    "section": "Fall crop",
+    "quote": "Plant seed directly in the garden in July.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-kohlrabi",
+    "source_name": "University of Minnesota Extension (Growing kohlrabi)",
+    "tier": "T1",
+    "section": "Harvest / quality",
+    "quote": "If the plants are overheated or struggling to take up water, they will produce chemicals that have strong, bitter flavors.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "TOL",
+    "url": "https://hort.extension.wisc.edu/articles/kohlrabi/",
+    "source_name": "University of Wisconsin-Madison Extension (Kohlrabi)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Like other cole crops, they do best in cool weather but tolerate heat better than most other members of the cabbage family.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://hort.extension.wisc.edu/articles/kohlrabi/",
+    "source_name": "University of Wisconsin-Madison Extension (Kohlrabi)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Fall plantings should be sown in mid-summer.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+    "source_name": "New Mexico State University CR-457",
+    "tier": "T1",
+    "section": "Kohlrabi",
+    "quote": "As with other cruciferous crops, for optimal quality, it should be grown to mature in the fall.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "weak",
+  "hold_basis": "M + S: heat during bulbing makes the stem tough, woody and bitter (USU, UMN), and UMN explicitly says stop spring sowing after May 1 because high temperatures will not produce good quality. No germination heat limit was found.",
+  "proposed_pause_in_heat": true,
+  "proposed_threshold_f": 75,
+  "threshold_quote_ref": 0,
+  "threshold_note": "USU: 'grows best when temperatures do not exceed 75°F' -> 75; UMN's 65 to 75 °F best range agrees on the 75 ceiling. Matches the current value (75). It is a quality (M) number for the growing plant, consistent with the contract's mature-plant definition.",
+  "reason_tip_candidate": {
+   "field": "succession_policy (held-message reason) or tips_by_stage.bulbing",
+   "draft_seasoned": "Kohlrabi grows best when temperatures stay at or below 75°F. High summer heat slows growth and turns the swelling stem tough and woody, so University of Minnesota Extension advises against spring sowings that would size up in summer heat. Resume sowing for a fall crop.",
+   "draft_beginner": "Kohlrabi likes it cool, 75°F or below. Summer heat makes the bulb tough and woody, so skip planting more while it is hot and plant again for fall.",
+   "evidence_refs": [
+    0,
+    1,
+    4
+   ]
+  },
+  "gaps": [
+   "No source found giving a kohlrabi germination upper limit or poor emergence in warm soil.",
+   "No source ties the heat effect to air temperature over a short (10-day) window; the sources describe heat during stem enlargement weeks after sowing."
+  ],
+  "notes": "Same timing tension as bok choy, softer: UMN and Wisconsin both say to sow the fall crop in July / mid-summer, which a hot-forecast hold would block. The supported reading is 'do not sow spring successions that will size up in summer heat', which is M timing, not a sowing-in-heat hazard. Wisconsin also says kohlrabi tolerates heat better than most cabbage-family crops (TOL). If the app cannot distinguish spring successions from the fall sowing, Trevor should rule whether the fall-sowing block is acceptable."
+ },
+ "sugar-snap-peas": {
+  "evidence": [
+   {
+    "mech": "G",
+    "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+    "source_name": "Utah State University Extension (Peas in the Garden)",
+    "tier": "T1",
+    "section": "Planting / cultural requirements",
+    "quote": "Peas are cool weather, frost tolerant vegetables that require soil and air temperatures to remain below 80ºF for best germination and plant growth.",
+    "temp_f": 80,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.umd.edu/resource/peas/",
+    "source_name": "University of Maryland Extension (Peas)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Fall-planted peas often perform poorly in Maryland because seed doesn't germinate readily in warm soil, plants don't grow well in hot weather, and the first killing frost usually arrives before pods can mature.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.umd.edu/resource/peas/",
+    "source_name": "University of Maryland Extension (Peas)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Warmer soils (up to 75°F.) will speed germination and emergence.",
+    "temp_f": 75,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+    "source_name": "Utah State University Extension (Peas in the Garden)",
+    "tier": "T1",
+    "section": "Planting / cultural requirements",
+    "quote": "Peas do poorly when temperatures exceed 80ºF.",
+    "temp_f": 80,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+    "source_name": "Utah State University Extension (Peas in the Garden)",
+    "tier": "T1",
+    "section": "FAQ: Why are the flowers falling off my plants?",
+    "quote": "Pea flowers are very sensitive to temperatures above 80ºF and if dry conditions occur, the plants will shed their flowers.",
+    "temp_f": 80,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-peas",
+    "source_name": "University of Minnesota Extension (Growing peas)",
+    "tier": "T1",
+    "section": "Starting seeds",
+    "quote": "But they will stop growing and not produce flowers or pods once temperatures get above 85°F, as often happens in June.",
+    "temp_f": 85,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-peas",
+    "source_name": "University of Minnesota Extension (Growing peas)",
+    "tier": "T1",
+    "section": "Managing pests, diseases and disorders: Disorders",
+    "quote": "Hot day and night temperatures can cause flowers to abort, reducing yield.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://hgic.clemson.edu/factsheet/garden-peas/",
+    "source_name": "Clemson HGIC (Garden Peas)",
+    "tier": "T1",
+    "section": null,
+    "quote": "The plants suffer in the heat and humidity of summer, so plant pea seeds as early in spring as the ground can be worked.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+    "source_name": "New Mexico State University CR-457",
+    "tier": "T1",
+    "section": "Peas",
+    "quote": "In New Mexico, peas do not do well once warm weather arrives, so plant them in the spring as soon as the soil can be worked.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+    "source_name": "Utah State University Extension (Peas in the Garden)",
+    "tier": "T1",
+    "section": "Planting / cultural requirements",
+    "quote": "Hot temperatures and water stress will reduce yields and pod quality.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "yes",
+  "hold_basis": "G + M: USU says soil AND air must stay below 80ºF for best germination and plant growth, UMD says seed does not germinate readily in warm soil, and flowers drop or pods fail above 80 to 85°F (USU, UMN).",
+  "proposed_pause_in_heat": true,
+  "proposed_threshold_f": 80,
+  "threshold_quote_ref": 0,
+  "threshold_note": "USU: 'require soil and air temperatures to remain below 80ºF for best germination and plant growth' -> 80, the one quote that ties an AIR temperature to germination (the sowing-relevant mechanism). USU's flower-shed and 'do poorly' quotes also sit at 80. UMN gives 85 for growth stopping and no flowers/pods. Current value 82 has no source; propose 80 (or 85 if Trevor prefers UMN's stop-growth figure). The pea sources are written for Pisum sativum generally; USU, UMN, Clemson and NMSU name snap peas as a type covered.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.germination",
+   "draft_seasoned": "Pea seed wants cool soil. Utah State Extension advises keeping soil and air below 80°F for best germination and growth, and Maryland Extension notes that seed does not germinate readily in warm soil. When the forecast runs above 80°F, hold the next sowing until it cools.",
+   "draft_beginner": "Peas sprout best in cool weather. Experts say to keep the soil and air under 80°F, because pea seeds do not come up well in warm soil. If hot days are coming, wait to plant the next batch until it cools off.",
+   "evidence_refs": [
+    0,
+    1
+   ]
+  },
+  "gaps": [
+   "No source found that gives a measured soil-temperature UPPER limit at which pea seed rots or fails (UMD only says germination speeds up to 75°F and that seed does not germinate readily in warm soil).",
+   "No snap-pea-specific heat figure distinct from peas generally."
+  ],
+  "notes": "USU's 80ºF quote names soil and air together; the app keys on forecast air highs, so the 80 maps directly. The existing heat_stress_trigger prose (80 to 85°F blossom drop) is consistent with USU + UMN. Clemson adds 'Fall plantings are not recommended' for SC."
+ },
+ "snow-peas": {
+  "evidence": [
+   {
+    "mech": "G",
+    "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+    "source_name": "Utah State University Extension (Peas in the Garden)",
+    "tier": "T1",
+    "section": "Planting / cultural requirements",
+    "quote": "Peas are cool weather, frost tolerant vegetables that require soil and air temperatures to remain below 80ºF for best germination and plant growth.",
+    "temp_f": 80,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.umd.edu/resource/peas/",
+    "source_name": "University of Maryland Extension (Peas)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Fall-planted peas often perform poorly in Maryland because seed doesn't germinate readily in warm soil, plants don't grow well in hot weather, and the first killing frost usually arrives before pods can mature.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.umd.edu/resource/peas/",
+    "source_name": "University of Maryland Extension (Peas)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Warmer soils (up to 75°F.) will speed germination and emergence.",
+    "temp_f": 75,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+    "source_name": "Utah State University Extension (Peas in the Garden)",
+    "tier": "T1",
+    "section": "Planting / cultural requirements",
+    "quote": "Peas do poorly when temperatures exceed 80ºF.",
+    "temp_f": 80,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+    "source_name": "Utah State University Extension (Peas in the Garden)",
+    "tier": "T1",
+    "section": "FAQ: Why are the flowers falling off my plants?",
+    "quote": "Pea flowers are very sensitive to temperatures above 80ºF and if dry conditions occur, the plants will shed their flowers.",
+    "temp_f": 80,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-peas",
+    "source_name": "University of Minnesota Extension (Growing peas)",
+    "tier": "T1",
+    "section": "Starting seeds",
+    "quote": "But they will stop growing and not produce flowers or pods once temperatures get above 85°F, as often happens in June.",
+    "temp_f": 85,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.umn.edu/vegetables/growing-peas",
+    "source_name": "University of Minnesota Extension (Growing peas)",
+    "tier": "T1",
+    "section": "Managing pests, diseases and disorders: Disorders",
+    "quote": "Hot day and night temperatures can cause flowers to abort, reducing yield.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://hgic.clemson.edu/factsheet/garden-peas/",
+    "source_name": "Clemson HGIC (Garden Peas)",
+    "tier": "T1",
+    "section": null,
+    "quote": "The plants suffer in the heat and humidity of summer, so plant pea seeds as early in spring as the ground can be worked.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+    "source_name": "New Mexico State University CR-457",
+    "tier": "T1",
+    "section": "Peas",
+    "quote": "In New Mexico, peas do not do well once warm weather arrives, so plant them in the spring as soon as the soil can be worked.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+    "source_name": "Utah State University Extension (Peas in the Garden)",
+    "tier": "T1",
+    "section": "Planting / cultural requirements",
+    "quote": "Hot temperatures and water stress will reduce yields and pod quality.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "yes",
+  "hold_basis": "G + M: same Pisum sativum evidence as sugar snap: below 80ºF soil and air for germination and growth (USU), poor germination in warm soil (UMD), blossom drop and no pods above 80 to 85°F (USU, UMN).",
+  "proposed_pause_in_heat": true,
+  "proposed_threshold_f": 80,
+  "threshold_quote_ref": 0,
+  "threshold_note": "USU: 'require soil and air temperatures to remain below 80ºF for best germination and plant growth' -> 80. Matches the current value (80). UMN's 85°F stop-growth figure is the upper bound. UMN, Clemson and NMSU name snow peas as an edible-podded type of garden pea.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.germination",
+   "draft_seasoned": "Pea seed wants cool soil. Utah State Extension advises keeping soil and air below 80°F for best germination and growth, and Maryland Extension notes that seed does not germinate readily in warm soil. When the forecast runs above 80°F, hold the next sowing until it cools.",
+   "draft_beginner": "Peas sprout best in cool weather. Experts say to keep the soil and air under 80°F, because pea seeds do not come up well in warm soil. If hot days are coming, wait to plant the next batch until it cools off.",
+   "evidence_refs": [
+    0,
+    1
+   ]
+  },
+  "gaps": [
+   "No source found that gives a measured soil-temperature upper limit at which pea seed rots or fails to emerge.",
+   "No snow-pea-specific heat figure distinct from peas generally."
+  ],
+  "notes": "Snow and sugar snap peas share all evidence; the current values differ (80 vs 82) with no source distinguishing them. Recommend both at 80."
+ },
+ "edamame": {
+  "evidence": [
+   {
+    "mech": "S",
+    "url": "https://extension.missouri.edu/news/the-soy-of-gardening-includes-edamame",
+    "source_name": "University of Missouri Extension (The soy of gardening includes edamame)",
+    "tier": "T1",
+    "section": null,
+    "quote": "For a continuous supply of edamame throughout the growing season, plant every 7-14 days up to mid-July, depending on location.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://extension.missouri.edu/news/the-soy-of-gardening-includes-edamame",
+    "source_name": "University of Missouri Extension (The soy of gardening includes edamame)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Wait until the soil warms to at least 60 degrees Fahrenheit, usually late April to early May, depending on the year and where you live in Missouri, says Higgins.",
+    "temp_f": 60,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://www.pubs.ext.vt.edu/SPES/spes-455/spes-455.html",
+    "source_name": "Virginia Cooperative Extension SPES-455 (Edamame in Virginia)",
+    "tier": "T1",
+    "section": null,
+    "quote": "The optimum planting date for seedling emergence in most of Virginia is from early May through early June, when soil temperatures have reached 65 F.",
+    "temp_f": 65,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "S",
+    "url": "https://www.pubs.ext.vt.edu/SPES/spes-455/spes-455.html",
+    "source_name": "Virginia Cooperative Extension SPES-455 (Edamame in Virginia)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Edamame availability to consumers can be extended by either planting varieties within a maturity group every two to three weeks throughout the growing season or by planting different maturity groups (MG III-VI are recommended in Virginia) for season extension (Lord, Neill, and Zhang 2019).",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://soybeans.ces.ncsu.edu/2020/07/how-do-high-temperatures-impact-my-soybeans",
+    "source_name": "NC State Extension Soybeans portal (How do high temperatures impact my soybeans?)",
+    "tier": "T1",
+    "section": "Field soybean (Glycine max), same species; not edamame-specific",
+    "quote": "The ideal temperature for soybean growth is 85℉ . When temperatures exceed this threshold, especially for several subsequent days, heat stress can occur.",
+    "temp_f": 85,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://soybeans.ces.ncsu.edu/2020/07/how-do-high-temperatures-impact-my-soybeans",
+    "source_name": "NC State Extension Soybeans portal (How do high temperatures impact my soybeans?)",
+    "tier": "T1",
+    "section": "Reproductive stage soybeans under heat stress",
+    "quote": "High temperatures can result in any of the following in reproductive stage soybeans: aborted flowers, aborted small pods, aborted seeds in larger pods, and production of smaller seeds.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "TOL",
+    "url": "https://soybeans.ces.ncsu.edu/2020/07/how-do-high-temperatures-impact-my-soybeans",
+    "source_name": "NC State Extension Soybeans portal (How do high temperatures impact my soybeans?)",
+    "tier": "T1",
+    "section": "Reproductive stage soybeans under heat stress",
+    "quote": "Regardless of growth habit, soybeans flower for several weeks so they have the opportunity to withstand short-term periods of stress.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   }
+  ],
+  "hold_supported": "no",
+  "hold_basis": "None for a sowing hold. Edamame is a warm-soil crop (60 to 65°F minimum) and T1 sources advise sowing every 1 to 3 weeks through the season up to mid-July. The only heat harm found is to FLOWERING/POD SET in field soybean, weeks after sowing, and NCSU notes soybeans compensate for short stress.",
+  "proposed_pause_in_heat": false,
+  "proposed_threshold_f": null,
+  "threshold_quote_ref": null,
+  "threshold_note": "No sowing-relevant heat number exists. NCSU's 85℉ is the IDEAL growth temperature for field soybean, above which heat stress 'can occur' over several days; it describes the growing crop, not sowing, and is not edamame-specific. If a mature-plant heat_threshold_f is ever wanted for the stress prose, 85 (NCSU) is the only sourced figure found; the existing heat_stress_trigger's 95 to 100°F has no source found.",
+  "reason_tip_candidate": null,
+  "gaps": [
+   "No source (T1 or T2) found saying to stop or pause sowing edamame/soybean in hot weather.",
+   "No source found giving a soybean/edamame germination upper limit.",
+   "No source found for the existing heat_stress_trigger figure 'roughly 95 to 100°F'; NCSU puts heat stress above 85℉ (field soybean). The 'tolerates summer heat far better than snap beans' comparison is also unsourced.",
+   "The existing succession tip 'In the hottest regions, skip the peak of summer and sow for spring and fall sets' has no source found."
+  ],
+  "notes": "Recommend pause_in_heat false and keeping heat_effect heat_tolerant for SOWING purposes. Separately, two existing prose claims look unsourced (95 to 100°F in heat_stress_trigger; 'skip the peak of summer' in the succession tip) and may need a correction pass. Missouri also notes 'As the season progresses past early June, you may need to sow more seed', without attributing it to heat."
+ },
+ "sweet-pea": {
+  "evidence": [
+   {
+    "mech": "M",
+    "url": "https://web.extension.illinois.edu/hortanswers/PlantDetail.cfm?PlantID=532&PlantTypeID=5",
+    "source_name": "University of Illinois Extension HortAnswers (Sweet Pea, Annual)",
+    "tier": "T1",
+    "section": "Culture",
+    "quote": "Needs cool temperatures and will bloom poorly (or not at all) when weather is hot.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://web.extension.illinois.edu/hortanswers/PlantDetail.cfm?PlantID=532&PlantTypeID=5",
+    "source_name": "University of Illinois Extension HortAnswers (Sweet Pea, Annual)",
+    "tier": "T1",
+    "section": "Problems",
+    "quote": "Sweet peas grow poorly in high temperatures.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "M",
+    "url": "https://blogs.cornell.edu/hightunnels/flowers/cut-flowers/cut-flower-crops/sweet-pea/",
+    "source_name": "Cornell High Tunnels (Sweet peas)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Flower size and yield declines with increasing temperatures, so early varieties have advantages for tunnel production.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://blogs.cornell.edu/hightunnels/flowers/cut-flowers/cut-flower-crops/sweet-pea/",
+    "source_name": "Cornell High Tunnels (Sweet peas)",
+    "tier": "T1",
+    "section": null,
+    "quote": "A vining crop that grows best under cool conditions.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://plants.ces.ncsu.edu/plants/lathyrus-odoratus/",
+    "source_name": "NC State Extension Plant Toolbox (Lathyrus odoratus)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Sweet pea can be a challenge to grow in hot and humid summers.",
+    "temp_f": null,
+    "in_dataset_cache": true
+   },
+   {
+    "mech": "M",
+    "url": "https://extension.illinois.edu/flowers/perennial-sweet-pea",
+    "source_name": "University of Illinois Extension (Perennial sweet pea)",
+    "tier": "T1",
+    "section": "Flowering (about Lathyrus latifolius, contrasting annual sweet pea)",
+    "quote": "It is drought tolerant and provides flowers in the heat of the summer when annual sweet peas fail.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.oregonstate.edu/news/old-fashioned-sweet-peas-fill-garden-fragrance",
+    "source_name": "Oregon State University Extension (Sweet peas add color and fragrance to Oregon gardens)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Location: Choose a well-drained, sunny site with good air circulation. Plant before mid-March and protect seedlings from frost.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "S",
+    "url": "https://extension.illinois.edu/flowers/sweet-pea",
+    "source_name": "University of Illinois Extension (Sweet Pea)",
+    "tier": "T1",
+    "section": "Notes",
+    "quote": "Sow in mid-March to mid-April.",
+    "temp_f": null,
+    "in_dataset_cache": false
+   },
+   {
+    "mech": "G",
+    "url": "https://blogs.cornell.edu/hightunnels/flowers/cut-flowers/cut-flower-crops/sweet-pea/",
+    "source_name": "Cornell High Tunnels (Sweet peas)",
+    "tier": "T1",
+    "section": null,
+    "quote": "Seeds germinate in 10 to 21 days at 60 F.",
+    "temp_f": 60,
+    "in_dataset_cache": true
+   }
+  ],
+  "hold_supported": "weak",
+  "hold_basis": "M only: T1 sources agree heat ends or prevents bloom (Illinois: blooms poorly or not at all when hot; Cornell: flower size and yield decline with rising temperature). No source gives a germination or establishment heat limit, and no source gives a temperature.",
+  "proposed_pause_in_heat": null,
+  "proposed_threshold_f": null,
+  "threshold_quote_ref": null,
+  "threshold_note": "No T1 temperature found for sweet pea heat. Cornell's 60 F is a germination condition, not a heat limit. A blog figure (72°F sustained) on lifetips.alibaba.com is unsourced and was not used.",
+  "reason_tip_candidate": {
+   "field": "tips_by_stage.flowering (or the held-message reason)",
+   "draft_seasoned": "Sweet pea needs cool weather to flower. University of Illinois Extension notes it blooms poorly or not at all when the weather is hot, and Cornell reports flower size and yield fall as temperatures rise, so sow early enough that plants bloom before summer heat.",
+   "draft_beginner": "Sweet peas need cool weather to bloom. When it gets hot they flower poorly or stop, so plant them early so they bloom before summer heat.",
+   "evidence_refs": [
+    0,
+    2
+   ]
+  },
+  "gaps": [
+   "No source found with a temperature at which sweet pea germination fails or slows (G upper limit).",
+   "No source found with a temperature for bloom failure.",
+   "No T1 source found on fall sowing in mild-winter or hot-summer regions (the dataset's 'fall in mild zones' window was not re-verified here).",
+   "UC ANR Marin Master Gardener page returned 403; a UC ANR sweet pea fact-sheet PDF was found but could not be text-extracted in this session (no PDF tool available), so it was not used."
+  ],
+  "notes": "The current heat_effect 'heat_tolerant' is CONTRADICTED by every T1 source found (Illinois, Cornell, NCSU, and Illinois's perennial-sweet-pea page contrasting it). The record's own succession tip already says the plant 'is undone by heat'. Recommend changing heat_effect to a bloom-failure value. Whether a hot 10-day forecast should pause a SOWING is less clear: the heat harm is to flowering weeks later, and the sources frame it as 'sow early' (OSU before mid-March; Illinois mid-March to mid-April), not as a seed-in-heat hazard. A threshold would have to be null (85 fallback) since no source gives a number. NCSU notes heat-resistant cultivars exist ('Old Spice' listed as heat tolerant)."
+ }
+}
