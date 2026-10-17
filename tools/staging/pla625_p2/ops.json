@@ -1,0 +1,1471 @@
+[
+ {
+  "crop": "<catalog>",
+  "path": "uf_ifas_ch092",
+  "kind": "catalog",
+  "old": "<absent>",
+  "new": {
+   "id": "uf_ifas_ch092",
+   "name": "UF/IFAS Key Lime Growing in the Florida Home Landscape (CH092)",
+   "title": "Key Lime Growing in the Florida Home Landscape",
+   "publisher": "UF/IFAS Extension",
+   "url": "https://ask.ifas.ufl.edu/publication/CH092",
+   "source_class": "university_extension",
+   "trust_tier": "high",
+   "accessed": "2026-10",
+   "tier": "T1",
+   "citable_for": "UF/IFAS EDIS publication CH092 (FC47) on key lime in the Florida home landscape: propagation (true-to-type seed, cuttings, air-layers, budded or grafted trees), rootstocks for calcareous soils, tristeza and foot rot. A document-scoped child of uf_ifas_edis (PLA-625 promote 2, ruling A: per-publication ids)."
+  },
+  "cited_at": null,
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.1: per-publication id"
+ },
+ {
+  "crop": "<catalog>",
+  "path": "uf_ifas_ch093",
+  "kind": "catalog",
+  "old": "<absent>",
+  "new": {
+   "id": "uf_ifas_ch093",
+   "name": "UF/IFAS Growing 'Tahiti' Limes in the Home Landscape (CH093)",
+   "title": "Growing 'Tahiti' Limes in the Home Landscape",
+   "publisher": "UF/IFAS Extension",
+   "url": "https://ask.ifas.ufl.edu/publication/CH093",
+   "source_class": "university_extension",
+   "trust_tier": "high",
+   "accessed": "2026-10",
+   "tier": "T1",
+   "citable_for": "UF/IFAS EDIS publication CH093 (HS8) on 'Tahiti' lime in the home landscape: rootstock selection by soil type (high-pH calcareous vs low-pH or neutral), flood tolerance on alemow, tristeza and foot rot by rootstock. A document-scoped child of uf_ifas_edis (PLA-625 promote 2, ruling A: per-publication ids)."
+  },
+  "cited_at": null,
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.1: per-publication id"
+ },
+ {
+  "crop": "<catalog>",
+  "path": "uf_ifas_hs1260",
+  "kind": "catalog",
+  "old": "<absent>",
+  "new": {
+   "id": "uf_ifas_hs1260",
+   "name": "UF/IFAS Florida Citrus Rootstock Selection Guide, 5th Edition (SP248/HS1260)",
+   "title": "Florida Citrus Rootstock Selection Guide, 5th Edition",
+   "publisher": "UF/IFAS Extension",
+   "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+   "source_class": "peer_reviewed_extension",
+   "trust_tier": "high",
+   "accessed": "2026-10",
+   "tier": "T1",
+   "citable_for": "Peer-reviewed UF/IFAS rootstock guide (SP248/HS1260, 5th ed.): a table rating each rootstock's tree size, yield, juice quality, soil tolerances (salinity, high pH, clay, wet, drought), freeze, and disease and pest responses. Scope on every use: Florida commercial groves; relative vigor; averaged across commercial scions; not scion-specific. A document-scoped child of uf_ifas_edis (PLA-625 promote 2, ruling A: per-publication ids)."
+  },
+  "cited_at": null,
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.1: per-publication id"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[0].size_class",
+  "kind": "value",
+  "old": "standard",
+  "new": null,
+  "cited_at": "rootstock_options[0]",
+  "reason": "nulled (PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C)"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[0].container_suitable",
+  "kind": "value",
+  "old": false,
+  "new": null,
+  "cited_at": "rootstock_options[0]",
+  "reason": "nulled (PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C)"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[0].traits_seasoned",
+  "kind": "prose",
+  "old": "The historic broad-adaptation rootstock: tolerant of a wide range of soils including heavier and higher-pH ground, productive, good fruit quality, and resistant to Phytophthora foot rot. On lemon, susceptibility to severe tristeza strains does not depend on the rootstock.",
+  "new": "Sour orange is one of the rootstocks UF/IFAS lists for lemons. It is the most common rootstock in Texas and adapts to most soils that citrus is grown in. UF/IFAS rates it good in saline, high-pH and clay soils. It resists Phytophthora foot rot. Tristeza virus can kill citrus trees quickly on sour orange rootstock. Lemons are susceptible to severe tristeza strains whatever the rootstock. Texas A&M recommends it for the lower Texas coast and most of southern Texas.",
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[0].traits_beginner",
+  "kind": "prose",
+  "old": "A good all-rounder that handles most backyard soils.",
+  "new": "Sour orange is a long-established rootstock that handles most soils and resists foot rot. Its weak spot is tristeza, a virus spread by aphids that can kill trees on sour orange quickly.",
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[0].what_to_ask_nursery",
+  "kind": "prose",
+  "old": "Most retail lemons are already on a standard industry rootstock; ask whether it is on sour orange, which suits most yard soils.",
+  "new": "Retail citrus usually comes already grafted, so ask which rootstock your tree is on. Buy a certified disease-free tree.",
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[0].sources",
+  "kind": "sources",
+  "old": [
+   "tamu_agrilife",
+   "uf_ifas_hs1153"
+  ],
+  "new": [
+   "uf_ifas_hs1153",
+   "tamu_agrilife",
+   "uf_ifas_hs1260",
+   "uf_ifas_hs132"
+  ],
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[0].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "tamu_agrilife": {
+    "url": "https://agrilifeextension.tamu.edu",
+    "verified": "2026-06-12"
+   },
+   "uf_ifas_hs1153": {
+    "url": "https://edis.ifas.ufl.edu/publication/HS402",
+    "verified": "2026-06-12"
+   }
+  },
+  "new": {
+   "uf_ifas_hs1153": {
+    "url": "https://edis.ifas.ufl.edu/publication/HS402",
+    "verified": "2026-10-16"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_hs1260": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_hs132": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS132",
+    "verified": "2026-10-16"
+   }
+  },
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[1].size_class",
+  "kind": "value",
+  "old": null,
+  "new": "semi_dwarf",
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[1].traits_seasoned",
+  "kind": "prose",
+  "old": "A strong choice for cold-edge sites: it withstands lower winter temperatures than sour orange and shrugs off foot rot, on a tree that stays somewhat smaller. The trade-off is soil, since it does poorly in salty or high-alkaline ground, so reserve it for colder spots whose soil suits it. The size reduction is modest, not true dwarfing.",
+  "new": "Trifoliate orange is more cold-hardy than sour orange and makes a smaller tree. UC Cooperative Extension calls it semi-dwarfing. It is immune to Phytophthora foot rot. It is not well adapted to saline or highly alkaline soils. Texas A&M prefers it for colder areas where the soil suits it.",
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[1].traits_beginner",
+  "kind": "prose",
+  "old": "Handles cold a little better and makes a somewhat smaller tree.",
+  "new": "Trifoliate orange handles cold better than sour orange and keeps the tree somewhat smaller. It does not get foot rot, but it struggles in salty or very alkaline soil.",
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[1].what_to_ask_nursery",
+  "kind": "prose",
+  "old": "If you are in a cold-edge area, ask whether a cold-hardier trifoliate or trifoliate-hybrid rootstock is available.",
+  "new": "In a colder area with soil that is not salty or alkaline, ask whether the tree is on trifoliate orange.",
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[1].sources",
+  "kind": "sources",
+  "old": [
+   "tamu_agrilife",
+   "uf_ifas_hs1153"
+  ],
+  "new": [
+   "tamu_agrilife",
+   "uf_ifas_hs1153",
+   "ucce_placer_nevada_31_018c"
+  ],
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[1].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "tamu_agrilife": {
+    "url": "https://agrilifeextension.tamu.edu",
+    "verified": "2026-06-12"
+   },
+   "uf_ifas_hs1153": {
+    "url": "https://edis.ifas.ufl.edu/publication/HS402",
+    "verified": "2026-06-12"
+   }
+  },
+  "new": {
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_hs1153": {
+    "url": "https://edis.ifas.ufl.edu/publication/HS402",
+    "verified": "2026-10-16"
+   },
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-16"
+   }
+  },
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[2].name",
+  "kind": "rename",
+  "old": "Carrizo / Swingle citrumelo (trifoliate hybrids)",
+  "new": "Swingle citrumelo",
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C: renamed"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[2].size_class",
+  "kind": "value",
+  "old": null,
+  "new": "semi_dwarf",
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[2].mature_height_ft",
+  "kind": "value",
+  "old": null,
+  "new": [
+   8,
+   14
+  ],
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[2].traits_seasoned",
+  "kind": "prose",
+  "old": "Trifoliate-orange hybrids with good foot-rot resistance and reasonable cold tolerance, widely used in modern nursery production. Swingle citrumelo is slower-growing and relatively cold tolerant; Carrizo is more vigorous and somewhat more freeze-sensitive than Swingle.",
+  "new": "Swingle is a citrumelo, a cross of Duncan grapefruit and trifoliate orange. UF/IFAS says lemons on acid to neutral sandy soils do well on it. UC Riverside found it well adapted in some cases to Lisbon-type lemons. It resists Phytophthora foot rot and citrus nematode, and it tolerates tristeza virus. Its cold hardiness is good. It is not adapted to heavy clay or calcareous soils.",
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[2].traits_beginner",
+  "kind": "prose",
+  "old": "A common modern rootstock with good disease resistance.",
+  "new": "Swingle is a common rootstock for lemons on sandy soil that is not alkaline. It resists foot rot and holds up against tristeza virus and cold. It does poorly in heavy clay or alkaline soil.",
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[2].what_to_ask_nursery",
+  "kind": "prose",
+  "old": "Ask whether the tree is on a trifoliate-hybrid rootstock such as Carrizo or Swingle for disease resistance.",
+  "new": "On sandy soil that is acid to neutral, ask whether the tree is on Swingle citrumelo.",
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[2].sources",
+  "kind": "sources",
+  "old": [
+   "uf_ifas_hs132",
+   "uf_ifas_hs1153"
+  ],
+  "new": [
+   "ucr_citrus",
+   "uf_ifas_hs1153",
+   "uf_ifas_hs1260"
+  ],
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[2].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "uf_ifas_hs132": {
+    "url": "https://edis.ifas.ufl.edu/publication/HS132",
+    "verified": "2026-06-12"
+   },
+   "uf_ifas_hs1153": {
+    "url": "https://edis.ifas.ufl.edu/publication/HS402",
+    "verified": "2026-06-12"
+   }
+  },
+  "new": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc3771",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_hs1153": {
+    "url": "https://edis.ifas.ufl.edu/publication/HS402",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_hs1260": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-16"
+   }
+  },
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "rootstock_options[3]",
+  "kind": "row",
+  "old": "<absent>",
+  "new": {
+   "name": "Rough lemon / macrophylla (alemow)",
+   "size_class": null,
+   "mature_height_ft": null,
+   "spread_ft": null,
+   "container_suitable": null,
+   "container_size_gallons": null,
+   "bearing_age_years": null,
+   "what_to_ask_nursery": "If your soil is alkaline, ask whether the tree is on rough lemon or macrophylla.",
+   "traits_seasoned": "UF/IFAS recommends rough lemon or macrophylla (alemow) for lemons in high-pH, calcareous soils. Trees on either rootstock are very vigorous. Rough lemon is susceptible to Phytophthora foot rot. Lemons on these rootstocks are susceptible to less-severe tristeza strains as well as severe ones. Because macrophylla is susceptible to tristeza, UF/IFAS says removing rootstock sprouts is important. UC rates both as highly sensitive to frost.",
+   "traits_beginner": "These are vigorous rootstocks for alkaline soil. They are more prone to tristeza virus, rough lemon is prone to foot rot, and both are very sensitive to frost. Pull off any shoots that sprout from below the graft.",
+   "sources": [
+    "uf_ifas_hs1153",
+    "uc_anr_8100"
+   ],
+   "anchoring_urls": {
+    "uf_ifas_hs1153": {
+     "url": "https://edis.ifas.ufl.edu/publication/HS402",
+     "verified": "2026-10-16"
+    },
+    "uc_anr_8100": {
+     "url": "https://escholarship.org/content/qt5hh528qp/qt5hh528qp.pdf",
+     "verified": "2026-10-16"
+    }
+   }
+  },
+  "cited_at": "rootstock_options[3]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C: new row"
+ },
+ {
+  "crop": "lemon",
+  "path": "recommended_rootstock",
+  "kind": "value",
+  "old": "sour orange (Citrus aurantium)",
+  "new": null,
+  "cited_at": "recommended_rootstock_note",
+  "reason": "nulled (PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C)"
+ },
+ {
+  "crop": "lemon",
+  "path": "recommended_rootstock_note",
+  "kind": "prose",
+  "old": "At a retail nursery you usually take whatever industry-standard rootstock the tree is grafted on; it is rarely a choice. Where it is, sour orange is the broad default: well adapted to most soils, productive, good fruit quality, and foot-rot (Phytophthora) resistant. Tristeza virus is a lemon problem rather than a rootstock one: lemon trees are susceptible to severe tristeza strains whatever the rootstock, and also to milder strains when grown on macrophylla or rough lemon. Buying certified disease-free trees reduces the chance of bringing one home infected. In colder sites trifoliate orange or its hybrids (Carrizo, Swingle citrumelo) add a few degrees of cold hardiness and resist foot rot, at the cost of poor tolerance of high-pH or saline soils. Note that scion choice, not rootstock, is the bigger driver of a lemon's own cold hardiness.",
+  "new": "Rootstocks are usually not a choice at retail garden centers, because trees come grafted onto industry-standard rootstocks. UF/IFAS matches lemon rootstocks to the soil: Swingle citrumelo on acid to neutral sandy soils, and rough lemon or macrophylla on high-pH, calcareous soils. Lemons are susceptible to severe tristeza strains whatever the rootstock, and to less-severe strains on macrophylla and rough lemon. Tristeza can kill citrus trees quickly, especially on sour orange rootstock. Buying a certified disease-free tree reduces the chance of bringing home an infected one. In colder areas, trifoliate orange adds cold hardiness, but it does poorly in saline or highly alkaline soil.",
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "recommended_rootstock_note_sources",
+  "kind": "sources",
+  "old": null,
+  "new": [
+   "uf_ifas_hs132",
+   "uf_ifas_hs1153",
+   "tamu_agrilife"
+  ],
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "recommended_rootstock_note_anchoring_urls",
+  "kind": "anchors",
+  "old": null,
+  "new": {
+   "uf_ifas_hs132": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS132",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_hs1153": {
+    "url": "https://edis.ifas.ufl.edu/publication/HS402",
+    "verified": "2026-10-16"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-16"
+   }
+  },
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C"
+ },
+ {
+  "crop": "lemon",
+  "path": "verification_status.open_findings",
+  "kind": "record",
+  "old": [
+   {
+    "id": "lemon_app_enum_dependency",
+    "summary": "6A added 7 new citrus enum values that drive the iOS notification/weather engine (actions fertilize/protect_from_frost/guard_against_heat_stress/avoid_oil_in_heat; offset anchors fruit_set/spring_growth_start; stage mature_bearing). The app track must support them for citrus alerts (esp. frost protection) to fire. Dataset-correct; app-side owed.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "lemon_cert",
+    "status": "open"
+   },
+   {
+    "id": "lemon_start_method_sources_slot",
+    "summary": "start_method (and moon_phase_preference) have no structured sources/anchoring_urls slot in the schema; UF/IFAS citations are inline in the notes prose. Schema decision owed (add a sources slot to slot-less containers vs accept inline).",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "lemon_cert",
+    "status": "open"
+   },
+   {
+    "id": "lemon_rotation_shape",
+    "summary": "rotation dict is annual-shaped; authored honestly N/A for a permanent tree + the citrus replant-decline caveat. The perennial-aware rotation variant is still owed in the tree spec (shared with peach + apple).",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "lemon_cert",
+    "status": "open"
+   },
+   {
+    "id": "lemon_verbatim_uncovered",
+    "summary": "1 of 20 cited URLs (postharvest.ucdavis.edu) 403-blocked the verbatim fetch, so storage prose could not be text-compared; the source is legitimate (UC Davis Postharvest) and was used at authoring.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "lemon_cert",
+    "status": "open"
+   },
+   {
+    "id": "lemon_cold_threshold_was_miscredited_now_uc8100",
+    "severity": "medium",
+    "status": "resolved",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_lemon_cold_2026_08_06",
+    "summary": "lemon carried frost_tolerance_f = 28 and a \"high-20s F\" prose claim while hardiness_notes_seasoned credited \"Clemson HGIC, Texas A&M AgriLife, UF/IFAS\". Of those three, ONLY UF/IFAS publishes lemon cold figures: HS1153/HS402 \"Lemon Growing in the Florida Home Landscape\" (cited by this crop as uf_ifas_hs1153) gives defoliation at 22-24F, severe wood damage at 20F, flowers and young fruit killed at 29F, and mature fruit damaged at 28F to 31F. Clemson's cold-tolerance page publishes satsuma and kumquat at 15F and no lemon number; TAMU's citrus fact sheet publishes satsuma 18F plus freeze-protection operating points (sprinkler 28F calm / 30F windy) and no lemon number. So the mis-credit is TWO of three, not three of three. RESOLVED by minting uc_anr_8100 (UC ANR 8100), which publishes the damage ONSET for tender citrus at 29F sustained 30 minutes or longer and whose Table 1 rates lemon Citrus limon H, and by moving frost_tolerance_f 28 -> 29 to match that onset. HISTORY WORTH KEEPING: an earlier pass reported this number appeared in 0 of the 17 readable documents lemon cites and nearly filed that as an absence. The zero was the instrument -- the scan required a temperature to be \"lemon-adjacent\", and in HS402 the nearest \"lemon\" is 333 characters from the figures because on a crop monograph the crop is the section subject and the passage's own subject noun is \"trees\". Any proximity window under ~333 chars returns a confident zero. tools/cited_claim_scan.py is the regression. STILL OWED, deliberately not done here because this promote moved no consumer prose: the hardiness_notes_seasoned credit parenthetical still reads \"(Sources: Clemson HGIC, Texas A&M AgriLife, UF/IFAS.)\" and should name UC ANR 8100 and UF/IFAS HS402 for the number. [CORRECTION 2026-08-06: the credit parenthetical quoted above as STILL OWED has now been corrected, in the follow-on promote that produced this record. It reads \"(Sources: cold-damage temperatures UC ANR 8100 and UF/IFAS HS1153; cold-hardiness ranking and freeze protection Clemson HGIC and Texas A&M AgriLife.)\". The change is PER-CLAIM, not a swap: Clemson HGIC and Texas A&M AgriLife are removed from the TEMPERATURE, which neither publishes, and kept for the cold-hardiness ranking and the freeze-protection guidance that they do (TAMU excludes lemon from its cold-hardy list and carries the container-culture and sprinkler operating points; Clemson publishes the 15F hardiest-citrus figure). Bare \"UF/IFAS\" was made specific to HS1153, because this crop cites both HS1153 and HS132 and it is HS1153 that publishes lemon figures. Nothing else in the string moved: the claim text before the parenthetical is byte-identical to 6b2dcb8e, including the leaves-and-fruit stage wording that an earlier draft wrongly proposed rewriting.]"
+   },
+   {
+    "id": "lemon_ca_interior_uc_ipm_repointed_to_freeze_page",
+    "severity": "low",
+    "status": "resolved",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_lemon_cold_2026_08_06",
+    "summary": "lemon ca_interior zone 8 and zone 9 cited uc_ipm at the bare host https://ipm.ucanr.edu. The two UC IPM citrus pages lemon cites elsewhere (agriculture/citrus/ and the home and landscape citrus page) are pest and disease documents carrying zero occurrences of \"hardy\", \"cold hard\" or any temperature, so the first read of this hunt called it CASE 2, a right-document-wrong-claim dead end. That was scoped to the two pages we cite and was wrong about the host: UC IPM publishes a freezing-and-frost-damage-to-citrus page we did NOT cite, verified live at HTTP 200, which states that \"Eureka lemon and grapefruit are among the most cold-sensitive scions, whereas mandarin, Meyer lemon, and sweet orange are more cold hardy\". Both cells are SUITABILITY cells (survives_no_fruit at z8, marginal at z9) and a sensitivity RANKING is exactly the right support for a suitability enum, so both are repointed. SCOPE IT: that page publishes a ranking and NO temperature -- it must not be cited for the numeric threshold. The ucanr_ext arm of these same two cells stays bare; that is hunt #3 and it is still open."
+   },
+   {
+    "id": "lemon_warm_arid_plantings_no_citrus_document",
+    "severity": "low",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_lemon_cold_2026_08_06",
+    "summary": "lemon warm_arid plantings[0] and its plant_out[0] arm cite bare uariz_ext (https://extension.arizona.edu) and bare clemson_hgic (https://hgic.clemson.edu), and NO sibling citrus crop cites a pathed document for either node. Arizona's dominant pathed document in this dataset is AZ1005, a VEGETABLE planting calendar, which is the campaign-A shape of a vegetable table standing as sole source on a tree crop. CASE 2: no document hunt remains, what is left is authoring. Recorded because the decision-level verdict masked it -- hunt #31 read SIBLING-PATHED on the strength of ONE zone cell while covering 1 of its 3 nodes, and the zone-8 cell (which does have a sibling document) is repointed in this same promote while these two are deliberately left bare."
+   },
+   {
+    "id": "lemon_tamu_table_1_not_in_text_layer",
+    "severity": "low",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_lemon_cold_2026_08_06",
+    "summary": "The TAMU citrus fact sheet (aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/) refers in prose to a \"Table 1\" of variety characteristics which may carry a cold-hardiness column, but that table is NOT present in the cached text layer of the page. UNDETERMINED, not an absence: the document is readable and is not a WAF block, so the table is either an image, a separate asset, or dropped by extraction. It is the one thing that could still change the answer on hunts #26 and #27, whose zone cells are repointed at this document in this promote on the strength of its cold-hardy-types list (which excludes lemon) rather than on any table."
+   },
+   {
+    "id": "lemon_cold_threshold_single_source_divergence",
+    "severity": "low",
+    "status": "resolved",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_lemon_cold_2026_08_06",
+    "summary": "Six T1 citrus cold documents were read for a lemon-applicable damage temperature, and they do not agree. Recorded so the next reader does not re-hunt this. UC ANR 8100 publishes 29F as the damage ONSET for tender citrus, qualified \"for 30 minutes or longer\", under a \"Trees\" heading kept separate from its \"Fruits\" section, and it discriminates by sensitivity class: its Table 1 rates lemon Citrus limon H. LSU AgCenter publishes about 26F for leaf or wood damage, but as ONE category-level figure for \"all other citrus\" -- everything except satsumas and kumquats, which lumps M-rated grapefruit and orange in with H-rated lemon and lime. 8100 wins on SCOPE, not on being the warmer number: it is the more specific instrument for a crop its own table rates H. CRITICALLY, 8100 frames a damage CURVE and not a cliff (\"Greater damage occurs with colder temperatures, a longer duration of cold, or higher relative humidity\"), so a colder figure further along that curve is NOT a contradiction: UF/IFAS HS402 gives lemon-specific DEFOLIATION at 22-24F and severe wood damage at 20F, which are severity ENDPOINTS, never competing onsets. Fruit is a separate axis again: HS402 gives mature fruit damage at 28-31F and 8100 Table 2 gives buds and blossoms 27.0F and tree-ripe lemons 26.0-30.5F. Documents that publish NO lemon-applicable damage temperature at all: Clemson cold-tolerance (satsuma and kumquat 15F only), TAMU citrus fact sheet (satsuma 18F and freeze-protection operating points), UF/IFAS HS132 (cold annotations for calamondin, kumquat and Key lime, and none for lemon), UC IPM freeze page (a ranking, zero temperatures). Twelve of lemon's 29 cited URLs are uncached and remain UNDETERMINED rather than silent. [AMENDMENT 2026-08-06: a SEVENTH document, never cited by lemon, publishes a figure for exactly this crop. UCCE Placer/Nevada 31-018C (Fake, 2020), \"Growing Citrus in the Sierra Nevada Foothills\", gives a cultivar-named ladder ending \"grapefruit (26F) > true lemons (Eureka, Lisbon) (28F) > lime (30F)\". It names Eureka and Lisbon, the cultivars this parent entry covers, and its 28 matches the value this dataset carried before ae15df4 moved it to 29 -- and its lime 30 matches our lime exactly, two rungs on a seven-rung ladder, which is a strong inference that this ladder or its lineage is where our citrus numbers came from uncited. Trevor RULED KEEP 29 on 2026-08-06: UC ANR 8100 is a numbered, peer-reviewed publication giving a duration-qualified damage ONSET (29F sustained 30 minutes or longer) and is the warmer safety edge, whereas 31-018C self-describes its numbers as \"guidelines to assist in selecting appropriate species\" -- a selection guideline, not an onset threshold. Tier plus claim-type decides it; 31-018C's greater cultivar specificity does not override. CAUTION: 31-018C is NOT INDEPENDENT of the Meyer 22F figure this crop already cites (Fake & Norton, 134971.pdf) -- same author, same ladder, ONE lineage, the reprint trap in a new costume. AND THIS FINDING'S OWN FRAMING OF 26F IS NOW UNDERSTATED: it presents LSU AgCenter's 26F as a lone category-level figure, but UC MG Sacramento GN 127 independently publishes \"Lemons and grapefruit 26F\" for leaf and branch damage. TWO institutions publish 26F, not one. The ruling to keep 29 still holds -- 29 remains the only duration-qualified onset figure and the safety edge -- but the record must be honest about what sits on the other side.]"
+   },
+   {
+    "id": "lemon_ca_interior_harvest_modeled_no_uc_window",
+    "severity": "low",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_six_2026_08_06",
+    "summary": "MODELED DECLARATION, scoped to the documents read. No UC document read for campaign D publishes a lemon-specific harvest window for California's Central Valley, so ca_interior harvest_start and harvest_end remain modeled rather than sourced. Enumerated per absence-findings-are-document-scoped: UC MG Sacramento GN 127 (Central Valley) gives GENUS-LEVEL harvest only, \"most citrus varieties ripen from late fall through winter\", and its recommended home-garden varieties are navel and Valencia oranges, Satsuma mandarin, Meyer lemon and Bearss lime -- no true lemon; UCCE Kern KC9382 (San Joaquin) is a cultural and troubleshooting guide and publishes none; UC IPM's citrus timing chart is explicitly Central Valley but its Harvest row is GENERIC CITRUS; UCCE Merced's only citrus resource is UCCE Placer/Nevada #15C, the Fake lineage already covered. WHY THE GENUS-LEVEL STATEMENTS ARE NOT USED even though the form is admissible: F5 accepts LSU's category-level \"about 26F for all other citrus\", so a \"most varieties\" claim is admissible in FORM -- but lemon is the documented EXCEPTION to genus-level citrus harvest patterns, described as ever-bearing or year-round by four independent sources, so applying a most-varieties window to the crop repeatedly named as the exception is the wrong instrument. PARTIAL EXPLANATION, stated as partial: Sacramento's variety list suggests UC does not publish a Central Valley true-lemon harvest window because it does not really recommend true lemon there for home gardens. EVIDENCE AGAINST THAT, recorded rather than omitted: the Crop Profile for Citrus in California (2003) states Lisbon lemons are better adapted to the Desert, Interior and San Joaquin Valley regions with fruit harvested over a nine-month period. Both can be true -- the Crop Profile is commercial and Sacramento is home-garden. The Crop Profile is a LEAD, NOT A SOURCE: it gives a duration with no anchor, so citing it for harvest_start or harvest_end would credit a document for a claim it does not make, and its authorship is a stakeholder panel rather than extension-authored or peer-reviewed despite the UC host. Tier undecided; not admitted. WHAT \"MODELED\" DOES AND DOES NOT CLAIM HERE. It is a PROVENANCE statement -- this value came from the model rather than from a document -- and it is NOT a statement that the value is correct. An unqualified declaration would read as modeled-and-therefore-fine. ca_interior's harvest span is 95 days, which sits inside the suspect group flagged by PLA-151 (evergreen_fruit_tree harvest arms model an ever-bearing habit through a bloom-anchored offset built for determinate fruit): all 478 tree harvest arms anchor on bloom_start, which is correct for a determinate deciduous fruit and the wrong instrument for an evergreen ever-bearing one, doubly so here because lemon's bloom is itself modeled. So this cell may be both UNSOURCED and TOO NARROW, and those are separate defects with separate fixes."
+   },
+   {
+    "id": "lemon_bloom_modeled_every_region",
+    "severity": "low",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_six_2026_08_06",
+    "summary": "MODELED DECLARATION. lemon's bloom arm stays modeled in EVERY region, including the Central Valley where a chart does exist. No T1 publishes a lemon bloom window for ca_north_coast, ca_south_coast, ca_desert or low_desert_az at all. For ca_interior a chart exists and is deliberately NOT used as lemon's bloom: UC IPM's citrus timing chart (UC ANR Pub 3441), re-derived from raw HTML 2026-08-06 rather than from a rendered image, gives a Bloom period of March plus the first half of April and is explicitly scoped to California's Central Valley -- but it is a COMMERCIAL Pest Management Guideline covering citrus generally, and Central Valley commercial citrus is dominated by navels and mandarins. It is citable for the main bloom of Central Valley CITRUS GENERALLY and must not be written as lemon's bloom. THE DEEPER REASON and the ruling behind this declaration: lemon may not have a discrete bloom window at all. Four independent sources describe it as ever-bearing -- Mauk & Shea (Improved Meyer \"bears year round\"), UC MG Santa Clara (Eureka \"some fruit year-round\"), UC Marin MG (\"lemons and limes are considered ever-bearing\"), UCCE SLO (flowers and fruit in spring, summer and fall) -- so filling a single Mar to mid-Apr window would assert a discrete bloom for the crop repeatedly named as the exception, the same error as reading lemon off UC IPM's generic Harvest row or off Lazaneo's hardiness ranking. Three UC counties PLACE the spring bloom without publishing it, by timing work around it: Sacramento fertilizes \"in March before bloom\", Santa Clara \"February or March before bloom\", SLO notes maximum stored food \"late February/early March just before spring bloom\". Placing is not publishing."
+   },
+   {
+    "id": "lemon_harvest_arms_uncitable_as_structured_and_may_render_too_narrow",
+    "severity": "medium",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_six_2026_08_06",
+    "summary": "USER-FACING CONTENT FINDING, not citation hygiene. Documents were FOUND for the low_desert_az, ca_desert and ca_south_coast harvest arms and were deliberately NOT cited, because no citation is admissible for these arms as they are currently structured. The documents publish ABSOLUTE CALENDAR WINDOWS; the cells compute from bloom_start plus an offset; and bloom is itself MODELED (see lemon_bloom_modeled_every_region). So the displayed value is produced by the model, not by any document. Repointing would credit a document for a value it did not produce, which is the defect F1 exists to record. Converting the documents' absolute windows into bloom-anchored offsets would be worse: it pushes a sourced window through an unsourced anchor and then cites the document for the composite. THE CONSEQUENCE, SCOPED HONESTLY AFTER THE SOURCE-TRUTH SAMPLE. There are TWO reader-facing harvest surfaces and they disagree with each other. The zone-level harvest STRING is separately authored and is broadly consistent with the sources, several cells carrying an explicit year-round caveat: ca_south_coast reads \"Nov - Mar (and scattered year-round; heaviest late winter to spring)\" against Mauk & Shea's \"bears year round on the coast\", and low_desert_az reads \"Nov - Mar (Eureka bears year-round)\". The OFFSET-COMPUTED arms are the narrower surface: low_desert_az computes about 60 days where UA AZ1001 marks Eureka and Lisbon across fourteen half-month cells, August through February inclusive. Both surfaces render -- harvest_start and harvest_end drive plant-astro's SuccessionCard, TodayCommunityCard and PlantingCalendarCard, while the zone string renders elsewhere. AN EARLIER DRAFT OF THIS FINDING SAID a first-season grower is shown a harvest season roughly five months too short. THE SOURCE-TRUTH SAMPLE REFUTED THAT before it shipped: the reader also sees the harvest string and its year-round caveat, so the alarming version was not established. What IS established is narrower and still worth fixing: the two surfaces disagree, the offset-derived one is narrower than every source read, and low_desert_az's string omits August through October entirely -- three months AZ1001 marks for both cultivars. INTERNAL CORROBORATION NEEDING NO DOCUMENT: lime shares all nine of lemon's regions and is described by the same sources as the same ever-bearing habit, yet lime is modeled at a 180-day span in eight of them while lemon runs 60 to 125. AZ1001 is reachable at https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1001.pdf ; the /publication/low-desert-citrus-varieties path 403s in both plain and browser user-agent modes while the host root returns 200, so the block is path-specific rather than a bot policy. NOT YET RESOLVED: whether this is lemon-specific or an evergreen_fruit_tree modelling issue is under separate diagnosis."
+   },
+   {
+    "id": "lemon_regional_anchor_ids_declared_modeled_where_no_document_exists",
+    "severity": "low",
+    "status": "resolved",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_close_d_2026_08_06",
+    "summary": "ADJUDICATING DECLARATION for lemon's bare regional anchor ids, filed to CLOSE the decisions rather than to describe them. NAMES the ids and DECLARES the anchor, which is the distinction that matters: the findings filed in the section-7 promote named `ucanr_ext` and `uariz_ext` only to DECLINE them (\"the ucanr_ext arm stays bare; that is hunt #3 and it is still open\"), which satisfies a vocabulary scan and closes nothing. DECLARED HERE, for `ucanr_ext` on ca_interior, ca_north_coast, ca_south_coast and ca_desert, for `uariz_ext` on low_desert_az, ca_desert and warm_arid, and for `clemson_hgic` on warm_arid (hunt #31, whose plantings container and plant_out arm have no sibling citrus document at all): on the arms that still cite them bare -- `plantings`, `bloom`, `harvest_start`, `harvest_end`, `resolved_by_zone` and low_desert_az `plant_out` -- these ids are INSTITUTION-ROOT PORTALS standing for the UC ANR and University of Arizona Cooperative Extension programmes, and the windows they anchor are MODELED, not lifted from a chart. The campaign D document read was exhaustive and is recorded across this crop's findings: no T1 publishes a lemon bloom window for any region (see lemon_bloom_modeled_every_region); no UC document publishes a lemon harvest window for the Central Valley (see lemon_ca_interior_harvest_modeled_no_uc_window); and UA AZ1001, which does publish a low-desert harvest window, is inadmissible for arms computed from a modeled bloom anchor (see lemon_harvest_arms_uncitable_as_structured_and_may_render_too_narrow). PLANT_OUT IS THE EXCEPTION AND IS NOW SOURCED: four CA plant_out arms are repointed in this promote onto the UC documents that publish the frost-anchored planting rule (UCCE Kern KC9382, UC Marin MG, Lazaneo/San Diego, Mauk & Shea/Riverside). low_desert_az plant_out stays declared because AZ1001 publishes no planting date."
+   },
+   {
+    "id": "campaign_d_metric_counts_adjudication_not_citation_repair",
+    "severity": "medium",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_close_d_2026_08_06",
+    "summary": "THE LIMITATION THIS CAMPAIGN CLOSES ON, recorded so no future reader mistakes the completion signal for the state of the data. `campaign_d_reprice` answers \"are the DECISIONS adjudicated\", not \"are the CITATIONS fixed\", and on lemon and lime those two diverge by 51. MECHANISM, measured not inferred: `bare_host_scan` sets is_sole=False when a cell cites ANY non-bare source, and the re-price filters on it. So a bare citation is invisible to the count whenever a PATHED CO-SOURCE sits on the same cell, whatever its source id. Adding a pathed document alongside a bare one therefore REMOVES the bare citation from the metric without fixing it. MEASURED AT THE CLOSE: lemon and lime carry 166 bare citations; the re-price counts only the sole-source ones; 51 remain bare and uncounted after this promote. Largest residues: lime `ucanr_ext` 19, lemon `ucanr_ext` 13 before this promote's four repoints, lemon `tamu_agrilife` 11, lemon `clemson_hgic` 3. THIS ALREADY BIT US TWICE. Hunt #28 (se_gulf/clemson_hgic) left the decision count during the 6b2dcb8e->29b96b65 promote while its citation is STILL BARE at se_gulf.resolved_by_zone.8 -- it was masked when TAMU on the same cell was repointed. And five of the section-7 promote's node reductions were masking, not fixing. Of the 23-node reduction across this arc, 15 nodes genuinely became pathed and 8 were merely hidden. NOT A BUG. The decision unit was chosen deliberately and campaign A refined it; a collapsed unit is the right instrument for pricing research. But a deliberate design that emits a misleading COMPLETION signal is still a limitation the record must carry, and this is the fifth instrument failure of this class in the campaign -- the previous four were zeros that were wrong, this is a completion that would be. Filed to PLA-138, whose charter covers scan blind spots, because it generalises: ANY campaign closing on a collapsed unit can close on paper while the underlying defect persists."
+   },
+   {
+    "id": "lemon_se_gulf_clemson_hgic_declared_no_claim_rests_on_it",
+    "severity": "low",
+    "status": "resolved",
+    "blocks_launch": false,
+    "filed_in_session": "pla161_hunt28_2026_08_18",
+    "summary": "ADJUDICATING DECLARATION for clemson_hgic on se_gulf resolved_by_zone.8 (hunt #28), filed to CLOSE the decision rather than to describe it. Clemson HGIC's cold-tolerance-in-citrus page was read in full on 2026-08-18 against this node's claims. It publishes one temperature figure, 15F for satsuma, and names kumquat at the same threshold. It mentions lemon exactly once, in a taxonomy list, and publishes no lemon damage temperature, no zone-level judgement for the Southeast Gulf, and no distinction between surviving and fruiting. This node's claims, a high-20s F lemon threshold and survives_no_fruit, are not supported by this document and are anchored to uc_anr_8100. This crop's certification record already ruled the same document at the same claim in the resolved finding lemon_cold_threshold_was_miscredited_now_uc8100. No claim on this node rests on this document. The citation is recorded here as adjudicated rather than dropped, so that a future reader does not re-open it."
+   },
+   {
+    "id": "lemon_tristeza_is_rootstock_independent",
+    "severity": "medium",
+    "status": "resolved",
+    "blocks_launch": false,
+    "filed_in_session": "pla466_rootstock_2026_09_21",
+    "summary": "CONTRADICTED, not merely unsupported, and corrected. The crop said tristeza susceptibility is 'in some scion combinations'. HS1153/HS402 states: 'Lemons are susceptible to severe tristeza virus strains regardless of rootstock, and less severe strains when propagated on Citrus macrophylla (macrophylla) and rough lemon ( C. jambhiri ) rootstocks.' Both the crop-level note and the sour orange row's traits_seasoned were corrected. SCOPE: only the tristeza claim is corrected. The note's other claims are NOT verified by this pass. HS402 ties its certified-tree advice to Florida's budwood program and the new copy generalizes to certified trees.",
+    "basis": "HS1153/HS402 read live 2026-09-21 from raw bytes, 158,367 bytes, sha256 50436e71fe8fb2bcaee7949f83f9fb192cdc3c0cbe875f7b6b74808f5f9459fb."
+   },
+   {
+    "id": "lemon_semi_dwarf_labels_unsourced_nulled",
+    "severity": "medium",
+    "status": "resolved",
+    "blocks_launch": false,
+    "filed_in_session": "pla466_rootstock_2026_09_21",
+    "summary": "size_class NULLED (not set to standard) on trifoliate orange and Carrizo / Swingle citrumelo, and their container_suitable flags nulled. No cited page supports a size claim: dwarf 0 and semi-dwarf 0 in all four cited UF/IFAS documents, and the non-dwarf size vocabulary was checked too (every 'smaller' hit is nursery pots, psyllid nymphs or zinc-deficient leaves). HS132 does not mention trifoliate, Swingle, Carrizo or sour orange at all. standard would have been an unread value. RECORDED REASON for the null: the only T1 that rates these rootstocks, SP248/HS1260, uses a Sm/I/Lg scale the dataset has not mapped, and it rates Swingle citrumelo I (intermediate), not small. That is UNDETERMINED, not contradicted. rootstock_selection_basis is deliberately NOT touched: held until Plan E applies Rule N, because the pre-Rule-N mechanical test would read the remaining {standard} and return soil_and_pest on a question that is undetermined.",
+    "basis": "HS402 sha256 50436e71fe8fb2bcaee7949f83f9fb192cdc3c0cbe875f7b6b74808f5f9459fb; HS132 sha256 5b22371df47e8a27e3b138079b6e8e41e246caeefb31af114febd07c975d183a; HS1260 sha256 9503b58425e7c94b15f500c88654714f24b9b39ba58cffaf887f4ecf0c2dec27. All read live 2026-09-21.",
+    "deferred_to": "PLA-567"
+   }
+  ],
+  "new": [
+   {
+    "id": "lemon_app_enum_dependency",
+    "summary": "6A added 7 new citrus enum values that drive the iOS notification/weather engine (actions fertilize/protect_from_frost/guard_against_heat_stress/avoid_oil_in_heat; offset anchors fruit_set/spring_growth_start; stage mature_bearing). The app track must support them for citrus alerts (esp. frost protection) to fire. Dataset-correct; app-side owed.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "lemon_cert",
+    "status": "open"
+   },
+   {
+    "id": "lemon_start_method_sources_slot",
+    "summary": "start_method (and moon_phase_preference) have no structured sources/anchoring_urls slot in the schema; UF/IFAS citations are inline in the notes prose. Schema decision owed (add a sources slot to slot-less containers vs accept inline).",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "lemon_cert",
+    "status": "open"
+   },
+   {
+    "id": "lemon_rotation_shape",
+    "summary": "rotation dict is annual-shaped; authored honestly N/A for a permanent tree + the citrus replant-decline caveat. The perennial-aware rotation variant is still owed in the tree spec (shared with peach + apple).",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "lemon_cert",
+    "status": "open"
+   },
+   {
+    "id": "lemon_verbatim_uncovered",
+    "summary": "1 of 20 cited URLs (postharvest.ucdavis.edu) 403-blocked the verbatim fetch, so storage prose could not be text-compared; the source is legitimate (UC Davis Postharvest) and was used at authoring.",
+    "severity": "low",
+    "blocks_launch": false,
+    "filed_in_session": "lemon_cert",
+    "status": "open"
+   },
+   {
+    "id": "lemon_cold_threshold_was_miscredited_now_uc8100",
+    "severity": "medium",
+    "status": "resolved",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_lemon_cold_2026_08_06",
+    "summary": "lemon carried frost_tolerance_f = 28 and a \"high-20s F\" prose claim while hardiness_notes_seasoned credited \"Clemson HGIC, Texas A&M AgriLife, UF/IFAS\". Of those three, ONLY UF/IFAS publishes lemon cold figures: HS1153/HS402 \"Lemon Growing in the Florida Home Landscape\" (cited by this crop as uf_ifas_hs1153) gives defoliation at 22-24F, severe wood damage at 20F, flowers and young fruit killed at 29F, and mature fruit damaged at 28F to 31F. Clemson's cold-tolerance page publishes satsuma and kumquat at 15F and no lemon number; TAMU's citrus fact sheet publishes satsuma 18F plus freeze-protection operating points (sprinkler 28F calm / 30F windy) and no lemon number. So the mis-credit is TWO of three, not three of three. RESOLVED by minting uc_anr_8100 (UC ANR 8100), which publishes the damage ONSET for tender citrus at 29F sustained 30 minutes or longer and whose Table 1 rates lemon Citrus limon H, and by moving frost_tolerance_f 28 -> 29 to match that onset. HISTORY WORTH KEEPING: an earlier pass reported this number appeared in 0 of the 17 readable documents lemon cites and nearly filed that as an absence. The zero was the instrument -- the scan required a temperature to be \"lemon-adjacent\", and in HS402 the nearest \"lemon\" is 333 characters from the figures because on a crop monograph the crop is the section subject and the passage's own subject noun is \"trees\". Any proximity window under ~333 chars returns a confident zero. tools/cited_claim_scan.py is the regression. STILL OWED, deliberately not done here because this promote moved no consumer prose: the hardiness_notes_seasoned credit parenthetical still reads \"(Sources: Clemson HGIC, Texas A&M AgriLife, UF/IFAS.)\" and should name UC ANR 8100 and UF/IFAS HS402 for the number. [CORRECTION 2026-08-06: the credit parenthetical quoted above as STILL OWED has now been corrected, in the follow-on promote that produced this record. It reads \"(Sources: cold-damage temperatures UC ANR 8100 and UF/IFAS HS1153; cold-hardiness ranking and freeze protection Clemson HGIC and Texas A&M AgriLife.)\". The change is PER-CLAIM, not a swap: Clemson HGIC and Texas A&M AgriLife are removed from the TEMPERATURE, which neither publishes, and kept for the cold-hardiness ranking and the freeze-protection guidance that they do (TAMU excludes lemon from its cold-hardy list and carries the container-culture and sprinkler operating points; Clemson publishes the 15F hardiest-citrus figure). Bare \"UF/IFAS\" was made specific to HS1153, because this crop cites both HS1153 and HS132 and it is HS1153 that publishes lemon figures. Nothing else in the string moved: the claim text before the parenthetical is byte-identical to 6b2dcb8e, including the leaves-and-fruit stage wording that an earlier draft wrongly proposed rewriting.]"
+   },
+   {
+    "id": "lemon_ca_interior_uc_ipm_repointed_to_freeze_page",
+    "severity": "low",
+    "status": "resolved",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_lemon_cold_2026_08_06",
+    "summary": "lemon ca_interior zone 8 and zone 9 cited uc_ipm at the bare host https://ipm.ucanr.edu. The two UC IPM citrus pages lemon cites elsewhere (agriculture/citrus/ and the home and landscape citrus page) are pest and disease documents carrying zero occurrences of \"hardy\", \"cold hard\" or any temperature, so the first read of this hunt called it CASE 2, a right-document-wrong-claim dead end. That was scoped to the two pages we cite and was wrong about the host: UC IPM publishes a freezing-and-frost-damage-to-citrus page we did NOT cite, verified live at HTTP 200, which states that \"Eureka lemon and grapefruit are among the most cold-sensitive scions, whereas mandarin, Meyer lemon, and sweet orange are more cold hardy\". Both cells are SUITABILITY cells (survives_no_fruit at z8, marginal at z9) and a sensitivity RANKING is exactly the right support for a suitability enum, so both are repointed. SCOPE IT: that page publishes a ranking and NO temperature -- it must not be cited for the numeric threshold. The ucanr_ext arm of these same two cells stays bare; that is hunt #3 and it is still open."
+   },
+   {
+    "id": "lemon_warm_arid_plantings_no_citrus_document",
+    "severity": "low",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_lemon_cold_2026_08_06",
+    "summary": "lemon warm_arid plantings[0] and its plant_out[0] arm cite bare uariz_ext (https://extension.arizona.edu) and bare clemson_hgic (https://hgic.clemson.edu), and NO sibling citrus crop cites a pathed document for either node. Arizona's dominant pathed document in this dataset is AZ1005, a VEGETABLE planting calendar, which is the campaign-A shape of a vegetable table standing as sole source on a tree crop. CASE 2: no document hunt remains, what is left is authoring. Recorded because the decision-level verdict masked it -- hunt #31 read SIBLING-PATHED on the strength of ONE zone cell while covering 1 of its 3 nodes, and the zone-8 cell (which does have a sibling document) is repointed in this same promote while these two are deliberately left bare."
+   },
+   {
+    "id": "lemon_tamu_table_1_not_in_text_layer",
+    "severity": "low",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_lemon_cold_2026_08_06",
+    "summary": "The TAMU citrus fact sheet (aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/) refers in prose to a \"Table 1\" of variety characteristics which may carry a cold-hardiness column, but that table is NOT present in the cached text layer of the page. UNDETERMINED, not an absence: the document is readable and is not a WAF block, so the table is either an image, a separate asset, or dropped by extraction. It is the one thing that could still change the answer on hunts #26 and #27, whose zone cells are repointed at this document in this promote on the strength of its cold-hardy-types list (which excludes lemon) rather than on any table."
+   },
+   {
+    "id": "lemon_cold_threshold_single_source_divergence",
+    "severity": "low",
+    "status": "resolved",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_lemon_cold_2026_08_06",
+    "summary": "Six T1 citrus cold documents were read for a lemon-applicable damage temperature, and they do not agree. Recorded so the next reader does not re-hunt this. UC ANR 8100 publishes 29F as the damage ONSET for tender citrus, qualified \"for 30 minutes or longer\", under a \"Trees\" heading kept separate from its \"Fruits\" section, and it discriminates by sensitivity class: its Table 1 rates lemon Citrus limon H. LSU AgCenter publishes about 26F for leaf or wood damage, but as ONE category-level figure for \"all other citrus\" -- everything except satsumas and kumquats, which lumps M-rated grapefruit and orange in with H-rated lemon and lime. 8100 wins on SCOPE, not on being the warmer number: it is the more specific instrument for a crop its own table rates H. CRITICALLY, 8100 frames a damage CURVE and not a cliff (\"Greater damage occurs with colder temperatures, a longer duration of cold, or higher relative humidity\"), so a colder figure further along that curve is NOT a contradiction: UF/IFAS HS402 gives lemon-specific DEFOLIATION at 22-24F and severe wood damage at 20F, which are severity ENDPOINTS, never competing onsets. Fruit is a separate axis again: HS402 gives mature fruit damage at 28-31F and 8100 Table 2 gives buds and blossoms 27.0F and tree-ripe lemons 26.0-30.5F. Documents that publish NO lemon-applicable damage temperature at all: Clemson cold-tolerance (satsuma and kumquat 15F only), TAMU citrus fact sheet (satsuma 18F and freeze-protection operating points), UF/IFAS HS132 (cold annotations for calamondin, kumquat and Key lime, and none for lemon), UC IPM freeze page (a ranking, zero temperatures). Twelve of lemon's 29 cited URLs are uncached and remain UNDETERMINED rather than silent. [AMENDMENT 2026-08-06: a SEVENTH document, never cited by lemon, publishes a figure for exactly this crop. UCCE Placer/Nevada 31-018C (Fake, 2020), \"Growing Citrus in the Sierra Nevada Foothills\", gives a cultivar-named ladder ending \"grapefruit (26F) > true lemons (Eureka, Lisbon) (28F) > lime (30F)\". It names Eureka and Lisbon, the cultivars this parent entry covers, and its 28 matches the value this dataset carried before ae15df4 moved it to 29 -- and its lime 30 matches our lime exactly, two rungs on a seven-rung ladder, which is a strong inference that this ladder or its lineage is where our citrus numbers came from uncited. Trevor RULED KEEP 29 on 2026-08-06: UC ANR 8100 is a numbered, peer-reviewed publication giving a duration-qualified damage ONSET (29F sustained 30 minutes or longer) and is the warmer safety edge, whereas 31-018C self-describes its numbers as \"guidelines to assist in selecting appropriate species\" -- a selection guideline, not an onset threshold. Tier plus claim-type decides it; 31-018C's greater cultivar specificity does not override. CAUTION: 31-018C is NOT INDEPENDENT of the Meyer 22F figure this crop already cites (Fake & Norton, 134971.pdf) -- same author, same ladder, ONE lineage, the reprint trap in a new costume. AND THIS FINDING'S OWN FRAMING OF 26F IS NOW UNDERSTATED: it presents LSU AgCenter's 26F as a lone category-level figure, but UC MG Sacramento GN 127 independently publishes \"Lemons and grapefruit 26F\" for leaf and branch damage. TWO institutions publish 26F, not one. The ruling to keep 29 still holds -- 29 remains the only duration-qualified onset figure and the safety edge -- but the record must be honest about what sits on the other side.]"
+   },
+   {
+    "id": "lemon_ca_interior_harvest_modeled_no_uc_window",
+    "severity": "low",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_six_2026_08_06",
+    "summary": "MODELED DECLARATION, scoped to the documents read. No UC document read for campaign D publishes a lemon-specific harvest window for California's Central Valley, so ca_interior harvest_start and harvest_end remain modeled rather than sourced. Enumerated per absence-findings-are-document-scoped: UC MG Sacramento GN 127 (Central Valley) gives GENUS-LEVEL harvest only, \"most citrus varieties ripen from late fall through winter\", and its recommended home-garden varieties are navel and Valencia oranges, Satsuma mandarin, Meyer lemon and Bearss lime -- no true lemon; UCCE Kern KC9382 (San Joaquin) is a cultural and troubleshooting guide and publishes none; UC IPM's citrus timing chart is explicitly Central Valley but its Harvest row is GENERIC CITRUS; UCCE Merced's only citrus resource is UCCE Placer/Nevada #15C, the Fake lineage already covered. WHY THE GENUS-LEVEL STATEMENTS ARE NOT USED even though the form is admissible: F5 accepts LSU's category-level \"about 26F for all other citrus\", so a \"most varieties\" claim is admissible in FORM -- but lemon is the documented EXCEPTION to genus-level citrus harvest patterns, described as ever-bearing or year-round by four independent sources, so applying a most-varieties window to the crop repeatedly named as the exception is the wrong instrument. PARTIAL EXPLANATION, stated as partial: Sacramento's variety list suggests UC does not publish a Central Valley true-lemon harvest window because it does not really recommend true lemon there for home gardens. EVIDENCE AGAINST THAT, recorded rather than omitted: the Crop Profile for Citrus in California (2003) states Lisbon lemons are better adapted to the Desert, Interior and San Joaquin Valley regions with fruit harvested over a nine-month period. Both can be true -- the Crop Profile is commercial and Sacramento is home-garden. The Crop Profile is a LEAD, NOT A SOURCE: it gives a duration with no anchor, so citing it for harvest_start or harvest_end would credit a document for a claim it does not make, and its authorship is a stakeholder panel rather than extension-authored or peer-reviewed despite the UC host. Tier undecided; not admitted. WHAT \"MODELED\" DOES AND DOES NOT CLAIM HERE. It is a PROVENANCE statement -- this value came from the model rather than from a document -- and it is NOT a statement that the value is correct. An unqualified declaration would read as modeled-and-therefore-fine. ca_interior's harvest span is 95 days, which sits inside the suspect group flagged by PLA-151 (evergreen_fruit_tree harvest arms model an ever-bearing habit through a bloom-anchored offset built for determinate fruit): all 478 tree harvest arms anchor on bloom_start, which is correct for a determinate deciduous fruit and the wrong instrument for an evergreen ever-bearing one, doubly so here because lemon's bloom is itself modeled. So this cell may be both UNSOURCED and TOO NARROW, and those are separate defects with separate fixes."
+   },
+   {
+    "id": "lemon_bloom_modeled_every_region",
+    "severity": "low",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_six_2026_08_06",
+    "summary": "MODELED DECLARATION. lemon's bloom arm stays modeled in EVERY region, including the Central Valley where a chart does exist. No T1 publishes a lemon bloom window for ca_north_coast, ca_south_coast, ca_desert or low_desert_az at all. For ca_interior a chart exists and is deliberately NOT used as lemon's bloom: UC IPM's citrus timing chart (UC ANR Pub 3441), re-derived from raw HTML 2026-08-06 rather than from a rendered image, gives a Bloom period of March plus the first half of April and is explicitly scoped to California's Central Valley -- but it is a COMMERCIAL Pest Management Guideline covering citrus generally, and Central Valley commercial citrus is dominated by navels and mandarins. It is citable for the main bloom of Central Valley CITRUS GENERALLY and must not be written as lemon's bloom. THE DEEPER REASON and the ruling behind this declaration: lemon may not have a discrete bloom window at all. Four independent sources describe it as ever-bearing -- Mauk & Shea (Improved Meyer \"bears year round\"), UC MG Santa Clara (Eureka \"some fruit year-round\"), UC Marin MG (\"lemons and limes are considered ever-bearing\"), UCCE SLO (flowers and fruit in spring, summer and fall) -- so filling a single Mar to mid-Apr window would assert a discrete bloom for the crop repeatedly named as the exception, the same error as reading lemon off UC IPM's generic Harvest row or off Lazaneo's hardiness ranking. Three UC counties PLACE the spring bloom without publishing it, by timing work around it: Sacramento fertilizes \"in March before bloom\", Santa Clara \"February or March before bloom\", SLO notes maximum stored food \"late February/early March just before spring bloom\". Placing is not publishing."
+   },
+   {
+    "id": "lemon_harvest_arms_uncitable_as_structured_and_may_render_too_narrow",
+    "severity": "medium",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_six_2026_08_06",
+    "summary": "USER-FACING CONTENT FINDING, not citation hygiene. Documents were FOUND for the low_desert_az, ca_desert and ca_south_coast harvest arms and were deliberately NOT cited, because no citation is admissible for these arms as they are currently structured. The documents publish ABSOLUTE CALENDAR WINDOWS; the cells compute from bloom_start plus an offset; and bloom is itself MODELED (see lemon_bloom_modeled_every_region). So the displayed value is produced by the model, not by any document. Repointing would credit a document for a value it did not produce, which is the defect F1 exists to record. Converting the documents' absolute windows into bloom-anchored offsets would be worse: it pushes a sourced window through an unsourced anchor and then cites the document for the composite. THE CONSEQUENCE, SCOPED HONESTLY AFTER THE SOURCE-TRUTH SAMPLE. There are TWO reader-facing harvest surfaces and they disagree with each other. The zone-level harvest STRING is separately authored and is broadly consistent with the sources, several cells carrying an explicit year-round caveat: ca_south_coast reads \"Nov - Mar (and scattered year-round; heaviest late winter to spring)\" against Mauk & Shea's \"bears year round on the coast\", and low_desert_az reads \"Nov - Mar (Eureka bears year-round)\". The OFFSET-COMPUTED arms are the narrower surface: low_desert_az computes about 60 days where UA AZ1001 marks Eureka and Lisbon across fourteen half-month cells, August through February inclusive. Both surfaces render -- harvest_start and harvest_end drive plant-astro's SuccessionCard, TodayCommunityCard and PlantingCalendarCard, while the zone string renders elsewhere. AN EARLIER DRAFT OF THIS FINDING SAID a first-season grower is shown a harvest season roughly five months too short. THE SOURCE-TRUTH SAMPLE REFUTED THAT before it shipped: the reader also sees the harvest string and its year-round caveat, so the alarming version was not established. What IS established is narrower and still worth fixing: the two surfaces disagree, the offset-derived one is narrower than every source read, and low_desert_az's string omits August through October entirely -- three months AZ1001 marks for both cultivars. INTERNAL CORROBORATION NEEDING NO DOCUMENT: lime shares all nine of lemon's regions and is described by the same sources as the same ever-bearing habit, yet lime is modeled at a 180-day span in eight of them while lemon runs 60 to 125. AZ1001 is reachable at https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1001.pdf ; the /publication/low-desert-citrus-varieties path 403s in both plain and browser user-agent modes while the host root returns 200, so the block is path-specific rather than a bot policy. NOT YET RESOLVED: whether this is lemon-specific or an evergreen_fruit_tree modelling issue is under separate diagnosis."
+   },
+   {
+    "id": "lemon_regional_anchor_ids_declared_modeled_where_no_document_exists",
+    "severity": "low",
+    "status": "resolved",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_close_d_2026_08_06",
+    "summary": "ADJUDICATING DECLARATION for lemon's bare regional anchor ids, filed to CLOSE the decisions rather than to describe them. NAMES the ids and DECLARES the anchor, which is the distinction that matters: the findings filed in the section-7 promote named `ucanr_ext` and `uariz_ext` only to DECLINE them (\"the ucanr_ext arm stays bare; that is hunt #3 and it is still open\"), which satisfies a vocabulary scan and closes nothing. DECLARED HERE, for `ucanr_ext` on ca_interior, ca_north_coast, ca_south_coast and ca_desert, for `uariz_ext` on low_desert_az, ca_desert and warm_arid, and for `clemson_hgic` on warm_arid (hunt #31, whose plantings container and plant_out arm have no sibling citrus document at all): on the arms that still cite them bare -- `plantings`, `bloom`, `harvest_start`, `harvest_end`, `resolved_by_zone` and low_desert_az `plant_out` -- these ids are INSTITUTION-ROOT PORTALS standing for the UC ANR and University of Arizona Cooperative Extension programmes, and the windows they anchor are MODELED, not lifted from a chart. The campaign D document read was exhaustive and is recorded across this crop's findings: no T1 publishes a lemon bloom window for any region (see lemon_bloom_modeled_every_region); no UC document publishes a lemon harvest window for the Central Valley (see lemon_ca_interior_harvest_modeled_no_uc_window); and UA AZ1001, which does publish a low-desert harvest window, is inadmissible for arms computed from a modeled bloom anchor (see lemon_harvest_arms_uncitable_as_structured_and_may_render_too_narrow). PLANT_OUT IS THE EXCEPTION AND IS NOW SOURCED: four CA plant_out arms are repointed in this promote onto the UC documents that publish the frost-anchored planting rule (UCCE Kern KC9382, UC Marin MG, Lazaneo/San Diego, Mauk & Shea/Riverside). low_desert_az plant_out stays declared because AZ1001 publishes no planting date."
+   },
+   {
+    "id": "campaign_d_metric_counts_adjudication_not_citation_repair",
+    "severity": "medium",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla114_close_d_2026_08_06",
+    "summary": "THE LIMITATION THIS CAMPAIGN CLOSES ON, recorded so no future reader mistakes the completion signal for the state of the data. `campaign_d_reprice` answers \"are the DECISIONS adjudicated\", not \"are the CITATIONS fixed\", and on lemon and lime those two diverge by 51. MECHANISM, measured not inferred: `bare_host_scan` sets is_sole=False when a cell cites ANY non-bare source, and the re-price filters on it. So a bare citation is invisible to the count whenever a PATHED CO-SOURCE sits on the same cell, whatever its source id. Adding a pathed document alongside a bare one therefore REMOVES the bare citation from the metric without fixing it. MEASURED AT THE CLOSE: lemon and lime carry 166 bare citations; the re-price counts only the sole-source ones; 51 remain bare and uncounted after this promote. Largest residues: lime `ucanr_ext` 19, lemon `ucanr_ext` 13 before this promote's four repoints, lemon `tamu_agrilife` 11, lemon `clemson_hgic` 3. THIS ALREADY BIT US TWICE. Hunt #28 (se_gulf/clemson_hgic) left the decision count during the 6b2dcb8e->29b96b65 promote while its citation is STILL BARE at se_gulf.resolved_by_zone.8 -- it was masked when TAMU on the same cell was repointed. And five of the section-7 promote's node reductions were masking, not fixing. Of the 23-node reduction across this arc, 15 nodes genuinely became pathed and 8 were merely hidden. NOT A BUG. The decision unit was chosen deliberately and campaign A refined it; a collapsed unit is the right instrument for pricing research. But a deliberate design that emits a misleading COMPLETION signal is still a limitation the record must carry, and this is the fifth instrument failure of this class in the campaign -- the previous four were zeros that were wrong, this is a completion that would be. Filed to PLA-138, whose charter covers scan blind spots, because it generalises: ANY campaign closing on a collapsed unit can close on paper while the underlying defect persists."
+   },
+   {
+    "id": "lemon_se_gulf_clemson_hgic_declared_no_claim_rests_on_it",
+    "severity": "low",
+    "status": "resolved",
+    "blocks_launch": false,
+    "filed_in_session": "pla161_hunt28_2026_08_18",
+    "summary": "ADJUDICATING DECLARATION for clemson_hgic on se_gulf resolved_by_zone.8 (hunt #28), filed to CLOSE the decision rather than to describe it. Clemson HGIC's cold-tolerance-in-citrus page was read in full on 2026-08-18 against this node's claims. It publishes one temperature figure, 15F for satsuma, and names kumquat at the same threshold. It mentions lemon exactly once, in a taxonomy list, and publishes no lemon damage temperature, no zone-level judgement for the Southeast Gulf, and no distinction between surviving and fruiting. This node's claims, a high-20s F lemon threshold and survives_no_fruit, are not supported by this document and are anchored to uc_anr_8100. This crop's certification record already ruled the same document at the same claim in the resolved finding lemon_cold_threshold_was_miscredited_now_uc8100. No claim on this node rests on this document. The citation is recorded here as adjudicated rather than dropped, so that a future reader does not re-open it."
+   },
+   {
+    "id": "lemon_tristeza_is_rootstock_independent",
+    "severity": "medium",
+    "status": "resolved",
+    "blocks_launch": false,
+    "filed_in_session": "pla466_rootstock_2026_09_21",
+    "summary": "CONTRADICTED, not merely unsupported, and corrected. The crop said tristeza susceptibility is 'in some scion combinations'. HS1153/HS402 states: 'Lemons are susceptible to severe tristeza virus strains regardless of rootstock, and less severe strains when propagated on Citrus macrophylla (macrophylla) and rough lemon ( C. jambhiri ) rootstocks.' Both the crop-level note and the sour orange row's traits_seasoned were corrected. SCOPE: only the tristeza claim is corrected. The note's other claims are NOT verified by this pass. HS402 ties its certified-tree advice to Florida's budwood program and the new copy generalizes to certified trees.",
+    "basis": "HS1153/HS402 read live 2026-09-21 from raw bytes, 158,367 bytes, sha256 50436e71fe8fb2bcaee7949f83f9fb192cdc3c0cbe875f7b6b74808f5f9459fb."
+   },
+   {
+    "id": "lemon_semi_dwarf_labels_unsourced_nulled",
+    "severity": "medium",
+    "status": "resolved",
+    "blocks_launch": false,
+    "filed_in_session": "pla466_rootstock_2026_09_21",
+    "summary": "size_class NULLED (not set to standard) on trifoliate orange and Carrizo / Swingle citrumelo, and their container_suitable flags nulled. No cited page supports a size claim: dwarf 0 and semi-dwarf 0 in all four cited UF/IFAS documents, and the non-dwarf size vocabulary was checked too (every 'smaller' hit is nursery pots, psyllid nymphs or zinc-deficient leaves). HS132 does not mention trifoliate, Swingle, Carrizo or sour orange at all. standard would have been an unread value. RECORDED REASON for the null: the only T1 that rates these rootstocks, SP248/HS1260, uses a Sm/I/Lg scale the dataset has not mapped, and it rates Swingle citrumelo I (intermediate), not small. That is UNDETERMINED, not contradicted. rootstock_selection_basis is deliberately NOT touched: held until Plan E applies Rule N, because the pre-Rule-N mechanical test would read the remaining {standard} and return soil_and_pest on a question that is undetermined.",
+    "basis": "HS402 sha256 50436e71fe8fb2bcaee7949f83f9fb192cdc3c0cbe875f7b6b74808f5f9459fb; HS132 sha256 5b22371df47e8a27e3b138079b6e8e41e246caeefb31af114febd07c975d183a; HS1260 sha256 9503b58425e7c94b15f500c88654714f24b9b39ba58cffaf887f4ecf0c2dec27. All read live 2026-09-21.",
+    "deferred_to": "PLA-567"
+   },
+   {
+    "id": "lemon_trifoliate_orange_rootstock_in_use_unread_pla609",
+    "severity": "low",
+    "status": "open",
+    "blocks_launch": false,
+    "filed_in_session": "pla625_promote2_2026_10_16",
+    "summary": "No T1 page read names trifoliate orange as a lemon rootstock in use. HS402 names it only in its foot-rot list, and TAMU speaks of citrus generally.",
+    "basis": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C; PLA-609. Non-blocking: the row describes the stock."
+   }
+  ],
+  "cited_at": null,
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C (PLA-609)"
+ },
+ {
+  "crop": "lime",
+  "path": "rootstock_options[0].container_suitable",
+  "kind": "value",
+  "old": false,
+  "new": null,
+  "cited_at": "rootstock_options[0]",
+  "reason": "nulled (PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D)"
+ },
+ {
+  "crop": "lime",
+  "path": "rootstock_options[0].traits_seasoned",
+  "kind": "prose",
+  "old": "Vigorous, drought- and sand-tolerant rootstocks that UF/IFAS recommends for the deep sands and high-pH calcareous soils of Florida; they crop heavily and tolerate alkaline ground.",
+  "new": "UF/IFAS lists rough lemon and Volkamer lemon among rootstocks for limes in high-pH, calcareous soils, including rockland and some sandy soils. Trees on rough lemon are extremely vigorous. Rough lemon is highly susceptible to Phytophthora foot rot. UF/IFAS rates both as large trees under Florida grove conditions. On rough lemon, Tahiti limes may also be susceptible to less-severe tristeza strains.",
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D"
+ },
+ {
+  "crop": "lime",
+  "path": "rootstock_options[0].traits_beginner",
+  "kind": "prose",
+  "old": "A tough, vigorous rootstock for sandy or rocky, alkaline soils.",
+  "new": "A vigorous rootstock for alkaline soil, including rocky ground and some sandy soils. Rough lemon is prone to foot rot. Both make large trees.",
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D"
+ },
+ {
+  "crop": "lime",
+  "path": "rootstock_options[0].what_to_ask_nursery",
+  "kind": "prose",
+  "old": "On deep sandy or calcareous soil, ask whether the tree is on rough lemon or a similar vigorous rootstock suited to those soils.",
+  "new": "If your soil is alkaline, ask whether the tree is on rough lemon, Volkamer lemon or another rootstock suited to high-pH soil.",
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D"
+ },
+ {
+  "crop": "lime",
+  "path": "rootstock_options[0].sources",
+  "kind": "sources",
+  "old": [
+   "uf_ifas_edis",
+   "ufifas_ext"
+  ],
+  "new": [
+   "uf_ifas_ch092",
+   "uf_ifas_ch093",
+   "uf_ifas_hs1153",
+   "uf_ifas_hs1260"
+  ],
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D"
+ },
+ {
+  "crop": "lime",
+  "path": "rootstock_options[0].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/CH092",
+    "verified": "2026-07-02"
+   },
+   "ufifas_ext": {
+    "url": "https://ask.ifas.ufl.edu/publication/CH093",
+    "verified": "2026-07-02"
+   }
+  },
+  "new": {
+   "uf_ifas_ch092": {
+    "url": "https://ask.ifas.ufl.edu/publication/CH092",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_ch093": {
+    "url": "https://ask.ifas.ufl.edu/publication/CH093",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_hs1153": {
+    "url": "https://edis.ifas.ufl.edu/publication/HS402",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_hs1260": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-16"
+   }
+  },
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D"
+ },
+ {
+  "crop": "lime",
+  "path": "rootstock_options[1].size_class",
+  "kind": "value",
+  "old": null,
+  "new": "semi_dwarf",
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D"
+ },
+ {
+  "crop": "lime",
+  "path": "rootstock_options[1].mature_height_ft",
+  "kind": "value",
+  "old": null,
+  "new": [
+   8,
+   14
+  ],
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D"
+ },
+ {
+  "crop": "lime",
+  "path": "rootstock_options[1].traits_seasoned",
+  "kind": "prose",
+  "old": "A trifoliate-orange hybrid with good foot-rot and tristeza resistance and some cold tolerance, widely used in modern nursery production. UF/IFAS recommends it for neutral-to-low-pH soils; it does poorly on high-pH calcareous ground, so match it to soil.",
+  "new": "Swingle is a citrumelo, a cross of Duncan grapefruit and trifoliate orange. UF/IFAS names it the rootstock for limes on low-pH or neutral soils. It resists Phytophthora foot rot. UC Riverside lists resistance to tristeza and cold among its strengths. It became the most widely used rootstock in Florida. It is not adapted to heavy clay or calcareous soils.",
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D"
+ },
+ {
+  "crop": "lime",
+  "path": "rootstock_options[1].traits_beginner",
+  "kind": "prose",
+  "old": "A common modern rootstock with good disease resistance, best on non-alkaline soil.",
+  "new": "A common rootstock that resists foot rot, best on soil that is not alkaline. It also holds up against tristeza virus and cold.",
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D"
+ },
+ {
+  "crop": "lime",
+  "path": "rootstock_options[1].what_to_ask_nursery",
+  "kind": "prose",
+  "old": "On neutral to acidic soil, or for disease resistance, ask whether the tree is on Swingle citrumelo or a trifoliate hybrid.",
+  "new": "On neutral or acidic soil, ask whether the tree is on Swingle citrumelo.",
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D"
+ },
+ {
+  "crop": "lime",
+  "path": "rootstock_options[1].sources",
+  "kind": "sources",
+  "old": [
+   "ufifas_ext",
+   "uf_ifas_hs132"
+  ],
+  "new": [
+   "uf_ifas_ch093",
+   "ucr_citrus",
+   "uf_ifas_hs1260"
+  ],
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D"
+ },
+ {
+  "crop": "lime",
+  "path": "rootstock_options[1].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "ufifas_ext": {
+    "url": "https://ask.ifas.ufl.edu/publication/CH093",
+    "verified": "2026-07-02"
+   },
+   "uf_ifas_hs132": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS132",
+    "verified": "2026-07-02"
+   }
+  },
+  "new": {
+   "uf_ifas_ch093": {
+    "url": "https://ask.ifas.ufl.edu/publication/CH093",
+    "verified": "2026-10-16"
+   },
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc3771",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_hs1260": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-16"
+   }
+  },
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D"
+ },
+ {
+  "crop": "lime",
+  "path": "rootstock_options[2]",
+  "kind": "row",
+  "old": "<absent>",
+  "new": {
+   "name": "Alemow (Citrus macrophylla)",
+   "size_class": null,
+   "mature_height_ft": null,
+   "spread_ft": null,
+   "container_suitable": null,
+   "container_size_gallons": null,
+   "bearing_age_years": null,
+   "what_to_ask_nursery": "Alemow suits alkaline soil and tolerates brief flooding. It is very sensitive to frost.",
+   "traits_seasoned": "Alemow (Citrus macrophylla) is on UF/IFAS's list of rootstocks for limes in high-pH, calcareous soils. Trees grafted onto alemow tolerate a few days of excessively wet or flooded soil. The brown citrus aphid spreads tristeza virus, which may cause decline and death of Tahiti lime trees on alemow. Tahiti limes on alemow may also be susceptible to less-severe tristeza strains. UC rates it highly sensitive to frost.",
+   "traits_beginner": "Alemow is a rootstock for alkaline soil that copes with a few days of flooding. It is vulnerable to tristeza, a virus spread by aphids that can kill lime trees on it, and it is very sensitive to frost.",
+   "sources": [
+    "uf_ifas_ch092",
+    "uf_ifas_ch093",
+    "uc_anr_8100"
+   ],
+   "anchoring_urls": {
+    "uf_ifas_ch092": {
+     "url": "https://ask.ifas.ufl.edu/publication/CH092",
+     "verified": "2026-10-16"
+    },
+    "uf_ifas_ch093": {
+     "url": "https://ask.ifas.ufl.edu/publication/CH093",
+     "verified": "2026-10-16"
+    },
+    "uc_anr_8100": {
+     "url": "https://escholarship.org/content/qt5hh528qp/qt5hh528qp.pdf",
+     "verified": "2026-10-16"
+    }
+   }
+  },
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D: new row"
+ },
+ {
+  "crop": "lime",
+  "path": "recommended_rootstock_note",
+  "kind": "prose",
+  "old": "At a retail nursery you usually take whatever industry-standard rootstock the tree is grafted on; it is rarely a choice. Key limes are susceptible to tristeza whatever the rootstock, and Tahiti limes may be susceptible to severe strains whatever the rootstock. On the deep sands and calcareous rocklands where limes are often grown, UF/IFAS favors rough lemon, Volkamer lemon, alemow, or Rangpur lime; on neutral-to-low-pH soils, Swingle citrumelo adds foot-rot and tristeza resistance and some cold tolerance. Key lime is often grown on its own roots from seed, cuttings, or air-layers rather than grafted. Note that scion choice matters less for a lime's cold hardiness than simply avoiding frost.",
+  "new": "Rootstocks are usually not a choice at retail garden centers, because trees come grafted onto industry-standard rootstocks. Match the rootstock to your soil. For high-pH, calcareous soils, UF/IFAS lists alemow, rough lemon and Volkamer lemon among suitable rootstocks. For low-pH or neutral soils, it names Swingle citrumelo. Key limes are susceptible to tristeza virus whatever the rootstock. Tahiti limes may be susceptible to severe strains whatever the rootstock. Key lime is often grown from seed, which comes true to type, and it can also be grown from cuttings, air-layers or grafted trees.",
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D"
+ },
+ {
+  "crop": "lime",
+  "path": "recommended_rootstock_note_sources",
+  "kind": "sources",
+  "old": null,
+  "new": [
+   "uf_ifas_hs132",
+   "uf_ifas_ch092",
+   "uf_ifas_ch093"
+  ],
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D"
+ },
+ {
+  "crop": "lime",
+  "path": "recommended_rootstock_note_anchoring_urls",
+  "kind": "anchors",
+  "old": null,
+  "new": {
+   "uf_ifas_hs132": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS132",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_ch092": {
+    "url": "https://ask.ifas.ufl.edu/publication/CH092",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_ch093": {
+    "url": "https://ask.ifas.ufl.edu/publication/CH093",
+    "verified": "2026-10-16"
+   }
+  },
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[0].sources",
+  "kind": "rekey",
+  "old": [
+   "ucr_citrus",
+   "uf_ifas_edis",
+   "uc_anr_8100",
+   "ucce_placer_nevada_31_018c",
+   "az_coop_ext",
+   "tamu_agrilife"
+  ],
+  "new": [
+   "ucr_citrus",
+   "uf_ifas_hs1260",
+   "uc_anr_8100",
+   "ucce_placer_nevada_31_018c",
+   "az_coop_ext",
+   "tamu_agrilife"
+  ],
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.2: re-key, no value change"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[0].anchoring_urls",
+  "kind": "rekey",
+  "old": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc2863",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "uc_anr_8100": {
+    "url": "https://escholarship.org/content/qt5hh528qp/qt5hh528qp.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   },
+   "az_coop_ext": {
+    "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1001.pdf",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "new": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc2863",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_hs1260": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "uc_anr_8100": {
+    "url": "https://escholarship.org/content/qt5hh528qp/qt5hh528qp.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   },
+   "az_coop_ext": {
+    "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1001.pdf",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.2: re-key, no value change"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[1].sources",
+  "kind": "rekey",
+  "old": [
+   "ucr_citrus",
+   "uf_ifas_edis",
+   "tamu_agrilife"
+  ],
+  "new": [
+   "ucr_citrus",
+   "uf_ifas_hs1260",
+   "tamu_agrilife"
+  ],
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.2: re-key, no value change"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[1].anchoring_urls",
+  "kind": "rekey",
+  "old": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc3771",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "new": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc3771",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_hs1260": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.2: re-key, no value change"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[2].sources",
+  "kind": "rekey",
+  "old": [
+   "ucce_placer_nevada_31_018c",
+   "ucanr_santa_clara_mg",
+   "uf_ifas_edis",
+   "tamu_agrilife"
+  ],
+  "new": [
+   "ucce_placer_nevada_31_018c",
+   "ucanr_santa_clara_mg",
+   "uf_ifas_hs1260",
+   "tamu_agrilife"
+  ],
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.2: re-key, no value change"
+ },
+ {
+  "crop": "orange-navel",
+  "path": "rootstock_options[2].anchoring_urls",
+  "kind": "rekey",
+  "old": {
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucanr_santa_clara_mg": {
+    "url": "https://ucanr.edu/sites/default/files/2020-02/319461.pdf",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "new": {
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucanr_santa_clara_mg": {
+    "url": "https://ucanr.edu/sites/default/files/2020-02/319461.pdf",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_hs1260": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.2: re-key, no value change"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[0].sources",
+  "kind": "rekey",
+  "old": [
+   "ucr_citrus",
+   "uf_ifas_edis",
+   "uc_anr_8100",
+   "ucce_placer_nevada_31_018c",
+   "az_coop_ext",
+   "tamu_agrilife"
+  ],
+  "new": [
+   "ucr_citrus",
+   "uf_ifas_hs1260",
+   "uc_anr_8100",
+   "ucce_placer_nevada_31_018c",
+   "az_coop_ext",
+   "tamu_agrilife"
+  ],
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.2: re-key, no value change"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[0].anchoring_urls",
+  "kind": "rekey",
+  "old": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc2863",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "uc_anr_8100": {
+    "url": "https://escholarship.org/content/qt5hh528qp/qt5hh528qp.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   },
+   "az_coop_ext": {
+    "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1001.pdf",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "new": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc2863",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_hs1260": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "uc_anr_8100": {
+    "url": "https://escholarship.org/content/qt5hh528qp/qt5hh528qp.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   },
+   "az_coop_ext": {
+    "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1001.pdf",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.2: re-key, no value change"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[1].sources",
+  "kind": "rekey",
+  "old": [
+   "ucr_citrus",
+   "uf_ifas_edis",
+   "tamu_agrilife"
+  ],
+  "new": [
+   "ucr_citrus",
+   "uf_ifas_hs1260",
+   "tamu_agrilife"
+  ],
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.2: re-key, no value change"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[1].anchoring_urls",
+  "kind": "rekey",
+  "old": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc3771",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "new": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc3771",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_hs1260": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.2: re-key, no value change"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[2].sources",
+  "kind": "rekey",
+  "old": [
+   "ucce_placer_nevada_31_018c",
+   "ucanr_santa_clara_mg",
+   "uf_ifas_edis",
+   "tamu_agrilife"
+  ],
+  "new": [
+   "ucce_placer_nevada_31_018c",
+   "ucanr_santa_clara_mg",
+   "uf_ifas_hs1260",
+   "tamu_agrilife"
+  ],
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.2: re-key, no value change"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "rootstock_options[2].anchoring_urls",
+  "kind": "rekey",
+  "old": {
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucanr_santa_clara_mg": {
+    "url": "https://ucanr.edu/sites/default/files/2020-02/319461.pdf",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "new": {
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucanr_santa_clara_mg": {
+    "url": "https://ucanr.edu/sites/default/files/2020-02/319461.pdf",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_hs1260": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   }
+  },
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.2: re-key, no value change"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "recommended_rootstock_note_sources",
+  "kind": "rekey",
+  "old": [
+   "ucr_citrus",
+   "uf_ifas_edis",
+   "tamu_agrilife",
+   "uf_ifas_hs132",
+   "az_coop_ext",
+   "ucce_placer_nevada_31_018c"
+  ],
+  "new": [
+   "ucr_citrus",
+   "uf_ifas_hs1260",
+   "tamu_agrilife",
+   "uf_ifas_hs132",
+   "az_coop_ext",
+   "ucce_placer_nevada_31_018c"
+  ],
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.2: re-key, no value change"
+ },
+ {
+  "crop": "grapefruit",
+  "path": "recommended_rootstock_note_anchoring_urls",
+  "kind": "rekey",
+  "old": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc3771",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_hs132": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS132",
+    "verified": "2026-10-13"
+   },
+   "az_coop_ext": {
+    "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1001.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   }
+  },
+  "new": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc3771",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_hs1260": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-13"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-13"
+   },
+   "uf_ifas_hs132": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS132",
+    "verified": "2026-10-13"
+   },
+   "az_coop_ext": {
+    "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1001.pdf",
+    "verified": "2026-10-13"
+   },
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-13"
+   }
+  },
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.2: re-key, no value change"
+ }
+]

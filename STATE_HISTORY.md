@@ -4,6 +4,36 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-10-16 -- PLA-625 CITRUS PROMOTE 2 LANDED (`2f67359e` -> `ef1a4d35`; lemon + lime rootstock rows), local, Batch A
+
+Two commits, pushed with Batch A (standing ruling 1596680f). Rulings: PLA-625 comment abaa4aa8 (promote 2), amended by
+07cc6df5 (A64 parentage, HS132 on lemon, TAMU anchors), both claude.ai, approved by Trevor.
+
+* **Stop, then amendment.** The first pass stopped before any commit (report e77e3515): lime's ruled Swingle sentence "a cross
+  of Duncan grapefruit and trifoliate orange" failed A64 (lime has no trifoliate row) and the ruling forbade a waiver or a
+  reword. The amendment added PARENTAGE to `rootstock_prose_gate` (7d6338b, tooling only): a hybrid's parent resolves only
+  in that hybrid's own row fields, from a table entered from cached T1 bytes. Live counts unchanged; 38/38 mutations caught.
+* **Promote** (`tools/promote_pla625_p2.py`, derived from promote 1 by copy; stage `tools/staging/pla625_p2/` built from
+  `p2_texts.py`): 61 ops (17 prose, 9 value, 7 sources + 7 anchors, 1 rename, 2 new rows, 1 record, 3 catalog, 14 re-key),
+  146 evidence rows, 50 decisions. --expect-sha ef1a4d35 == an independent minimal apply. New op kinds: `row` (append a ruled
+  row whole), `rename`, `catalog`, `rekey` (guard X: mechanical uf_ifas_edis -> uf_ifas_hs1260, order and url unchanged).
+  Guards trimmed as masked by check_pre: a row op that does not create, a catalog op on an existing id, a non-list re-key.
+* **Data:** lemon rows sour orange / trifoliate orange / Swingle citrumelo (renamed; Carrizo off lemon) / NEW Rough lemon /
+  macrophylla (alemow); lemon `recommended_rootstock` sour orange -> null. lime rows rough lemon / Volkamer, Swingle, NEW
+  Alemow (Citrus macrophylla). Both notes re-authored, note pair cited. container_suitable false -> null on lemon [0] and lime
+  [0] (ABSENT). lemon [0] size_class standard -> null (HS1260 I-Lg undefined). TAMU anchors on lemon [0..1] repointed from the
+  bare host to the citrus fact sheet (co-cited, never an A63 waiver). Lemon finding
+  `lemon_trifoliate_orange_rootstock_in_use_unread_pla609` (low, non-blocking).
+* **Catalog:** minted `uf_ifas_ch092`, `uf_ifas_ch093`, `uf_ifas_hs1260` (titles read off each page). lime's CH092 / CH093
+  citations move off `uf_ifas_edis` / `ufifas_ext`; promote 1's 7 HS1260 blocks re-keyed (orange-navel rows 0-2, grapefruit
+  rows 0-2 + note).
+* **Waivers:** A64 10 -> 6 (lemon macrophylla + rough lemon, lime alemow + Rangpur lime; each STALE on ef1a4d35; moved to
+  CLOSED for landed replays). A62 2680 -> 2678 (lemon + lime note pairs, CLOSED). A63 379 unchanged.
+* **Checks:** clause check (every sentence maps to its bracketed quote; 44 quote keys in hashed bytes); register pairs
+  distinct; no em dash, no "cultivar". whole_crop_gate PASS on all 4 edited crops + gate_all; release_verify: only the 4
+  declared crops, catalog +3, no new violations, 16 standing section-E concerns per crop identical on base. Certified 121,
+  launch-ready 114.
+
 ## 2026-10-14 -- PLA-625 PROMOTE 1 FOLLOW-UP: landed replays gate A63/A64 by era (tooling only; canonical stays `2f67359e`)
 
 The full tree on 5603b28 (promote 1) went RED, 40 problems, before any push. Cause: promote 1 retired waivers in THREE

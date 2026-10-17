@@ -115,6 +115,15 @@ SIX_ORANGE_NAVEL = {
     ('orange-navel', 'pests[4]', 'ucr_citrus'),
     ('orange-navel', 'varieties', 'ucr_citrus'),
 }
+# PLA-625 citrus promote 2 (ef1a4d35): lime's Swingle row cites ucr_citrus pathed (crc3771), so lime's bare ucr_citrus
+# citations became self-pathed LEADS: 15 SOLE (each already an A63 waiver) + varieties (co-cited).
+LIME_REGION_PATHS = ("plantings[0]", "plantings[0].bloom[0]", "plantings[0].harvest_end[0]",
+                     "plantings[0].harvest_start[0]", "plantings[0].plant_out[0]")
+SIXTEEN_LIME = ({("lime", f"regions.ca_north_coast.{p}", "ucr_citrus") for p in LIME_REGION_PATHS}
+                | {("lime", f"regions.ca_north_coast.resolved_by_zone.{z}", "ucr_citrus") for z in (9, 10)}
+                | {("lime", f"regions.ca_south_coast.{p}", "ucr_citrus") for p in LIME_REGION_PATHS}
+                | {("lime", f"regions.ca_south_coast.resolved_by_zone.{z}", "ucr_citrus") for z in (9, 10, 11)}
+                | {("lime", "varieties", "ucr_citrus")})
 
 
 def _self_pathed_known():
@@ -124,18 +133,20 @@ def _self_pathed_known():
 
 
 def test_self_pathed_pin_is_the_measured_population():
-    """The pin's own units, as literals: 327 CITATIONS / 161 SOLE / 81 DECISIONS / 38 CROPS (321 / 161 / 80 / 37 at
-    00dda31c, + the six orange-navel leads at 2f67359e)."""
+    """The pin's own units, as literals: 343 CITATIONS / 176 SOLE / 84 DECISIONS / 39 CROPS (321 / 161 / 80 / 37 at
+    00dda31c, + the six orange-navel leads at 2f67359e, + the sixteen lime leads at ef1a4d35)."""
     doc, known = _self_pathed_known()
     assert doc['measured_on'].startswith('00dda31c')
-    assert len(known) == doc['count'] == 327
+    assert len(known) == doc['count'] == 343
     assert SIX_UADA <= known, 'the six uada_ext leads must be named in the pin, not dropped'
     assert SIX_ORANGE_NAVEL <= known, 'the six orange-navel leads must be named in the pin, not dropped'
     sole_known = {tuple(i.split('|')) for i in doc['sole_identities']}
     assert not (SIX_ORANGE_NAVEL & sole_known), 'the six orange-navel leads entered co-cited (masked)'
+    assert len(SIXTEEN_LIME) == 16 and SIXTEEN_LIME <= known, 'the sixteen lime leads must be named in the pin'
+    assert SIXTEEN_LIME & sole_known == SIXTEEN_LIME - {("lime", "varieties", "ucr_citrus")}, 'fifteen lime leads are SOLE'
     decisions = {(c, region_of(p), s) for c, p, s in known}
-    assert len(decisions) == 81
-    assert len({c for c, _p, _s in known}) == 38
+    assert len(decisions) == 84
+    assert len({c for c, _p, _s in known}) == 39
 
 
 def test_self_pathed_population_at_this_canonical(data):
@@ -157,7 +168,8 @@ def test_self_pathed_sole_split_is_pinned_by_identity(data):
     (Was a count asserted only while no pinned row had closed: the first closure would have silenced it.)"""
     doc, known = _self_pathed_known()
     sole_known = {tuple(i.split('|')) for i in doc['sole_identities']}
-    assert (len(sole_known), doc['sole_count']) == (161, 161) and sole_known <= known
+    # 161 at the pin, + the fifteen SOLE lime leads at ef1a4d35 (PLA-625 citrus promote 2)
+    assert (len(sole_known), doc['sole_count']) == (176, 176) and sole_known <= known
     present = {(r['crop'], r['path'], r['source_id']): r['is_sole'] for r in B.self_pathed(data)
                if (r['crop'], r['path'], r['source_id']) in known}
     assert present, 'no pinned self-pathed row is present: the pin inspected nothing'

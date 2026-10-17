@@ -2,7 +2,8 @@
 
 Pins the live measurement (canonical 5420479d: 21 crops by identity, 515 fields, 272 names, 253 matched, 19 waived;
 PLA-625 stop 2 moved own-root wording to a propagation-mode list: 260 names, 248 matched, 12 waived; PLA-625 citrus
-promote 1 (2f67359e) re-authored orange-navel's and grapefruit's rows and notes: 268 names, 258 matched, 10 waived),
+promote 1 (2f67359e) re-authored orange-navel's and grapefruit's rows and notes: 268 names, 258 matched, 10 waived;
+promote 2 (ef1a4d35) re-authored lemon's and lime's and added two rows: 521 fields, 294 names, 288 matched, 6 waived),
 proves every guard family on a SCRATCH COPY, carries PLA-608's six named injections, and drives the two entry points
 (whole_crop_gate A64, gate_all's roster half) as subprocesses. Run under pytest (def test_), via
 tools/run_test_tree.py --files. Mutation harness: tools/mutate_rootstock_prose_gate.py.
@@ -40,8 +41,8 @@ def viol(d, slug):
 def test_the_ledger_was_measured_on_this_canonical_family():
     # re-measured on 5420479d (stop-1 ruling: NOT copied from the ticket)
     assert G._K.MEASURED_ON.startswith("5420479d")
-    assert len(G._K.WAIVERS) == 10
-    assert len({(w["crop"], w["field"], w["name"], w["sentence"]) for w in G._K.WAIVERS}) == 10, "duplicate waiver"
+    assert len(G._K.WAIVERS) == 6
+    assert len({(w["crop"], w["field"], w["name"], w["sentence"]) for w in G._K.WAIVERS}) == 6, "duplicate waiver"
     for w in G._K.WAIVERS:
         assert w["ticket"] in ("PLA-608", "PLA-566", "PLA-612") and w["reason"].strip(), w
 
@@ -57,9 +58,9 @@ def test_population_is_the_21_crops_carrying_the_field_by_identity():
 
 
 def test_inspected_fields_and_names_are_the_measurement():
-    assert LIVE["fields"] == 515
-    assert LIVE["mentions"] == 268
-    assert LIVE["matched"] == 258
+    assert LIVE["fields"] == 521
+    assert LIVE["mentions"] == 294
+    assert LIVE["matched"] == 288
     assert G.refusal(LIVE) is None
 
 
@@ -71,10 +72,15 @@ def test_live_unresolved_equals_the_waiver_ledger_exactly():
 
 def test_the_pla608_part1_hits_are_in_the_ledger_and_st_julien_is_retired():
     names = {(w["crop"], w["name"]) for w in G._K.WAIVERS}
-    for hit in [("plum", "Lovell"), ("plum", "Halford"), ("lime", "alemow"),
-                ("lime", "Rangpur lime"), ("lemon", "macrophylla"), ("lemon", "rough lemon"),
-                ("apricot", "Nemaguard"), ("pear-asian", "quince")]:
+    for hit in [("plum", "Lovell"), ("plum", "Halford"), ("apricot", "Nemaguard"), ("pear-asian", "quince")]:
         assert hit in names, hit
+    # lemon's macrophylla / rough lemon and lime's alemow / Rangpur lime note waivers were retired BY CONTENT in PLA-625
+    # citrus promote 2 (ef1a4d35): both notes re-authored, lemon gained its rough lemon / macrophylla row and lime its
+    # alemow row; each went STALE on the post-state and moved to CLOSED
+    closed = {(w["crop"], w["name"]) for w in G._K.CLOSED}
+    for hit in [("lime", "alemow"), ("lime", "Rangpur lime"), ("lemon", "macrophylla"), ("lemon", "rough lemon")]:
+        assert hit in closed and hit not in names, hit
+    assert not any(m["crop"] in ("lemon", "lime") for m in LIVE["unresolved"])
     # plum's note St. Julien was retired BY CONTENT in PLA-626 (00dda31c): no waiver, and no live mention
     assert not any(w["crop"] == "plum" and "Julien" in w["name"] for w in G._K.WAIVERS)
     assert not any(m["crop"] == "plum" and m["id"] == "st_julien" for m in LIVE["unresolved"])
@@ -225,6 +231,8 @@ def test_the_seven_own_root_waivers_are_STALE_and_deleted():
 P1_BASE = "59010fe6994b95eb52407fa60a6995eedefe5636bd6a52d2f960d4b08641cf68"   # PLA-625 citrus promote 1's base
 SOUR_ORANGE = {("grapefruit", "recommended_rootstock_note", "sour orange"),
                ("grapefruit", "recommended_rootstock_note", "Sour orange")}
+LEMON_LIME = {("lemon", "recommended_rootstock_note", "macrophylla"), ("lemon", "recommended_rootstock_note", "rough lemon"),
+              ("lime", "recommended_rootstock_note", "alemow"), ("lime", "recommended_rootstock_note", "Rangpur lime")}
 
 
 @pytest.fixture(scope="module")
@@ -241,20 +249,21 @@ def era(monkeypatch):
     return SBR
 
 
-def test_closed_is_the_sour_orange_pair_disjoint_and_the_arming_set_is_12():
+def test_closed_is_the_sour_orange_pair_and_the_lemon_lime_four_disjoint_and_the_arming_set_is_12():
     closed = {(w["crop"], w["field"], w["name"]) for w in G._K.CLOSED}
-    assert closed == SOUR_ORANGE
+    assert closed == SOUR_ORANGE | LEMON_LIME
     assert not (set(G.KNOWN) & set(G.CLOSED))
     assert set(G.KNOWN_AT_ARMING) == set(G.KNOWN) | set(G.CLOSED)
     assert len(G.KNOWN_AT_ARMING) == 12
     for w in G._K.CLOSED:
-        assert w["closed_by"].strip() and w["ticket"] == "PLA-612", w
+        want = "PLA-612" if w["crop"] == "grapefruit" else "PLA-608"
+        assert w["closed_by"].strip() and w["ticket"] == want, w
 
 
-def test_on_promote_1s_base_the_live_set_flags_exactly_the_closed_pair(p1_base, era):
+def test_on_promote_1s_base_the_live_set_flags_exactly_the_closed_six(p1_base, era):
     v = G.roster(p1_base)["violations"]
-    assert len(v) == 2 and all(x.startswith("grapefruit recommended_rootstock_note: names '") for x in v), v
-    assert {x.split("'")[1] for x in v} == {"sour orange", "Sour orange"}
+    assert len(v) == 6 and all(" recommended_rootstock_note: names '" in x for x in v), v
+    assert {(x.split(" ")[0], x.split("'")[1]) for x in v} == {(c, n) for c, _f, n in SOUR_ORANGE | LEMON_LIME}
 
 
 def test_on_promote_1s_base_the_era_set_flags_none(p1_base, era):
@@ -455,19 +464,21 @@ def test_a_crop_without_the_field_is_a_no_op():
 
 # ------------------------------------------------------------------ waivers: identity AND character
 def test_a_waived_name_in_a_reworded_sentence_FAILS():
+    """Retargeted to plum's Lovell / Halford waivers when lemon's note waivers closed (PLA-625 citrus promote 2)."""
     d = fresh()
-    c = by(d)["lemon"]
-    c["recommended_rootstock_note"] = c["recommended_rootstock_note"].replace(
-        "when grown on macrophylla or rough lemon.", "when grown on macrophylla or on rough lemon.")
-    v = viol(d, "lemon")
-    assert any("'macrophylla'" in x for x in v) and any("'rough lemon'" in x for x in v), v
+    w = next(w for w in G._K.WAIVERS if w["crop"] == "plum" and w["name"] == "Lovell")
+    r = next(r for r in by(d)["plum"]["rootstock_options"] if w["field"].startswith(f"rootstock_options[name={r['name']}]"))
+    assert w["sentence"] in r["traits_seasoned"]
+    r["traits_seasoned"] = r["traits_seasoned"].replace(w["sentence"], w["sentence"].replace("Peach-seedling", "Peach seedling", 1))
+    v = viol(d, "plum")
+    assert any("'Lovell'" in x for x in v) and any("'Halford'" in x for x in v), v
 
 
 def test_a_waiver_does_not_cover_the_same_name_on_another_crop():
     d = fresh()
-    w = next(w for w in G._K.WAIVERS if w["crop"] == "lemon" and w["name"] == "macrophylla")
+    w = next(w for w in G._K.WAIVERS if w["crop"] == "plum" and w["name"] == "Lovell")
     by(d)["orange-navel"]["recommended_rootstock_note"] += " " + w["sentence"]
-    assert any("'macrophylla'" in x for x in viol(d, "orange-navel"))
+    assert any("'Lovell'" in x for x in viol(d, "orange-navel"))
 
 
 def test_a_waiver_whose_name_now_resolves_is_STALE():
@@ -508,7 +519,7 @@ def _run(args):
 def test_cli_live_passes_and_prints_its_population_and_limit():
     rc, out = _run([os.path.join(HERE, "rootstock_prose_gate.py")])
     assert rc == 0, out
-    assert "inspected 21 crops carrying rootstock_options (of 21), 515 fields, 268 rootstock names (258 matched a row)" in out
+    assert "inspected 21 crops carrying rootstock_options (of 21), 521 fields, 294 rootstock names (288 matched a row)" in out
     assert G.LIMIT_LINE in out
     assert G.PROPAGATION_LINE in out and "ungrafted" in G.PROPAGATION_LINE
     assert G.PARENTAGE_LINE in out and "swingle: Duncan grapefruit, trifoliate orange" in G.PARENTAGE_LINE
@@ -541,7 +552,7 @@ def test_whole_crop_gate_A64_fails_by_name(tmp_path):
 def test_whole_crop_gate_A64_live_prints_its_counts():
     rc, out = _run([os.path.join(HERE, "whole_crop_gate.py"), "lime"])
     assert rc == 0, out[-3000:]
-    assert "A64. rootstock prose" in out and "rootstock names: 9 (7 matched a row); violations: 0" in out
+    assert "A64. rootstock prose" in out and "rootstock names: 23 (23 matched a row); violations: 0" in out
 
 
 def test_gate_all_runs_the_roster_half_on_a_SHELL(tmp_path):

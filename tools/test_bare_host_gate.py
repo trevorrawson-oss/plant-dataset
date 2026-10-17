@@ -111,16 +111,21 @@ class LiveCanonical(unittest.TestCase):
 
     def test_the_named_examples(self):
         """Confirm the three cases the brief names, both severities: Flying Dragon SOLE on the arming canonical
-        (replayed), and CLOSED live by PLA-625 citrus promote 1; lemon's TAMU rows CO-CITED live."""
+        (replayed), and CLOSED live by PLA-625 citrus promote 1; lemon's TAMU rows CO-CITED at arming (never waived),
+        and repointed live to the citrus fact sheet by PLA-625 citrus promote 2 (so no longer bare at all)."""
         n, insp, sole, co, V, stale = G.roster(ARMING)
         self.assertTrue(FLYING_DRAGON <= set(sole), "Flying Dragon rows were SOLE at arming")
+        self.assertTrue(LEMON_TAMU <= set(co), "lemon TAMU rows were CO-CITED, non-blocking, at arming")
         for slug in ("grapefruit", "orange-navel"):
             row = by(ARMING)[slug]["rootstock_options"][2]
             self.assertIn("Flying Dragon", row["name"])
             self.assertEqual(row["sources"], ["ucr_citrus"])
             self.assertEqual(row["anchoring_urls"]["ucr_citrus"]["url"], UCR)
         n, insp, sole, co, V, stale = G.roster(_CANON)
-        self.assertTrue(LEMON_TAMU <= set(co), "lemon TAMU rows must be CO-CITED, non-blocking")
+        self.assertFalse(LEMON_TAMU & (set(sole) | set(co)), "repointed by PLA-625 citrus promote 2")
+        for i in (0, 1):
+            self.assertEqual(by(_CANON)["lemon"]["rootstock_options"][i]["anchoring_urls"]["tamu_agrilife"]["url"],
+                             "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/")
         self.assertFalse(FLYING_DRAGON & (set(sole) | set(co)), "closed by PLA-625 citrus promote 1")
         self.assertFalse(FLYING_DRAGON & set(G.KNOWN), "retired from the waiver set in the same commit")
         for slug in ("grapefruit", "orange-navel"):

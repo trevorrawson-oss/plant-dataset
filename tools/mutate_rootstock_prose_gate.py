@@ -160,7 +160,7 @@ MUTATIONS = [
     ("era", "closed_rejoin_the_live_set", GATE,
      'KNOWN = {(w["crop"], w["field"], w["name"], w["sentence"]): w for w in _K.WAIVERS}\n',
      'KNOWN = {(w["crop"], w["field"], w["name"], w["sentence"]): w for w in _K.WAIVERS + _K.CLOSED}' + M + "\n",
-     "test_closed_is_the_sour_orange_pair_disjoint_and_the_arming_set_is_12"),
+     "test_closed_is_the_sour_orange_pair_and_the_lemon_lime_four_disjoint_and_the_arming_set_is_12"),
     ("era", "closed_dropped_from_the_era_set", GATE,
      "KNOWN_AT_ARMING = {**KNOWN, **CLOSED}",
      "KNOWN_AT_ARMING = dict(KNOWN)" + M, "test_on_promote_1s_base_the_era_set_flags_none"),

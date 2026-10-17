@@ -26,6 +26,10 @@ SHRUNK 2026-10-13 (PLA-625 citrus promote 1, 59010fe6 -> 2f67359e): 2682 -> 2680
 orange-navel and grapefruit |recommended_rootstock_note|recommended_rootstock_note_sources (moved to CLOSED: uncited in
 the housekeeping era, so its replay checks against KNOWN_AT_ARMING). 17 uncited notes stay waived (PLA-608).
 
+SHRUNK 2026-10-16 (PLA-625 citrus promote 2, 2f67359e -> ef1a4d35): 2680 -> 2678. Closed by citation in that promote:
+lemon and lime |recommended_rootstock_note|recommended_rootstock_note_sources (moved to CLOSED, same reason). 15 uncited
+notes stay waived (PLA-608).
+
 Kept as a .py module, not JSON, because every harness that copies tools/*.py into a scratch
 dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_gate at import
 (measured 2026-09-30: both harnesses' test_valid_cell_passes went red on a .json version).
@@ -33,7 +37,7 @@ dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_g
 TICKET = 'PLA-607'
 MEASURED_ON = '00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e'
 MEASURED_DATE = '2026-09-30'
-COUNT = 2680
+COUNT = 2678
 # Closed by citation, kept by identity so a LANDED promote can replay against the set live in its era
 # (sourced_block_ratchet_gate.KNOWN_AT_ARMING). Never re-waived: a closed identity going uncited again fails A62.
 CLOSED = (
@@ -52,6 +56,8 @@ CLOSED = (
     # recommended_rootstock_note era identities (armed 2026-10-13, PLA-625 housekeeping 59010fe6)
     "grapefruit|recommended_rootstock_note|recommended_rootstock_note_sources",  # PLA-625 citrus promote 1, 59010fe6 -> 2f67359e
     "orange-navel|recommended_rootstock_note|recommended_rootstock_note_sources",  # PLA-625 citrus promote 1, 59010fe6 -> 2f67359e
+    "lemon|recommended_rootstock_note|recommended_rootstock_note_sources",  # PLA-625 citrus promote 2, 2f67359e -> ef1a4d35
+    "lime|recommended_rootstock_note|recommended_rootstock_note_sources",  # PLA-625 citrus promote 2, 2f67359e -> ef1a4d35
 )
 IDENTITIES = (
     "acorn-squash|description|description_sources",
@@ -1433,7 +1439,6 @@ IDENTITIES = (
     "lemon|notifications[3]|sources",
     "lemon|ph|sources",
     "lemon|pollination|sources",
-    "lemon|recommended_rootstock_note|recommended_rootstock_note_sources",
     "lemon|soil_prep|soil_prep_sources",
     "lemon|start_method|sources",
     "lemon|succession_policy|sources",
@@ -1469,7 +1474,6 @@ IDENTITIES = (
     "lime|notifications[2]|sources",
     "lime|notifications[3]|sources",
     "lime|pollination|sources",
-    "lime|recommended_rootstock_note|recommended_rootstock_note_sources",
     "lime|soil_prep|soil_prep_sources",
     "lime|start_method|sources",
     "lime|succession_policy|sources",

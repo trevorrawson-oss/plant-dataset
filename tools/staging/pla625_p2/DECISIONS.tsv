@@ -1,0 +1,51 @@
+crop	path	decision	reason
+lemon	rootstock_options[0].size_class	nulled	HS1260 'I-Lg' is an undefined form; PLA-567 A.3/A.4 (ruling C)
+lemon	rootstock_options[0].mature_height_ft	retained	null kept: unchanged null (ruling C)
+lemon	rootstock_options[0].spread_ft	retained	null kept: unchanged null (ruling C)
+lemon	rootstock_options[0].container_suitable	nulled	was false; ABSENT on every page read (ruling C)
+lemon	rootstock_options[0].container_size_gallons	retained	null kept: unchanged null (ruling C)
+lemon	rootstock_options[0].bearing_age_years	retained	null kept: unchanged null (ruling C)
+lemon	rootstock_options[0]	hs1260-scope	HS1260 scope (promote 1 ruling A.1): Florida commercial groves; relative vigor; averaged across commercial scions; not scion-specific.
+lemon	rootstock_options[1].mature_height_ft	retained	null kept: no home-garden height; HS1260 Sm gives an upper bound only (ruling C)
+lemon	rootstock_options[1].spread_ft	retained	null kept: unchanged null
+lemon	rootstock_options[1].container_suitable	retained	null kept: unchanged null (ruling C)
+lemon	rootstock_options[1].container_size_gallons	retained	null kept: unchanged null
+lemon	rootstock_options[1].bearing_age_years	retained	null kept: unchanged null
+lemon	rootstock_options[2].name	renamed	PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) C: Carrizo comes off lemon; no page read names it as a lemon rootstock
+lemon	rootstock_options[2].spread_ft	retained	null kept: unchanged null
+lemon	rootstock_options[2].container_suitable	retained	null kept: unchanged null (ruling C)
+lemon	rootstock_options[2].container_size_gallons	retained	null kept: unchanged null
+lemon	rootstock_options[2].bearing_age_years	retained	null kept: unchanged null
+lemon	rootstock_options[2]	hs1260-scope	HS1260 scope (promote 1 ruling A.1): Florida commercial groves; relative vigor; averaged across commercial scions; not scion-specific.
+lemon	rootstock_options[3].size_class	new-null	mixed: rough lemon is Lg; macrophylla has no HS1260 row (ruling C)
+lemon	rootstock_options[3].mature_height_ft	new-null	ruling C
+lemon	rootstock_options[3].spread_ft	new-null	ruling C
+lemon	rootstock_options[3].container_suitable	new-null	ruling C
+lemon	rootstock_options[3].container_size_gallons	new-null	ruling C
+lemon	rootstock_options[3].bearing_age_years	new-null	ruling C
+lemon	recommended_rootstock	nulled	No UF lemon page recommends sour orange (HS402 recommends by soil type); TAMU's recommendation is for all citrus in south Texas (ruling C)
+lemon	verification_status.open_findings	record-only	1 non-blocking PLA-609 finding(s) appended; no existing finding touched
+lime	rootstock_options[0].size_class	retained	value unchanged, re-based on the row's new sources (PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) D)
+lime	rootstock_options[0].mature_height_ft	retained	null kept: Lg waits on PLA-543 (ruling D)
+lime	rootstock_options[0].spread_ft	retained	null kept: unchanged null
+lime	rootstock_options[0].container_suitable	nulled	was false; ABSENT on every page read (ruling D)
+lime	rootstock_options[0].container_size_gallons	retained	null kept: unchanged null
+lime	rootstock_options[0].bearing_age_years	retained	null kept: unchanged null
+lime	rootstock_options[0]	hs1260-scope	HS1260 scope (promote 1 ruling A.1): Florida commercial groves; relative vigor; averaged across commercial scions; not scion-specific.
+lime	rootstock_options[1].spread_ft	retained	null kept: unchanged null
+lime	rootstock_options[1].container_suitable	retained	null kept: unchanged null (ruling D)
+lime	rootstock_options[1].container_size_gallons	retained	null kept: unchanged null
+lime	rootstock_options[1].bearing_age_years	retained	null kept: unchanged null
+lime	rootstock_options[1]	hs1260-scope	HS1260 scope (promote 1 ruling A.1): Florida commercial groves; relative vigor; averaged across commercial scions; not scion-specific.
+lime	rootstock_options[2].size_class	new-null	HS1260 has no alemow row (ruling D)
+lime	rootstock_options[2].mature_height_ft	new-null	HS1260 has no alemow row (ruling D)
+lime	rootstock_options[2].spread_ft	new-null	HS1260 has no alemow row (ruling D)
+lime	rootstock_options[2].container_suitable	new-null	HS1260 has no alemow row (ruling D)
+lime	rootstock_options[2].container_size_gallons	new-null	HS1260 has no alemow row (ruling D)
+lime	rootstock_options[2].bearing_age_years	new-null	HS1260 has no alemow row (ruling D)
+lime	recommended_rootstock	retained	unchanged null (ruling D)
+<catalog>	uf_ifas_ch092	source-id	PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.1: minted; replaces uf_ifas_edis (CH092) on lime row 0
+<catalog>	uf_ifas_ch093	source-id	PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.1: minted; replaces ufifas_ext (CH093) on lime rows 0 and 1
+<catalog>	uf_ifas_hs1260	source-id	PLA-625 promote 2 ruling (claude.ai comment abaa4aa8, approved by Trevor, 2026-10-14) A.1: minted; promote 1's HS1260 references re-keyed onto it (A.2)
+lemon	rootstock_options[0].sources.uf_ifas_hs132	kept-hs132	PLA-625 promote 2 amendment (claude.ai comment 07cc6df5, approved by Trevor, 2026-10-16) item 2: HS132 stays where a row makes the generic retail claim (lemon [0] what_to_ask_nursery sentence 1)
+lemon	rootstock_options[0..1].anchoring_urls.tamu_agrilife	anchor-repoint	PLA-625 promote 2 amendment (claude.ai comment 07cc6df5, approved by Trevor, 2026-10-16) item 3: bare host -> citrus fact sheet; both rows co-cite HS402, so no A63 waiver moves
