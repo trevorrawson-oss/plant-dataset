@@ -211,10 +211,11 @@ def test_MUTATION_a_poisoned_cache_entry_is_reported_as_undetermined(monkeypatch
 # Expected values below are transcribed from the dataset BY HAND, never computed from the walk
 # they validate ([[computed-guard-expectations-are-vacuous]]).
 
-# lemon names these four ONLY in sources/source_set -- never as an anchoring_urls key.
+# lemon names these ONLY in sources/source_set -- never as an anchoring_urls key. Four at 2026-08-14; PLA-625 citrus
+# promote 2 (ef1a4d35, 2026-10-16) ANCHORED two of them on lemon's rootstock rows (uc_anr_8100 on the rough lemon /
+# macrophylla row, ucce_placer_nevada_31_018c on trifoliate orange), so they left the set. The premise is asserted
+# below (test_the_list_only_premise_holds_on_live_lemon), so the next drift fails by name instead of downstream.
 LEMON_LIST_ONLY = {
-    'uc_anr_8100',                 # https://escholarship.org/content/qt5hh528qp/qt5hh528qp.pdf
-    'ucce_placer_nevada_31_018c',  # https://ucanr.edu/sites/default/files/2020-10/63813.pdf
     'umd_ext',                     # https://extension.umd.edu
     'umn_ext',                     # https://extension.umn.edu/vegetables
 }
@@ -226,8 +227,30 @@ LEMON_LIST_ONLY = {
 FALSE_PASS_CROPS = ('shallot', 'english-cucumber')
 
 
+def test_the_list_only_premise_holds_on_live_lemon():
+    """Every id in LEMON_LIST_ONLY is still named ONLY in lists on lemon (no anchoring_urls key anywhere on the crop).
+    Measured 2026-10-16: a promote that anchored two of the original four turned the no-resolvable-url test's victim
+    into an anchored id, which the scan correctly reported UNCACHED, and the failure read as a scanner defect."""
+    lemon = next(c for c in ccs._load()['crops'] if c['slug'] == 'lemon')
+    anchored = set()
+
+    def walk(o):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                if (k == 'anchoring_urls' or k.endswith('_anchoring_urls')) and isinstance(v, dict):
+                    anchored.update(v)
+                else:
+                    walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+    walk(lemon)
+    assert LEMON_LIST_ONLY and not (LEMON_LIST_ONLY & anchored), (
+        f"no longer list-only on lemon: {sorted(LEMON_LIST_ONLY & anchored)} -- re-measure LEMON_LIST_ONLY")
+
+
 def test_cited_urls_reaches_ids_named_only_in_sources_lists():
-    """RED before the widening: the four ids lemon names only in lists must be enumerated."""
+    """RED before the widening: the ids lemon names only in lists must be enumerated."""
     seen = {sid for sid, _url in ccs.cited_urls('lemon')}
     missing = LEMON_LIST_ONLY - seen
     assert not missing, (
