@@ -189,7 +189,7 @@ LIVE_PINS = {
         ('test_pla220_borderline_frame.py::test_coverage_is_reported_not_silently_dropped', 'floor', 'population', 'totals.sources_uncovered_total > 0', 199),
     ],
     'test_problem_id_collision_gate.py': [
-        ('test_problem_id_collision_gate.py::Preflight::test_canonical_is_the_pinned_sha', 'equality', 'sha', 'shasum(CANON) == PINNED_SHA (ef1a4d35..)', 199),
+        ('test_problem_id_collision_gate.py::Preflight::test_canonical_is_the_pinned_sha', 'equality', 'sha', 'shasum(CANON) == PINNED_SHA (d52c261a..)', 202),
         ('test_problem_id_collision_gate.py::AuditFixture::test_audit_output_is_exactly_pinned', 'equality', 'population', 'findings == 36, actionable == 12, registered == 24 (+12 named registered pairs)', 339),
         ('test_problem_id_collision_gate.py::AuditFixture::test_the_six_merged_decisions_are_resolved_for_the_right_reason / test_the_two_scoped... / test_the_celery_split... / test_the_nine_known_good... / test_batch24_minted_the_ninth_pair', 'equality', 'content', 'named ids absent/present in live; named pairs flagged-then-registered', 248),
     ],
@@ -242,6 +242,7 @@ LIVE_PINS = {
 
 # file -> why it is not a live pin (REPLAY / DOC_ONLY / SYNTHETIC / HISTORICAL / SCRATCH_DERIVED / CONTENT)
 EXEMPT = {
+    'test_promote_pla625_p3a.py': 'REPLAY: its POST_SHA and populations are this promote\'s own output over promote_fixture.pre_state(ef1a4d35), never the live canonical; its gates run on that replayed post-state (PLA-625 citrus promote 3a, 2026-10-16)',
     'test_promote_pla625_p2.py': 'REPLAY: its POST_SHA and populations are this promote\'s own output over promote_fixture.pre_state(2f67359e), never the live canonical; its gates run on that replayed post-state (PLA-625 citrus promote 2, 2026-10-16)',
     'test_promote_pla625_p1.py': 'REPLAY: its POST_SHA and populations are this promote\'s own output over promote_fixture.pre_state(59010fe6), never the live canonical; its gates run on that replayed post-state (PLA-625 citrus promote 1, 2026-10-13)',
     'test_promote_pla673_d.py': 'REPLAY: its POST_SHA and populations are this promote\'s own output over promote_fixture.pre_state(aaf004a2), never the live canonical; its gates run on that replayed post-state (PLA-673 part D, 2026-10-06)',

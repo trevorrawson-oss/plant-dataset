@@ -4,6 +4,31 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-10-16 -- PLA-625 CITRUS PROMOTE 3a LANDED (`ef1a4d35` -> `d52c261a`; citrus mulch, graft union, brown rot), local, Batch A
+
+Rulings: PLA-625 comment 356a763f (promote 3a), amended by 5dde3208 (CG009, the mulch attribution, the grapefruit finding),
+both claude.ai, approved by Trevor.
+
+* **First pass stopped** (report 00ee5ba1) on two of the ruling's own stop conditions: an independent read found 11 clauses
+  on the lemon / orange-navel foot-rot blocks that only CG009 supports (young-tree overwatering x8, Carrizo x3), and the
+  independent clause check of grapefruit's watering registers graded 14/20 supported, 6 partial.
+* **Amendment applied:** CG009 raw bytes fetched (c2bc36bb, MANIFEST rows added), `uf_ifas_cg009` minted, both CG009
+  anchors re-keyed to it (lemon's from the mis-keyed `uf_ifas_hs132`) with the scope note "Florida commercial production
+  guide; cited only where no home-garden page covers the claim". The B1 / B2 attribution now names "UF/IFAS's general citrus
+  guide". grapefruit_mulched_basin_contradicted_pla533 stays OPEN with a progress note (closes in promote 4).
+* **Promote** (`tools/promote_pla625_p3a.py`, derived from promote 2; stage `tools/staging/pla625_p3a/`): 97 ops (64 prose
+  strings / 70 exact substitutions, 14 sources + 15 anchors, 1 ladder, 1 record, 2 catalog), 123 evidence rows, 33
+  decisions; guard T re-derives every new string from old + the ruled substitutions (touched-leaf rule). --expect-sha
+  d52c261a == an independent minimal apply. 19 strings evidence-only (uncited / A62-waived blocks, year_one_notes,
+  lemon start_method).
+* **Citation moves (logged, confirmed by the amendment):** lime companions / foot-rot CH092 and CH093 re-keyed to their
+  per-publication ids; mandarin watering's mis-keyed `ucanr_santa_clara_mg` (Growing Great Citrus) re-keyed to
+  `uc_mg_santa_clara_citrus`, freeing the id for Growing Fabulous Citrus (319461.pdf); `uf_ifas_hs141` minted; orange-navel
+  brown rot `uc_ipm` repointed to the cached home-and-landscape page.
+* **Checks:** whole_crop_gate PASS on all 5 crops + gate_all; release_verify: only the 5 declared crops, catalog +2, no new
+  violations, 16 standing section-E concerns per crop; waivers unchanged (A62 2678, A63 379, A64 6). Certified 121,
+  launch-ready 114.
+
 ## 2026-10-16 -- PLA-625 CITRUS PROMOTE 2 LANDED (`2f67359e` -> `ef1a4d35`; lemon + lime rootstock rows), local, Batch A
 
 Two commits, pushed with Batch A (standing ruling 1596680f). Rulings: PLA-625 comment abaa4aa8 (promote 2), amended by
