@@ -224,6 +224,28 @@ def test_celsius_claim_carries_its_fahrenheit_rounding(ev):
     assert any("temp_f 85 is not in the claim" in s for s in byt(crop("calendula", f85, True), ev))
 
 
+def test_ordinal_degree_sign_still_carries_the_number(ev, tmp_path):
+    # NFKC turns the masculine ordinal "º" (USU's "80ºF") into "o"; the number must still be found
+    f = held(claim="Peas require soil and air temperatures to remain below 80ºF for best germination.")
+    assert not any("is not in the claim" in s for s in byt(crop("sugar-snap-peas", f, True), ev))
+    f78 = held(temp_f=78, claim=f["claim"])
+    assert any("temp_f 78 is not in the claim" in s for s in byt(crop("sugar-snap-peas", f78, True), ev))
+
+
+def test_a_number_inside_a_longer_number_does_not_count(ev):
+    f = held(temp_f=80, claim="Plant spinach seeds every one to two weeks, until outdoor temperatures reach 180°F.")
+    assert any("temp_f 80 is not in the claim" in s for s in byt(crop("spinach", f, True), ev))
+
+
+def test_publisher_period_before_the_celsius_unit_is_tolerated(ev):
+    # the 2014 abstract page renders 30 °C as "30. °C"; the claim keeps it verbatim
+    f = held(temp_f=86, claim="Calendula seed should be sown only if soil conditions are below 30. °C.",
+             claim_source="eberle_2014", sources=["eberle_2014"], anchoring_urls=anchors(eberle_2014=U_CAL))
+    assert not any("is not in the claim" in s for s in byt(crop("calendula", f, True), ev))
+    f["claim"] = "Calendula seed should be sown only if soil conditions are below 31. °C."
+    assert any("temp_f 86 is not in the claim" in s for s in byt(crop("calendula", f, True), ev))
+
+
 def kohlrabi(**kw):
     f = held(temp_f=75, basis="maturity_coupled",
              claim="Avoid planting after May 1. The high temperatures will not produce good quality.",

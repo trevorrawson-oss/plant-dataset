@@ -1,0 +1,2150 @@
+[
+ {
+  "crop": "<catalog>",
+  "path": "sare_necphm_arugula",
+  "kind": "catalog",
+  "old": "<absent>",
+  "new": {
+   "id": "sare_necphm_arugula",
+   "name": "USDA SARE, Northeast Crop Production & Harvest Manual: Arugula",
+   "title": "Arugula",
+   "publisher": "USDA Sustainable Agriculture Research and Education (SARE)",
+   "url": "https://www.sare.org/publications/northeast-crop-production-harvest-manual/arugula/",
+   "source_class": "government_program",
+   "trust_tier": "high",
+   "accessed": "2026-10-18",
+   "tier": "T1",
+   "citable_for": "Arugula germination and soil-temperature table, bolting, planting timing."
+  },
+  "reason": "PLA-750 D6 / catalog mint, ruling 47a09951",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "<catalog>",
+  "path": "steiner_2010_arugula",
+  "kind": "catalog",
+  "old": "<absent>",
+  "new": {
+   "id": "steiner_2010_arugula",
+   "name": "Steiner et al. 2010, Scientia Agraria 11(2):119-124 (peer-reviewed)",
+   "title": "Germination of rocket (Eruca sativa, Diplotaxis tenuifolia) seeds at different temperatures",
+   "publisher": "Scientia Agraria (Universidade Federal do Parana)",
+   "url": "https://www.redalyc.org/pdf/995/99515218004.pdf",
+   "source_class": "peer_reviewed_journal",
+   "trust_tier": "high",
+   "accessed": "2026-10-18",
+   "tier": "T1",
+   "citable_for": "Arugula seed germination across 10 to 35 degrees C (PLA-750 D6: peer-reviewed anchor where T1 extension is thinner, cited as journal and year)."
+  },
+  "reason": "PLA-750 D6 / catalog mint, ruling 47a09951",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "<catalog>",
+  "path": "eberle_2014_calendula",
+  "kind": "catalog",
+  "old": "<absent>",
+  "new": {
+   "id": "eberle_2014_calendula",
+   "name": "Eberle et al. 2014, Industrial Crops and Products 52:199-204 (peer-reviewed)",
+   "title": "Seed germination of calendula in response to temperature",
+   "publisher": "Industrial Crops and Products (abstract on Experts@Minnesota)",
+   "url": "https://experts.umn.edu/en/publications/seed-germination-of-calendula-in-response-to-temperature/",
+   "source_class": "peer_reviewed_journal",
+   "trust_tier": "high",
+   "accessed": "2026-10-18",
+   "tier": "T1",
+   "citable_for": "Calendula germination temperatures and the sow-below-30-degrees-C soil rule (PLA-750 D6). Cite the 2014 paper only, never the 2013 conference abstract (ruling 7c155149)."
+  },
+  "reason": "PLA-750 D6 / catalog mint, ruling 47a09951",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "<catalog>",
+  "path": "ucanr_pub7243",
+  "kind": "catalog",
+  "old": "<absent>",
+  "new": {
+   "id": "ucanr_pub7243",
+   "name": "UC ANR Publication 7243, Green Onion Production in California",
+   "title": "Green Onion Production in California",
+   "publisher": "University of California ANR",
+   "url": "https://my.ucanr.edu/repository/fileaccess.cfm?article=54051&p=+FLPUZE",
+   "source_class": "university_extension",
+   "trust_tier": "high",
+   "accessed": "2026-10-18",
+   "tier": "T1",
+   "citable_for": "Green onion planting seasons and production (spring-onion)."
+  },
+  "reason": "PLA-750 D6 / catalog mint, ruling 47a09951",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "<catalog>",
+  "path": "tamu_celery_crop_sheet",
+  "kind": "catalog",
+  "old": "<absent>",
+  "new": {
+   "id": "tamu_celery_crop_sheet",
+   "name": "Texas A&M AgriLife Extension (J. Masabni), Celery crop sheet",
+   "title": "Celery",
+   "publisher": "Texas A&M AgriLife Extension",
+   "url": "https://aggiehorticulture.tamu.edu/vegetable/wp-content/uploads/sites/10/2011/10/celery2.pdf",
+   "source_class": "university_extension",
+   "trust_tier": "high",
+   "accessed": "2026-10-18",
+   "tier": "T1",
+   "citable_for": "Celery temperature requirements and quality."
+  },
+  "reason": "PLA-750 D6 / catalog mint, ruling 47a09951",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "spinach",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": 80,
+   "measures": "air",
+   "basis": "sowing_statement",
+   "claim": "For a continuous spring supply, plant spinach seeds every one to two weeks, until outdoor temperatures reach 80°F.",
+   "claim_source": "umn_ext",
+   "sources": [
+    "umn_ext"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "lettuce-leaf",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": 80,
+   "measures": "soil",
+   "basis": "germination",
+   "claim": "Soil temperatures above 80 °F cause the seeds of some crops (lettuce, spinach, others) to go dormant and they will not germinate until cooler soil temperatures return.",
+   "claim_source": "usu_ext",
+   "note": "The source's figure is a soil temperature; the app compares a forecast air high against it. That is a stated proxy (PLA-750 D2), not a sourced air threshold: hot days ahead usually mean hot soil, and the held line says so in house voice.",
+   "sources": [
+    "usu_ext"
+   ],
+   "anchoring_urls": {
+    "usu_ext": {
+     "url": "https://extension.usu.edu/vegetableguide/leafy-greens/planting-spacing",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "cilantro-coriander",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": 75,
+   "measures": "soil",
+   "basis": "bolting",
+   "claim": "Try to keep the soil temperature below 75°F, especially if grown near a heat source or a particular window that becomes quite warm",
+   "claim_source": "usu_ext",
+   "note": "The source's figure is a soil temperature; the app compares a forecast air high against it. That is a stated proxy (PLA-750 D2), not a sourced air threshold: hot days ahead usually mean hot soil, and the held line says so in house voice. USU gives the figure as a bolting measure, not a germination one.",
+   "sources": [
+    "usu_ext"
+   ],
+   "anchoring_urls": {
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "beet",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": 80,
+   "measures": "soil",
+   "basis": "germination",
+   "claim": "Temperatures above 80°F reduce seed germination.",
+   "claim_source": "usu_ext",
+   "note": "The source's figure is a soil temperature; the app compares a forecast air high against it. That is a stated proxy (PLA-750 D2), not a sourced air threshold: hot days ahead usually mean hot soil, and the held line says so in house voice. The sentence gives a germination temperature without saying soil; a germination temperature is a seed-zone temperature (PLA-750 P3).",
+   "sources": [
+    "usu_ext"
+   ],
+   "anchoring_urls": {
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/beets-in-the-garden",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "radish",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": 75,
+   "measures": "air",
+   "basis": "maturity_coupled",
+   "claim": "Plant fast-growing varieties in shallow beds or containers during spring and fall when temperatures are 50-75 degrees.",
+   "claim_source": "uc_mg",
+   "note": "The page gives degrees with no unit or medium; read as °F air, a planting-season sentence on a US page (PLA-750 P3). The hold rests on maturity: a radish sown into a hot spell matures in it (D3).",
+   "sources": [
+    "uc_mg"
+   ],
+   "anchoring_urls": {
+    "uc_mg": {
+     "url": "https://ucanr.edu/site/uc-master-gardener-program-sonoma-county/radish",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "kohlrabi",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": 75,
+   "measures": "air",
+   "basis": "maturity_coupled",
+   "claim": "Avoid planting after May 1. The high temperatures will not produce good quality.",
+   "claim_source": "umn_ext",
+   "temp_source": "usu_ext",
+   "note": "UMN ties the sowing date to the heat harm (D3); the number is USU's growing ceiling, \"Kohlrabi grows best when temperatures do not exceed 75°F.\"",
+   "sources": [
+    "umn_ext",
+    "usu_ext"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/vegetables/growing-kohlrabi",
+     "verified": "2026-10-18"
+    },
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/kohlrabi-in-the-garden",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "sugar-snap-peas",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": 80,
+   "measures": "air",
+   "basis": "germination",
+   "claim": "Peas are cool weather, frost tolerant vegetables that require soil and air temperatures to remain below 80ºF for best germination and plant growth.",
+   "claim_source": "usu_ext",
+   "sources": [
+    "usu_ext"
+   ],
+   "anchoring_urls": {
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "snow-peas",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": 80,
+   "measures": "air",
+   "basis": "germination",
+   "claim": "Peas are cool weather, frost tolerant vegetables that require soil and air temperatures to remain below 80ºF for best germination and plant growth.",
+   "claim_source": "usu_ext",
+   "sources": [
+    "usu_ext"
+   ],
+   "anchoring_urls": {
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "calendula",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": 86,
+   "measures": "soil",
+   "basis": "sowing_statement",
+   "claim": "Accordingly, calendula seed should be sown in the field only if forecasted soil conditions are expected to be below 30. °C during seed germination.",
+   "claim_source": "eberle_2014_calendula",
+   "note": "The source's figure is a soil temperature; the app compares a forecast air high against it. That is a stated proxy (PLA-750 D2), not a sourced air threshold: hot days ahead usually mean hot soil, and the held line says so in house voice. 30 °C is 86 °F. The abstract page renders the figure as \"30. °C\" (publisher markup); the claim keeps it verbatim. heat_threshold_f stays 85, USU's bloom number (P2).",
+   "sources": [
+    "eberle_2014_calendula"
+   ],
+   "anchoring_urls": {
+    "eberle_2014_calendula": {
+     "url": "https://experts.umn.edu/en/publications/seed-germination-of-calendula-in-response-to-temperature/",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "viola",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": 75,
+   "measures": "soil",
+   "basis": "germination",
+   "claim": "If planting by seed, keep in mind that they only germinate at temperatures between 65˚ and 75˚Fahrenheit.",
+   "claim_source": "uf_ifas",
+   "note": "The source's figure is a soil temperature; the app compares a forecast air high against it. That is a stated proxy (PLA-750 D2), not a sourced air threshold: hot days ahead usually mean hot soil, and the held line says so in house voice. The sentence gives a germination temperature without saying soil; a germination temperature is a seed-zone temperature (PLA-750 P3).",
+   "sources": [
+    "uf_ifas"
+   ],
+   "anchoring_urls": {
+    "uf_ifas": {
+     "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/pansies/",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "celery",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold: celery is started indoors and transplanted, so an outdoor forecast cannot bear on its sowing. Its heat harm is near harvest: Texas A&M, \"Average high temperature above 75°F in month preceding harvest limits vegetative growth and quality.\"",
+   "sources": [
+    "tamu_celery_crop_sheet"
+   ],
+   "anchoring_urls": {
+    "tamu_celery_crop_sheet": {
+     "url": "https://aggiehorticulture.tamu.edu/vegetable/wp-content/uploads/sites/10/2011/10/celery2.pdf",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "celery",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "spring-onion",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold: no source ties heat to sowing green onions, and UC ANR plants them in summer too: \"Green onions are plant- ed during the fall, spring, and summer for harvest 60 to 120 days later.\"",
+   "sources": [
+    "ucanr_pub7243"
+   ],
+   "anchoring_urls": {
+    "ucanr_pub7243": {
+     "url": "https://my.ucanr.edu/repository/fileaccess.cfm?article=54051&p=+FLPUZE",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "spring-onion",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "broccoli",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold: the heat harm is at heading, not sowing. UMN, \"While summer heat harms the quality of the developing head, heat while the leafy broccoli plant is growing is fine.\" and \"Direct seed broccoli in July.\" The heading reason lives in tips_by_stage.head_forming (D4).",
+   "sources": [
+    "umn_ext"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "broccoli",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "cauliflower",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold: the heat harm is at curd formation. USU, \"Low (32°F) or high (greater than 80°F) temperatures decrease plant growth, lower yields and decrease head quality.\" UMN, \"Direct seed cauliflower in July.\" The reason lives in tips_by_stage.curd_forming (D4).",
+   "sources": [
+    "usu_ext",
+    "umn_ext"
+   ],
+   "anchoring_urls": {
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/cauliflower-in-the-garden",
+     "verified": "2026-10-18"
+    },
+    "umn_ext": {
+     "url": "https://extension.umn.edu/vegetables/growing-cauliflower",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "cauliflower",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "cabbage",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold: the heat harm is to the maturing head. USU, \"Cabbage grows best when temperatures do not exceed 80°F and is not seriously damaged by temperatures down to 25°F.\" UMN, \"For a fall crop, plant seed directly in the garden in early July.\" The reason lives in tips_by_stage.head_forming (D4).",
+   "sources": [
+    "usu_ext",
+    "umn_ext"
+   ],
+   "anchoring_urls": {
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/cabbage-in-the-garden",
+     "verified": "2026-10-18"
+    },
+    "umn_ext": {
+     "url": "https://extension.umn.edu/vegetables/growing-cabbage",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "cabbage",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "brussels-sprouts",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold: the heat harm is to maturing sprouts. USU, \"High summer temperatures reduce plant growth, decrease sprout quality, and cause internal tipburn.\" The reason lives in tips_by_stage.sprout_formation (D4).",
+   "sources": [
+    "usu_ext"
+   ],
+   "anchoring_urls": {
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/brussel-sprouts-in-the-garden",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "brussels-sprouts",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "kale",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold: the heat harm is to leaves at harvest. UMN, \"For the spring crop, flavor is best if you harvest the plants before the weather becomes hot and dry.\" The reason lives in tips_by_stage.harvest (D4).",
+   "sources": [
+    "umn_ext"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "kale",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "collards",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold: the heat harm is to leaves at harvest, and collards tolerate heat. UMD, \"Collards are more heat-tolerant than kale or turnip greens.\" The reason lives in tips_by_stage.harvest (D4).",
+   "sources": [
+    "umd_ext"
+   ],
+   "anchoring_urls": {
+    "umd_ext": {
+     "url": "https://extension.umd.edu/resource/growing-leafy-greens-home-garden",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "collards",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "edamame",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold: edamame is a warm-season crop sown through summer. MU Extension, \"For a continuous supply of edamame throughout the growing season, plant every 7-14 days up to mid-July, depending on location.\"",
+   "sources": [
+    "mu_ext"
+   ],
+   "anchoring_urls": {
+    "mu_ext": {
+     "url": "https://extension.missouri.edu/news/the-soy-of-gardening-includes-edamame",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "edamame",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "borage",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold: no T1 source ties heat to sowing borage. Illinois, \"If grown for culinary use, successive sowings of seed at four week intervals will result in a good supply of fresh foliage.\"",
+   "sources": [
+    "uiuc_ext"
+   ],
+   "anchoring_urls": {
+    "uiuc_ext": {
+     "url": "https://extension.illinois.edu/herbs/borage",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "borage",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "carrot",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold until a source ties heat to the sowing itself (PLA-750 ruling 47a09951). Weak lead, germination only at the extreme: Clemson, \"Seeds will not germinate above 95 °F.\"",
+   "sources": [
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "carrot",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "arugula",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold until a source ties heat to the sowing itself (PLA-750 ruling 47a09951). Weak lead, mature plant only: SARE, \"Arugula bolts due to longer days and high temperatures.\"",
+   "sources": [
+    "sare_necphm_arugula"
+   ],
+   "anchoring_urls": {
+    "sare_necphm_arugula": {
+     "url": "https://www.sare.org/publications/northeast-crop-production-harvest-manual/arugula/",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "arugula",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "dill",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold until a source ties heat to the sowing itself (PLA-750 ruling 47a09951). Weak lead, mature plant only: Clemson, \"At the onset of hot weather, this cool-weather annual will go to seed.\"",
+   "sources": [
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/herbs/",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "dill",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "turnip",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold until a source ties heat to the sowing itself (PLA-750 ruling 47a09951). Weak lead, mature plant only: USU, \"Turnips grow best when temperatures do not exceed 85ºF.\"",
+   "sources": [
+    "usu_ext"
+   ],
+   "anchoring_urls": {
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/rutabagas-and-turnips-in-the-garden",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "turnip",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "parsley",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold until a source ties heat to the sowing itself (PLA-750 ruling 47a09951). Weak lead, germination only (Harrington soil table, optimum 75, range 50-85, limits 40/90): Purdue, \"Parsley 75/50-85 40/90\"",
+   "sources": [
+    "purdue_ext"
+   ],
+   "anchoring_urls": {
+    "purdue_ext": {
+     "url": "https://www.extension.purdue.edu/extmedia/HO/HO-186-W.pdf",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "parsley",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "bok-choy",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold until a source ties heat to the sowing itself (PLA-750 ruling 47a09951). Weak lead, mature plant only: UMN, \"Warm weather can cause bok choy to flower.\"",
+   "sources": [
+    "umn_ext"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/vegetables/growing-chinese-cabbage-and-bok-choy",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "bok-choy",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "sweet-pea",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold until a source ties heat to the sowing itself (PLA-750 ruling 47a09951). Weak lead, mature plant only: Illinois, \"will bloom poorly (or not at all) when weather is hot.\"",
+   "sources": [
+    "uiuc_ext"
+   ],
+   "anchoring_urls": {
+    "uiuc_ext": {
+     "url": "https://web.extension.illinois.edu/hortanswers/PlantDetail.cfm?PlantID=532&PlantTypeID=5",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "sweet-pea",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "nasturtium",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold until a source ties heat to the sowing itself (PLA-750 ruling 47a09951). Weak lead, mature plant only: UF/IFAS, \"Nasturtiums do best in the cooler part of the year and will tend to decline when the temperatures get too hot.\"",
+   "sources": [
+    "uf_ifas"
+   ],
+   "anchoring_urls": {
+    "uf_ifas": {
+     "url": "https://blogs.ifas.ufl.edu/charlotteco/2024/12/20/nasturtiums-make-me-smile/",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "nasturtium",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "chamomile",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold until a source ties heat to the sowing itself (PLA-750 ruling 47a09951). No T1 heat statement found; the one temperature lead favors warmth: UW-Madison, \"Under warm conditions, germination generally occurs within a week.\"",
+   "sources": [
+    "uwi_hort"
+   ],
+   "anchoring_urls": {
+    "uwi_hort": {
+     "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "chamomile",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "sweet-alyssum",
+  "path": "sowing_heat_ceiling",
+  "kind": "field",
+  "old": "<absent>",
+  "new": {
+   "temp_f": null,
+   "note": "No sowing hold: the heat effect is on mature plants, with no sowing-date source and no number (D3). Clemson, \"As summer temperatures rise, alyssum grown from seed may stop producing flowers.\"",
+   "sources": [
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/sweet-alyssum/",
+     "verified": "2026-10-18"
+    }
+   }
+  },
+  "reason": "PLA-750 D1/P1 register #35, ruled table row",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "sweet-alyssum",
+  "path": "succession_policy.pause_in_heat",
+  "kind": "pause",
+  "old": true,
+  "new": false,
+  "reason": "PLA-750 ruling 47a09951: no sourced sowing hold",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "sweet-pea",
+  "path": "heat_effect",
+  "kind": "enum",
+  "old": "heat_tolerant",
+  "new": "quality_loss",
+  "reason": "PLA-750 D5 + P5: stress is real, no sourced number",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "sweet-alyssum",
+  "path": "heat_effect",
+  "kind": "enum",
+  "old": "heat_tolerant",
+  "new": "quality_loss",
+  "reason": "PLA-750 D5 + P5: stress is real, no sourced number",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "nasturtium",
+  "path": "heat_effect",
+  "kind": "enum",
+  "old": "heat_tolerant",
+  "new": "quality_loss",
+  "reason": "PLA-750 D5 + P5: stress is real, no sourced number",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "broccoli",
+  "path": "tips_by_stage.head_forming[0].text_seasoned",
+  "kind": "prose",
+  "old": "Once the head appears, keep water steady and watch daily; heat above about 86°F by day and warm nights during heading cause bolting and loose, open heads.",
+  "new": "Once the head appears, keep water steady and watch daily; summer heat harms the developing head, and hot weather above about 86°F by day with nights over 77°F can keep a crown from forming, while high temperatures cause loose heads that taste bitter.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    "heat above about 86°F by day and warm nights during heading cause bolting and loose, open heads",
+    "summer heat harms the developing head, and hot weather above about 86°F by day with nights over 77°F can keep a crown from forming, while high temperatures cause loose heads that taste bitter"
+   ]
+  ],
+  "cited_at": "tips_by_stage.head_forming[0]"
+ },
+ {
+  "crop": "broccoli",
+  "path": "tips_by_stage.head_forming[0].text_beginner",
+  "kind": "prose",
+  "old": "When the head shows up, keep watering steadily and check it every day. Hot days over about 86°F and warm nights now can make the head loose or cause it to flower.",
+  "new": "When the head shows up, keep watering steadily and check it every day. Hot days over about 86°F and warm nights now can hurt the head and make it loose and bitter.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    "Hot days over about 86°F and warm nights now can make the head loose or cause it to flower.",
+    "Hot days over about 86°F and warm nights now can hurt the head and make it loose and bitter."
+   ]
+  ],
+  "cited_at": "tips_by_stage.head_forming[0]"
+ },
+ {
+  "crop": "cauliflower",
+  "path": "tips_by_stage.curd_forming[1].text_seasoned",
+  "kind": "prose",
+  "old": "Keep moisture even and watch the weather as the curd fills; heat causes ricing and discoloration, and a wet, tightly tied head invites bacterial rot, so tie loosely.",
+  "new": "Keep moisture even and watch the weather as the curd fills; temperatures above 80°F lower head quality, and a wet, tightly tied head invites bacterial rot, so tie loosely.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    "heat causes ricing and discoloration",
+    "temperatures above 80°F lower head quality"
+   ]
+  ],
+  "cited_at": "tips_by_stage.curd_forming[1]"
+ },
+ {
+  "crop": "arugula",
+  "path": "tips_by_stage.germination[0].text_seasoned",
+  "kind": "prose",
+  "old": "Arugula germinates fast and in cool soil, but germination drops off sharply above about 80°F, which is why midsummer sowings fail. Sow shallowly, a little thicker than your final stand, and thin to taste.",
+  "new": "Arugula germinates fast in cool soil, fastest near 75°F, and still germinates well in warm soil; midsummer sowings fail because long days and high temperatures make it bolt. Sow shallowly, a little thicker than your final stand, and thin to taste.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    "Arugula germinates fast and in cool soil, but germination drops off sharply above about 80°F, which is why midsummer sowings fail.",
+    "Arugula germinates fast in cool soil, fastest near 75°F, and still germinates well in warm soil; midsummer sowings fail because long days and high temperatures make it bolt."
+   ]
+  ],
+  "cited_at": "tips_by_stage.germination[0]"
+ },
+ {
+  "crop": "arugula",
+  "path": "tips_by_stage.germination[0].text_beginner",
+  "kind": "prose",
+  "old": "Arugula sprouts quickly, even in cold soil, but not in hot soil, so do not sow in the heat of summer. Sow it shallow and a bit thick, then thin the seedlings out, eating the ones you pull.",
+  "new": "Arugula sprouts quickly in cold or warm soil, but long, hot days make it flower early, so do not sow in the heat of summer. Sow it shallow and a bit thick, then thin the seedlings out, eating the ones you pull.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    "Arugula sprouts quickly, even in cold soil, but not in hot soil, so do not sow in the heat of summer.",
+    "Arugula sprouts quickly in cold or warm soil, but long, hot days make it flower early, so do not sow in the heat of summer."
+   ]
+  ],
+  "cited_at": "tips_by_stage.germination[0]"
+ },
+ {
+  "crop": "arugula",
+  "path": "start_method.notes_seasoned",
+  "kind": "prose",
+  "old": "Arugula is almost always direct-sown, since it grows fast and resents root disturbance. Sow seed about 0.25 to 0.5 inch deep as soon as the soil can be worked in spring; it germinates readily even in cool soil, often in 5 to 7 days, and tolerates frost, so it can go in several weeks before the last frost. Sow a little more thickly than the final stand and thin to taste, eating the thinnings. In hot regions, shift sowing to fall through spring, since warm soil above about 80°F cuts germination and lengthening warm days bolt the crop.",
+  "new": "Arugula is almost always direct-sown, since it grows fast and resents root disturbance. Sow seed about 0.25 to 0.5 inch deep as soon as the soil can be worked in spring; it germinates readily even in cool soil, often in 5 to 7 days, and tolerates frost, so it can go in several weeks before the last frost. Sow a little more thickly than the final stand and thin to taste, eating the thinnings. In hot regions, shift sowing to fall through spring, since long days and high temperatures bolt the crop.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    "since warm soil above about 80°F cuts germination and lengthening warm days bolt the crop",
+    "since long days and high temperatures bolt the crop"
+   ]
+  ],
+  "cited_at": null
+ },
+ {
+  "crop": "arugula",
+  "path": "start_method.notes_beginner",
+  "kind": "prose",
+  "old": "Arugula is best planted straight in the garden from seed, because it grows so fast and does not like having its roots disturbed. Sow the seeds about a quarter to half an inch deep as soon as the soil can be worked in spring, since they sprout even in cold soil and the plants handle frost. Sow again every couple of weeks, and in hot areas plant in fall through spring instead of summer, because heat keeps the seeds from sprouting well and makes the plants bolt.",
+  "new": "Arugula is best planted straight in the garden from seed, because it grows so fast and does not like having its roots disturbed. Sow the seeds about a quarter to half an inch deep as soon as the soil can be worked in spring, since they sprout even in cold soil and the plants handle frost. Sow again every couple of weeks, and in hot areas plant in fall through spring instead of summer, because long, hot days make the plants bolt.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    "because heat keeps the seeds from sprouting well and makes the plants bolt",
+    "because long, hot days make the plants bolt"
+   ]
+  ],
+  "cited_at": null
+ },
+ {
+  "crop": "cilantro-coriander",
+  "path": "tips_by_stage.germination[tip_id=tip_cil_germ1].text_seasoned",
+  "kind": "prose",
+  "old": "Cilantro germinates slowly, often 7 to 21 days, partly because each round fruit holds two seeds; some growers gently crack the seed to speed and even out emergence. Sow shallowly into cool, moist soil, since warm soil above about 75°F slows germination and pushes early bolting.",
+  "new": "Cilantro germinates slowly, often 7 to 21 days, partly because each round fruit holds two seeds; some growers gently crack the seed to speed and even out emergence. Sow shallowly into cool, moist soil.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    " Sow shallowly into cool, moist soil, since warm soil above about 75°F slows germination and pushes early bolting.",
+    " Sow shallowly into cool, moist soil."
+   ]
+  ],
+  "cited_at": null
+ },
+ {
+  "crop": "viola",
+  "path": "tips_by_stage.germination[0].text_seasoned",
+  "kind": "prose",
+  "old": "Sow into cool soil (about 65 to 75 °F) and cover the seed to exclude light; warm soil and light both inhibit viola germination, which is why seed is started in late summer under cover rather than direct-sown into warm beds.",
+  "new": "Sow into cool soil (about 65 to 75 °F) and cover the seed to exclude light; viola seed germinates only in that cool range, which is why seed is started in late summer under cover rather than direct-sown into warm beds.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    "warm soil and light both inhibit viola germination",
+    "viola seed germinates only in that cool range"
+   ]
+  ],
+  "cited_at": "tips_by_stage.germination[0]"
+ },
+ {
+  "crop": "viola",
+  "path": "tips_by_stage.germination[0].text_beginner",
+  "kind": "prose",
+  "old": "Plant viola seed in cool soil, around 65 to 75 °F, and cover it so it stays dark. Warm soil and light both keep the seeds from sprouting, so they are usually started indoors in late summer.",
+  "new": "Plant viola seed in cool soil, around 65 to 75 °F, and cover it so it stays dark. Warm soil keeps the seeds from sprouting, so they are usually started indoors in late summer.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    "Warm soil and light both keep the seeds from sprouting",
+    "Warm soil keeps the seeds from sprouting"
+   ]
+  ],
+  "cited_at": "tips_by_stage.germination[0]"
+ },
+ {
+  "crop": "borage",
+  "path": "tips_by_stage.germination[1].text_seasoned",
+  "kind": "prose",
+  "old": "Sow after the last frost in cool and temperate regions; in hot, humid climates sow in fall and the cool season instead, since borage struggles in extreme summer heat.",
+  "new": "Sow after the last frost in cool and temperate regions; in hot, humid climates sow in fall and the cool season instead.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    ", since borage struggles in extreme summer heat",
+    ""
+   ]
+  ],
+  "cited_at": null
+ },
+ {
+  "crop": "spinach",
+  "path": "tips_by_stage.germination[0].text_seasoned",
+  "kind": "prose",
+  "old": "Sow about 0.5 inch deep into a moist, uncrusted seedbed; spinach germinates from about 40°F and reliably at 60 to 70°F, but poorly above 75 to 85°F.",
+  "new": "Sow about 0.5 inch deep into a moist, uncrusted seedbed; spinach germinates best at 55 to 65°F, soil above 80°F reduces germination, and soil above 85°F inhibits it.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    "spinach germinates from about 40°F and reliably at 60 to 70°F, but poorly above 75 to 85°F",
+    "spinach germinates best at 55 to 65°F, soil above 80°F reduces germination, and soil above 85°F inhibits it"
+   ]
+  ],
+  "cited_at": "tips_by_stage.germination[0]"
+ },
+ {
+  "crop": "spinach",
+  "path": "tips_by_stage.germination[1].text_seasoned",
+  "kind": "prose",
+  "old": "For the fall crop, pre-sprout or water the furrow to cool it, or wait for soil to drop below 75°F, since warm soil is the main cause of poor late-summer stands.",
+  "new": "For a summer or fall sowing, chill the seed in the refrigerator for 1 or 2 weeks before planting, and stop spring sowings once outdoor temperatures reach 80°F.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    "For the fall crop, pre-sprout or water the furrow to cool it, or wait for soil to drop below 75°F, since warm soil is the main cause of poor late-summer stands.",
+    "For a summer or fall sowing, chill the seed in the refrigerator for 1 or 2 weeks before planting, and stop spring sowings once outdoor temperatures reach 80°F."
+   ]
+  ],
+  "cited_at": "tips_by_stage.germination[1]"
+ },
+ {
+  "crop": "spinach",
+  "path": "tips_by_stage.germination[1].text_beginner",
+  "kind": "prose",
+  "old": "If you sow in late summer for fall, wait until the soil cools down, because spinach seeds will not come up well in hot soil.",
+  "new": "For a summer or fall sowing, keep the seed in the refrigerator for a week or two first, and stop spring sowings once the weather reaches 80°F.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    "If you sow in late summer for fall, wait until the soil cools down, because spinach seeds will not come up well in hot soil.",
+    "For a summer or fall sowing, keep the seed in the refrigerator for a week or two first, and stop spring sowings once the weather reaches 80°F."
+   ]
+  ],
+  "cited_at": "tips_by_stage.germination[1]"
+ },
+ {
+  "crop": "celery",
+  "path": "weather_triggers[condition=HEAT_STRESS].body_seasoned",
+  "kind": "prose",
+  "old": "Sustained heat above about 75°F coarsens stalks, turns them bitter, and combined with drought can trigger bolting. Keep moisture even, mulch, provide afternoon shade if possible, and harvest before a long hot stretch.",
+  "new": "Sustained heat above about 75°F coarsens stalks and turns them bitter. Keep moisture even, mulch, provide afternoon shade if possible, and harvest before a long hot stretch.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    "coarsens stalks, turns them bitter, and combined with drought can trigger bolting.",
+    "coarsens stalks and turns them bitter."
+   ]
+  ],
+  "cited_at": null
+ },
+ {
+  "crop": "celery",
+  "path": "weather_triggers[condition=HEAT_STRESS].body_beginner",
+  "kind": "prose",
+  "old": "When it stays hotter than about 75°F, celery gets tough and bitter and may bolt (run to seed), especially if it also gets dry. Keep it well watered, mulch it, give it afternoon shade if you can, and harvest before a long hot spell.",
+  "new": "When it stays hotter than about 75°F, celery gets tough and bitter. Keep it well watered, mulch it, give it afternoon shade if you can, and harvest before a long hot spell.",
+  "reason": "PLA-750 ruled edit",
+  "subs": [
+   [
+    "celery gets tough and bitter and may bolt (run to seed), especially if it also gets dry.",
+    "celery gets tough and bitter."
+   ]
+  ],
+  "cited_at": null
+ },
+ {
+  "crop": "broccoli",
+  "path": "tips_by_stage.head_forming[0].sources",
+  "kind": "sources",
+  "old": "<absent>",
+  "new": [
+   "umn_ext",
+   "usu_ext"
+  ],
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.head_forming[0]"
+ },
+ {
+  "crop": "broccoli",
+  "path": "tips_by_stage.head_forming[0].anchoring_urls",
+  "kind": "anchors",
+  "old": "<absent>",
+  "new": {
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+    "verified": "2026-10-18"
+   },
+   "usu_ext": {
+    "url": "https://extension.usu.edu/yardandgarden/research/broccoli-in-the-garden",
+    "verified": "2026-10-18"
+   }
+  },
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.head_forming[0]"
+ },
+ {
+  "crop": "cauliflower",
+  "path": "tips_by_stage.curd_forming[1].sources",
+  "kind": "sources",
+  "old": "<absent>",
+  "new": [
+   "usu_ext"
+  ],
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.curd_forming[1]"
+ },
+ {
+  "crop": "cauliflower",
+  "path": "tips_by_stage.curd_forming[1].anchoring_urls",
+  "kind": "anchors",
+  "old": "<absent>",
+  "new": {
+   "usu_ext": {
+    "url": "https://extension.usu.edu/yardandgarden/research/cauliflower-in-the-garden",
+    "verified": "2026-10-18"
+   }
+  },
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.curd_forming[1]"
+ },
+ {
+  "crop": "lettuce-leaf",
+  "path": "tips_by_stage.germination[0].sources",
+  "kind": "sources",
+  "old": [
+   "ncsu_ext",
+   "umn_ext",
+   "umd_ext",
+   "uiuc_ext",
+   "uf_ifas"
+  ],
+  "new": [
+   "ncsu_ext",
+   "umn_ext",
+   "umd_ext",
+   "uiuc_ext",
+   "uf_ifas",
+   "usu_ext"
+  ],
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.germination[0]"
+ },
+ {
+  "crop": "lettuce-leaf",
+  "path": "tips_by_stage.germination[0].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "ncsu_ext": {
+    "url": "https://content.ces.ncsu.edu/lettuce",
+    "verified": "2026-05-28"
+   },
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-lettuce-endive-and-radicchio",
+    "verified": "2026-05-28"
+   },
+   "umd_ext": {
+    "url": "https://extension.umd.edu/resource/growing-lettuce-home-garden",
+    "verified": "2026-05-28"
+   },
+   "uiuc_ext": {
+    "url": "https://extension.illinois.edu/gardening/lettuce",
+    "verified": "2026-05-28"
+   },
+   "uf_ifas": {
+    "url": "https://blogs.ifas.ufl.edu/escambiaco/2014/09/30/thinning-vegetable-seedlings-2",
+    "verified": "2026-05-28"
+   }
+  },
+  "new": {
+   "ncsu_ext": {
+    "url": "https://content.ces.ncsu.edu/lettuce",
+    "verified": "2026-05-28"
+   },
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-lettuce-endive-and-radicchio",
+    "verified": "2026-05-28"
+   },
+   "umd_ext": {
+    "url": "https://extension.umd.edu/resource/growing-lettuce-home-garden",
+    "verified": "2026-05-28"
+   },
+   "uiuc_ext": {
+    "url": "https://extension.illinois.edu/gardening/lettuce",
+    "verified": "2026-05-28"
+   },
+   "uf_ifas": {
+    "url": "https://blogs.ifas.ufl.edu/escambiaco/2014/09/30/thinning-vegetable-seedlings-2",
+    "verified": "2026-05-28"
+   },
+   "usu_ext": {
+    "url": "https://extension.usu.edu/vegetableguide/leafy-greens/planting-spacing",
+    "verified": "2026-10-18"
+   }
+  },
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.germination[0]"
+ },
+ {
+  "crop": "arugula",
+  "path": "tips_by_stage.germination[0].sources",
+  "kind": "sources",
+  "old": [
+   "cornell_ext",
+   "uwi_hort"
+  ],
+  "new": [
+   "cornell_ext",
+   "uwi_hort",
+   "sare_necphm_arugula",
+   "steiner_2010_arugula"
+  ],
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.germination[0]"
+ },
+ {
+  "crop": "arugula",
+  "path": "tips_by_stage.germination[0].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "cornell_ext": {
+    "url": "https://gardening.cals.cornell.edu/garden-guidance/foodgarden/vegetable-growing-guides/arugula/",
+    "verified": "2026-06-29"
+   },
+   "uwi_hort": {
+    "url": "https://hort.extension.wisc.edu/articles/arugula/",
+    "verified": "2026-06-29"
+   }
+  },
+  "new": {
+   "cornell_ext": {
+    "url": "https://gardening.cals.cornell.edu/garden-guidance/foodgarden/vegetable-growing-guides/arugula/",
+    "verified": "2026-06-29"
+   },
+   "uwi_hort": {
+    "url": "https://hort.extension.wisc.edu/articles/arugula/",
+    "verified": "2026-06-29"
+   },
+   "sare_necphm_arugula": {
+    "url": "https://www.sare.org/publications/northeast-crop-production-harvest-manual/arugula/",
+    "verified": "2026-10-18"
+   },
+   "steiner_2010_arugula": {
+    "url": "https://www.redalyc.org/pdf/995/99515218004.pdf",
+    "verified": "2026-10-18"
+   }
+  },
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.germination[0]"
+ },
+ {
+  "crop": "viola",
+  "path": "tips_by_stage.germination[0].sources",
+  "kind": "sources",
+  "old": [
+   "clemson_hgic"
+  ],
+  "new": [
+   "clemson_hgic",
+   "uf_ifas",
+   "ufifas_ext"
+  ],
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.germination[0]"
+ },
+ {
+  "crop": "viola",
+  "path": "tips_by_stage.germination[0].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/factsheet/pansies-and-johnny-jump-ups/",
+    "verified": "2026-06-30"
+   }
+  },
+  "new": {
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/factsheet/pansies-and-johnny-jump-ups/",
+    "verified": "2026-06-30"
+   },
+   "uf_ifas": {
+    "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/pansies/",
+    "verified": "2026-10-18"
+   },
+   "ufifas_ext": {
+    "url": "https://edis.ifas.ufl.edu/publication/FP609",
+    "verified": "2026-10-18"
+   }
+  },
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.germination[0]"
+ },
+ {
+  "crop": "calendula",
+  "path": "tips_by_stage.germination[1].sources",
+  "kind": "sources",
+  "old": [
+   "usu_ext",
+   "ufifas_ext"
+  ],
+  "new": [
+   "usu_ext",
+   "ufifas_ext",
+   "eberle_2014_calendula"
+  ],
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.germination[1]"
+ },
+ {
+  "crop": "calendula",
+  "path": "tips_by_stage.germination[1].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "usu_ext": {
+    "url": "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+    "verified": "2026-06-30"
+   },
+   "ufifas_ext": {
+    "url": "https://ask.ifas.ufl.edu/publication/FP087",
+    "verified": "2026-06-30"
+   }
+  },
+  "new": {
+   "usu_ext": {
+    "url": "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+    "verified": "2026-06-30"
+   },
+   "ufifas_ext": {
+    "url": "https://ask.ifas.ufl.edu/publication/FP087",
+    "verified": "2026-06-30"
+   },
+   "eberle_2014_calendula": {
+    "url": "https://experts.umn.edu/en/publications/seed-germination-of-calendula-in-response-to-temperature/",
+    "verified": "2026-10-18"
+   }
+  },
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.germination[1]"
+ },
+ {
+  "crop": "spinach",
+  "path": "tips_by_stage.germination[0].sources",
+  "kind": "sources",
+  "old": "<absent>",
+  "new": [
+   "usu_ext",
+   "clemson_hgic"
+  ],
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.germination[0]"
+ },
+ {
+  "crop": "spinach",
+  "path": "tips_by_stage.germination[0].anchoring_urls",
+  "kind": "anchors",
+  "old": "<absent>",
+  "new": {
+   "usu_ext": {
+    "url": "https://extension.usu.edu/yardandgarden/research/spinach-in-the-garden",
+    "verified": "2026-10-18"
+   },
+   "clemson_hgic": {
+    "url": "https://hgic.clemson.edu/factsheet/spinach/",
+    "verified": "2026-10-18"
+   }
+  },
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.germination[0]"
+ },
+ {
+  "crop": "spinach",
+  "path": "tips_by_stage.germination[1].sources",
+  "kind": "sources",
+  "old": "<absent>",
+  "new": [
+   "uiuc_ext",
+   "umn_ext"
+  ],
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.germination[1]"
+ },
+ {
+  "crop": "spinach",
+  "path": "tips_by_stage.germination[1].anchoring_urls",
+  "kind": "anchors",
+  "old": "<absent>",
+  "new": {
+   "uiuc_ext": {
+    "url": "https://extension.illinois.edu/gardening/spinach",
+    "verified": "2026-10-18"
+   },
+   "umn_ext": {
+    "url": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard",
+    "verified": "2026-10-18"
+   }
+  },
+  "reason": "PLA-750 citation for a ruled claim",
+  "subs": null,
+  "cited_at": "tips_by_stage.germination[1]"
+ },
+ {
+  "crop": "brussels-sprouts",
+  "path": "tips_by_stage.sprout_formation",
+  "kind": "tip_add",
+  "old": [
+   {
+    "text_seasoned": "Strip the lower leaves as sprouts swell to give them room, and optionally top the plant (remove the growing point) when the lowest sprouts are about 1 inch across to even up and hasten the upper sprouts.",
+    "text_beginner": "Pull off the lower leaves as the sprouts grow, and when the bottom sprouts are about an inch across you can cut off the very top of the plant to push the rest to size up evenly.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "Ease off heavy nitrogen once sprouts set; late lush growth gives loose, blowy sprouts and draws aphids. Even moisture keeps them firm.",
+    "text_beginner": "Once the sprouts start forming, go easy on the nitrogen, because too much makes loose, leafy sprouts and brings aphids.",
+    "audience": "core"
+   }
+  ],
+  "new": [
+   {
+    "text_seasoned": "Strip the lower leaves as sprouts swell to give them room, and optionally top the plant (remove the growing point) when the lowest sprouts are about 1 inch across to even up and hasten the upper sprouts.",
+    "text_beginner": "Pull off the lower leaves as the sprouts grow, and when the bottom sprouts are about an inch across you can cut off the very top of the plant to push the rest to size up evenly.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "Ease off heavy nitrogen once sprouts set; late lush growth gives loose, blowy sprouts and draws aphids. Even moisture keeps them firm.",
+    "text_beginner": "Once the sprouts start forming, go easy on the nitrogen, because too much makes loose, leafy sprouts and brings aphids.",
+    "audience": "core"
+   },
+   {
+    "tip_id": "tip_bru_heat1",
+    "sources": [
+     "usu_ext",
+     "umd_ext",
+     "clemson_hgic"
+    ],
+    "evidence_tier": "extension_backed",
+    "author": {
+     "type": "plant_team"
+    },
+    "added_in": "pla750_heat_hold",
+    "last_reviewed": "2026-10-18",
+    "audience": "core",
+    "anchoring_urls": {
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/brussel-sprouts-in-the-garden",
+      "verified": "2026-10-18"
+     },
+     "umd_ext": {
+      "url": "https://extension.umd.edu/resource/brussels-sprouts",
+      "verified": "2026-10-18"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/start-brussels-sprouts-now-for-a-winter-harvest/",
+      "verified": "2026-10-18"
+     }
+    },
+    "text_seasoned": "Heat while the sprouts form costs quality: high summer temperatures decrease sprout quality and cause internal tipburn, and plants maturing in hot, dry weather may turn bitter or fail to form compact sprouts. Keep plants well watered through hot spells.",
+    "text_beginner": "Hot weather while the sprouts form makes them worse: they can turn bitter, stay loose, or brown inside. Keep the plants well watered when it is hot."
+   }
+  ],
+  "reason": "PLA-750 D4 stage tip",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "cabbage",
+  "path": "tips_by_stage.head_forming",
+  "kind": "tip_add",
+  "old": [
+   {
+    "text_seasoned": "Hold moisture as even as you can as the head fills, and taper heavy nitrogen; a sudden flush of water into a firm head is what splits it.",
+    "text_beginner": "Keep the watering steady as the head forms, and do not suddenly soak a nearly ripe head, or it will crack.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "Tighten caterpillar and aphid control as the head cups, since damage inside the head is the expensive kind, and use Bt or spinosad for caterpillars.",
+    "text_beginner": "Watch closely for caterpillars and aphids getting into the head and treat them, because that is the part you eat.",
+    "audience": "core"
+   }
+  ],
+  "new": [
+   {
+    "text_seasoned": "Hold moisture as even as you can as the head fills, and taper heavy nitrogen; a sudden flush of water into a firm head is what splits it.",
+    "text_beginner": "Keep the watering steady as the head forms, and do not suddenly soak a nearly ripe head, or it will crack.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "Tighten caterpillar and aphid control as the head cups, since damage inside the head is the expensive kind, and use Bt or spinosad for caterpillars.",
+    "text_beginner": "Watch closely for caterpillars and aphids getting into the head and treat them, because that is the part you eat.",
+    "audience": "core"
+   },
+   {
+    "tip_id": "tip_cab_heat1",
+    "sources": [
+     "usu_ext",
+     "clemson_hgic",
+     "umn_ext"
+    ],
+    "evidence_tier": "extension_backed",
+    "author": {
+     "type": "plant_team"
+    },
+    "added_in": "pla750_heat_hold",
+    "last_reviewed": "2026-10-18",
+    "audience": "core",
+    "anchoring_urls": {
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/cabbage-in-the-garden",
+      "verified": "2026-10-18"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/cabbage-chinese-cabbage/",
+      "verified": "2026-10-18"
+     },
+     "umn_ext": {
+      "url": "https://extension.umn.edu/vegetables/growing-cabbage",
+      "verified": "2026-10-18"
+     }
+    },
+    "text_seasoned": "Cabbage grows best when temperatures stay below about 80°F, so time a spring crop to be harvested before the weather turns hot; a fall crop seeded in early July forms its head as summer turns to fall.",
+    "text_beginner": "Cabbage likes it cool while the head grows, below about 80°F. Pick spring cabbage before hot weather sets in. Cabbage seeded in early July forms its head as the weather cools in fall."
+   }
+  ],
+  "reason": "PLA-750 D4 stage tip",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "kale",
+  "path": "tips_by_stage.harvest",
+  "kind": "tip_add",
+  "old": [
+   {
+    "text_seasoned": "Crop the outer leaves once they reach usable size, taking no more than about a third of the plant so the central growing point keeps producing for months.",
+    "text_beginner": "Pick the outside leaves when they are big enough, and leave the center growing, so the same plant keeps making leaves for a long time.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "Leaves are sweetest after a frost or two; in cool weather you can keep harvesting straight from the garden even after the foliage has frozen.",
+    "text_beginner": "Kale tastes sweeter after frost, and you can keep picking even after the leaves have frozen in cool weather.",
+    "audience": "core"
+   }
+  ],
+  "new": [
+   {
+    "text_seasoned": "Crop the outer leaves once they reach usable size, taking no more than about a third of the plant so the central growing point keeps producing for months.",
+    "text_beginner": "Pick the outside leaves when they are big enough, and leave the center growing, so the same plant keeps making leaves for a long time.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "Leaves are sweetest after a frost or two; in cool weather you can keep harvesting straight from the garden even after the foliage has frozen.",
+    "text_beginner": "Kale tastes sweeter after frost, and you can keep picking even after the leaves have frozen in cool weather.",
+    "audience": "core"
+   },
+   {
+    "tip_id": "tip_kal_heat1",
+    "sources": [
+     "umn_ext"
+    ],
+    "evidence_tier": "extension_backed",
+    "author": {
+     "type": "plant_team"
+    },
+    "added_in": "pla750_heat_hold",
+    "last_reviewed": "2026-10-18",
+    "audience": "core",
+    "anchoring_urls": {
+     "umn_ext": {
+      "url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "verified": "2026-10-18"
+     }
+    },
+    "text_seasoned": "For the spring crop, harvest before the weather turns hot and dry: heat slows growth and the leaves become tough and strong-flavored. In fall, the cooler the weather, the better the flavor.",
+    "text_beginner": "Pick spring kale before hot, dry weather arrives, because heat makes the leaves tough and strong tasting. Fall kale tastes better as the weather cools."
+   }
+  ],
+  "reason": "PLA-750 D4 stage tip",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "collards",
+  "path": "tips_by_stage.harvest",
+  "kind": "tip_add",
+  "old": [
+   {
+    "text_seasoned": "Crop the lower leaves once they reach 8 to 10 inches, taking no more than about a third of the plant so the growing bud keeps producing for months; or cut whole young plants and let them regrow.",
+    "text_beginner": "Pick the lowest leaves when they are about hand-sized or bigger, and leave the center growing, so the same plant keeps making leaves. Or cut the whole young plant and let it grow back.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "Leaves are sweetest after a frost or two; in cool weather you can keep harvesting straight from the garden even after the foliage has frozen.",
+    "text_beginner": "Collards taste sweeter after frost, and you can keep picking even after the leaves have frozen in cool weather.",
+    "audience": "core"
+   }
+  ],
+  "new": [
+   {
+    "text_seasoned": "Crop the lower leaves once they reach 8 to 10 inches, taking no more than about a third of the plant so the growing bud keeps producing for months; or cut whole young plants and let them regrow.",
+    "text_beginner": "Pick the lowest leaves when they are about hand-sized or bigger, and leave the center growing, so the same plant keeps making leaves. Or cut the whole young plant and let it grow back.",
+    "audience": "core"
+   },
+   {
+    "text_seasoned": "Leaves are sweetest after a frost or two; in cool weather you can keep harvesting straight from the garden even after the foliage has frozen.",
+    "text_beginner": "Collards taste sweeter after frost, and you can keep picking even after the leaves have frozen in cool weather.",
+    "audience": "core"
+   },
+   {
+    "tip_id": "tip_col_heat1",
+    "sources": [
+     "umd_ext",
+     "umn_ext"
+    ],
+    "evidence_tier": "extension_backed",
+    "author": {
+     "type": "plant_team"
+    },
+    "added_in": "pla750_heat_hold",
+    "last_reviewed": "2026-10-18",
+    "audience": "core",
+    "anchoring_urls": {
+     "umd_ext": {
+      "url": "https://extension.umd.edu/resource/growing-leafy-greens-home-garden",
+      "verified": "2026-10-18"
+     },
+     "umn_ext": {
+      "url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "verified": "2026-10-18"
+     }
+    },
+    "text_seasoned": "Collards handle heat better than kale, but for the spring crop flavor is still best if you harvest before the weather turns hot and dry; heat slows growth and makes the leaves tough and strong-flavored.",
+    "text_beginner": "Collards take heat better than kale, but spring collards still taste best picked before hot, dry weather, which makes the leaves tough and strong tasting."
+   }
+  ],
+  "reason": "PLA-750 D4 stage tip",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "cilantro-coriander",
+  "path": "tips_by_stage.established",
+  "kind": "tip_add",
+  "old": [
+   {
+    "tip_id": "tip_cil_est1",
+    "sources": [
+     "uwi_hort",
+     "usu_ext"
+    ],
+    "evidence_tier": "extension_backed",
+    "author": {
+     "type": "plant_team"
+    },
+    "added_in": "cilantro_coriander_author_fresh_pilot",
+    "last_reviewed": "2026-06-29",
+    "audience": "core",
+    "anchoring_urls": {
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/cilantro-coriander-coriandrum-sativum/",
+      "verified": "2026-06-29"
+     },
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden",
+      "verified": "2026-06-29"
+     }
+    },
+    "text_seasoned": "Cut cilantro young for the mildest flavor and cut often: shearing outer leaves or the whole patch a couple of inches above the crown keeps tender new growth coming. Steady moisture keeps the leaves mild and delays the bolt.",
+    "text_beginner": "Pick cilantro young and often for the best flavor. Cut the outer leaves or shear the patch a couple of inches above the soil and it grows back. Keep the water steady so the leaves stay mild and it does not bolt as fast."
+   }
+  ],
+  "new": [
+   {
+    "tip_id": "tip_cil_est1",
+    "sources": [
+     "uwi_hort",
+     "usu_ext"
+    ],
+    "evidence_tier": "extension_backed",
+    "author": {
+     "type": "plant_team"
+    },
+    "added_in": "cilantro_coriander_author_fresh_pilot",
+    "last_reviewed": "2026-06-29",
+    "audience": "core",
+    "anchoring_urls": {
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/cilantro-coriander-coriandrum-sativum/",
+      "verified": "2026-06-29"
+     },
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden",
+      "verified": "2026-06-29"
+     }
+    },
+    "text_seasoned": "Cut cilantro young for the mildest flavor and cut often: shearing outer leaves or the whole patch a couple of inches above the crown keeps tender new growth coming. Steady moisture keeps the leaves mild and delays the bolt.",
+    "text_beginner": "Pick cilantro young and often for the best flavor. Cut the outer leaves or shear the patch a couple of inches above the soil and it grows back. Keep the water steady so the leaves stay mild and it does not bolt as fast."
+   },
+   {
+    "tip_id": "tip_cil_bolt2",
+    "sources": [
+     "usu_ext"
+    ],
+    "evidence_tier": "extension_backed",
+    "author": {
+     "type": "plant_team"
+    },
+    "added_in": "pla750_heat_hold",
+    "last_reviewed": "2026-10-18",
+    "audience": "core",
+    "anchoring_urls": {
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden",
+      "verified": "2026-10-18"
+     }
+    },
+    "text_seasoned": "To slow bolting, keep the soil below about 75°F: mulch to keep it cool, water well, and keep plants away from a heat source or a window that gets hot.",
+    "text_beginner": "To keep cilantro from flowering early, keep its soil cool, under about 75°F. Mulch it, water it well, and keep it away from heaters and hot windows."
+   }
+  ],
+  "reason": "PLA-750 live-data fix: cilantro's 75°F moved to a bolting tip",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "edamame",
+  "path": "weather_triggers",
+  "kind": "trigger_drop",
+  "old": [
+   {
+    "condition": "FROST_WARNING",
+    "active_stages": [
+     "germination",
+     "seedling",
+     "vegetative",
+     "flowering",
+     "pod_fill",
+     "harvest"
+    ],
+    "action": "log_note",
+    "severity": "high",
+    "audience": "core",
+    "title_seasoned": "Frost expected, protect or harvest edamame",
+    "title_beginner": "Frost is coming, cover or pick your edamame",
+    "body_seasoned": "Edamame is frost-tender and a light frost will kill it. If frost is forecast, harvest any plants whose pods are plump and green, and cover younger plants with row cover or sheets overnight. In fall, a hard frost ends the crop, so pick everything usable first.",
+    "body_beginner": "Edamame is killed by even a light frost. If frost is forecast, pick any plants with plump green pods and cover younger plants with row cover or sheets overnight. In fall, a hard frost ends the crop, so pick everything you can use first."
+   },
+   {
+    "condition": "HEAT_STRESS",
+    "active_stages": [
+     "flowering",
+     "pod_fill"
+    ],
+    "action": "log_note",
+    "severity": "medium",
+    "audience": "core",
+    "title_seasoned": "Extreme heat may cause flower and pod drop",
+    "title_beginner": "Extreme heat can make flowers and pods drop",
+    "body_seasoned": "Edamame tolerates ordinary summer heat far better than snap beans, but sustained extremes above roughly 95 to 100°F during bloom and pod set can drop flowers and young pods. Keep moisture steady and water deeply ahead of a heat wave; the plant resumes setting once the worst heat eases.",
+    "body_beginner": "Edamame handles normal summer heat much better than snap beans, but very hot spells above about 95 to 100°F while it is flowering can make it drop flowers and small pods. Keep the water steady and water deeply before the heat. The plant sets pods again once the worst heat passes."
+   }
+  ],
+  "new": [
+   {
+    "condition": "FROST_WARNING",
+    "active_stages": [
+     "germination",
+     "seedling",
+     "vegetative",
+     "flowering",
+     "pod_fill",
+     "harvest"
+    ],
+    "action": "log_note",
+    "severity": "high",
+    "audience": "core",
+    "title_seasoned": "Frost expected, protect or harvest edamame",
+    "title_beginner": "Frost is coming, cover or pick your edamame",
+    "body_seasoned": "Edamame is frost-tender and a light frost will kill it. If frost is forecast, harvest any plants whose pods are plump and green, and cover younger plants with row cover or sheets overnight. In fall, a hard frost ends the crop, so pick everything usable first.",
+    "body_beginner": "Edamame is killed by even a light frost. If frost is forecast, pick any plants with plump green pods and cover younger plants with row cover or sheets overnight. In fall, a hard frost ends the crop, so pick everything you can use first."
+   }
+  ],
+  "reason": "PLA-750 live-data finding: the trigger's figure (95 to 100°F flower and pod drop) and its snap-bean comparison are on no cited page",
+  "subs": null,
+  "cited_at": null
+ },
+ {
+  "crop": "chamomile",
+  "path": "weather_triggers",
+  "kind": "trigger_drop",
+  "old": [
+   {
+    "condition": "high",
+    "severity": "monitor",
+    "action": "Hot, humid weather ahead",
+    "title_seasoned": "Heat and humidity will slow bloom",
+    "title_beginner": "Hot, muggy weather will slow your chamomile",
+    "body_seasoned": "Chamomile prefers cool conditions and declines in the heat and humidity of a hot-region summer, often with powdery mildew or botrytis. In hot regions, let the planting finish and resow for fall; in cool-summer regions, it runs on to frost with little trouble.",
+    "body_beginner": "Chamomile likes cool weather. In hot, humid summers it slows down, stops flowering well, and may get mildew or mold. In hot places, plan to replant in fall. In cool-summer places, it keeps going.",
+    "sources": [
+     "msu_bozeman",
+     "uwi_hort"
+    ],
+    "anchoring_urls": {
+     "msu_bozeman": {
+      "url": "https://agresearch.montana.edu/warc/research_current/research_past/herbsandoils/chamomile.html",
+      "verified": "2026-07-02"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+      "verified": "2026-07-02"
+     }
+    }
+   },
+   {
+    "condition": "medium",
+    "severity": "monitor",
+    "action": "Damp, humid weather",
+    "title_seasoned": "Powdery mildew and botrytis weather",
+    "title_beginner": "Damp weather warning",
+    "body_seasoned": "Warm, humid, still, or wet weather drives powdery mildew and botrytis on chamomile, especially in crowded stands. Improve airflow, water at the base, and remove badly affected growth; dry picked flowers in a single layer.",
+    "body_beginner": "Warm, damp, still weather can give chamomile a white powdery mildew or a gray mold. Give plants room for air, water at the soil, and pick off bad growth. Dry picked flowers spread out, not piled up.",
+    "sources": [
+     "uwi_hort",
+     "ncsu_ext"
+    ],
+    "anchoring_urls": {
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+      "verified": "2026-07-02"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/matricaria-chamomilla/",
+      "verified": "2026-07-02"
+     }
+    }
+   },
+   {
+    "condition": "low",
+    "severity": "protect",
+    "action": "Frost warning",
+    "title_seasoned": "Frost warning",
+    "title_beginner": "Frost warning",
+    "body_seasoned": "Chamomile seedlings and plants tolerate light frost, so a light frost is usually no cause for concern; a hard freeze will kill the annual. In cold zones, expect the first hard freeze to end the season.",
+    "body_beginner": "Chamomile handles light frost fine, so a light frost is usually okay. A hard, deep freeze will kill it. In cold areas, the first hard freeze ends the season.",
+    "sources": [
+     "msu_bozeman",
+     "uwi_hort"
+    ],
+    "anchoring_urls": {
+     "msu_bozeman": {
+      "url": "https://agresearch.montana.edu/warc/research_current/research_past/herbsandoils/chamomile.html",
+      "verified": "2026-07-02"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+      "verified": "2026-07-02"
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "condition": "medium",
+    "severity": "monitor",
+    "action": "Damp, humid weather",
+    "title_seasoned": "Powdery mildew and botrytis weather",
+    "title_beginner": "Damp weather warning",
+    "body_seasoned": "Warm, humid, still, or wet weather drives powdery mildew and botrytis on chamomile, especially in crowded stands. Improve airflow, water at the base, and remove badly affected growth; dry picked flowers in a single layer.",
+    "body_beginner": "Warm, damp, still weather can give chamomile a white powdery mildew or a gray mold. Give plants room for air, water at the soil, and pick off bad growth. Dry picked flowers spread out, not piled up.",
+    "sources": [
+     "uwi_hort",
+     "ncsu_ext"
+    ],
+    "anchoring_urls": {
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+      "verified": "2026-07-02"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/matricaria-chamomilla/",
+      "verified": "2026-07-02"
+     }
+    }
+   },
+   {
+    "condition": "low",
+    "severity": "protect",
+    "action": "Frost warning",
+    "title_seasoned": "Frost warning",
+    "title_beginner": "Frost warning",
+    "body_seasoned": "Chamomile seedlings and plants tolerate light frost, so a light frost is usually no cause for concern; a hard freeze will kill the annual. In cold zones, expect the first hard freeze to end the season.",
+    "body_beginner": "Chamomile handles light frost fine, so a light frost is usually okay. A hard, deep freeze will kill it. In cold areas, the first hard freeze ends the season.",
+    "sources": [
+     "msu_bozeman",
+     "uwi_hort"
+    ],
+    "anchoring_urls": {
+     "msu_bozeman": {
+      "url": "https://agresearch.montana.edu/warc/research_current/research_past/herbsandoils/chamomile.html",
+      "verified": "2026-07-02"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+      "verified": "2026-07-02"
+     }
+    }
+   }
+  ],
+  "reason": "PLA-750 live-data finding: neither cited page (msu_bozeman, uwi_hort) mentions heat, humidity, mildew or botrytis",
+  "subs": null,
+  "cited_at": null
+ }
+]

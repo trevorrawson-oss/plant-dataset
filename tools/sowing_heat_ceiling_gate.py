@@ -187,12 +187,14 @@ def check_bytes(c, man, evidence_dir, cache):
         if pages and not any(claim and claim in p for p in pages):
             v.append(f"{slug}: {FIELD}.claim is not in the hashed bytes of {f.get('claim_source')}: "
                      f"{f.get('claim', '')[:70]!r}")
+        # digit lookarounds, not \b: NFKC turns the ordinal "º" (as in "80ºF") into the letter "o", and a
+        # publisher's "30. °C" puts a period before the unit
         if "temp_source" not in f:
-            c_ok = re.search(rf"\b{_celsius(t)}\s*[°º˚]\s*c\b", claim)
-            if not re.search(rf"\b{t}\b", claim) and not c_ok:
+            c_ok = re.search(rf"(?<!\d){_celsius(t)}\.?\s*[°º˚o]\s*c\b", claim)
+            if not re.search(rf"(?<![\d.]){t}(?![\d.]\d)(?!\d)", claim) and not c_ok:
                 v.append(f"{slug}: {FIELD}.temp_f {t} is not in the claim (nor its degC rounding {_celsius(t)})")
         else:
-            unit = re.compile(rf"\b{t}\s*(?:[°º˚]\s*f|degrees)", re.I)
+            unit = re.compile(rf"(?<!\d){t}\s*(?:[°º˚o]\s*f|degrees)", re.I)
             tp = texts.get(f["temp_source"], [])
             if tp and not any(unit.search(p) for p in tp):
                 v.append(f"{slug}: {FIELD}.temp_f {t} is not stated with a degree unit in the hashed bytes of "

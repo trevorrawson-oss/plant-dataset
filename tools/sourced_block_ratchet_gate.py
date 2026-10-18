@@ -60,6 +60,9 @@ DICT_BLOCKS = (
     "indoor_cycle", "pet_safe", "ph", "photoperiod", "pollination", "rotation", "soil",
     "start_method", "storage", "succession_policy", "thinning", "varieties", "watering",
     "winter_hardiness", "yield_expectations",
+    # PLA-750 register #35 (2026-10-18): the sowing ceiling carries its own sources pair in both reviewed states
+    # (held and null), so it lands cited on all 30 crops and needs no arming flag or waiver.
+    "sowing_heat_ceiling",
 )
 # Crop-root claims cited through a `<name>_sources` sibling: name -> the keys that carry the claim.
 SIBLING_BLOCKS = {

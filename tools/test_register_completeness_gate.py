@@ -214,4 +214,22 @@ for _rr in ("not_authored", "not_applicable", "see_layout"):
     assert backend_key_laundering_violations(_c) == [], (_rr, backend_key_laundering_violations(_c))
 print("PLA-10 planting_layout enums ruled: OK")
 
+# PLA-750 (register #35, ruling b963b423 P1): sowing_heat_ceiling's string keys are ruled, PATH-SCOPED to the field.
+# `claim` is the source's verbatim sentence (single-register, rendered as written, checked byte-for-byte by
+# sowing_heat_ceiling_gate, so exempt from house notation by design); `note` is backend evidence prose; the rest
+# are ids and closed enums. Both checks pass on the field, and the same keys stay flagged at any other path.
+_shc = {"slug": "x", "sowing_heat_ceiling": {
+    "temp_f": 75, "measures": "soil", "basis": "maturity_coupled",
+    "claim": "Avoid planting after May 1. The high temperatures will not produce good quality.",
+    "claim_source": "umn_ext_kohlrabi_growing_guide", "temp_source": "usu_ext_kohlrabi_in_the_garden",
+    "note": "The source's figure is a soil temperature; the app compares a forecast air high against it.",
+    "sources": ["umn_ext"], "anchoring_urls": {}}}
+assert register_completeness_violations(_shc) == [], register_completeness_violations(_shc)
+assert backend_key_laundering_violations(_shc) == [], backend_key_laundering_violations(_shc)
+_elsewhere = {"slug": "x", "gizmo_block": dict(_shc["sowing_heat_ceiling"])}
+_v = register_completeness_violations(_elsewhere) + backend_key_laundering_violations(_elsewhere)
+for _k in ("claim", "note", "claim_source"):
+    assert any(f"gizmo_block.{_k}" in m for m in _v), (_k, _v)
+print("PLA-750 sowing_heat_ceiling keys ruled (path-scoped): OK")
+
 print("PASS register_completeness_gate (per-crop function)")

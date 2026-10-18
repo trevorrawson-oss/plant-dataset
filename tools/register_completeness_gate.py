@@ -205,6 +205,13 @@ def ruled_categorical(pat, k):
     if k == "container_path" and "container_notes" in pat: return True  # PLA-7 (2026-09-06): a closed enum naming the JOIN a consumer follows (direct|rootstock|cultivar|tray), machinery not prose; its consumer copy is the crop-level notes_* pair, which stay checked
     if k == "rate" and "schedule_by_stage" in pat: return True  # per-stage watering AMOUNT, USER-FACING-CATEGORICAL bare value (Trevor 2026-06-23, blueberry anchor; e.g. "1 to 2 inches of water per week including rain") -- a single-form structured amount read identically by both registers, the sibling of the already-EXCLUDED `frequency`/`level`/`system` machinery; the dual-register prose in this block is note_seasoned/note_beginner. First crop whose rate string crossed the prose-length heuristic (peach/strawberry/apple sit just under it)
     if k == "note" and pat == "pet_safe": return True  # pet_safe icon tooltip: single concise line read identically by both registers (Trevor 2026-07-06, post-114 §A; e.g. "Ripe tomatoes are fine, but the leaves and unripe fruit are toxic to cats, dogs, and horses.") -- one plain sentence, no _seasoned/_beginner split; the fuller dual-register prose stays in failure_diagnostics. `note` is a laundering key, so this ruling also exempts pet_safe.note from the C11(c) laundering check
+    if pat == "sowing_heat_ceiling" and k in ("claim", "note", "claim_source", "temp_source", "measures", "basis"):
+        return True  # PLA-750 register #35 (ruling b963b423 P1, 2026-10-17): `claim` is the SOURCE'S verbatim sentence,
+        # the held line's single-register first sentence, rendered as written and checked byte-for-byte against the
+        # hashed page by sowing_heat_ceiling_gate (so it is exempt from house dash/°F notation by design: "30. °C" and
+        # "75˚Fahrenheit" are the sources' own); `note` is backend evidence prose (the D2 proxy record, the null-state
+        # reason); claim_source/temp_source are catalog ids; measures/basis are closed enums. `claim`/`note` are
+        # laundering keys, so this also exempts them from C11(c), path-scoped so the keys stay flagged anywhere else
     if k == "toxic_parts" and pat == "pet_safe": return True  # pet_safe: which plant parts are toxic (single-form categorical, e.g. "green foliage and unripe fruit"), sibling of the ruled pet_safe.note
     if (k in ("id", "seed_type", "maturity_class", "seed_color", "seed_size",
               "plant_habit", "primary_use", "confidence_tier", "disease_notes", "regional_fit")

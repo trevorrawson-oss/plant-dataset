@@ -1,0 +1,73 @@
+{
+ "fetch": {
+  "https://doi.org/10.1016/j.indcrop.2013.10.031": "fetched html 2671",
+  "https://www.sciencedirect.com/science/article/pii/S0926669013005608": "FAIL http 403 bytes 832804",
+  "https://experts.umn.edu/en/publications/seed-germination-of-calendula-in-response-to-temperature/fingerprints/": "fetched html 54070"
+ },
+ "verify": {
+  "found": 263,
+  "missing": [
+   [
+    "arugula",
+    4,
+    "https://www.redalyc.org/pdf/995/99515218004.pdf",
+    "The cultivars of the specie Eruca sativa (\u2018Cultivated\u2019, \u2018Cultivated \u2013 Giant Wide Leaf\u2019 and \u2018Apreciatta \u2013 Wide Leaf\u2019) pos"
+   ],
+   [
+    "arugula",
+    8,
+    "https://hort.extension.wisc.edu/articles/arugula/",
+    "Plants grow a rosette of dull green leaves 3-8 inches long and under the appropriate conditions (long days, high tempera"
+   ],
+   [
+    "cilantro-coriander",
+    6,
+    "https://hort.extension.wisc.edu/articles/cilantro-coriander-coriandrum-sativum/",
+    "Summer plantings are not recommended because the plants generally just bolt before producing much."
+   ],
+   [
+    "dill",
+    3,
+    "https://hort.extension.wisc.edu/articles/dill-anethum-graveolens/",
+    "Successive plantings can be made every 10 days or so while the weather is cool for a continuous supply of leaves."
+   ],
+   [
+    "carrot",
+    13,
+    "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+    "A temporary mulch on the soil surface, applied immediately after planting such crops as lettuce, beets, and carrots, wil"
+   ],
+   [
+    "cauliflower",
+    3,
+    "https://aggie-horticulture.tamu.edu/vegetable/files/2011/10/cauliflower3.pdf",
+    "Curd initiation can be delayed in mature vegetative stage by high temperatures (>80\u00b0F)."
+   ],
+   [
+    "kale",
+    1,
+    "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+    "For the spring crop, flavor is best if you harvest the plants before the weather becomes hot and dry. Heat will slow gro"
+   ],
+   [
+    "collards",
+    6,
+    "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+    "For the spring crop, flavor is best if you harvest the plants before the weather becomes hot and dry. Heat will slow gro"
+   ],
+   [
+    "calendula",
+    0,
+    "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+    "Calendula prefers cooler temperatures (< 85\u00b0F) and often stops blooming in extreme heat."
+   ],
+   [
+    "viola",
+    4,
+    "https://hortscans.ces.ncsu.edu/uploads/p/a/pansy_pr_51e448e796b25.pdf",
+    "High temperatures (90\u00b0 F) for longer than the first day reduce the percentage of germination from 90 to 55 percent."
+   ]
+  ],
+  "unhashed": 28
+ }
+}
