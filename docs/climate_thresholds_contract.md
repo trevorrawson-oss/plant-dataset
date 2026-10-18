@@ -140,3 +140,20 @@ cold-tolerant legumes (beans/edamame) and all cool-season/hardy/perennial crops 
   them natively. The 10 uncertified §E shells pick them up at certification.
 - Optional `*_night_f` companion for the night-temperature effects deferred from v1 (tomato/pepper
   warm-night poor set, cold-night <55°F pollen failure).
+
+## Changelog
+
+- **2026-10-17, PLA-750 P5 (ruling b963b423): `heat_threshold_f: null` with a STRESS `heat_effect`.** The
+  pairing rule was "null threshold <=> `heat_tolerant`". PLA-750's evidence found T1 sources that
+  contradict `heat_tolerant` on three crops that have **no sourced °F number**: **sweet-pea** (Illinois
+  HortAnswers: "will bloom poorly (or not at all) when weather is hot"), **sweet-alyssum** (Clemson HGIC: "As
+  summer temperatures rise, alyssum grown from seed may stop producing flowers.") and **nasturtium** (UF/IFAS,
+  NCSU, Illinois: declines in heat). A house number in front of a grower is ruled out, so the contract gains
+  a fourth heat state: **null + a stress effect = "the stress is real, no sourced number", and no weather
+  alert fires for it.** The gate implements it as an exact allowlist, `NULL_STRESS_KNOWN` in
+  `tools/climate_threshold_gate.py`, keyed on slug AND effect (all three `quality_loss`); any other crop with
+  null + a stress effect still fails, and an entry that stops matching the roster is reported STALE. The
+  coverage report counts the state as "stress, no number". Suite `tools/test_climate_threshold_gate.py`,
+  harness `tools/mutate_climate_threshold_gate.py` (7 of 7 caught). Separately, PLA-750 moved the sowing hold
+  off `heat_threshold_f` onto its own field, `sowing_heat_ceiling` (`docs/sowing_heat_ceiling_contract.md`);
+  this field's meaning is unchanged.

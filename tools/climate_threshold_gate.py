@@ -13,7 +13,10 @@ Fields (crop-level, siblings of germination_temp_f):
 Checks (HARD, fire only when a field is present -- unauthored roster stays green):
   - types + plausible ranges
   - enum membership
-  - heat_effect present <=> heat_threshold_f present; null threshold <=> heat_effect == heat_tolerant
+  - heat_effect present <=> heat_threshold_f present; null threshold <=> heat_effect == heat_tolerant,
+    EXCEPT the exact crops in NULL_STRESS_KNOWN (PLA-750 P5): null + a named stress effect means "the
+    stress is real, no sourced number", so no weather alert fires. Any other crop with null + a stress
+    effect fails; a known entry whose crop no longer matches it is reported STALE (roster run).
   - frost_effect present <=> frost_tolerance_f present
   - coherence: when both numeric, frost_tolerance_f < heat_threshold_f
 
@@ -33,6 +36,17 @@ CHILL_RANGE = (33, 60)     # non-freezing chilling injury (above frost, below ~6
 # (same class as the uncertified mushrooms). Reported as N/A-indoor, not TODO.
 INDOOR_SLUGS = {"microgreens-mix", "sunflower-sprouts", "pea-shoots", "radish-microgreens",
                 "broccoli-microgreens", "arugula-microgreens", "wheatgrass", "cilantro-microgreens"}
+# PLA-750 P5 (ruling b963b423, 2026-10-17): heat_threshold_f null + a STRESS heat_effect = "the stress is
+# real, no sourced number" (no weather alert fires). Keyed on slug AND effect, so a fourth crop, or one of
+# these with a different effect, still fails. Each entry: the T1 quote that contradicted heat_tolerant.
+NULL_STRESS_KNOWN = {
+    ("sweet-pea", "quality_loss"): "PLA-750 D5: Illinois HortAnswers, 'will bloom poorly (or not at all) "
+                                   "when weather is hot'; no sourced F number",
+    ("sweet-alyssum", "quality_loss"): "PLA-750 D5: Clemson HGIC, 'As summer temperatures rise, alyssum "
+                                       "grown from seed may stop producing flowers.'; no sourced F number",
+    ("nasturtium", "quality_loss"): "PLA-750 D5: UF/IFAS, NCSU, Illinois say it declines in heat; no "
+                                    "sourced F number",
+}
 
 def _is_int(x):
     return isinstance(x, int) and not isinstance(x, bool)
@@ -55,9 +69,10 @@ def check_crop(c):
         elif he not in HEAT_EFFECTS:
             v.append(f"{slug}: heat_effect {he!r} not in {sorted(HEAT_EFFECTS)}")
         if ht is None:
-            # reviewed-N/A: must be the heat_tolerant marker
-            if he != "heat_tolerant":
-                v.append(f"{slug}: heat_threshold_f is null but heat_effect is {he!r} (expected 'heat_tolerant')")
+            # reviewed-N/A: must be the heat_tolerant marker, or an exact NULL_STRESS_KNOWN entry
+            if he != "heat_tolerant" and (slug, he) not in NULL_STRESS_KNOWN:
+                v.append(f"{slug}: heat_threshold_f is null but heat_effect is {he!r} (expected 'heat_tolerant'; "
+                         f"null + a stress effect only for the NULL_STRESS_KNOWN crops)")
         else:
             if not _is_int(ht):
                 v.append(f"{slug}: heat_threshold_f {ht!r} is not an int")
@@ -101,8 +116,19 @@ def check_crop(c):
 
     return v
 
+def stale_null_stress(crops):
+    """NULL_STRESS_KNOWN entries that no longer fire: the crop is gone, or no longer null + that effect."""
+    idx = {(c.get("slug") or c.get("id")): c for c in crops}
+    out = []
+    for (slug, effect), _why in sorted(NULL_STRESS_KNOWN.items()):
+        c = idx.get(slug)
+        if c is None or "heat_threshold_f" not in c or c["heat_threshold_f"] is not None \
+                or c.get("heat_effect") != effect:
+            out.append(f"{slug}: NULL_STRESS_KNOWN entry ({effect}) is STALE -- the crop is not null + {effect}")
+    return out
+
 def coverage(crops):
-    heat = {"SET": [], "NA": [], "TODO": []}
+    heat = {"SET": [], "NA": [], "STRESS_NO_NUMBER": [], "TODO": []}
     frost = {"SET": [], "TODO": []}
     chill = {"SET": [], "NA": [], "TODO": []}
     indoor = []
@@ -114,7 +140,7 @@ def coverage(crops):
         if "heat_threshold_f" not in c:
             heat["TODO"].append(slug)
         elif c.get("heat_threshold_f") is None:
-            heat["NA"].append(slug)
+            heat["NA" if c.get("heat_effect") == "heat_tolerant" else "STRESS_NO_NUMBER"].append(slug)
         else:
             heat["SET"].append(slug)
         if "frost_tolerance_f" not in c:
@@ -140,12 +166,14 @@ def main():
     violations = []
     for c in crops:
         violations += check_crop(c)
+    violations += stale_null_stress(crops)
 
     if show_cov:
         heat, frost, chill, indoor = coverage(crops)
         n = len(crops)
         print(f"COVERAGE (of {n} crops; {len(indoor)} indoor tray crops N/A, excluded from the counts below):")
-        print(f"  heat_threshold_f      : SET {len(heat['SET'])} | N/A {len(heat['NA'])} | TODO {len(heat['TODO'])}")
+        print(f"  heat_threshold_f      : SET {len(heat['SET'])} | N/A {len(heat['NA'])} | "
+              f"stress, no number {len(heat['STRESS_NO_NUMBER'])} | TODO {len(heat['TODO'])}")
         print(f"  frost_tolerance_f     : SET {len(frost['SET'])} | TODO {len(frost['TODO'])}")
         print(f"  chilling_sensitivity_f: SET {len(chill['SET'])} | N/A {len(chill['NA'])} | TODO {len(chill['TODO'])}")
         if frost["TODO"]:
@@ -156,7 +184,8 @@ def main():
         for x in violations:
             print("  -", x)
         sys.exit(1)
-    print("\nclimate_threshold_gate: PASS (0 violations)")
+    print(f"\nclimate_threshold_gate: PASS (0 violations across {len(crops)} crops; "
+          f"{len(NULL_STRESS_KNOWN)} NULL_STRESS_KNOWN entries firing)")
     sys.exit(0)
 
 if __name__ == "__main__":
