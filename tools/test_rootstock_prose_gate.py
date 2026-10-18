@@ -3,7 +3,8 @@
 Pins the live measurement (canonical 5420479d: 21 crops by identity, 515 fields, 272 names, 253 matched, 19 waived;
 PLA-625 stop 2 moved own-root wording to a propagation-mode list: 260 names, 248 matched, 12 waived; PLA-625 citrus
 promote 1 (2f67359e) re-authored orange-navel's and grapefruit's rows and notes: 268 names, 258 matched, 10 waived;
-promote 2 (ef1a4d35) re-authored lemon's and lime's and added two rows: 521 fields, 294 names, 288 matched, 6 waived),
+promote 2 (ef1a4d35) re-authored lemon's and lime's and added two rows: 521 fields, 294 names, 288 matched, 6 waived;
+promote 3b (d72aeed3) re-authored mandarin's: 303 names, 297 matched, 6 waived),
 proves every guard family on a SCRATCH COPY, carries PLA-608's six named injections, and drives the two entry points
 (whole_crop_gate A64, gate_all's roster half) as subprocesses. Run under pytest (def test_), via
 tools/run_test_tree.py --files. Mutation harness: tools/mutate_rootstock_prose_gate.py.
@@ -59,8 +60,8 @@ def test_population_is_the_21_crops_carrying_the_field_by_identity():
 
 def test_inspected_fields_and_names_are_the_measurement():
     assert LIVE["fields"] == 521
-    assert LIVE["mentions"] == 294
-    assert LIVE["matched"] == 288
+    assert LIVE["mentions"] == 303
+    assert LIVE["matched"] == 297
     assert G.refusal(LIVE) is None
 
 
@@ -519,7 +520,7 @@ def _run(args):
 def test_cli_live_passes_and_prints_its_population_and_limit():
     rc, out = _run([os.path.join(HERE, "rootstock_prose_gate.py")])
     assert rc == 0, out
-    assert "inspected 21 crops carrying rootstock_options (of 21), 521 fields, 294 rootstock names (288 matched a row)" in out
+    assert "inspected 21 crops carrying rootstock_options (of 21), 521 fields, 303 rootstock names (297 matched a row)" in out
     assert G.LIMIT_LINE in out
     assert G.PROPAGATION_LINE in out and "ungrafted" in G.PROPAGATION_LINE
     assert G.PARENTAGE_LINE in out and "swingle: Duncan grapefruit, trifoliate orange" in G.PARENTAGE_LINE

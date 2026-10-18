@@ -1,0 +1,29 @@
+crop	path	decision	reason
+mandarin-clementine	rootstock_options[0].mature_height_ft	nulled	no page gives a mandarin height; HS1260 Sm gives an upper bound only (ruling B)
+mandarin-clementine	rootstock_options[0].spread_ft	nulled	ABSENT (ruling B)
+mandarin-clementine	rootstock_options[0].container_suitable	nulled	was false, ABSENT (ruling B)
+mandarin-clementine	rootstock_options[0].container_size_gallons	retained	null kept: unchanged null
+mandarin-clementine	rootstock_options[0].bearing_age_years	nulled	was 2, ABSENT; 31-018C says C-35 bears earlier than trifoliate (ruling B)
+mandarin-clementine	rootstock_options[0]	hs1260-scope	HS1260 scope (promote 1 ruling A.1): Florida commercial groves; relative vigor; averaged across commercial scions; not scion-specific.
+mandarin-clementine	rootstock_options[0].sources.uga_ext	dropped	PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) A: uga_ext off the Trifoliate orange (Poncirus trifoliata) row (names nothing the row says)
+mandarin-clementine	rootstock_options[0].sources.uf_ifas_edis	rekey	PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) A: CH116 under uf_ifas_edis -> uf_ifas_ch116 (this promote's scope: the rootstock rows; the crop's other 23 CH116 references are PLA-728's)
+mandarin-clementine	rootstock_options[1].size_class	retained	value unchanged, re-based on the row's new sources (PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B)
+mandarin-clementine	rootstock_options[1].spread_ft	nulled	ABSENT (ruling B)
+mandarin-clementine	rootstock_options[1].container_suitable	retained	value unchanged, re-based on the row's new sources (PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B)
+mandarin-clementine	rootstock_options[1].container_size_gallons	nulled	was 15, PARTIAL: a general mandarin / satsuma minimum never tied to Flying Dragon, and it conflicted with the crop's min_pot_gallons of 10 (ruling B)
+mandarin-clementine	rootstock_options[1].bearing_age_years	nulled	was 2, ABSENT (ruling B)
+mandarin-clementine	rootstock_options[1]	hs1260-scope	HS1260 scope (promote 1 ruling A.1): Florida commercial groves; relative vigor; averaged across commercial scions; not scion-specific.
+mandarin-clementine	rootstock_options[1].sources.tamu_agrilife	dropped	PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) A: tamu_agrilife off the Flying Dragon trifoliate row (names nothing the row says)
+mandarin-clementine	rootstock_options[1].sources.uf_ifas_edis	rekey	PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) A: CH116 under uf_ifas_edis -> uf_ifas_ch116 (this promote's scope: the rootstock rows; the crop's other 23 CH116 references are PLA-728's)
+mandarin-clementine	rootstock_options[2].spread_ft	nulled	was [8, 12], which equals HS1260's in-row Spacing, not spread (ruling B)
+mandarin-clementine	rootstock_options[2].container_suitable	nulled	was false, ABSENT (ruling B)
+mandarin-clementine	rootstock_options[2].container_size_gallons	retained	null kept: unchanged null
+mandarin-clementine	rootstock_options[2].bearing_age_years	nulled	was 3, ABSENT (ruling B)
+mandarin-clementine	rootstock_options[2]	hs1260-scope	HS1260 scope (promote 1 ruling A.1): Florida commercial groves; relative vigor; averaged across commercial scions; not scion-specific.
+mandarin-clementine	rootstock_options[2].sources.uf_ifas_hs132	dropped	PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) A: uf_ifas_hs132 off the Swingle citrumelo row (names nothing the row says)
+mandarin-clementine	rootstock_options[2].sources.tamu_agrilife	dropped	PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) A: tamu_agrilife off the Swingle citrumelo row (names nothing the row says)
+mandarin-clementine	recommended_rootstock	nulled	was Trifoliate orange, PARTIAL: the one source recommendation is satsuma-only and climate-bound, and trifoliate is a poor match in alkaline and desert soils (ruling C)
+<catalog>	uf_ifas_ch116	source-id	PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) A: minted
+<catalog>	ucce_placer_nevada_cold_damage	source-id	PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) A: FakeNorton had no catalog id; minted (title read off the page)
+<catalog>	az_coop_ext	source-id	AZ1001 cited as az_coop_ext, the Arizona id (the promote 1 mapping)
+<catalog>	ucce_riverside_citrus_qa	source-id	MaukShea (178097.pdf) = ucce_riverside_citrus_qa (the promote 3a mapping)

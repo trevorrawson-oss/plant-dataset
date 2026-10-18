@@ -4,6 +4,28 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-10-16 -- PLA-625 CITRUS PROMOTE 3b LANDED (`d52c261a` -> `d72aeed3`; mandarin-clementine rootstock rows), local, Batch A
+
+Ruling: PLA-625 comment b4271661 (claude.ai, approved by Trevor, 2026-10-16).
+
+* **Promote** (`tools/promote_pla625_p3b.py`, derived from promote 2 with its row / rename / re-key / record branches
+  removed; stage `tools/staging/pla625_p3b/` built from `p3b_texts.py`): 35 ops, 100 evidence rows, 28 decisions.
+  --expect-sha d72aeed3 == an independent minimal apply.
+* **Data:** Trifoliate orange size_class standard -> semi_dwarf (31-018C), height / spread / container / bearing age null
+  (ABSENT); Flying Dragon dwarf [4, 8] container_suitable true, container_size_gallons 15 -> null (PARTIAL, conflicted
+  with min_pot_gallons 10), bearing age null; Swingle semi_dwarf [8, 14] (HS1260 I), spread null (was HS1260's in-row
+  spacing), bearing age null. recommended_rootstock Trifoliate orange -> null. Prose re-authored, satsuma-scoped where it
+  rests on CH116; Swingle carries the HS1260 Murcott incompatibility warning.
+* **Catalog:** minted uf_ifas_ch116 (*The Satsuma Mandarin*) and ucce_placer_nevada_cold_damage (*Avoiding Cold Damage to
+  Home Citrus*, Fake & Norton). CH116 on the rootstock rows re-keyed off uf_ifas_edis (this promote's scope; mandarin's 23
+  other CH116 references stay for PLA-728). Dropped: uga_ext (Trifoliate), tamu_agrilife (Flying Dragon), uf_ifas_hs132 +
+  tamu_agrilife (Swingle).
+* **Waivers:** A62 2678 -> 2677 (mandarin's note identity, CLOSED). A63 379, A64 6 unchanged (303 names, 297 matched;
+  Rubidoux resolves through the trifoliate row; "Rich 16-6" and "Murcott" are on no list and pass silently, the stated
+  limit). Era set: ef1a4d35 (promote 2) and d52c261a (promote 3a) registered; both promotes' gate_post bind the switch.
+* **Checks:** whole_crop_gate PASS + gate_all 121; release_verify: only mandarin-clementine, catalog +2, no new
+  violations. Certified 121, launch-ready 114 (mandarin stays false, its PLA-533 sulfur blocker is open).
+
 ## 2026-10-16 -- PLA-625 CITRUS PROMOTE 3a LANDED (`ef1a4d35` -> `d52c261a`; citrus mulch, graft union, brown rot), local, Batch A
 
 Rulings: PLA-625 comment 356a763f (promote 3a), amended by 5dde3208 (CG009, the mulch attribution, the grapefruit finding),

@@ -44,9 +44,9 @@ FAMILY_COUNTS = {
     "pollination": 9, "rotation": 8, "verification_status.field_additions[]": 3, "thinning": 3,
     "soil": 2, "storage": 2, "yield_expectations": 2, "ph": 2,
     "soil_prep": 35,   # armed 2026-10-06 (PLA-673 B2): the 35 null-citation crops, measured on aaf004a2
-    "recommended_rootstock_note": 15,  # armed 2026-10-13 (PLA-625 housekeeping 59010fe6): 19 null-citation crops;
+    "recommended_rootstock_note": 14,  # armed 2026-10-13 (PLA-625 housekeeping 59010fe6): 19 null-citation crops;
                                        # citrus promote 1 (2f67359e) cited orange-navel and grapefruit (-2);
-                                       # citrus promote 2 (ef1a4d35) cited lemon and lime (-2)
+                                       # citrus promote 2 (ef1a4d35) cited lemon and lime (-2); 3b (d72aeed3) mandarin (-1)
 }
 
 
@@ -103,10 +103,10 @@ class PinsAreTheMeasurement(unittest.TestCase):
         # promote cited parsnip|growth_stages[id=established] (-1): 2629 + 35 - 1 = 2663; 2682 after citrus promote 1
         # ARMED recommended_rootstock_note with its 19 measured null-citation certified crops (PLA-625 housekeeping,
         # 59010fe6); 2680 after citrus promote 1 cited orange-navel's and grapefruit's notes (2f67359e, -2); 2678 after
-        # citrus promote 2 cited lemon's and lime's (ef1a4d35, -2)
-        self.assertEqual(G._KNOWN_DOC["count"], 2678)
-        self.assertEqual(len(G.KNOWN), 2678)
-        self.assertEqual(len(G._KNOWN_DOC["identities"]), 2678, "duplicate identities")
+        # citrus promote 2 cited lemon's and lime's (ef1a4d35, -2); 2677 after citrus promote 3b cited mandarin's (d72aeed3)
+        self.assertEqual(G._KNOWN_DOC["count"], 2677)
+        self.assertEqual(len(G.KNOWN), 2677)
+        self.assertEqual(len(G._KNOWN_DOC["identities"]), 2677, "duplicate identities")
 
     def test_the_named_list_is_what_was_ruled(self):
         self.assertEqual(set(G.DICT_BLOCKS), {
@@ -320,7 +320,7 @@ class RecommendedRootstockNoteSibling(unittest.TestCase):
         self.assertFalse(any("|recommended_rootstock_note|" in i for c in _CANON["crops"] if G.certified(c)
                              for i, _ok in G.blocks(c, recommended_rootstock_note_armed=False)))
 
-    def test_armed_the_15_are_exactly_the_waived_notes(self):
+    def test_armed_the_14_are_exactly_the_waived_notes(self):
         """The pair landed null on the 21 crops carrying the note; the 19 certified with an authored note were the
         waiver set, and the two shells (avocado, olive: note null) carry no block. Citrus promote 1 cited
         orange-navel's and grapefruit's notes and citrus promote 2 lemon's and lime's, so 15 stay waived (PLA-608) and
@@ -330,9 +330,9 @@ class RecommendedRootstockNoteSibling(unittest.TestCase):
                     and isinstance(c.get("recommended_rootstock_note"), str) and c["recommended_rootstock_note"].strip()}
         live = {i.split("|")[0] for c in _CANON["crops"] if G.certified(c)
                 for i in G.uncited(c) if "|recommended_rootstock_note|" in i}
-        self.assertEqual(len(waived), 15)
+        self.assertEqual(len(waived), 14)
         self.assertEqual(waived, authored & live)
-        self.assertEqual(authored - live, {"orange-navel", "grapefruit", "lemon", "lime"})
+        self.assertEqual(authored - live, {"orange-navel", "grapefruit", "lemon", "lime", "mandarin-clementine"})
         self.assertEqual(live - waived, set())
 
     def test_armed_a_new_uncited_note_fails_by_name(self):
@@ -359,7 +359,9 @@ CLOSED_NOTES = {  # armed 2026-10-13 (PLA-625 housekeeping 59010fe6); cited by c
     "grapefruit|recommended_rootstock_note|recommended_rootstock_note_sources",
     # cited by citrus promote 2 (2f67359e -> ef1a4d35)
     "lemon|recommended_rootstock_note|recommended_rootstock_note_sources",
-    "lime|recommended_rootstock_note|recommended_rootstock_note_sources"}
+    "lime|recommended_rootstock_note|recommended_rootstock_note_sources",
+    # cited by citrus promote 3b (d52c261a -> d72aeed3)
+    "mandarin-clementine|recommended_rootstock_note|recommended_rootstock_note_sources"}
 
 
 class ClosedWaivers(unittest.TestCase):
@@ -372,14 +374,14 @@ class ClosedWaivers(unittest.TestCase):
                          | CLOSED_NOTES)
         self.assertEqual(G.KNOWN & set(G.CLOSED), frozenset())
         self.assertEqual(G.KNOWN_AT_ARMING, G.KNOWN | set(G.CLOSED))
-        self.assertEqual(len(G.KNOWN_AT_ARMING), 2693)  # 2678 live + 15 closed (2674 before the 19 armed notes)
+        self.assertEqual(len(G.KNOWN_AT_ARMING), 2693)  # 2677 live + 16 closed (2674 before the 19 armed notes)
 
     def test_an_era_post_state_flags_exactly_the_closed_under_the_live_set(self):
         import promote_fixture
         pre = json.loads(promote_fixture.pre_state(
             "b331e5f2c99378526c3ac8f2f870232953b318c994b7dc3d8c54938f2b62c38d"))
         live_v = G.roster(pre, mature_dimensions_armed=True)[3]
-        # b331e5f2 predates every closure (and the soil_prep and note citations), so the live set flags all 15 there
+        # b331e5f2 predates every closure (and the soil_prep and note citations), so the live set flags all 16 there
         self.assertEqual({v.split()[3].rstrip(":") for v in live_v},
                          CLOSED_2026_10_04 | CLOSED_2026_10_05 | CLOSED_SOIL_PREP | CLOSED_2026_10_06 | CLOSED_NOTES)
         self.assertEqual(G.roster(pre, mature_dimensions_armed=True, known=G.KNOWN_AT_ARMING)[3], [])
@@ -908,6 +910,8 @@ GLOSS = "3ccc25f194cf0b3808877546b160572ab7ac6a12dbc7dae891f37d43f21a717a"  # PL
 B2 = "aaf004a23eb52005962c399d9f2f779b98b6226dacba0f454dff4442c1324812"     # PLA-673 part B2 post-state
 PART_D = "5420479d85bb8b65be62fa459fd97b8ce12dfdf9d3951e455be52aadc7a98063"  # PLA-673 part D post-state
 P1_POST = "2f67359ecdbdbd40203e6201a2b230e50bb21a2b84d2b01a4091a988087c8080"  # PLA-625 citrus promote 1 post-state
+P2_POST = "ef1a4d351e4b26ea0369f5f3da824cb7c81ffcd4e3e1e2013b94b2413dcf6261"  # PLA-625 citrus promote 2 post-state
+P3A_POST = "d52c261ac66f6637c4be220af052858a1fa920ec64c1d6e5eeec95083fc72487"  # PLA-625 citrus promote 3a post-state
 
 
 class EraSwitchIsBoundToAHistoricalPostState(unittest.TestCase):
@@ -939,10 +943,11 @@ class EraSwitchIsBoundToAHistoricalPostState(unittest.TestCase):
     def _pumpkin(self):
         return [m for m in G.roster(self.data)[3] if "pumpkin|soil_prep|soil_prep_sources" in m]
 
-    def test_the_registry_is_exactly_the_five_replays(self):
+    def test_the_registry_is_exactly_the_seven_replays(self):
         # + B2 and part D (2026-10-14, PLA-625 citrus promote 1): their post-states predate that promote's closures.
         # + citrus promote 1's own post-state (2026-10-16, PLA-625 citrus promote 2 closed lemon's and lime's notes).
-        self.assertEqual(set(G.ERA_POST_STATES), {AFBD, GLOSS, B2, PART_D, P1_POST})
+        # + citrus promotes 2 and 3a's post-states (2026-10-16, citrus promote 3b closed mandarin's note).
+        self.assertEqual(set(G.ERA_POST_STATES), {AFBD, GLOSS, B2, PART_D, P1_POST, P2_POST, P3A_POST})
 
     def test_unset_binds_nothing_and_uses_the_live_set(self):
         self.assertIsNone(G.bind_era(self.era))

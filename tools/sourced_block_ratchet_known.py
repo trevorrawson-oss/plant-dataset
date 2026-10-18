@@ -30,6 +30,10 @@ SHRUNK 2026-10-16 (PLA-625 citrus promote 2, 2f67359e -> ef1a4d35): 2680 -> 2678
 lemon and lime |recommended_rootstock_note|recommended_rootstock_note_sources (moved to CLOSED, same reason). 15 uncited
 notes stay waived (PLA-608).
 
+SHRUNK 2026-10-16 (PLA-625 citrus promote 3b, d52c261a -> d72aeed3): 2678 -> 2677. Closed by citation in that promote:
+mandarin-clementine |recommended_rootstock_note|recommended_rootstock_note_sources (moved to CLOSED, same reason). 14
+uncited notes stay waived (PLA-608).
+
 Kept as a .py module, not JSON, because every harness that copies tools/*.py into a scratch
 dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_gate at import
 (measured 2026-09-30: both harnesses' test_valid_cell_passes went red on a .json version).
@@ -37,7 +41,7 @@ dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_g
 TICKET = 'PLA-607'
 MEASURED_ON = '00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e'
 MEASURED_DATE = '2026-09-30'
-COUNT = 2678
+COUNT = 2677
 # Closed by citation, kept by identity so a LANDED promote can replay against the set live in its era
 # (sourced_block_ratchet_gate.KNOWN_AT_ARMING). Never re-waived: a closed identity going uncited again fails A62.
 CLOSED = (
@@ -58,6 +62,7 @@ CLOSED = (
     "orange-navel|recommended_rootstock_note|recommended_rootstock_note_sources",  # PLA-625 citrus promote 1, 59010fe6 -> 2f67359e
     "lemon|recommended_rootstock_note|recommended_rootstock_note_sources",  # PLA-625 citrus promote 2, 2f67359e -> ef1a4d35
     "lime|recommended_rootstock_note|recommended_rootstock_note_sources",  # PLA-625 citrus promote 2, 2f67359e -> ef1a4d35
+    "mandarin-clementine|recommended_rootstock_note|recommended_rootstock_note_sources",  # PLA-625 citrus promote 3b, d52c261a -> d72aeed3
 )
 IDENTITIES = (
     "acorn-squash|description|description_sources",
@@ -1494,7 +1499,6 @@ IDENTITIES = (
     "mandarin-clementine|notifications[2]|sources",
     "mandarin-clementine|notifications[3]|sources",
     "mandarin-clementine|pollination|sources",
-    "mandarin-clementine|recommended_rootstock_note|recommended_rootstock_note_sources",
     "mandarin-clementine|rotation|sources",
     "mandarin-clementine|start_method|sources",
     "mandarin-clementine|succession_policy|sources",

@@ -1,0 +1,522 @@
+[
+ {
+  "crop": "<catalog>",
+  "path": "uf_ifas_ch116",
+  "kind": "catalog",
+  "old": "<absent>",
+  "new": {
+   "id": "uf_ifas_ch116",
+   "name": "UF/IFAS The Satsuma Mandarin (HS195/CH116)",
+   "title": "The Satsuma Mandarin",
+   "publisher": "UF/IFAS Extension",
+   "url": "https://ask.ifas.ufl.edu/publication/CH116",
+   "source_class": "university_extension",
+   "trust_tier": "high",
+   "accessed": "2026-10",
+   "tier": "T1",
+   "citable_for": "UF/IFAS EDIS publication CH116 (HS195) on the satsuma mandarin: history, cultivars, cold tolerance, rootstocks for satsuma (trifoliate orange, Flying Dragon, Swingle, Carrizo) and a North Florida Flying Dragon / Rubidoux satsuma trial. Satsuma-scoped: a sentence resting on it says satsuma. A document-scoped child of uf_ifas_edis (PLA-625 promote 3b, ruling A)."
+  },
+  "cited_at": null,
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) A: per-publication / per-document id"
+ },
+ {
+  "crop": "<catalog>",
+  "path": "ucce_placer_nevada_cold_damage",
+  "kind": "catalog",
+  "old": "<absent>",
+  "new": {
+   "id": "ucce_placer_nevada_cold_damage",
+   "name": "Fake, C. & Norton, M., Avoiding Cold Damage to Home Citrus, UC Cooperative Extension Placer/Nevada",
+   "title": "Avoiding Cold Damage to Home Citrus",
+   "publisher": "UC Cooperative Extension (Placer and Nevada Counties)",
+   "url": "https://ucanr.edu/?legacy-file=134971.pdf&legacy-file-path=sites%2Fplacernevadasmallfarms%2Ffiles%2F",
+   "source_class": "university_extension",
+   "trust_tier": "high",
+   "accessed": "2026-10",
+   "tier": "T1",
+   "citable_for": "UCCE Placer/Nevada home-citrus cold guide (Cindy Fake, Maxwell Norton): frost preparation, and relative cold hardiness (satsumas on trifoliate are the most cold-hardy mandarins; clementines and other mandarins slightly less). PLA-625 promote 3b, ruling A (FakeNorton)."
+  },
+  "cited_at": null,
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) A: per-publication / per-document id"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[0].size_class",
+  "kind": "value",
+  "old": "standard",
+  "new": "semi_dwarf",
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[0].mature_height_ft",
+  "kind": "value",
+  "old": [
+   8,
+   15
+  ],
+  "new": null,
+  "cited_at": "rootstock_options[0]",
+  "reason": "nulled (PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B)"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[0].spread_ft",
+  "kind": "value",
+  "old": [
+   8,
+   12
+  ],
+  "new": null,
+  "cited_at": "rootstock_options[0]",
+  "reason": "nulled (PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B)"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[0].container_suitable",
+  "kind": "value",
+  "old": false,
+  "new": null,
+  "cited_at": "rootstock_options[0]",
+  "reason": "nulled (PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B)"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[0].bearing_age_years",
+  "kind": "value",
+  "old": 2,
+  "new": null,
+  "cited_at": "rootstock_options[0]",
+  "reason": "nulled (PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B)"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[0].traits_seasoned",
+  "kind": "prose",
+  "old": "The standard cold-hardiness rootstock for mandarins and the reason satsuma can be grown in the ground in the cold-edge zones. Confers the greatest cold tolerance of the common stocks, good Phytophthora and tristeza resistance, and good fruit quality, producing a compact, somewhat slow-growing tree. Not adapted to calcareous, high-pH, or saline soils, where it develops chlorosis.",
+  "new": "UF/IFAS calls trifoliate orange the most used rootstock for satsuma, especially in cool climates where the most cold tolerance is needed. UC Cooperative Extension notes that satsumas on trifoliate are the most cold-hardy mandarins, and that clementines and other mandarins are slightly less hardy. In Florida, UF/IFAS notes it does not give consistent cold protection south of Gainesville, where winters are short and broken by warm spells. Its resistance to foot rot makes it a good choice for poorly drained soils. UF/IFAS rates it tolerant of tristeza. It produces a smaller tree that grows slowly. Its Rubidoux and Rich 16-6 selections are semi-dwarfing and provide cold hardiness. Fruit quality is high. It is poorly adapted to saline, calcareous or highly alkaline soils, and in the desert it typically develops iron deficiency.",
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[0].traits_beginner",
+  "kind": "prose",
+  "old": "Trifoliate orange is the cold-hardiness rootstock, and it is what lets satsumas grow in the ground where oranges cannot. It resists root rot, keeps the tree compact, and gives good fruit. Its weakness is that it dislikes very alkaline or salty soil, so it is less ideal in some desert areas.",
+  "new": "Trifoliate orange is the go-to rootstock for satsumas where winters get cold, and satsumas on it are the most cold-hardy mandarins. It resists root rot, keeps the tree smaller and gives good fruit. It does poorly in salty or very alkaline soil, so other rootstocks suit desert gardens better.",
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[0].what_to_ask_nursery",
+  "kind": "prose",
+  "old": "Ask for a certified disease-free satsuma or mandarin on trifoliate-orange rootstock (selections such as 'Rubidoux') for maximum cold hardiness. Confirm your soil is not highly alkaline or saline, which trifoliate dislikes.",
+  "new": "For a satsuma where winters get cold, ask for one on trifoliate orange, such as the Rubidoux selection. Check that the tag names both the variety and the rootstock. Confirm your soil is not highly alkaline or saline, which trifoliate dislikes.",
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[0].sources",
+  "kind": "sources",
+  "old": [
+   "uf_ifas_edis",
+   "uga_ext",
+   "tamu_agrilife"
+  ],
+  "new": [
+   "uf_ifas_ch116",
+   "uf_ifas_hs1260",
+   "tamu_agrilife",
+   "ucce_placer_nevada_31_018c",
+   "ucce_placer_nevada_cold_damage",
+   "ucce_riverside_citrus_qa",
+   "az_coop_ext"
+  ],
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[0].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/CH116",
+    "verified": "2026-07-02"
+   },
+   "uga_ext": {
+    "url": "https://site.caes.uga.edu/citrus/2025/05/a-quick-note-on-alternate-bearing/",
+    "verified": "2026-07-02"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-07-02"
+   }
+  },
+  "new": {
+   "uf_ifas_ch116": {
+    "url": "https://ask.ifas.ufl.edu/publication/CH116",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_hs1260": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-16"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-16"
+   },
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-16"
+   },
+   "ucce_placer_nevada_cold_damage": {
+    "url": "https://ucanr.edu/?legacy-file=134971.pdf&legacy-file-path=sites%2Fplacernevadasmallfarms%2Ffiles%2F",
+    "verified": "2026-10-16"
+   },
+   "ucce_riverside_citrus_qa": {
+    "url": "https://ucanr.edu/sites/default/files/2013-12/178097.pdf",
+    "verified": "2026-10-16"
+   },
+   "az_coop_ext": {
+    "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1001.pdf",
+    "verified": "2026-10-16"
+   }
+  },
+  "cited_at": "rootstock_options[0]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[1].mature_height_ft",
+  "kind": "value",
+  "old": [
+   5,
+   8
+  ],
+  "new": [
+   4,
+   8
+  ],
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[1].spread_ft",
+  "kind": "value",
+  "old": [
+   5,
+   8
+  ],
+  "new": null,
+  "cited_at": "rootstock_options[1]",
+  "reason": "nulled (PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B)"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[1].container_size_gallons",
+  "kind": "value",
+  "old": 15,
+  "new": null,
+  "cited_at": "rootstock_options[1]",
+  "reason": "nulled (PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B)"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[1].bearing_age_years",
+  "kind": "value",
+  "old": 2,
+  "new": null,
+  "cited_at": "rootstock_options[1]",
+  "reason": "nulled (PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B)"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[1].traits_seasoned",
+  "kind": "prose",
+  "old": "A naturally dwarfing mutation of Poncirus trifoliata producing very compact trees ideal for containers and small gardens, and the best cold hardiness of any widely available citrus rootstock. Excellent Phytophthora, nematode, and tristeza resistance. Sensitive to high-pH and saline soils. Fruit quality is good and trees are precocious, though total yield per tree is lower due to the small canopy, which suits a mandarin well.",
+  "new": "Flying Dragon is a dwarfing selection of trifoliate orange. UC Master Gardeners call it the only true dwarfing citrus rootstock, with trees 4 to 8 feet tall. UF/IFAS reports that satsumas on it seldom exceed seven feet, so mature trees can be harvested without ladders. UC Cooperative Extension calls it well suited to home and container citrus, but not to production orchards. UF/IFAS rates it tolerant of tristeza and Phytophthora, resistant to citrus nematode, and good in freezes. It does poorly in saline and high-pH soils. Its juice quality rates high, but small trees bear less fruit per tree. In a UF/IFAS satsuma trial, yields measured against tree size were often similar to those on Rubidoux.",
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[1].traits_beginner",
+  "kind": "prose",
+  "old": "Flying Dragon is a dwarfing rootstock that keeps the tree small, perfect for pots and small yards, and it is the key to growing mandarins in cold climates since you can move the pot under cover for winter. It also has the best cold hardiness of the common rootstocks and strongly resists root rot. The tradeoff is a smaller tree with a smaller crop, usually just what a container grower wants.",
+  "new": "Flying Dragon is a dwarfing rootstock that keeps a mandarin small, usually 4 to 8 feet tall. That makes it a good fit for a pot or a small yard, and a potted tree can be moved to shelter in cold weather. It holds up well against tristeza virus, root rot and cold. The smaller tree gives a smaller crop. It does poorly in salty or alkaline soil.",
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[1].what_to_ask_nursery",
+  "kind": "prose",
+  "old": "Ask specifically for Flying Dragon rootstock (a dwarfing selection of trifoliate orange). The compact size fits containers and small yards and makes frost protection easy.",
+  "new": "Ask for Flying Dragon, a dwarfing selection of trifoliate orange, if you want a mandarin for a pot or a small yard.",
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[1].sources",
+  "kind": "sources",
+  "old": [
+   "uf_ifas_edis",
+   "tamu_agrilife"
+  ],
+  "new": [
+   "uf_ifas_ch116",
+   "ucanr_santa_clara_mg",
+   "ucce_placer_nevada_31_018c",
+   "uf_ifas_hs1260"
+  ],
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[1].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "uf_ifas_edis": {
+    "url": "https://ask.ifas.ufl.edu/publication/CH116",
+    "verified": "2026-07-02"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-07-02"
+   }
+  },
+  "new": {
+   "uf_ifas_ch116": {
+    "url": "https://ask.ifas.ufl.edu/publication/CH116",
+    "verified": "2026-10-16"
+   },
+   "ucanr_santa_clara_mg": {
+    "url": "https://ucanr.edu/sites/default/files/2020-02/319461.pdf",
+    "verified": "2026-10-16"
+   },
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_hs1260": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-16"
+   }
+  },
+  "cited_at": "rootstock_options[1]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[2].size_class",
+  "kind": "value",
+  "old": "standard",
+  "new": "semi_dwarf",
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[2].mature_height_ft",
+  "kind": "value",
+  "old": [
+   8,
+   15
+  ],
+  "new": [
+   8,
+   14
+  ],
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[2].spread_ft",
+  "kind": "value",
+  "old": [
+   8,
+   12
+  ],
+  "new": null,
+  "cited_at": "rootstock_options[2]",
+  "reason": "nulled (PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B)"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[2].container_suitable",
+  "kind": "value",
+  "old": false,
+  "new": null,
+  "cited_at": "rootstock_options[2]",
+  "reason": "nulled (PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B)"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[2].bearing_age_years",
+  "kind": "value",
+  "old": 3,
+  "new": null,
+  "cited_at": "rootstock_options[2]",
+  "reason": "nulled (PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B)"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[2].traits_seasoned",
+  "kind": "prose",
+  "old": "A grapefruit-and-trifoliate hybrid widely used in Florida and the Gulf. Excellent Phytophthora resistance, good cold hardiness among standard stocks, and tristeza tolerant, handling wet soils better than most. Produces a good-quality, moderately sized tree. Not well adapted to calcareous or high-pH soils. A strong general-purpose choice for the humid Southeast.",
+  "new": "Swingle is a citrumelo, a cross of Duncan grapefruit and trifoliate orange. UF/IFAS says satsumas are often propagated on it, because budding and early tree growth are better than on trifoliate orange. It became the most widely used rootstock in Florida. It resists Phytophthora foot rot and citrus nematode, and it tolerates tristeza virus. Its cold hardiness is good. UF/IFAS rates it an intermediate-size tree. It is not adapted to heavy clay or calcareous soils. UF/IFAS warns that mandarins are among the scions most sensitive to incompatibility with trifoliate-hybrid rootstocks, and names Murcott on Swingle as a combination that can decline.",
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[2].traits_beginner",
+  "kind": "prose",
+  "old": "Swingle citrumelo is a tough rootstock common in Florida and along the Gulf. It strongly resists root rot, handles wet soils better than most, and has decent cold hardiness, making a good tree with good fruit. It is a good pick in humid, wetter regions.",
+  "new": "Swingle is a common rootstock, and young satsuma trees get off to a better start on it than on trifoliate orange. It resists root rot and holds up against tristeza virus and cold. It does poorly in heavy clay or alkaline soil. Some mandarins, such as Murcott, can decline on it, so check the pairing before you buy.",
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[2].what_to_ask_nursery",
+  "kind": "prose",
+  "old": "Ask for Swingle citrumelo rootstock for wetter soils. It handles wet ground better than trifoliate but performs poorly on alkaline or calcareous soils.",
+  "new": "If you are buying a Murcott, ask for a rootstock other than Swingle, since UF/IFAS lists that pairing as one that can decline. Swingle is a poor match for heavy clay or alkaline soil.",
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[2].sources",
+  "kind": "sources",
+  "old": [
+   "uf_ifas_hs132",
+   "tamu_agrilife"
+  ],
+  "new": [
+   "ucr_citrus",
+   "uf_ifas_ch116",
+   "uf_ifas_hs1260"
+  ],
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "rootstock_options[2].anchoring_urls",
+  "kind": "anchors",
+  "old": {
+   "uf_ifas_hs132": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS132",
+    "verified": "2026-07-02"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-07-02"
+   }
+  },
+  "new": {
+   "ucr_citrus": {
+    "url": "https://citrusvariety.ucr.edu/crc3771",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_ch116": {
+    "url": "https://ask.ifas.ufl.edu/publication/CH116",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_hs1260": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-16"
+   }
+  },
+  "cited_at": "rootstock_options[2]",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) B"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "recommended_rootstock",
+  "kind": "value",
+  "old": "Trifoliate orange (Poncirus trifoliata)",
+  "new": null,
+  "cited_at": "recommended_rootstock_note",
+  "reason": "nulled (PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) C)"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "recommended_rootstock_note",
+  "kind": "prose",
+  "old": "Trifoliate orange (Poncirus trifoliata) is the preferred rootstock for mandarins, especially satsuma, because it gives the greatest cold hardiness and good fruit quality, which is why satsuma on trifoliate can be grown in the ground in zone 8. For containers and small spaces, Flying Dragon (a dwarfing trifoliate selection) makes a compact tree and is the most cold-hardy of all. In warmer regions, Swingle citrumelo suits wetter soils. Ask the nursery which rootstock the tree is on and match it to your soil, space, and winter cold.",
+  "new": "Rootstocks are usually not a choice at retail garden centers, because trees come grafted onto industry-standard rootstocks. Check that the tag names both the variety and the rootstock. Where winters get cold, trifoliate orange is the most used rootstock for satsumas, and satsumas on it are the most cold-hardy mandarins. Trifoliate does poorly in saline or highly alkaline soil, and in the desert it typically develops iron deficiency. For a pot or a small yard, Flying Dragon makes a dwarf tree. UF/IFAS lists Murcott on Swingle citrumelo as a combination that can decline.",
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) C"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "recommended_rootstock_note_sources",
+  "kind": "sources",
+  "old": null,
+  "new": [
+   "uf_ifas_hs132",
+   "az_coop_ext",
+   "uf_ifas_ch116",
+   "ucce_placer_nevada_cold_damage",
+   "tamu_agrilife",
+   "ucce_riverside_citrus_qa",
+   "ucce_placer_nevada_31_018c",
+   "uf_ifas_hs1260"
+  ],
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) C"
+ },
+ {
+  "crop": "mandarin-clementine",
+  "path": "recommended_rootstock_note_anchoring_urls",
+  "kind": "anchors",
+  "old": null,
+  "new": {
+   "uf_ifas_hs132": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS132",
+    "verified": "2026-10-16"
+   },
+   "az_coop_ext": {
+    "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1001.pdf",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_ch116": {
+    "url": "https://ask.ifas.ufl.edu/publication/CH116",
+    "verified": "2026-10-16"
+   },
+   "ucce_placer_nevada_cold_damage": {
+    "url": "https://ucanr.edu/?legacy-file=134971.pdf&legacy-file-path=sites%2Fplacernevadasmallfarms%2Ffiles%2F",
+    "verified": "2026-10-16"
+   },
+   "tamu_agrilife": {
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+    "verified": "2026-10-16"
+   },
+   "ucce_riverside_citrus_qa": {
+    "url": "https://ucanr.edu/sites/default/files/2013-12/178097.pdf",
+    "verified": "2026-10-16"
+   },
+   "ucce_placer_nevada_31_018c": {
+    "url": "https://ucanr.edu/sites/default/files/2020-10/63813.pdf",
+    "verified": "2026-10-16"
+   },
+   "uf_ifas_hs1260": {
+    "url": "https://ask.ifas.ufl.edu/publication/HS1260",
+    "verified": "2026-10-16"
+   }
+  },
+  "cited_at": "recommended_rootstock_note",
+  "reason": "PLA-625 promote 3b ruling (claude.ai comment b4271661, approved by Trevor, 2026-10-16) C"
+ }
+]

@@ -211,6 +211,9 @@ ERA_POST_STATES = {   # post-state sha256 -> the landed promote whose replay gat
     "5420479d85bb8b65be62fa459fd97b8ce12dfdf9d3951e455be52aadc7a98063": "PLA-673 part D promote (86d6ed6)",
     # + 2026-10-16 (PLA-625 citrus promote 2 closed A62/A64 lemon + lime identities this post-state still carries)
     "2f67359ecdbdbd40203e6201a2b230e50bb21a2b84d2b01a4091a988087c8080": "PLA-625 citrus promote 1 (5603b28)",
+    # + 2026-10-16 (PLA-625 citrus promote 3b closed mandarin's A62 note identity these post-states still carry)
+    "ef1a4d351e4b26ea0369f5f3da824cb7c81ffcd4e3e1e2013b94b2413dcf6261": "PLA-625 citrus promote 2 (84c3662)",
+    "d52c261ac66f6637c4be220af052858a1fa920ec64c1d6e5eeec95083fc72487": "PLA-625 citrus promote 3a (80e4a0c)",
 }
 CANON = os.path.join(os.path.dirname(HERE), "crops_data_final.json")
 _ERA_BOUND = None
