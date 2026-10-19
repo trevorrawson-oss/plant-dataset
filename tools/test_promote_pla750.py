@@ -3,35 +3,23 @@
 The positive control runs the whole transform with every guard (gates off for speed; the promote's --check runs
 them). Each negative test injects one defect into a deep copy of the stage or of the post-state and asserts the
 GUARD'S OWN refusal text, so a refusal from an earlier check can never pass a test meant for a later one.
-Pinned to BASE_SHA: on any other canonical the module skips with the reason (the post is replayed from the
-committed base, never read live).
+REPLAY: the base is promote_fixture.pre_state(BASE_SHA) (commit 1f651e5), never the live canonical, and it
+FAILS rather than skips if the base cannot be rebuilt.
 """
 import copy
+import json
 import os
-import subprocess
 import sys
 
 import pytest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+import promote_fixture  # noqa: E402
 import promote_pla750 as p  # noqa: E402
-from cited_promote_common import Refused, sha256_bytes  # noqa: E402
+from cited_promote_common import Refused  # noqa: E402
 
-
-def _base():
-    """The pinned base: the canonical when it is the base, else the base read from git (commit 1f651e5)."""
-    raw = open(p.CANON, "rb").read()
-    if sha256_bytes(raw) != p.BASE_SHA:
-        r = subprocess.run(["git", "-C", p.REPO, "show", "1f651e5:crops_data_final.json"], capture_output=True)
-        raw = r.stdout
-    if sha256_bytes(raw) != p.BASE_SHA:
-        pytest.skip(f"base {p.BASE_SHA[:8]} unavailable")
-    import json
-    return json.loads(raw)
-
-
-PRE = _base()
+PRE = json.loads(promote_fixture.pre_state(p.BASE_SHA))
 OPS, EV, DEC = p.load_stage(p.STAGE)
 
 

@@ -34,6 +34,11 @@ SHRUNK 2026-10-16 (PLA-625 citrus promote 3b, d52c261a -> d72aeed3): 2678 -> 267
 mandarin-clementine |recommended_rootstock_note|recommended_rootstock_note_sources (moved to CLOSED, same reason). 14
 uncited notes stay waived (PLA-608).
 
+SHRUNK 2026-10-18 (PLA-750 heat-hold promote, d72aeed3 -> 1a59a46f): 2677 -> 2672. Closed in that promote: by
+citation, broccoli|tips_by_stage.head_forming[0], cauliflower|tips_by_stage.curd_forming[1] (D4, UMN + USU) and
+spinach|tips_by_stage.germination[0] and [1] (re-anchored, USU / Clemson / Illinois / UMN); by deletion,
+edamame|weather_triggers[1] (its HEAT_STRESS trigger struck as unsupported). All |sources; all moved to CLOSED.
+
 Kept as a .py module, not JSON, because every harness that copies tools/*.py into a scratch
 dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_gate at import
 (measured 2026-09-30: both harnesses' test_valid_cell_passes went red on a .json version).
@@ -41,7 +46,7 @@ dir (region_harness, rgv_harness) would otherwise drop it and crash whole_crop_g
 TICKET = 'PLA-607'
 MEASURED_ON = '00dda31cc6616b9ea865f04fe0ce97fb1fb5d821f0c94724d3a03dbad8c8dd8e'
 MEASURED_DATE = '2026-09-30'
-COUNT = 2677
+COUNT = 2672
 # Closed by citation, kept by identity so a LANDED promote can replay against the set live in its era
 # (sourced_block_ratchet_gate.KNOWN_AT_ARMING). Never re-waived: a closed identity going uncited again fails A62.
 CLOSED = (
@@ -63,6 +68,11 @@ CLOSED = (
     "lemon|recommended_rootstock_note|recommended_rootstock_note_sources",  # PLA-625 citrus promote 2, 2f67359e -> ef1a4d35
     "lime|recommended_rootstock_note|recommended_rootstock_note_sources",  # PLA-625 citrus promote 2, 2f67359e -> ef1a4d35
     "mandarin-clementine|recommended_rootstock_note|recommended_rootstock_note_sources",  # PLA-625 citrus promote 3b, d52c261a -> d72aeed3
+    "broccoli|tips_by_stage.head_forming[0]|sources",  # PLA-750 heat-hold promote, d72aeed3 -> 1a59a46f (cited)
+    "cauliflower|tips_by_stage.curd_forming[1]|sources",  # PLA-750 heat-hold promote, d72aeed3 -> 1a59a46f (cited)
+    "edamame|weather_triggers[1]|sources",  # PLA-750 heat-hold promote, d72aeed3 -> 1a59a46f (struck)
+    "spinach|tips_by_stage.germination[0]|sources",  # PLA-750 heat-hold promote, d72aeed3 -> 1a59a46f (cited)
+    "spinach|tips_by_stage.germination[1]|sources",  # PLA-750 heat-hold promote, d72aeed3 -> 1a59a46f (cited)
 )
 IDENTITIES = (
     "acorn-squash|description|description_sources",
@@ -484,7 +494,6 @@ IDENTITIES = (
     "broccoli|tips_by_stage.germination[1]|sources",
     "broccoli|tips_by_stage.harvest[0]|sources",
     "broccoli|tips_by_stage.harvest[1]|sources",
-    "broccoli|tips_by_stage.head_forming[0]|sources",
     "broccoli|tips_by_stage.head_forming[1]|sources",
     "broccoli|tips_by_stage.seedling[0]|sources",
     "broccoli|tips_by_stage.seedling[1]|sources",
@@ -651,7 +660,6 @@ IDENTITIES = (
     "cauliflower|start_method|sources",
     "cauliflower|succession_policy|sources",
     "cauliflower|tips_by_stage.curd_forming[0]|sources",
-    "cauliflower|tips_by_stage.curd_forming[1]|sources",
     "cauliflower|tips_by_stage.established[0]|sources",
     "cauliflower|tips_by_stage.established[1]|sources",
     "cauliflower|tips_by_stage.germination[0]|sources",
@@ -1000,7 +1008,6 @@ IDENTITIES = (
     "edamame|start_method|sources",
     "edamame|succession_policy|sources",
     "edamame|weather_triggers[0]|sources",
-    "edamame|weather_triggers[1]|sources",
     "eggplant|description|description_sources",
     "eggplant|failure_diagnostics[0]|sources",
     "eggplant|failure_diagnostics[1]|sources",
@@ -2347,8 +2354,6 @@ IDENTITIES = (
     "spinach|tips_by_stage.bolting[1]|sources",
     "spinach|tips_by_stage.established[0]|sources",
     "spinach|tips_by_stage.established[1]|sources",
-    "spinach|tips_by_stage.germination[0]|sources",
-    "spinach|tips_by_stage.germination[1]|sources",
     "spinach|tips_by_stage.harvest[0]|sources",
     "spinach|tips_by_stage.harvest[1]|sources",
     "spinach|tips_by_stage.seedling[0]|sources",

@@ -36,8 +36,10 @@ POT_KNOWN = ("dry-bean", "grapefruit", "green-beans-bush", "orange-navel")
 # Per-family uncited counts on 00dda31c, enumerated as literals, never computed from the gate.
 FAMILY_COUNTS = {
     # growth_stages 613 -> 612: PLA-673 B2 cited parsnip|growth_stages[id=established]
-    "growth_stages[]": 612, "notifications[]": 458, "tips_by_stage.*[]": 312,
-    "weather_triggers[]": 289, "failure_diagnostics[]": 251, "description": 108,
+    # tips_by_stage 312 -> 308 and weather_triggers 289 -> 288: the PLA-750 heat-hold promote cited broccoli's,
+    # cauliflower's and spinach's two tips and struck edamame's HEAT_STRESS trigger (1a59a46f)
+    "growth_stages[]": 612, "notifications[]": 458, "tips_by_stage.*[]": 308,
+    "weather_triggers[]": 288, "failure_diagnostics[]": 251, "description": 108,
     "harvest_urgency": 108, "start_method": 101, "succession_policy": 86,
     "varieties.recommended[]": 77, "pests[]": 54, "diseases[]": 50, "harvest_ready": 26,
     "watering": 17, "bolting": 13, "container_notes": 12, "varieties": 12, "fertilizer": 11,
@@ -103,17 +105,21 @@ class PinsAreTheMeasurement(unittest.TestCase):
         # promote cited parsnip|growth_stages[id=established] (-1): 2629 + 35 - 1 = 2663; 2682 after citrus promote 1
         # ARMED recommended_rootstock_note with its 19 measured null-citation certified crops (PLA-625 housekeeping,
         # 59010fe6); 2680 after citrus promote 1 cited orange-navel's and grapefruit's notes (2f67359e, -2); 2678 after
-        # citrus promote 2 cited lemon's and lime's (ef1a4d35, -2); 2677 after citrus promote 3b cited mandarin's (d72aeed3)
-        self.assertEqual(G._KNOWN_DOC["count"], 2677)
-        self.assertEqual(len(G.KNOWN), 2677)
-        self.assertEqual(len(G._KNOWN_DOC["identities"]), 2677, "duplicate identities")
+        # citrus promote 2 cited lemon's and lime's (ef1a4d35, -2); 2677 after citrus promote 3b cited mandarin's (d72aeed3);
+        # 2672 after the PLA-750 heat-hold promote cited broccoli's, cauliflower's and spinach's two tips and struck
+        # edamame's HEAT_STRESS trigger (1a59a46f, -5)
+        self.assertEqual(G._KNOWN_DOC["count"], 2672)
+        self.assertEqual(len(G.KNOWN), 2672)
+        self.assertEqual(len(G._KNOWN_DOC["identities"]), 2672, "duplicate identities")
 
     def test_the_named_list_is_what_was_ruled(self):
         self.assertEqual(set(G.DICT_BLOCKS), {
             "bolting", "container_notes", "fertilizer", "harvest_stop_rule",
             "heat_threshold_temp_f", "indoor_cycle", "pet_safe", "ph", "photoperiod",
             "pollination", "rotation", "soil", "start_method", "storage", "succession_policy",
-            "thinning", "varieties", "watering", "winter_hardiness", "yield_expectations"})
+            "thinning", "varieties", "watering", "winter_hardiness", "yield_expectations",
+            # PLA-750 register #35 (ruling b963b423 P1, 2026-10-17): always cited in both reviewed states, no waiver.
+            "sowing_heat_ceiling"})
         self.assertEqual(set(G.SIBLING_BLOCKS), {"description", "harvest_ready", "harvest_urgency",
                                                  "mature_dimensions", "soil_prep", "recommended_rootstock_note"})
         # PLA-608 ruling 2 (2026-09-25) + PLA-625 stop-1 ruling (2026-10-09): the rootstock-note pair, NAMED in the
@@ -362,6 +368,10 @@ CLOSED_NOTES = {  # armed 2026-10-13 (PLA-625 housekeeping 59010fe6); cited by c
     "lime|recommended_rootstock_note|recommended_rootstock_note_sources",
     # cited by citrus promote 3b (d52c261a -> d72aeed3)
     "mandarin-clementine|recommended_rootstock_note|recommended_rootstock_note_sources"}
+CLOSED_PLA750 = {  # the PLA-750 heat-hold promote (d72aeed3 -> 1a59a46f): four tips cited, one trigger struck
+    "broccoli|tips_by_stage.head_forming[0]|sources", "cauliflower|tips_by_stage.curd_forming[1]|sources",
+    "spinach|tips_by_stage.germination[0]|sources", "spinach|tips_by_stage.germination[1]|sources",
+    "edamame|weather_triggers[1]|sources"}
 
 
 class ClosedWaivers(unittest.TestCase):
@@ -371,19 +381,20 @@ class ClosedWaivers(unittest.TestCase):
 
     def test_arming_set_is_the_live_set_plus_the_closed(self):
         self.assertEqual(set(G.CLOSED), CLOSED_2026_10_04 | CLOSED_2026_10_05 | CLOSED_SOIL_PREP | CLOSED_2026_10_06
-                         | CLOSED_NOTES)
+                         | CLOSED_NOTES | CLOSED_PLA750)
         self.assertEqual(G.KNOWN & set(G.CLOSED), frozenset())
         self.assertEqual(G.KNOWN_AT_ARMING, G.KNOWN | set(G.CLOSED))
-        self.assertEqual(len(G.KNOWN_AT_ARMING), 2693)  # 2677 live + 16 closed (2674 before the 19 armed notes)
+        self.assertEqual(len(G.KNOWN_AT_ARMING), 2693)  # 2672 live + 21 closed (2674 before the 19 armed notes)
 
     def test_an_era_post_state_flags_exactly_the_closed_under_the_live_set(self):
         import promote_fixture
         pre = json.loads(promote_fixture.pre_state(
             "b331e5f2c99378526c3ac8f2f870232953b318c994b7dc3d8c54938f2b62c38d"))
         live_v = G.roster(pre, mature_dimensions_armed=True)[3]
-        # b331e5f2 predates every closure (and the soil_prep and note citations), so the live set flags all 16 there
+        # b331e5f2 predates every closure (and the soil_prep and note citations), so the live set flags all 21 there
         self.assertEqual({v.split()[3].rstrip(":") for v in live_v},
-                         CLOSED_2026_10_04 | CLOSED_2026_10_05 | CLOSED_SOIL_PREP | CLOSED_2026_10_06 | CLOSED_NOTES)
+                         CLOSED_2026_10_04 | CLOSED_2026_10_05 | CLOSED_SOIL_PREP | CLOSED_2026_10_06 | CLOSED_NOTES
+                         | CLOSED_PLA750)
         self.assertEqual(G.roster(pre, mature_dimensions_armed=True, known=G.KNOWN_AT_ARMING)[3], [])
 
     def test_the_live_canonical_needs_no_era_set(self):
@@ -912,6 +923,7 @@ PART_D = "5420479d85bb8b65be62fa459fd97b8ce12dfdf9d3951e455be52aadc7a98063"  # P
 P1_POST = "2f67359ecdbdbd40203e6201a2b230e50bb21a2b84d2b01a4091a988087c8080"  # PLA-625 citrus promote 1 post-state
 P2_POST = "ef1a4d351e4b26ea0369f5f3da824cb7c81ffcd4e3e1e2013b94b2413dcf6261"  # PLA-625 citrus promote 2 post-state
 P3A_POST = "d52c261ac66f6637c4be220af052858a1fa920ec64c1d6e5eeec95083fc72487"  # PLA-625 citrus promote 3a post-state
+P3B_POST = "d72aeed3072ef0555bf5ed26a00b8f1d4ee188dd485bfaad8216bdeed770beda"  # PLA-625 citrus promote 3b post-state
 
 
 class EraSwitchIsBoundToAHistoricalPostState(unittest.TestCase):
@@ -943,11 +955,12 @@ class EraSwitchIsBoundToAHistoricalPostState(unittest.TestCase):
     def _pumpkin(self):
         return [m for m in G.roster(self.data)[3] if "pumpkin|soil_prep|soil_prep_sources" in m]
 
-    def test_the_registry_is_exactly_the_seven_replays(self):
+    def test_the_registry_is_exactly_the_eight_replays(self):
         # + B2 and part D (2026-10-14, PLA-625 citrus promote 1): their post-states predate that promote's closures.
         # + citrus promote 1's own post-state (2026-10-16, PLA-625 citrus promote 2 closed lemon's and lime's notes).
         # + citrus promotes 2 and 3a's post-states (2026-10-16, citrus promote 3b closed mandarin's note).
-        self.assertEqual(set(G.ERA_POST_STATES), {AFBD, GLOSS, B2, PART_D, P1_POST, P2_POST, P3A_POST})
+        # + citrus promote 3b's post-state (2026-10-18, the PLA-750 heat-hold promote closed five tip / trigger identities).
+        self.assertEqual(set(G.ERA_POST_STATES), {AFBD, GLOSS, B2, PART_D, P1_POST, P2_POST, P3A_POST, P3B_POST})
 
     def test_unset_binds_nothing_and_uses_the_live_set(self):
         self.assertIsNone(G.bind_era(self.era))

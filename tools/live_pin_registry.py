@@ -189,7 +189,7 @@ LIVE_PINS = {
         ('test_pla220_borderline_frame.py::test_coverage_is_reported_not_silently_dropped', 'floor', 'population', 'totals.sources_uncovered_total > 0', 199),
     ],
     'test_problem_id_collision_gate.py': [
-        ('test_problem_id_collision_gate.py::Preflight::test_canonical_is_the_pinned_sha', 'equality', 'sha', 'shasum(CANON) == PINNED_SHA (d72aeed3..)', 205),
+        ('test_problem_id_collision_gate.py::Preflight::test_canonical_is_the_pinned_sha', 'equality', 'sha', 'shasum(CANON) == PINNED_SHA (1a59a46f..)', 205),
         ('test_problem_id_collision_gate.py::AuditFixture::test_audit_output_is_exactly_pinned', 'equality', 'population', 'findings == 36, actionable == 12, registered == 24 (+12 named registered pairs)', 339),
         ('test_problem_id_collision_gate.py::AuditFixture::test_the_six_merged_decisions_are_resolved_for_the_right_reason / test_the_two_scoped... / test_the_celery_split... / test_the_nine_known_good... / test_batch24_minted_the_ninth_pair', 'equality', 'content', 'named ids absent/present in live; named pairs flagged-then-registered', 248),
     ],

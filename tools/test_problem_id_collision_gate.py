@@ -114,7 +114,11 @@ CANON = os.path.join(REPO, "crops_data_final.json")
 # RE-MEASURED 2026-10-16 (PLA-625 citrus promote 3b), d52c261a -> d72aeed3. mandarin rootstock rows and note re-authored,
 # 2 catalog ids minted; no problem id, pest or disease entry added, removed or renamed. The gate's whole output
 # (--json --show-registered) is byte-identical on both states.
-PINNED_SHA = "d72aeed3072ef0555bf5ed26a00b8f1d4ee188dd485bfaad8216bdeed770beda"
+# RE-MEASURED 2026-10-18 (PLA-750 heat-hold promote), d72aeed3 -> 1a59a46f. sowing_heat_ceiling on 30 crops, pause_in_heat
+# false on 20, stage tips added, 3 heat_effect corrections, 2 weather triggers struck, 5 catalog ids minted; no problem
+# id, pest or disease entry added, removed or renamed. The gate's whole output (--json --show-registered) is
+# byte-identical on both states (36 findings).
+PINNED_SHA = "1a59a46ff1283a083abf0787a4ced162269a14ad21baac0f96ceae089a7dff72"
 
 # ---------------------------------------------------------------------------------------------
 # The PLA-449 fixture, transcribed from the ticket. NEVER computed from a scan.

@@ -48,6 +48,8 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # PLA-625 citrus promote 3b (2026-10-18, pushed). NEVER AMEND 1f651e5. The base of the PLA-750 heat-hold promote.
+    'd72aeed3072ef0555bf5ed26a00b8f1d4ee188dd485bfaad8216bdeed770beda': '1f651e5',
     # PLA-625 citrus promote 3a (2026-10-16). NEVER AMEND 80e4a0c. The base of PLA-625 citrus promote 3b.
     'd52c261ac66f6637c4be220af052858a1fa920ec64c1d6e5eeec95083fc72487': '80e4a0c',
     # PLA-625 citrus promote 2 (2026-10-16). NEVER AMEND 84c3662. The base of PLA-625 citrus promote 3a.

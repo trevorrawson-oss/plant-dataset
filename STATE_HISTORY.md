@@ -4,6 +4,38 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-10-18 -- PLA-750 HEAT-HOLD PROMOTE LANDED (`d72aeed3` -> `1a59a46f`; sowing_heat_ceiling on 30 crops)
+
+Rulings: PLA-750 comments 47a09951 (D1 to D6 + per-row verdicts), b963b423 (P1 to P5), 7c155149 (fetches, P5 as built,
+calendula), all claude.ai, approved by Trevor. "Canonical free" = the citrus Batch A push (c966f46..1f651e5).
+
+* **Why:** the app held a crop's next sowing when a forecast high reached `heat_threshold_f`, which the climate contract
+  defines as the MATURE-plant heat-stress number. The evidence pass (301 verbatim quotes, 30 crops) showed the sowing
+  number differs (spinach mature 75 vs sowing 80; calendula bloom 85 vs sow-below 30 °C) and that most crops' heat harm
+  happens at maturity, where a hot week at sowing predicts nothing.
+* **Field:** `sowing_heat_ceiling` (register #35; contract `docs/sowing_heat_ceiling_contract.md`). Held (10): spinach 80
+  (UMN, air), lettuce-leaf 80 (USU, soil), cilantro-coriander 75 (USU, soil, bolting), beet 80 (USU), radish 75 (UC Sonoma
+  MG, maturity_coupled), kohlrabi 75 (UMN claim + USU number), sugar-snap and snow peas 80 (USU "soil and air"),
+  calendula 86 (Eberle et al. 2014, "below 30. °C", soil), viola 75 (UF). Not held (20): the 10 ruled changes, the 9
+  unsourced holds (weak M quote carried in each note for the next pass) and sweet-alyssum (D3). `pause_in_heat` false on
+  the 20; `heat_threshold_f` unchanged (P4).
+* **Same promote:** D4 stage tips (broccoli head_forming and cauliflower curd_forming re-sourced, UMN + USU; new tips on
+  Brussels sprouts sprout_formation, cabbage head_forming, kale and collards harvest); cilantro's 75 °F moved to a bolting
+  tip at `established`; D5 `heat_effect` heat_tolerant -> quality_loss on sweet-pea, sweet-alyssum, nasturtium; live-data
+  fixes (lettuce + USU, arugula rewritten to SARE + Steiner, viola + UF, calendula + Eberle, borage's heat clause dropped,
+  spinach's two tips re-anchored, celery's drought-bolting clause, edamame's HEAT_STRESS and chamomile's hot-humid
+  triggers struck). Catalog +5: sare_necphm_arugula, steiner_2010_arugula, eberle_2014_calendula, ucanr_pub7243,
+  tamu_celery_crop_sheet.
+* **Tooling:** `tools/sowing_heat_ceiling_gate.py` (claims against RAW hashed bytes, not the doc cache: PLA-768) 51 tests,
+  harness 34/34; `climate_threshold_gate` P5 as the exact `NULL_STRESS_KNOWN` allowlist + STALE, 14 tests, harness 7/7;
+  `tools/promote_pla750.py` 40 tests, harness 32/32. Field named in the PLA-607 ratchet and ruled in register-completeness
+  (claim = verbatim single-register, exempt from house notation by design). A62 2677 -> 2672 (4 tips cited, 1 trigger
+  struck; CLOSED; citrus promote 3b's post-state registered in the era set, its gate_post bound). Radish's UC Sonoma page
+  is a browser save (ucanr.edu WAF-blocks curl), MANIFEST-recorded as such.
+* **Checks:** --expect-sha 1a59a46f; sowing_heat_ceiling_gate 30 inspected (10/20), bytes on 32 pages; climate gate PASS
+  (3 stress-no-number); whole_crop_gate PASS on the 30 + gate_all 121; release_verify: exactly the 30 ruled crops, catalog
+  +5, no new violations; collision gate output byte-identical (re-pinned). Certified 121, launch-ready 114.
+
 ## 2026-10-16 -- PLA-625 CITRUS PROMOTE 3b LANDED (`d52c261a` -> `d72aeed3`; mandarin-clementine rootstock rows), local, Batch A
 
 Ruling: PLA-625 comment b4271661 (claude.ai, approved by Trevor, 2026-10-16).
