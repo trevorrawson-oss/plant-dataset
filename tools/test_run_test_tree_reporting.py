@@ -13,8 +13,11 @@ through a subprocess probe that swaps in a test-only WAIVERS table. The runner's
   3. A test that ERRORS (fixture / setup error) FAILS the tree. (Until 2026-10-03 only FAILED lines were read:
      pytest "rc=1 | 1 error" produced "VERDICT: PASS".) An error is never waivable.
   4. A pytest.skip is counted in the VERDICT ("Fix 0"); it is not a pass and not a failure.
+  5-7. (PLA-625, 2026-10-29) The pytest population runs under xdist `-n auto` by default and `--serial` restores the
+     single-process run; a red test or a red script still fails the parallel default, a waiver fires in both modes,
+     and the parallel default REFUSES (BROKEN) when pytest-xdist is not installed.
 Run: python3 -m pytest tools/test_run_test_tree_reporting.py -q
-SHIPS MUTATION-TESTED via mutate_run_test_tree.py (M8-M11).
+SHIPS MUTATION-TESTED via mutate_run_test_tree.py (M8-M15).
 """
 import os, shutil, subprocess, sys, tempfile, unittest
 
@@ -27,16 +30,25 @@ ERRORING = ("import pytest\n\n\n@pytest.fixture\ndef broken():\n    raise Runtim
             "def test_uses_broken(broken):\n    assert True\n")
 SKIPPING = "import pytest\n\n\ndef test_skips():\n    pytest.skip('PROBE: inputs gone')\n"
 
+SCRIPT_FAILING = "assert False, 'PROBE: a script-style failure'\n"
+# Passes only inside an xdist worker / only outside one, so the MODE the runner chose is read off the test result,
+# not off the runner's own say-so.
+IN_WORKER = "import os\n\n\ndef test_in_worker():\n    assert os.environ.get('PYTEST_XDIST_WORKER'), 'not in an xdist worker'\n"
+NOT_IN_WORKER = "import os\n\n\ndef test_not_in_worker():\n    assert not os.environ.get('PYTEST_XDIST_WORKER'), 'in an xdist worker'\n"
+
 PROBE = """import re, sys
 sys.path.insert(0, {tools!r})
 import run_test_tree as R
 R.WAIVERS = {{{tid!r}: {{"ticket": "PROBE", "reason": "probe", "character": re.compile(r"PROBE")}}}}
-sys.argv = ["run_test_tree.py", "--files", *{files!r}]
+if {no_xdist!r}:
+    R.xdist_available = lambda: False
+sys.argv = ["run_test_tree.py", "--files", *{files!r}, *{extra!r}]
 sys.exit(R.main())
 """
 
 
-class Reporting(unittest.TestCase):
+class _Probe(unittest.TestCase):
+    """Throwaway files + the probe driver; no tests of its own."""
     def setUp(self):
         self.dir = tempfile.mkdtemp(prefix="_rtt_probe_", dir=ROOT)
         self.rel = os.path.relpath(self.dir, ROOT)
@@ -49,16 +61,18 @@ class Reporting(unittest.TestCase):
             f.write(body)
         return os.path.join(self.rel, name)
 
-    def runner(self, files, waived_tid):
+    def runner(self, files, waived_tid, extra=(), no_xdist=False):
         probe = os.path.join(self.dir, "probe_main.py")
         with open(probe, "w", encoding="utf-8") as f:
-            f.write(PROBE.format(tools=HERE, tid=waived_tid, files=files))
+            f.write(PROBE.format(tools=HERE, tid=waived_tid, files=files, extra=list(extra), no_xdist=no_xdist))
         r = subprocess.run([sys.executable, probe], cwd=ROOT, capture_output=True, text=True)
         return r.returncode, r.stdout + r.stderr
 
     def verdict(self, out):
         return [l for l in out.splitlines() if l.startswith("VERDICT")][-1]
 
+
+class Reporting(_Probe):
     # 1 -------------------------------------------------------------------------------------------
     def test_a_waived_test_that_now_passes_is_STALE_on_an_rc0_run(self):
         f = self.file("test_now_passes.py", PASSING)
@@ -103,6 +117,67 @@ class Reporting(unittest.TestCase):
         self.assertEqual(rc, 0, out)
         self.assertIn("1 pytest test(s) SKIPPED (ran nothing)", self.verdict(out))
         self.assertIn("PROBE: inputs gone", out)
+
+
+class Mode(_Probe):
+    """PLA-625 ruling 09d4844d (2026-10-29): the pytest population runs under pytest-xdist `-n auto` by default, and
+    `--serial` gives the pre-ruling behavior exactly. The mode is pinned by what the TESTS saw (PYTEST_XDIST_WORKER),
+    not only by what the runner prints; the positive controls prove the parallel default still fails a red tree."""
+
+    # 5 -------------------------------------------------------------------------------------------
+    def test_the_default_runs_pytest_in_xdist_workers(self):
+        f = self.file("test_mode.py", IN_WORKER)
+        rc, out = self.runner([f], "tools/test_elsewhere.py::test_waived")
+        self.assertEqual(rc, 0, out)
+        self.assertIn("(parallel, -n auto)", out)
+
+    def test_serial_runs_pytest_in_one_process(self):
+        f = self.file("test_mode.py", NOT_IN_WORKER)
+        rc, out = self.runner([f], "tools/test_elsewhere.py::test_waived", extra=["--serial"])
+        self.assertEqual(rc, 0, out)
+        self.assertIn("(serial)", out)
+
+    def test_serial_is_not_the_default(self):
+        f = self.file("test_mode.py", NOT_IN_WORKER)
+        rc, out = self.runner([f], "tools/test_elsewhere.py::test_waived")
+        self.assertNotEqual(rc, 0, out)
+        self.assertTrue(self.verdict(out).startswith("VERDICT: FAIL"), out)
+
+    # 6 positive controls under the parallel default ----------------------------------------------
+    def test_parallel_a_failing_test_fails_the_tree(self):
+        f = self.file("test_red.py", FAILING)
+        rc, out = self.runner([f], "tools/test_elsewhere.py::test_waived")
+        self.assertEqual(rc, 1, out)
+        self.assertTrue(self.verdict(out).startswith("VERDICT: FAIL"), out)
+        self.assertIn(f"unwaived test failure: {f}::test_bad", out)
+
+    def test_parallel_a_failing_script_style_file_fails_the_tree(self):
+        f = self.file("test_script_red.py", SCRIPT_FAILING)
+        rc, out = self.runner([f], "tools/test_elsewhere.py::test_waived")
+        self.assertEqual(rc, 1, out)
+        self.assertTrue(self.verdict(out).startswith("VERDICT: FAIL"), out)
+        self.assertIn(f"{f}: rc=1", out)
+
+    def test_a_waiver_fires_in_both_modes(self):
+        f = self.file("test_red.py", FAILING)
+        for extra in ([], ["--serial"]):
+            rc, out = self.runner([f], f"{f}::test_bad", extra=extra)
+            self.assertEqual(rc, 0, (extra, out))
+            self.assertIn(f"WAIVED: {f}::test_bad [PROBE]", out)
+            self.assertIn("1 waived failure(s)", self.verdict(out))
+
+    # 7 refusal spec ------------------------------------------------------------------------------
+    def test_the_parallel_default_REFUSES_without_xdist(self):
+        f = self.file("test_green.py", PASSING)
+        rc, out = self.runner([f], "tools/test_elsewhere.py::test_waived", no_xdist=True)
+        self.assertEqual(rc, 3, out)
+        self.assertIn("pytest-xdist", out)
+        self.assertTrue(self.verdict(out).startswith("VERDICT: BROKEN"), out)
+
+    def test_serial_needs_no_xdist(self):
+        f = self.file("test_green.py", PASSING)
+        rc, out = self.runner([f], "tools/test_elsewhere.py::test_waived", extra=["--serial"], no_xdist=True)
+        self.assertEqual(rc, 0, out)
 
 
 if __name__ == "__main__":

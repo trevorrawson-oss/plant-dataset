@@ -125,8 +125,14 @@ armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered gates) +
   2026-10-04 after `367c702` shrank `sourced_block_ratchet_known` as pin-only and the full tree failed 41
   landed-replay tests; fixed in `e47e58a`.) A
   pure data promote with no tool change runs release verification (below) plus the promote's own suite and
-  mutation harness. **The full tree** (`python3 tools/run_test_tree.py`, ~1 hour single-process, 6,369
-  pytest tests on 2026-10-01; speed-up PLA-630) runs during development only when a change touches SHARED
+  mutation harness. **The full tree** (`python3 tools/run_test_tree.py`) runs the pytest population under
+  **pytest-xdist `-n auto` by default** (PLA-625 ruling 09d4844d, 2026-10-29: identical pass/fail/skip sets to
+  the serial run; timings in the PLA-625 report); `--serial` gives the old ~80-minute single-process run
+  exactly. Collection and the script-style files stay serial in both modes (two scripts copy `tools/*.json`
+  while eleven create and delete `tools/_tmp_*_fixture.json`, so they are not pool-safe). **Test dependency
+  pin (the repo has no requirements file): `pytest-xdist==3.6.1`**, installed with `python3 -m pip install
+  --user pytest-xdist==3.6.1` beside the user-site pytest 8.4.2; without it the default REFUSES with
+  `VERDICT: BROKEN` rather than silently running serial. The full tree runs during development only when a change touches SHARED
   test infrastructure every suite leans on (`promote_fixture.py`, `run_test_tree.py`, a harness helper
   module), or on Trevor's ask -- and ALWAYS before a push (next rule). **Why narrowed, measured 2026-10-01:** every recorded full-tree catch was tooling breaking tooling --
   the 2026-09-30 region-harness crashes from a JSON waiver file the harnesses did not copy (PLA-607/544),
@@ -137,8 +143,8 @@ armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered gates) +
   Trevor the time cost before starting any run over ~10 minutes.
 - **EVERY DATASET PUSH RUNS THE FULL TEST TREE FIRST, ON THE COMMIT BEING PUSHED** (Trevor, standing rule,
   2026-10-06). The affected set is for iterating; it is not the push gate. Order: commit (state trio
-  included), run `python3 tools/run_test_tree.py` on that commit with the exit code captured unpiped, and
-  push only on a clean verdict. Anything red stops before the push. A change made after a full run, however
+  included), run `python3 tools/run_test_tree.py` (the parallel default) on that commit with the exit code
+  captured unpiped, and push only on a clean verdict. Anything red stops before the push. A change made after a full run, however
   small, needs a fresh one. **Why:** the PLA-673 glossary landing (fbe11bc) ran only its affected set and
   shipped three red tests on main (a skipped collision-gate re-measure, a ratchet walk and a sense-guard
   injection, both broken by PLA-674's null siblings); the B2 full tree found all three.

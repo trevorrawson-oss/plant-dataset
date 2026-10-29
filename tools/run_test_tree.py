@@ -26,7 +26,15 @@ A script-style test signals failure by RAISING, never by `sys.exit`: a bare
 module-level `sys.exit(1)` surfaces under pytest as `INTERNALERROR`, which reads
 as a broken harness rather than a real failure.
 
-Run:  python3 tools/run_test_tree.py            # the whole tree
+MODE (PLA-625 ruling 09d4844d, 2026-10-29). The pytest population runs under pytest-xdist `-n auto` by default
+(needs pytest-xdist==3.6.1; the runner REFUSES with BROKEN when it is missing). `--serial` gives the pre-ruling
+single-process run exactly. Collection (step 1) and the script-style files (step 3) run serially in BOTH modes:
+the scripts are not pool-safe, because test_gate_planting_layout_a44.py and test_gate_citation_ratchets_a62_a63.py
+copy every tools/*.json while eleven sibling scripts create and delete tools/_tmp_*_fixture.json, so a pooled run
+can race a listdir against a delete.
+
+Run:  python3 tools/run_test_tree.py            # the whole tree, pytest in parallel
+      python3 tools/run_test_tree.py --serial   # the whole tree, one process
       python3 tools/run_test_tree.py --classify # populations only, runs nothing
 """
 import argparse
@@ -117,6 +125,21 @@ def run(cmd, **kw):
     return subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, **kw)
 
 
+def xdist_available():
+    """pytest-xdist importable? The parallel default needs it; --serial does not."""
+    import importlib.util
+    return importlib.util.find_spec("xdist") is not None
+
+
+def pytest_cmd(collectable, serial):
+    """The main pytest call. The default adds `-n auto` (PLA-625 ruling 09d4844d, 2026-10-29: identical
+    pass/fail/skip sets, 2.4x faster under load); --serial is the pre-ruling call exactly."""
+    cmd = [sys.executable, "-m", "pytest", "-q", "-rfEs", "-p", "no:cacheprovider"]
+    if not serial:
+        cmd += ["-n", "auto"]
+    return cmd + list(collectable)
+
+
 def check_collection(collectable):
     """Every collectable file must yield >= 1 test. Returns the empty ones."""
     r = run([sys.executable, "-m", "pytest", "--collect-only", "-q",
@@ -147,6 +170,9 @@ def main():
                          "apply, because an explicit list is not discovery -- the floors exist "
                          "to catch a DISCOVERY bug in the whole-tree run. Used by the mutation "
                          "harness to drive this same main() over a small population.")
+    ap.add_argument("--serial", action="store_true",
+                    help="run the pytest population in one process (the pre-2026-10-29 behavior); the default "
+                         "is pytest-xdist -n auto. Script-style files run serially in both modes.")
     a = ap.parse_args()
 
     if a.files:
@@ -177,6 +203,11 @@ def main():
         for f in script:
             print(f"    script-style: {f}")
         return 0
+    if not a.serial and not xdist_available():
+        print("  BROKEN: the parallel default needs pytest-xdist (python3 -m pip install --user "
+              "pytest-xdist==3.6.1); --serial runs without it")
+        print("\nVERDICT: BROKEN (pytest-xdist not installed)")
+        return 3
 
     failures = []
     waived_ok, skipped, ran_ok = [], [], 0
@@ -184,20 +215,33 @@ def main():
 
     # 1. Per-file collection: rc 5 at file granularity.
     print("\n[1/3] per-file collection (a file yielding 0 tests is rc-5 in miniature)")
-    empty, rcol = check_collection(collectable)
+    if not collectable:
+        # Only reachable with --files (whole-tree discovery is floored above). pytest given NO paths collects the
+        # whole repo from its root -- measured 2026-10-29: a --files list of one script-style file hung for 9+ min
+        # in `pytest --collect-only` over the repo -- so phases 1-2 are skipped, and said to be.
+        print("  skipped: no pytest-collectable files in the explicit list")
+        print("\n[2/3] pytest over 0 files\n  skipped: no pytest-collectable files in the explicit list")
+        empty, r = [], None
+    else:
+        empty, rcol = check_collection(collectable)
     if empty:
         for f in empty:
             print(f"  BROKEN: {f} collected NO tests")
             failures.append(f"{f}: collected no tests")
-    else:
+    elif collectable:
         print(f"  ok: all {len(collectable)} collectable files yield at least one test")
 
     # 2. The pytest population.
-    print(f"\n[2/3] pytest over {len(collectable)} files")
-    r = run([sys.executable, "-m", "pytest", "-q", "-rfEs", "-p", "no:cacheprovider", *collectable])
-    tail = [l for l in r.stdout.splitlines() if l.strip()][-1:] or ["<no summary>"]
-    print(f"  rc={r.returncode} | {tail[0][:160]}")
-    if r.returncode == 5:
+    if collectable:
+        print(f"\n[2/3] pytest over {len(collectable)} files " + ("(serial)" if a.serial else "(parallel, -n auto)"))
+        r = run(pytest_cmd(collectable, a.serial))
+        tail = [l for l in r.stdout.splitlines() if l.strip()][-1:] or ["<no summary>"]
+        print(f"  rc={r.returncode} | {tail[0][:160]}")
+    if r is None:
+        stale, not_run = waiver_states([], collectable, set())
+        for t in not_run:
+            print(f"  waived test not in population (not run): {t}")
+    elif r.returncode == 5:
         print("  BROKEN: pytest exited 5 -- NOTHING WAS COLLECTED. Graded BROKEN, not green.")
         failures.append("pytest rc=5 (nothing collected)")
     elif r.returncode in (0, 1):

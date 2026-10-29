@@ -18,6 +18,8 @@ docs/promote_suite_mutation_convention.md:
       test_run_test_tree_reporting.py: PLA-653's population check, STALE on an
       rc-0 run, ERROR lines read as failures, pytest skips counted (Fix 0), and
       the -rfEs report flags.
+  (6) M13-M15 (PLA-625, 2026-10-29) mutate the parallel default: `-n auto` dropped, `--serial` ignored, and the
+      pytest-xdist preflight dropped.
 
 Run: python3 tools/mutate_run_test_tree.py
 """
@@ -241,6 +243,22 @@ def main():
         '"-q", "-rfEs", "-p"', '"-q", "-rs", "-p"',
         "M12 -r restated without fE", "ERRORS_fails_the_tree")
     results.append(("M12 -rs alone REPLACES pytest's default fE: FAILED/ERROR lines vanish", ok, rc))
+    # M13-M15: the PLA-625 parallel default (ruling 09d4844d, 2026-10-29).
+    ok, rc = mutate_runner(
+        '        cmd += ["-n", "auto"]',
+        '        cmd += []',
+        "M13 the parallel default dropped", "default_runs_pytest_in_xdist_workers")
+    results.append(("M13 `-n auto` dropped: the default silently runs serial", ok, rc))
+    ok, rc = mutate_runner(
+        "    if not serial:",
+        "    if True:",
+        "M14 --serial ignored", "serial_runs_pytest_in_one_process")
+    results.append(("M14 --serial ignored: the flag no longer restores the single-process run", ok, rc))
+    ok, rc = mutate_runner(
+        "    if not a.serial and not xdist_available():",
+        "    if False:",
+        "M15 xdist preflight dropped", "REFUSES_without_xdist")
+    results.append(("M15 no xdist preflight: the parallel default runs on with pytest rc 4 unexplained", ok, rc))
 
     # ---- SENTINEL: a mutation that MUST redden, or the harness is dead ----
     rc, out = mutate(SHAPE_A, 'print("chill_gate: all tests passed")',
