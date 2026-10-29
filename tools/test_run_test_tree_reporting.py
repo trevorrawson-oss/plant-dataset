@@ -65,7 +65,11 @@ class _Probe(unittest.TestCase):
         probe = os.path.join(self.dir, "probe_main.py")
         with open(probe, "w", encoding="utf-8") as f:
             f.write(PROBE.format(tools=HERE, tid=waived_tid, files=files, extra=list(extra), no_xdist=no_xdist))
-        r = subprocess.run([sys.executable, probe], cwd=ROOT, capture_output=True, text=True)
+        # This suite itself runs inside an xdist worker under the parallel full tree, and the worker's
+        # PYTEST_XDIST_* variables would leak into the probe's pytest: the serial-mode test then failed, and the
+        # default-mode test passed whatever the runner did (measured 2026-10-29 on 180a14a). Scrub them.
+        env = {k: v for k, v in os.environ.items() if not k.startswith("PYTEST_XDIST")}
+        r = subprocess.run([sys.executable, probe], cwd=ROOT, capture_output=True, text=True, env=env)
         return r.returncode, r.stdout + r.stderr
 
     def verdict(self, out):

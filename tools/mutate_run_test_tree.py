@@ -193,12 +193,15 @@ def main():
     # main() over throwaway probe files. Positive control first: that suite is GREEN on the clean runner.
     REP = "tools/test_run_test_tree_reporting.py"
 
+    # The reporting suite is driven under xdist (-n 2), the condition the parallel full tree runs it in: a
+    # PYTEST_XDIST_WORKER leaking from an outer worker made M13's test vacuous there (2026-10-29), invisible to a
+    # harness that only ran the suite in one process.
     def run_reporting(sel):
-        r = subprocess.run([sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider", REP, "-k", sel],
+        r = subprocess.run([sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider", "-n", "2", REP, "-k", sel],
                            cwd=ROOT, capture_output=True, text=True)
         return r.returncode, r.stdout + r.stderr
 
-    rc, out = subprocess.run([sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider", REP],
+    rc, out = subprocess.run([sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider", "-n", "2", REP],
                              cwd=ROOT, capture_output=True, text=True).returncode, ""
     if rc != 0:
         print("HARNESS DEAD: the reporting suite is already red on the clean runner"); sys.exit(3)
